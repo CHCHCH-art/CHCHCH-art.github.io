@@ -2,12 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://CHCHCH-art.github.io</id>
     <title>A Song of Ice and Fire</title>
-    <subtitle></subtitle>
-    <icon>https://chchch-art.github.io/images/favicon.ico</icon>
     <link href="https://CHCHCH-art.github.io" />
-    <author>
-      <name>Rhaegar Targaryen</name>
-    </author>
     <updated>2023-09-20T13:16:34.000Z</updated>
     <entry>
         <id>https://chchch-art.github.io/2023/09/20/My-New-Post/</id>
