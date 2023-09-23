@@ -6,9 +6,12 @@
     <updated>2023-09-20T07:08:00.000Z</updated>
     <entry>
         <id>https://chchch-art.github.io/2023/09/20/hello-world/</id>
-        <title>Hello World</title>
+        <title>First blog</title>
         <link rel="alternate" href="https://chchch-art.github.io/2023/09/20/hello-world/"/>
-        <content type="html"></content>
+        <content type="html">&lt;p&gt;中文尝试&lt;/p&gt;
+&lt;p&gt;图片：&lt;/p&gt;
+&lt;p&gt;C:\Users\86182\CHCHCH-art.github.io\themes\butterfly\source\img&lt;/p&gt;
+</content>
         <updated>2023-09-20T07:08:00.000Z</updated>
     </entry>
 </feed>
