@@ -9,9 +9,7 @@
         <id>https://chchch-art.github.io/2023/09/20/hello-world/</id>
         <title>First blog</title>
         <link rel="alternate" href="https://chchch-art.github.io/2023/09/20/hello-world/"/>
-        <content type="html">&lt;p&gt;中文尝试&lt;/p&gt;
-&lt;p&gt;图片：&lt;/p&gt;
-</content>
+        <content type="html"></content>
         <category term="test" />
         <updated>2023-09-20T07:08:00.000Z</updated>
     </entry>
