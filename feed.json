@@ -10,7 +10,9 @@
             "title": "My New Post",
             "date_published": "2023-09-20T13:16:34.000Z",
             "content_html": "",
-            "tags": []
+            "tags": [
+                "stock"
+            ]
         },
         {
             "id": "https://chchch-art.github.io/2023/09/20/hello-world/",

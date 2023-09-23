@@ -4,6 +4,12 @@
     <title>My New Post</title>
     <url>/2023/09/20/My-New-Post/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>Macroeconomics</category>
+      </categories>
+      <tags>
+        <tag>stock</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
