@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://CHCHCH-art.github.io</id>
+    <title>A Song of Ice and Fire • Posts by &#34;preview&#34; tag</title>
+    <link href="https://CHCHCH-art.github.io" />
+    <updated>2023-09-20T07:08:00.000Z</updated>
+    <category term="stock" />
+    <category term="Preview" />
+    <entry>
+        <id>https://chchch-art.github.io/2023/09/20/hello-world/</id>
+        <title>观看须知</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2023/09/20/hello-world/"/>
+        <content type="html">&lt;p&gt;NTheme study：一般消息催化&lt;/p&gt;
+&lt;p&gt;PTheme study：政策消息催化&lt;/p&gt;
+&lt;p&gt;FK：纯错误类&lt;/p&gt;
+&lt;p&gt;D：日评&lt;/p&gt;
+&lt;p&gt;文章包括类型：当下相对热点题材、个人主观偏好题材、被动重判题材、细节研究&lt;/p&gt;
+</content>
+        <category term="Preview" />
+        <updated>2023-09-20T07:08:00.000Z</updated>
+    </entry>
+</feed>
