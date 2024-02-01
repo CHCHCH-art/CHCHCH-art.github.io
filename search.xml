@@ -1,1916 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>NT-23-10-19 制裁</title>
-    <url>/2023/10/19/NT-23-10-19-%E5%88%B6%E8%A3%81/</url>
-    <content><![CDATA[<p>美国商务部于十月十七日更新了“先进计算芯片和半导体制造设备出口管制规则”</p>
-<p><img src="/img/image11.png"></p>
-<p>其中细则主要为三类型：</p>
-<p><img src="/img/image12.png"></p>
-<p>而最受到影响的就是英伟达阉割版的H800以及A800都无法再出口到我国</p>
-<p>之前的A100&#x2F;H100若被限制也就罢了，至少英伟达还推出了A800&#x2F;H800来满足国内需求，而现在连这一些都被禁</p>
-<p>这是一个极大的利空，之前或许是动嘴皮子没有真刀真枪，这次是真正的开干</p>
-<p>摩尔线程和壁仞科技被添加到了实体清单，意味着其不会再被美国&#x2F;台湾供应芯片</p>
-<p><img src="/img/image10.png"></p>
-<p>英伟达股价当天就跌没4%，最低到7%，AMD、微软等也下跌，虽然英伟达表示短期内订单仍会交付，但此必然不是长久之计</p>
-<p>大模型迭代对于算力的需求量非常高，即使国内囤了很多英伟达的芯片也没用，未来的需求会迅速消耗掉库存</p>
-<p>意味着后续增量算力只能依靠英伟达更低配置的芯片，就目前仅剩下V100可以用的状态来说，国内替代更有选择价值和余地</p>
-<p>这在我眼里看来，几乎是一个行业重塑级别的事件，危和机往往是相生相伴的，这个题材不亚于任何大级别题材</p>
-<p>英伟达、美国芯片公司失去的市场最终都会由被国产替代，如华为、壁仞等等</p>
-<p>毕竟华为、壁仞、摩尔先前宣布已经有了能够对标A100的芯片，虽不能点对点的和英伟达比较，但至少国产替代并非不可</p>
-<hr>
-<p>首先第一硬逻辑层面上利好就是国内的人工智能GPU厂商，即上述所提到的</p>
-<p>上市公司里面就是：寒武纪、海光信息、景嘉微、龙芯中科，对相关产业链、半导体供应链同样利好，主打一个国产替代</p>
-<hr>
-<p>第二层面就是利好和国内芯片厂商做好匹配、相对应适配做服务器的公司</p>
-<p>2022年中国AI加速卡出货量约为109万张，其中英伟达占市场份额85%，华为占10%，百度占2%、寒武纪和燧原科技为1%</p>
-<p>国内除英伟达以外，出货最高是昇腾芯片，所以就看国内和华为昇腾配合较好的，如四川长虹、拓维信息、华鲲振宇</p>
-<p>同样，服务器相关硬件供应链也首选和国内替代服务器做好匹配的，国内增量</p>
-<hr>
-<p>第三层面就是利好手上已经有货的，因为制裁以后英伟达芯片就会成稀缺资源</p>
-<p>同时也利好目前确定能够拿到货的，类似恒润这类算力租赁公司，利空拿不到卡的公司(其算力租赁计划就彻底泡汤)</p>
-<p>算力资源明显价格就会上升，因为国内替代还达不到英伟达芯片，性价比不够</p>
-<p>但个人倾向于此逻辑：坐地起价并不能改变什么，只有突破制裁才能真正改变</p>
-<p>再说下利空方向</p>
-<p>主要利空于深度绑定英伟达芯片的服务器制造商，类似于浪潮信息，其他没特别大利空，但算力会被情绪拖累走低</p>
-<hr>
-<p>说具体盘面，按照上述选择下来，可以参与的也并不多，既然大方向预判情绪回暖，那么还是要出手，选准方向很重要</p>
-<p>瞄准市场喜好：华为，华为是国产替代的典范，华为昇腾芯片同样有硬逻辑，拓维、长虹等与之绑定的服务器商必受益</p>
-<p>后续华鲲振宇将复牌，会给市场带来一定扰动。首选辨识度、硬逻辑的重叠，四川长虹，当日反包，带动一众算力走强</p>
-<p>当日开盘以后还是核了一大片算力，光模块中际一度核到深水</p>
-<p>莲花、鸿博、恒润等典型的算力租赁方向被摁死，但后续被证明是错杀后拉回</p>
-<p>中贝这类因为实锤和华为合作算力，因而也同样是被错失，最终也是再被拉回</p>
-<p>盘内还拉了一个超聚变（原华为旗下的，目前出货服务器市场份额第三，主要是与国内芯片商适配的服务器商</p>
-<hr>
-<p>次日</p>
-<p>情绪面总体不稳定，算力方向被兑现、退潮但产生了新生板块，寒武纪反包涨停，带动板块走强</p>
-<p>此类事件完全是资金面的选择，几乎预判不到的</p>
-<p>文一也顺势上板，整个半导体、芯片方向成为场内赚钱效应最强的方向</p>
-<p>并且板块整体以三方向发展：先进封装、光刻技术、芯片设计，从各角度对标短板</p>
-<p>尽管当日也有所被兑现，如寒武开板、晶方开板等事件，但强度比较高</p>
-<hr>
-<p>再次日</p>
-<p>寒武纪开盘就烂了，算力开盘也烂了，大环境使然，但文一、真视通两者均超预期换手板，走出了独立板块的走势</p>
-<p>这个，也主要是有高位抱团的意思在里边了</p>
-<hr>
-<p>从英伟达禁令的一开始，我就明白这个题材的级别非凡，几乎是重塑行业格局的消息</p>
-<p>对某些公司将会构成长久期的利空，而对某些公司则是更为光明的未来，危和机并存</p>
-<p>何况次日叠加情绪回暖预期，那么走出一波行情本就不会是意外事件，这是基准预期</p>
-<p>但截至目前，走得比较差强人意，有大环境情绪较为糟糕的一定影响在</p>
-<p>算力、半导体芯片基本都是一日游，次日就基本没了后续，表现太一般</p>
-<p>不过至少相对其他板块好多了……</p>
-<p>也算是勉强认证了我对这个题材的看法是没有问题的吧，芯片、算力均能够有表现在</p>
-<hr>
-<p>至于后续催化，个人倾向于是有的，毕竟这个消息面在行业内会产生巨大波动</p>
-<p>目前已经看到的消息面就是RTX4090（消费级显卡）之前因为传断货而一夜全网缺货</p>
-<p>还有就是搭载8颗H800 GPU的服务器在几天内大涨了几十万</p>
-<p>根据恒润内部会议结果，算力价格在一天时间内上涨了25%</p>
-<p>虽然事前我没预测到这些事情会以如此类型发酵，但我预测过后续行业不断有催化</p>
-<p>这个板块是具备容量、逻辑的，走成大级别主线也并非什么例外事情，仍值得重视</p>
-<hr>
-<p>并且如果你要我谈后面假如还能走，应该怎么发展？</p>
-<p>答案唯一：<strong>国产替代</strong>，只有国产替代能够解决一切卡脖子问题，单纯依靠在手的英伟达算力资源坐地起价无法改变任何事情</p>
-<p>后面假如要参与，必然也是锚定华为、芯片这两个方向参与，别无他选</p>
-<hr>
-<p>在英伟达禁令取消三十日后，逻辑又产生了重大转变，此前是三十天禁令，其实给我们一定屯卡的机会</p>
-<p>现在改为即刻实行，则意味着未发货的卡可能无法发货，在途订单没发出的不给发货</p>
-<p>这个影响比我先前想的还要大，同时美国死掐脖子的意图也越发明显，只会愈演愈烈</p>
-<p>这进一步利好国产替代，详细见先前文章，同时算力价格飙升，拥有算力资源即稀缺</p>
-<p>所以现在还拿不到卡的，那么就彻底寄了，根本没机会</p>
-<p>最利好的方向：</p>
-<p>目前手里拥有算力资源的，类似于恒润、中贝，后续算力资源在巨大缺口下越发稀缺</p>
-<p>国产替代，目前也就直接被提上日程，但远不如坐地起价实在，只能是第二受益方了</p>
-<p>毕竟目前消化存量卡还需要一段时间，目前存量卡减少，意味着未来的增量会更加高</p>
-<hr>
-<p>消息面上就是A800和H800服务器价格继续上涨，算力租赁价格继续上涨</p>
-<p>也不知道到底能涨到哪里去…</p>
-<p>个人对后续的思考么，算力缺口是异常巨大的，不排除算力租赁、芯片进一步涨价可能</p>
-<p>行业内应该也会有很多动作产生，催化因素确实可能会不断</p>
-<hr>
-<p>个人态度：</p>
-<p>保持关注吧，但轮动市还是容易一个反抽当二波骗过去给杀掉，可以对中贝、恒润低吸</p>
-<p>性价比也就稍微高了一些，同时行业不断的催化，或许此板块没有到结束的那一天</p>
-<p>仓位不可重罢</p>
-<p>其实还可以说其他一件事，即最近有一定开始走趋势行情的苗头，算力就是很好的方向</p>
-<p>后面若走的是趋势，类似于上半年的人工智能，可以具体看市场态度</p>
-<hr>
-<p>有段时间没更新了，感觉对于一些没有结束的题材还是要保持适当的关注</p>
-<p>最近么，在英伟达禁令之下，行业内确实发生了非常多的转变</p>
-<p>阿里云从昨天还是今天开始，不再提供算力租赁服务，下架英伟达服务器产品</p>
-<p>然后我们国内大模型80%都用的阿里云租赁….</p>
-<p>又是一个巨大的算力缺口，阿里做出这个决策本身大概率是觉得自己未来不太够用</p>
-<p>然后在这样的情况下，华为昇腾系列全线涨价15%，据悉加单量已经是几十亿级别</p>
-<p>今日配合赚钱效应走强，可以看继续配合情绪走一波上升浪</p>
-<p>先说一下逻辑面上的选择</p>
-<p>一方面是昇腾产业链，一方面还是算力租赁企业</p>
-<p>算力租赁已经比较明牌了，当下最核心的就是恒润、中贝</p>
-<p>昇腾系么目前感觉选择还是有点小多，各位埋伏为主，实在不愿意去荣科待着就行</p>
-<p>依旧看一波强趋势，在当下行情中，依旧可以看到主线的可能性</p>
-<hr>
-<p>真没想到这个题材能够持续那么久，今天英伟达再次给出消息面，即会给出适合的芯片</p>
-<p>于是逻辑上面再次转向</p>
-<p>对国内而言，这部分增量预期又要拿回去一部分</p>
-<p>对算力租赁企业而言，后续算力租赁的涨价预期也就顺势下降，小幅度利空</p>
-<p>对深度绑定英伟达的企业，又变成了利好，类似于浪潮</p>
-<hr>
-<p>两次预判的节点实际上均看到了算力方向的强势表现，至少题材本身判断没问题</p>
-<p>行业本身也确实产生了一些巨大动荡，持续消息面催化就是持续炒作的最大底气</p>
-]]></content>
+<search> 
+  
+    
+    <entry>
+      <title>Color Themes</title>
+      <link href="/hexo-theme-freemind-blog/2016/01/30/color-themes/"/>
+      <url>/hexo-theme-freemind-blog/2016/01/30/color-themes/</url>
+      <content type="html"><![CDATA[<p>Freemind contains luxuriant color themes for your choice. To use one of them, simply modify the <code>theme</code> and <code>inverse</code> settings from your theme <code>_config.yml</code> file <em>e.g.</em></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">theme: bootstrap</div><div class="line">inverse: true</div></pre></td></tr></table></figure><p>, where <code>theme</code> here indicates which theme you are going to use, and <code>inverse</code> here says you want inverse color scheme on some important components such as navigation bar and header title.</p><p>User contributions are welcome! If you want to contribute a color theme, you can <a href="https://github.com/wzpan/hexo-theme-freemind-blog/tree/dev" target="_blank" rel="external">fork the dev branch</a> . Write a new theme in LESS and send me a pull request.</p><a id="more"></a><h2 id="bootstrap"><a href="#bootstrap" class="headerlink" title="bootstrap"></a>bootstrap</h2><h3 id="default"><a href="#default" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/bootstrap.png" alt="bootstrap"></p><h3 id="inverse"><a href="#inverse" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/bootstrap-inverse.png" alt="bootstrap-inverse"></p><h2 id="cerulean"><a href="#cerulean" class="headerlink" title="cerulean"></a>cerulean</h2><h3 id="default-1"><a href="#default-1" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cerulean.png" alt="cerulean"></p><h3 id="inverse-1"><a href="#inverse-1" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cerulean-inverse.png" alt="cerulean-inverse"></p><h2 id="cosmo"><a href="#cosmo" class="headerlink" title="cosmo"></a>cosmo</h2><h3 id="default-2"><a href="#default-2" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cosmo.png" alt="cosmo"></p><h3 id="inverse-2"><a href="#inverse-2" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cosmo-inverse.png" alt="cosmo-inverse"></p><h2 id="cyborg"><a href="#cyborg" class="headerlink" title="cyborg"></a>cyborg</h2><h3 id="default-3"><a href="#default-3" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cyborg.png" alt="cyborg"></p><h3 id="inverse-3"><a href="#inverse-3" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cyborg-inverse.png" alt="cyborg-inverse"></p><h2 id="darkly"><a href="#darkly" class="headerlink" title="darkly"></a>darkly</h2><h3 id="default-4"><a href="#default-4" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/darkly.png" alt="darkly"></p><h3 id="inverse-4"><a href="#inverse-4" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/darkly-inverse.png" alt="darkly-inverse"></p><h2 id="flatly"><a href="#flatly" class="headerlink" title="flatly"></a>flatly</h2><h3 id="default-5"><a href="#default-5" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/flatly.png" alt="flatly"></p><h3 id="inverse-5"><a href="#inverse-5" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/flatly-inverse.png" alt="flatly"></p><h2 id="journal"><a href="#journal" class="headerlink" title="journal"></a>journal</h2><h3 id="default-6"><a href="#default-6" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/journal.png" alt="journal"></p><h3 id="inverse-6"><a href="#inverse-6" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/journal-inverse.png" alt="journal-inverse"></p><h2 id="lumen"><a href="#lumen" class="headerlink" title="lumen"></a>lumen</h2><h3 id="default-7"><a href="#default-7" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/lumen.png" alt="lumen"></p><h3 id="inverse-7"><a href="#inverse-7" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/lumen-inverse.png" alt="lumen-inverse"></p><h2 id="paper"><a href="#paper" class="headerlink" title="paper"></a>paper</h2><h3 id="default-8"><a href="#default-8" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/paper.png" alt="paper"></p><h3 id="inverse-8"><a href="#inverse-8" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/paper-inverse.png" alt="paper-inverse"></p><h2 id="readable"><a href="#readable" class="headerlink" title="readable"></a>readable</h2><h3 id="default-9"><a href="#default-9" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/readable.png" alt="readable"></p><h3 id="inverse-9"><a href="#inverse-9" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/readable-inverse.png" alt="readable-inverse"></p><h2 id="sandstone"><a href="#sandstone" class="headerlink" title="sandstone"></a>sandstone</h2><h3 id="default-10"><a href="#default-10" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/sandstone.png" alt="sandstone"></p><h3 id="inverse-10"><a href="#inverse-10" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/sandstone-inverse.png" alt="sandstone-inverse"></p><h2 id="simplex"><a href="#simplex" class="headerlink" title="simplex"></a>simplex</h2><h3 id="default-11"><a href="#default-11" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/simplex.png" alt="simplex"></p><h3 id="inverse-11"><a href="#inverse-11" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/simplex-inverse.png" alt="simplex-inverse"></p><h2 id="slate"><a href="#slate" class="headerlink" title="slate"></a>slate</h2><h3 id="default-12"><a href="#default-12" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/slate.png" alt="slate"></p><h3 id="inverse-12"><a href="#inverse-12" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/slate-inverse.png" alt="slate-inverse"></p><h2 id="spacelab"><a href="#spacelab" class="headerlink" title="spacelab"></a>spacelab</h2><h3 id="default-13"><a href="#default-13" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/spacelab.png" alt="spacelab"></p><h3 id="inverse-13"><a href="#inverse-13" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/spacelab-inverse.png" alt="spacelab-inverse"></p><h2 id="superhero"><a href="#superhero" class="headerlink" title="superhero"></a>superhero</h2><h3 id="default-14"><a href="#default-14" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/superhero.png" alt="superhero"></p><h3 id="inverse-14"><a href="#inverse-14" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/superhero-inverse.png" alt="superhero-inverse"></p><h2 id="united"><a href="#united" class="headerlink" title="united"></a>united</h2><h3 id="default-15"><a href="#default-15" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/united.png" alt="united"></p><h3 id="inverse-15"><a href="#inverse-15" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/united-inverse.png" alt="united-inverse"></p><h2 id="yeti"><a href="#yeti" class="headerlink" title="yeti"></a>yeti</h2><h3 id="default-16"><a href="#default-16" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/yeti.png" alt="yeti"></p><h3 id="inverse-16"><a href="#inverse-16" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/yeti-inverse.png" alt="yeti-inverse"></p>]]></content>
+      
       <categories>
-        <category>NTheme study</category>
+          
+          <category> Docs </category>
+          
       </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>END</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NT-23-10-16 5.5G</title>
-    <url>/2023/10/16/NT-23-10-16-5-5G/</url>
-    <content><![CDATA[<p>硕贝德的走势引起了我的兴趣，此类还没落地的噱头题材大多数需要催化才能走出来</p>
-<p>最近恰好似乎没有特别关注这边的催化和消息面，因而没在意，或者会有值得研究的？</p>
-<p>先列消息面：</p>
-<p>在假期回来后第二天就有华为的一场会议</p>
-<p>华为引导了预期：将于会议重磅发布超宽带前瞻技术和产品，5.5G万物互联</p>
-<p>假期内有华为5.5G基站的专家电话会议、华为官方也预热迪拜会议</p>
-<p>简单来说假期内有催化，那么节后走强也是一个正常事件，没有什么太意外</p>
-<p>这边已经被具体挖掘出来增量逻辑：天线振子的数量将会大幅度提升</p>
-<p>硕贝德作为天线振子较为正宗的逻辑票自然受到了追捧</p>
-<p>然后就是会议</p>
-<p>会议上对5.5G再次进行了评论，吹得天花乱坠</p>
-<p>关键就市场本身反馈而言，没有兑现，反而继续走强，意思是信了，发酵了</p>
-<p>十一日盘后华为相关人士又说最早今年底各大手机厂商旗舰手机达到5.5网速</p>
-<p>并且说真正的5.5G手机将会在2024年上半年到来</p>
-<p>结果次日走强，硕贝德直接走了个大号涨停</p>
-<hr>
-<p>自然需要承认的是这个5.5G技术确实具有相当的想象力，和其他补涨题材比更好一些</p>
-<p>但其能够走出来的本质原因还是因为市场情绪环境的强势</p>
-<p>对华为概念的追捧、较强的情绪环境、对题材起爆的宽容（鸡犬升天）</p>
-<p>是这个题材能够走强的本质原因</p>
-<p>说实话就个人而言，在当时无法预判后续确定性的催化</p>
-<p>且该题材尚未落地，也就仅仅是一个概念性的题材，没有催化意味没确定性</p>
-<p>何况本身并比不上消费电子、汽车产业链的硬逻辑，强度也同样比不上</p>
-<p>因而个人只会做一个判断：无参与意义</p>
-<p>留下的唯一启示就是鸡犬升天的阶段真的什么都能涨，环境的强势影响比我预期要大</p>
-<p>另外可能就是最近一个市场偏好：比较喜欢炒作会议</p>
-<p>这也是周四具体盘面看了以后才思索出来的特征，不得不说这个特征真的挺特殊的</p>
-<p>最近炒作会议的，只要会议本身比较值得看，那么市场大概率就会去炒作</p>
-<p>并且炒作直到了会议开始或者结束其实都不会有兑现，这个就比较有意思</p>
-<hr>
-<p>资金面的选择本就是题材走强的原因，并没有那么多玄之又玄的催化或者预期炒作</p>
-<p>而资金面选择几乎完全偏随机，意味着本题材走出来也只能看到结果而没有确定性</p>
-<p>就此作罢</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> themes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Questions and Answers</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/16/qna/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/16/qna/</url>
+      <content type="html"><![CDATA[<span class="label label-danger">Q</span> What does <code>Freemind</code> stands for?<br><br><span class="label label-success">A</span> <code>Freemind</code> is named after <a href="http://freemind.pluskid.org/" target="_blank" rel="external">Pluskid’s blog</a>. This theme is greatly inspired by his blog layouts and stylesheets.<br><br><span class="label label-danger">Q</span> There’re already so many themes for Hexo. Why create this one?<br><br><span class="label label-success">A</span> In fact I created this theme before I turned to use Hexo. I switched to Hexo about half an year ago, including my theme, since I have already got used to it and don’t wanna change it for now.<br><br><a id="more"></a><p><span class="label label-danger">Q</span> Why use raw CSS stylesheets instead of more fashionable stylus?</p><p><span class="label label-success">A</span> Yes, stylus is cool. But I don’t want to wrote my stylesheets again in stylus. So let’s just keep them.</p><p><span class="label label-danger">Q</span> I love your theme. How to contribute?</p><p><span class="label label-success">A</span> Great that you love it. To devote your contribution, you can:</p><ul><li>Star its <a href="https://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="external">Github project</a>;</li><li>Fork this project, make your change, and then send me your pull request;</li><li>Since it is public under MIT license, you can make your own theme based on mine. But it will be nicer if you claimed that your work is based on mine in your theme project page.</li></ul><p><span class="label label-danger">Q</span> <a href="http://hahack.com" target="_blank" rel="external">Your blog</a> looks a little different to this theme. Why such difference?</p><p><span class="label label-success">A</span> Yes. I modified the theme a little bit as I open sourced this theme. I actually did some simplification <em>e.g.</em> I removed the whole <a href="http://hahack.com/wiki" target="_blank" rel="external">Wiki</a> page because I don’t think that everybody need this.</p><p><span class="label label-danger">Q</span> How to generate ToC(Table of Contents) in a certain page?</p><p><span class="label label-success">A</span> Add <code>toc: true</code> in the <a href="https://github.com/wzpan/hexo-theme-freemind#front-matter" target="_blank" rel="external">front-matter</a>.</p><p><span class="label label-danger">Q</span> Where can I find your markdown source files of these docs?</p><p><span class="label label-success">A</span> From the <a href="https://github.com/wzpan/hexo-theme-freemind-blog" target="_blank" rel="external">source repo</a> of this site.</p>]]></content>
+      
       <categories>
-        <category>NTheme study</category>
+          
+          <category> Docs </category>
+          
       </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>END</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NT-23-10-10 华为</title>
-    <url>/2023/10/09/NT-23-10-9-%E5%8D%8E%E4%B8%BA/</url>
-    <content><![CDATA[<p>谈几个点：</p>
-<p>华为汽车、手机供应链本次行情连板补涨不断，有真正受益的，也有情绪带动的</p>
-<p>情绪带动的昨晚早已纷纷公告于市场，今日直接摁死水下就是市场最直接的答案</p>
-<p>真正受益的硬逻辑的选择将会是下一段战场的具体领导核心，也是该参与的方向</p>
-<p>高位情绪抱团瓦解，捷荣、华映、荣联、常山、精伦纷纷给出负反馈，值得注意</p>
-<p>纯情绪将会退出战场，留下真正受益的，老一批核心中不乏真正有业绩支撑类的</p>
-<p>如捷荣，无非两周的监管期会有点长，要么堕落，要么对着监管干出第二个中通</p>
-<p>不过我猜没几个人想天天监管打电话锁账户吧，追求新势力就是分歧后的重点项</p>
-<p>除此之外，需要看到不寻常的个股，天弘、润和，华为方向出现的大几十亿容量</p>
-<p>大浪淘沙，越走到后面越需要注意逻辑的不可证伪，就如上半年的人工智能一般</p>
-<p>低位补涨在昨天高潮后如期开始淘汰赛，明天淘汰烈度和分歧强度会更上个层次</p>
-<p>简单而言，连板大多数票都将断板分歧，其中赛力斯预期几十亿放量换手见短顶</p>
-<p>液冷方向后面难以为继，落幕会类似于新型工业化方向，不再多提，强度足深思</p>
-<p>供应链方向后面会留下实锤受益的继续走趋势，淘汰一批纯情绪无强逻辑支撑的</p>
-<p>算力方向大概率落幕，后续催化仍有，但本次多为借助情绪上涨，少有逻辑底气</p>
-<p>鸿蒙暂且不言，只因研究未深入，不可断言</p>
-<hr>
-<p>此前做出的基准预期即为硬逻辑、大容量、确定性，周五欧菲光给出了最好的答案</p>
-<p>对下一阶段由冰点后开始的预期倒是被市场反复证伪，连续三天小幅分歧无冰点</p>
-<p>在欧菲光周四封板超预期、周五没大低开超预期、硬拉封板超预期以后</p>
-<p>那么只能是根本不会见冰点，之前几天就是分歧和抱团阶段的过渡期</p>
-<p>欧菲光反复超预期，但之前并没有明确阶段性的开始，直到其封板以后才真正确认</p>
-<p>那么后面的态度自然改为积极参与行情，看到盘内汽车电子走强配合做足了功课过</p>
-<p>直接选择了有突破意味的同大容量硬逻辑票赛力斯，从光弘直接切换过去</p>
-<hr>
-<p>延续上次行情的论述：</p>
-<p>在这一次上涨确认后，后面就按照正常的交易路径走：</p>
-<p>该格局的格局，该兑现的兑现，不过本周总体情绪比较弱，跌停数量众多</p>
-<p>因为看华为线整体补涨比较强，核心自然也就没有卖的必要性，后面再看新高</p>
-<p>最终结果是赛力回调五个点左右再被拉回，次日涨停创新高</p>
-<p>欧菲光也接近于同样，不过给出新高后被爆头兑现，自然也就落幕，次日继续兑现</p>
-<p>重点谈圣龙</p>
-<p>七板的时候注意到的，考虑了几个点，然后认为其可以关注：</p>
-<p>监管放松、行情大概率未结束、类比捷荣阶段（低位补涨高位打高度、弱势反逼抱团</p>
-<p>同样缩量市场下，既然容量票可能会受影响，那么自然会缩容转向小盘</p>
-<p>赛力调整次日，情绪总体预判会有回暖，并且行情大概没结束，简单判断会走个反弹</p>
-<p>圣龙、赛力早盘略微下探后被迅速拉回上冲到五个点左右，直接出买点可确认</p>
-<p>若对后续行情抱有乐观的态度，此处自然为买点，否则则为埋点，个人认知定下的结论</p>
-<p>赛力当日尾盘涨停，情绪尾盘回暖，算力方向同样顺势走强</p>
-<p>再后面同样按照正常的交易逻辑看，无非调低些预期，因为行情博弈至此随时可兑现</p>
-<p>因而有些情况下也就没有格局的意义，类似于赛力、欧菲，看不到后续更远的行情</p>
-<p>后手资金无买点，只有先手资金持筹等待的卖点，一般卖点即为等待一个分时兑现点</p>
-<p>午后赛力斯兑现，带动一众高标走弱，当日配合指数来了一个双杀，圣龙成唯一活口</p>
-<p>圣龙当日无卖点，因为其本身还没有出现强兑现，且没有确认无法修复的存在</p>
-<p>不过次日依旧随时可以兑现，情绪短期进入弱势，次日也可能开盘即跌停，没确定性</p>
-<p>不过次日到目前看，没有兑现死，在张江七亿封单、捷荣跌停、抱团瓦解的情况下</p>
-<p>依旧涨停，带动了龙字辈、汽车板块表现，另外两个真视通、文一似乎也受益于其</p>
-<p>赛力同样从昨日分歧兑现中恢复</p>
-<hr>
-<p>上述主要是把后续行情也给论述了一遍，因为本周并没有做好相应的总结记录，过忙</p>
-<p>行情本身依旧会继续发展，我想我也会给出思路</p>
-<p>单纯就此篇文章所谈及的，已经都变为事实，也就不必多议，总结即可</p>
-<p>捷荣本身的再度跌停已经证明一点，适当和监管作对，在五倍空间才给黄牌警告</p>
-<p>那么低位补涨就具有极高的确定性，无需再死怼捷荣，低位的性价比比捷荣高多</p>
-<p>液冷早已定性，一语成谶</p>
-<p>供应链方向，锚定容量、硬逻辑的本质在于市场选出了光弘、润和</p>
-<p>而纯情绪在公告证明后纷纷自缢，带来不小负反馈，而行情仍然没有结束</p>
-<p>同时退潮段内，华力、光弘的抱团表现也证明了此点，硬逻辑、大容量成为市场的标配</p>
-<p>单纯从预判的角度，可以以此作为下一阶段领涨的选择预判</p>
-<p>但为了确定性，最终一切都由市场给答案，市场选出的领涨才是最终的答案</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Q&amp;A </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Questions and Answers（中文）</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/16/qna-cn/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/16/qna-cn/</url>
+      <content type="html"><![CDATA[<span class="label label-danger">Q</span> <code>Freemind</code> 这名字有何含义？<br><br><span class="label label-success">A</span> <code>Freemind</code> 命名出自 <a href="http://freemind.pluskid.org/" target="_blank" rel="external">Pluskid</a> 的博客。这个主题很大程度借鉴了他的博客的布局和样式。<br><br><span class="label label-danger">Q</span> 现在都有这么多 Hexo 的主题了，为啥又要写一个？<br><br><span class="label label-success">A</span> 实际上我这个主题在我使用 Hexo 前已经创建了。我在半年前将博客迁移到 Hexo ，因为我已经习惯了原来的主题，所以顺便把主题也移植了过来。<br><br><a id="more"></a><p><span class="label label-danger">Q</span> 为啥还用 CSS 写样式，而不用更高端大气的 stylus ？</p><p><span class="label label-success">A</span> 嗯，stylus 的确很酷。不过我不想再把以前的样式重写成 stylus 了。所以暂时先保留原来的 CSS。</p><p><span class="label label-danger">Q</span> 你的博客不错用，如何贡献？</p><p><span class="label label-success">A</span> 有人喜欢我的东西我就很高兴咯。如果想做出贡献，你可以：</p><ul><li>为本主题的 <a href="https://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="external">Github 项目</a> 加颗星；</li><li>Fork 这个项目，尽情DIY，然后给我发 pull request;</li><li>这个项目遵循 MIT 开源协议，你可以在本主题基础上创建你的主题。不过如果你能在你的主题页面中声明主题基于 Freemind 就再好不过了。</li></ul><p><span class="label label-danger">Q</span> <a href="http://hahack.com" target="_blank" rel="external">你自己的博客</a> 看起来跟这个主题有点不一样呀，为什么？</p><p><span class="label label-success">A</span> 是的。我在开源这个主题前做了些简化。不是所有人都需要我的博客里的一些特性，比如 <a href="http://hahack.com/wiki" target="_blank" rel="external">Wiki</a> 页面。</p><p><span class="label label-danger">Q</span> 如何指定某些页面生成 ToC(Table of Contents) ？</p><p><span class="label label-success">A</span> 在<a href="https://github.com/wzpan/hexo-theme-freemind#front-matter" target="_blank" rel="external">文章头部</a>添加 <code>toc: true</code> 。</p><p><span class="label label-danger">Q</span> 从哪里可以找到你的这几篇文档的 Markdown 源码？</p><p><span class="label label-success">A</span> 在本站点的 <a href="https://github.com/wzpan/hexo-theme-freemind-blog" target="_blank" rel="external">源码仓库</a> 。</p>]]></content>
+      
       <categories>
-        <category>NTheme study</category>
+          
+          <category> Docs </category>
+          
       </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>END</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NT-23-10-8 智驾</title>
-    <url>/2023/10/08/NT-23-10-8-%E6%99%BA%E9%A9%BE/</url>
-    <content><![CDATA[<p>一个预想：</p>
-<p>先前我曾在华为以下的评论区提到：</p>
-<p><img src="/img/image3.png"></p>
-<p>届时的市场环境是我所不能直接下定论的，但对题材本身可以有所准备</p>
-<p>当下，华为的问界M7超预期大定，对后续将会发布的智界、M9的销量也可更加乐观</p>
-<p>而华为的车基本离不开智能驾驶属性，何况在预期引导上面华为官方也有意向智能化</p>
-<p>在一定程度上也实现了智能驾驶功能的破圈，使得消费者开始重视智能驾驶功能汽车</p>
-<p>题材本身的容量、想象力之类的基本属性是过关的，能持续走的底气在于消息面催化</p>
-<p>再论后面一两个月内的频繁催化：</p>
-<p>华为智界S7将于十一月十七日举行的广州车展内开启交付</p>
-<p>问界M9将于十二月发布</p>
-<p>理想汽车宣布通勤NOA计划，年内推送百座城市</p>
-<p>华为无图城市年底前开通</p>
-<p>小鹏城市NGP年内预计将会覆盖多座无图城市</p>
-<p>南京无人驾驶网约车将于年内投放二十辆</p>
-<hr>
-<p>这个题材在十一月或十二月是比较值得重点关注的，届时我也会具体详细化整个题材</p>
-<p>具体问题肯定还是有的，华为先前老问界M7当时同样以此作噱头，但最终销量却很差</p>
-<p>具体销量数据就需要等到后面几个月的事情了，不过一般短线也不会定价如此久远的</p>
-<p>至于选择上面，具体以届时的代工厂作为选项，毕竟和华为合作的代工车企并不算少</p>
-<hr>
-<p>题材的前瞻或许没问题，目前也快步入十一月了，接近年底</p>
-<p>而最近的汽车走势一直较强，先后产生圣龙、赛力、江淮等强势票，或许可继续关注</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Q&amp;A </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Tag Plugins</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/16/tag-plugins/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/16/tag-plugins/</url>
+      <content type="html"><![CDATA[<p>The freemind theme offers several new tag plugins, so as to fully take advantages of Bootstrap.</p><p>To use these tag plugins, you need to install <a href="https://github.com/wzpan/hexo-tag-bootstrap" target="_blank" rel="external">hexo-tag-bootstrap</a> first. In your blog root folder, execute the following command:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-tag-bootstrap --save</div></pre></td></tr></table></figure><p>Then you can use these tag plugins in your blog, as easily as you normally do using hexo tag plugins. </p><a id="more"></a><h2 id="Text-Color"><a href="#Text-Color" class="headerlink" title="Text Color"></a>Text Color</h2><p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p><h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor [style] %&#125;</div><div class="line">  text string</div><div class="line">&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure><h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor muted %&#125;</div><div class="line">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor primary %&#125;</div><div class="line">Nullam id dolor id nibh ultricies vehicula ut id elit.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor success %&#125;</div><div class="line">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor info %&#125;</div><div class="line">Maecenas sed diam eget risus varius blandit sit amet non magna.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor warning %&#125;</div><div class="line">Etiam porta sem malesuada magna mollis euismod.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor danger %&#125;</div><div class="line">Donec ullamcorper nulla non metus auctor fringilla.</div><div class="line">&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure><h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p><p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p><p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p><p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p><p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p><p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p><h2 id="Buttons"><a href="#Buttons" class="headerlink" title="Buttons"></a>Buttons</h2><p>Inserts a button with target links, text and specified color.</p><h3 id="Syntax-1"><a href="#Syntax-1" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% btn url text [style] %&#125;</div></pre></td></tr></table></figure><h3 id="Examples-1"><a href="#Examples-1" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% btn http://hahack.com hahack %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack primary %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack success %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack warning %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack danger %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack info %&#125;</div></pre></td></tr></table></figure><h3 id="Results-1"><a href="#Results-1" class="headerlink" title="Results"></a>Results</h3><a class="btn btn-default" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-primary" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-success" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-warning" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-danger" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-info" href="http://hahack.com" target="_blank" rel="external">hahack</a><h2 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h2><p>Inserts a label with text and specified color.</p><h3 id="Syntax-2"><a href="#Syntax-2" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% label text [style] %&#125;</div></pre></td></tr></table></figure><h3 id="Examples-2"><a href="#Examples-2" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% label default %&#125;</div><div class="line"></div><div class="line">&#123;% label warinng warning %&#125;</div><div class="line"></div><div class="line">&#123;% label success success %&#125;</div><div class="line"></div><div class="line">&#123;% label danger danger %&#125;</div><div class="line"></div><div class="line">&#123;% label primary primary %&#125;</div><div class="line"></div><div class="line">&#123;% label info info %&#125;</div></pre></td></tr></table></figure><h3 id="Results-2"><a href="#Results-2" class="headerlink" title="Results"></a>Results</h3><span class="label label-default">default</span><span class="label label-warning">warinng</span><span class="label label-success">success</span><span class="label label-danger">danger</span><span class="label label-primary">primary</span><span class="label label-info">info</span><h2 id="Badges"><a href="#Badges" class="headerlink" title="Badges"></a>Badges</h2><p>Inserts a badge with text.</p><h3 id="Syntax-3"><a href="#Syntax-3" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge text %&#125;</div></pre></td></tr></table></figure><h3 id="Examples-3"><a href="#Examples-3" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge 42 %&#125;</div></pre></td></tr></table></figure><h3 id="Results-3"><a href="#Results-3" class="headerlink" title="Results"></a>Results</h3><span class="badge">42</span><h2 id="Alerts"><a href="#Alerts" class="headerlink" title="Alerts"></a>Alerts</h2><p>Inserts alert messages with text and specified color.</p><h3 id="Syntax-4"><a href="#Syntax-4" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% alert [style] %&#125;</div><div class="line">   Alert string</div><div class="line">&#123;% endalert %&#125;</div></pre></td></tr></table></figure><h3 id="Examples-4"><a href="#Examples-4" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;% alert warning %&#125;</div><div class="line">Best check yo self, you&apos;re not looking too good.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert danger %&#125;</div><div class="line">Change a few things up and try submitting again.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert success %&#125;</div><div class="line">You successfully read this important alert message.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert info %&#125;</div><div class="line">This alert needs your attention, but it&apos;s not super important.</div><div class="line">&#123;% endalert %&#125;</div></pre></td></tr></table></figure><h3 id="Results-4"><a href="#Results-4" class="headerlink" title="Results"></a>Results</h3><div class="alert alert-warning"><i class="fa fa-bell"></i>  Best check yo self, you're not looking too good.</div><div class="alert alert-danger"><i class="fa fa-bug"></i>  Change a few things up and try submitting again.</div><div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  You successfully read this important alert message.</div><div class="alert alert-info"><i class="fa fa-info"></i>  This alert needs your attention, but it's not super important.</div>]]></content>
+      
       <categories>
-        <category>NTheme study</category>
+          
+          <category> Docs </category>
+          
       </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>END</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PT-23-10-13 水利</title>
-    <url>/2023/10/13/PT-23-10-13-%E6%B0%B4%E5%88%A9/</url>
-    <content><![CDATA[<p>彭博于先前曾经报道过中国高层在思考推出经济刺激措施，以完成今年的经济目标</p>
-<p>并且核心在于发行特别国债以水利投资形势拉动经济</p>
-<p>个人因为消息面、认知都只限于平民百姓一层，没办法清楚决策层具体思路来源</p>
-<p>消息真假暂且不去争论，没意义的</p>
-<p>但若推出水利建设，那么必然是为了拉动经济，这一点看明白即可</p>
-<p>那么就继续谈这个题材</p>
-<p>水利投资、中央负债，这种事情本身极其重要，需要中央才能定下要不要做</p>
-<p>恰好，十月份原本应该就有政治局会议，专门分析研究经济形势和经济工作</p>
-<p>不过在一八年以后就再没有开过，一般时间上面定在十月底附近，十一月初</p>
-<p>若定下要依靠水利，那么在月底的会议上必然能够看到这一议题，对四季度</p>
-<p>机构卖方态度：</p>
-<p><img src="/img/image4.png"></p>
-<p>这件事机构也没有直接否认其真实性反而有一定程度上的认可</p>
-<p>再说水利部的措辞：</p>
-<p><img src="/img/image5.png"></p>
-<p>会议措辞还是比较积极的，而且就在彭博发布文章后不久举行的发布会</p>
-<p>所以对于后续潜在的月底的政治局会议就可以进行一定程度上的预期，至于规模</p>
-<p>暂时应该比不上去年四月的基建，那是真正为了缓解当时极度的困境才推出的</p>
-<p>估计规模在千亿到万亿之间，主要目的是维稳经济、实现全年目标，而非急救手段</p>
-<p>暂且对十月底的政治局会议要有所预期，届时此就可能为投资方向（有没有还不知道</p>
-<hr>
-<p>补充一些最近的消息：</p>
-<p>十四届全国人大常委会第六次会议将于10月20日至24日在京举行，审议关于提请审议授权提前下达部分新增地方政府债务限额等议案</p>
-<p>2018年底，全国人大常委会决定，在2019年3月全国人民代表大会批准当年地方政府债务限额之前，授权国务院提前下达2019年地方政府新增一般债务限额和新增专项债务限额；授权国务院在2019年以后年度，在当年新增地方政府债务限额的60%以内，提前下达下一年度新增地方政府债务限额。授权期限为2019年1月1日至2022年12月31日。</p>
-<p>意味着在今年国务院提前下达部分新增债务限额有望延续</p>
-<p>彭博于10月23日晚公布了相关消息</p>
-<p><img src="/img/image13.png"></p>
-<p>今晚：</p>
-<p><img src="/img/image14.png"></p>
-<p><img src="/img/image15.png"></p>
-<p>再看市场反馈:</p>
-<p><img src="/img/image16.png"></p>
-<hr>
-<p>谈些我个人对后续的见解：</p>
-<p>水利方向明天爆量一字定军心，带动指数上行</p>
-<p>讨论分析如下：</p>
-<p>大环境预判上面肯定不会有今天那么流畅，情绪、指数环境都会较今天逊色，弱些</p>
-<p>所以要作为出手点本身就逊于今天的出手点，确定性而言已经不能算特别足够高了</p>
-<p>说下最为被重视的水利题材，单从上述角度而言，今天还多了一个埋伏盘的小问题</p>
-<p>同样，此预期被广为流传许久，明天还有的问题可能就是直接兑现，且今天并无量</p>
-<p>所以从这些角度谈论那么水利明天的参与必然需要谨慎</p>
-<p>但实际上还有一个剧本，水利本身的意义其实都能明白，并不是为了所谓的重建等</p>
-<p>更多还有拉动经济、维稳经济的作用，相应的上调后续经济基本面的预期也是好事</p>
-<p>毕竟在当下节点推出的意义，和去年四月的意义接近，无非是紧迫性没那么重罢了</p>
-<p>因而指数极有可能就是被带动起来走强，毕竟基建、水利本身也算是一个权重板块</p>
-<p>假如明天开盘略微分歧后上板走强，并且带动指数走强，那么实际上是最好的剧本</p>
-<p>似乎还是需要面对不确定性，是吧，其实就是从多个角度看问题，按自己认知来定</p>
-<p>怎么确认？</p>
-<p>其实先前还在担忧市场态度问题，A50无疑给出了最好的答案(现涨超1%</p>
-<p>后面只要不出现强回落，且商品方向夜盘能顺势走强即已经无异议</p>
-<p>明天水利爆量一字定军心，带动板块上行，看哪几个想顶一字，直接死怼换手即可</p>
-<p>预判为龙字辈，且看明天开盘，几乎可以预判为后者剧本的走法</p>
-<p>且待市场表现</p>
-<hr>
-<p>不过其实本次让我感觉意外的，是为何人大会审议此类事件，人大的职权范围着实神奇</p>
-<p>先前推动降印花税也是在人大会议上通过的(具体看时间点即可，人大会议期间</p>
-<p>我本认为这种事情应该是在政治局会议上定调，然后各部门再去具体实施的</p>
-<p>从这点理解其实应该没问题，因为八月的政治局常务委员会会议确实谈到了</p>
-<p>…看得有点不仔细，应该是把这会议给漏了(未来应该会考虑把会议整理一遍再说</p>
-<p>那么人大其实就是具体落实同意政治局会议的基本定调下的政策，总体确实有意思</p>
-<p>值得深究</p>
-<hr>
-<p>板块本周总体都是在走退潮淘汰赛，周五略有企稳之势，留下了龙泉、青龙、冠龙一批</p>
-<p>均为龙字辈，至少先前的判断是没有错的</p>
-<p>后面还能否走强？需要看市场的态度，目前我还无法做出确认，变数依旧比较多且混杂</p>
-<p>说下隐忧：</p>
-<p>假如下周一水利竞价分时弱转强，那么到底是反抽，还是回归继续走主升？</p>
-<p>当下市场主要是轮动环境，不排除周一把人骗过来然后当日炸板、或者次日杀的可能性</p>
-<p>此外，虽然目前看得到题材和指数、情绪独立，但让我完全无视捷荣、真视通还是不行</p>
-<p>但好的来讲，万亿国债、水利，本身影响较高，前期一直没什么参与点，现在换手完毕</p>
-<p>后面走强的可能性依旧很大，且周五留下了活口</p>
-<p>最麻烦的事前，其实是我判断这个板块是主升还是反抽，只能是先手买点已过才能确定</p>
-<p>事前我不晓得，毕竟有隐忧在，只能是依据此来控制仓位了，一般考虑龙字辈里面选个</p>
-<p>走淘汰赛卡位就没意思，最好是走并行向上拓展空间，即目前剩下的活口里面共同走强</p>
-<p>弱转强当场考虑半仓吧，基本就是这样一个态度</p>
-<p>确定买点以后，就再无买点，若走不出，也就罢</p>
-<hr>
-<p>此题材后续还有需要研究的两个事项：人大的职权范围、中央金融工作会议（顺便研究</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> plugins </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Tag Plugins（中文）</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/16/tag-plugins-cn/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/16/tag-plugins-cn/</url>
+      <content type="html"><![CDATA[<p>Freemind 主题提供了丰富的 tag plugins，以充分利用 Bootstrap 的威力。</p><p>在使用这些 tag plugins 之前，你需要先安装 <a href="https://github.com/wzpan/hexo-tag-bootstrap" target="_blank" rel="external">hexo-tag-bootstrap</a> 。在你的 Hexo 博客目录，执行下列命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-tag-bootstrap --save</div></pre></td></tr></table></figure><p>然后就可以像使用其他 hexo tag plugins 一样使用这些 Bootstrap tag plugins 了。</p><a id="more"></a><h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>插入一段文本，并用特殊的颜色高亮它。</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor [style] %&#125;</div><div class="line">  text string</div><div class="line">&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor muted %&#125;</div><div class="line">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor primary %&#125;</div><div class="line">Nullam id dolor id nibh ultricies vehicula ut id elit.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor success %&#125;</div><div class="line">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor info %&#125;</div><div class="line">Maecenas sed diam eget risus varius blandit sit amet non magna.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor warning %&#125;</div><div class="line">Etiam porta sem malesuada magna mollis euismod.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor danger %&#125;</div><div class="line">Donec ullamcorper nulla non metus auctor fringilla.</div><div class="line">&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p><p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p><p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p><p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p><p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p><p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p><h2 id="按钮（Buttons）"><a href="#按钮（Buttons）" class="headerlink" title="按钮（Buttons）"></a>按钮（Buttons）</h2><p>插入一个按钮，按钮可以带有链接、文本，并可以指定样式。</p><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% btn url text [style] %&#125;</div></pre></td></tr></table></figure><h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% btn http://hahack.com hahack %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack primary %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack success %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack warning %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack danger %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack info %&#125;</div></pre></td></tr></table></figure><h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><a class="btn btn-default" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-primary" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-success" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-warning" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-danger" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-info" href="http://hahack.com" target="_blank" rel="external">hahack</a><h2 id="标签（Labels）"><a href="#标签（Labels）" class="headerlink" title="标签（Labels）"></a>标签（Labels）</h2><p>插入一个标签，并为其指定文本和样式。</p><h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% label text [style] %&#125;</div></pre></td></tr></table></figure><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% label default %&#125;</div><div class="line"></div><div class="line">&#123;% label warinng warning %&#125;</div><div class="line"></div><div class="line">&#123;% label success success %&#125;</div><div class="line"></div><div class="line">&#123;% label danger danger %&#125;</div><div class="line"></div><div class="line">&#123;% label primary primary %&#125;</div><div class="line"></div><div class="line">&#123;% label info info %&#125;</div></pre></td></tr></table></figure><h3 id="结果-2"><a href="#结果-2" class="headerlink" title="结果"></a>结果</h3><span class="label label-default">default</span><span class="label label-warning">warinng</span><span class="label label-success">success</span><span class="label label-danger">danger</span><span class="label label-primary">primary</span><span class="label label-info">info</span><h2 id="徽章（Badges）"><a href="#徽章（Badges）" class="headerlink" title="徽章（Badges）"></a>徽章（Badges）</h2><p>插入一个徽章，并为其指定文本。</p><h3 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge text %&#125;</div></pre></td></tr></table></figure><h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge 42 %&#125;</div></pre></td></tr></table></figure><h3 id="结果-3"><a href="#结果-3" class="headerlink" title="结果"></a>结果</h3><span class="badge">42</span><h2 id="警报（Alerts）"><a href="#警报（Alerts）" class="headerlink" title="警报（Alerts）"></a>警报（Alerts）</h2><p>插入一段警报文本信息，并为其指定样式。</p><h3 id="语法-4"><a href="#语法-4" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% alert [style] %&#125;</div><div class="line">   Alert string</div><div class="line">&#123;% endalert %&#125;</div></pre></td></tr></table></figure><h3 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;% alert warning %&#125;</div><div class="line">Best check yo self, you&apos;re not looking too good.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert danger %&#125;</div><div class="line">Change a few things up and try submitting again.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert success %&#125;</div><div class="line">You successfully read this important alert message.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert info %&#125;</div><div class="line">This alert needs your attention, but it&apos;s not super important.</div><div class="line">&#123;% endalert %&#125;</div></pre></td></tr></table></figure><h3 id="结果-4"><a href="#结果-4" class="headerlink" title="结果"></a>结果</h3><div class="alert alert-warning"><i class="fa fa-bell"></i>  Best check yo self, you're not looking too good.</div><div class="alert alert-danger"><i class="fa fa-bug"></i>  Change a few things up and try submitting again.</div><div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  You successfully read this important alert message.</div><div class="alert alert-info"><i class="fa fa-info"></i>  This alert needs your attention, but it's not super important.</div>]]></content>
+      
       <categories>
-        <category>PTheme study</category>
+          
+          <category> Docs </category>
+          
       </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>END</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NT-23-10-16 华鲲振宇</title>
-    <url>/2023/10/16/NT-23-10-16-%E5%8D%8E%E9%B2%B2%E6%8C%AF%E5%AE%87/</url>
-    <content><![CDATA[<p>本意是研究高新发展拟收购70%华鲲振宇股权复牌对市场的影响</p>
-<p>但经过思考后发现自己在这一块缺乏经验，因而先由历史行情总结答案</p>
-<hr>
-<p>中航电测：</p>
-<p>于一月十一日晚公告，正在筹划发行股份向成飞集团购买百分百股权</p>
-<p>即成飞集团实际上将借壳上市</p>
-<p>并将于十个交易日内披露本次交易方案，即在二月二日前披露</p>
-<p>中航电测市值当时为六十亿</p>
-<p>此处的分析来源为后续的链接文章：</p>
-<p><img src="/img/image9.png" alt=""></p>
-<p>但个人认为分析有不妥之处，采用总资产对比或许更能体现市场理解的态度</p>
-<p>成飞集团截止2021年末的总资产在1511亿元，营收在567亿元</p>
-<p>而中航电测届时的总资产仅仅36.55亿（2022年年报数据），营收19.48亿</p>
-<p>结果：</p>
-<p>成飞相关概念于2023年1月12日爆发，通达股份一字</p>
-<p>整个成飞相关板块个股涨幅基本都在10%以上，甚至有的高达50%以上</p>
-<p>并且始终活跃直到中航电测复牌为止</p>
-<p>中航电测节后复牌一度八连板，从十块钱变为五十四块钱，翻五倍</p>
-<hr>
-<p>西仪股份（现建设工业）：</p>
-<p>于2021年11月22日公告，拟以发行股份及支付现金对价方式</p>
-<p>购买兵器装备集团旗下重庆建设工业100%股权，并且于十个交易日内披露</p>
-<p>建设工业前身为汉阳兵工厂，总资产约56亿，前九月营收约23亿</p>
-<p>前九月归母净利润2.28亿元</p>
-<p>而西仪股份市值最新为二十六亿</p>
-<p>其据2021年三季度财务报告来看，资产总计13亿</p>
-<p>营收前三季度5.88亿，前三季度归母净利润-805万</p>
-<p>西仪本身的经营水平并不好，连续多年亏损，资产规模小</p>
-<p>对比而言，建设工业总资产是其的四倍，营收是其四倍，归母净利润就更不必说</p>
-<p>这一笔交易对西仪而言的影响是巨大的，几乎可以说是回炉重造类型</p>
-<p>此公告后市场表现平淡，仅仅相关拉了一下就没了后续</p>
-<p>但西仪复牌当日封单高达二十二亿，直接带动湖南天雁一字，相关兵工爆发</p>
-<p>最终西仪十三连板，湖南天雁七连板且最终涨幅达到两倍以上</p>
-<hr>
-<p>再久远的中航黑豹已经翻阅不到更多有效资料</p>
-<p>但其于2016年11月28日在连续停牌三月以后宣布重大资产重组</p>
-<p>简单来说就是，以73.108874亿元的价格，收购沈阳飞机工业（集团）有限公司</p>
-<p>剩下的就是剥离原有公司资产，使得公司焕然一新</p>
-<p>最终涨幅为五倍之高</p>
-<hr>
-<p>中航电测收购的是成飞集团，其规模在1500亿，营收也在500亿以上</p>
-<p>中航电测本身规模仅仅36亿，营收才19亿</p>
-<p>也就是这件事是人尽皆知的，都能看出来这件事情的价值和意义到底有多大</p>
-<p>因而才会产生提前炒作，如通达、成飞板块的大幅度上涨，本质在炒作预期</p>
-<p>反观西仪</p>
-<p>建设工业的规模仅仅56亿，营收约23亿，归母净利润2.28亿</p>
-<p>西仪股份资产总计13亿，营收5.88亿，归母净利润-805万元</p>
-<p>从客观规模来说，这个规模、营收确实不大，因而当时市场确实没有炒太多</p>
-<p>但西仪股份复牌后因为超预期封单，才带动了湖南天雁等走了一字开始炒作</p>
-<p>为何？</p>
-<p>短线资金没有意识到西仪能给出十三连板，因为此交易并不和中航电测的交易一样</p>
-<p>这是一个对于公司而言翻天覆地的变化，但在外人看起来仿佛仅仅是一笔小型交易</p>
-<p>市场只计价了绝对规模的重组价值，而忘却了相对规模的重组价值，这就是其本质</p>
-<p>这也是之前那篇文章中所提到的结论的应用，能够充分解释为何西仪能够十三连板</p>
-<p>而不是类似于中直、中航机电般首日涨停即炸板</p>
-<hr>
-<p>于结论而言，或许更加应该参考这篇文章：<a href="https://new.qq.com/rain/a/20230113A02U4700">中航电测复牌值几个板？</a></p>
-<p>我倾向于接受本篇文章的主旨，即上述观点来预判市场定价</p>
-<p>因为其确提出了相对应的例子，市场表现和解释能圆满对上</p>
-<p>要从几个角度分析，具体才能得知这一笔交易市场会给多少定价：</p>
-<p>注入资产规模、质量（盈利水平、营收、地位）的绝对水平和相对水平（相对原公司）</p>
-<p>原公司的规模、质量（盈利水平、营收）、市值、经营状况</p>
-<p>前者自然是越高越好，后者则是越低越好</p>
-<p>再简单一点来说</p>
-<p>就是这一笔交易、重组、注入资产能够在多少程度上改变原公司的状态</p>
-<p>改变越是明显、彻底，那么对该公司的定价也会更上一层楼</p>
-<p>不过此外，市场情绪也会对此类连板产生一定助推作用，放股灾背景就不尽然</p>
-<hr>
-<p>现在以此结论来进行研究本次的华鲲振宇：</p>
-<p>华鲲振宇公司：</p>
-<p><img src="/img/image6.png" alt=""></p>
-<p>公司是不错的公司，算力公司，营收能够同比翻三倍，利润也能翻四倍</p>
-<p>规模今年大约在百亿以下，营收预期也差不多，利润在一亿附近波动</p>
-<p>我已经尽可能按想象力给估值了，实际上不太可能在高基数下那么迅速发展</p>
-<p>其昇腾和鲲鹏服务器出货量第一，行业地位是不错的</p>
-<p>再看高新发展：</p>
-<p><img src="/img/image7.png" alt=""></p>
-<p><img src="/img/image8.png" alt=""></p>
-<p>再看高新发展，其主营为建筑业，典型的夕阳产业</p>
-<p>规模去年在一百五十亿左右，营收按去年算在六十亿，利润在两亿附近</p>
-<p>其实关键就在于一点，这个公司本身经营并不算差，连续多季度能盈利</p>
-<p>华鲲振宇的规模、利润都低于该公司本身，营收上面相对更高一些</p>
-<p>另外别忘了买的是70%的股权，华鲲振宇今年的利润、规模、营收都按最好水平计</p>
-<p>对标的还是公司的去年规模和业绩</p>
-<p>所以我个人的结论就是：</p>
-<p>华鲲振宇于高新发展而言更类似于企业转型，而非回炉重造</p>
-<p>自然会受益于市场情绪对算力的追捧获得一部分溢价，但需要明白</p>
-<p>本质对公司的影响程度远不及西仪、中航黑豹、中航电测</p>
-<p>因而市场内所吹出的十七板，纯粹是无稽之谈，只拿估值写文章</p>
-<p>我个人对此的预判大约是在七板左右，开板后放量则需要看市场情绪决定</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> plugins </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Code Highlight</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/15/code-highlight/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/15/code-highlight/</url>
+      <content type="html"><![CDATA[<h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// C</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World\n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h2 id="C-1"><a href="#C-1" class="headerlink" title="C++"></a>C++</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// C++</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello World"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><a id="more"></a><h2 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">helloWorld</span></span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span></div><div class="line">    &#123;</div><div class="line">        System.out.println(<span class="string">"Hello World"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h2 id="Assembler"><a href="#Assembler" class="headerlink" title="Assembler"></a>Assembler</h2><figure class="highlight arm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">#include</span> &lt;stdio.h&gt;</div><div class="line"></div><div class="line"><span class="symbol">char</span> format[] = <span class="string">"%s %s\n"</span><span class="comment">;</span></div><div class="line"><span class="symbol">char</span> hello[] = <span class="string">"Hello"</span><span class="comment">;</span></div><div class="line"><span class="symbol">char</span> world[] = <span class="string">"world"</span><span class="comment">;</span></div><div class="line"><span class="symbol">void</span> main( void )</div><div class="line">&#123;</div><div class="line">   __asm</div><div class="line">   &#123;</div><div class="line">      <span class="keyword">mov </span> eax, offset world</div><div class="line">      <span class="keyword">push </span>eax</div><div class="line">      <span class="keyword">mov </span> eax, offset hello</div><div class="line">      <span class="keyword">push </span>eax</div><div class="line">      <span class="keyword">mov </span> eax, offset format</div><div class="line">      <span class="keyword">push </span>eax</div><div class="line">      call printf</div><div class="line">      <span class="keyword">pop </span> ebx</div><div class="line">      <span class="keyword">pop </span> ebx</div><div class="line">      <span class="keyword">pop </span> ebx</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h2 id="Net"><a href="#Net" class="headerlink" title=".Net"></a>.Net</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// Hello World .NET</div><div class="line"></div><div class="line">#using &lt;mscorlib.dll&gt;</div><div class="line">using namespace System;</div><div class="line"></div><div class="line">int _tmain()</div><div class="line">&#123;</div><div class="line">    Console::WriteLine(S"Hello World");</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h2 id="Erlang"><a href="#Erlang" class="headerlink" title="Erlang"></a>Erlang</h2><figure class="highlight erlang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">-module</span><span class="params">(hello)</span>.</div><div class="line"><span class="keyword">-export</span><span class="params">([world/<span class="number">0</span>])</span>.</div><div class="line"></div><div class="line"><span class="function"><span class="title">world</span><span class="params">()</span> -&gt;</span> io:format(<span class="string">"Hello World"</span>).</div></pre></td></tr></table></figure><h2 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/local/bin/ruby -w</span></div><div class="line">puts <span class="string">"Hello World"</span></div></pre></td></tr></table></figure><h2 id="BASIC"><a href="#BASIC" class="headerlink" title="BASIC"></a>BASIC</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// Texas Instruments TI-81 BASIC</div><div class="line">Prgm1:HELLO...</div><div class="line">:Disp "HELLO WORLD"</div></pre></td></tr></table></figure><h2 id="Perl"><a href="#Perl" class="headerlink" title="Perl"></a>Perl</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin perl -w  </span></div><div class="line"><span class="keyword">print</span> (<span class="string">"Hello World"</span>);</div></pre></td></tr></table></figure><h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/bin/python</span></div><div class="line">print(<span class="string">"Hello World"</span>)</div></pre></td></tr></table></figure><h2 id="Bash"><a href="#Bash" class="headerlink" title="Bash"></a>Bash</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"Hello World"</span></div></pre></td></tr></table></figure><h2 id="Brainfuck"><a href="#Brainfuck" class="headerlink" title="Brainfuck"></a>Brainfuck</h2><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="title">[</span>&lt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">-</span><span class="title">]</span>&lt;<span class="string">.</span>&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="title">[</span>&lt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">-</span><span class="title">]</span>&lt;<span class="literal">+</span><span class="string">.</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span><span class="string">.</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span><span class="title">[</span><span class="literal">-</span><span class="title">]</span></div><div class="line">&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="title">[</span>&lt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">-</span><span class="title">]</span> &lt;<span class="string">.</span>&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="title">[</span>&lt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">-</span><span class="title">]</span>&lt;<span class="literal">-</span><span class="string">.</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="string">.</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span><span class="title">[</span><span class="literal">-</span><span class="title">]</span>&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="title">[</span>&lt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">-</span> <span class="title">]</span>&lt;<span class="literal">+</span><span class="string">.</span><span class="title">[</span><span class="literal">-</span><span class="title">]</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div></pre></td></tr></table></figure><h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?</span>=<span class="string">"Hello world\n"</span> <span class="meta">?&gt;</span></div></pre></td></tr></table></figure><h2 id="Pascal"><a href="#Pascal" class="headerlink" title="Pascal"></a>Pascal</h2><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Program</span> HelloWorld;</div><div class="line"></div><div class="line"><span class="keyword">Begin</span></div><div class="line">  Writeln (<span class="string">'Hello World!'</span>);</div><div class="line"><span class="keyword">End</span>.</div></pre></td></tr></table></figure><h2 id="Delphi"><a href="#Delphi" class="headerlink" title="Delphi"></a>Delphi</h2><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Delphi, thanks to C0derr</span></div><div class="line"><span class="keyword">program</span> Project1;</div><div class="line"><span class="keyword">uses</span></div><div class="line">  qdialogs;</div><div class="line"><span class="keyword">const</span></div><div class="line">  s=<span class="string">'Hello, World!'</span>;</div><div class="line"><span class="keyword">begin</span></div><div class="line">  showmessage(s);</div><div class="line"><span class="keyword">end</span>.</div></pre></td></tr></table></figure>]]></content>
+      
       <categories>
-        <category>NTheme study</category>
+          
+          <category> Demo </category>
+          
       </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>END</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NT-23-9-22-1 AI</title>
-    <url>/2023/09/24/T-23-9-22-1/</url>
-    <content><![CDATA[<p>AI：</p>
-<p>从市场环境而言，需要注意的问题无非是态度以及量能两个具体的问题，其他暂还可以</p>
-<p>节前交投向来清淡，即使是类似于周五这样的集中爆发式上涨也只有仅仅不到八千亿量</p>
-<p>因而持续性就存疑，AI方向基本是要万亿以上才能明确走趋势，否则大多是昙花一现罢</p>
-<p>毕竟是节前行情，也不能指望一次性产生极强的赚钱效应，何况市场总体大环境没问题</p>
-<p>节后更值得重视</p>
-<p>资金态度而言，周五虽然全线反扑，但很难就此说资金产生了一致性预期，只能是行为</p>
-<p>因为引发这场反扑的缘由或是华为在会议上所提出的一些观点，其他仅有微软收费消息</p>
-<p>大多数资金产生一致性行为的原因或许单纯是选择连续冰点后转势起来的第一个强题材</p>
-<p>何况这个实际上是盘内博弈出来的结果，看到剑桥早上的分时就能明白主要是资金选择</p>
-<p>下周就能看到这一点，我个人认为下周分歧的力度不会小，何况行情恢复初期，且看吧</p>
-<p>再说题材本身</p>
-<p>题材本身是没有什么问题的，上半年都走了那么久的趋势，是个人都捞了几十个点下来</p>
-<p>时代风向标，想象力逻辑都在线，不过逻辑上面可能需要具体细化分解一些，大致猜测</p>
-<p>算力目前并没有达到饱和态度，整个浪潮最先受益的就是算力方向，而当算力彻底饱和</p>
-<p>后面便是大模型端，中端的天下，上游价格会逐渐因为饱和下来，下游tB/C端需求旺盛</p>
-<p>最终的受益端才会是最终的应用端，整体产业链升级、成本降低，产品竞争力最终强化</p>
-<p>一般个人认为就是这样一个发展思路，若到时候发展有所偏差及时修正即可，不必争论</p>
-<p>再说几句话引发的整体性炒作行为</p>
-<p>资金整体行为虽然值得重视，但并不代表其完全可靠，周五行情起于华为会议的一些话</p>
-<p>回顾华为在全联接上面的话，更多体现的是算力本身在AI时代的重要性及潜在业绩增量</p>
-<p>周五行情发展的脉络也是明确的向着光模块、算力发展，昆仑万兴这种主要属于是跟风</p>
-<p>那么来看，资金炒作的是什么？大概率是对未来业绩预期进行了炒作，反映在当下价格</p>
-<p>当然这一点当然是后言了，如果你说资金炒作的就是华为那几句话我也只能是两手一摊</p>
-<p>毕竟不同人有不同看法，我个人认为资金最重要选择算力的原因就在于其可预期的业绩</p>
-<p>量能可期，题材强劲，资金态度预期尚待确认</p>
-<p>再说我个人看法，重点就在于业绩，三季度报将会在十月份底之前需要全部公布完成的</p>
-<p>而光模块经过了大半年的放量，尤其是中际这类本身就具有行业领先优势的公司的业绩</p>
-<p>说实话，个人给的预期是比较高的，并且后续大概率是要继续放量，这个市场还在扩张</p>
-<p>十月九日开盘，那么剩下的十七个交易日中，会迎来比较密集的业绩披露，且最早已有</p>
-<p>相对于上半年一路不回头打满了业绩预期的算力，当下已然修正了预期以及消化了利空</p>
-<p>值得博弈的概率已然足够</p>
-<p>对于季度报的炒作，极有可能伴随本次AI反弹共同产生，以至于产生整体的反转性趋势</p>
-<p>我的预判就是资金后续会逐渐开始炒作业绩的预期，当然具体仍然需要等待市场的验证</p>
-<p>下一次，爆量上涨，基本就可以确认这一点，而这一点，大概率就在下周中的分歧以后</p>
-<p>值得关注，后续会继续跟进记录</p>
-<p>另外多提一嘴，周末的消息面很多，很杂，有一大堆的题材，我在这里先可以列举一些</p>
-<p>人工智能、新型工业化、新冠检测、机器人、带路、华为，明天铁定是要开始抢资金了</p>
-<p>出手记得谨慎，行情修复初期，追高需谨慎~</p>
-<hr>
-<p>果真随意去猜测一个趋势的顶底并非妙事，目前人工智能大多数票再次创了新低</p>
-<p>业绩很难作为炒作的预期基准，尤其是在上半年消化了大量业绩的情况下</p>
-<p>同样，当下的市场环境：缩量、弱势、只能起一个板块，这决定这个方向暂无表现</p>
-<p>趋势到底还是需要靠走出来的，预判趋势本身似乎还是有点…</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> highlight </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Lorem Ipsum</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/15/lorem-ipsum/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/15/lorem-ipsum/</url>
+      <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p><img src="/hexo-theme-freemind-blog/images/lorem-ipsum/lorem-ipsum.jpg" alt="Lorem Ipsum"></p><a id="more"></a><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>]]></content>
+      
       <categories>
-        <category>NTheme study</category>
+          
+          <category> Test </category>
+          
       </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>END</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NT-23-9-22-2 带路</title>
-    <url>/2023/09/24/T-23-9-22-2/</url>
-    <content><![CDATA[<p>带路</p>
-<p>周五在市场增量资金进场的情况下其实表现总体没有预期那么强，个人本预判首板产生</p>
-<p>结果当日是一个首板都没有，本来想着周五拉个首板博弈周末消息面发酵，结果就有点</p>
-<p>好歹拉了一些相关的个股，不能说资金完全没有做，只能说做的资金比较少，没成合力</p>
-<p>周五的资金态度来说确实不尽如人意，一方面确实是人工智能抢了资金，另外一方面么</p>
-<p>可能确实是市场没有在意，也可能是市场对其有预期差，毕竟两者在市场的表现一致的</p>
-<p>暂且也就不能否认这个题材预期</p>
-<p>环境，当下其实大环境没有什么大问题，对于做连板接力基本比较友好，捷荣突破监管</p>
-<p>当下监管已经暂时放宽了先前不合理的监管制度，为后续连板拓宽了高度，算是个好事</p>
-<p>量能当然不能指望，带路这个题材其实小大皆可，容量标还是投机标基本都能够找到的</p>
-<p>所以环境上面也不能说完全不支持，无非相对于科技，其存在感确实稍微低了一些的吧</p>
-<p>华为开始的科技最终预期还是会蔓延回到人工智能，这个题材或许在科技线来说不值提</p>
-<p>风格或者存在感来说这个题材可能确实不太受待见，后面且看的，暂时没有办法去否认</p>
-<p>题材本身级别是足够的，在当下一个国际形势下基本也是一个热门话题，何况影响较大</p>
-<p>十月份开的会应该是有一百来个国家吧，在北京开，一九年的时候该题材国际实业三倍</p>
-<p>重点还是放在炒作预期上面</p>
-<p>先前东北振兴战略的提出，叠加俄罗斯的远东开发，再叠加一带一路会议普京确认参与</p>
-<p>其实对于该方向的预期，我个人是已经有所想法的，且相关性的消息面就是京莫高铁线</p>
-<p>当然，这当一个预期即可，该线路个人感觉意义不太大，有一部分杜撰的意味在内的了</p>
-<p>如果真要炒，当作一个二类题材看即可，个人思路还是在东北振兴叠加一带一路的个股</p>
-<p>另外就是新疆自贸区，这个是传了挺久的消息，九月初就有，逻辑绝对相关的新赛股份</p>
-<p>之前几个板，现在又是连阳上来，后面看吧，这块预期差可能不太大，容易被市场兑现</p>
-<p>但如果拉板我应该会来助攻，也可能是其他相关个股，新疆的叠加一带一路，物流方向</p>
-<p>再说最后一个，沙特或者南亚东南亚方向的合作，包括推行人民币国际化或者相关贸易</p>
-<p>另外就是为什么我愿意选择其的理由，无非就是这十一天假期内我能够安心睡得着稳觉</p>
-<p>这个板块历来都是会有炒作的，并且基本都会有提前一到两周的炒作时间，总会有表现</p>
-<p>十月份已经确定一带一路高峰论坛，那么随着时间的推移其实其的炒作周期会越发临近</p>
-<p>放假以后的开盘在九号，届时离具体的会议开启阶段还会有多远？新闻联播和外交部呢</p>
-<p>他们会坐视不管么？因而个人预判资金后续会对这个板块展开炒作，但具体得看资金面</p>
-<p>他们具体怎么样，都是盘内、盘后博弈的结果，届时确认以后跟上即可，至于确认点么</p>
-<p>稳妥点等带路明牌以后直接接力，比较自信就直接打带路首板，比较一般么就一半一半</p>
-<p>另外多提一嘴，周末的消息面很多，很杂，有一大堆的题材，我在这里先可以列举一些</p>
-<p>人工智能、新型工业化、新冠检测、机器人、带路、华为，明天铁定是要开始抢资金了</p>
-<p>出手记得谨慎，行情修复初期，追高需谨慎~</p>
-<p>持续跟踪ing……</p>
-<hr>
-<p>盖棺定论</p>
-<p>由于自媒体的普及以及强主线华为的存在，带路题材最终只给出了五板的最高高度</p>
-<p>其间板块多次活跃但始终不成气候，不乏发动板块时间过早</p>
-<p>硬逻辑票多次想要上板但抛压过重同时无合力资金助攻，潜伏盘过重</p>
-<p>与其预判假期面的政策，不如预判假期面爆卖的华为汽车和手机，没抓住主要矛盾</p>
-<p>带路题材一路走来实属不易，随着自媒体的全面普及，在公布带路白皮书之日兑现</p>
-<p>简单来说，预判你的预判，当题材选出贝肯作为高度板时其实已经可以预判这结局</p>
-<p>因为贝肯是纯情绪，那么炒作的也就不是带路，而是炒作带路催化的预期</p>
-<p>后面真正有了催化，就到了预期兑现点，也是回顾过往带路行情所谨慎的</p>
-<p>差强人意，仅贝肯略有二十点浮盈</p>
-<hr>
-<p><em>发动板块的时机以及具体的选项都无法提前预判明确，确定性极低</em></p>
-<p><em>对反复被合力证伪的方向过度执着似乎并非一件好事，只会导致过分主观盲目</em></p>
-<p><em>市场选出的贝肯糟点重重，情绪流、业绩雷，意味着一旦兑现即可跟随</em></p>
-<p><em>自媒体的普及使得相关票往往存在巨量潜伏盘，客观上消弭预期差</em></p>
-<p><em>捷荣的表现可比带路方向强多了，肉眼可见，何为舍弃肉眼可见的强？</em></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> English </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>繁體中文測試</title>
+      <link href="/hexo-theme-freemind-blog/2013/12/25/traditional-chinese-test/"/>
+      <url>/hexo-theme-freemind-blog/2013/12/25/traditional-chinese-test/</url>
+      <content type="html"><![CDATA[<p>觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。</p><p>舍利子，色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。</p><p>舍利子，是諸法空相，不生不滅，不垢不淨，不增不減，是故空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明，亦無無明盡；乃至無老死，亦無老死盡。無苦、集、滅、道，無智亦無得，以無所得故。</p><p>菩提薩埵(<code>duǒ</code>)，依般若波羅蜜多故，心無罣礙(<code>guà ài</code>)。無罣礙，故無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛，依般若波羅蜜多故，得阿耨多羅三藐三菩提。</p><p>故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦，真實不虛。</p><p>故說般若波羅蜜多咒，即說咒曰：</p><blockquote><p>揭諦、揭諦，波羅揭諦，波羅僧揭諦，菩提薩婆訶。</p></blockquote>]]></content>
+      
       <categories>
-        <category>NTheme study</category>
+          
+          <category> Test </category>
+          
       </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>END</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NT-23-9-22-3 华为</title>
-    <url>/2023/09/24/T-23-9-22-3/</url>
-    <content><![CDATA[<p>总结此段行情，盖棺定论</p>
-<p>言之捷荣超预期抱团开始以后的行情，先前行情不必再议，对手机系列进行再定价为主</p>
-<p>对行情发展的宏观研判始终是我的弱项</p>
-<p>在前一阶段已然炒作完手机的所有技术以及相关的消息以后，高位如华力、华映走盘整</p>
-<p>行情第一阶段已然落幕，后面若还要再走，则需要步入全新的炒作阶段，高位抱团阶段</p>
-<p>此情绪阶段其实在多类板块中都有体现，无非我研究较少，因而对捷荣认知也有失偏颇</p>
-<p>未来会重点关注这一项目</p>
-<p>节前行情连续的弱势，低迷的成交反逼资金抱团核心</p>
-<p>监管制度的放松、活跃资本市场口号的提出实质上已经让监管放松了监管制度</p>
-<p>同样华为低位连续不断的补涨、消息催化给足短线资金持续炒作的底气</p>
-<p>跨节龙这一噱头的炒作也确实到了节点</p>
-<p>一旦上车几乎全程无卖点，因为资金的目标基本就是探明监管的底线在多少涨幅</p>
-<p>唯一可能需要关注的点就是会议，是否会有资金对会议新品超预期的炒作兑现</p>
-<p>当然后续价格的表现证明了这一点，自然也就不必过多思索，等待兑现点</p>
-<p>假日的最后一天，赛力斯、欧菲光等消费电子、华为供应链走强，捷荣走下神坛</p>
-<p>本质是资金层面预期假期内华为产品爆卖，捷荣被顺势兑现即分离（有监管因素</p>
-<p>消费电子、供应链初步预定主线地位，假日内如期爆卖，回归第一日一字定主线</p>
-<hr>
-<p><strong>中通此类早已是远久的回忆，宝馨、大连也同样早已随监管趋严而落幕</strong></p>
-<p><strong>而随着活跃资本市场口号的提出、资本市场一直弱势的表现让监管放松监控制度</strong></p>
-<p><strong>或许这本就是可以预期到的事情，最终一定会有一个票打开空间，探明监管底线</strong></p>
-<p><strong>十天百分百的涨幅、三十天百分之两百的涨幅限制使得连板高度在一年内被限死</strong></p>
-<p><strong>而现在捷荣一个月五倍才给出最温和的黄牌：重点监控</strong></p>
-<p><strong>这意味着任何的票其最高空间都在五倍，几乎可以说不再有监管限制</strong></p>
-<p><strong>赚钱效应的回归，可以预见的也是后续抱团、妖股行情的继续演进</strong></p>
-<p><strong>而对于假期面华为产品爆卖的情况，本是可以预期到的，但似乎跑偏了些</strong></p>
-<p><strong>我当时应该执着于带路之中</strong></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 繁體 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>简体中文测试</title>
+      <link href="/hexo-theme-freemind-blog/2013/12/25/simplified-chinese-test/"/>
+      <url>/hexo-theme-freemind-blog/2013/12/25/simplified-chinese-test/</url>
+      <content type="html"><![CDATA[<p>观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。</p><p>舍利子，色不异空，空不异色；色即是空，空即是色。受、想、行、识，亦复如是。</p><p>舍利子，是诸法空相，不生不灭，不垢不净，不增不减，是故空中无色，无受、想、行、识；无眼、耳、鼻、舌、身、意；无色、声、香、味、触、法；无眼界，乃至无意识界；无无明，亦无无明尽；乃至无老死，亦无老死尽。无苦、集、灭、道，无智亦无得，以无所得故。</p><p>菩提萨埵(<code>duǒ</code>)，依般若波罗蜜多故，心无罣碍(<code>guà ài</code>)。无罣碍，故无有恐怖，远离颠倒梦想，究竟涅盘。三世诸佛，依般若波罗蜜多故，得阿耨多罗三藐三菩提。</p><p>故知般若波罗蜜多，大神咒，是大明咒，是无上咒，是无等等咒，能除一切苦，真实不虚。</p><p>故说般若波罗蜜多咒， 即说咒曰，</p><blockquote><p>揭谛揭谛 波罗揭谛 波罗僧揭谛 菩提萨婆诃</p></blockquote>]]></content>
+      
       <categories>
-        <category>NTheme study</category>
+          
+          <category> Test </category>
+          
       </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>END</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PT-23-9-22-1 工化</title>
-    <url>/2023/09/24/T-23-9-22-4/</url>
-    <content><![CDATA[<p><strong>新型工业化</strong></p>
-<p>这个题材实际上是二十号国常会上李强提出的一个，主要意思就对新型工业化政策倾斜</p>
-<p>周末发酵的原因在于习周末对新型工业化表态，这个级别就一次性提高到了非常的高度</p>
-<p>资金面没问题，其实一开始就有资金在做，周五的消息面算是直接给板块一个强心针了</p>
-<p>题材没问题，级别非常高，资金面没问题，认同度同样比较高，精伦电子就是主要核心</p>
-<p>不过个人的思路是这样</p>
-<p>首先就是题材本身，虽然说习也表态了，但最终政策的落实必然需要几个月或者更长久</p>
-<p>如果政策光速落实就当我没说，此类长久期的谋划和规划，基本都会是从上到下一步步</p>
-<p>光速落实的可能性比较低，这个当然也不会是我的基准假设，所以题材只能算是二类的</p>
-<p>再，周六下午出的消息，周末发酵，核心基本直接一字根本不用想，后排也没预期差了</p>
-<p>简单来说，好的买不到，买到的就是坑，个人就认为没有什么参与意义了，这个是意外</p>
-<p>你能知道习会在后续发消息，没法提前知道的，这种事情就算是运气钱，给那群人赚了</p>
-<p>个人对这个题材就是一个观望的态度，后手资金没有参与点，后面核心开板基本就结束</p>
-<p>有意思的是明天能够看到精伦多少亿的封单，几十亿应该至少吧，大于流通盘了，笑死</p>
-<p>另外多提一嘴，周末的消息面很多，很杂，有一大堆的题材，我在这里先可以列举一些</p>
-<p>人工智能、新型工业化、新冠检测、机器人、带路、华为，明天铁定是要开始抢资金了</p>
-<p>出手记得谨慎，行情修复初期，追高需谨慎~</p>
-<p>看戏即可~</p>
-<hr>
-<p><strong>下面具体说本次政策类型的特征：</strong></p>
-<p>国常会，会议标题为研究加快推行新型工业化等有关工作，标题栏最为重要</p>
-<p>顺序，开篇介绍顺序以新型工业化为先</p>
-<p>会议文章中使用了较大的篇幅专门讲解新型工业化，措辞使用了“加快研究”</p>
-<p>虽然新型工业化并不是第一次提出</p>
-<hr>
-<p><strong>再说后续催化</strong>：</p>
-<p>新华社等官媒解读新型工业化，次日新闻联播用十分钟播放新型工业化相关</p>
-<p>二十三日习对新型工业化做出重要指示</p>
-<p>二十二日到二十三日李强出席新型工业化推进会议并发表言论</p>
-<p>本次的新型工业化会议上传达了习近平的指示（所以是他促成的这个会议？</p>
-<p>央媒等媒体再度解读催化</p>
-<p>国务院部门有对新型工业化进行评价，如工信部</p>
-<p>然后只剩下部门之间相互打个口号，没有具体落实意思</p>
-<hr>
-<p>已经盖棺定论了，这里就对本行情做一个总结：</p>
-<p>一切的开始源于国常会，特殊点都在上面已经保存记录，后续读起来看</p>
-<p>这个政策其实本质是比较虚的，而且倾向是长久期政策，很难迅速落实</p>
-<p>因为企业转型也是一个很久的事，所以光速落实并不是我基准预期</p>
-<p>重点在于习对新型工业化做出了重要指示，然后促成了新型工业化会议</p>
-<p>于是央媒、媒体再度解释该政策…</p>
-<p>这段行情更多靠两次消息面的催化及市场情绪配合的情况下走出来</p>
-<p>尤其是市场情绪，这一块是行情能够走强的主要因素，催化则非最主要的</p>
-<p>确实没有过度解读的必要性</p>
-<p>该政策我本身也不会基准去预期有迅速推出的可能性，级别上面也较逊色</p>
-<p>市场并非每次都客观反馈，偶尔也会情绪化投机几次</p>
-<p>放在当时环境，顶多在题材能够有所表现上会有一定预期</p>
-<p>对后续的催化预判也只能限于央媒对其一定程度上的报道，且强度也一般</p>
-<p><strong>强势的市场环境促成了较低级别题材的强烈表现</strong></p>
-<p><strong>无法预判的消息面催化造就了精伦一路的七连板</strong></p>
-<p><strong>央媒的催化仅起次要作用</strong></p>
-]]></content>
-      <categories>
-        <category>PTheme study</category>
-      </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>END</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NT-23-9-25-1 医药</title>
-    <url>/2023/09/25/T-23-9-25-1-%E5%8C%BB%E8%8D%AF/</url>
-    <content><![CDATA[<p>其实针对减肥药这一块，我一开始就没信过，当然也有没有研究过就擅自下定论的嫌疑</p>
-<p>当下主要是用作回顾和研究这个题材，重点在于思考这个题材的本质以及为何能够走出</p>
-<p>自九月十一日开始谈论：</p>
-<p>催化因素:</p>
-<p>摩根大通提高了对GLP-1受体激动剂销售量，预期市场为千亿美元以上</p>
-<p>礼来、诺和诺德股价大涨历史新高（次日</p>
-<p>九月十一日盘后瀚宇药业公布了司美格鲁肽注射液临床试验获受理</p>
-<p>本质是GLP-1类药物</p>
-<p>社交媒体催化</p>
-<p>其他的消息大多不具有时效性，礼来及诺和诺德八月的中报、之前的实验数据</p>
-<p>或者是去年、前年关于减肥药的消息基本都被挖出来</p>
-<p>因为相关产业的消息面资本市场定价并不完善，本次就是对行业的重新定价</p>
-<p>这是第一波炒作的催化核心催化</p>
-<hr>
-<p>九月初医疗方向有缓解整顿环境风险的言论，医药情绪回暖</p>
-<p>九月十八日盘后常山宣布艾本那肽治疗糖尿病的两项的三期研究达到主要终点</p>
-<p>其本质也为GLP-1类受体激动剂，对市场产生正向刺激（主要</p>
-<p>其他则为多肽类药物本身具有多种疾病的治疗效果而被市场在意（GLP-1本是降血糖</p>
-<p>九月十九日瀚宇药业公布签订3000万美元GLP-1多肽原料药合同</p>
-<p>不过上述分清主次即可，巨大涨幅的原因本质在于常山及一系列药企的董秘回复</p>
-<p>毕竟实验数据、具体情况两三年前就开始有，无非市场一直没关注，现在有了个催化</p>
-<p>那么相对应的公司也必然会拿出一些正向实验数据去反馈市场</p>
-<p>这一段是第二段炒作核心催化</p>
-<hr>
-<p>九月二十二日有报告显示诺和诺德在北美的主要工厂在去年5月时发生质量控制问题</p>
-<p>除去此段消息以外是真挖不出来，而且去年停的工和今年能有什么关系这都一年前了</p>
-<p>但媒体上传的就是这个，那我也只能两手一摊</p>
-<p>后面的炒作个人倾向于监管放松后的抱团博弈，而非单纯的炒作概念</p>
-<p>所以就出现了常山一边澄清一边继续涨十多个点的情况，因为炒作的已经不再是概念</p>
-<p>同样，个人认为连阳的主要原因就是不断有消息面的挖掘和催化，以及医药板块逆势</p>
-<p>毕竟指数不行的情况下往往医药板块会表现，这大概率就是本次行情走出来的原因</p>
-<hr>
-<p>十月九日诺和诺德于中国提交司美格鲁肽注射液新增减重等适应症补充申请获CDE受理</p>
-<p>当日昊帆生物拉板，外围总体利空情况下常山竞价带量高开（迷</p>
-<p>诺和诺德在十一日盘前宣布司美治疗肾功能和慢性肾病疗效非常优秀三期提前终止</p>
-<p>诺和诺德十一日晚上大涨新高</p>
-<p>博瑞医药这个董事长大哥自己打了两个月自家的减肥药，电话会议表示效果很明显</p>
-<p>十三日博瑞医药涨停，带动减肥药继续上涨，同样注射笔销量大增供不应求</p>
-<p>或许是两相配合吧，正是因为减肥药本身在媒体广为流传，使得市场一直较为关注</p>
-<p>也正是在这样一个阶段内，马斯克出来站台、诺和诺德公布数据、药企纷纷做回复</p>
-<p>媒体纷纷催化、大众纷纷尝试、现实层面销售量也大增</p>
-<p>从而造就了一波波配合消息面上涨的常山、昊帆、博瑞、百花、双鹭等涨幅居前票</p>
-<hr>
-<p>回头再说题材本身，摩根的消息还算是有一定影响力的，美股基本也是对其较为听从</p>
-<p>千亿市场的想象力、逻辑也并不是空话，礼来、诺和诺德的业绩甚至都能证明这一些</p>
-<p>市场对该行业本身就存在定价不充分的情况</p>
-<p>二类题材，想象力和炒作空间自然是足够的，单说题材本身没有问题，能够引起反馈</p>
-<p>无非后续的消息面催化，在目前的我看来依旧是一个难以预判的事件，有迹可循么？</p>
-<hr>
-<p>之前我对减肥药的相关催化表示没有办法预测，现在我就想来具体论述</p>
-<p>这个催化是真的没有办法预期，还是在某种程度上可以被预期到的？</p>
-<p>或许有些催化以及发酵可以被预判到</p>
-<p>此药本身的优势在于其效果较好、性价比较高、使用较为方便</p>
-<p>2mg和4mg装售价分别为一千二和一千九，以注射方式使用，按照增量0.5mg每周一次</p>
-<p>那么最终平均下来每天的成本在三十块钱到四十块钱</p>
-<p>而两个月减重效果却基本能在十几公斤，对于大体重的效果就更好</p>
-<p>何况该药在国内本就有销售，诺和诺德业绩也说明该药的市场反馈较好</p>
-<p>所以当这个药出现在大众眼前时或许就会有不少的吸引力</p>
-<p>同时该药的表现若明显超过大众预期，那么自媒体更会跟进催化发酵</p>
-<p>最终其就会在销量、热度、人气上占据优势，股价上的水涨船高也是自然事件</p>
-<p>国内也不乏医药公司对该领域有研究、供货，即行业本身没被充分定价</p>
-<p>假如投资者问询的话，多数会得到一个较积极答案，或是可以预判到的</p>
-<p>其他消息面多属于随机性行业催化，很难保证在最近能够推出</p>
-<p>除非那个企业你清楚是重视市值管理的</p>
-<p>大致还是有些启示：</p>
-<p>较为新颖的事物出现于大众眼中时，若其本身能满足某些需求，并性价比较高</p>
-<p>且能够尝试的情况下，愿意尝试的人或许不少，若表现明显、大众反馈良好</p>
-<p>那么在自媒体催化下其销量、热度、人气等因素也会是逐步攀升</p>
-<p>投资者对于公司企业的问询回复能否得到积极答案也是可以预判的催化因子</p>
-<p>若行业本身还是片蓝海，那么行业催化也可期待（年初的人工智能</p>
-<p>最终这些潜在催化反馈到股价上面的水涨船高也确实是一个可以预期的事情</p>
-<p><strong>但也需要明白一件事，基于现实层面的预判，几乎是在做预言家，难度可想而知</strong></p>
-<p><strong>对于认知层面的要求已经极高</strong></p>
-<hr>
-<p>再说通化金马这个票</p>
-<p>九月八日，美股Canopy Growth大涨，受益于美国官员提出将大麻合法化</p>
-<p>九月十一日，大麻板块上涨，通化金马顺势涨停</p>
-<p>九月十一日，美股方向继续大涨，Canopy Growth一度接近90%涨幅</p>
-<p>九月十二日，国内大麻板块继续上涨，通化继续涨停</p>
-<p>九月十二日盘后，通化金马董秘积极回复投资者的关注即琥珀八氢氨吖啶</p>
-<p>并且给出了大饼，市场规模、行业状况都给你说好了</p>
-<p><img src="/img/image1.png" title="这董秘是懂炒股的"></p>
-<p>八月二十八日琥珀八氢氨吖啶片在上海举行预备大会并宣布正式完成了盲态数据审核</p>
-<p>后面几天的炒作，没有内幕我是绝对不信的，因为资本市场炒作的是揭盲数据的预期</p>
-<p>揭盲的具体日期当时并没有公布，唯一可能考虑的点就是二十一日是艾尔兹海默症日</p>
-<p>然后通化可能会在二十一日附近宣布具体的揭盲数据，但这个根本不能做交易的依据</p>
-<p>反推？资金整体行为虽然值得重视但不意味着其可靠</p>
-<p>九月十九日，金马药业新药发布会，当日日程内具体已有揭盲数据</p>
-<p>当日并没有任何在媒体上的公开声明，这个图也是现场摄影师透露的</p>
-<p><img src="/img/image2.png" title="内幕消息好啊"></p>
-<p>九月二十日，通化金马一字跌停，各位请自行理解</p>
-<p>九月二十一日，通化公开公布揭盲数据，次日涨停，至此一切结束</p>
-<p>再炒就是业绩了，那是长线客的事情</p>
-<p>我还以为是类似于当时成飞一样具体限制最终复牌时间的，结果内幕为主</p>
-<p>但一定程度上还是反应了资本市场的底层规律</p>
-<hr>
-<p>再回过头来聊聊通化这个票，最近的走势确实一看，极其抽象和扭曲</p>
-<p>本质还是小公司攻克世界级难题的可能性还是太小，被怀疑联合机构造假等问题</p>
-<p>然后也有一批资金确实是选择相信的，毕竟这种药假如实锤是真的，影响非常大</p>
-<p>对整个通化的估值都可以按计算机算到明年去了</p>
-<p>按理来说现在也要进入到量产阶段了，有没有效后面几个月内就能被证明真伪性</p>
-<p>在实锤之前资金恐怕还是要以互道XX的走法继续，股价的反馈上面也会较为抽象</p>
-<p>通化本身作为高位情绪票也一定程度上受到了情绪影响，暴涨暴跌也是因此来源</p>
-]]></content>
-      <categories>
-        <category>NTheme study</category>
-      </categories>
-      <tags>
-        <tag>stock</tag>
-        <tag>END</tag>
-        <tag>FK</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>观看须知</title>
-    <url>/2023/09/20/hello-world/</url>
-    <content><![CDATA[<p>NTheme study：一般消息催化</p>
-<p>PTheme study：政策消息催化</p>
-<p>FK：纯错误类</p>
-<p>D：日评</p>
-<p>X：习的言论&#x2F;指导措辞等对政策的引导作用</p>
-<p>文章包括类型：当下相对热点题材、个人主观偏好题材、被动重判题材、细节研究</p>
-]]></content>
-      <categories>
-        <category>Preview</category>
-      </categories>
-      <tags>
-        <tag>Preview</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-13-23</title>
-    <url>/2023/11/13/D-11-13-23/</url>
-    <content><![CDATA[<p>欧洲股市普跌，但后续开盘的美股总体上涨，主要交易的仍为流动性放松预期</p>
-<p>事实证明鲍威尔喊了再多句，市场依旧不想再听车轱辘老头的鹰派言论</p>
-<p>中期流动性拐点基本已至</p>
-<p>美国国债被惠誉下降了评级，因而才会看到短端债券的利率上行</p>
-<p>国内，没什么大新闻，都是在中央金融工作会议的基础上进一步做落实，缝缝补补</p>
-<p>政策也都是小利好，没有什么大利好，商品方向以多头为主，交易宏观经济预期</p>
-<p>指数这个节点不能算调整充分，也没有什么大利好可交易，不太看得到确定节点在</p>
-<p>个人认为偏随机，因而题材方向也就顺势放弃了，毕竟当下没有指数节点的话么</p>
-<p>题材大多数还在一个混沌期内，混沌期谁都无法保证题材的强度</p>
-<p>关于情绪</p>
-<p>周四、周五连杀两天，情绪面上贴近冰点，再杀则基本看到冰点</p>
-<p>不管怎么样，周一都该乐观一些，积极寻找出手点</p>
-<hr>
-<p>指数节点就权当没问题了，关于情绪想多论述几句</p>
-<p>实际上是开盘就强回暖，那么我肯定是存疑的，毕竟这样就差点意思</p>
-<p>开盘强回暖个人就无法确认后续是直接冰点回暖还是走的反抽后继续走低的情况</p>
-<p>个人认为偏后续情况，且没有确定性，隐忧</p>
-<p>本来开盘后想要一直盯着看的天威、皇庭也就没太多的想法，略拿了几百股看戏算数</p>
-<p>因为个人不确定</p>
-<p>后面盘面看到中文上板被砸后，基本也就认为是一个类似于反抽性质，还要分歧为主</p>
-<p>因而自然预判天威、皇庭、西陇这类的炸板、分歧，准备下午再看，明天才能定结论</p>
-<p>最终反正天威是没有抗过去，死在淘汰赛了</p>
-<p>关于今天的盘面，我只能说是乱糟糟，但毕竟亏钱效应释放差不多了，后续看回暖为主</p>
-<p>今天毕竟是一个弱回暖，后续强的补跌、分歧也是正常事件，今天跌停基本都没封死的</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-14-23</title>
-    <url>/2023/11/14/D-11-14-23/</url>
-    <content><![CDATA[<p>欧洲股指没什么太多交易逻辑，美股么受到美联储鹰派言论影响，但最终顽强收平</p>
-<p>总体市场没有太多波动，同样没有太多的交易逻辑变化</p>
-<p>美国昨天又被穆迪下降评级，但国债是压根没什么反应</p>
-<p>外围总体没有什么大事，纳斯达克金龙、富时股指也同样没有很强反馈</p>
-<p>中性偏多，这基本就是对外围事件的评价，至少一个小高开还是可以看</p>
-<p>至于国内</p>
-<p>传了降准的事情，主要还是一些银行调整了存款利率，市场解读为降准的前兆</p>
-<p>个人感觉么，降准空间还有，这个预期确实不是坏事，但不算太大的利好刺激</p>
-<p>国内港股在大陆收盘后继续涨了一段，今天也有一些补涨需求</p>
-<p>综合下来，总体是偏多，至少能看到高开，但大利好不太有，刺激一般</p>
-<p>关于指数么，总体横盘蓄势阶段，后面配合一个较大的消息面，自然能够突破</p>
-<p>届时以放量突破为确认，看国证小指数即可</p>
-<p>对于指数上面我依旧认为盘内偏随机，至少看不到单边涨的局面，也就作罢不考虑</p>
-<p>至于情绪面</p>
-<p>本身昨天已经开始回暖，最后一批亏钱效应也无法封死跌停，基本释放完毕</p>
-<p>今天就是强的给一个补跌分歧，弱的开始走恢复的阶段，总体都是看回暖的</p>
-<p>该出手自然就要出手，总体看回暖</p>
-<hr>
-<p>最终看结果，盘面的演绎和我预判基本一致，指数今天没什么表现，就是红盘震荡</p>
-<p>清楚一个事实：当下是强势市场，只要调整充分配合利好助攻，指数极可能单边突破走强</p>
-<p>毕竟在我眼里比较确认能做的节点，就是指数能看到单边走强的较大可能性</p>
-<p>情绪面么，总体也是接近于我所说的，天威给了跌停后依旧回暖到水线</p>
-<p>皇庭则给出了换手机会，开盘基本就是买点，完全可以一路买上去</p>
-<p>无非豪美还活着就，这块地方始终就是淘汰赛，皇庭明后天依旧需要参与淘汰赛</p>
-<p>关于题材其实我个人有些失误，光盯着连板忘了题材，冰点后参与题材也是可行的</p>
-<p>也没有必要一直等着指数突破预期作为交易题材的依据，情绪也是可以的</p>
-<p>于是就把鸿蒙这茬给忘了</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-15-23</title>
-    <url>/2023/11/15/D-11-15-23/</url>
-    <content><![CDATA[<p>就宏观而言，今天是一个比较确定的出手点</p>
-<p>外围美国通胀回落使得多头反攻，股、汇、债、商市场联动，中期流动性拐点已经证明</p>
-<p>所以市场才不会在乎车轱辘老头到底怎么讲的，鹰派言论也无法改变事实</p>
-<p>此外，国内消息面上，传了万亿地产救助，股指拉升半个点</p>
-<p>就消息面上面已经叠满多头利好了，股指也很给力隔夜拉到了一个半点</p>
-<p>指数，同样经历多日调整，有很强的突破预期，今天按照正常思路就是一个单边行情日</p>
-<p>顶多是高开、分歧走低，再度走强的剧本，所以今天首选就是积极进攻题材方向</p>
-<p>关于一些细节</p>
-<p>存量题材尤其是昨日高潮的基本不考虑</p>
-<p>考虑的方向主要是新题材，尤其是有预期差的新题材，竞价开太高的需要谨慎</p>
-<p>盘内主要锚定分歧后的阶段，再去考虑具体购买机会</p>
-<p>或者开盘没有太多量、价配合的，可以考虑低吸、购买，总之买在分歧，避开一致</p>
-<p>这是当下生态决定的事情，必须谨慎对待一致性过强的方向</p>
-<p>战术而言</p>
-<p>就是看新题材，有预期差的新题材</p>
-<p>但问题是我翻阅了一整遍新闻、消息也没有看到有多少好题材，都是不入流的边缘题材</p>
-<p>不得不只能选择一些较好的方向(矮子里面挑个高的)，分仓参与(避开单吊的不确定性)</p>
-<hr>
-<p>就对确定性节点的预判上面，我们的特色A算是给了我一个答案</p>
-<p>今天一共四个利好：央行逆回购投放六千亿、地产救助、外围流动性拐点、社融数据</p>
-<p>在北向买了几十亿的情况下，指数依旧走成了这样一个样子，亚太唯一的阴线</p>
-<p>罢了，确实没想到内资如此骨软，本身非常好的一个多头反扑节点硬给砸下来</p>
-<p>归其原因，一方面或是场内存量题材已然分歧，而新生题材没有能打的(都是不入流的题材</p>
-<p>另外一方面原因就是内资的砸盘，两个因素综合的结果，未来会注意一些</p>
-<p>关于场内的情况，和我开盘前预期差不多</p>
-<p>无非因为指数没有走出单边市，所以今天不入流的新题材表现都极度有限且很无奈</p>
-<p>之所以不想碰存量题材的道理也就在九联、汇纳、软通、思特奇这几个的今天表现</p>
-<p>最近生态下，一旦高潮后基本就没有买点，轮动市，题材弱转强概率太低</p>
-<p>往往比较理想的状态是低位能出一个补涨，然后再度带动板块走强，低位走补涨</p>
-<p>要做存量题材也只能找低位补涨做，而非一直死怼高位，下场很简单就是今天这样</p>
-<p>至于参与思路上面，其实也有更多可拓展的，并非单独限死在题材</p>
-<p>新题材，分歧走强类型的</p>
-<p>热门票、连板票分歧后的低吸（如天威、西陇、云煤、三超）</p>
-<p>存量题材的高低切换，低位补涨，逻辑为主</p>
-<p>新股的套利，尤其考虑与新题材有相关挂钩类的，无涨跌幅限制的</p>
-<p>当然不可能一直做套利，类似于节点选错的情况其实并不多，尤其是这类确定性节点</p>
-<p>往往一波行情拿了一个题材的核心，后面就是等待兑现点的事情，没有其他事干</p>
-<p>关于地产，昨天传了万亿救助计划</p>
-<p><img src="/img/image17.jpg"></p>
-<p>并且经过最近一系列政策出手：</p>
-<p>深国资委为万科发言、四部委召集房企开会、中央金融会议定调一视同仁满足房企融资需求</p>
-<p>在先前传闻平安将收购碧桂园时，即使平安后续义正言辞否认，市场依旧选择继续交易</p>
-<p>简单而言，当下政府的救助行为已经给市场提供了一个预期，即中国会进一步救助地产</p>
-<p>这类小作文的真假其实也就不再重要，其带来的预期是真的，可用作交易</p>
-<p>无非，在没有实锤前，大资金不会依据小道消息进行交易，总体交易规模较小罢了</p>
-<p>不妨碍各位能捞走自己认知内的几两碎银</p>
-<p>如果昨天单纯只有这个消息面，我对今天市场肯定存疑，无法做出确定性的结论</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-16-23</title>
-    <url>/2023/11/16/D-11-16-23/</url>
-    <content><![CDATA[<p>昨晚美国公布了两组数据，对当下交易利率预期的市场而言喜忧参半</p>
-<p>PPI的超预期回落给了多头信心，为美联储不再进一步加息、维持高利率增添色彩</p>
-<p>而相对应的零售销售月率则给了空头底气，于是两者便开始掐架，这也是昨晚美股的表现</p>
-<p>最终的结果看</p>
-<p>美股含泪收红冲高回落，美债收益率略有抬升，日元被顺势做空(因为日本央行的鸽派</p>
-<p>日元当下是最容易被做空的货币，不过各位交易的时候记得小心日本央行突然的爆头行为</p>
-<p>股指上面表现，基本都是冲高回落，但总体红盘</p>
-<p>欧股上涨给了股指一定上涨的基础，但美股才是最终的定价者</p>
-<p>就外围而言，虽然股指是红的，但对于利率交易的分歧态度势必会体现在市场上</p>
-<p>先前对利率预期过分乐观也会造成其一定程度上的回调，全球层面或有共振的回调因素在</p>
-<p>总体，外围偏空为主，股指的红盘顶多提供一个高开，总体看分歧回调的</p>
-<p>国内，没有看到太多的利好消息面，商品市场略有空头氛围，得益于对铁矿的纠偏行为</p>
-<p>在指数昨天四重利好刺激下依旧走不出突破，且没有热点接力情况下，总体看回调</p>
-<p>总得来说么，首选看回调，开盘应该会有小高开在</p>
-<p>至于场内表现</p>
-<p>情绪面开始展现分歧，昨天一系列人气票给出大面，同时连板开始产生淘汰赛</p>
-<p>退潮迹象初显，既然指数看不到希望，那么情绪面总体也就看继续分歧，没有例外</p>
-<p>一叶知秋，后续也就只剩下处理持仓的节点，大策略以处理持仓，不开新仓为主</p>
-<p>至于场内题材，昨天强的题材类似于电动皮卡就容易兑现，新能源也类似</p>
-<p>新题材看不到什么参与的意义，因为对后续行情看空为主，自然也就不会考虑参与</p>
-<p>鸿蒙、算力之类的应该是以分歧为主，恒为需要担心利好出尽下的高开杀</p>
-<p>操作上肯定明确的，处理持仓，没有开新仓的想法在，耐心等待下一个节点</p>
-<hr>
-<p>收盘看，对指数的预判基本没什么问题，后续估计还要调整，暂时不必太在乎了</p>
-<p>给我的感受就是下次的节点应该会是情绪、指数、题材共振的，届时可以看下题材方向</p>
-<p>有没有什么能打的题材，不论存量还是新的都可以，但前提就是需要等情绪面的冰点</p>
-<p>情绪面的预判基本也没什么问题，无非开盘核下去还是让我稍微意外了点</p>
-<p>皇庭开盘的核按钮给短线情绪抹上了阴影，今天继续上演着淘汰赛、退潮的过程</p>
-<p>淘汰一批，留下一批就是对当下最好的概括，淘汰谁？不知道，淘汰赛没有确定性</p>
-<p>热门票已经不少躺在了地上，连板票目前也开始派面，轮动也给出了一些面</p>
-<p>昨天强势的一些新题材票今天甚至都给不出溢价全天水下晃悠，连板方向多处尾盘漏单</p>
-<p>虽然目前仍然还是退潮初期，但这一切都昭示后续进一步的分歧，各位长点心吧</p>
-<p>杀跌可能迟到，但永远不会缺席，后续各位就要开始见证进一步的分歧、退潮行情</p>
-<p>关于题材的看法，我略微有些失妥</p>
-<p>首先就是鸿蒙、算力、HBM等基本以轮动的形式修复(虽然结果看和没修复一个样</p>
-<p>其主要以低位补涨，分歧中走强、具有预期差的低位补涨作为行情的参与思路点</p>
-<p>个人不想参与原因就在于太随机，无法提前判断</p>
-<p>再就是恒为，确实没有走出当时恒润的走法，着实有些超预期，后续我应该会看一会的</p>
-<p>轮动的题材其实很多是事件类催化，昨天二把手考察中科院长春光所，科技拉了一波</p>
-<p>至于传媒</p>
-<p>早盘两个的起来应该单纯就是当下生态，总龙断板后资金的分离行为</p>
-<p>汽车、传媒、传媒，这就是圣龙、天龙、皇庭三者行情下的结果，历次皆有分离存在</p>
-<p>无非本次，我不太看好后续的情绪环境，所以也就没有参与(想试错小仓位也是可行的</p>
-<p>后续通过消息面得知早上招商传媒说GPT创造应用后，最受益的是专业数据库(小消息</p>
-<p>有了底气做盘自然顺畅一些，但实际上有没有都不影响操作</p>
-<p>昨晚也有一个抖音营收超腾讯的新闻</p>
-<p>十点后么，主要发酵的是抖音的视频收费，我具体看了下，时间是九点四十三分最早</p>
-<p>Tech星球是最早报道的，不得不说资本市场的挖掘速度远超想象(才一分钟就有动的了</p>
-<p>这个题材，换我今天肯定就不太愿意做了，主要是对后续行情不看好，自然不想太参与</p>
-<p>何况我知道这个消息的时候应该已经是下午了，都已经拉完了…</p>
-<p>基本就这样吧，回头看了眼A50，发现又跌了半个点….</p>
-<p><img src="/img/image18.png" title="真没谁了"></p>
-<p>各位明天加油，我先空仓保平安了，这就是特色我大A</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-17-23</title>
-    <url>/2023/11/18/D-11-17-23/</url>
-    <content><![CDATA[<p>美国初请失业金人数的超预期，带来了黄金、白银方向的一段上涨，债券略有变化</p>
-<p>股指因为先前已经交易满了利率预期，且此消息面级别不高，因而也就没进一步交易</p>
-<p>美股艰难收红，欧股有所分化调整，总体仍没有太多交易逻辑</p>
-<p>原油大崩，目前我给不出逻辑，但驱动逻辑和场内没关系，避开原油概念即可</p>
-<p>国内，恒生夜盘下跌、富时也有所下跌、金龙指数同样收绿，核心原因在阿里上</p>
-<p>阿里昨天公布的财报的一系列利空因素之下，重挫十个点</p>
-<p>相对应把恒生、金龙指数带崩了，富时是被带下去的</p>
-<p>客观而言，阿里顶多影响港股，毕竟阿里在港股上市，是港股的权重</p>
-<p>对内地顶多添加空头气氛，不能算有多少关联，基本可以无视，外围总体略空</p>
-<p>场内而言，调整暂时还未完，也看不到太多走强的驱动逻辑，所以首看调整无出手点</p>
-<p>情绪面上的退潮、叠加无热点接力，基本也就使得场内大概率进一步退潮分歧</p>
-<p>策略上保持保守，总体看分歧，无出手节点</p>
-<hr>
-<p>实际上指数、情绪表现强于个人预期</p>
-<p>早盘开盘即回暖，但这个回暖在一系列隐忧之下基本无法操作，后续顺理成章分歧</p>
-<p>无非比较特殊的就是分歧后，总体情绪配合指数共同回暖走强，造就了全天的走强</p>
-<p>并且基本没有产生冲高回落、退潮的表现，必须承认情绪面总体回暖的强势</p>
-<p>同时强势市场下，指数基本回调一两天就算充分，当下可以主盯小指数，上证有失真</p>
-<p>但也需要看到一些隐忧</p>
-<p>就连板梯队而言明显过盛，淘汰赛仅持续一天，存在调整不充分的隐忧，影响行情拓展</p>
-<p>回暖总体都是在存量题材、个股中进行，基本没有什么能打的领涨题材，量能也有限</p>
-<p>个人更倾向于下周还有一次分歧调整，这之后基本可以看积极一些，淘汰赛总是要出清</p>
-<p>当然目前指数、情绪处于不上不下的位置，届时配合消息面、利好直接走强不是不行</p>
-<p>所以盘前顺便看几眼消息面，具体思索之下做决定吧，个人还是偏好分歧调整的确定性</p>
-<p>静观其变，市场总会给出最好的答案</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-20-23</title>
-    <url>/2023/11/20/D-11-20-23/</url>
-    <content><![CDATA[<p>周五收盘后，欧股普涨，于欧股普涨阶段非美货币对全体升值，不过美股没什么反馈</p>
-<p>就富时、金龙指数、恒生而言，基本都还是红盘微涨水平，流动性拐点的进一步交易</p>
-<p>没有特别大消息面的助攻，总体即交易流动性拐点的过程，偏多</p>
-<p>国内，出了一大批零零散散的政策，都是对中央金融工作会议的进一步具体落实</p>
-<p>简单形容就是一堆小利好，总体叠加起来就成了一个看着还行的利好，略偏多</p>
-<p>外围总体影响是偏多的，意味着至少能看到一个高开</p>
-<p>指数、情绪本身，调整不充分的隐忧仍在，很难一蹴而就走强</p>
-<p>叠加高开么，最终的结果就很容易是高开后分歧，冲高回落等现象</p>
-<p>但必须承认周五情绪面恢复的超预期，因而后续回落、分歧后，有中概率走强的</p>
-<p>因而思路上面，分歧后还有转强的机会，但鉴于后手节点、确定性一般的问题</p>
-<p>顶多只能轻仓博弈，无法重仓操作</p>
-<p>因而就要考虑操作的选择，此节点毕竟是一个后手节点</p>
-<p>HBM、抖音收费、广州车展、机器人、智能网联汽车实际上都已经有所反馈了</p>
-<p>因而要参与，在强度不明确、后手节点的情况下，只能考虑博弈低位补涨、新题材方向</p>
-<p>在具体补课完题材后，发现实在过于繁杂，本身性价比不高，也就直接放弃参与了</p>
-<hr>
-<p>最终市场演绎了先分歧后走强的剧本</p>
-<p>早盘的分歧着实有意思，三柏开盘不久后即被摁死，一些热门票也摁下深水</p>
-<p>昨天亏钱效应较强的基本都还在水下晃荡</p>
-<p>但，指数走低的过程中，放量了四五百亿，同时多空平衡，亏钱效应没有进一步加剧</p>
-<p>后续伴随非美货币对的走强，市场总体走了回暖，但总体就差强人意</p>
-<p>这个回暖，力度一般，结构较差，没有核心领涨板块，盘面乱糟糟一片轮动炸板</p>
-<p>其实如果要参与基本也没有什么大机会，很容易完成盘中富贵次日计提的成就</p>
-<p>个人对本次踏空没什么感觉，因为本就是认知内看不到确定性的机会，放弃也罢的</p>
-<p>后手节点当时更多是直觉上的感受，感觉不对劲因而直接放弃参与</p>
-<p>多是生态上的事情，当下生态后手资金只能考虑补涨、低位新题材等，非死怼核心</p>
-<p>总体和我预期没有什么太大偏差，回暖到底还是逊色了些</p>
-<p>无非，参与思路上面，可以拓展到数字辈、创业板、弹性、新股、连板反核等方向</p>
-<p>后面总体看分歧、回调，处理持仓阶段，没开新仓的确定性节点，休息</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-21-23</title>
-    <url>/2023/11/21/D-11-21-23/</url>
-    <content><![CDATA[<p>非美货币对在收盘后继续升值，欧洲股市表现一般，美股表现较强</p>
-<p>美股主要是美债拍卖结果较好、巴尔金的略偏鸽派言论、流动性拐点的多重交易结果</p>
-<p>至于结果看，纳斯达克金龙指数大涨、恒生中等涨幅、富时股指涨幅较好</p>
-<p>再谈国内</p>
-<p>中央金融委员会会议，总体没有太多的意外、政策</p>
-<p>主要在于金融监管机构在草拟一份关于地产的文件的事情，对地产方向的进一步救助</p>
-<p>总体而言，肯定是偏多的，但叠加场内情绪问题，实际上就容易冲高回落，确定性很低</p>
-<p>因而在我个人看来，没有确定性的出手点，可以直接放弃参与</p>
-<p>无非因为总体外围利好的偏多，今天行情可能偏强，新题材、补涨依旧能表现</p>
-<p>策略上就是处理持仓，无新开仓点，耐心等下一个节点</p>
-<hr>
-<p>下午砸盘实际上比较罕见，这和中午流传的一份消息有关，本来今天应该走正常分歧</p>
-<p><img src="/img/image19.jpg"></p>
-<p>其实很符合国情，这个消息面个人认为真的概率还蛮大(即使是小作文我觉得也挺好</p>
-<p>在一个分歧节点放大了情绪罢了，没有消息最终也是会分歧的</p>
-<p>上午和我认知内差不多，略微超预期强势(题材表现较好、情绪也没有太大问题</p>
-<p>并且还一度放量了四五百亿，让我觉得这个地方，后面即使不走单边，再不济也是横盘</p>
-<p>结果下午走这样子，顺便把情绪面也带崩了，出了两个准天地，一叶知秋</p>
-<p>不盯盘，回头看了眼指数基本就清楚今天必然有大面了(天地、炸板、回落等一系列</p>
-<p>本就不是出手节点，不确定性防的就是情绪面不及预期走回落，不论什么原因</p>
-<p>至于后续，个人总体态度是看分歧，鉴于最近行情的强势、连板的强势</p>
-<p>个人认为，本次的分歧大约在两天左右，最早周四即可开始考虑新的参与机会</p>
-<p>具体还需看盘面的反馈，总之待亏钱效应基本出清后，自然就可以开始考虑新的机会</p>
-<p>这段行情实际上个人是踏空的，在于对情绪面不确定，本就是艺术，不必追求每次都对</p>
-<p>若盯盘的时候思路能再清晰一些会更好(至少不会出现打结的问题</p>
-<p>先休息，等待下一个节点</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-22-23</title>
-    <url>/2023/11/22/D-11-22-23/</url>
-    <content><![CDATA[<p>欧美普跌，汇率无异常波动，黄金白银受加拿大通胀超预期回落影响走强</p>
-<p>今天凌晨的美联储会议纪要略微打击了市场情绪</p>
-<p>就结果看，纳斯达克金龙指数略显血洗姿态，股指走低，外围总体就是利空</p>
-<p>国内没什么大动静，唯一需要谈的就是内地需要补跌港股盘后的下跌幅度</p>
-<p>没有逻辑交易，单纯就是回调、空头占优</p>
-<p>关于指数，场内情绪面退潮，叠加受到砸盘影响，总体看分歧、退潮</p>
-<p>情绪面同样看空，今天预判继续回调、分歧，延续昨天思路，不考虑出手</p>
-<hr>
-<p>场内情绪和指数实际上绑定较深</p>
-<p>重点就是谈情绪面，今天么比我想得略强一些，开盘核按钮后强承接产生情绪恢复</p>
-<p>最终结果看就是成就了好几个准地天和三柏的完美地天</p>
-<p>当然，总体还是比昨天更加分歧了一些，西陇、传智、银宝等摁在地上</p>
-<p>这个节点可以类比于之前皇庭次日修复的节点，无非本次相对来说分歧更强一些</p>
-<p>一堆想要跟随地天的最终看还是没成功，收盘还是有票摁跌停的(相对来说多了些吧</p>
-<p>当然，这个地方，多空都能找到自己认为的理由做出自己的决策，没明显倾向</p>
-<p>因而个人认为后续的走势就偏随机，能否继续分歧走强？还是分歧后总体退潮的走法？</p>
-<p>随机，一切需要看盘内具体的演绎，提前预判似乎有些困难，不如静观其变</p>
-<p>明天首选看分歧，至于分歧后怎么演绎，那么就需要各位给出答案，我先作壁上观</p>
-<p>毕竟自己认知内看不到确定性的机会，不会考虑随意出手，后天应该会积极一些</p>
-<p>暂时先等市场演绎的结论，明天策略上以观察为主，不考虑出手</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-23-23</title>
-    <url>/2023/11/24/D-11-23-23/</url>
-    <content><![CDATA[<p>宏观而言，美元指数略有走强，非美货币有所承压，主要是初请失业金的影响</p>
-<p>欧美市场普涨，但涨幅较小，没有交易什么宏观逻辑，基本就是随机性波动为主</p>
-<p>外围基本没有什么影响，初请影响有限的，不算是重要数据</p>
-<p>结果看，富时略微走低，金龙指数略微红盘，意味着对场内几乎不构成影响</p>
-<p>以场内情绪面演绎为主，国内同样没有什么大新闻、政策，也就如此</p>
-<p>就情绪面而言，先前谈到一叶知秋，今天就是继续执行的日子，总体看分歧</p>
-<p>皇庭那次更多是因为情绪面本身处于上升状态，而本次行情已经持续了七天有余</p>
-<p>连板梯队也极度旺盛，后面总体看分歧的态度是没有大问题的，个人偏看空</p>
-<hr>
-<p>就结果看，超短情绪和指数走出了割裂，本质是因为一些传闻</p>
-<p><img src="/img/image20.jpg"></p>
-<p>关于地产，我的态度基本就是这样，其实相对应变化的也不多</p>
-<p>首先就是自平安收购碧桂园当时传闻后，地产就一直存在一个救助预期</p>
-<p>其实后面市场也能够具体看到预期的兑现和证明，包括但不限于：</p>
-<p>金融监管机构扩大房企白名单、各地地产政策的持续出台（这一波地产政策持续了很久</p>
-<p>万科受到深国资的支持、融创债务重组成功等等</p>
-<p>其实政策的出手、救助已经是一个事实，但力度均不大，所以现在小作文越吹越离谱</p>
-<p>那么各位其实就要担心一个问题了，假如最终政策出手，反而极可能是一个兑现点</p>
-<p>因为就目前市场的状态，尤其是内房股的状态，已经很明显打满预期（难搞了</p>
-<p>后面不管政策到底出手还是不出手，最终都可能造成的结果就是利好兑现………</p>
-<p>此外关于地产的一些渣男本性，需要谈论下：</p>
-<p>首先需要明确这个行业已经是过去时，国家已然不准备继续发展、以此提振经济</p>
-<p>那么其实再多的政策出手、刺激，都只是为了缓解行业的困境，更多是为了防风险</p>
-<p>基本面长期看空的情况下，任何一个政策性的出手，反应在股价上就是坐一趟过山车</p>
-<p>所以除非是下一个房住不炒的大级别政策，且超市场预期的，基本不会考虑参与</p>
-<p>本次不做，几个理由：</p>
-<p>首先就是已经吹了半天，这几天彭博、路透已经小作文满天飞，再吹容易兑现</p>
-<p>再就是行业本身不看好，这个节点、政策上面出手其实力度并没想象那么高</p>
-<p>此外，就是节点问题，这玩意在退潮期里面走出来，完全没有什么好参与节点，作罢</p>
-<p>当然早信早做的当我没说，不影响老师们赚钱</p>
-<hr>
-<p>盘前我定下的策略还是一叶知秋，但盘内就根据一些情况具体修改了策略（反转</p>
-<p>本质是因为地产小作文引导的指数走强（虽然当时不知道，但若知道当时可能还是会干</p>
-<p>叠加了情绪面看弱不弱的状态（三柏没核死，圣龙、引力放量也没核死</p>
-<p>这就让我在态度上有所犹豫，虽然其实也不该做（即使是十三日也无法确认的</p>
-<p>当时选择了看多，最终结果么就是大面一碗，不过估摸着摁死了不少短线资金的</p>
-<p>因为当时圣龙一度尝试反攻涨停，最终从持仓金额看，圣龙、引力也是第一的</p>
-<p>这个迷惑性确实非常高，只能说我觉得模式有待修正、认知也有待修正</p>
-<p>这碗面几乎可以说是必吃的面，短线资金也有一些参考皇庭行情去做，寄了吧</p>
-<p>最终收盘的结果就证明了这一点，天威、圣龙基本都派出了些大面存在的</p>
-<p>跌停了也是一大堆，算是亏钱效应集中释放的一天，收盘看大多数摁死</p>
-<p>现在看么，问题在这几个吧：</p>
-<p>首先就是指数面，我觉得以后看外资大买，至少得看相关的盘面</p>
-<p>反正地产那边就明显是小作文行情（最近一年小作文真的是越来越多了</p>
-<p>这一点以后至少是可以多看的，外资大买基本都有一些宏观因素、小作文（反推</p>
-<p>地产么，目前是已经更新认知了，以后或许会考虑进一步修正、理解（盘内没想明白</p>
-<p>皇庭上次出手是因为汇率的走强导致，而本次是小作文，不过本次没能够走强</p>
-<p>只能说某些情况下，某些利好会对盘面有效果（记住这个情况就行，把握需要具体结合盘面</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-25-23</title>
-    <url>/2023/11/25/D-11-25-23/</url>
-    <content><![CDATA[<p>欧洲央行申明除非意外不会进一步加息，外围普涨，但涨幅基本有限</p>
-<p>基本不会对场内产生什么影响，没有交易什么宏观逻辑</p>
-<p>国内没有什么消息，港股在内地收盘后走强</p>
-<p>那么内地至少也有一定的补涨因素在，主要是地产小作文的影响</p>
-<p>总体来说，没有太多的宏观交易逻辑在，以场内情绪面演绎为主导</p>
-<p>就场内情绪面而言，昨天算是亏钱效应释放日，今继续看分歧回调</p>
-<hr>
-<p>地产方向略有误差，此节点需要开始担心利好兑现、证伪</p>
-<p>从而可能会对整个市场产生一定程度的压制，周五的走势就比较接近</p>
-<p>至少就指数而言，明显不尽如人意的</p>
-<p>情绪面么，早盘引力、中文想要尝试带领修复，最终引力落得了天地板的下场</p>
-<p>盘内还是有一些回暖在，天龙封死、惠威地天、九鼎封死、伟时接近地天，北交所回暖</p>
-<p>百纳、文一、高新、通化、西陇的走法，基本就是有一定的回暖，但回暖的程度不高</p>
-<p>最终跌停数量和昨天相比稍少一些，但相对来说分歧仍然较大，捷荣跌停无大换手</p>
-<p>同时也需要看到连板方向大龙、舜天、瀛通、一彬给出的面也不算小</p>
-<p>对比而言就是类似于本月十三日，但分歧力度比当时要强一些，回暖力度更弱些</p>
-<p>延续下来没有明显的回暖，周一估计再度回暖，确定性也比较一般，还得看次日</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-28-23</title>
-    <url>/2023/11/28/D-11-28-23/</url>
-    <content><![CDATA[<p>外围总体表现一般，没有特别大的波动，没有交易什么宏观逻辑</p>
-<p>以富时、恒生、金龙的表现看，略微算是利空，总体顶多造成一个低开压制</p>
-<p>最近大盘指数走得较差的原因，主要还是北交所的抽血，叠加利好兑现</p>
-<p>不过两者都能看到转折：</p>
-<p>首先是利好兑现，这个不算是太大的宏观利空，小利空罢</p>
-<p>不会对指数造成长期的压制，顶多造成短期内的调整，并且幅度也不会太高</p>
-<p>北交所么，昨晚已经给出监管措施，并且一个月内已经上去五十个点，暂时见休整</p>
-<p>后面北交所会以个股行情为主，主板赚钱效应基本逐渐回归</p>
-<p>至于要进一步的走上升趋势的话，那么需要更多的利好、宏观利好支撑，走趋势</p>
-<p>毕竟实际上每一波的上涨、下跌，都伴随着宏观面的解释，边际消息带来的涨跌</p>
-<p>也就总体而言，更多挂钩于情绪面，而情绪面基本会看到初步的回暖</p>
-<p>当然，因为还是一个初步回暖，因而连板方向依旧不考虑，题材或许可做</p>
-<hr>
-<p>情绪面如期走出探底回升的回暖，但回暖力度尚且偏弱</p>
-<p>下午明显是在北交所抢占资金失败后才看到主板较明显的回暖</p>
-<p>跌停数量依旧没有明显的改善，依旧维持在十多个的水平，好转不明显</p>
-<p>且今天场内还能看到伟时这种天地，证明情绪回暖的弱势，不够强，叠加量能萎缩严重</p>
-<p>对于情绪面我认为确定性就不高，明天应该还有一次分歧，这一次后的回暖可以考虑</p>
-<p>就今天而言，回暖是存在的，要参与行情是可行的，例如电子纸、果链、长安补涨</p>
-<p>无非个人本在等待后续的连板机会，自然也就放弃了这一批收益率略显低一些的机会</p>
-<p>不过在思索后，情绪的状态、监管手段(文一严重异动跌停)、连板高标负反馈都成了不确定因素</p>
-<p>因而我也就寻找不出参与连板的意义，自然也就放弃了，盘内没有修正认知</p>
-<p>于是我便得到了这样一个结果，存量题材长安系今天基本已经给足参与点，已然后手</p>
-<p>电子纸、果链因为主观的放弃，也没有参与，后手没机会</p>
-<p>只能是考虑新题材、预期差题材的参与，或者是存量题材的补涨</p>
-<p>新股目前还在思索中，主要看后续盘内会发酵到哪些方向，看有没有配合的方向</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-11-29-23</title>
-    <url>/2023/11/29/D-11-29-23/</url>
-    <content><![CDATA[<p>欧美股市没有什么大波动，黄金主要是利率预期下的博弈，但股指基本已经不再反馈</p>
-<p>因为利率预期已然被反应在价格中，早已消化了预期，后面如果出幺蛾子反而容易打下来</p>
-<p>略微算是利好，国内继续没有大消息的一天，股指看么略微绿了点，顶多影响开盘</p>
-<p>总体依旧是看场内情绪面的博弈</p>
-<p>而情绪面上面看，今天再分歧后总体有回暖需求，可以考虑出手</p>
-<p>而出手的方向，已然在昨天说明，长安系后手不可买，连板也失去了参与意义</p>
-<p>那么机会只在了新题材、新题材补涨上面</p>
-<hr>
-<p>于情绪、指数上面似乎还是有些问题</p>
-<p>本身上午还是挺正常的，一切按照预期内演绎，但临近中午就开始不对劲</p>
-<p>后面指数硬是砸成了这个样子，还没有什么抵抗，这个我似乎也觉得无奈</p>
-<p>当下情绪面如此羸弱似乎不是因为情绪面本身没有回调充分</p>
-<p>更多是因为宏观逻辑的交易，目前看起来，更多是对地产的预期兑现、担忧</p>
-<p>这一点主要体现在内房股、银行、保险方向的大跌上，基本就是外资的态度</p>
-<p>以及对于经济基本面预期路径的不明确导致的预期兑现，也只能说无可厚非</p>
-<p>毕竟先前谈国债的时候，就说过只能稳经济，而非救经济，很难提供强预期</p>
-<p>而地产政策的一系列出台，实际上效果一般，看起来也没有明显的回暖迹象</p>
-<p>但回头看一眼外围，大部分市场都是稳定横盘，甚至有所上升，也就我们这</p>
-<p>甚至还是走了下跌？着实还是羡慕(外国人就没有那么多烦恼</p>
-<p>但上述两个不能算是宏观的较大利空，只是市场自发调整过于乐观的预期</p>
-<p>后续顶多缺乏更多上涨的动力，若是谈论中期下跌的逻辑，或许为时太早</p>
-<p>调整到位后，平台弱势震荡为主吧，但可能会导致场内赚钱效应不再那么强</p>
-<p>后面假如要再度回归场内交易，或许需要等待一个奠定中期主调的利好、指数中阳</p>
-<p>至于长安系、连板方向，一语成谶，这块地方昨天晚上就想不出进一步参与的理由</p>
-<p>今天如期强分歧，板块大分歧日，同时亏钱效应依旧强烈，二板全摁死，皖通天地</p>
-<p>这一段退潮已然演绎了一周上下，但天天杀高标的迹象毫无改变，每天都有个天地</p>
-<p>题材热点走得也比较扭曲，没有持续的进攻，并且量能萎缩到仅七千多亿没大行情</p>
-<p>因而于当下行情内，盲目抄底是不适合的，容易造成越抄越底，不如静待确定节点</p>
-<p>至于明天，短暂看见个小冰点后回暖，看反弹力度，更多还是以处理持仓为主的吧</p>
-<p>暂时先考虑休息，在上午分歧后出手依旧能被捉，只能说明当下市场暂不适合交易</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-4-23</title>
-    <url>/2023/12/04/D-12-4-23/</url>
-    <content><![CDATA[<p>未来一段时间以简版为主</p>
-<hr>
-<p>三个宏观利空：</p>
-<p>地产政策预期的兑现、落空，流动性预期打满后的过饱和，经济暂无强预期路径</p>
-<p>自然，就目前状态而言，流动性预期或许是未来根据数据需要被修正的，会有压制</p>
-<p>另外两者，顶多只是无法提供市场进一步走强的理由，不会造成较强压制</p>
-<p>国内在政治局会议、金融工作会议定调活跃资本市场后，自然会有政策面的托底</p>
-<p>但也得看到，在定调后，看到的依旧是一个羸弱不堪、脉冲式上涨的市场状态</p>
-<p>因而后续，市场估摸着也是弱势震荡、略微走低的状态为主</p>
-<p>个人预判，下面一段没什么强赚钱效应</p>
-<p>简单而言即为轮动市，热点题材以轮动、冲高回落的形式表现，往往没持续性</p>
-<p>不过对于连板方向，个人是保持开放态度，弱势抱团可行，类比捷荣，少量资金即可</p>
-<p>何况东安已然封死七板，情绪面至少脱离强退潮阶段，可上可下</p>
-<p>盘前的态度就是放弃参与题材，关注连板为主</p>
-<hr>
-<p>题材自然是没有参与价值的，早盘看题材略有些热度，收盘看大多数冲高回落</p>
-<p>当然没有产生大量炸板，这一点至少让我欣慰了些</p>
-<p>今日题材均为后手节点，个人认为无参与意义，何况环境不支持题材</p>
-<p>全天题材以轮动为主，冲高回落、淘汰赛，基本看不到强赚钱效应的持续，松散</p>
-<p>连板方向，开盘即有核按钮、冲天炮，个人锚定东安、高新的抱团</p>
-<p>情绪面就早盘惠发、威帝的核按钮，个人拿捏不准，看后排方向也有大面</p>
-<p>抱团能否走出依旧需要看市场选择，东安、高新两者的封死只能初步验证预判</p>
-<p>后续盘内传高新监管，午后被证实打电话窗口指导，一度打击超短情绪</p>
-<p>下午，随着热点的纷纷熄火、冲高回落，资金转向连板，开始博弈弱势抱团</p>
-<p>东安上板后，惠发、威帝纷纷伴随上板，晋拓反核，超短前排有明显回暖修复</p>
-<p>同时龙字辈纷纷反弹，基本就是博弈跨年妖、抱团的意思(跨年妖还有那么二十天</p>
-<p>此时基本可以确认个人思路的正确性，即当下市场连板的赚钱效应，有望延续</p>
-<p>但这里提个醒，收盘看连板的分歧依旧不小，炸板、烂板占据大多数，因为监管</p>
-<p>东安当下已经挑战十天百分百的异动，而最近北交所、文一、高新、中文等</p>
-<p>监管有一定趋严迹象，也是这一段时间专杀高标的主要原因，就看今晚监管态度</p>
-<p>假如不监管，明天东安带领一众连板弱转强，后续直接开始连板模式，毫无问题</p>
-<p>假若监管生效，那么意味着当下场内没有任何可参与方向，值得空仓</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-5-23</title>
-    <url>/2023/12/05/D-12-5-23/</url>
-    <content><![CDATA[<p>之前提到过流动性预期打太满的问题，一语成谶</p>
-<p>昨夜贵金属集体修正预期，带动股汇债统一修正预期，短期压制因素已然生效</p>
-<p>国内地产早已阐述，预期落空或者预期兑现，当作空方势力即可</p>
-<p>对总体市场环境即为看空，对应联系最大的题材方向直接放弃，轮动市毫无赚钱效应</p>
-<p>唯一可看的仅连板方向，类比于捷荣。高新发展为乌龙，东安封死带动抱团</p>
-<p>总体而言，好歹会有一个像样的修复存在，前排连板不出意外，全部都能晋级</p>
-<hr>
-<p>指数下午走成这样子还有莫迪下调主权信用债评级的问题</p>
-<p>就当作一个利空对待吧，上午在微信群内就传开了，下午正式发表报道</p>
-<p>双利空叠加下的市场，自然羸弱不堪，场内仅存活跃资金抱团高位</p>
-<p>而高位也没能够脱离情绪，早上惠发、威帝、东安均出现竞价量能不足的问题</p>
-<p>昨天是大分歧日，这就意味着竞价的弱转强并没有被承认，生死未卜</p>
-<p>不过后续惠发盘内的超预期表现，带动了整体超短情绪的回暖走强，东安板</p>
-<p>就上午而言，超短走得是要比指数强劲的，午后随着指数的单边性杀跌</p>
-<p>存量资金彻底抱团场内仅存高标，或者过气妖股，一时间群雄争霸</p>
-<p>不过尾盘的波澜还是验明了一些个股的成色，引力、威帝免不了计提核按钮</p>
-<p>个人对超短的看法，本就是后手节点，抱团这个噱头在昨天就该清楚会有</p>
-<p>今天怎么看都是一个后手节点，况当时已然高潮，个人实在思索不出参与理由</p>
-<p>对后面第一反应判断是偏后手节点、淘汰赛、没接力意义，买需要头铁些</p>
-<p>至于监管问题，估计是后续的最大变数，先手准备兑现，后手备好圣经即可</p>
-<p>毕竟当下的监管不是那时候的铁血手腕，现在变成了无形的手，越发难琢磨透</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>D-12-6-23</title>
-    <url>/2023/12/06/D-12-6-23/</url>
-    <content><![CDATA[<p>昨晚美国的数据使得流动性预期再度被修正，在市场上产生了些许波动</p>
-<p>表现为美元指数的走强、股指的承压、贵金属的进一步回调</p>
-<p>不过幅度不大，短期内的回调基本看到这样就行，本就是中期盯的因子</p>
-<p>当下的事实无法证伪对利率的乐观预期，甚至进一步佐证市场观点</p>
-<p>因而当下不必过度担心此因子的兑现，这是在中期逐步完成定价的，且看即可</p>
-<p>股指看甚至是红的，所以很容易看清楚意义了，预期本就没大兑现空间</p>
-<p>对地产，基本可以考虑暂时不必盯了，内房股基本从哪来回哪去，兑现差不多了</p>
-<p>对于经济基本面么，现在总之也没乐观到哪里去，同样没提供中期预期路径</p>
-<p>后面到底是偏空，还是作为一个压制因素，暂时看市场的具体反馈</p>
-<p>宏观上面总体是偏空、压制较多的，利好因素压根没有，边际好转也没有</p>
-<p>而宏观压制之下的市场，自然没有什么持续性的赚钱效应，即轮动市场</p>
-<p>题材和先前一样，没有参与意义，直接放弃，唯一可看的还是连板的方向</p>
-<p>对于连板我态度不多，基本是后手节点，想参与就得冒着风险头铁，没接力意义</p>
-<p>先手资金继续格局，后手资金建议看戏，策略基本就是如此，没开仓节点的</p>
-<p>何况当下监管传得风声鹤唳，后手参与的时候还要考虑监管出手，这个最大变数</p>
-<hr>
-<p>盘前觉得连板没什么机会，偏后手，看不到接力意义后，自然放弃</p>
-<p>其实上午一段时间还是不错的，指数恢复、连板晋级率高，淘汰也比较正常</p>
-<p>指数么，无非就是在大级别宏观确定下，看不到有理由的修复，技术性反弹罢了</p>
-<p>没有参与意义的，个人也压根没想着盯指数做，后面一段时间预期都如此</p>
-<p>题材这里也就不多提了，反正没持续性，提了也是瞎提，不如不提剩些口舌</p>
-<p>于是我就看了一上午的宫斗戏，通化、圣龙、中广、高新，互卡、淘汰、波动</p>
-<p>圣龙板不板在我心里早就无所谓，反正是后手节点，板了如何，不板又如何</p>
-<p>反正没有参与点，先手资金安心等兑现点，后手资金祈祷各位能够手下留情</p>
-<p>下午开盘后，情绪面急转而下，后面了解到是监管、小作文传的满天飞的影响</p>
-<p>圣龙、东安、中广、中公、惠发，于是一共给了五个准天地，我还能说什么</p>
-<p>到底有没有监管已经不重要，因为打击的是做多的一致性力量，会搞得人人自危</p>
-<p>相比之下我更喜欢之前监管直接给窗口指导、直接停牌这样的硬性手段来干预</p>
-<p>现在这种软性手段，搞得炒个股还得时刻担心监管问题，反而更不适合高度拓展</p>
-<p>本来下午想说一叶知秋的，现在看起来不用了，这已经是北风卷地，百草折</p>
-<p>当然，好在至少也拓展高度到了十板、十一板附近，意味着未来仍然属于连板</p>
-<p>无非在监管危机下，市场会想到其他破局方法：多波流、国资委、上交所</p>
-<p>等待罢，下一个出手点，暂时空仓休整</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-7-23</title>
-    <url>/2023/12/07/D-12-7-23/</url>
-    <content><![CDATA[<p>当预期被大多数反应在资产价格中时，利好反而容易成为兑现的理由</p>
-<p><img src="/img/image21.png" alt=""></p>
-<p>市场预期最早的降息月份从明年九月推早到了三月，预期明年降息125bp</p>
-<p>当下美国通胀的持续超预期回落、美联储不断的鸽派发声，成了市场交易的底气</p>
-<p>但也要清楚，控制通胀之路不一定会就此坦率、平坦，后面变数依旧会很多</p>
-<p>当下事实虽然无法证伪预期，但同样无法让市场进一步乐观相信美联储会迅速降息</p>
-<p>昨夜小非农的低于预期，似给了多头进一步进攻的理由，实则导致利好兑现的结果</p>
-<p>贵金属集体回调、股指冲高回落、美元指数走强，之前没怎么表现的债券倒是正常</p>
-<p>在先前，流动性预期并没有那么乐观的情况下，各位可以放开手博弈，而现在</p>
-<p>则需要细思索当下到底有没有那么乐观，后续的变数真的是一帆风顺助力多头的么</p>
-<p>那么出现一些预期面的回修、兑现，自然也就是正常的事情，price in罢了</p>
-<p>不过当下毕竟无法证伪此预期，后续随着时间的流逝，数据的公布，市场自会去调整</p>
-<p>是个一直需要重视、持续观测的宏观因素，其能决定中期趋势方向</p>
-<hr>
-<p>昨晚的利好兑现对市场必然会有压制，但压制力度有限，反弹与否并没关系</p>
-<p>问自己这几个问题：经济面有强预期路径，抑或是边际改善么，流动性因子被证实了么</p>
-<p>实际上是没有的，那么再多的反弹，都只能是技术性的，无法产生强大赚钱效应</p>
-<p>题材、指数依旧不考虑参与，除非看到中期宏观因素的转向、转变，否则也不必看</p>
-<p>连板方向，昨日给出五个准天地，虽然如此，但个人直觉认为今天会有略微回暖可能</p>
-<p>不考虑参与，以观察、修正预期为主，同时思索场内情绪面演绎情况，把握情绪</p>
-<hr>
-<p>盘内还是一如既往，乏善可陈</p>
-<p>题材全天我给几个例子：太辰光、恒信、荣信、北巴、果麦、易点</p>
-<p>看完如果各位还有胃口参与题材，那么就干吧，任何题材在当下都会是如此结果</p>
-<p>开盘竞价出来，连板没有出现特别强的亏钱效应，那么至少看一个小回暖存在的</p>
-<p>信雅达超预期的大单一字，配合题材内欧盟消息面的刺激，最终带动应用端走强</p>
-<p>万达商管的消息使得盘内发酵了一定的不良资产处置概念，但题材规模一般</p>
-<p>连板上午以修复为主，但也不乏淘汰赛、跌停，指数则总体走得狼狈不堪，北向大卖</p>
-<p>直到中午公布了外贸数据，这才稳定了一丝军心，带动了指数的轻微、弱势反弹</p>
-<p>算是一个边际转好的迹象，但这并不够，需要量变引发质变，无法松动中期宏观逻辑</p>
-<p>下午反弹的话，先锋也是人工智能应用端，但毕竟指数环境一般，一波流，没意思</p>
-<p>看点还是在连板，后排银宝、西陇、文一、统一基本尽数被核，看作后排的淘汰赛吧</p>
-<p>即使惠发这一类上板也没有用，无法改变当下退潮、淘汰赛的事实，静待卖点为主</p>
-<p>今天个人给的定性就是指数技术性弱反弹，连板情绪反抽为主，大面、淘汰不会结束</p>
-<p>明天基本也是这个态度，安心等待连板的机会即可，毕竟高度也能有十到十一板</p>
-<p>这比冲高回落的题材要好太多，无非和监管的博弈变为了动态博弈，基本就是这样</p>
-<p>国资委、上交所、多波依旧是一个参与思路，下次选择上面不一定盯着前排最高板的</p>
-<p>毕竟后面的龙版走得明显是要比前排好的，无非可能需要淘汰赛卡位出来，有变数</p>
-<p>前排到底选择范围较小，后排首板选择就比较多，只能说，有机会可以尝试为主的吧</p>
-<p>思路应该还是放在前排上面，不太适合盯着后排打首板，还是容易出一些变数</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-11-23</title>
-    <url>/2023/12/11/D-12-11-23/</url>
-    <content><![CDATA[<p>美国非农数据的强劲使得市场修正了一定的利率预期</p>
-<p>当下的利率预期就算正常了一些，但需要清楚继续沿这条路走不远</p>
-<p>毕竟美联储不太可能不计后果在一月份、三月份就降息，这一点清楚即可</p>
-<p>后面逐渐根据数据、美联储态度逐渐修正降息预期才是实话，中期压制</p>
-<p>不过看欧美股市基本没什么变化，唯有贵金属因为打满了降息预期导致大幅兑现</p>
-<p>国内政治局会议并没有给出预期路径，大幅篇章在副标题的党风建设之上</p>
-<p>关于明年经济也只是粗略提了几句提纲，毕竟后面还有政府工作报告、经济工作会议</p>
-<p>具体细节会在上面设定，类似于基调，GDP目标设置，就业人口设置等，且等待吧</p>
-<p>政治局会议个人通稿对比、阅读完后重点看到的新提法就是：</p>
-<p>“形成消费和投资相互促进的良性循环”，简单来说光靠扩大消费用处有限</p>
-<p>这也是之前万亿水利国债提出的基准所在，后续会考虑以投资拉动消费、经济增长</p>
-<p>没有设置太多的细节，毕竟是年底，一般本就不太会有大工程、大动作</p>
-<p>至于周六的经济数据，我其实第一次见在周六发，而且说实话看数据也不算太好</p>
-<p>CPI、PPI均不及预期，历来也是有不好的数据尽可能放在盘后发的倾向在的</p>
-<p>地产那边周五尾盘融创暴跌，内房股历来是小作文、问题频发处，隐忧和兑现映衬</p>
-<p>综合下来个人肯定是偏空为主，没预期路径，基本面没边际改善，流动性压制、地产</p>
-<p>因而相对应的题材也没有太多的想参与的想法，仍然是以重视连板为主</p>
-<p>直接谈东安，上交所国资委票没有受监管，在十天四异动叠加百分百涨幅没被挂墙上</p>
-<p>反而非国资的跟风惠发最终被挂在了上交所的异动墙上，并且给出了重点监控</p>
-<p>后面核心就是参与上交所叠加国资委的票，同时需要保证能够有一定的空间高度可涨</p>
-<p>相比于当下市场对监管的草木皆兵甚至压异动的状况，完全不必顾及，参与连板即可</p>
-<p>后续连板破局的高度只会高于东安，只因东安仍不是上交所监管的底线</p>
-<p>死怼高位票，不可行，多考虑新生力量</p>
-<hr>
-<p>关于指数，那么必然是见解、思路上略微有些问题，这种走势更多是在进行博弈</p>
-<p>思索下来需要更正的，应该就是对最近指数交易的逻辑，实际上更多是对基本面的悲观</p>
-<p>而当下的CPI、PPI数据恰好成了利空落地的信号，市场反弹也有对政策的预期</p>
-<p>对后市如何思索？其实态度变化并没有太多</p>
-<p>若后续没有小作文满天飞，配合风向消息面的配合，很难走出持续性</p>
-<p>亦或者是，若没有产生政策面的出手，也很难有预期路径</p>
-<p>但清楚一点，当下市场已经消化了大量经济数据悲观的状态，短期内会麻木一些</p>
-<p>表现为对利空比较麻木，对利好么比较有动作，尤其是边际改善的数据</p>
-<p>震荡为主吧，如果没有什么利好，同时基本面看不到改善，该跌还是得跌的</p>
-<p>对连板、情绪</p>
-<p>场内情绪今天就是以修复为主，这也到了个人认定的节点附近</p>
-<p>早盘直觉上本就偏修复，竞价开出来大多也偏修复，且指数低开使得资金抱团</p>
-<p>在早盘超短总体走强，金顶当场高开秒板，龙版、文投顺势跟随上板</p>
-<p>后续具体演绎上，就是个人预判内的国资委叠加上交所，胜者寥寥，但均出于此概念</p>
-<p>全天基本都在演绎情绪面的修复，尤其是传媒方向更加强势一些</p>
-<p>说下个人的看法，今天不少老高位票反弹，我对这类是看不到空间的，后续会淘汰</p>
-<p>尾盘看也有一定程度的分歧，回暖还不扎实，依旧是一个弱回暖，恰合我意</p>
-<p>明天高位票：龙版、信雅达、东安、引力等，基本都是以分歧淘汰为结果，没意外的</p>
-<p>而新生势力类似于文投、金顶这一批国资委、上交所票，会在分歧中走强，走出段主升</p>
-<p>分歧基本是一定会有，建议以盘内的分歧节点参与为好，不适合头铁死怼</p>
-<p>其中四川金顶叠加了两个玄学概念，数字、金（五行）</p>
-<p>三个建议：明天不建议拿加速票，明天不建议拿高位票，明天建议分歧点出手</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-14-23</title>
-    <url>/2023/12/14/D-12-14-23/</url>
-    <content><![CDATA[<p>昨夜对美联储议息会议难得出现了些许误差</p>
-<p>个人预期为鹰派指引叠加不加息，实际结果是全面偏鸽，鸽派指引叠加鸽派点阵图</p>
-<p>那作为做交易的，也要动态修正自己认知而不和大势做对</p>
-<p>既然美联储都给出了降息指引，那么这条预期路径就是可以走的，短期不必怀疑</p>
-<p>后面跟随经济数据、现实状态进行修正即可，美股也是直接创下一年新高</p>
-<p>按理来说就是一个比较大的利好，中观层面证明了市场预期的正确性、有效性</p>
-<p>唯一的隐忧或许来源于基本面的压制，毕竟外围涨的时候我们一直陶醉在新低的温柔中</p>
-<p>至少可以看到一个可操作级别的反弹，对题材还是可以适当参与的</p>
-<p>至于超短，情绪面分歧、淘汰的态度不变，后面就是继续格局、兑现的事情</p>
-<p>不考虑加仓进场，仅考虑处理持仓，后手没买点</p>
-<hr>
-<p>当下市场的状态真可以说是：Big shit market，乏善可陈的盘面</p>
-<p>于是在北向流入三十亿的情况下，内资砸盘了半天，指数还是缩量、冲高回落</p>
-<p>对于这种情况我就比较服气，印象中之前也是四个利好带不动一个市场，高开必低走</p>
-<p>开盘拿的汉威自然也就只能是吃套了，但给我的感受就非常差，环境哪有那么糟糕</p>
-<p>后面一段时间不考虑做题材了，但凡一个宏观压制下就是如此，这个市场要调低预期</p>
-<p>毕竟主要矛盾依旧是基本面，基本面没改善确实也难有强反弹，无非砸太过分了些</p>
-<p>对于超短没什么太多想说的事，开盘文投就被核，金顶也没好到哪里去，情绪面分歧</p>
-<p>个人反正持仓等待兑现点，文投大概率没到兑现点，也就持仓不变，金顶也如此</p>
-<p>至于盘内会不会有情绪面修复个人说不准，但还是比较期待会有，当然收盘看没有</p>
-<p>整天演绎下来就是情绪一直处于分歧状态，并且回暖力度很差，那也就顺势兑现不送</p>
-<p>实在没想到这种单波的都能给淘汰掉，这个生态环境着实没我想得那么好</p>
-<p>后面也不想再出手，空仓等待下一个节点，下次便是跨年妖的博弈场</p>
-<p>至于下次的一些想法：</p>
-<p>单波流肯定不变看好态度，但龙版能走成这样也很超预期，均可选择吧只能说</p>
-<p>新股最近一直有些动作，下次配合情绪面回暖日，或者情绪回暖次日，均可去参与</p>
-<p>分歧退潮淘汰赛的基准应该不变，后面两天以反复为主，必有兑现日存在</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-15-23</title>
-    <url>/2023/12/15/D-12-15-23/</url>
-    <content><![CDATA[<p>昨晚美国进出口数据的全面不及预期，再度引发降息预期</p>
-<p>而降息预期路径已然被美联储佐证，现在再度被经济数据佐证，继续向前交易</p>
-<p>贵金属成反弹先锋，钯金暴涨十五个点，银大涨接近七个点，黄金涨三个点</p>
-<p>同时美股虽然冲高回落，但十年前美债收益率已然跌破四，人民币也再度走升值</p>
-<p>一切均和预期没什么差别，后续市场就会按照经济数据继续修正对降息的预期</p>
-<p>因为最核心的就是美联储已经承认了降息预期路径的可行性</p>
-<p>从股指期货看自然是乐观的，恒生夜盘上涨两个点，富时上涨接近一个点</p>
-<p>不过个人在经历昨日冲高回落后没那么乐观，因为压制市场的基本面因素没改善</p>
-<p>内资也不会轻易配合外资的，高开低走才是可能的套路</p>
-<p>国内就不谈了，打嘴炮第一名，地产政策略微超预期但规模小、富时也没反馈</p>
-<p>基本先定下来一个高开，能不能走强肯定不好说，走弱的可能性居高</p>
-<p>超短方向，今天继续看分歧淘汰的范围内，无非昨日核下来后今天会有修复</p>
-<p>没什么参与点，后手看戏，先手格局等待兑现点的阶段，等待下一个出手节点</p>
-<hr>
-<p>关于昨天地产政策以及宏观的一些思索：</p>
-<p>本次地产放松政策的力度虽有，超预期，但其规模较小，虽有意义</p>
-<p>但市场还没有认定有那么大的意义，后续还需要进一步看政策面更多的风向、落实</p>
-<p>若政策面不断推出更多利好，甚至会议再度定调其他信息，落实明显超预期</p>
-<p>那么就很容易能够看到一个预期配合事实的进一步反弹</p>
-<p>但反弹最终还是要计价到基本面上的，后续基本面若无进一步改善、边际转好</p>
-<p>那么这个反弹自然也就会被证伪，最终还是该跌的跌，没什么变化</p>
-<p>至于经济基本面，其实还有另外一条路径，即债务推动、政府投资拉动</p>
-<p>这其实也是经济工作会议、政治局会议上所定调的事情，未来大概率走这条道路</p>
-<p>除去这些以外，今天耶伦的喊话也略微让我看到了一些新路径，即改变现状</p>
-<p>即修剪一些不必要的政策，进一步开放资本准入、放宽限制等，但必有其一些弊端</p>
-<p>但这似乎是除去债务拉动或者期盼地产能够真正见底、居民负债表能修复外</p>
-<p>唯一一个较好的预期路径，具体这种实际上触及了制度根本，但确实有其合理性</p>
-<p>其实就是简单一句话：进一步市场化改革（回顾下邓的改革开放</p>
-<p>不过这种事情，急不得，政治上的事情待风向明确了再谈论，不迟的</p>
-<hr>
-<p>对于市场，个人想说的并不多，指数如期冲高回落，虽然午后有小作文影响</p>
-<p>但基本仍然是在演绎对基本面的担忧之上，上述也说了，需要看到地产政策的风向</p>
-<p>否则整体依旧是如此弱势脉冲的市场，更多的预期路径，很重要</p>
-<p>暂时依旧不会去考虑参与指数行情，题材基本以放弃为主，仅考虑超短</p>
-<p>超短今天弱回暖，以反抽票为主，虽然跌停数量减少但分歧不变，隐忧较大</p>
-<p>个人的态度就是等待后续派面、出清后，再考虑参与，下次即为跨年妖的博弈场</p>
-<p>最大的变数来自于监管，对监管政策的摸透、吃透，才能选择到阻力最小的方向参与</p>
-<p>目前还在思索监管层面的底线、红线到底在哪，暂无定论</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-18-23</title>
-    <url>/2023/12/18/D-12-18-23/</url>
-    <content><![CDATA[<p>外围没什么特别的变迁，无非是红海事件刺激了航运相关，很难影响风险偏好</p>
-<p>市场自发交易降息预期，后续更多将会从经济数据具体进行修正，而不太会听美联储</p>
-<p>毕竟昨晚美联储就发出了鸽派和鹰派叠加的言论，未来仍待现实来佐证</p>
-<p>当下继续沿着这条路交易即可，根据经济现实进行修正</p>
-<p>对于国内其实个人态度较为明确，弱现实叠加弱预期的困境</p>
-<p>先前其实我也谈了，如果后续想要看到破局</p>
-<p>那么必须看到地产政策的出手，即使口头说的一般，但落实可能是不一样的</p>
-<p>不只要看他怎么说的，还要看到他怎么做的，虽然大多数时间言行一致</p>
-<p>例如本次北京、上海的政策其实力度很一般，但到底开了个头，可继续看下去</p>
-<p>除地产政策之外，还需要看的就是有没有较大规模的工程、投资、政策</p>
-<p>后面的预期路径基本都是依赖于政策面的出手，而很难说真正由经济看到改善驱动</p>
-<p>弱现实叠加弱预期的情况下，市场自然没有什么信心，反复磨底新低自是常态</p>
-<p>因而对国内市场，我个人总体是看空为主，至少看不到持续性、可靠的赚钱效应存在</p>
-<p>超短方向不再多说，上周五已经阐明个人态度就是看反抽，因而继续看空</p>
-<hr>
-<p>全天演绎接近个人思路</p>
-<p>指数在早盘地产数据良好的状态下有所反弹，但到底规模太小</p>
-<p>压根没有能让市场信服宏观层面的修复、反转</p>
-<p>弱预期、弱现实下的市场就是此般的羸弱，没什么可说，无非今天核太狠了些</p>
-<p>而且还是在北向、南向均买入的情况下，依旧等待宏观节点才能做交易</p>
-<p>超短方向个人预判也被证实，总体是一个大面日，跌停飙到接近四十，大面不断</p>
-<p>开盘低开较多基本就验证个人思路即周五是反抽，今天大面、退潮淘汰是必然</p>
-<p>盘内个人并没有太多的想法、思路，因为即使今天回暖，也并非个人的买点，安心等</p>
-<p>后面几天就略微可以乐观一些，等待跌停基本消失、变成个位数以后，可开始试错</p>
-<p>至于一些思索，核心还是在后续的参与方向、对市场后续演绎方向的理解上</p>
-<p>监管重压之下，风声鹤唳、草木皆兵，作为交易者要懂得顺势而为，不与市场大势做对</p>
-<p>既然如此担心高度问题，那么我避开就是，安心寻找多波流、低位单波</p>
-<p>此外，今天能看到的一个安培龙，明显蹭上了龙字辈的情绪，新股一直有动作</p>
-<p>总结这几个特征吧：多波、玄学辈、低位板、新股、国资委、上交所，下一阶段</p>
-<p>这几天还是以空仓休息为主</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-19-23</title>
-    <url>/2023/12/19/D-12-19-23/</url>
-    <content><![CDATA[<p>忙于学业，昨晚并未梳理宏观</p>
-<p>但几个要点还是如此，基本能管好一阵子：</p>
-<p>降息预期会继续交易下去，根据事实经济数据进行修正、改变，当下不必担心</p>
-<p>美股能够创新高基本就是此逻辑驱动</p>
-<p>至于国内，已经说得较为清楚，弱现实叠加弱预期</p>
-<p>后续除非政策面的出手，亦或是经济的迅速恢复(边际改善都很难看到)</p>
-<p>否则即使是国家队的下场救助也只是杯水车薪，任何人在大势面前，都是沧海一粟</p>
-<p>这些话能管好一阵子，指数的新低、弱势、缩量都不足为奇</p>
-<p>今天的谈论索性连在一起</p>
-<p>对于指数、市场总体状态就和我说的一样，看空，放弃题材交易</p>
-<p>交易的方向依旧会是连板，群雄逐鹿之处，跨年妖即为噱头，无非注意下情绪面</p>
-<p>昨天已然是大面日，虽然个人谈到了乐观一些，不代表今天就去干的</p>
-<p>个人较为稳妥，一般都是选择跌停大量减少、已然弱回暖明显的次日去干的</p>
-<p>当下很明显没有满足这个要求，收盘看跌停还是大量存在，且观感很差</p>
-<p>大多数都是封死跌停而非有所放量板，明天能否看到回暖也同样是一个未知数</p>
-<p>情绪面的事情个人认为就不妨先等等，等待较为确定性的节点再参与</p>
-<p>但有些事情不能忘，就是掌握下一阶段发展的脉络、方向，阻力最小的路</p>
-<p>目前总结而言，在昨天的基础上增加了几个点：</p>
-<p>创业板连板实际上比较罕见，但现在其实已经看到两个创业连板</p>
-<p>资金为避开监管而选择了短平快的模式，小盘、创业、弹性，即为方向</p>
-<p>北交所套利还是不错的，不过买不了也就作罢</p>
-<p>单纯要做连板的，重视下玄学特征(中字头、龙字辈、数字、五行、麻将…)</p>
-<p>多波流当下引力、龙韵、龙版给出了很好的反馈，低位板、多波流</p>
-<p>上交所、国资委概念，有的话好，没有也没关系，传媒方向股性较好</p>
-<p>弹性方向即上述说的创业、小盘、新股，基本也就是下阶段的核心方向</p>
-<p>总结即为：多波流、玄学、低位板、上交国资、传媒、小盘创业、新股、北交所</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-12-23</title>
-    <url>/2023/12/12/DN-12-12-23/</url>
-    <content><![CDATA[<p>贵金属仍然在各自打消其过于乐观的降息预期，但对股、债、汇基本没影响</p>
-<p>因为它们本身就没有给特别高的预期态度，昨晚美债拍卖较好的状态支撑市场上行</p>
-<p>欧美普涨，对应到股指基本都是红的，略微偏多，仅影响开盘</p>
-<p>至于国内，在昨天一根中阳后修正了一定的预期，后续思索到应该是先立在破</p>
-<p>也就是政策面的预期大概率来源于政治局会议，对应则为地产、降息、投资拉动等</p>
-<p>后面的思索也是如此，虽然定调但短期推出强政策概率不大，反弹难以持续</p>
-<p>除非后续风向明显改变，否则我基本不会考虑将预期路径纳入市场交易面的考虑</p>
-<p>何况昨天的反弹并不算好，也有消化了较多经济层面的悲观态度，利空兑现有关在</p>
-<p>后续可以维持一阵子，但若经济迟迟看不到好转，预期路径，该跌还是会继续跌</p>
-<hr>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-13-23</title>
-    <url>/2023/12/13/DN-12-13-23/</url>
-    <content><![CDATA[<p>昨晚美国的通胀数据符合预期，但其实在一定程度上打压了利率预期</p>
-<p>贵金属基本还是在修正利率预期的路上，美股则各种博弈后最终仍然红盘走强</p>
-<p>国际资管、交易员对这块的分歧基本都比较大，短期内实际也无法证伪的</p>
-<p>但就个人层面而言是偏空，美联储后续的议息会议也大概率保持不加息和鹰派言论</p>
-<p>目前的利率预期保持在五月份左右降息，还算正常，也并不算特别夸张，且看吧</p>
-<p>无法证伪，同时没办法进一步交易，基本就是震荡为主</p>
-<p>国内今晚有经济工作会议，具体还没看过，估计最值得看的还是地产方向</p>
-<p>个人思路上面也是准备先看市场反馈，毕竟个人没研究、没阅读，没法去评论</p>
-<p>对指数因而就没什么太多态度，不过就开盘，以及盘内状态，看来政策预期落空些</p>
-<p>地产政策的抢跑兑现，目前在经济面不行的情况下就是会不断预期政策</p>
-<p>最近其实一直交易的都是地产、基本面、政策出手的预期路径，小作文的源泉</p>
-<p>其实盘前就可以看到商品方向演绎了预期兑现、预期落空的走势，直觉偏空</p>
-<hr>
-<p>开盘的低开也验证了个人思路，盘前其实就想过今天指数基本是跟着商品来的</p>
-<p>最终也算是得证，开盘即低开一些，看今天跌幅较大的基本都是内房股、蓝筹白马</p>
-<p>和外围比较其实很明显就能看出来压制市场的因素更多在基本面，而非利率博弈</p>
-<p>而就基本面而言，影响最大的因子永远是地产，这一捆绑万亿产业链的行业</p>
-<p>昨文提出的静待风向被昨晚经济工作会议无情打碎，政策不及预期、落空、兑现</p>
-<p>这导致了当下对地产、宏观经济的悲观态度：弱现实，叠加了弱预期（没预期路径</p>
-<p>想要真正等到宏观节点的底部，要不就是政策提供预期路径，要不就是经济边际改善</p>
-<p>就目前社融、PPI、CPI多重数据不及预期的情况下，恐怕只能预期上面给政策提振</p>
-<p>短期而言市场已经接纳了经济数据的悲观，但更重要的是未来，若没看到未来的曙光</p>
-<p>那才会是信心的崩溃瓦解，宏观上面的内容实际上能管很久，我已经很久没做题材</p>
-<p>再说连板方向，先手拿了文投、金顶后一直没什么想说的，基本就是等待兑现节点罢</p>
-<p>早盘开出来并不符合预期，略微偏弱，但好在盘内的修复很强，并且全天没大分歧</p>
-<p>无非早盘我肯定不会劝人去买，后手资金需要面对的风险、承担的压力远高于先手的</p>
-<p>尾盘的一些跳水、拉升、炸板个人都平静面对，因为本就是预期内一定会有的分歧淘汰</p>
-<p>结果看力度依旧不高，仅仅是个别现象，情绪面良性分歧，能够走得更远、更健康</p>
-<p>对后续的态度依旧不变，看分歧、淘汰，后手资金建议以看戏为主，博弈需要考虑监管</p>
-<p>尤其是还在高位二波玩的，建议省省心，资金永远会参与阻力最小的方向而非高位票</p>
-<p>与其一直压异动担心监管，远不如参与单波流来得顺畅、气势如虹，这一点要看清楚</p>
-<p>别的也没什么可说的，或许会考虑阅读地产相关财经文章、经济工作会议的一些点评罢</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-20-23</title>
-    <url>/2023/12/20/D-12-20-23/</url>
-    <content><![CDATA[<p>外围继续红盘，交易降息预期区间，美元走弱、股市走强、贵金属走强是表征</p>
-<p>顺便也把股指带红盘了，不过个人对这个没想法，因为主要矛盾在于国内基本面上</p>
-<p>因而也就不会出现美股还在新高，我们还在新低的状态，搞清楚主要矛盾</p>
-<p>地产政策？海南那边的放松算是个什么，个人感受下来就是不是大事，规模很小</p>
-<p>我个人觉得目前对上面具体落实下来的地产政策，其实已经可以放弃，略微观察吧</p>
-<p>在现有框架下进行放宽可以，但真正要大规模进一步救助，还是得等会议定调</p>
-<p>宏观没什么看多的想法，但或许会有技术性反弹，但个人不会就小反弹来做交易</p>
-<p>对国内市场就是看空为主，至少看不到参与的信号，最终怎么走，和我无关</p>
-<p>至于超短，虽然昨日跌停数量较多，但后续还是要乐观些，初步预判今天会回暖</p>
-<p>或许就有一定的出手意义</p>
-<hr>
-<p>指数就不多说，缩量下跌新低就是宏观压制下的结果，对认知的最好肯定</p>
-<p>超短方向并没个人思索那么乐观，本预判今天有回暖、跌停大量减少等状况</p>
-<p>实际上到收盘看，依旧一堆跌停且回暖力度一般，亏钱效应仍在释放</p>
-<p>个人较为熟悉的节点确实不是回暖日，抄底、预判冰点比较容易陷入被动</p>
-<p>确实值得反思，后面重回自己擅长的模式等待信号，等回暖信号出现</p>
-<p>后续对情绪面仍要乐观一些，等待较确定回暖日后再寻找出手节点，已然附近</p>
-<p>其他便是想清楚后续要参与什么方向，和昨天列出来的基本没有太多变化</p>
-<p>最近频繁派发的监管函还是打压了超短情绪，尤其今晚给了引力监管函</p>
-<p>这让我担心的是后续超短方向最终走不出的可能性，即投机被掐灭的可能</p>
-<p>这个也只能是看后续的情绪面状态，如果回暖迟迟不来，投机可能作罢</p>
-<p>单论监管函给个人的思索，同时期走得更流畅、夸张的龙韵并没给监管函</p>
-<p>也就是依旧还在偏好自家人，国资委依旧是很重要的特征，还是要重视</p>
-<p>至于上、深交所，个人还是偏好上交所，深交所随便涨二十五个点就要监管</p>
-<p>另外就是参考龙高、龙头的走法，比较扭曲的主升、趋势可能会常态化</p>
-<p>其他没什么需要修正的认知，还是列一下吧:</p>
-<p>多波流(不流畅的主升、老高位票)、上交所、国资委、玄学辈(龙、中、数)</p>
-<p>小盘、新股、弹性、北交所、创业板</p>
-<hr>
-<p>个人主板暂时只选出中广，新股弹性方向则为N安培龙</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-21-23</title>
-    <url>/2023/12/21/D-12-21-23/</url>
-    <content><![CDATA[<p>昨晚美国新一期二十年期美债拍卖利率为4.2%，隐含长期通胀预期</p>
-<p>因而也就给正在降息道路上越走越远的市场泼了些冷水，但毕竟是长期预期</p>
-<p>当下依旧是以实际经济状况对利率预期进行修正，影响也不会特别持续</p>
-<p>美股微崩一两个点，但纳斯达克金龙崩了三个点，同时把富时夜盘也给带崩了</p>
-<p>国内没有特殊的政策，而我先前定义下的基本没需要变的，等中央级别定调</p>
-<p>当下县、市、地等地产政策的推出更多仅仅是在原有定调框架下进行查漏补缺罢</p>
-<p>即很难产生较大的影响，同样无法提供预期路径，安心等待上面放话吧</p>
-<p>低开反正没得跑，技术性反弹个人也不会拿来做交易，所以空仓依旧是上策</p>
-<p>超短方向表示较为乐观的态度，但毕竟还没有回暖，等待回暖较好了以后再干</p>
-<p>初步预判今天能有回暖，不过一切以市场为准，暂时不考虑出手</p>
-<hr>
-<p>关于地产政策</p>
-<p>今天盘内个人看到了三个市、县级别地产政策的放松，但都是原框架下的补充</p>
-<p>类似于湖南攸县引导金融机构放宽房企贷款期限、越城区房贷财政贴息、雅安购房补贴</p>
-<p>规模都不大，且没有特殊的创新试点</p>
-<p>最终估摸着还是得看上面文件中的定调，待风向变化</p>
-<hr>
-<p>指数低开自然是预期内的，至于盘内的反弹以及北交所的猛烈砸盘</p>
-<p>具体思索了国债期货以及晚上公布的存款利率下调，以及金科封板的表现</p>
-<p>基本是在预期降准或消化降准消息面，同时对地产政策进行预期</p>
-<p>总体是在预判降准，略微有些预判地产政策</p>
-<p>不过降准算是小利好，大利好还是要政策面的直接干预、规划出手</p>
-<p>那么其实回暖弱势自然也就可以理解了，毕竟降准不是太大利好，小利好</p>
-<p>没有改变现状，该跌的依旧会跌，仍然是弱现实叠加弱预期局面</p>
-<p>至于超短，目前最大的风险在指数，因为看得出来超短已被指数牵着鼻子走</p>
-<p>今天回暖的力度也不太行，前排虽然有所进攻但分歧较大，后排依旧跌幅较大</p>
-<p>只能定义为弱回暖，这样一个状态叠加指数的不稳定，分歧预期还是会有</p>
-<p>后续看分歧力度、回暖力度再做决定，提前抄底自然是很被动的，不适合参与</p>
-<p>再多等待一两天再说，跨年妖的博弈至少没有被监管给打碎，前排继续引导博弈</p>
-<p>至于选择上面暂时就没有想法，或许需要明天博弈完了我才能给出结果</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-22-23</title>
-    <url>/2023/12/22/D-12-22-23/</url>
-    <content><![CDATA[<p>美国那边的经济数据再次佐证降息预期，那么继续沿着这条路走下去</p>
-<p>先前也谈过了美股的走势主要是跟随后续的数据逐步修正，很难说有风险之类的</p>
-<p>毕竟美联储都已经阐述清楚降息路径的可行性</p>
-<p>至于昨天的走法，个人也已经说明过，是对降准进行博弈，顺带了些私心</p>
-<p>但毕竟是一个小利好，无法提供具体的预期路径，更无法改变现实，消化完就算没了</p>
-<p>地产政策看下来基本是在原有框架下的修改，尤其还得防着住建部不及预期的兑现</p>
-<p>至于最终落实的效果，至少让我看到经济边际较为明显的复苏回暖，但很难吧</p>
-<p>央行经济金融形式会议的召开基本就是为降准做准备，顺便讨论进一步宽松</p>
-<p>没太多意外的事情，看股指也不温不火，该跌还是会跌的，远没有说底部到来了</p>
-<p>安心等待政策给予的信心，趋势反转再议吧，之前均是技术面反弹</p>
-<p>超短方向依旧考虑等待为主，初步判断是会有伴随指数的分歧，再看回暖力度决定</p>
-<hr>
-<p>关于地产、宏观实还有千言万语未讲</p>
-<p>但最终因为没有思索清楚地方的裁决量、地方政策的出台含义等而作罢</p>
-<p>暂定地方政策为框架内的修补，后面若看到转变风向再细思索吧</p>
-<hr>
-<p>上午如期分歧，指数、超短共同分歧，后续伴随住建部的喊话，略有些许反弹</p>
-<p>但反弹的力度并不强，也仅仅是微红盘的状态，不过至少看到了情绪环境的修复了</p>
-<p>超短如果按照当时的修复状态下去，基本收盘就能看到一个回暖日的结果</p>
-<p>可惜中午的一纸文件瞬间打击市场信心，当场把场内最活跃的传媒游戏摁死</p>
-<p>顺带也就把超短刚刚略有恢复的情绪给打得稀碎，收盘再度回到大分歧、退潮日</p>
-<p>跌停一大批、天地板、大跌幅，场内一片绿</p>
-<hr>
-<p>关于几个态度</p>
-<p>首先是对于这纸文件，个人的态度是批评为主</p>
-<p>在当下经济状态下出收缩性政策，完全是违背上层“先立后破”的定调</p>
-<p>文件内规划的内容足以导致整个游戏产业在现实层面中被摁死</p>
-<p>最终产生的结果足以是游戏公司大量倒闭、关停、裁员、破产等事件</p>
-<p>因而各位才能看清楚资本市场不只是把传媒游戏给暴砸了顿，还拖累了指数状态</p>
-<p>本质这种政策是收缩性的，不利于经济复苏，反而可能导致更加负面影响</p>
-<p>不过好在这本就是征求意见稿，且官网也有下架的意思，估计最终落实会缓和很多</p>
-<p>至于新闻出版委和该文件有关的人员，我只能说肯定是要遭殃了</p>
-<p>因为舆论上就没有引导好，且政策有违上意，最终还得其他人出面帮着喊话</p>
-<hr>
-<p>对于后续市场的态度，个人是这样几个思路</p>
-<p>指数、宏观暂定依旧是弱预期、弱现实，暂且等待政策面出手的转机</p>
-<p>对转势点的理解是不太会出问题，走在市场前面就略有些困难，那就暂待后续吧</p>
-<p>依旧锚定技术性反弹，不会依据其来做所谓的交易的</p>
-<p>超短我似乎已经是第N天谈可能的反弹了，也不太想再度预测，安心等回暖</p>
-<p>跨年的博弈大概率没有结束，因为资金依旧留下了几个高标活口</p>
-<p>届时根据回暖情况、资金具体选择出来的方向，再思索如何参与行情吧</p>
-<p>暂时先以等待为主了，新股也算是得到了些经验，并没有预判错的，依旧休整为主了</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-26-23</title>
-    <url>/2023/12/26/D-12-26-23/</url>
-    <content><![CDATA[<p>外围并没有动静，都忙着过圣诞节</p>
-<p>且论宏观，其实目前最现实的状态即为债牛股熊，最根本的原因其实是经济基本面</p>
-<p>在经济基本面衰退，进而产生进一步的流动性宽松预期，债市因而就走强</p>
-<p>股市不只是定价流动性，更在定价经济基本面，相比流动性，基本面现阶段更重要</p>
-<p>最终需要面对的仍然是基本面的因素，政策工具箱或许还有很大的空间，乐观些</p>
-<p>未来个人的思索上面，依旧是以政策主导的脉冲式周期为主，而非真正基本面修复</p>
-<p>毕竟基本面的修复必然不会是一朝一夕之功，恐怕道阻且长</p>
-<p>何况年前交投清淡，这一点看清楚即可，估计短期内是看不到什么反弹</p>
-<p>超短那边，继续重点关注回暖状态</p>
-<hr>
-<p>指数依旧羸弱不堪，题材几乎全线溃败，这块不多说了，很多票都会莫名其妙跌停</p>
-<p>超短方向总体回暖力度比我想得要好一些，今天明显可以定义为一个回暖日</p>
-<p>情绪面跌停目前只剩下一个，跌幅较大的和情绪相关的也仅剩下个别，大多数已经正常</p>
-<p>尾盘看是有一波集中性兑现，从北交所方向传递过来首先把银宝给直接杀掉兑现</p>
-<p>但虽有派面，但规模和级别都不大，这也就印证了今天的弱回暖状态</p>
-<p>弱回暖并没关系，回暖总是逐步的而非一蹴而就的，后续总体继续看回暖的</p>
-<p>至于场内的状态先谈几句，监管目前态度就是原先的十天百分百和四次异动为主</p>
-<p>场内演绎的结果是：趋势主升(龙版、龙头)、反包(龙版、龙头、永达)、创业板(领湃)</p>
-<p>当下国资委、上交所已经不再是核心属性，具体对比数据就能明白没选择偏好</p>
-<p>次新永达为代表走强，具有异动优势，个人总体表示观察态度，或许会考虑参与</p>
-<p>龙字辈不再评论，龙头、龙韵带领的龙字辈和本次周期并不太吻合，后续容易兑现</p>
-<p>尤其是今天加速以后，明天再度加速极有可能派面，不过鉴于情绪回暖难派大面</p>
-<p>同时还可思索龙字辈下方的龙洲高低切换的可能性，个人不再考虑高位票</p>
-<p>银宝明天大概率修复趋势，情绪面的一些错杀</p>
-<p>总体对后续行情的态度：</p>
-<p>明天情绪面会略微有分歧存在，主要可能就是龙字辈的兑现压力，龙头、龙韵</p>
-<p>但分歧基本是良性的，可以考虑参与，方向上考虑银宝反核，捷荣的低吸，龙洲高低切</p>
-<p>基本是尽可能避免淘汰赛了，淘汰赛变数太多个人不乐意参与(如三柏、西陇、天威等</p>
-<p>若是有创业板的涨停、连板，我应该也是会来的(前提这个票绝对不能是ST类型的</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>D-12-27-23</title>
-    <url>/2023/12/27/D-12-27-23/</url>
-    <content><![CDATA[<p>依旧在降息路径上越走越远</p>
-<p>美股在美国地产数据超预期佐证降息预期后再度走强，国债拍卖较好也成了底气</p>
-<p>纳斯达克金龙总体收涨，涨得也不错，也算是真外资对周末游戏监管的态度(周五不开盘</p>
-<p>略微还是可以偏多的，具体可以看港股的腾讯、网易这批的走法，定反弹与否</p>
-<p>国内融转通的停止算是一个小利好，但无法改变基本面定价的压制：弱现实、弱预期</p>
-<p>单纯对今天而言是略微偏多为主，至于中长期还有另外一套说辞</p>
-<p>长期的下跌已然消化了大多数的利空，再度下探的空间或许就不大，震荡格局</p>
-<p>若是能看到政策的出手、经济面的边际转好，那么反弹还是有一定希望在的</p>
-<p>不过个人觉得没必要一直走在市场前面，当下认定就是依靠政策出手，才能破局</p>
-<p>后续若市场真正以其他的形式走出来，再议即可，我只需要清楚交易逻辑即可</p>
-<p>至于超短，昨日谈到了已然看到回暖，今天就是趁龙字辈分歧之时看到好机会即可干</p>
-<hr>
-<p>至于地产已经没什么可说了，早上降低了部分房贷利率，算是预期内的</p>
-<p>然后地产稀里哗啦再走了一遍兑现走法，只能说成事不足败事有余，真是基本面压制</p>
-<p>只能说至少外资和内资在看空地产上达成了一致的态度</p>
-<hr>
-<p>最终外资的态度还是积极的，和我个人理解接近</p>
-<p>游戏方向的定调就是以繁荣发展而非强制管制，所以其实政策的宽容空间还很大</p>
-<p>这边自然也就有了一些预期差，今天外资的流入也算是对上周五砸盘的弥补</p>
-<p>因为真正出台一些紧缩性政策的概率还是不大，定调总体偏积极，那么就足够了</p>
-<p>今天也就能看到外资流入了六十个亿，不过成交量依旧不高，交投依旧非常清淡不堪</p>
-<p>涨幅较高的票也不多，这同样是一个弱回暖，略有一些题材能够表现，如算力这类</p>
-<p>后续短期内依旧不要考虑题材方向的操作，非常容易产生问题，暂等宏观节点</p>
-<p>至于超短个人就表示无话可说，分歧烈度比我想得强，龙字辈兑现导致整体情绪低迷</p>
-<p>全天都没有什么像样的拉升，跌停也大量增加，天地板也再度产生，再度陷入混沌</p>
-<p>最近的情绪面或许是受到了交投清淡、指数压制，总体走得非常羸弱，往往没持续进攻性</p>
-<p>早盘在略点了几笔想要参与的方向后，看情绪面实在不对劲也就停止了操作</p>
-<p>客观来说今天的情绪肯定是低于预期的，但也要看到兑现是局部性的，弥漫不算太大</p>
-<p>后续看多、看空均有理由，如此羸弱情绪之下也就不会考虑第一天回暖日的参与</p>
-<p>宁可等待回暖确认后，再考虑后续分歧节点的参与，只能是再度等待后续的状态了</p>
-<p>至于持仓，个人对明天情绪略微偏多，所以考虑格局为主，若实在不行，也会考虑兑现</p>
-<p>毕竟年前交投清淡，超短就是要杀到资金服为止的</p>
-]]></content>
-      <tags>
-        <tag>stock</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 简体 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
+    
+    <entry>
+      <title></title>
+      <link href="/hexo-theme-freemind-blog/404.html"/>
+      <url>/hexo-theme-freemind-blog/404.html</url>
+      <content type="html"><![CDATA[<!DOCTYPE HTML><html>  <head><meta charset="utf-8"><title>404 | hexo-theme-freemind</title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta property="og:site_name" content="hexo-theme-freemind"><meta property="og:image" content="undefined"><link href="favicon.png" rel="icon"><link rel="stylesheet" href="/hexo-theme-freemind/css/themes/bootstrap.css" media="screen" type="text/css">  <link rel="stylesheet" href="/hexo-theme-freemind/css/style.css" media="screen" type="text/css">  <script src="/hexo-theme-freemind/js/jquery-2.0.3.min.js"></script>  </head>  <body><nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">  <div class="container"><button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">  <span class="sr-only">Toggle navigation</span>          <span class="icon-bar"></span>          <span class="icon-bar"></span>          <span class="icon-bar"></span></button><a class="navbar-brand" href="/hexo-theme-freemind/">Freemind</a><div class="collapse navbar-collapse nav-menu">  <ul class="nav navbar-nav"><li>  <a href="/hexo-theme-freemind/archives" title="All the articles."><i class="fa fa-archive"></i>Archives  </a></li><li>  <a href="/hexo-theme-freemind/categories" title="All the categories."><i class="fa fa-folder"></i>Categories  </a></li><li>  <a href="/hexo-theme-freemind/tags" title="All the tags."><i class="fa fa-tags"></i>Tags  </a></li><li>  <a href="/hexo-theme-freemind/about" title="About me."><i class="fa fa-user"></i>About  </a></li>  </ul></div>  </div></nav><div class="clearfix"></div>    <div class="container">    <div class="content">    <div class="page-header">  <h1>OMG, failed to find this article! </h1></div><div class="row-fluid page">  <div style="text-align: center"><div class="spell-img">  <img src="/hexo-theme-freemind/images/404.png"></div><input type="text" id="local-search-input" name="q" results="0" placeholder="Don't worry, search articles here!" class="st-search-input st-default-search-input form-control" style="margin-bottom:1em">  </div>  <div id="local-search-result"></div></div>  </div>    </div> <!-- container --><div class="container-narrow">  <footer> <p>  &copy; 2014 Joseph Pan    with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="external">Freemind</a>.    </p> </footer></div> <!-- container-narrow --><script src="/hexo-theme-freemind/js/bootstrap.min.js"></script><script src="/hexo-theme-freemind/js/search.js"></script> <script type="text/javascript">           var path = "/hexo-theme-freemind/search.xml";     searchFunc(path, 'local-search-input', 'local-search-result');   </script>  </body></html>]]></content>
+    </entry>
+    
+    <entry>
+      <title>About</title>
+      <link href="/hexo-theme-freemind-blog/about/index.html"/>
+      <url>/hexo-theme-freemind-blog/about/index.html</url>
+      <content type="html"><![CDATA[Something about me. ;-)]]></content>
+    </entry>
+    
+    <entry>
+      <title>Categories</title>
+      <link href="/hexo-theme-freemind-blog/categories/index.html"/>
+      <url>/hexo-theme-freemind-blog/categories/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>Tags</title>
+      <link href="/hexo-theme-freemind-blog/tags/index.html"/>
+      <url>/hexo-theme-freemind-blog/tags/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+  
 </search>
