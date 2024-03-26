@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>A Song of Ice and Fire • Posts by &#34;preview&#34; tag</title>
+        <title>Ephemeral • Posts by &#34;preview&#34; tag</title>
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
@@ -11,6 +11,7 @@
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
+        <category>Math</category>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2023/09/20/hello-world/</guid>
             <title>前言</title>

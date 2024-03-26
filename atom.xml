@@ -1,13 +1,48 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://CHCHCH-art.github.io</id>
-    <title>A Song of Ice and Fire</title>
+    <title>Ephemeral</title>
     <link href="https://CHCHCH-art.github.io" />
-    <updated>2023-09-20T07:08:00.000Z</updated>
+    <updated>2024-03-26T12:03:17.000Z</updated>
     <category term="stock" />
     <category term="END" />
     <category term="FK" />
     <category term="Preview" />
+    <category term="Math" />
+    <entry>
+        <id>https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%841/</id>
+        <title>计组1</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%841/"/>
+        <content type="html">&lt;p&gt;注:新概念新题型不超过十分，不必过分纠结&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;现代结构是在诺伊曼结构上的改进&lt;/p&gt;
+&lt;p&gt;注，现代计算机很多情况下把MAR\MDR集成在CPU中&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/3.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/4.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注，运算器若乘时过大值时，低位会放在MQ中&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/5.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/6.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/7.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这一节掌握概念即可，尤其是编译、汇编、解释三者的区别和特征，层次结构&lt;/p&gt;
+&lt;p&gt;编译、汇编只进行一次全部读取，解释是读一行执行一行&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/13.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/8.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可执行文件存于外存中，需要先调入主存&lt;/p&gt;
+&lt;p&gt;注意平常说的存储，存储128G，指代的是外存&lt;/p&gt;
+&lt;p&gt;大头戏&lt;/p&gt;
+&lt;p&gt;注:CU读取指令后的操作才会有所不同，其他均为相同&lt;/p&gt;
+&lt;p&gt;操作码+地址码为十六位，也可以变成两个地址或者多个地址的状态&lt;/p&gt;
+&lt;p&gt;注，这里地址码起点是从2^1开始的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/9.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/10.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/11.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;回忆计算以及变量使用，以一个时钟周期作为t推演&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/14.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/15.png&#34;&gt;&lt;/p&gt;
+</content>
+        <updated>2024-03-26T12:03:17.000Z</updated>
+    </entry>
     <entry>
         <id>https://chchch-art.github.io/2023/09/20/hello-world/</id>
         <title>前言</title>
