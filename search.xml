@@ -16,41 +16,47 @@
     <title>计组1</title>
     <url>/2024/03/26/%E8%AE%A1%E7%BB%841/</url>
     <content><![CDATA[<p>注:新概念新题型不超过十分，不必过分纠结</p>
-<p><img src="/img/ky/1.png" alt=""></p>
+<p><img src="/img/ky/1.png"></p>
 <p>现代结构是在诺伊曼结构上的改进</p>
 <p>注，现代计算机很多情况下把MAR\MDR集成在CPU中</p>
-<p><img src="/img/ky/2.png" alt=""></p>
-<p><img src="/img/ky/3.png" alt=""></p>
+<p><img src="/img/ky/2.png"></p>
+<p><img src="/img/ky/3.png"></p>
 <p>注，主存与CPU相连的总线而言，其地址线为MAR的地址长度，MAR为16位，地址线16位</p>
 <p>数据总线又称为数据通路带宽，MDR为32位，那么数据总线也是32位</p>
-<p>同时也把这个位数称为存储字长，把地址线位数称为地址码长度。</p>
-<p><img src="/img/ky/4.png" alt=""></p>
+<p>同时也把这个位数称为存储字长，把地址线位数称为地址码长度</p>
+<p>顺便说下控制总线的事情(这里注意我说的是主存和CPU交互的控制线</p>
+<p>因为是需要给定读指令+从哪读内容到哪存或者取指令+取哪个位置的内容放到哪</p>
+<p>所以肯定是给定不止一位表示读、写的，后面必然包括两个地址信息</p>
+<p>对于CPU内部的线路、寄存器，会在第五章、后续的章节进一步给出解释，别急</p>
+<p>以及机器码和运算速度之间的关系，因为一次处理的数据多了，可能处理时间也就长了</p>
+<p>所以不一定机器码越高，运算速度越快</p>
+<p><img src="/img/ky/4.png"></p>
 <p>注，运算器若乘时过大值时，低位会放在MQ中</p>
-<p><img src="/img/ky/5.png" alt=""></p>
-<p><img src="/img/ky/6.png" alt=""></p>
-<p><img src="/img/ky/7.png" alt=""></p>
+<p><img src="/img/ky/5.png"></p>
+<p><img src="/img/ky/6.png"></p>
+<p><img src="/img/ky/7.png"></p>
 <p>这一节掌握概念即可，尤其是编译、汇编、解释三者的区别和特征，层次结构</p>
 <p>编译、汇编只进行一次全部读取，解释是读一行执行一行</p>
-<p><img src="/img/ky/13.png" alt=""></p>
-<p><img src="/img/ky/8.png" alt=""></p>
+<p><img src="/img/ky/13.png"></p>
+<p><img src="/img/ky/8.png"></p>
 <p>可执行文件存于外存中，需要先调入主存</p>
 <p>注意平常说的存储，存储128G，指代的是外存</p>
 <p>大头戏</p>
 <p>注:CU读取指令后的操作才会有所不同，其他均为相同</p>
 <p>操作码+地址码为十六位，也可以变成两个地址或者多个地址的状态</p>
 <p>注，这里地址码起点是从2^1开始的</p>
-<p><img src="/img/ky/9.png" alt=""></p>
-<p><img src="/img/ky/10.png" alt=""></p>
-<p><img src="/img/ky/11.png" alt=""></p>
+<p><img src="/img/ky/9.png"></p>
+<p><img src="/img/ky/10.png"></p>
+<p><img src="/img/ky/11.png"></p>
 <p>回忆计算以及变量使用，以一个时钟周期作为t推演</p>
-<p>区分bit/B/字节/字/位/字长、MIPS…</p>
-<p><img src="/img/ky/14.png" alt=""></p>
-<p><img src="/img/ky/15.png" alt=""></p>
+<p>区分bit&#x2F;B&#x2F;字节&#x2F;字&#x2F;位&#x2F;字长、MIPS……..</p>
+<p><img src="/img/ky/14.png"></p>
+<p><img src="/img/ky/15.png"></p>
 <hr>
 <p>换算单位</p>
 <p>MGTPEZ（10^6)开始的次数换算单位</p>
 <p>时间换算单位</p>
-<p><img src="/img/ky/16.png" alt=""></p>
+<p><img src="/img/ky/16.png"></p>
 <p>对应3、6、9、12次</p>
 <hr>
 ]]></content>
