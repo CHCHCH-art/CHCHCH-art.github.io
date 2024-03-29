@@ -5,13 +5,144 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Tue, 26 Mar 2024 21:43:37 +0800</pubDate>
-        <lastBuildDate>Tue, 26 Mar 2024 21:43:37 +0800</lastBuildDate>
+        <pubDate>Thu, 28 Mar 2024 16:18:30 +0800</pubDate>
+        <lastBuildDate>Thu, 28 Mar 2024 16:18:30 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/03/28/%E8%AE%A1%E7%BB%843/</guid>
+            <title>计组3</title>
+            <link>https://chchch-art.github.io/2024/03/28/%E8%AE%A1%E7%BB%843/</link>
+            <pubDate>Thu, 28 Mar 2024 16:18:30 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;基本数电知识补充：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/27.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/28.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/29.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;加法器简单知识（不必深究），可见加法器、并行进位加法器篇章&lt;/p&gt;
+&lt;p&gt;基本原理：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/32.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可构建：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/33.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;串联后可构建：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/34.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注意进位需要上一次运算完成后才能判断，因而串联效率不高&lt;/p&gt;
+&lt;p&gt;而进位实际上可以在一开始就算完，后面一次性给出，因而就可以构建并行加法器&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/35.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/36.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这边才是核心内容，需要了解其各端口表示什么，不必追求死磕原理&lt;/p&gt;
+&lt;p&gt;虽然原理后面学下去也能懂就是了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注：加法器是ALU的核心器件&lt;/p&gt;
+&lt;p&gt;MUX（多路选择器：&lt;/p&gt;
+&lt;p&gt;若是八个输入端则需要3位二进制来表达不同的输入端口号&lt;/p&gt;
+&lt;p&gt;本质是用二进制表达其端口号，控制信号即为指定该位置的输入可进入&lt;/p&gt;
+&lt;p&gt;注：有时候可能会多一个控制信号单独表示什么都不选择，那么就需要不止三位信号&lt;/p&gt;
+&lt;p&gt;或者拿一个空端口作为一个补充也可以实现同样功能，具体再议&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/30.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;三态门，区分于非门，当op为1时允许通过，当op为0时禁止信号通过&lt;/p&gt;
+&lt;p&gt;op只需要一位即可，因为一位就是二进制的0和1两种状态，可以拥有非运算的特性&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/31.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;电路基本不怎么考，上面的内容知道即可&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;ALU：&lt;/p&gt;
+&lt;p&gt;核心是参考了MUX的多路选择需要的位数&lt;/p&gt;
+&lt;p&gt;以及需要注意的是ALU、通用寄存器组的宽度位数即为机器字长&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/38.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;移位，向右或者向左移位&lt;/p&gt;
+&lt;p&gt;对正数来说其原码、补码、反码都一致，因而移位所有进程都是一样的补0&lt;/p&gt;
+&lt;p&gt;需要注意的是如果移动出去的是1，那么会产生误差&lt;/p&gt;
+&lt;p&gt;如果是0，那么就会导致精度降低&lt;/p&gt;
+&lt;p&gt;需要注意的就是此类符号位不参与移动&lt;/p&gt;
+&lt;p&gt;对负数来说，其原码补充也是0，但因为反码全部取反，因而用1补，补码见下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/41.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/39.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可应用于乘法或者除法：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/40.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;逻辑移位不需要考虑符号位因为没有符号位&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/42.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;循环而言，注意下进位位，主要是对超过八位二进制相加得出的一个进位位的存储&lt;/p&gt;
+&lt;p&gt;循环就是把第一个数扔到后面，其他的前进一位，带进位位的无非是把进位位也做数&lt;/p&gt;
+&lt;p&gt;相当于移动而已，循环移动，实在不记得去看动图就行&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注意下移位溢出只有两种情况：&lt;/p&gt;
+&lt;p&gt;一种是无符号逻辑移位溢出(或者说解释为逻辑移位时的溢出，只存在于高位的1被移出&lt;/p&gt;
+&lt;p&gt;一种是有符号的算数移位溢出，即符号位移出后数值位最高位和其符号位不同&lt;/p&gt;
+&lt;p&gt;另外两种移动只能被称为丢失精度，尤其特指低位的1被移出&lt;/p&gt;
+&lt;p&gt;补码加减法：&lt;/p&gt;
+&lt;p&gt;补码内只有加法，对于减法只需要把减数变为其补码形式然后变为相加即可&lt;/p&gt;
+&lt;p&gt;相加得出的结果是原码，带符号原码，可以直接转为值&lt;/p&gt;
+&lt;p&gt;注意溢出情况的判断，基本的判断情况就是两个相同符号的数相加得到了不同符号的数&lt;/p&gt;
+&lt;p&gt;正+正得到一个负数那么就是上溢，负+负得到一个正数那么就是下溢&lt;/p&gt;
+&lt;p&gt;那么这个就是溢出的情况，后续一系列判断方法均以此为思想&lt;/p&gt;
+&lt;p&gt;因为只有两种情况，正+正=负，负+负=正，比较容易理解和写出的，异号不可能溢出&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/44.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其实均理解为一个是原先的符号相加应该得到的符号结果&lt;/p&gt;
+&lt;p&gt;一个是后续数值相加后得到的符号结果，若两者不同那么说明就算溢出了&lt;/p&gt;
+&lt;p&gt;可以这样理解，毕竟以应用为主&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/45.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这个也是基于和上面一样的逻辑，后面一位存储的是相加的符号位结果&lt;/p&gt;
+&lt;p&gt;前面一位存储的是符号位原来的结果，两者如果不一样那么肯定是溢出了&lt;/p&gt;
+&lt;p&gt;稍微注意下除二、除四取模，指代1000截断第三位、第二位以后的结果即为取模&lt;/p&gt;
+&lt;p&gt;因为后面的一段和必然小于4或者2&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/46.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注意下无符号数的范围是零和全体正数，当相减为负数或者相加超过上限就会溢出&lt;/p&gt;
+&lt;p&gt;另外，二进制加法并不熟练，建议多练习（建议单独去练习&lt;/p&gt;
+&lt;p&gt;后续原理未知，加法、减法溢出逻辑暂时不知晓&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/47.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;补码加减电路，带符号：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注意下多路选择器以及Cin的一些逻辑处理，这块很巧妙&lt;/p&gt;
+&lt;p&gt;同样可以处理不带符号的，注意需要省略最高位，只保留有效位&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/49.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;结合标志位的生成品尝，尤其是看几个溢出判断是怎么来的，电路很巧妙&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;原码、补码乘法/除法：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注，二进制加减法成为最基本的运算手段，必须熟练掌握&lt;/p&gt;
+&lt;p&gt;原码乘法：&lt;/p&gt;
+&lt;p&gt;不需要作任何准备工作，只需要把原码所对应的无符号相应存储码表示即可(机器字长&lt;/p&gt;
+&lt;p&gt;建议手算模拟的时候写作ACC、MQ、X，Y的形式，便于直接移位的判断&lt;/p&gt;
+&lt;p&gt;首先是，原码而言，符号位不参与乘法过程，直接单独用异或进行单独的判断&lt;/p&gt;
+&lt;p&gt;最终两个乘法数都是无符号数的形式，注意乘数存于MQ中，被乘数存于X中&lt;/p&gt;
+&lt;p&gt;口头描述过程：&lt;/p&gt;
+&lt;p&gt;一开始将ACC置空&lt;/p&gt;
+&lt;p&gt;然后根据MQ的最后一位决定是做ACC+X-&amp;gt;ACC还是直接移位(0对应先+0然后再移位，省略&lt;/p&gt;
+&lt;p&gt;然后ACC、MQ整体右移，ACC最高位补0&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/50.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;个人建议而言，其实后面的符号位0还是尽可能写上并且作标注，免得忘记哪个是位&lt;/p&gt;
+&lt;p&gt;然后结果也就是这样了，最后MQ内还有最后一位乘数符号位的存在，这样就算是结束了&lt;/p&gt;
+&lt;p&gt;把结果和余数相加(余数指MQ内除符号位的其他位，然后小数点放在正确位置，改符号&lt;/p&gt;
+&lt;p&gt;对于整数而言也是一样的，无非就是改变小数点的位置，除非是溢出，那么需要关心下&lt;/p&gt;
+&lt;p&gt;PS：如果是一个1000.0101乘1010.1101的形式，总体也是不变的，无非改为了两次&lt;/p&gt;
+&lt;p&gt;对整数一次，对小数一次，最终的结果相加即可(注意符号&lt;/p&gt;
+&lt;p&gt;补码乘法(BOOTH算法：&lt;/p&gt;
+&lt;p&gt;对于补码乘法需要的准备工作，求出x、y相对应的补码，以及-x的补码(被乘数补码&lt;/p&gt;
+&lt;p&gt;建议手算模拟的时候写作ACC、MQ、X补，-X补，Y补的形式，均为双位符号位&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/51.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;口头描述其过程&lt;/p&gt;
+&lt;p&gt;首先写好辅助位，ACC前面两位辅助位为符号位重复，MQ最后一位辅助位初始为0&lt;/p&gt;
+&lt;p&gt;开始操作，拿MQ最后一位符号位减去MQ最后一位，得到三种结果1/-1/0&lt;/p&gt;
+&lt;p&gt;当为0的时候那么就直接右移一位，注意这边是算数右移，符号位不变，符号位填补空&lt;/p&gt;
+&lt;p&gt;当为1的时候那么就直接加x补，如果出现最高位溢出的情况，直接舍弃最高超出位&lt;/p&gt;
+&lt;p&gt;注意这个需要带着符号位一起参与运算，运算完了以后再向右移动，算数右移&lt;/p&gt;
+&lt;p&gt;当为-1则是加-x补，其他都是一样的&lt;/p&gt;
+&lt;p&gt;最终最后一个符号位也需要参与运算的，同样按照上述规则&lt;/p&gt;
+&lt;p&gt;但可以放弃其的移动，因为计算已经完毕，最终把除符号位的余数加在前面补码后面&lt;/p&gt;
+&lt;p&gt;注意最终得到的结果也是一个补码&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;补码、原码除法后续有空会继续补上的…尤其是加减交替法&lt;/p&gt;
+&lt;p&gt;原码的恢复余数法，建议直接手除算出答案以后，根据答案结果对过程进行判定&lt;/p&gt;
+&lt;p&gt;因为机器每次都是商一不会商0，因而每次商0必然会是先加-x补然后加x补的复原过程&lt;/p&gt;
+&lt;p&gt;机器而言&lt;/p&gt;
+&lt;p&gt;ACC放被除数，MQ放商，X放除数，依据无符号计算，符号位留到最后计算&lt;/p&gt;
+&lt;p&gt;每次计算完成后都会去判断这个值是否为负数，如果是负数那么就会恢复原值商0&lt;/p&gt;
+&lt;p&gt;然后再整体向右边移动一位，商的最后一位每次都是需要求的位置&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%842/</guid>
             <title>计组2</title>
@@ -35,6 +166,10 @@
 &lt;p&gt;C语言中定点整数是用补码存储的或者说都用补码存储的&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;img src=&#34;/img/ky/17.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;稍微注意下小数点的事情，这边的转换和一般的二进制转换不一样&lt;/p&gt;
+&lt;p&gt;小数点开始向左边，选择3、4个作为一组，直到最高位需要补0为止再说&lt;/p&gt;
+&lt;p&gt;小数点开始向右边补，那么也是同样的，就是要重视和小数点的主要关系&lt;/p&gt;
+&lt;p&gt;区分和一般二进制的转换(直接补高位0，因为其小数位就是在最后，其是整数形式&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/ky/18.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/ky/19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;逼近法求转换类型，126–64+32+16+8+4，任何其他位也一样直接求加法然后写位数&lt;/p&gt;
@@ -55,23 +190,34 @@
 &lt;p&gt;2^8-1:11111111&lt;/p&gt;
 &lt;p&gt;2^7-1:01111111&lt;/p&gt;
 &lt;hr&gt;
+&lt;p&gt;注，这里都是在对整数进行谈论，未涉及小数，但实际上也可以等同&lt;/p&gt;
+&lt;p&gt;把小数位后面视作一样的参考值法，符号位也一样，无非就是改变了小数点的位置&lt;/p&gt;
+&lt;p&gt;使得原先的128变成了0.128罢了，基本可以采用下面的方法求解&lt;/p&gt;
 &lt;p&gt;对正数而言，原码、补码、反码取原值都很简单，直接求后面的数值就行&lt;/p&gt;
 &lt;p&gt;对负数而言，求原码、补码、反码原值也很简单&lt;/p&gt;
 &lt;p&gt;原码直接求原值加一个符号&lt;/p&gt;
 &lt;p&gt;反码对后面直接求值然后用2^7-1-值即得出原值，加符号&lt;/p&gt;
 &lt;p&gt;补码对后面直接求值然后用2^7-值即可求出原值，然后加符号即可&lt;/p&gt;
 &lt;p&gt;或者如此图表示般理解为其的无符号码被2^8相减的结果&lt;/p&gt;
-&lt;p&gt;对下图需要注意下溢出的情况判断&lt;/p&gt;
+&lt;p&gt;A+B那么就是A补+B补，A-B那么就是A+（-B）补，这个相互转换需要理解&lt;/p&gt;
+&lt;p&gt;不要去带符号思考，那样就容易绕进去了&lt;/p&gt;
+&lt;p&gt;对下图需要注意下溢出的情况判断，后面自然会有讲三种方法&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/ky/26.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;最麻烦是移码，是一个偏移量加上其真值&lt;/p&gt;
-&lt;p&gt;但是个人认为比较粗暴的方法就是直接把这个数值表示出来然后加上偏移量&lt;/p&gt;
-&lt;p&gt;然后直接用原码表示法表示出来，同样用原码表示出来的值减去这个偏移量即可得到值&lt;/p&gt;
-&lt;p&gt;就是直接转化为十进制加减法，然后用二进制原码表示出来，否则太麻烦&lt;/p&gt;
-&lt;p&gt;当然，如果是一般情况求补码，那么直接把符号位取反就行，偏离量默认为2^n&lt;/p&gt;
-&lt;p&gt;相反的，把移码表示为值那么就是以原码解释为十进制，然后减去偏移量即可得到表达值&lt;/p&gt;
+&lt;p&gt;其中最麻烦的应该是移码，其是一个偏移量加上一个数的真值，然后用机器数表示&lt;/p&gt;
+&lt;p&gt;注意这个机器数是不带符号的，就是解释为无符号数，这个一定要注意&lt;/p&gt;
+&lt;p&gt;最简单粗暴也不会错的方法就是把这个真值给用十进制表示出，然后加上偏移量&lt;/p&gt;
+&lt;p&gt;再用二进制无符号表示出来即可，就是将原来的0000000表达的0，变成了-偏移量而已&lt;/p&gt;
+&lt;p&gt;同样，如果要反向求这个值，那么直接用二进制无符号解释转换为十进制&lt;/p&gt;
+&lt;p&gt;然后把十进制的值减去这个偏移量自然得到了表示值&lt;/p&gt;
 &lt;p&gt;真值转原码很简单，转反码也很简单，转补码基本也没什么问题&lt;/p&gt;
 &lt;p&gt;考虑之间的一些转换，[x]补转[-x]补，只需要取反符号位，然后对数值位取反加一&lt;/p&gt;
 &lt;p&gt;比较容易想明白，因为正数、负数补码第一位必然是不一样的，对数值位加一即可&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;原码可表示小数，也可以表示整数，但一般在计算机中采用原码表示&lt;strong&gt;浮点数&lt;/strong&gt;的尾数&lt;/p&gt;
+&lt;p&gt;移码只能表示整数，注意&lt;/p&gt;
+&lt;p&gt;补码应用非常广，也是最有效率的，ALU内的计算几乎全部依赖于补码，不论小数整数&lt;/p&gt;
+&lt;p&gt;无非就是乘除法的时候会采用不同取模运算罢了，模四或者模二&lt;/p&gt;
+&lt;p&gt;无符号数就不多说了，就是简单的机器数&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -80,38 +226,41 @@
             <link>https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%841/</link>
             <pubDate>Tue, 26 Mar 2024 20:03:17 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;注:新概念新题型不超过十分，不必过分纠结&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;现代结构是在诺伊曼结构上的改进&lt;/p&gt;
 &lt;p&gt;注，现代计算机很多情况下把MAR\MDR集成在CPU中&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/2.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/3.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/4.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注，主存与CPU相连的总线而言，其地址线为MAR的地址长度，MAR为16位，地址线16位&lt;/p&gt;
+&lt;p&gt;数据总线又称为数据通路带宽，MDR为32位，那么数据总线也是32位&lt;/p&gt;
+&lt;p&gt;同时也把这个位数称为存储字长，把地址线位数称为地址码长度。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;注，运算器若乘时过大值时，低位会放在MQ中&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/5.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/6.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/7.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这一节掌握概念即可，尤其是编译、汇编、解释三者的区别和特征，层次结构&lt;/p&gt;
 &lt;p&gt;编译、汇编只进行一次全部读取，解释是读一行执行一行&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/13.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/8.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/13.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;可执行文件存于外存中，需要先调入主存&lt;/p&gt;
 &lt;p&gt;注意平常说的存储，存储128G，指代的是外存&lt;/p&gt;
 &lt;p&gt;大头戏&lt;/p&gt;
 &lt;p&gt;注:CU读取指令后的操作才会有所不同，其他均为相同&lt;/p&gt;
 &lt;p&gt;操作码+地址码为十六位，也可以变成两个地址或者多个地址的状态&lt;/p&gt;
 &lt;p&gt;注，这里地址码起点是从2^1开始的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/9.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/10.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/11.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/11.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;回忆计算以及变量使用，以一个时钟周期作为t推演&lt;/p&gt;
-&lt;p&gt;区分bit&amp;#x2F;B&amp;#x2F;字节&amp;#x2F;字&amp;#x2F;位&amp;#x2F;字长、MIPS……..&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/14.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/15.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;区分bit/B/字节/字/位/字长、MIPS…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/14.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/15.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;换算单位&lt;/p&gt;
 &lt;p&gt;MGTPEZ（10^6)开始的次数换算单位&lt;/p&gt;
 &lt;p&gt;时间换算单位&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/16.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/16.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;对应3、6、9、12次&lt;/p&gt;
 &lt;hr&gt;
  ]]></description>
