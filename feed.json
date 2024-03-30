@@ -5,6 +5,14 @@
     "home_page_url": "https://CHCHCH-art.github.io",
     "items": [
         {
+            "id": "https://chchch-art.github.io/2024/03/30/%E8%AE%A1%E7%BB%844/",
+            "url": "https://chchch-art.github.io/2024/03/30/%E8%AE%A1%E7%BB%844/",
+            "title": "计组4",
+            "date_published": "2024-03-30T04:28:05.000Z",
+            "content_html": "<p>计算考试要点：</p>\n<p>1.浮点数转换为真值或者十进制(补码、移码阶数表示，补码、原码阶数表示法<br>2.浮点数的表示范围、溢出概念<br>3.浮点数的规格化(一般模型、IEEE模型、不同基数模型、左规、右规、原码补码规格化<br>4.IEEE模型特殊性的区分，其浮点数特殊含义的解释<br>5.实数与IEEE浮点数的相互转换<br>6.各种模型的浮点数加减法运算</p>\n<p>浮点数及其规格化：</p>\n<p><img src=\"/img/ky/59.png\"></p>\n<p><img src=\"/img/ky/60.png\"></p>\n<p><img src=\"/img/ky/61.png\"></p>\n<p><img src=\"/img/ky/62.png\"></p>\n<p>IEEE模型特殊性：</p>\n<p><img src=\"/img/ky/54.png\"></p>\n<p><img src=\"/img/ky/55.png\"></p>\n<p><img src=\"/img/ky/56.png\"></p>\n<p><img src=\"/img/ky/57.png\"></p>\n<p>浮点数的加减运算(IEEE模型、其他模型):</p>\n<p><img src=\"/img/ky/52.png\"></p>\n<p><img src=\"/img/ky/53.png\"></p>\n<p><img src=\"/img/ky/dif1.jpg\"></p>\n",
+            "tags": []
+        },
+        {
             "id": "https://chchch-art.github.io/2024/03/28/%E8%AE%A1%E7%BB%843/",
             "url": "https://chchch-art.github.io/2024/03/28/%E8%AE%A1%E7%BB%843/",
             "title": "计组3",

@@ -3,12 +3,35 @@
     <id>https://CHCHCH-art.github.io</id>
     <title>Ephemeral</title>
     <link href="https://CHCHCH-art.github.io" />
-    <updated>2024-03-28T08:18:30.000Z</updated>
+    <updated>2024-03-30T04:28:05.000Z</updated>
     <category term="stock" />
     <category term="END" />
     <category term="FK" />
     <category term="Preview" />
     <category term="Math" />
+    <entry>
+        <id>https://chchch-art.github.io/2024/03/30/%E8%AE%A1%E7%BB%844/</id>
+        <title>计组4</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2024/03/30/%E8%AE%A1%E7%BB%844/"/>
+        <content type="html">&lt;p&gt;计算考试要点：&lt;/p&gt;
+&lt;p&gt;1.浮点数转换为真值或者十进制(补码、移码阶数表示，补码、原码阶数表示法&lt;br&gt;2.浮点数的表示范围、溢出概念&lt;br&gt;3.浮点数的规格化(一般模型、IEEE模型、不同基数模型、左规、右规、原码补码规格化&lt;br&gt;4.IEEE模型特殊性的区分，其浮点数特殊含义的解释&lt;br&gt;5.实数与IEEE浮点数的相互转换&lt;br&gt;6.各种模型的浮点数加减法运算&lt;/p&gt;
+&lt;p&gt;浮点数及其规格化：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/59.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/60.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/61.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/62.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;IEEE模型特殊性：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/54.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/55.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/56.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/57.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;浮点数的加减运算(IEEE模型、其他模型):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/52.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/53.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/dif1.jpg&#34;&gt;&lt;/p&gt;
+</content>
+        <updated>2024-03-30T04:28:05.000Z</updated>
+    </entry>
     <entry>
         <id>https://chchch-art.github.io/2024/03/28/%E8%AE%A1%E7%BB%843/</id>
         <title>计组3</title>
