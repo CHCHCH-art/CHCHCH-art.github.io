@@ -5,13 +5,28 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 03 Apr 2024 19:15:20 +0800</pubDate>
-        <lastBuildDate>Wed, 03 Apr 2024 19:15:20 +0800</lastBuildDate>
+        <pubDate>Wed, 03 Apr 2024 21:26:27 +0800</pubDate>
+        <lastBuildDate>Wed, 03 Apr 2024 21:26:27 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/04/03/%E8%AE%A1%E7%BB%848/</guid>
+            <title>计组8</title>
+            <link>https://chchch-art.github.io/2024/04/03/%E8%AE%A1%E7%BB%848/</link>
+            <pubDate>Wed, 03 Apr 2024 21:26:27 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;局部性原理的本质实际上是对CPU预测的一种解释&lt;/p&gt;
+&lt;p&gt;空间局部性是指CPU会对这个数据周围，尤其特指数组、向量、指令集等集合数据提前预读&lt;/p&gt;
+&lt;p&gt;为了定义这个周围，往往采用将主存分块(地址上虚拟，解释方法不同分块)&lt;/p&gt;
+&lt;p&gt;然后将这个周围的数据放在Cache里面&lt;/p&gt;
+&lt;p&gt;时间局部性是指CPU会对循环内的当前执行的这个数据进行存留，以备下次的继续使用&lt;/p&gt;
+&lt;p&gt;包括循环内执行的指令、操作数，基本都会进行存留，下次取用的时候也就会方便一些的&lt;/p&gt;
+&lt;p&gt;这些都会存于Cache中，通过预测方式得到了高命中率&lt;/p&gt;
+&lt;p&gt;另外，性能分析那边，又到了文字游戏：提高了多少，提高了几倍，提高到几倍….&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/04/03/%E8%AE%A1%E7%BB%847/</guid>
             <title>计组7</title>
