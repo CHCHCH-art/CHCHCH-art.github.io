@@ -5,13 +5,54 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Tue, 02 Apr 2024 19:01:06 +0800</pubDate>
-        <lastBuildDate>Tue, 02 Apr 2024 19:01:06 +0800</lastBuildDate>
+        <pubDate>Wed, 03 Apr 2024 19:15:20 +0800</pubDate>
+        <lastBuildDate>Wed, 03 Apr 2024 19:15:20 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/04/03/%E8%AE%A1%E7%BB%847/</guid>
+            <title>计组7</title>
+            <link>https://chchch-art.github.io/2024/04/03/%E8%AE%A1%E7%BB%847/</link>
+            <pubDate>Wed, 03 Apr 2024 19:15:20 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/ky/77.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;一些乱七八糟的概念，考察概率不高&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/78.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;说几个名词，一个磁盘存储器往往有多个磁盘，连接在一根主轴上&lt;/p&gt;
+&lt;p&gt;每个盘都会对应一个读写磁头，也称为磁头数、记录面数、磁盘数等，是三维坐标&lt;/p&gt;
+&lt;p&gt;磁道数，指每个磁盘一圈圈绕出去的磁道数量，多个磁盘叠加起来就是柱面，也称柱面数&lt;/p&gt;
+&lt;p&gt;磁道和磁道间不是完全相连的，是有空隙保证精度的，磁道内也不是连续的，是分扇区的&lt;/p&gt;
+&lt;p&gt;一个磁道就有多个扇区，一个磁盘的扇区数量是固定的，每个扇区都是对应的一个角度&lt;/p&gt;
+&lt;p&gt;然后就是补充内容，每圈磁道的存储内容大小完全相同，因而从外到内存储密度增加&lt;/p&gt;
+&lt;p&gt;扇区是磁盘读取的最小单位，也称为块&lt;/p&gt;
+&lt;p&gt;磁盘性能指标上&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/79.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;非格式化容量=磁盘数量·磁道数量·每个磁道所蕴含的可用磁化单元数&lt;/p&gt;
+&lt;p&gt;格式化容量=磁盘数量·磁道数量·磁道扇区数量·每个扇区容量，感觉还是有区别&lt;/p&gt;
+&lt;p&gt;格式化容量小于非格式化容量&lt;/p&gt;
+&lt;p&gt;一般只考计算，尤其是数据传输速率和平均存取时间&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/80.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对于磁盘地址，记住需要确定坐标的值：磁盘存储器号、磁盘号、角度(扇区、R(磁道数&lt;/p&gt;
+&lt;p&gt;存取时间的计算应该没什么问题，就是套公式&lt;/p&gt;
+&lt;p&gt;数据传输率这边其实可以改很多东西出来，变体，但记住几个关系&lt;/p&gt;
+&lt;p&gt;一个磁道有多个扇区，多个不同磁道的存储大小一样，扇区的存储大小也一样&lt;/p&gt;
+&lt;p&gt;可能会按角度算吧，这边注意点&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/81.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;至于磁盘阵列，记住第一个是类似多体读取的，读完一个读另外一个，再读另外一个&lt;/p&gt;
+&lt;p&gt;这样效率就会高一些，毕竟每次磁盘只能读一个bit&lt;/p&gt;
+&lt;p&gt;后面基本就是对应不同的存储冗余备份策略了，海明码4:3存储冗余比，镜像1:1&lt;/p&gt;
+&lt;p&gt;这边书上的内容基本足够详细简单，没必要多浪费时间了&lt;/p&gt;
+&lt;p&gt;SSD固态硬盘，基于闪存芯片，这里已经完成介绍了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/82.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;结构上面比书上写的好，这里谈到了闪存芯片组的可能性&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/83.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;关于均衡磨损的计算方法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/84.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其他更细的内容建议看书为主&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/04/02/%E8%AE%A1%E7%BB%846/</guid>
             <title>计组6</title>
