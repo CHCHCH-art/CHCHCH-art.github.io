@@ -5,13 +5,34 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 03 Apr 2024 21:26:27 +0800</pubDate>
-        <lastBuildDate>Wed, 03 Apr 2024 21:26:27 +0800</lastBuildDate>
+        <pubDate>Fri, 05 Apr 2024 20:28:09 +0800</pubDate>
+        <lastBuildDate>Fri, 05 Apr 2024 20:28:09 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/04/05/%E8%AE%A1%E7%BB%849/</guid>
+            <title>计组9</title>
+            <link>https://chchch-art.github.io/2024/04/05/%E8%AE%A1%E7%BB%849/</link>
+            <pubDate>Fri, 05 Apr 2024 20:28:09 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;本节单看书实际上较难理解，但PPT内容就很不错&lt;/p&gt;
+&lt;p&gt;首先明确具体的虚拟存储器整个的概况状态，再细化去划分&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/93.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/91.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上面的就是虚拟存储器，下面就是之前学过的熟悉的Cache、主存层&lt;/p&gt;
+&lt;p&gt;然后再来一步步介绍这一块东西&lt;/p&gt;
+&lt;p&gt;首先不要去纠结快、慢表，记住快表是慢表的一部分&lt;/p&gt;
+&lt;p&gt;CPU会通过一个虚拟地址，首先根据其虚拟页号去访问快表，快表没有命中再找慢表&lt;/p&gt;
+&lt;p&gt;如果快表命中那么直接把相对应的物理地址给传过去合并为实际地址&lt;/p&gt;
+&lt;p&gt;如果慢表命中那么直接把相对应的物理地址给传过去合并为实际地址&lt;/p&gt;
+&lt;p&gt;一旦不命中，组合就会比较复杂，分为三种缺失可能性&lt;/p&gt;
+&lt;p&gt;其中如果主存中没有，即慢表没有命中，那么Cache也是一定不会命中的，一共五种&lt;/p&gt;
+&lt;p&gt;但记住，一旦产生缺失，最终一定是需要更新这个表的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/92.png&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/04/03/%E8%AE%A1%E7%BB%848/</guid>
             <title>计组8</title>
@@ -24,9 +45,9 @@
 &lt;p&gt;时间局部性是指CPU会对循环内的当前执行的这个数据进行存留，以备下次的继续使用&lt;/p&gt;
 &lt;p&gt;包括循环内执行的指令、操作数，基本都会进行存留，下次取用的时候也就会方便一些的&lt;/p&gt;
 &lt;p&gt;这些都会存于Cache中，通过预测方式得到了高命中率&lt;/p&gt;
-&lt;p&gt;另外，性能分析那边，又到了文字游戏：提高了多少，提高了几倍，提高到几倍…&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/85.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/86.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;另外，性能分析那边，又到了文字游戏：提高了多少，提高了几倍，提高到几倍….&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/85.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/86.png&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;比较器么，书上写的比较模糊，但大致上应该是在说这样&lt;/p&gt;
 &lt;p&gt;直接映射是一个就够了，全相联就要N个，而组内就只需要组内可能是其存放的数量R个&lt;/p&gt;
@@ -44,25 +65,26 @@
 &lt;p&gt;这里要和地址位数、存储位数区分开，存储位数是每个存储单元存储了几位数据，就是位&lt;/p&gt;
 &lt;p&gt;地址位数是指这个地址需要多少位二进制才能表达&lt;/p&gt;
 &lt;p&gt;这样看确实是，按什么编址，一个存储单元就有多少位&lt;/p&gt;
-&lt;p&gt;256MB大小，按字节编址256M个单元，每个单元8位，需要256M个地址，28位地址/地址线&lt;/p&gt;
-&lt;p&gt;按字(32位字)编码就是64M个单元，每个单元32位，需要64M个地址，26位地址/地址线&lt;/p&gt;
+&lt;p&gt;256MB大小，按字节编址256M个单元，每个单元8位，需要256M个地址，28位地址&amp;#x2F;地址线&lt;/p&gt;
+&lt;p&gt;按字(32位字)编码就是64M个单元，每个单元32位，需要64M个地址，26位地址&amp;#x2F;地址线&lt;/p&gt;
 &lt;p&gt;Cache的容量和总容量之间有一定的差别&lt;/p&gt;
 &lt;p&gt;同时按XX编址，得知了每块的大小后，自然可以得知每块的块内地址占几位&lt;/p&gt;
+&lt;p&gt;将主存分为N个块以后，对应地址的剩余高位实际上均在表示是第几块&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;替换算法：&lt;/p&gt;
 &lt;p&gt;目的是为了解决主存访问后需要把其内容放入Cache但Cache已经满的问题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/88.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/88.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;大致上就这一些算法，其中考最频繁的是最后两种，前面的两种都因为运行效率较差不用&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/87.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/87.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;替换算法只会在全相联、组相联两个里面使用&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/89.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/89.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;最不经常使用算法，理解为记录这个Cache块被访问了多少次，替换最少访问次的&lt;/p&gt;
 &lt;p&gt;这里如果产生了相同的使用频率最低块，那么可以采用FIFO或者行号递增等策略去选择&lt;/p&gt;
 &lt;p&gt;例如相同的0、0两个使用频率块，淘汰谁？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/90.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/90.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;近期最少使用算法，理解为每一个Cache块的计数为“已几个周期没有使用”&lt;/p&gt;
 &lt;p&gt;每次自然替换的是计数值最大的&lt;/p&gt;
-&lt;p&gt;抖动的含义，以“1/2/3/4/5/1/2/3/4/5…序列访问，会反复刷新掉频繁使用的块，本质原因是Cache块太少了&lt;/p&gt;
+&lt;p&gt;抖动的含义，以“1&amp;#x2F;2&amp;#x2F;3&amp;#x2F;4&amp;#x2F;5&amp;#x2F;1&amp;#x2F;2&amp;#x2F;3&amp;#x2F;4&amp;#x2F;5..序列访问，会反复刷新掉频繁使用的块，本质原因是Cache块太少了&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;全写法：&lt;/p&gt;
 &lt;p&gt;在每次写数据的时候同时把数据写入主存和Cache里面，那么替换块就不需要再写到主存&lt;/p&gt;
@@ -77,11 +99,11 @@
 &lt;p&gt;同样，当写命中的时候也是直接在Cache里面写，不改主存内容&lt;/p&gt;
 &lt;p&gt;只有这个块因为读或者写被替换出去的时候，才把这个块所更新的内容一次性写到主存上&lt;/p&gt;
 &lt;p&gt;写分配法搭配全写法的时候：&lt;/p&gt;
-&lt;p&gt;当没有命中的时候，就会先写/修改主存内容，再把内容送到Cache里面&lt;/p&gt;
+&lt;p&gt;当没有命中的时候，就会先写&amp;#x2F;修改主存内容，再把内容送到Cache里面&lt;/p&gt;
 &lt;p&gt;当命中的时候，就会同时修改Cache和主存中的内容&lt;/p&gt;
 &lt;p&gt;非写分配法搭配另外两者就不会有变化：&lt;/p&gt;
-&lt;p&gt;如果不命中的情况，那么只更新/修改/写主存单元，不会调入Cache中&lt;/p&gt;
-&lt;p&gt;如果命中，回写法，那么就会只对Cache内数据进行修改/写/更新&lt;/p&gt;
+&lt;p&gt;如果不命中的情况，那么只更新&amp;#x2F;修改&amp;#x2F;写主存单元，不会调入Cache中&lt;/p&gt;
+&lt;p&gt;如果命中，回写法，那么就会只对Cache内数据进行修改&amp;#x2F;写&amp;#x2F;更新&lt;/p&gt;
 &lt;p&gt;如果命中，全写法，那么会同时对Cache、主存内的数据进行更新操作&lt;/p&gt;
 &lt;p&gt;其实也可以看出，写回法比较适合搭配写分配法，这样就可以高效且保持替换更新性&lt;/p&gt;
 &lt;p&gt;全写法则比较适合搭配非写分配法，保留对主存内容的随时正确性&lt;/p&gt;
