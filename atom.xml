@@ -3,12 +3,131 @@
     <id>https://CHCHCH-art.github.io</id>
     <title>Ephemeral</title>
     <link href="https://CHCHCH-art.github.io" />
-    <updated>2024-04-05T12:28:09.000Z</updated>
+    <updated>2024-04-06T12:11:27.000Z</updated>
     <category term="stock" />
     <category term="END" />
     <category term="FK" />
     <category term="Preview" />
     <category term="Math" />
+    <entry>
+        <id>https://chchch-art.github.io/2024/04/06/%E8%AE%A1%E7%BB%8410/</id>
+        <title>计组10</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2024/04/06/%E8%AE%A1%E7%BB%8410/"/>
+        <content type="html">&lt;p&gt;书上对此节的概况较为全面详细，这里是一个思维统概，方便未来按模块复习&lt;/p&gt;
+&lt;p&gt;建议以书为复习的主核心对象&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/94.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/95.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/96.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/97.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;后面主要需要谈的是拓展操作码的设计、计算，算是一个重点&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/98.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里谈设计问题&lt;/p&gt;
+&lt;p&gt;从三地址开始计算，三地址因为只有4位二进制，因而最多表示十六个，而需要保留一位&lt;/p&gt;
+&lt;p&gt;全一用作下一位的拓展码，所以其15条的范围就是单纯的0000-1110&lt;/p&gt;
+&lt;p&gt;而下四位二地址拓展码，以前四位全一作为标记区分位，后面四位可以表示十六个&lt;/p&gt;
+&lt;p&gt;现在需要的是十二个，那么为了区分标记位，那么设计从0000到1011共十二个&lt;/p&gt;
+&lt;p&gt;剩下的几位也是一定有顺序的，即1100-1111四位保留用作下一位的拓展码，可以计算&lt;/p&gt;
+&lt;p&gt;因为后续是四位二进制地址，又为下层保留了四位二进制，那么最多可以表示六十四个&lt;/p&gt;
+&lt;p&gt;现在仅保留六十二位，剩下两位，那么保留0000-1101这样，为下面剩下1100和1110两位&lt;/p&gt;
+&lt;p&gt;因而最后剩下五位恰好可以表示三十二个地址&lt;/p&gt;
+&lt;p&gt;PS：讲的一般，建议自己做几道题就能理解问题所在&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/99.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;关于优缺点：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/100.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;指令寻址的目的是寻址下一个指令的主存地址，都是从主存里面取指令的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/101.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;先谈重点就是这几个：&lt;/p&gt;
+&lt;p&gt;存储字长和指令字长不同、编码方式不同、指令采用变长指令时PC不同的自增逻辑&lt;/p&gt;
+&lt;p&gt;下面基本没有讨论当存储字长与指令字长不符的情况，因为那样一条指令可能取两个存储单元&lt;/p&gt;
+&lt;p&gt;记住PC永远是指向下一条指令的地址，相对应的自增自减均建立于这个逻辑&lt;/p&gt;
+&lt;p&gt;当主存按字编址时，且存储单元和一个指令字长一样都是一个字的时候&lt;/p&gt;
+&lt;p&gt;意味着一个指令就存储在一个地址内，并且按照1、2、3…顺序排列下去&lt;/p&gt;
+&lt;p&gt;PC=PC+1&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/102.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;当主存按字节编址而存储单元和指令字长一样是一个字时&lt;/p&gt;
+&lt;p&gt;那么意味着一条指令至少占据两个地址，那么下一条指令就在两个地址后&lt;/p&gt;
+&lt;p&gt;PC=PC+2&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/103.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;当系统采用变长指令时，CPU会通过读取指令前几位的操作位判断其长度&lt;/p&gt;
+&lt;p&gt;然后按照其长度、主存的编址方式给出相对应的PC=PC+N，每次都是不确定的&lt;/p&gt;
+&lt;p&gt;N=长度/编址单位，得到一个指令占了几个地址&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/104.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注，每次取指令后PC一定会自增相对应的指令长度，这个经常考&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/105.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;至于条件转移，那么就是把相对应的PC原先自增得到的值，无条件改为跳转地址&lt;/p&gt;
+&lt;p&gt;后面会叙述这个地方的坑在哪，可能会导致跳转到不同地方，所以也会产生不同的策略&lt;/p&gt;
+&lt;p&gt;每一条指令均分为取指令、执行指令两个步骤&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/106.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;直接、间接寻址(操作数寻址：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/107.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;首先先明确整个指令的结构会被划分为哪几个区域，这个是单地址&lt;/p&gt;
+&lt;p&gt;后面谈的就是多地址，是每个形式地址前都会声明其寻址特征的，而非只有一个&lt;/p&gt;
+&lt;p&gt;这个后面会介绍到，实际上是因为整体的指令都是复合的操作流程而非简单的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/108.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;直接寻址是最容易理解的，其地址内除去特征就是其在主存中的地址，直接访问即可&lt;/p&gt;
+&lt;p&gt;这里谈的操作数地址不容易修改是因为一旦修改了操作数的地址就会导致相应指令也改变&lt;/p&gt;
+&lt;p&gt;所以说的不容易修改&lt;/p&gt;
+&lt;p&gt;从主存中取指令一次，然后根据指令读内容一次，两次&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/109.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/110.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;间接寻址给出的形式地址是操作数地址的地址&lt;/p&gt;
+&lt;p&gt;给出的地址内存储的内容是操作数相应的主存地址，根据这个主存地址再去访问主存&lt;/p&gt;
+&lt;p&gt;所以其实最少就是三次，取指令一次，取地址的地址一次，取操作数一次&lt;/p&gt;
+&lt;p&gt;而实际上可以多轮而非单轮，也就是可以存地址的地址的地址的地址的地址的地址…&lt;/p&gt;
+&lt;p&gt;主存内的存储位数肯定是强于形式地址的，所以范围自然拓展&lt;/p&gt;
+&lt;p&gt;至于编程，可以想象类递归栈运行的程序，每次运行完了后这条指令执行完，跳回原指令&lt;/p&gt;
+&lt;p&gt;至于什么时候算是访到最终的数据而不是还在访地址的路上，那么就是按一个标记物的事&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/111.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;寄存器编址不用说了，记住这个名词和相对应的方式即可，主要是一个词：快&lt;/p&gt;
+&lt;p&gt;相应的只需要进行一次主存里面读指令的操作，其他都不需要去主存里面&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/112.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;寄存器间接访址的好处实际上就是把原来要访问主存间接寻址的改到寄存器&lt;/p&gt;
+&lt;p&gt;为什么？访问寄存器比主存快啊！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/113.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/114.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;立即寻址也是较为简单的，无非就是这十种搭配的时候还要能够记住就有点难度了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/115.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;偏移寻址，对应书上的第7-9种&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/116.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;本质在于基准不同，稍微注意下区分&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/117.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;基址寄存器可以是专用的，也可以是通用寄存器中的一块&lt;/p&gt;
+&lt;p&gt;这样的话实际上在使用后者的情况下，至少需要指定是哪块寄存器，也就是需要位号指定&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/118.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其目的是为了当程序块起始地址不为零时(大部分情况均是不为零的，能够正确识别程序&lt;/p&gt;
+&lt;p&gt;而不是跳转到一堆奇怪的地方&lt;/p&gt;
+&lt;p&gt;至于基地址本身是由操作系统自动决定的，因而不需要用户去思考应该存哪里&lt;/p&gt;
+&lt;p&gt;至于这个拓展寻址位数，实际上应该说是基地址提供了一个范围，不能单独说是形式提供&lt;/p&gt;
+&lt;p&gt;这个按书上的理解就行没必要钻牛角尖&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/119.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;至于变址寻址，其是指令中提供了一个确定性的形式地址，一般都是在谈一个数组&lt;/p&gt;
+&lt;p&gt;后面变址寄存器中的内容就可以轮番访问这个数组，只需要变址寄存器自增即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/120.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如果不采用变址寻址，那么光是一个访问数组操作就需要一堆不同的指令，不科学的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/121.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;采用变址以后就能正常一个指令即可，给定数组的首地址即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/122.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/123.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;至于相对寻址，其实是相对与PC的，这里需要注意一个点，因为PC是取指令后自动自增的&lt;/p&gt;
+&lt;p&gt;所以王道书上略微有些小问题&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/124.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其实这个作用这边我省略了几张图，因为目的是一样的&lt;/p&gt;
+&lt;p&gt;当这个循环位置改变的时候，即把这个代码从上面放到下面以后，里面的转移指令会出错&lt;/p&gt;
+&lt;p&gt;而循环体本身是没有变的，因而就需要相对寻址，直接改变跳转指令的形式地址位&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/125.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/126.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/127.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;至于这个，一般情况下都是按照这种复合的情况，因而就会导致总体非常复杂&lt;/p&gt;
+&lt;p&gt;只能说随缘了，课后习题与考察形式基本是复合的情况&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/129.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;堆栈寻址：&lt;/p&gt;
+</content>
+        <updated>2024-04-06T12:11:27.000Z</updated>
+    </entry>
     <entry>
         <id>https://chchch-art.github.io/2024/04/05/%E8%AE%A1%E7%BB%849/</id>
         <title>计组9</title>
