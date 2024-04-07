@@ -3,12 +3,63 @@
     <id>https://CHCHCH-art.github.io</id>
     <title>Ephemeral</title>
     <link href="https://CHCHCH-art.github.io" />
-    <updated>2024-04-06T12:11:27.000Z</updated>
+    <updated>2024-04-07T13:34:14.000Z</updated>
     <category term="stock" />
     <category term="END" />
     <category term="FK" />
     <category term="Preview" />
     <category term="Math" />
+    <entry>
+        <id>https://chchch-art.github.io/2024/04/07/%E8%AE%A1%E7%BB%8411/</id>
+        <title>计组11</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2024/04/07/%E8%AE%A1%E7%BB%8411/"/>
+        <content type="html">&lt;p&gt;CF：反映无符号数加减是否溢出&lt;/p&gt;
+&lt;p&gt;简单来说就是当加法的时候是否导致了高位进位产生一个1，减法进位产生一个0&lt;/p&gt;
+&lt;p&gt;OF：反映有符号数加减是否溢出，简单来说就是同符号是否产生不同符号&lt;/p&gt;
+&lt;p&gt;两个负的加出一个正的肯定是错了，两个正的加出来一个负的也肯定是错了&lt;/p&gt;
+&lt;p&gt;ZF：看是否是全零，对于有无符号都有意义&lt;/p&gt;
+&lt;p&gt;SF：符号位，仅对有符号加减法有意义&lt;/p&gt;
+&lt;p&gt;注意，不论有符号加减法还是无符号加减法都不代表这几个位不会产生变动，都可能的&lt;/p&gt;
+&lt;p&gt;无非是有时候没有意义而已罢了&lt;/p&gt;
+&lt;p&gt;参考此节进行学习，理论上还需要下功夫&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/37.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/130.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里就直接谈核心重点了，这两个指令的作用就摆在这，后面会有更详细的介绍&lt;/p&gt;
+&lt;p&gt;这边只是粗略上给出了大致的操作内容&lt;/p&gt;
+&lt;p&gt;其实实际上是压入两个内容，一个是PC的返回地址，其实也可以称作是IC的返回地址&lt;/p&gt;
+&lt;p&gt;这两个是同一个东西，在取址后都会进行自增操作，然后X86里面都是按字节进行编址的&lt;/p&gt;
+&lt;p&gt;所以就要稍微注意下相对应的增量到底是多少，课后习题基本都有&lt;/p&gt;
+&lt;p&gt;另外一个东西就是上一段程序的起始地址，否则后续的EBP就无法返回正常位置&lt;/p&gt;
+&lt;p&gt;课后习题其实也声明过，如果是嵌套循环那么必须是压栈，如果是只有一层那么可以寄存&lt;/p&gt;
+&lt;p&gt;返回的话其实就是把返回地址给赋值返回给IC&amp;#x2F;PC，然后就能正常执行下一句父层指令&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/131.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;当然后面会有更详细的介绍，目前先写到这&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/132.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在内存里面这个栈实际上是反着放的，另外就是需要说明这个栈是在内存里面放的&lt;/p&gt;
+&lt;p&gt;在X86里面默认一个栈块是32位，也就是4个字节，书上讲的其实很详细，例如存储浪费等&lt;/p&gt;
+&lt;p&gt;建议看书，这里只需要记住一个栈里面有多个帧栈，EBP&amp;#x2F;ESP指向的是当前执行程序的帧栈底和顶&lt;/p&gt;
+&lt;p&gt;所以相对应的加减其实也有变化，例如POP&amp;#x2F;PUSH操作也会有一定的变化&lt;/p&gt;
+&lt;p&gt;指针向下走是减法，向上走是加法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/133.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里主要总结两种方法，至于入栈、出栈，其实指针指向不同也会有不同的操作&lt;/p&gt;
+&lt;p&gt;例如指针如果一开始指向的是空的，那么就是先入栈再减，或者先增加再出栈，具体来定&lt;/p&gt;
+&lt;p&gt;这里还需要声明的一点就是一般EBP是不变的，而ESP是经常改变的&lt;/p&gt;
+&lt;p&gt;一般的访问其实还有更多的方法，最主要的就是MOV指令，可以根据ESP、EBP两者&lt;/p&gt;
+&lt;p&gt;选择他们附近的块内容，例如EBP+8或者EBP+12、ESP+12等等，向上向下都行&lt;/p&gt;
+&lt;p&gt;一般初始化的时候，都会对ESP进行一次减法操作，用于初步给定一个栈的容量大小&lt;/p&gt;
+&lt;p&gt;当然也可以进行ESP加法操作来出栈或者删除一部分栈顶元素，完全是可灵活对待&lt;/p&gt;
+&lt;p&gt;至于指令，书上的能懂基本没问题，只要清楚几个比较特殊的点就行：&lt;/p&gt;
+&lt;p&gt;首先就是比较指令，是前者和后者相比&lt;/p&gt;
+&lt;p&gt;再就是四则运算指令，是前者四则运算后者&lt;/p&gt;
+&lt;p&gt;还有就是一般寄存器里面的内容是直接采取esp、ebp的读取法，没必要加括号&lt;/p&gt;
+&lt;p&gt;只有访问主存的时候需要加括号，读指令基本不会有问题&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/134.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;有兴趣可以根据这个图走一遍，不难的&lt;/p&gt;
+&lt;hr&gt;
+</content>
+        <updated>2024-04-07T13:34:14.000Z</updated>
+    </entry>
     <entry>
         <id>https://chchch-art.github.io/2024/04/06/%E8%AE%A1%E7%BB%8410/</id>
         <title>计组10</title>
