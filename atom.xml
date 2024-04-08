@@ -3,12 +3,70 @@
     <id>https://CHCHCH-art.github.io</id>
     <title>Ephemeral</title>
     <link href="https://CHCHCH-art.github.io" />
-    <updated>2024-04-07T13:34:14.000Z</updated>
+    <updated>2024-04-08T12:20:56.000Z</updated>
     <category term="stock" />
     <category term="END" />
     <category term="FK" />
     <category term="Preview" />
     <category term="Math" />
+    <entry>
+        <id>https://chchch-art.github.io/2024/04/08/%E8%AE%A1%E7%BB%8412/</id>
+        <title>计组12</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2024/04/08/%E8%AE%A1%E7%BB%8412/"/>
+        <content type="html">&lt;p&gt;今天内容较为简单，不做PPT，主要理顺一些比较乱的概念性问题&lt;/p&gt;
+&lt;p&gt;此外，这些寄存器的英文名建议都背下来，否则到时候遇到不认识就完蛋了&lt;/p&gt;
+&lt;p&gt;CPU至少有5个专用寄存器。它们是：程序计数器(PC)，指令寄存器(IR)，存储器地址寄存器(MAR)，储存器数据寄存器(MDR)，状态标志寄存器(PSWR)。&lt;/p&gt;
+&lt;p&gt;1&amp;gt;程序计数器：又称指令计数器，用来存放正在执行的指令地址或接着要执行的下条指令地址。&lt;/p&gt;
+&lt;p&gt;2&amp;gt;指令寄存器：用来存放从存储器中取出的指令。&lt;/p&gt;
+&lt;p&gt;3&amp;gt;存储器数据寄存器：用来暂时存放由主存储器读出的一条指令或一个数据字；反之，当向主存写入一条指令或一个数据字时，也暂时将它们存放在存储器数据寄存器中。&lt;/p&gt;
+&lt;p&gt;4&amp;gt;存储器地址寄存器：用来保存当前CPU所访问的主存单元的地址。&lt;/p&gt;
+&lt;p&gt;5&amp;gt;状态标志寄存器：用来存放程序状态字。程序状态字的各位表示程序和机器运行的状态，是参与控制程序执行的重要依据之一，它包括状态标志和控制标志。&lt;/p&gt;
+&lt;p&gt;其余均是通用寄存器&lt;/p&gt;
+&lt;p&gt;取寄存器内内容一般没有特别声明是否需要加内容符号，因为有时候也会有误解&lt;/p&gt;
+&lt;p&gt;但一般自己写的时候注意要加符号，题目里面暂时还没有出现这类破事情，除了偏移时候&lt;/p&gt;
+&lt;p&gt;留了个大坑&lt;/p&gt;
+&lt;p&gt;然后就是几个特例吧，其实主要还是透明不透明的事情&lt;/p&gt;
+&lt;p&gt;程序计数器是唯一一个控制器中的可以编程的寄存器，即可视，不透明的&lt;/p&gt;
+&lt;p&gt;暂存寄存器是唯一一个运算器里面不能编程的寄存器，即不可视，透明的&lt;/p&gt;
+&lt;p&gt;书上的概念性问题想考自然可以考得非常细，非常杂乱无章，实在是得一句句啃下去&lt;/p&gt;
+&lt;p&gt;首先明确一点，可见=不透明，不可见=透明&lt;/p&gt;
+&lt;p&gt;这是和我们生活中透明=可见相反的，为什么会这样？&lt;/p&gt;
+&lt;p&gt;是因为名词都是老外那里引入的，我们翻译过来就很别扭了&lt;/p&gt;
+&lt;p&gt;在英文中，透明就有点“屏蔽”的意思，那你说屏蔽了还能可见吗？&lt;/p&gt;
+&lt;p&gt;以下是王道书里的结论：&lt;br&gt;
+所有用户/程序员可见（不透明）：PC、PSW、ACC、通用寄存器。&lt;br&gt;
+所有用户/程序员不可见（透明）：MAR、MDR、IR、暂存器、Cache、uMAR、uMDR、uIR。&lt;/p&gt;
+&lt;p&gt;汇编程序员可见，所有用户可见基础上外加：中断字寄存器、基址寄存器、变址寄存器。&lt;br&gt;
+系统程序员可见，所有用户可见基础上外加：虚拟存储器。&lt;/p&gt;
+&lt;p&gt;绝对是能把人绕晕&lt;/p&gt;
+&lt;p&gt;注意，程序状态字寄存器=标志寄存器=条件码寄存器=PSW。都是同一个东西，不同教材表述不一样。&lt;/p&gt;
+&lt;p&gt;关于可见与能否修改的问题：&lt;/p&gt;
+&lt;p&gt;一般能修改内容的那么一定可见即不透明能编程，可见不透明能编程的不一定能修改内容&lt;/p&gt;
+&lt;p&gt;关于存储字长、按XX编址、PC位数的问题：&lt;/p&gt;
+&lt;p&gt;如果题目没说存储字长，那么按什么编址，就以这个为存储字长&lt;/p&gt;
+&lt;p&gt;比如按字节编址，那么就认为一个存储字长=8位&lt;/p&gt;
+&lt;p&gt;如果按字编址，那么一个存储字长=机器字长&lt;/p&gt;
+&lt;p&gt;但是如果题目明确给出存储字长，那么就按照给的来&lt;/p&gt;
+&lt;p&gt;有了存储字长，就能把主存容量写成容量=存储字数×存储字长=2^(MAR位数)×MDR位数。&lt;/p&gt;
+&lt;p&gt;这样就能得出MAR位数和MDR位数&lt;/p&gt;
+&lt;p&gt;至于PC和MAR的关系，如果题目没说，默认PC位数=MAR位数&lt;/p&gt;
+&lt;p&gt;如果题目明确说了PC至少是多少位，那么PC最少就是要能够区分不同的指令，也就是PC位数&amp;gt;=log2(指令条数)&lt;/p&gt;
+&lt;p&gt;关于糟糕的11题和24、26题：&lt;/p&gt;
+&lt;p&gt;按字节编址，4GB=2^32×B，因此MAR位数是32位。&lt;/p&gt;
+&lt;p&gt;一般情况下，可以认为，PC的位数等于MAR位数。但是本题，有个条件，指令按字边界对齐存放，问PC的位数至少是多少位。&lt;/p&gt;
+&lt;p&gt;PC的作用是识别不同指令地址，指令字长=32位=4B，因此4GB=2^30×4B，因此有2^30条指令，每条指令都是按字边界对齐，意味着每条指令的地址都是一个字的开始的位置。比如这里，字节地址是0 1 2 3……，由于字长4B，因此这里每个字的开始的位置是0 4 8 12……二进制为&lt;/p&gt;
+&lt;p&gt;0000 0000 0000 0000 0000 0000 0000 0000&lt;/p&gt;
+&lt;p&gt;0000 0000 0000 0000 0000 0000 0000 0100&lt;/p&gt;
+&lt;p&gt;0000 0000 0000 0000 0000 0000 0000 1000&lt;/p&gt;
+&lt;p&gt;0000 0000 0000 0000 0000 0000 0000 1100&lt;/p&gt;
+&lt;p&gt;可以发现这里末2位永远是0，因此末2位可以省略。因此PC的位数至少是30位&lt;/p&gt;
+&lt;p&gt;这边对齐的意思，大致上就是首位对齐，所以就会导致有一些位数实际上是不需要的&lt;/p&gt;
+&lt;p&gt;所以PC也自然就只需要存储有效位&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/146.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这个稍微注意下，就这样吧&lt;/p&gt;
+</content>
+        <updated>2024-04-08T12:20:56.000Z</updated>
+    </entry>
     <entry>
         <id>https://chchch-art.github.io/2024/04/07/%E8%AE%A1%E7%BB%8411/</id>
         <title>计组11</title>
@@ -22,9 +80,10 @@
 &lt;p&gt;注意，不论有符号加减法还是无符号加减法都不代表这几个位不会产生变动，都可能的&lt;/p&gt;
 &lt;p&gt;无非是有时候没有意义而已罢了&lt;/p&gt;
 &lt;p&gt;参考此节进行学习，理论上还需要下功夫&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/37.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其中cin为0的时候是加法，cin为1的时候是减法，无符号和有符号均适用&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/130.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/130.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这里就直接谈核心重点了，这两个指令的作用就摆在这，后面会有更详细的介绍&lt;/p&gt;
 &lt;p&gt;这边只是粗略上给出了大致的操作内容&lt;/p&gt;
 &lt;p&gt;其实实际上是压入两个内容，一个是PC的返回地址，其实也可以称作是IC的返回地址&lt;/p&gt;
@@ -32,16 +91,16 @@
 &lt;p&gt;所以就要稍微注意下相对应的增量到底是多少，课后习题基本都有&lt;/p&gt;
 &lt;p&gt;另外一个东西就是上一段程序的起始地址，否则后续的EBP就无法返回正常位置&lt;/p&gt;
 &lt;p&gt;课后习题其实也声明过，如果是嵌套循环那么必须是压栈，如果是只有一层那么可以寄存&lt;/p&gt;
-&lt;p&gt;返回的话其实就是把返回地址给赋值返回给IC&amp;#x2F;PC，然后就能正常执行下一句父层指令&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/131.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;返回的话其实就是把返回地址给赋值返回给IC/PC，然后就能正常执行下一句父层指令&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/131.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;当然后面会有更详细的介绍，目前先写到这&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/132.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/132.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;在内存里面这个栈实际上是反着放的，另外就是需要说明这个栈是在内存里面放的&lt;/p&gt;
 &lt;p&gt;在X86里面默认一个栈块是32位，也就是4个字节，书上讲的其实很详细，例如存储浪费等&lt;/p&gt;
-&lt;p&gt;建议看书，这里只需要记住一个栈里面有多个帧栈，EBP&amp;#x2F;ESP指向的是当前执行程序的帧栈底和顶&lt;/p&gt;
-&lt;p&gt;所以相对应的加减其实也有变化，例如POP&amp;#x2F;PUSH操作也会有一定的变化&lt;/p&gt;
+&lt;p&gt;建议看书，这里只需要记住一个栈里面有多个帧栈，EBP/ESP指向的是当前执行程序的帧栈底和顶&lt;/p&gt;
+&lt;p&gt;所以相对应的加减其实也有变化，例如POP/PUSH操作也会有一定的变化&lt;/p&gt;
 &lt;p&gt;指针向下走是减法，向上走是加法&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/133.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/133.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这里主要总结两种方法，至于入栈、出栈，其实指针指向不同也会有不同的操作&lt;/p&gt;
 &lt;p&gt;例如指针如果一开始指向的是空的，那么就是先入栈再减，或者先增加再出栈，具体来定&lt;/p&gt;
 &lt;p&gt;这里还需要声明的一点就是一般EBP是不变的，而ESP是经常改变的&lt;/p&gt;
@@ -54,30 +113,30 @@
 &lt;p&gt;再就是四则运算指令，是前者四则运算后者&lt;/p&gt;
 &lt;p&gt;还有就是一般寄存器里面的内容是直接采取esp、ebp的读取法，没必要加括号&lt;/p&gt;
 &lt;p&gt;只有访问主存的时候需要加括号，读指令基本不会有问题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/134.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/134.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;有兴趣可以根据这个图走一遍，不难的&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/135.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/135.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;下面就是对之前的CALL和RET进行进一步细化的过程，不排除考大题的读法&lt;/p&gt;
 &lt;p&gt;在读到CALL命令以后，会将当下的IC压栈(即主程序中的下一条执行指令，并无条件跳转&lt;/p&gt;
 &lt;p&gt;无条件跳转到新程序的第一条地址&lt;/p&gt;
 &lt;p&gt;此时因为压栈，所以ESP自动会进行加四的操作&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/136.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/136.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;然后就是跳转到新程序中执行语句，其中任意一个非Main程序起始必然是这样的几句&lt;/p&gt;
 &lt;p&gt;首先是把父程序的基地址给压入栈中，此时ESP所指内容即为父程序的基地址，同时自加&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/137.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/137.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;然后把让EBP指向和ESP同指向的区域&lt;/p&gt;
 &lt;p&gt;所以其实可以看出任意一个子程序(栈帧)的开头必然是其父程序的首地址&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/138.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/138.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;然后就是考虑返回的事情了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/139.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/139.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;首先让新的帧栈清空，即让栈顶指向基地址&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/141.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/141.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;然后把基地址出栈，即为上一层的父帧栈的基地址，需要保持不能丢掉，现在返回给EBP&lt;/p&gt;
 &lt;p&gt;这样就能保证EBP重新指向父帧栈的正常基地址&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/140.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/140.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;出栈后，此时的EBP指向的也就是下一个IC执行地址，然后把IC值出栈恢复即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/142.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/142.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;至于其他的类似于赋值访问，我的建议是看PPT即可，这里就不再赘述&lt;/p&gt;
 &lt;p&gt;后面就是谈到了因为帧栈是以32位一块的，所以大概率是会产生一定的浪费情况在的&lt;/p&gt;
 &lt;p&gt;此外当需要使用上一层的寄存器的时候，需要先把相应的寄存器内容给放在栈里面&lt;/p&gt;
@@ -90,19 +149,19 @@
 &lt;p&gt;大部分指令书上讲的都很不错，没有必要拿PPT补充的&lt;/p&gt;
 &lt;p&gt;至于Intel格式，主要注意的就是其目的操作数和原操作数的顺序，计算、运算顺序&lt;/p&gt;
 &lt;p&gt;至于主存地址偏移量，用处就在于结构体可能是一块块的，所以才搞得比较复杂&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/143.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/143.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这里是JMP的一些指令格式，看到要懂就行，以后会详细总结下，但无非就那么几种&lt;/p&gt;
-&lt;p&gt;至于选择指令，IF&amp;#x2F;ELSE结构，其中必然是会有一个无条件转移指令的&lt;/p&gt;
-&lt;p&gt;因为一段IF&amp;#x2F;ELSE结束后是一定要结束程序的，所以必然会有无条件跳转指令&lt;/p&gt;
+&lt;p&gt;至于选择指令，IF/ELSE结构，其中必然是会有一个无条件转移指令的&lt;/p&gt;
+&lt;p&gt;因为一段IF/ELSE结束后是一定要结束程序的，所以必然会有无条件跳转指令&lt;/p&gt;
 &lt;p&gt;至于运行的代码段，这个顺序肯定是可以随意变化的，课后习题已经详细说过，不赘述&lt;/p&gt;
 &lt;p&gt;对于循环结构，也肯定是需要有条件跳转指令，用来判断循环是否继续执行下去&lt;/p&gt;
 &lt;p&gt;如果不执行下去那么就一定要跳转&lt;/p&gt;
 &lt;p&gt;对于不同的循环、选择结构，其跳转指令的条数不一定相同，书上大致上是有写的，细化&lt;/p&gt;
-&lt;p&gt;至于LOOP指令，补充的LOOPNZ&amp;#x2F;LOOPZ都是对操作数的判断，看操作数是否为零结束循环&lt;/p&gt;
+&lt;p&gt;至于LOOP指令，补充的LOOPNZ/LOOPZ都是对操作数的判断，看操作数是否为零结束循环&lt;/p&gt;
 &lt;p&gt;需要注意的就是LOOP是默认对ECX寄存器操作的，不能拿别的寄存器去存这个计数值在的&lt;/p&gt;
 &lt;p&gt;其他的，类似于机器级的阅读、执行顺序，其实更多可以参考这块方向&lt;/p&gt;
 &lt;p&gt;一般只会大致上考察一个阅读能力，知道中间执行的方法、内容基本就足够了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/144.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/144.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </content>
         <updated>2024-04-07T13:34:14.000Z</updated>
     </entry>
@@ -135,8 +194,12 @@
 &lt;p&gt;指令寻址的目的是寻址下一个指令的主存地址，都是从主存里面取指令的&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/ky/101.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;先谈重点就是这几个：&lt;/p&gt;
+&lt;p&gt;这里又有坑了，如果一条指令占了半个存储单元怎么办？&lt;/p&gt;
+&lt;p&gt;假如，一条指令是8位，然后一个存储单元16位，又按字来编址&lt;/p&gt;
+&lt;p&gt;那么PC该如何指明其地址？&lt;/p&gt;
+&lt;p&gt;是一个存储单元存一条指令来唯一声明其地址&lt;/p&gt;
+&lt;p&gt;还是&lt;/p&gt;
 &lt;p&gt;存储字长和指令字长不同、编码方式不同、指令采用变长指令时PC不同的自增逻辑&lt;/p&gt;
-&lt;p&gt;下面基本没有讨论当存储字长与指令字长不符的情况，因为那样一条指令可能取两个存储单元&lt;/p&gt;
 &lt;p&gt;记住PC永远是指向下一条指令的地址，相对应的自增自减均建立于这个逻辑&lt;/p&gt;
 &lt;p&gt;当主存按字编址时，且存储单元和一个指令字长一样都是一个字的时候&lt;/p&gt;
 &lt;p&gt;意味着一个指令就存储在一个地址内，并且按照1、2、3…顺序排列下去&lt;/p&gt;
@@ -222,6 +285,13 @@
 &lt;p&gt;&lt;img src=&#34;/img/ky/129.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;堆栈寻址：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/145.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;至于堆栈寻址，无非就是要注意栈顶在哪，栈底在哪，是按低地址到高地址，还是反着&lt;/p&gt;
+&lt;p&gt;同时也要注意这个低和高的含义到底是什么，题目说的高低和理解的高低有没有反&lt;/p&gt;
+&lt;p&gt;还要注意的就是堆栈顶指明的是一个空闲区域还是一个有内容区域，这都会影响存取&lt;/p&gt;
+&lt;p&gt;硬堆栈是采用全寄存器，不需要访主存&lt;/p&gt;
+&lt;p&gt;软堆栈是需要访问一次主存的，因为软堆栈本身就是从主存中划分一块出来用的&lt;/p&gt;
+&lt;p&gt;此外，堆栈寄存器是通用的，这个可以从X86后面的通用寄存器表里面得知，别的不知道&lt;/p&gt;
 </content>
         <updated>2024-04-06T12:11:27.000Z</updated>
     </entry>
@@ -856,6 +926,98 @@
 &lt;p&gt;补码应用非常广，也是最有效率的，ALU内的计算几乎全部依赖于补码，不论小数整数&lt;/p&gt;
 &lt;p&gt;无非就是乘除法的时候会采用不同取模运算罢了，模四或者模二&lt;/p&gt;
 &lt;p&gt;无符号数就不多说了，就是简单的机器数&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;对于补码，真值、原码、移码、反码的全面总结，一共二十种&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;真值-补码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即为正数转原码，原码补码相同，数值位高位补0&lt;/p&gt;
+&lt;p&gt;负数：即为负数转原码，原码转反码，反码转补码&lt;/p&gt;
+&lt;p&gt;最高位符号位定1，数值位高位补0转为原码&lt;/p&gt;
+&lt;p&gt;除符号位最高位全部取反转为反码&lt;/p&gt;
+&lt;p&gt;低位加一转为补码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;真值-原码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：数值位高位补0&lt;/p&gt;
+&lt;p&gt;负数：最高位符号位定1，数值位高位补0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;真值-反码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即为正数转原码，原码反码相同，数值位高位补0&lt;/p&gt;
+&lt;p&gt;负数：即为负数转原码，原码转反码&lt;/p&gt;
+&lt;p&gt;最高位符号位定1，数值位高位补0转为原码&lt;/p&gt;
+&lt;p&gt;除符号位最高位全部取反转为反码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;真值-移码(仅适用于偏移量为恰到好处的&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;正数：即为正数转原码，原码转补码，补码转移码，而原码补码相同&lt;/p&gt;
+&lt;p&gt;即为正数转原码，原码补码相同，数值位高位补0，然后符号位取反&lt;/p&gt;
+&lt;p&gt;负数：即为负数转原码，原码转反码，反码转补码，补码转移码&lt;/p&gt;
+&lt;p&gt;最高位符号位定1，数值位高位补0转为原码&lt;/p&gt;
+&lt;p&gt;除符号位最高位全部取反转为反码&lt;/p&gt;
+&lt;p&gt;低位加一转为补码&lt;/p&gt;
+&lt;p&gt;符号位取反转为移码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原码-真值&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即数值位，二进制真值&lt;/p&gt;
+&lt;p&gt;负数：即负号加数值位，负的二进制真值&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原码-补码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即原码，原码补码相同&lt;/p&gt;
+&lt;p&gt;负数：即原码转反码转补码&lt;/p&gt;
+&lt;p&gt;除符号位最高位全部取反转为反码&lt;/p&gt;
+&lt;p&gt;低位加一转为补码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原码-反码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即原码，原码反码相同&lt;/p&gt;
+&lt;p&gt;负数：即原码转反码&lt;/p&gt;
+&lt;p&gt;除符号位最高位全部取反转为反码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原码-移码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即原码转移码&lt;/p&gt;
+&lt;p&gt;符号位取反&lt;/p&gt;
+&lt;p&gt;负数：即原码转反码，反码转补码，补码转移码&lt;/p&gt;
+&lt;p&gt;除符号位最高位全部取反转为反码&lt;/p&gt;
+&lt;p&gt;低位加一转为补码&lt;/p&gt;
+&lt;p&gt;符号位取反转为移码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;反码-真值&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即原码转真值，正数反码原码相同&lt;/p&gt;
+&lt;p&gt;即数值位，二进制真值&lt;/p&gt;
+&lt;p&gt;负数：即反码转原码，原码转真值&lt;/p&gt;
+&lt;p&gt;除符号位全部取反&lt;/p&gt;
+&lt;p&gt;负号加数值位，负的二进制真值&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;反码-原码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即原码，正数反码补码原码相同&lt;/p&gt;
+&lt;p&gt;负数：即反码转原码，除符号位全部取反&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;反码-补码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即原码，正数反码补码原码相同&lt;/p&gt;
+&lt;p&gt;负数：即反码转补码&lt;/p&gt;
+&lt;p&gt;末尾加一即为补码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;反码-移码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正负数：符号位取反&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;补码-原码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即原码，正数原码反码补码相同&lt;/p&gt;
+&lt;p&gt;负数：即补码求原码&lt;/p&gt;
+&lt;p&gt;除符号位全部取反，然后再加一，即对补码求一次补码得到原码&lt;/p&gt;
+&lt;p&gt;补充:已知y补码，求-y补码&lt;/p&gt;
+&lt;p&gt;-y补码=y补码连同符号位，各位取反，末位再+1&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;补码-真值&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即原码求真值，正数补码反码原码相同，即数值位，二进制真值&lt;/p&gt;
+&lt;p&gt;负数：即补码转原码，原码转真值&lt;/p&gt;
+&lt;p&gt;除符号位全部取反，然后再加一，即对补码求一次补码得到原码&lt;/p&gt;
+&lt;p&gt;即负号加数值位，得到负的二进制真值&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;补码-反码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：即补码，正数原码补码反码相同&lt;/p&gt;
+&lt;p&gt;负数：即补码转原码，原码转补码&lt;/p&gt;
+&lt;p&gt;除符号位全部取反，然后再加一，即对补码求一次补码得到原码&lt;/p&gt;
+&lt;p&gt;除符号位外再度取反得到反码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;补码-移码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;正数：符号位取反&lt;/p&gt;
+&lt;p&gt;负数：符号位取反&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;移码-真值&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;直接将机器数转为十进制数，然后减去偏移量得到十进制真值&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;移码-反码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;符号位取反得到补码&lt;/p&gt;
+&lt;p&gt;正数：反码补码原码相同，即为反码&lt;/p&gt;
+&lt;p&gt;负数：补码转原码，原码转反码&lt;/p&gt;
+&lt;p&gt;符号位不变其他位取反，加一得到原码&lt;/p&gt;
+&lt;p&gt;符号位不变其他取反得到原码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;移码-补码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;符号位取反得到补码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;移码-原码&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;符号位取反得到补码&lt;/p&gt;
+&lt;p&gt;正数：补码原码反码一样，即为原码&lt;/p&gt;
+&lt;p&gt;负数：补码转原码&lt;/p&gt;
+&lt;p&gt;符号位不变其他位取反，加一得到原码&lt;/p&gt;
 </content>
         <updated>2024-03-26T13:43:37.000Z</updated>
     </entry>
