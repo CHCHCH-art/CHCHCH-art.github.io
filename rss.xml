@@ -5,13 +5,115 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Mon, 08 Apr 2024 20:20:56 +0800</pubDate>
-        <lastBuildDate>Mon, 08 Apr 2024 20:20:56 +0800</lastBuildDate>
+        <pubDate>Tue, 09 Apr 2024 18:24:59 +0800</pubDate>
+        <lastBuildDate>Tue, 09 Apr 2024 18:24:59 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/04/09/%E8%AE%A1%E7%BB%8413/</guid>
+            <title>计组13</title>
+            <link>https://chchch-art.github.io/2024/04/09/%E8%AE%A1%E7%BB%8413/</link>
+            <pubDate>Tue, 09 Apr 2024 18:24:59 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;关于各类周期：&lt;/p&gt;
+&lt;p&gt;指令周期指取出并完整执行一条指令的时间&lt;/p&gt;
+&lt;p&gt;不同指令的指令周期基本不一样，这个很容易理解&lt;/p&gt;
+&lt;p&gt;不同指令内的机器周期也不一定相同，因为包含的基本操作可能不一样&lt;/p&gt;
+&lt;p&gt;机器周期和机器周期也不一定相同，可以是相同长度的，也可以是不同的时钟周期个数&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/147.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;时钟周期：&lt;/p&gt;
+&lt;p&gt;计算机中最小的时间单位，等于cpu主频的倒数&lt;/p&gt;
+&lt;p&gt;一个时钟周期内，cpu仅完成一个最基本的动作&lt;/p&gt;
+&lt;p&gt;机器周期（cpu周期）：&lt;/p&gt;
+&lt;p&gt;计算机中为了方便管理，常把一条指令的执行过程划分为若干个阶段&lt;/p&gt;
+&lt;p&gt;取指周期、间址周期，这些都是机器周期，不同命令之间也是不一样的&lt;/p&gt;
+&lt;p&gt;每一个基本操作都是由若干CPU最基本的动作组成，即包含若干时钟周期&lt;/p&gt;
+&lt;p&gt;这个基本操作所需要的时间称为机器周期，则机器周期由若干个时钟周期组成&lt;/p&gt;
+&lt;p&gt;而机器周期内，每一个周期基本都是要进行一次访存的，所以往往和存储周期差不多&lt;/p&gt;
+&lt;p&gt;类似于&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/148.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里面的几个指令周期流程，基本都是需要访问主存的，那么毫无疑问和存取周期关联大&lt;/p&gt;
+&lt;p&gt;并且考试的话，以这几个访问主存的目的为考察重点&lt;/p&gt;
+&lt;p&gt;指令周期：&lt;/p&gt;
+&lt;p&gt;从取指开始到执行完成该指令所需要的全部时间。指令周期包含若干机器周期。&lt;/p&gt;
+&lt;p&gt;于是，指令周期&amp;gt;机器周期&amp;gt;时钟周期&lt;/p&gt;
+&lt;p&gt;下面框内内容暂时还没有完全消化，建议学到了再说&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;总线周期：&lt;/p&gt;
+&lt;p&gt;存储器和I&amp;#x2F;O端口是挂接在总线上的，CPU对存储器和I&amp;#x2F;O接口的访问通过总线实现&lt;/p&gt;
+&lt;p&gt;把CPU通过总线对微处理器外部（存储器或I&amp;#x2F;O接口）一次访问时间称为一个总线周期&lt;/p&gt;
+&lt;p&gt;总线周期一般包含4个总线时钟周期：&lt;br&gt;（1）T1状态 ——输出存储器地址或I&amp;#x2F;O地址。&lt;br&gt;（2）T2状态 ——输出控制信号。&lt;br&gt;（3）T3和Tw状态 ——总线操作持续，并检测READY以决定是否延长时序。&lt;br&gt;（4）T4状态 ——完成数据传送&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;cpu访存的过程：cpu通过总线把数据地址送给存储器，存储器得到地址后启动存储器即准备数据，cpu输出控制信号或其他操作，等到数据准备完毕【此过程完成数据准备即一个存储周期】，再由总线送回cpu。一个存储周期是对存储器的两个存取操作的时间间隔，在这个时间间隔里面可以包含多个总线传输周期，因为一次存取操作不一定读取一个数据总线宽度的数据，所以一个存取周期可以包含多个总线传输周期&lt;/p&gt;
+&lt;p&gt;于是，通常存储周期&amp;gt;总线周期,cpu不能连续存取数据，必须等待&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;存储周期：&lt;/p&gt;
+&lt;p&gt;存储周期包含存取时间和恢复时间。指两次独立访问存储器操作之间的最小间隔&lt;/p&gt;
+&lt;p&gt;存取时间指从启动一次存储器操作到完成该操作所经历的时间&lt;/p&gt;
+&lt;p&gt;恢复时间指读写操作之后，用来恢复内部状态的时间&lt;/p&gt;
+&lt;p&gt;为提高传输效率，由此也引出了两个概念：&lt;/p&gt;
+&lt;p&gt;总线突发传输方式：&lt;/p&gt;
+&lt;p&gt;即总线可以在一个总线周期内传输一个地址和一批地址连续的数据，代替常规传输的一个地址一个数据&lt;/p&gt;
+&lt;p&gt;多体并行存储器：&lt;/p&gt;
+&lt;p&gt;存储器采用多个存储模块组成，以流水线方式准备数据，从而提高存储带宽，缩短准备数据时间&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;指令流程：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/148.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里说的就是最基本的判断流程，执行周期因为不同的指令不同所以没有办法普遍化&lt;/p&gt;
+&lt;p&gt;CPU取完指令后就会去看需不需要间址，然后根据结果去进行不同的操作&lt;/p&gt;
+&lt;p&gt;然后执行完以后，就会去判断下需要不需要中断，如果需要中断的话那么就中断&lt;/p&gt;
+&lt;p&gt;另外就是谈下这个PC的自增是在取指周期同时进行&lt;/p&gt;
+&lt;p&gt;如果遇到了转移指令那么PC假如要更新那么就会在取指后间址之前进行&lt;/p&gt;
+&lt;p&gt;注意间址周期内PC是不可能有改变的，只有取指、转移、中断会有一些改变在&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;至于指令执行流程，取指、间址、中断似乎都是CPU默认的操作，不需要外部给指令&lt;/p&gt;
+&lt;p&gt;中间可能需要注意，会考的内容可能就是MAR&amp;#x2F;MDR&amp;#x2F;IC&amp;#x2F;PC等寄存器中当前保存的是什么吧&lt;/p&gt;
+&lt;p&gt;这三个周期书上讲的比较完善，PPT可以看，但一般没什么必要&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;具体课后习题还有一堆问题，例如三种不同的策略，实际上应该不会再考&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/149.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;只能说杂乱的东西吧，后面会放到这里&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;稍微总结一下：&lt;/p&gt;
+&lt;p&gt;组合逻辑元件(操作元件)、时序逻辑元件(状态元件)一般的区分方法&lt;/p&gt;
+&lt;p&gt;看有没有记忆能力，没有那铁定是组合逻辑，有记忆能力那基本就是时序逻辑&lt;/p&gt;
+&lt;p&gt;另外控制器中绝大多数都是时序逻辑，运算器中绝大多数都是组合逻辑&lt;/p&gt;
+&lt;p&gt;译码器常见于存储器中，用于解释地址码并选中相应存储单元，可能问位数&lt;/p&gt;
+&lt;p&gt;其位数即，N位输入可以得到2^N个输出，对应MAR和地址单元数量的关系&lt;/p&gt;
+&lt;p&gt;MUX是一个多输入，单输出的多路选择器，其选择信号位数是logN，N为输入端数量&lt;/p&gt;
+&lt;p&gt;三态门就随意了，前面的基本数电知识里面有，不再赘述&lt;/p&gt;
+&lt;p&gt;总线，分为单总线和多总线&lt;/p&gt;
+&lt;p&gt;总线是一个占用性部件，某一时间段只能有一个输入到主线，主线可输入到多个&lt;/p&gt;
+&lt;p&gt;多总线、单总线没有什么特别大的区分，无非注意一个点&lt;/p&gt;
+&lt;p&gt;多总线的情况下，每个部件的所有脚都是连着所有总线的，&lt;/p&gt;
+&lt;p&gt;总线的话么，布局比较轻松，结构简单，但是效率比较低，冲突率较高&lt;/p&gt;
+&lt;p&gt;专用数据通路一般性能较高、基本不会冲突，但非常耗费硬件资源&lt;/p&gt;
+&lt;p&gt;主要提及是在寄存器和寄存器之间传输，往往和总线布局是共同在一起使用的&lt;/p&gt;
+&lt;p&gt;关于数据通路：&lt;/p&gt;
+&lt;p&gt;除去主存的访问是需要一个主存周期外，其他都按照一个时钟周期计算，注意下这个&lt;/p&gt;
+&lt;p&gt;书上列举了五种普通的操作，主要是基于单总线结构的&lt;/p&gt;
+&lt;p&gt;个人认为写好这个的点就是记住总线是独占式的，不能被共享，只能单独分开&lt;/p&gt;
+&lt;p&gt;如果要再次使用总线进行不同的数据传输，那么只能是新开一个节拍&lt;/p&gt;
+&lt;p&gt;对于ALU需要多讲一点，主要就是其两个输入端需要同时有效且输出也是有时效性的&lt;/p&gt;
+&lt;p&gt;所以必须满足输入两个同时有效，输出也能够被存储下来&lt;/p&gt;
+&lt;p&gt;那么一根主线很明显满足不了这个事情&lt;/p&gt;
+&lt;p&gt;输入必须要有一个寄存器，输出也必须要有，否则在指令还在执行的时候，ADD还在&lt;/p&gt;
+&lt;p&gt;一旦ADD消失，那么输出也就消失了，是没法用一个主线实现执行的&lt;/p&gt;
+&lt;p&gt;输出为了避免影响到输入，也只能用寄存器来寄存&lt;/p&gt;
+&lt;p&gt;另外提一嘴，实际上在每个指令给定操作前，都会由IR中取操作码给CU得到控制信息&lt;/p&gt;
+&lt;p&gt;所以看题目吧，要不要写CU给组件，一般给主存的话都是需要指定1-W&amp;#x2F;R的&lt;/p&gt;
+&lt;p&gt;有时候MDR和IR内容一样，那么也没必要用AD(IR)，用AD(MDR)也同样可行&lt;/p&gt;
+&lt;p&gt;此外就是这个大坑，加括号的事情&lt;/p&gt;
+&lt;p&gt;一般还是看题目怎么来吧，自己悠着点他说的到底是间址还是直接取址或操作数&lt;/p&gt;
+&lt;p&gt;寄存器的话一般还是不怎么用括号表示的，主存往往用括号表示是其内容&lt;/p&gt;
+&lt;p&gt;在微指令里面的话，右边基本不怎么加括号除非是单独声明主存，左边往往是加的&lt;/p&gt;
+&lt;p&gt;这个反正是个大坑，建议以真题为准去思索&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;另外，目的操作数+-·&amp;#x2F;源操作数，前者为目的后者为源，大坑+1&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/04/08/%E8%AE%A1%E7%BB%8412/</guid>
             <title>计组12</title>
