@@ -36,6 +36,7 @@
 &lt;p&gt;需要会画相应的流程图、流水线时空图、流水线指令序列图&lt;/p&gt;
 &lt;p&gt;考试比较频繁考察的就是分为五段式的，也是统考唯一考察的方向&lt;/p&gt;
 &lt;p&gt;每个流水线阶段都会有对应的一个寄存器存在&lt;/p&gt;
+&lt;p&gt;第一个视频的内容完全可以看PPT和书，足够详细，这里不再赘述&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;然后这里介绍几个冲突状态：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/ky/161.png&#34;&gt;&lt;/p&gt;
@@ -43,13 +44,37 @@
 &lt;p&gt;&lt;img src=&#34;/img/ky/162.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这里需要注意的就是硬件上降低延迟的方式有两种&lt;/p&gt;
 &lt;p&gt;一种是数据旁路，那么有时候能直接把延迟压为无延迟，一种就是拓展读写口&lt;/p&gt;
+&lt;p&gt;对于load-use类数据冒险，对书上解释的一点补充:&lt;/p&gt;
+&lt;p&gt;MEM段结束后，会把从主存中取出的内容放到MEM段和WB段流水之间的寄存器&lt;/p&gt;
+&lt;p&gt;书上采用了延迟加转发，这里的转发指的就是直接从这个寄存器转发&lt;/p&gt;
+&lt;p&gt;然后在WB周期内就可以完成并行的写回寄存器以及到新需要用的一个寄存器里面&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/ky/163.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;猜错了的耗费实际上是很大的，所以一旦流水线长度上去，非常难搞&lt;/p&gt;
 &lt;p&gt;另外的部分建议看书解决，书上的更为详细&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;五段式流水线及其相关考点：&lt;/p&gt;
 &lt;p&gt;首先明确一下，有几个表的内容是必然要背下来的，不过用几次就熟悉了&lt;/p&gt;
-&lt;p&gt;这几个表的内容以及相应的冲突能够详细解释和考虑到，那么才能算是足够了&lt;/p&gt;
+&lt;p&gt;这几个表的内容以及相应的冲突能够详细解释和考虑到，那么才能算是足够了，都要熟悉&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/164.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/165.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/166.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/167.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;三张表是常考内容，每一张都需要彻底熟悉并能和之前的冲突联系起来&lt;/p&gt;
+&lt;p&gt;其中的一个比较常见的需要注意的事项：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/168.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;实际上冲突都只能具体情况具体分析，这里顶多只能列举一些常见的可能冲突&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;关于高级流水线技术：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/169.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;实际上说的就是配置多个重复部件，度为N即为配置N个重复部件，可以让N条并行工作&lt;/p&gt;
+&lt;p&gt;指令的序列是不能改变的，例如1-2-3-4一个指令，不能变为1-2-3-4-1&lt;/p&gt;
+&lt;p&gt;当然如果是乱序发射的情况，确实可以变为1-3-2-4这样乱序执行，而和原序列无关&lt;/p&gt;
+&lt;p&gt;这个就是以空间换效率的思路&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/170.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这个就是把一个机器周期(这里也就是时钟周期，因为机器周期默认等于时钟周期&lt;/p&gt;
+&lt;p&gt;给进一步拆分为多个周期，即让同一部件在一个周期内多次工作&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/171.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;具体还是看书吧&lt;/p&gt;
 </content>
         <updated>2024-04-11T10:23:09.000Z</updated>
     </entry>
