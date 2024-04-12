@@ -5,13 +5,63 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Thu, 11 Apr 2024 18:23:09 +0800</pubDate>
-        <lastBuildDate>Thu, 11 Apr 2024 18:23:09 +0800</lastBuildDate>
+        <pubDate>Fri, 12 Apr 2024 19:25:44 +0800</pubDate>
+        <lastBuildDate>Fri, 12 Apr 2024 19:25:44 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/04/12/%E8%AE%A1%E7%BB%8416/</guid>
+            <title>计组16</title>
+            <link>https://chchch-art.github.io/2024/04/12/%E8%AE%A1%E7%BB%8416/</link>
+            <pubDate>Fri, 12 Apr 2024 19:25:44 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/ky/172.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/173.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;补充：&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;硬件多线程都不是实际意义上的多线程，因为实际上处理的资源就那么一份&lt;/p&gt;
+&lt;p&gt;一相当于一个人干两个人的活，人就那么一个人，你只能尽可能压榨其最高效率&lt;/p&gt;
+&lt;p&gt;但多核那么就是真正意义上的多线程，人直接变成了两个人干活&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;SIMD就是一条指令同时处理了一堆一样的操作，例如全都加一&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;MIMD实际上可以视作是多个SIMD的组合…&lt;/p&gt;
+&lt;p&gt;多计算机系统就可以视作是分布式计算机，多处理器就是一个计算机有多个独立CPU&lt;/p&gt;
+&lt;p&gt;另外说下超线程单核处理器和多核处理器的区别&lt;/p&gt;
+&lt;p&gt;假如一个超线程单核处理器最多可以同时处理两个线程&lt;/p&gt;
+&lt;p&gt;一个处理器有两个核&lt;/p&gt;
+&lt;p&gt;那么对于一百万个线程，谁运行更快？&lt;/p&gt;
+&lt;p&gt;毫无疑问是双核的处理器，因为超线程实际上并非完全的同时处理&lt;/p&gt;
+&lt;p&gt;其同时处理线程的时候，大多数情况这两个线程是需要共同争夺相同的缓存等资源&lt;/p&gt;
+&lt;p&gt;而双核就不可能争夺资源，这资源量是双份的，而超线程实际上是单份资源&lt;/p&gt;
+&lt;p&gt;参考百度：&lt;/p&gt;
+&lt;p&gt;超线程和多核是两种提高CPU利用率的技术。多核处理器是指在单个芯片上包含任意多个CPU的处理器。超线程是指每个核心可以同时执行的线程数量，一个核心可以有两个或多个线程。超线程和多核的区别在于，超线程的逻辑处理器并没有独立的执行单元、整数单元、寄存器甚至缓存，它们在运行时仍需要共用执行单元、缓存和总线接口。超线程由于处理器实际上只有一个核心，能够提升的效能约为5~15%左右，且万一发生资源互抢的情形时，整体效能反而会下降。虽然超线程能让计算机核数增加，但实际上计算机的核数翻倍并不能简单地认为着计算机的性能也翻倍了，计算机的性能还受CPU主频、机器字长、指令字长、存储字长、主存、I&amp;#x2F;O速度、硬盘速度等因素影响&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;多核处理器一般都共享主存，也就是一般都是共享内存处理器，也称为多处理器系统&lt;/p&gt;
+&lt;p&gt;UMA&amp;#x2F;NUMA都是针对多处理器(即多CPU的情况说的&lt;/p&gt;
+&lt;p&gt;如果对着一个CPU&amp;#x2F;处理器在那谈这个到底是UMA还是NUMA就一定别看了&lt;/p&gt;
+&lt;p&gt;这里谈的都是“共享内存多处理器”&lt;/p&gt;
+&lt;p&gt;而多计算器系统就肯定不符合这个定义，其定义是“私有存储器”&lt;/p&gt;
+&lt;p&gt;虽然和NUMA的远程&amp;#x2F;本地很类似，但绝对不是同一个东西&lt;/p&gt;
+&lt;p&gt;或者说是大数据学久了，把多计算机系统以为是虚拟机了，实际上并不是&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;一个程序!&amp;#x3D;一个线程，一个程序可以被分为多个线程，也可能不能被分为多个线程&lt;/p&gt;
+&lt;p&gt;多核！&amp;#x3D;多处理器(CPU)，因为只是在一个CPU内集成了多个“CPU执行核心”&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;关于考试，基本都是以选择概念为主，多看几遍书基本也就没什么问题了&lt;/p&gt;
+&lt;p&gt;此外，王道的那份思维导图很好，不知道网上是否有具体资源&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;[&lt;a href=&#34;https://cs.haohaha.cn]&#34;&gt;https://cs.haohaha.cn]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一个比较好的参考，思维导图的地方&lt;/p&gt;
+&lt;p&gt;现在想起来，二轮的时候确实可以根据网上的一些资料具体强化针对复习补缺&lt;/p&gt;
+&lt;p&gt;毕竟到时候的压力肯定不会有一轮学那么重，学、复习都会快很多&lt;/p&gt;
+&lt;p&gt;除此之外，不仅是二轮，后面有一些不太清楚、模糊的东西甚至也可以回去看视频细节&lt;/p&gt;
+&lt;p&gt;尤其是特指清楚问题的核心在于对知识点的把握不清楚、概念模糊的情况&lt;/p&gt;
+&lt;p&gt;因为一轮大多数情况我是不看视频的，难免会有一些遗漏&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/04/11/%E8%AE%A1%E7%BB%8415/</guid>
             <title>计组15</title>
