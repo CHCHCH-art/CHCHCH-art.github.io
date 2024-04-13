@@ -3,12 +3,107 @@
     <id>https://CHCHCH-art.github.io</id>
     <title>Ephemeral</title>
     <link href="https://CHCHCH-art.github.io" />
-    <updated>2024-04-12T11:25:44.000Z</updated>
+    <updated>2024-04-12T13:10:06.000Z</updated>
     <category term="stock" />
     <category term="END" />
     <category term="FK" />
     <category term="Preview" />
     <category term="Math" />
+    <entry>
+        <id>https://chchch-art.github.io/2024/04/12/%E8%AE%A1%E7%BB%8417/</id>
+        <title>计组17</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2024/04/12/%E8%AE%A1%E7%BB%8417/"/>
+        <content type="html">&lt;p&gt;&lt;img src=&#34;/img/ky/174.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对于数据总线的一点补充：&lt;/p&gt;
+&lt;p&gt;数据总线的位数不一定和机器字长或者存储字长相同&lt;/p&gt;
+&lt;p&gt;如果机器字长32位，数据总线16位，那么CPU取得一个处理数据就要传两次&lt;/p&gt;
+&lt;p&gt;如果存储字长32位，数据总线16位，那么CPU得到一个存储字就需要访问两次主存&lt;/p&gt;
+&lt;p&gt;其他情况也是相对应的，类似于指令长度只有存储字长一半&lt;/p&gt;
+&lt;p&gt;地址总线，当外部I&amp;#x2F;O设备采用和主存统一编址的时候，那么地址也要考虑到&lt;/p&gt;
+&lt;p&gt;类似于主存有30个单元，但外面还有3个，那么至少就需要六位地址位才行，六根地址线&lt;/p&gt;
+&lt;p&gt;控制总线，对于单根线而言，是单向的，但是对于总线而言那么就是双向的&lt;/p&gt;
+&lt;p&gt;因为既有CPU向外部发出信号的线，也有外部向CPU反馈的信号线&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/175.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对双总线结构的一些补充：&lt;/p&gt;
+&lt;p&gt;存在的主存总线支持突发&amp;#x2F;猝发传送，即可以连续从主存中读取顺序数据而不必多次访存&lt;/p&gt;
+&lt;p&gt;很明显可以提高效率，减少访存次数&lt;/p&gt;
+&lt;p&gt;通道程序存放在主存中，需要调用的时候从主存中访问读取&lt;/p&gt;
+&lt;p&gt;PPT上还有对于四总线结构的介绍，后续有空的时候可以看，但不是重点，是补充&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/176.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/177.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里对周期进行一个补充，一般来说总线周期是数个时钟周期&lt;/p&gt;
+&lt;p&gt;但也可能会有相同或者说倒反天罡，一个时钟周期包含多个总线周期的存在&lt;/p&gt;
+&lt;p&gt;上面是一些具体的计算概念&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/178.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;关于这道题，例题的一些讲解补充：&lt;/p&gt;
+&lt;p&gt;计算实际的有效数据传输位，因为往往传输时还会有一些校验位，冗余位的存在&lt;/p&gt;
+&lt;p&gt;所以实际的数据传输位并没有那么多的，要减去这一些无效数据位去计算&lt;/p&gt;
+&lt;p&gt;然后这边的发送首地址，并不是线复用时的特例，一般情况下也是需要先发送过去的&lt;/p&gt;
+&lt;p&gt;无非复用线的时候要注意潜在的数据、地址冲突情况&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;至于串行、并行两种情况的具体解释，其实王道书上面有&lt;/p&gt;
+&lt;p&gt;无非就是并行的频率不能无限制提升所以实际上限制了并行的数据传输带宽&lt;/p&gt;
+&lt;p&gt;本章内容多以选择题为主&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;其实一共也就那么几种总线时间协议关系&lt;/p&gt;
+&lt;p&gt;同步、异步、半同步、分离式&lt;/p&gt;
+&lt;p&gt;异步就是你需要传多久我就等你多久，直到你传给我了再说&lt;/p&gt;
+&lt;p&gt;拓展的异步串行是指异步时钟的，不依靠应答而依靠于校验码来判断传输结束与否&lt;/p&gt;
+&lt;p&gt;同步就是这个时间段你必须传好，不传好我也不管，直接开始下一个周期&lt;/p&gt;
+&lt;p&gt;拓展的同步串行就是发送方直接把收方的时钟控了让你强行和我产生一致性关系&lt;/p&gt;
+&lt;p&gt;然后通过校验码、开始结束标记传输&lt;/p&gt;
+&lt;p&gt;半同步就是约等于你传多久我等多久，无非我只会定时查看你传好没，而不是一直催着&lt;/p&gt;
+&lt;p&gt;普遍是在时钟上下沿查看一下&lt;/p&gt;
+&lt;p&gt;上面三种都是对总线独占式的，一旦占用那么总线只能等他们完成了再被别的使用&lt;/p&gt;
+&lt;p&gt;分离式的含义就是总线不能闲着，我只有传输的时候占用总线，传完了立刻就让给别人&lt;/p&gt;
+&lt;p&gt;这几种各有各的优缺点、适用条件，一般考察的就是这一些内容&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;异步里面的几个互锁关系：&lt;/p&gt;
+&lt;p&gt;不互锁：&lt;/p&gt;
+&lt;p&gt;A请求，B回答&lt;/p&gt;
+&lt;p&gt;A默认B会回答所以过一会儿撤销请求，B默认A得到了回答撤销请求所以过会儿撤销回答&lt;/p&gt;
+&lt;p&gt;半互锁：&lt;/p&gt;
+&lt;p&gt;A请求，B回答&lt;/p&gt;
+&lt;p&gt;A一定要亲眼看见B回答了才撤销请求，B默认A得到了回答撤销请求所以过会儿撤销回答&lt;/p&gt;
+&lt;p&gt;全互锁：&lt;/p&gt;
+&lt;p&gt;A请求，B回答&lt;/p&gt;
+&lt;p&gt;A一定要亲眼看到B回答了才撤销请求，B一定要知道A已经得到回答撤销请求再撤销回答&lt;/p&gt;
+&lt;p&gt;稍微比较绕吧，但应该还是能理解的，建议看书&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;另外就是总线的几个阶段&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/179.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;突发、非突发两个方式要清楚，经常考&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I&amp;#x2F;O接口的功能：&lt;/p&gt;
+&lt;p&gt;书上也有详细介绍，这里不过多赘述，基本要求是能背下来，或者是都知道&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/180.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;对I&amp;#x2F;O端口的一些补充：&lt;/p&gt;
+&lt;p&gt;对于书上7.1图中的内容，补充一点：主机侧并不一定是并行传输接口&lt;/p&gt;
+&lt;p&gt;不过I&amp;#x2F;O接口的串&amp;#x2F;并转换功能自然还是需要有的，否则外面一个并行的不就寄了？&lt;/p&gt;
+&lt;p&gt;至于状态寄存器、控制寄存器书上一句话的理解：&lt;/p&gt;
+&lt;p&gt;其实是从其工作流程出发，CPU向I&amp;#x2F;O接口发出一个命令字到控制寄存器里面&lt;/p&gt;
+&lt;p&gt;然后控制寄存器的内容给译码器，之后这个控制寄存器实际上就已经不需要再用了&lt;/p&gt;
+&lt;p&gt;因为已经选中了相应的外部设备，这个寄存器就可以在外部连通后用作状态寄存&lt;/p&gt;
+&lt;p&gt;即，在1阶段当作控制寄存器用，在2阶段都当作一个状态寄存器用，完全不会产生冲突&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/181.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;注，这里的控制线基本只有没几个命令，大多数命令都是在数据线上完成传输的&lt;/p&gt;
+&lt;p&gt;控制线基本只会传输一个读写信号、中断、仲裁、握手，大部分都会是数据线上面传输&lt;/p&gt;
+&lt;p&gt;例如一个指令字，其就是在数据线上传输而非在控制线上传输&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;书上对于传输内容写的比较浅，这里可以用作补充，包含了各功能部件、各工作流程&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/182.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/183.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;关于编址方式的较为形象的理解：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/185.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/184.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;后面的计算还是比较常见的考察方式，其他的细节还是要看书的，还有不少内容&lt;/p&gt;
+</content>
+        <updated>2024-04-12T13:10:06.000Z</updated>
+    </entry>
     <entry>
         <id>https://chchch-art.github.io/2024/04/12/%E8%AE%A1%E7%BB%8416/</id>
         <title>计组16</title>
@@ -49,7 +144,7 @@
 &lt;p&gt;关于考试，基本都是以选择概念为主，多看几遍书基本也就没什么问题了&lt;/p&gt;
 &lt;p&gt;此外，王道的那份思维导图很好，不知道网上是否有具体资源&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;[&lt;a href=&#34;https://cs.haohaha.cn]&#34;&gt;https://cs.haohaha.cn]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;a href=&#34;https://cs.haohaha.cn/408/arch/5-6/]&#34;&gt;https://cs.haohaha.cn/408/arch/5-6/]&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;一个比较好的参考，思维导图的地方&lt;/p&gt;
 &lt;p&gt;现在想起来，二轮的时候确实可以根据网上的一些资料具体强化针对复习补缺&lt;/p&gt;
 &lt;p&gt;毕竟到时候的压力肯定不会有一轮学那么重，学、复习都会快很多&lt;/p&gt;
@@ -113,6 +208,8 @@
 &lt;p&gt;其中的一个比较常见的需要注意的事项：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/ky/168.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;实际上冲突都只能具体情况具体分析，这里顶多只能列举一些常见的可能冲突&lt;/p&gt;
+&lt;p&gt;关于冲突本身，实际上尽可能还是要结合例子分析，书上的例子+PPT的例子吃透就够了&lt;/p&gt;
+&lt;p&gt;有问题不如多问问书、百度、PPT&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;关于高级流水线技术：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/ky/169.png&#34;&gt;&lt;/p&gt;
