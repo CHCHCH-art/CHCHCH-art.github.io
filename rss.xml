@@ -5,31 +5,48 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 17 Apr 2024 18:39:10 +0800</pubDate>
-        <lastBuildDate>Wed, 17 Apr 2024 18:39:10 +0800</lastBuildDate>
+        <pubDate>Thu, 18 Apr 2024 10:54:46 +0800</pubDate>
+        <lastBuildDate>Thu, 18 Apr 2024 10:54:46 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
         <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/04/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%B1%87%E6%80%BB/</guid>
+            <title>数据结构复习汇总</title>
+            <link>https://chchch-art.github.io/2024/04/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%B1%87%E6%80%BB/</link>
+            <pubDate>Thu, 18 Apr 2024 10:54:46 +0800</pubDate>
+            <description><![CDATA[ &lt;hr&gt;
+&lt;p&gt;其实还有一些感悟想写的，后面有空应该会补上吧&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;KMP:&lt;/p&gt;
+&lt;p&gt;王道该书其实给予了一个错误的导向，认为只需要会Next、Nextval求法就够了&lt;/p&gt;
+&lt;p&gt;实际上统考更会考KMP算法执行的过程，让你能够走一遍这个算法，而不是说求Next数组&lt;/p&gt;
+&lt;p&gt;所以一定要明确方向导向，Next数组/PM表/Nextval数组均只是辅助走流程的工具&lt;/p&gt;
+&lt;p&gt;一定要会主动执行一遍算法，清楚算法是怎么执行的，这就是统考的考察点&lt;/p&gt;
+&lt;p&gt;15年和19年的统考真题，课后综合题的第二题的第二小题都是需要重点研究的&lt;/p&gt;
+&lt;p&gt;这一次的复习需要有一定的导向性&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/04/17/OS-2/</guid>
             <title>OS-2</title>
             <link>https://chchch-art.github.io/2024/04/17/OS-2/</link>
             <pubDate>Wed, 17 Apr 2024 18:39:10 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;第一章后面几节是纯概念类，以简单选择题为主，但不代表能轻松背得下来…&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/15.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/15.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;按照书上的顺序一个个介绍下去：&lt;/p&gt;
 &lt;p&gt;个人认为单纯说下总体的逻辑结构和大体上的考察方式，以此去做一个复习框架更好&lt;/p&gt;
 &lt;p&gt;书上写的虽然详细但总会觉得让人两眼一黑，有一个大体框架再说细节的补充吧&lt;/p&gt;
 &lt;p&gt;分层结构、模块化的两个结构特征以书上的为准，已经足够形象了，不必再多补充什么&lt;/p&gt;
 &lt;p&gt;关于优缺点的考察：&lt;/p&gt;
 &lt;p&gt;其实核心就是把握几个特性就行，清楚为什么有这个优点，为什么有这个缺点&lt;/p&gt;
-&lt;p&gt;但也没那么容易就能完全记住啊……&lt;/p&gt;
+&lt;p&gt;但也没那么容易就能完全记住啊…&lt;/p&gt;
 &lt;p&gt;书上还有很多的进一步阐述，细节依旧还在书上&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;分层结构：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/15.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/15.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;优点：&lt;/p&gt;
 &lt;p&gt;便于调试和验证可以采用书上的例子说明，这里不多说&lt;/p&gt;
 &lt;p&gt;易于扩充和维护、接口清晰固定，这句话稍微解释一下吧：&lt;/p&gt;
@@ -44,7 +61,7 @@
 &lt;hr&gt;
 &lt;p&gt;模块化：&lt;/p&gt;
 &lt;p&gt;书上关于模块化的优点总结得稀碎，这里建议参考王道PPT来&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/15.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/15.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;优点：&lt;/p&gt;
 &lt;p&gt;模块划分是以功能划分的，所以逻辑自然清晰易于维护，哪边有问题去哪找&lt;/p&gt;
 &lt;p&gt;各个子模块之间也会有相应的暴露接口，但在开发的时候就可以明确接口的函数返回值等&lt;/p&gt;
@@ -62,10 +79,10 @@
 &lt;p&gt;就很难区分，也就是说会有比较多的调用、调试难度&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;内核相关：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/16.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/16.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;大内核，小内核：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/17.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/17.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;其实区别就是在于拓展性的功能程序，一个放在了外部程序，一个集成在了内核程序之中&lt;/p&gt;
 &lt;p&gt;大内核：&lt;/p&gt;
 &lt;p&gt;优点肯定是性能较高，因为可以直接提供系统功能服务，而不需要去外部交互&lt;/p&gt;
@@ -76,9 +93,9 @@
 &lt;p&gt;书上对其划分了最基本的功能，其实应该是有重复部分&lt;/p&gt;
 &lt;p&gt;第二十八页的最后一段和二十九页的第二整段几乎就是一个重复性的声明，只是详细化&lt;/p&gt;
 &lt;p&gt;对于基本功能就不再赘述，基本是涉及硬件底层最核心的一些功能&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/18.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/18.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这边主要是对这里的东西、结合优缺点进行论述：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/16.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/16.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;我想优点都是比较容易理解的，不多说了&lt;/p&gt;
 &lt;p&gt;性能低的源头基本就是其体系结构和特性决定的&lt;/p&gt;
 &lt;p&gt;因为这一批功能被移出内核，被作为单独的应用程序调用，所以当一个应用程序运行时&lt;/p&gt;
@@ -92,7 +109,7 @@
 &lt;hr&gt;
 &lt;p&gt;外内核，这个没什么可以说的，看书上就行了&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/19.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;以这个图来解释两种虚拟机管理程序&lt;/p&gt;
 &lt;p&gt;第一类的本质更类似于一个操作系统，直接对硬件资源进行管理&lt;/p&gt;
 &lt;p&gt;然后对CPU、硬盘、内存等进行虚拟化给不同的虚拟机，支持虚拟机上运行不同操作系统&lt;/p&gt;
@@ -108,7 +125,7 @@
 &lt;p&gt;第二类先由虚拟机管理程序截断这条指令，转为虚拟机管理程序向宿主操作系统系统调用&lt;/p&gt;
 &lt;p&gt;如果是用户的应用程序发出的，那么就“模拟”一个相应的处理过程，而不会实际调用&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/20.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/20.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;然后再来解释下这个图，物理资源的控制权我想是不用说的&lt;/p&gt;
 &lt;p&gt;第一类虚拟机管理系统约等于一个真正意义上的操作系统，第二类更像一个应用程序而已&lt;/p&gt;
 &lt;p&gt;资源分配方式上面&lt;/p&gt;
@@ -127,6 +144,29 @@
 &lt;p&gt;然后转向下一层真正操作系统的系统调用&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;注：操作系统引导这一块没看，有点太过于…&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;另外说下两类虚拟机管理系统的资源一些小问题：&lt;/p&gt;
+&lt;p&gt;首先是运行在虚拟机管理系统上的虚拟机，得到的肯定都是一些虚拟资源，这不用说&lt;/p&gt;
+&lt;p&gt;虚拟化技术又可以分为时分复用和空分复用技术，第四页，复习&lt;/p&gt;
+&lt;p&gt;而底层的就会因为是第一类还是第二类而会有一些不同之处&lt;/p&gt;
+&lt;p&gt;第一类能够直接调用硬件资源，而第二类实际上分配到的是宿主操作系统给他的虚拟资源&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;对模块结构的一些理解勘误：&lt;/p&gt;
+&lt;p&gt;首先调试验证困难实际上是指代开发过程中，一旦产生错误就很难精准定位去修复&lt;/p&gt;
+&lt;p&gt;主要指代的是开发过程、使用过程中出现错误后很难去找到修复的地方&lt;/p&gt;
+&lt;p&gt;而模块间逻辑清晰易于维护是指，当设计完了以后，要想去为其补充、修改很容易去定位&lt;/p&gt;
+&lt;p&gt;例如我想要修改、增加某个功能项，只需要去相应的模块里面改就行，和上面不一样&lt;/p&gt;
+&lt;p&gt;其实个人认为吧，对于整个408里面的概念问题，更多是要想这道题到底想要表达考什么&lt;/p&gt;
+&lt;p&gt;逆推这个题的答案，而不是说是文字游戏，更多可能是自身理解不够到位&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;对于分层结构的勘误、补充：&lt;/p&gt;
+&lt;p&gt;课后第一道选择题的思索，感觉还是理解不足&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/15.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;各层之间的定义不清晰，本质就是这样：&lt;/p&gt;
+&lt;p&gt;实际上的操作系统是各层之间可能需要相互调用的，这样一个死板的定义很难去完成&lt;/p&gt;
+&lt;p&gt;所以相应的一层层也很难去区分，这相当于一个抽象的逻辑模型&lt;/p&gt;
+&lt;p&gt;实际上想要以此去抽象这一整个操作系统会比较困难，所以就说每层难定义&lt;/p&gt;
+&lt;p&gt;课后习题说的结构，想要表达的大概率就是各层之间的接口实现以后，易于调用、维护&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -140,10 +180,10 @@
 &lt;p&gt;学习提示：要重点关注和理解各类操作系统主要想解决的是什么问题，各自的优缺点&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;这里对书上的内容做一个概况、补充、类别归纳：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;直接从这边说，概念定义而言，OS这门课更多注重于资源的管理&lt;/p&gt;
 &lt;p&gt;而对硬件机器的扩充、接口并不是这门课的核心，会有一定的涉及但不是核心&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;从一个例子里面就可以大致上理解操作系统的意义、功能，书上也有对其比较详细的定义&lt;/p&gt;
 &lt;p&gt;然后可以看到操作系统实际上和三层相互连接，用户层、应用程序层、裸机层&lt;/p&gt;
 &lt;p&gt;书上对其的介绍也是基于这个逻辑一步步展开的&lt;/p&gt;
@@ -156,7 +196,7 @@
 &lt;p&gt;操作系统的特征：&lt;/p&gt;
 &lt;p&gt;第一个，并发性：&lt;/p&gt;
 &lt;p&gt;在这门课中的“同时”意味着并发，需要和并行区分&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/3.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这里可以配合计组的内容复习，如单核处理器和多核处理器的概念&lt;/p&gt;
 &lt;p&gt;单核处理器实际上在同一时间只能处理一个线程&lt;/p&gt;
 &lt;p&gt;即使采用了多线程技术，本质上也只是单线程，无非实现真正的线程并行&lt;/p&gt;
@@ -169,13 +209,13 @@
 &lt;p&gt;互斥性是由这个资源的自身特性和对其的使用方法决定的&lt;/p&gt;
 &lt;p&gt;这边的同时，并不是真正意义上的同时，这门课里面所有的同时都只是并发&lt;/p&gt;
 &lt;p&gt;宏观上并行，微观上并发&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/4.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;并发性和共享性互相依存，没有并发性自然不需要共享性，没有共享性无法实现并发性&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;虚拟化，分为时分复用、空分复用&lt;/p&gt;
 &lt;p&gt;这门课的特点就是用例子学会比较形象很多&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/5.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/6.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;至于异步性，书上讲的不错，没必要用博客记录&lt;/p&gt;
 &lt;hr&gt;
@@ -184,7 +224,7 @@
 &lt;p&gt;就是不断优化资源的调度&lt;/p&gt;
 &lt;p&gt;这里谈一些比较容易错的点：&lt;/p&gt;
 &lt;p&gt;手工操作阶段肯定是单用户的，无法支持多用户&lt;/p&gt;
-&lt;p&gt;在批处理阶段就可以支持多用户了，无非不能与用户进行交互而已，分为单道&amp;#x2F;多道批&lt;/p&gt;
+&lt;p&gt;在批处理阶段就可以支持多用户了，无非不能与用户进行交互而已，分为单道/多道批&lt;/p&gt;
 &lt;p&gt;课后习题里面的两个综合题个人认为是非常好的考察方法，值得好好复习&lt;/p&gt;
 &lt;p&gt;其核心大致就是，当前CPU运行的时候，能不能找到一个可并行的外设一起运行&lt;/p&gt;
 &lt;p&gt;或者反之，当前外设运行的时候，CPU能否并行运行，尽可能让两者并行运行&lt;/p&gt;
@@ -208,7 +248,7 @@
 &lt;p&gt;也很明朗，特权指令只能在管态或者说内核、核心态执行&lt;/p&gt;
 &lt;p&gt;非特权指令并不是一定只能在目态或者用户态运行，它也可以在核心态运行&lt;/p&gt;
 &lt;p&gt;只是用户态不能运行特权指令而已&lt;/p&gt;
-&lt;p&gt;如何来识别并完成这个操作？CPU会通过PSW中的用户&amp;#x2F;核心态表示位来判断是否执行指令&lt;/p&gt;
+&lt;p&gt;如何来识别并完成这个操作？CPU会通过PSW中的用户/核心态表示位来判断是否执行指令&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;关于用户态与核心态之间的转换：&lt;/p&gt;
 &lt;p&gt;核心态-用户态：&lt;/p&gt;
@@ -217,8 +257,8 @@
 &lt;p&gt;这里面就包含有一条转为用户态的特权指令&lt;/p&gt;
 &lt;p&gt;不过不要把这个看太粗，实际上中断返回指令需要执行多个事件&lt;/p&gt;
 &lt;p&gt;基本可以分为“恢复现场”“核心态转用户态”，这一些都是在内核中运行的，不是硬件&lt;/p&gt;
-&lt;p&gt;硬件完成的实际上是PSW&amp;#x2F;PC的恢复，而操作系统完成的是对现场信息的恢复&lt;/p&gt;
-&lt;p&gt;整个过程属于内核的功能实际上很少，内核不具备异常&amp;#x2F;中断处理的功能，必须找外援&lt;/p&gt;
+&lt;p&gt;硬件完成的实际上是PSW/PC的恢复，而操作系统完成的是对现场信息的恢复&lt;/p&gt;
+&lt;p&gt;整个过程属于内核的功能实际上很少，内核不具备异常/中断处理的功能，必须找外援&lt;/p&gt;
 &lt;p&gt;内核是一系列“功能”的集合体&lt;/p&gt;
 &lt;p&gt;不然也就没有必要通过软件查询、硬件向量表去查询这个相应的中断处理程序&lt;/p&gt;
 &lt;p&gt;用户态-核心态：&lt;/p&gt;
@@ -233,30 +273,33 @@
 &lt;hr&gt;
 &lt;p&gt;这个是内核的一个基本包含架构，或者说内核的内容有这些，能完成这些功能&lt;/p&gt;
 &lt;p&gt;完成这些功能的程序被称为内核程序，多个内核程序组成了内核&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/8.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/8.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;一般还是习惯于把内核分为三大功能的，上面的资源管理功能一般不会列入&lt;/p&gt;
 &lt;p&gt;但如果列入了也不是什么怪事，也可以当作一个“大内核”看待&lt;/p&gt;
 &lt;p&gt;书上对这一部分实际上还有更加详细的介绍，包括各功能的细节说明&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/7.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/7.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;然后再对外部中断引起的用户态向核心态的转变进一步详细化、形象化：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/9.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;其实书上对外中断的划分分为：可屏蔽中断与不可屏蔽中断，个人认为更加恰当一些&lt;/p&gt;
 &lt;p&gt;外部中断是硬件中断，内部中断里面的终止异常也是硬件导致的中断&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/10.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;对于最后这个基本实现原理稍微补充一下：&lt;/p&gt;
 &lt;p&gt;找到相应的中断处理程序这个方法，其实不一定依靠中断向量表，也可以是中断程序表&lt;/p&gt;
 &lt;p&gt;一个是硬件找，一个是软件找，之前在计组的时候也有涉及过&lt;/p&gt;
 &lt;p&gt;书上还有一块区分子程序调用和中断处理，确实是非常类似的操作&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/131.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/131.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/11.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/11.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;系统调用是专门给应用程序用的，给用户用的是命令接口&lt;/p&gt;
 &lt;p&gt;但广义上来说，也可以称程序接口（一组系统调用）、命令接口均是给程序员的（用户&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/12.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/12.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里对库函数稍微说一下，不同类型的库函数调用速度是不一样的&lt;/p&gt;
+&lt;p&gt;其中不需要系统调用的库函数运行速度是最快的，因为不涉及到状态的转换&lt;/p&gt;
+&lt;p&gt;一旦涉及到状态的转换，那么必然会浪费一定时间，导致运行速度下降&lt;/p&gt;
 &lt;p&gt;一般可以理解为只要涉及到共享资源的操作，一般都会涉及操作系统，一般下面几类&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/13.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/14.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/13.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/14.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;补充：&lt;/p&gt;
 &lt;p&gt;常见的非特权指令：&lt;/p&gt;
@@ -266,9 +309,10 @@
 &lt;p&gt;&lt;strong&gt;简洁来说就是，对于共享资源的访问需要特权指令来执行&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;对于独占资源的访问，非特权指令进行执行就可以了&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;参考该文章：&lt;/p&gt;
-&lt;p&gt;[&lt;a href=&#34;https://blog.csdn.net/weixin_45415929/article/details/127852663]&#34;&gt;https://blog.csdn.net/weixin_45415929/article/details/127852663]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;a href=&#34;https://blog.csdn.net/weixin_45415929/article/details/127852663&#34;&gt;https://blog.csdn.net/weixin_45415929/article/details/127852663&lt;/a&gt;]&lt;/p&gt;
 &lt;p&gt;我的建议是，多看CSDN，历朝历代的考研人已经整合出了绝对优于王道的知识点汇总&lt;/p&gt;
-&lt;p&gt;文章：[&lt;a href=&#34;https://blog.sunlingzhang.com/2020/01/18/%E7%89%B9%E6%9D%83%E6%8C%87%E4%BB%A4%E3%80%81%E8%AE%BF%E7%AE%A1%E6%8C%87%E4%BB%A4%E3%80%81%E9%99%B7%E5%85%A5%E6%8C%87%E4%BB%A4%E3%80%81%E5%B9%BF%E4%B9%89%E6%8C%87%E4%BB%A4/]&#34;&gt;https://blog.sunlingzhang.com/2020/01/18/%E7%89%B9%E6%9D%83%E6%8C%87%E4%BB%A4%E3%80%81%E8%AE%BF%E7%AE%A1%E6%8C%87%E4%BB%A4%E3%80%81%E9%99%B7%E5%85%A5%E6%8C%87%E4%BB%A4%E3%80%81%E5%B9%BF%E4%B9%89%E6%8C%87%E4%BB%A4/]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里其实同时解决了为何主存一次只能被一个进程占用的原因，就在于总线的占用&lt;/p&gt;
+&lt;p&gt;文章：[&lt;a href=&#34;https://blog.sunlingzhang.com/2020/01/18/%E7%89%B9%E6%9D%83%E6%8C%87%E4%BB%A4%E3%80%81%E8%AE%BF%E7%AE%A1%E6%8C%87%E4%BB%A4%E3%80%81%E9%99%B7%E5%85%A5%E6%8C%87%E4%BB%A4%E3%80%81%E5%B9%BF%E4%B9%89%E6%8C%87%E4%BB%A4/&#34;&gt;https://blog.sunlingzhang.com/2020/01/18/特权指令、访管指令、陷入指令、广义指令/&lt;/a&gt;]&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;这样理解吧，响应判优和中断处理判优不是一个硬件完成的，没必要过于纠结硬件了&lt;/p&gt;
 &lt;p&gt;虽然还是留了那么一个坑在&lt;/p&gt;

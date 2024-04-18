@@ -1,1924 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>前言</title>
-    <url>/2023/09/20/hello-world/</url>
-    <content><![CDATA[<p>若能享受片刻宁静，如此也好</p>
-]]></content>
+<search> 
+  
+    
+    <entry>
+      <title>Color Themes</title>
+      <link href="/hexo-theme-freemind-blog/2016/01/30/color-themes/"/>
+      <url>/hexo-theme-freemind-blog/2016/01/30/color-themes/</url>
+      <content type="html"><![CDATA[<p>Freemind contains luxuriant color themes for your choice. To use one of them, simply modify the <code>theme</code> and <code>inverse</code> settings from your theme <code>_config.yml</code> file <em>e.g.</em></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">theme: bootstrap</div><div class="line">inverse: true</div></pre></td></tr></table></figure><p>, where <code>theme</code> here indicates which theme you are going to use, and <code>inverse</code> here says you want inverse color scheme on some important components such as navigation bar and header title.</p><p>User contributions are welcome! If you want to contribute a color theme, you can <a href="https://github.com/wzpan/hexo-theme-freemind-blog/tree/dev" target="_blank" rel="external">fork the dev branch</a> . Write a new theme in LESS and send me a pull request.</p><a id="more"></a><h2 id="bootstrap"><a href="#bootstrap" class="headerlink" title="bootstrap"></a>bootstrap</h2><h3 id="default"><a href="#default" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/bootstrap.png" alt="bootstrap"></p><h3 id="inverse"><a href="#inverse" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/bootstrap-inverse.png" alt="bootstrap-inverse"></p><h2 id="cerulean"><a href="#cerulean" class="headerlink" title="cerulean"></a>cerulean</h2><h3 id="default-1"><a href="#default-1" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cerulean.png" alt="cerulean"></p><h3 id="inverse-1"><a href="#inverse-1" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cerulean-inverse.png" alt="cerulean-inverse"></p><h2 id="cosmo"><a href="#cosmo" class="headerlink" title="cosmo"></a>cosmo</h2><h3 id="default-2"><a href="#default-2" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cosmo.png" alt="cosmo"></p><h3 id="inverse-2"><a href="#inverse-2" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cosmo-inverse.png" alt="cosmo-inverse"></p><h2 id="cyborg"><a href="#cyborg" class="headerlink" title="cyborg"></a>cyborg</h2><h3 id="default-3"><a href="#default-3" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cyborg.png" alt="cyborg"></p><h3 id="inverse-3"><a href="#inverse-3" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/cyborg-inverse.png" alt="cyborg-inverse"></p><h2 id="darkly"><a href="#darkly" class="headerlink" title="darkly"></a>darkly</h2><h3 id="default-4"><a href="#default-4" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/darkly.png" alt="darkly"></p><h3 id="inverse-4"><a href="#inverse-4" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/darkly-inverse.png" alt="darkly-inverse"></p><h2 id="flatly"><a href="#flatly" class="headerlink" title="flatly"></a>flatly</h2><h3 id="default-5"><a href="#default-5" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/flatly.png" alt="flatly"></p><h3 id="inverse-5"><a href="#inverse-5" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/flatly-inverse.png" alt="flatly"></p><h2 id="journal"><a href="#journal" class="headerlink" title="journal"></a>journal</h2><h3 id="default-6"><a href="#default-6" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/journal.png" alt="journal"></p><h3 id="inverse-6"><a href="#inverse-6" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/journal-inverse.png" alt="journal-inverse"></p><h2 id="lumen"><a href="#lumen" class="headerlink" title="lumen"></a>lumen</h2><h3 id="default-7"><a href="#default-7" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/lumen.png" alt="lumen"></p><h3 id="inverse-7"><a href="#inverse-7" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/lumen-inverse.png" alt="lumen-inverse"></p><h2 id="paper"><a href="#paper" class="headerlink" title="paper"></a>paper</h2><h3 id="default-8"><a href="#default-8" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/paper.png" alt="paper"></p><h3 id="inverse-8"><a href="#inverse-8" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/paper-inverse.png" alt="paper-inverse"></p><h2 id="readable"><a href="#readable" class="headerlink" title="readable"></a>readable</h2><h3 id="default-9"><a href="#default-9" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/readable.png" alt="readable"></p><h3 id="inverse-9"><a href="#inverse-9" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/readable-inverse.png" alt="readable-inverse"></p><h2 id="sandstone"><a href="#sandstone" class="headerlink" title="sandstone"></a>sandstone</h2><h3 id="default-10"><a href="#default-10" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/sandstone.png" alt="sandstone"></p><h3 id="inverse-10"><a href="#inverse-10" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/sandstone-inverse.png" alt="sandstone-inverse"></p><h2 id="simplex"><a href="#simplex" class="headerlink" title="simplex"></a>simplex</h2><h3 id="default-11"><a href="#default-11" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/simplex.png" alt="simplex"></p><h3 id="inverse-11"><a href="#inverse-11" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/simplex-inverse.png" alt="simplex-inverse"></p><h2 id="slate"><a href="#slate" class="headerlink" title="slate"></a>slate</h2><h3 id="default-12"><a href="#default-12" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/slate.png" alt="slate"></p><h3 id="inverse-12"><a href="#inverse-12" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/slate-inverse.png" alt="slate-inverse"></p><h2 id="spacelab"><a href="#spacelab" class="headerlink" title="spacelab"></a>spacelab</h2><h3 id="default-13"><a href="#default-13" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/spacelab.png" alt="spacelab"></p><h3 id="inverse-13"><a href="#inverse-13" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/spacelab-inverse.png" alt="spacelab-inverse"></p><h2 id="superhero"><a href="#superhero" class="headerlink" title="superhero"></a>superhero</h2><h3 id="default-14"><a href="#default-14" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/superhero.png" alt="superhero"></p><h3 id="inverse-14"><a href="#inverse-14" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/superhero-inverse.png" alt="superhero-inverse"></p><h2 id="united"><a href="#united" class="headerlink" title="united"></a>united</h2><h3 id="default-15"><a href="#default-15" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/united.png" alt="united"></p><h3 id="inverse-15"><a href="#inverse-15" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/united-inverse.png" alt="united-inverse"></p><h2 id="yeti"><a href="#yeti" class="headerlink" title="yeti"></a>yeti</h2><h3 id="default-16"><a href="#default-16" class="headerlink" title="default"></a>default</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/yeti.png" alt="yeti"></p><h3 id="inverse-16"><a href="#inverse-16" class="headerlink" title="inverse"></a>inverse</h3><p><img src="/hexo-theme-freemind-blog/images/color-themes/yeti-inverse.png" alt="yeti-inverse"></p>]]></content>
+      
       <categories>
-        <category>Preview</category>
+          
+          <category> Docs </category>
+          
       </categories>
-      <tags>
-        <tag>Preview</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计组1</title>
-    <url>/2024/03/26/%E8%AE%A1%E7%BB%841/</url>
-    <content><![CDATA[<p>注:新概念新题型不超过十分，不必过分纠结</p>
-<p><img src="/img/ky/1.png"></p>
-<p>现代结构是在诺伊曼结构上的改进</p>
-<p>注，现代计算机很多情况下把MAR\MDR集成在CPU中</p>
-<p><img src="/img/ky/2.png"></p>
-<p><img src="/img/ky/3.png"></p>
-<p>注，主存与CPU相连的总线而言，其地址线为MAR的地址长度，MAR为16位，地址线16位</p>
-<p>数据总线又称为数据通路带宽，MDR为32位，那么数据总线也是32位</p>
-<p>同时也把这个位数称为存储字长，把地址线位数称为地址码长度</p>
-<p>顺便说下控制总线的事情(这里注意我说的是主存和CPU交互的控制线</p>
-<p>因为是需要给定读指令+从哪读内容到哪存或者取指令+取哪个位置的内容放到哪</p>
-<p>所以肯定是给定不止一位表示读、写的，后面必然包括两个地址信息</p>
-<p>对于CPU内部的线路、寄存器，会在第五章、后续的章节进一步给出解释，别急</p>
-<p>以及机器码和运算速度之间的关系，因为一次处理的数据多了，可能处理时间也就长了</p>
-<p>所以不一定机器码越高，运算速度越快</p>
-<p><img src="/img/ky/4.png"></p>
-<p>注，运算器若乘时过大值时，低位会放在MQ中</p>
-<p><img src="/img/ky/5.png"></p>
-<p><img src="/img/ky/6.png"></p>
-<p><img src="/img/ky/7.png"></p>
-<p>这一节掌握概念即可，尤其是编译、汇编、解释三者的区别和特征，层次结构</p>
-<p>编译、汇编只进行一次全部读取，解释是读一行执行一行</p>
-<p><img src="/img/ky/13.png"></p>
-<p><img src="/img/ky/8.png"></p>
-<p>可执行文件存于外存中，需要先调入主存</p>
-<p>注意平常说的存储，存储128G，指代的是外存</p>
-<p>大头戏</p>
-<p>注:CU读取指令后的操作才会有所不同，其他均为相同</p>
-<p>操作码+地址码为十六位，也可以变成两个地址或者多个地址的状态</p>
-<p>注，这里地址码起点是从2^1开始的</p>
-<p><img src="/img/ky/9.png"></p>
-<p><img src="/img/ky/10.png"></p>
-<p><img src="/img/ky/11.png"></p>
-<p>回忆计算以及变量使用，以一个时钟周期作为t推演</p>
-<p>区分bit&#x2F;B&#x2F;字节&#x2F;字&#x2F;位&#x2F;字长、MIPS……..</p>
-<p><img src="/img/ky/14.png"></p>
-<p><img src="/img/ky/15.png"></p>
-<hr>
-<p>换算单位</p>
-<p>MGTPEZ（10^6)开始的次数换算单位</p>
-<p>时间换算单位</p>
-<p><img src="/img/ky/16.png"></p>
-<p>对应3、6、9、12次</p>
-<hr>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组2</title>
-    <url>/2024/03/26/%E8%AE%A1%E7%BB%842/</url>
-    <content><![CDATA[<p>数据类型转换：</p>
-<p>Unsigned\singned只是一种解释方法，把数据解释为带符号数或不带符号数，不改数值</p>
-<p>一种是同位之间的转换，不会导致数值被操作影响，只会导致解读方法会从带符号转不带</p>
-<p>另外一种是非同位，分为大转小，小转大强制转换</p>
-<p>大转小直接截断从大到小二进制差额部分，剩下的解释为十六进制会有不同</p>
-<p>需要拓展原因：</p>
-<p>ALU的位数是固定的，运算前可能需要把短数据扩展为长数据</p>
-<p>通用寄存器位数是固定的，把数据存入寄存器时，可能需要进行长度扩展</p>
-<p>主存内的各种数据长度不一，有时需要把短数据扩展为长数据</p>
-<p>小转大分为两类</p>
-<p>原类型是无符号整数则直接用零填补高位</p>
-<p>是有符号类型则用符号位填补高位的空缺部分</p>
-<p>注意：除char以外除非声明为Unsign类型，那么都是解释为带符号的</p>
-<p>char:8位、short/short int:16位、int：32位、long /long int 分机器（32-32，64-64</p>
-<p>singed\unsigned都是以补码存储的</p>
-<p>C语言中定点整数是用补码存储的或者说都用补码存储的</p>
-<hr>
-<p><img src="/img/ky/17.png" alt=""></p>
-<p>稍微注意下小数点的事情，这边的转换和一般的二进制转换不一样</p>
-<p>小数点开始向左边，选择3、4个作为一组，直到最高位需要补0为止再说</p>
-<p>小数点开始向右边补，那么也是同样的，就是要重视和小数点的主要关系</p>
-<p>区分和一般二进制的转换(直接补高位0，因为其小数位就是在最后，其是整数形式</p>
-<p><img src="/img/ky/18.png" alt=""></p>
-<p><img src="/img/ky/19.png" alt=""></p>
-<p>逼近法求转换类型，126–64+32+16+8+4，任何其他位也一样直接求加法然后写位数</p>
-<p>对小数类型也是同样，0.25+0.5+0.125+0.0625，有时候能直接凑就直接凑</p>
-<p>凑不出来再用乘R取余数，或者除R取余数的方法(建议掌握</p>
-<p><img src="/img/ky/20.png" alt=""></p>
-<p><img src="/img/ky/21.png" alt=""></p>
-<hr>
-<p><img src="/img/ky/24.png" alt=""></p>
-<p><img src="/img/ky/23.png" alt=""></p>
-<p><img src="/img/ky/25.png" alt=""></p>
-<p>原码、反码取值均是+0 — +127/-0 — -127，有正负的零区分</p>
-<p>补码没有区分两者，移码也不区分两者</p>
-<p>取反的含义是2^7-1-(…)，补码的含义是2^7-(…)</p>
-<p>移码就不多说了，真值+偏移量，建议用十进制描述过程，最后转为机器码(二进制</p>
-<p>移码和补码、原码的关系基本不大</p>
-<p><img src="/img/ky/22.png" alt=""></p>
-<p>2^7:10000000:      	128</p>
-<p>2^8-1:11111111:     255</p>
-<p>2^7-1:01111111:     127</p>
-<hr>
-<p>注，这里都是在对整数进行谈论，未涉及小数，但实际上也可以等同</p>
-<p>把小数位后面视作一样的参考值法，符号位也一样，无非就是改变了小数点的位置</p>
-<p>使得原先的10000000变成了0.10000000罢了，基本可以采用下面的方法求解</p>
-<p>对正数而言，原码、补码、反码取原值都很简单，直接求后面的数值就行</p>
-<p>对负数而言，求原码、补码、反码原值也很简单</p>
-<p>原码直接求原值加一个符号</p>
-<p>反码对后面直接求值然后用2^7-1-值即得出原值，加符号</p>
-<p>补码对后面直接求值然后用2^7-值即可求出原值，然后加符号即可</p>
-<p>或者如此图表示般理解为其的无符号码被2^8相减的结果</p>
-<p>A+B那么就是A补+B补，A-B那么就是A+（-B）补，这个相互转换需要理解</p>
-<p>不要去带符号思考，那样就容易绕进去了</p>
-<p>对下图需要注意下溢出的情况判断，后面自然会有讲三种方法</p>
-<p><img src="/img/ky/26.png" alt=""></p>
-<p>其中最麻烦的应该是移码，其是一个偏移量加上一个数的真值，然后用机器数表示</p>
-<p>注意这个机器数是不带符号的，就是解释为无符号数，这个一定要注意</p>
-<p>最简单粗暴也不会错的方法就是把这个真值给用十进制表示出，然后加上偏移量</p>
-<p>再用二进制无符号表示出来即可，就是将原来的0000000表达的0，变成了-偏移量而已</p>
-<p>同样，如果要反向求这个值，那么直接用二进制无符号解释转换为十进制</p>
-<p>然后把十进制的值减去这个偏移量自然得到了表示值</p>
-<p>真值转原码很简单，转反码也很简单，转补码基本也没什么问题</p>
-<p>考虑之间的一些转换，[x]补转[-x]补，只需要取反符号位，然后对数值位取反加一</p>
-<p>比较容易想明白，因为正数、负数补码第一位必然是不一样的，对数值位加一即可</p>
-<hr>
-<p>原码可表示小数，也可以表示整数，但一般在计算机中采用原码表示<strong>浮点数</strong>的尾数</p>
-<p>移码只能表示整数，注意</p>
-<p>补码应用非常广，也是最有效率的，ALU内的计算几乎全部依赖于补码，不论小数整数</p>
-<p>无非就是乘除法的时候会采用不同取模运算罢了，模四或者模二</p>
-<p>无符号数就不多说了，就是简单的机器数</p>
-<hr>
-<p>对于补码，真值、原码、移码、反码的全面总结，一共二十种</p>
-<p><strong>真值-补码</strong>：</p>
-<p>正数：即为正数转原码，原码补码相同，数值位高位补0</p>
-<p>负数：即为负数转原码，原码转反码，反码转补码</p>
-<p>最高位符号位定1，数值位高位补0转为原码</p>
-<p>除符号位最高位全部取反转为反码</p>
-<p>低位加一转为补码</p>
-<p><strong>真值-原码</strong>：</p>
-<p>正数：数值位高位补0</p>
-<p>负数：最高位符号位定1，数值位高位补0</p>
-<p><strong>真值-反码</strong>：</p>
-<p>正数：即为正数转原码，原码反码相同，数值位高位补0</p>
-<p>负数：即为负数转原码，原码转反码</p>
-<p>最高位符号位定1，数值位高位补0转为原码</p>
-<p>除符号位最高位全部取反转为反码</p>
-<p><strong>真值-移码(仅适用于偏移量为恰到好处的</strong>:</p>
-<p>正数：即为正数转原码，原码转补码，补码转移码，而原码补码相同</p>
-<p>即为正数转原码，原码补码相同，数值位高位补0，然后符号位取反</p>
-<p>负数：即为负数转原码，原码转反码，反码转补码，补码转移码</p>
-<p>最高位符号位定1，数值位高位补0转为原码</p>
-<p>除符号位最高位全部取反转为反码</p>
-<p>低位加一转为补码</p>
-<p>符号位取反转为移码</p>
-<p><strong>原码-真值</strong>：</p>
-<p>正数：即数值位，二进制真值</p>
-<p>负数：即负号加数值位，负的二进制真值</p>
-<p><strong>原码-补码</strong>：</p>
-<p>正数：即原码，原码补码相同</p>
-<p>负数：即原码转反码转补码</p>
-<p>除符号位最高位全部取反转为反码</p>
-<p>低位加一转为补码</p>
-<p><strong>原码-反码</strong>：</p>
-<p>正数：即原码，原码反码相同</p>
-<p>负数：即原码转反码</p>
-<p>除符号位最高位全部取反转为反码</p>
-<p><strong>原码-移码</strong>：</p>
-<p>正数：即原码转移码</p>
-<p>符号位取反</p>
-<p>负数：即原码转反码，反码转补码，补码转移码</p>
-<p>除符号位最高位全部取反转为反码</p>
-<p>低位加一转为补码</p>
-<p>符号位取反转为移码</p>
-<p><strong>反码-真值</strong>：</p>
-<p>正数：即原码转真值，正数反码原码相同</p>
-<p>即数值位，二进制真值</p>
-<p>负数：即反码转原码，原码转真值</p>
-<p>除符号位全部取反</p>
-<p>负号加数值位，负的二进制真值</p>
-<p><strong>反码-原码</strong>：</p>
-<p>正数：即原码，正数反码补码原码相同</p>
-<p>负数：即反码转原码，除符号位全部取反</p>
-<p><strong>反码-补码</strong>：</p>
-<p>正数：即原码，正数反码补码原码相同</p>
-<p>负数：即反码转补码</p>
-<p>末尾加一即为补码</p>
-<p><strong>反码-移码</strong>：</p>
-<p>正负数：符号位取反</p>
-<p><strong>补码-原码</strong>：</p>
-<p>正数：即原码，正数原码反码补码相同</p>
-<p>负数：即补码求原码</p>
-<p>除符号位全部取反，然后再加一，即对补码求一次补码得到原码</p>
-<p>补充:已知y补码，求-y补码</p>
-<p>-y补码=y补码连同符号位，各位取反，末位再+1</p>
-<p><strong>补码-真值</strong>：</p>
-<p>正数：即原码求真值，正数补码反码原码相同，即数值位，二进制真值</p>
-<p>负数：即补码转原码，原码转真值</p>
-<p>除符号位全部取反，然后再加一，即对补码求一次补码得到原码</p>
-<p>即负号加数值位，得到负的二进制真值</p>
-<p><strong>补码-反码</strong>：</p>
-<p>正数：即补码，正数原码补码反码相同</p>
-<p>负数：即补码转原码，原码转补码</p>
-<p>除符号位全部取反，然后再加一，即对补码求一次补码得到原码</p>
-<p>除符号位外再度取反得到反码</p>
-<p><strong>补码-移码</strong>：</p>
-<p>正数：符号位取反</p>
-<p>负数：符号位取反</p>
-<p><strong>移码-真值</strong>：</p>
-<p>直接将机器数转为十进制数，然后减去偏移量得到十进制真值</p>
-<p><strong>移码-反码</strong>：</p>
-<p>符号位取反得到补码</p>
-<p>正数：反码补码原码相同，即为反码</p>
-<p>负数：补码转原码，原码转反码</p>
-<p>符号位不变其他位取反，加一得到原码</p>
-<p>符号位不变其他取反得到原码</p>
-<p><strong>移码-补码</strong>：</p>
-<p>符号位取反得到补码</p>
-<p><strong>移码-原码</strong>：</p>
-<p>符号位取反得到补码</p>
-<p>正数：补码原码反码一样，即为原码</p>
-<p>负数：补码转原码</p>
-<p>符号位不变其他位取反，加一得到原码</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组3</title>
-    <url>/2024/03/28/%E8%AE%A1%E7%BB%843/</url>
-    <content><![CDATA[<p>基本数电知识补充：</p>
-<p><img src="/img/ky/27.png" alt=""></p>
-<p><img src="/img/ky/28.png" alt=""></p>
-<p><img src="/img/ky/29.png" alt=""></p>
-<p>加法器简单知识（不必深究），可见加法器、并行进位加法器篇章</p>
-<p>基本原理：</p>
-<p><img src="/img/ky/32.png" alt=""></p>
-<p>可构建：</p>
-<p><img src="/img/ky/33.png" alt=""></p>
-<p>串联后可构建：</p>
-<p><img src="/img/ky/34.png" alt=""></p>
-<p>注意进位需要上一次运算完成后才能判断，因而串联效率不高</p>
-<p>而进位实际上可以在一开始就算完，后面一次性给出，因而就可以构建并行加法器</p>
-<p><img src="/img/ky/35.png" alt=""></p>
-<p><img src="/img/ky/36.png" alt=""></p>
-<p>这边才是核心内容，需要了解其各端口表示什么，不必追求死磕原理</p>
-<p>虽然原理后面学下去也能懂就是了</p>
-<p><img src="/img/ky/37.png" alt=""></p>
-<p>注：加法器是ALU的核心器件</p>
-<p>MUX（多路选择器：</p>
-<p>若是八个输入端则需要3位二进制来表达不同的输入端口号</p>
-<p>本质是用二进制表达其端口号，控制信号即为指定该位置的输入可进入</p>
-<p>注：有时候可能会多一个控制信号单独表示什么都不选择，那么就需要不止三位信号</p>
-<p>或者拿一个空端口作为一个补充也可以实现同样功能，具体再议</p>
-<p><img src="/img/ky/30.png" alt=""></p>
-<p>三态门，区分于非门，当op为1时允许通过，当op为0时禁止信号通过</p>
-<p>op只需要一位即可，因为一位就是二进制的0和1两种状态，可以拥有非运算的特性</p>
-<p><img src="/img/ky/31.png" alt=""></p>
-<p>电路基本不怎么考，上面的内容知道即可</p>
-<hr>
-<p>ALU：</p>
-<p>核心是参考了MUX的多路选择需要的位数</p>
-<p>以及需要注意的是ALU、通用寄存器组的宽度位数即为机器字长</p>
-<p><img src="/img/ky/38.png" alt=""></p>
-<p>移位，向右或者向左移位</p>
-<p>对正数来说其原码、补码、反码都一致，因而移位所有进程都是一样的补0</p>
-<p>需要注意的就是此类符号位不参与移动</p>
-<p>对负数来说，其原码补充也是0，但因为反码全部取反，因而用1补，补码见下</p>
-<p><img src="/img/ky/41.png" alt=""></p>
-<p><img src="/img/ky/39.png" alt=""></p>
-<p>可应用于乘法或者除法：</p>
-<p><img src="/img/ky/40.png" alt=""></p>
-<p>逻辑移位不需要考虑符号位因为没有符号位</p>
-<p><img src="/img/ky/42.png" alt=""></p>
-<p>循环而言，注意下进位位，主要是对超过八位二进制相加得出的一个进位位的存储</p>
-<p>循环就是把第一个数扔到后面，其他的前进一位，带进位位的无非是把进位位也做数</p>
-<p>相当于移动而已，循环移动，实在不记得去看动图就行</p>
-<p><img src="/img/ky/43.png" alt=""></p>
-<p>注意下移位溢出只有两种情况：</p>
-<p>一种是无符号逻辑移位溢出(或者说解释为逻辑移位时的溢出，只存在于高位的1被移出</p>
-<p>一种是有符号的算数移位溢出，即符号位移出后数值位最高位和其符号位不同</p>
-<p>另外两种移动只能被称为丢失精度，尤其特指低位的1被移出</p>
-<p>补码加减法：</p>
-<p>补码内只有加法，对于减法只需要把减数变为其补码形式然后变为相加即可</p>
-<p>相加得出的结果是原码，带符号原码，可以直接转为值</p>
-<p>注意溢出情况的判断，基本的判断情况就是两个相同符号的数相加得到了不同符号的数</p>
-<p>正+正得到一个负数那么就是上溢，负+负得到一个正数那么就是下溢</p>
-<p>又称为正溢、负溢</p>
-<p>那么这个就是溢出的情况，后续一系列判断方法均以此为思想</p>
-<p>因为只有两种情况，正+正=负，负+负=正，比较容易理解和写出的，异号不可能溢出</p>
-<p><img src="/img/ky/44.png" alt=""></p>
-<p>其实均理解为一个是原先的符号相加应该得到的符号结果</p>
-<p>一个是后续数值相加后得到的符号结果，若两者不同那么说明就算溢出了</p>
-<p>可以这样理解，毕竟以应用为主</p>
-<p><img src="/img/ky/45.png" alt=""></p>
-<p>这个也是基于和上面一样的逻辑，后面一位存储的是相加的符号位结果</p>
-<p>前面一位存储的是符号位原来的结果，两者如果不一样那么肯定是溢出了</p>
-<p>稍微注意下除二、除四取模，指代1000截断第三位、第二位以后的结果即为取模</p>
-<p>因为后面的一段和必然小于4或者2</p>
-<p><img src="/img/ky/46.png" alt=""></p>
-<p>注意下无符号数的范围是零和全体正数，当相减为负数或者相加超过上限就会溢出</p>
-<p>另外，二进制加法并不熟练，建议多练习（建议单独去练习</p>
-<p>后续原理未知，加法、减法溢出逻辑暂时不知晓</p>
-<p><img src="/img/ky/47.png" alt=""></p>
-<p>补码加减电路，带符号：</p>
-<p><img src="/img/ky/48.png" alt=""></p>
-<p>注意下多路选择器以及Cin的一些逻辑处理，这块很巧妙</p>
-<p>同样可以处理不带符号的，注意需要省略最高位，只保留有效位</p>
-<p><img src="/img/ky/49.png" alt=""></p>
-<p>结合标志位的生成品尝，尤其是看几个溢出判断是怎么来的，电路很巧妙</p>
-<p><img src="/img/ky/37.png" alt=""></p>
-<hr>
-<p>原码、补码乘法/除法：</p>
-<p><img src="/img/ky/5.png" alt=""></p>
-<p>注，二进制加减法成为最基本的运算手段，必须熟练掌握</p>
-<p>原码乘法：</p>
-<p>不需要作任何准备工作，只需要把原码所对应的无符号相应存储码表示即可(机器字长</p>
-<p>建议手算模拟的时候写作ACC、MQ、X，Y的形式，便于直接移位的判断</p>
-<p>首先是，原码而言，符号位不参与乘法过程，直接单独用异或进行单独的判断</p>
-<p>最终两个乘法数都是无符号数的形式，注意乘数存于MQ中，被乘数存于X中</p>
-<p>口头描述过程：</p>
-<p>一开始将ACC置空</p>
-<p>然后根据MQ的最后一位决定是做ACC+X-&gt;ACC还是直接移位(0对应先+0然后再移位，省略</p>
-<p>然后ACC、MQ整体右移，ACC最高位补0</p>
-<p><img src="/img/ky/50.png" alt=""></p>
-<p>个人建议而言，其实后面的符号位0还是尽可能写上并且作标注，免得忘记哪个是位</p>
-<p>然后结果也就是这样了，最后MQ内还有最后一位乘数符号位的存在，这样就算是结束了</p>
-<p>把结果和余数相加(余数指MQ内除符号位的其他位，然后小数点放在正确位置，改符号</p>
-<p>对于整数而言也是一样的，无非就是改变小数点的位置，除非是溢出，那么需要关心下</p>
-<p>PS：如果是一个1000.0101乘1010.1101的形式，总体也是不变的，无非改为了两次</p>
-<p>对整数一次，对小数一次，最终的结果相加即可(注意符号</p>
-<p>补码乘法(BOOTH算法：</p>
-<p>对于补码乘法需要的准备工作，求出x、y相对应的补码，以及-x的补码(被乘数补码</p>
-<p>建议手算模拟的时候写作ACC、MQ、X补，-X补，Y补的形式，均为双位符号位</p>
-<p>注：乘法是会产生进位的，这边是逻辑移动，首位的进位也是需要移动的</p>
-<p><img src="/img/ky/51.png" alt=""></p>
-<p>口头描述其过程</p>
-<p>首先写好辅助位，ACC前面两位辅助位为符号位重复，MQ最后一位辅助位初始为0</p>
-<p>开始操作，拿MQ最后一位符号位减去MQ最后一位，得到三种结果1/-1/0</p>
-<p>当为0的时候那么就直接右移一位，注意这边是算数右移，符号位不变，符号位填补空</p>
-<p>当为1的时候那么就直接加x补，如果出现最高位溢出的情况，直接舍弃最高超出位</p>
-<p>注意这个需要带着符号位一起参与运算，运算完了以后再向右移动，算数右移</p>
-<p>当为-1则是加-x补，其他都是一样的</p>
-<p>最终最后一个符号位也需要参与运算的，同样按照上述规则</p>
-<p>但可以放弃其的移动，因为计算已经完毕，最终把除符号位的余数加在前面补码后面</p>
-<p>注意最终得到的结果也是一个补码</p>
-<p>注意，符号位的高位右移动是填充符号位的</p>
-<p>无符号数乘法</p>
-<p>大体上过程是类似的，无非是第一位也是数值位，因而需要一个多余的进位寄存器</p>
-<p>也就是32位的，实际上需要33位，一位寄存器，右移的时候顺便也要把进位的移动进去</p>
-<p>寄存器移动默认补0（应该是</p>
-<hr>
-<p>补码、原码除法后续有空会继续补上的…尤其是加减交替法</p>
-<p>原码的恢复余数法，建议直接手除算出答案以后，根据答案结果对过程进行判定</p>
-<p>因为机器每次都是商一不会商0，因而每次商0必然会是先加-x补然后加x补的复原过程</p>
-<p>机器而言</p>
-<p>ACC放被除数，MQ放商，X放除数，依据无符号计算，符号位留到最后计算</p>
-<p>每次计算完成后都会去判断这个值是否为负数，如果是负数那么就会恢复原值商0</p>
-<p>然后再整体向右边移动一位，商的最后一位每次都是需要求的位置</p>
-<hr>
-<p>都是需要拓展的，因为加减乘除不一定是同位相加</p>
-<p>对于整数部分，对高位拓展，对于小数部分，进行低位拓展</p>
-<p>基本都是N位和2N位运算的可能性(其他应该也可以拓展</p>
-<p>对于定点数而言，非原码，单纯的无符号数</p>
-<p>小数点前的，向着高位拓展，补0</p>
-<p>小数点后的向着低位拓展，补0</p>
-<p>对于原码而言，除去符号位，数值位高位拓展补0，小数位低位拓展补0</p>
-<p>对于补码而言，有一定的区别，正数的补码和其原码一样所以步骤也一样</p>
-<p>对于负数略有区别</p>
-<p>注意需要区分左移和右移</p>
-<p>对于负数整数位，高位拓展用符号位拓展</p>
-<p>对于负数小数位，低位拓展用零拓展即可，至于原理暂未…</p>
-<p>PS:注意区分拓展和移动(又要区分算数移动和逻辑移动</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组4</title>
-    <url>/2024/03/30/%E8%AE%A1%E7%BB%844/</url>
-    <content><![CDATA[<p>规格化：</p>
-<p>不论补码还是原码表示法，均是小数，其中小数点前一位是符号位，后面才是数值最高位</p>
-<p>左规，一般情况不论原码还是补码均是补0，同时阶码变小，因为小数点右移</p>
-<p>在因为右移导致一些有效位出去的情况下，需要把有效位保留并移动回原来的数内</p>
-<p>左规这里不需要担心溢出，因为顶多是下溢，机器是将其视作为零的</p>
-<p>右规，指代尾数有效位进位到小数点前，可能导致符号位的溢出，同时也需要保留进位</p>
-<p>右规是指代小数点左移，会导致阶码变大</p>
-<p>进行一次全体右移，把原符号位补回，同时需要进行两个判断</p>
-<p>第一个就是是否右规导致阶码溢出，如果溢出那么就没救了，直接不用干了</p>
-<p>第二个就是因为右规会有低位的舍弃，此时需要进行舍入，可能也会导致尾数变大进位</p>
-<p>这时候就可能再次右规，可能又会产生阶码的溢出</p>
-<p>简单来说，就是数值位溢出其实没什么事情，可以依靠阶码变大来弥补</p>
-<p>如果阶码溢出，那么是真没救了</p>
-<p>注意下补码、原码的规格化判断有一定的不同，主要在于数值位的表示法上</p>
-<p><img src="/img/ky/62.png"></p>
-<p>另外注，基数不同的情况下的特殊处理</p>
-<p>首先就是基数扩大，那么每次移动的位数自然也会变化，也要看是几进制的数再说</p>
-<p>基数扩大，那么最终规格化的表示也会有所不同，但核心应该是一样，就是阶码再进一位</p>
-<p>那么就会导致尾数的溢出</p>
-<p>例如0.01、0.10、0.11，在基数为4的情况下，再度进行移动就会溢出(向前移动两位</p>
-<p>0.001这类，在基数为8的情况下，再度进行前移一个阶码(3位，就会溢出</p>
-<p>规格化的目的其实就是在能够存得下的情况下，使得最高有效位是一个有效数字</p>
-<p>在对阶里面右规出去的是不舍弃的，依旧进行保留，包括左边进位出去的也是保留的</p>
-<p>例题1：</p>
-<p><img src="/img/ky/59.png"></p>
-<p>例题2：</p>
-<p>此时的B就很明显导致了一位的溢出无法存储，但如果规格化就能解决这个问题</p>
-<p><img src="/img/ky/60.png"></p>
-<p>双符号位的规格化解释例题：</p>
-<p><img src="/img/ky/61.png"></p>
-<p>IEEE模型特殊性：</p>
-<p>注：IEEE特殊实际上在于其定下阶码用移码存储，尾数用原码表示</p>
-<p>且移码的偏移量是规定为2^7-1，2^10-1，依据单双精度区分</p>
-<p>同时尾码的数值位最高位采用的是隐含第一位的取法(因为第一位一定是1</p>
-<p>阶码的移码表示，注意其不同于补码、原码，是真值加上偏移值得出的机器数</p>
-<p>因而假如要得出其值，那么就是安心求出机器码，然后减去偏移量得出真值</p>
-<p>没有符号位这一说法的</p>
-<p>对于小数的原码存储法，那么就是.XXXXX….没有符号位的存储位在，共23&#x2F;52位</p>
-<p>但需要注意其特殊性就在于数值位隐含了第一位，所以在反求其值的时候，需要把1带回</p>
-<p>然后即为原码求法，同样，IEEE里面的尾数也是没有符号位的，符号位在最开头</p>
-<p>只能说是以正数的原码形式存储，同时应是没有存储小数点前一位的，只有小数点后</p>
-<p>所以通过尾数求值，直接补上第一个一，然后求这个1.XXXX的值是多少，XXX是尾数</p>
-<p>注，考试大概率并不考察IEEE，基本是以选择的方式来考察，不会考模拟</p>
-<p>所以几个特性需要清晰：</p>
-<p>首先就是阶码表示范围是多少，再就是真值的表示范围是多少</p>
-<p>其结构是怎么样的，要会分析</p>
-<p><img src="/img/ky/54.png"></p>
-<p>十进制转换例题（最少也有三十二位，你写那么多个0试试</p>
-<p><img src="/img/ky/55.png"></p>
-<p>这个也是十六位表示法，写成二进制不敢想象</p>
-<p><img src="/img/ky/56.png"></p>
-<p>这里就是其表示范围</p>
-<p><img src="/img/ky/57.png"></p>
-<p>另外特别注意一些特殊表示法的含义(记忆为主，理解为辅：</p>
-<p>而且正是因为有了这些特殊解释的原因，正常所能得到的阶码最高值是254、2046</p>
-<p><img src="/img/ky/58.png"></p>
-<p>浮点数的加减运算(IEEE模型、其他模型):</p>
-<p>首先根据一般的十进制浮点数的加减法的过程引出方法</p>
-<p><img src="/img/ky/52.png"></p>
-<p>首先是需要把同类型(计算机、考察一般都是补码，很少用原码考察)用码值表示出来</p>
-<p>这里可以提前观察是加法还是减法，如果需要是减法直接把Y改为-Y补码展现</p>
-<p>注意尽可能写出来规格化的状态，这样后续也方便计算的</p>
-<p>然后阶码其实根本没必要急着就写掉，完全可以最后一步写，这样方便</p>
-<p>然后注意表达出来以后就要进行阶码的对齐，遵循小向大靠的原则，小阶码扩大</p>
-<p><img src="/img/ky/39.png"></p>
-<p>同时小阶码所对应的尾数部分右移一位，然后这里注意，因为是不同的码态</p>
-<p>对于补码而言，分正负的</p>
-<p>正的不论左移还是右移，低位、高位补的均是0</p>
-<p>对于负数而言，左移低位补的是0，右移高位补的是1</p>
-<p>当然在浮点数加减法内只谈论右移而不会考虑左移的可能性，因为左移不被允许</p>
-<p>另外，如果在低位右移出后，需要把这个低位保留下来而不是直接去除，需要注意</p>
-<p>如果是原码，那么就是高位补的0，也没有什么特别需要说的，也是保留低位</p>
-<p>然后在对齐了以后，开始进行尾数的加减法(减法就是取另外一个数的-x补进行加法</p>
-<p>IEEE中需要特别注意尾数前面还有一个隐藏位，其他的比较佛系但也要看情况</p>
-<p>在一般情况，都会给定数符几位、尾码几位的，而不是和IEEE一样在尾码没有数符位</p>
-<p>同时最高位还是隐藏的，不一样，要区分</p>
-<p>写法可能就是.11111与11.111111的差别之分了，对于IEEE我也是刚刚才意识到 </p>
-<p>在加减中对高位的进位也是需要保留，否则后续就没有办法规格化</p>
-<p>进行加减后，就要再度进行规格化</p>
-<p>规格化就更加麻烦一些，需要根据补码、IEEE、原码三种情况进行区分</p>
-<p>IEEE最好写做双符号位，因为数值位第一位是会隐藏的，第一位符号位，第二位数值最高</p>
-<p>补码、原码的话按照这个准则，我只能说非常容易做错，第一位是作符号位</p>
-<p>注意最终必须要规格化到原码、补码相对应的规格化状态，不能出现一点不符合的</p>
-<p>右规倒还能搞清楚，只需要保证符号位、最高位回归原位就行</p>
-<p>左规就有点难以记住，但一定要参考这个状态去做，其实现在也可以理解</p>
-<p>如果产生了符号位进位和最高位进位不同的情况，即双符号位一个1一个0，那么就溢出</p>
-<p>那么就是要卡着这个溢出点：1.01XXXX…</p>
-<p><img src="/img/ky/62.png"></p>
-<p>右规是小数点左移，阶码扩大，左规是小数点右移，阶码减小</p>
-<p>可能需要进行左规或者右规，右规往往是尾码溢出，这边会有个符号位也顺便被进位丢出</p>
-<p>这个是不能丢的，和之前一样，需要保留下来，在右规的时候重新放回去</p>
-<p>这里就要去判断这边有没有可能产生阶码的溢出</p>
-<p>同时最后移除的一位也可能并不是0，或者一开始对阶的时候就有多余项，需要舍入处理</p>
-<p>舍入处理自然是可以有多种的，具体看题目的选择，书上几个需要知道记住的</p>
-<p>在舍入后，同样需要考虑是否会产生进位，再度右规阶码溢出的问题</p>
-<p><img src="/img/ky/52.png"></p>
-<p><img src="/img/ky/53.png"></p>
-<p>总体来说是非常麻烦的，建议多加训练、观阅</p>
-<p>左移、左规，尾数增大，只考虑数值位的移动，阶码因而减小，小数点后移</p>
-<p>右移、右规，尾数减小，只考虑属植物的移动，阶码因而扩大，小数点前移</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组5</title>
-    <url>/2024/04/01/%E8%AE%A1%E7%BB%845/</url>
-    <content><![CDATA[<p><img src="/img/ky/63.png"></p>
-<p>略微关注下其中的存储器分类，尤其是除存储介质的后面几个，书上都有，多去看</p>
-<p>都是偏概念的东西，常见的东西、英文名出来需要知道它是属于哪个类别的，到时候整理</p>
-<p><img src="/img/ky/72.png"></p>
-<p>补充下层次结构，书上基本都有，不多赘述</p>
-<p><img src="/img/ky/64.png"></p>
-<p>注意下层次结构里面最高还有一个寄存器的存在，别忘了这个在CPU内存在</p>
-<p>关于命中率，先从cache里面找，再去内存里面，再去外存里面</p>
-<p>这是一个概率问题，越是上层的内容存储的越是经常被调用的东西，下层的访问概率很低</p>
-<p>所以容量越来越小、速度越来越快、上面的命中率也会非常高</p>
-<p>寄存器、Cache、主存都可以直接被CPU访问，相关的操作由硬件还是软件结合见上图</p>
-<p>另外，CPU的速度是远远快于存储器的存取周期的</p>
-<p>关于寻址：</p>
-<p><img src="/img/ky/70.png"></p>
-<p><img src="/img/ky/71.png"></p>
-<p>一般可以这样理解，按字节编址，意思就是把多位存储元视作一个存储单元</p>
-<p>即，给一个存储单元一个地址，这个地址实际上也就分配了该存储单元所占用的存储元</p>
-<p>一个字节就是8位&#x2F;8个存储元视作一个存储单元，这里当然是默认存储元是一位二进制的</p>
-<p>图内谈论的实际上是存储单元矩阵，将多个8位的存储单元视作一个单元，本质一样</p>
-<p>例如按字节寻址那么每个单元就是8位</p>
-<p><img src="/img/ky/65.png"></p>
-<p>简单理解就是存取时间其实比较短，但是因为后续需要恢复，所以周期比较长，冷却时间</p>
-<p>存储容量这边，实际上是存储单元的个数乘每个单元存了几位得到的内存</p>
-<p>其中这个位，一般而言MDR的位数就是这个位数，引脚数、数据通路数也是这个数</p>
-<p>MDR的大小不一定和存储字长一样，因为数据带宽也不一定一样，每次或能取好几个单元</p>
-<p>例如，以字节编码，那么就是8位一个单元，字长编码，那么32位机器就是32位一个单元</p>
-<p>存储速度的计算那边，需要注意单位转换，这边历来是考察重点，书上题目多看</p>
-<p><img src="/img/ky/16.png"></p>
-<p>关于SRAM&#x2F;DRAM的差别，首先RAM是随机读取存储器的简称，S是静态，D是动态，英文</p>
-<p>静态采用的是稳态电路，只要不断电那么电荷就不会出现漏出的情况，所以不必刷新的</p>
-<p>而动态采用的是单晶体管，所以会产生漏电荷的事情，所以就需要刷新来解决</p>
-<p>一方面是每次读写，都会破坏这个晶体管电容的电荷量，所以每次读写都需要对单个刷新</p>
-<p>读、写两种操作都会导致电荷量的变化，就需要去单个行重写一次，读后刷新</p>
-<p>一方面是一段时间内电容也会漏电出去，所以必须间隔一段时间全部刷新一次</p>
-<p>一般默认为2ms，单位运算</p>
-<p><img src="/img/ky/66.png"></p>
-<p>因而自然引出三类不同的刷新策略</p>
-<p>都是字面意思</p>
-<hr>
-<p>另外就是主存而言，其的存储量一般是比较大的，所以如果采用非行列存储，引脚非常多</p>
-<p>但即使采用了行列存储，地址位也仍然很多，所以需要采用引脚复用，Cache就没这种烦恼</p>
-<p>即，先写入行信号，再写入列信号，中间会有延迟，这边还有一点小细节</p>
-<p>需要在行选中信号前把行信号给输入到引脚，同样也需要把列选中信号前把列信号给引脚</p>
-<p>在行信号选入后，需要保持这个行选中信号直到使用以后为止</p>
-<p>而列选择信号是在行选择信号之后再输入的，在列选择信号之前需要给定读写信号</p>
-<p>在列选择信号也进入后，那么三个信号就齐全了：行、列、读写，就可以用了</p>
-<p>不过不怎么考，佛系即可</p>
-<hr>
-<p><img src="/img/ky/67.png"></p>
-<p>Cache因为存量并不大，所以没必要采用复用引脚，本身就没几个引脚，一次性给定的</p>
-<p>SRAM本身就是静态，含义即为非破坏性读出，读出后自然不需要重写，不用刷新</p>
-<p>只读存储器：</p>
-<p>没太多东西，全都是概念，记住是ROM即可</p>
-<p>判断ROM芯片和RAM芯片最本质的特征其实就是看它，到底会不会断电后还保存</p>
-<p><img src="/img/ky/68.png"></p>
-<p><img src="/img/ky/72.png"></p>
-<p>另外就是在计组中谈到的主存通常指代ROM(BIOS芯片)+RAM，采用统一编址的方式</p>
-<p>多模块存储器：</p>
-<p>至于单体，了解即可，需要知道其是总线M个字宽、每个存储单元M个字大、一次取M个字</p>
-<p>即每次取一个存储单元(当然其实也就是一行</p>
-<p>如果指令、操作数都是连续存放的，那么一次性就能取出来全部的</p>
-<p>如果不是连续存放的，不仅每次为了取那么一短段数据需要取一长串出来更浪费</p>
-<p>而且还需要访问多行(多个存储单元进行存取，在不连续的情况下更加浪费时间</p>
-<p><img src="/img/ky/69.png"></p>
-<p>采用高位交叉编码的，高位是体号，低位是体内地址，体和体之间是顺序的</p>
-<p>即体1：0到N-1，体2：N到2N-1…</p>
-<p>虽然理论上可以四个存储器一起使用，同时取不同地址的数，但因为CPU大多是顺序存取</p>
-<p>所以基本等于只是扩容，而无并行使用，没有拓展吞吐量</p>
-<p>采用低位交叉编码的，高位是体内地址，低位是体号，体和体之间的序号要区分</p>
-<p>这个因为实现了连续地址存放在不同的存储器，而且CPU大多数是顺序存取</p>
-<p>所以基本能完美拓展效率</p>
-<p>地址&#x2F;总体数&#x3D;体号，通常是四体，同时一般说下，四体默认也就是T&#x3D;4r（冷却&#x3D;4存取时间</p>
-<p>轮流启动的话，就可以实现完美利用并行的效率，因为一个读完还要冷却</p>
-<p>但是如果是顺序读取，顺序的下一位在另外一个存储器，只需要继续读下去即可</p>
-<p>不过需要满足一点，就是在第一个存储器已经冷却完了再去读取它</p>
-<p>这样就和冷却时间、读取时间联系起来，读取时间乘N&#x3D;冷却时间，就能让其完美运行</p>
-<p>不过如果是一个还在冷却就去读取，那么只能等它冷却完了再读取</p>
-<hr>
-<p>另外谈下一块存储器的组成：</p>
-<p>一般是由多块存储芯片组成的，存储芯片在逻辑上以矩阵的多维存储为主</p>
-<p>因而每次选中一行，实际上是选中了多维的一行，一列，实际上也是多维度的一列</p>
-<p>多个存储芯片在逻辑上是重叠起来的</p>
-<p>因而就必须有片选线的存在，否则根本不能清楚是选哪个位置</p>
-<p>即使是只选那么一行，其实也是多维的一行，一个点，也是多维的一个重叠点</p>
-<p>所以行缓冲器存的就是多位面的一行信息，列缓冲器也是同样的，多位面，特指输出时</p>
-<p>SDRAM和DRAM的区别就是CPU可以闲着或者CPU不能闲着的区别</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组6</title>
-    <url>/2024/04/02/%E8%AE%A1%E7%BB%846/</url>
-    <content><![CDATA[<p><img src="/img/ky/73.png"></p>
-<p>先谈位拓展，位拓展是一个必须的操作，如果存储字长没CPU数据总线那么长，必须拓展</p>
-<p>位拓展的本质就是把一个二进制数分到了多个存储芯片的同一地址内存储</p>
-<p>所以也是能看到地址总线是接到每一个芯片上面的</p>
-<p>即将N位变成了N&#x2F;M1·M位</p>
-<p>这里的话，不需要区分片选信号，因为所有片都需要提供某几位二进制数的位</p>
-<p>所有都需要工作</p>
-<p><img src="/img/ky/74.png"></p>
-<p>字拓展实际上相当于把原先的64K变为了16K+16K+16K+16K的形式</p>
-<p>而这里不必要修改输出的位数，因而就直接连接即可，不过需要单独区分选片信号</p>
-<p>然后每次根据不同的地址信号去选取不同的存储芯片即可，这里又衍生出两类信号选择法</p>
-<p>一类是用某一位去选择一块芯片，并且为了防止选中别的芯片，只能这一位有效</p>
-<p>其他位必须都是无效的，这个就是线选法，一般称CPU地址高位为选择地址位(虚拟位</p>
-<p>低位的话就是片内选地址了，低位都是和芯片接着的，数目一样</p>
-<p>所以说这个非常浪费，8个芯片就需要8个引脚，明明依靠值选择就可以3个引脚解决的事</p>
-<p>一类就是译码片选法，一般采用一个MCU来进行输出选择，这里就是三个引脚解决的事</p>
-<p>值选择，而非位选择，利用率高</p>
-<p>这两种考起来的区别还是比较明显的，注意点</p>
-<p>另外么，就是因为CPU引脚实在多的要死，所以可能会空几位出来</p>
-<p>把13、15做选择位，14空着，但给信号的时候14依旧会给信号，无非没什么用罢了</p>
-<p><img src="/img/ky/75.png"></p>
-<p>字位拓展，一般是为了充分利用CPU引脚吧，一般而言就算CPU引脚不满也是没有事情的</p>
-<p>内部采取位拓展，多个芯片重叠，每个芯片提供某几位数值位，叠加出为数据通路的宽度</p>
-<p>外部采取字拓展，将每个部分视作一块芯片去做字拓展</p>
-<p><img src="/img/ky/76.png"></p>
-<p>译码器而言，基本不怎么考，主要是和CPU有一个MERQ信号相关，所以谈几句</p>
-<p>MREQ信号是为了送出地址信号以后，让地址信号先稳定，然后再使能译码器，使得选中芯片时</p>
-<p>片内地址的选中一定是稳定的</p>
-<hr>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组7</title>
-    <url>/2024/04/03/%E8%AE%A1%E7%BB%847/</url>
-    <content><![CDATA[<p><img src="/img/ky/77.png" alt=""></p>
-<p>一些乱七八糟的概念，考察概率不高</p>
-<p><img src="/img/ky/78.png" alt=""></p>
-<p>说几个名词，一个磁盘存储器往往有多个磁盘，连接在一根主轴上</p>
-<p>每个盘都会对应一个读写磁头，也称为磁头数、记录面数、磁盘数等，是三维坐标</p>
-<p>磁道数，指每个磁盘一圈圈绕出去的磁道数量，多个磁盘叠加起来就是柱面，也称柱面数</p>
-<p>磁道和磁道间不是完全相连的，是有空隙保证精度的，磁道内也不是连续的，是分扇区的</p>
-<p>一个磁道就有多个扇区，一个磁盘的扇区数量是固定的，每个扇区都是对应的一个角度</p>
-<p>然后就是补充内容，每圈磁道的存储内容大小完全相同，因而从外到内存储密度增加</p>
-<p>扇区是磁盘读取的最小单位，也称为块</p>
-<p>磁盘性能指标上</p>
-<p><img src="/img/ky/79.png" alt=""></p>
-<p>非格式化容量=磁盘数量·磁道数量·每个磁道所蕴含的可用磁化单元数</p>
-<p>格式化容量=磁盘数量·磁道数量·磁道扇区数量·每个扇区容量，感觉还是有区别</p>
-<p>格式化容量小于非格式化容量</p>
-<p>一般只考计算，尤其是数据传输速率和平均存取时间</p>
-<p><img src="/img/ky/80.png" alt=""></p>
-<p>对于磁盘地址，记住需要确定坐标的值：磁盘存储器号、磁盘号、角度(扇区、R(磁道数</p>
-<p>存取时间的计算应该没什么问题，就是套公式</p>
-<p>数据传输率这边其实可以改很多东西出来，变体，但记住几个关系</p>
-<p>一个磁道有多个扇区，多个不同磁道的存储大小一样，扇区的存储大小也一样</p>
-<p>可能会按角度算吧，这边注意点</p>
-<p><img src="/img/ky/81.png" alt=""></p>
-<p>至于磁盘阵列，记住第一个是类似多体读取的，读完一个读另外一个，再读另外一个</p>
-<p>这样效率就会高一些，毕竟每次磁盘只能读一个bit</p>
-<p>后面基本就是对应不同的存储冗余备份策略了，海明码4:3存储冗余比，镜像1:1</p>
-<p>这边书上的内容基本足够详细简单，没必要多浪费时间了</p>
-<p>SSD固态硬盘，基于闪存芯片，这里已经完成介绍了</p>
-<p><img src="/img/ky/82.png" alt=""></p>
-<p>结构上面比书上写的好，这里谈到了闪存芯片组的可能性</p>
-<p><img src="/img/ky/83.png" alt=""></p>
-<p>关于均衡磨损的计算方法</p>
-<p><img src="/img/ky/84.png" alt=""></p>
-<p>其他更细的内容建议看书为主</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组8</title>
-    <url>/2024/04/03/%E8%AE%A1%E7%BB%848/</url>
-    <content><![CDATA[<p>局部性原理的本质实际上是对CPU预测的一种解释</p>
-<p>空间局部性是指CPU会对这个数据周围，尤其特指数组、向量、指令集等集合数据提前预读</p>
-<p>为了定义这个周围，往往采用将主存分块(地址上虚拟，解释方法不同分块)</p>
-<p>然后将这个周围的数据放在Cache里面</p>
-<p>时间局部性是指CPU会对循环内的当前执行的这个数据进行存留，以备下次的继续使用</p>
-<p>包括循环内执行的指令、操作数，基本都会进行存留，下次取用的时候也就会方便一些的</p>
-<p>这些都会存于Cache中，通过预测方式得到了高命中率</p>
-<p>另外，性能分析那边，又到了文字游戏：提高了多少，提高了几倍，提高到几倍….</p>
-<p><img src="/img/ky/85.png"></p>
-<p><img src="/img/ky/86.png"></p>
-<hr>
-<p>比较器么，书上写的比较模糊，但大致上应该是在说这样</p>
-<p>直接映射是一个就够了，全相联就要N个，而组内就只需要组内可能是其存放的数量R个</p>
-<p>一个块，可能在Cache里面存放在多少个位置上，就要多少个比较器</p>
-<p>PS:</p>
-<p>主存的块被称为“页、页面、页框”，Cache的块被称为是“行”</p>
-<p>然后说几句吧，即使是块内，也是有多个地址对应多个数据行存储的，所以才要组内地址</p>
-<p>主存和CPU交互是以机器字，而和Cache交互是以块为单位</p>
-<p>主存地址是不会改变的，只是CPU在根据不同的映射法对应解释为不同的意思罢了</p>
-<p>这里谈下一个容易混淆的点，主存地址、Cache位数</p>
-<p>首先明确下，主存在三种不同映射模式下的地址解释方法，注意是解释方法</p>
-<p>直接映射：标记位+行号位+组内地址</p>
-<p>全相联映射：标记位+组内地址</p>
-<p>N路组相联映射：标记位+组号地址+组内地址</p>
-<p>然后再说下这几个怎么算</p>
-<p>一般会给定主存的物理地址长度，所以总长往往是能够确定下来的</p>
-<p>按某种编址方式，意思是多少位作为一个存储单元的大小，字节就是8位一个单元</p>
-<p>字就是一个字一个单元，然后这样一个存储单元分配给一个地址</p>
-<p>一个块大小给出以后，那么除去一个存元的大小就能得出有多少个存元一块</p>
-<p>自然也就得出了需要多少位二进制才能分配完这N个存元的地址</p>
-<p>如32B一块，按字节编址，那么就是8个存元，那么就是3位二进制地址，三位组内</p>
-<p>注意下，因为主存块和Cache块大小是一样的，因而给定哪个块都能算出来</p>
-<p>然后再说相对应的行号、组号，这个就是分多少行，多少组的问题了</p>
-<p>对直接映射就是有多少块，然后需要多少位二进制来表示那么多个块，32块就要5位</p>
-<p>对组号，就是求出Cache一共有多少组就行，例如二路，32B一块，64KB数据大小</p>
-<p>那么就可以分为2^11块，2^10组，那么组自然也就占了十位，直接映射反正没有这个位</p>
-<p>然后在算出上面两个以后，自然就得出了主存物理地址中对应的标记位长度</p>
-<p>然后再谈Cache的位数组成，一般谈的是总容量，数据大小是单纯的块大小·块数</p>
-<p>有效位+脏位+LRU替换位+标记位+数据位(32B就是32·8&#x3D;256位，这里谈的是以bit作单位</p>
-<p>有效位一位，必有，脏位仅当采用回写法的时候会有，一位</p>
-<p>LRU替换位，直接映射肯定是没有的，因为直接映射是直接替换的，不考虑替换位存在</p>
-<p>只有全相联和组相联会有，一般是logN(N是一组有多少个)</p>
-<p>而一般只出现于组相联中，全相联据目前状态来说还没有谈过，但应该是视作一整组</p>
-<p>另外就是标记矩阵的行需要和一般Cache中谈的行(也就是块，相区分</p>
-<p>Cache中谈一行那么肯定就是在谈这样一块，不会有更多的歧义</p>
-<p>但标记矩阵中就不一定，一行可能是多个标记位，例如组相联那么一行就有组号个标记位</p>
-<p>全相联一行就会有N个标记位</p>
-<hr>
-<p>这里谈几个点：</p>
-<p>首先就是主存内分块是按照Cache中块的大小分的，不是按数量分的</p>
-<p>再就是，按XX编址意味着每X位作一个存储单元，且每个地址单元对应一个地址</p>
-<p>这里要和地址位数、存储位数区分开，存储位数是每个存储单元存储了几位数据，就是位</p>
-<p>地址位数是指这个地址需要多少位二进制才能表达</p>
-<p>这样看确实是，按什么编址，一个存储单元就有多少位</p>
-<p>256MB大小，按字节编址256M个单元，每个单元8位，需要256M个地址，28位地址&#x2F;地址线</p>
-<p>按字(32位字)编码就是64M个单元，每个单元32位，需要64M个地址，26位地址&#x2F;地址线</p>
-<p>Cache的容量和总容量之间有一定的差别</p>
-<p>同时按XX编址，得知了每块的大小后，自然可以得知每块的块内地址占几位</p>
-<p>将主存分为N个块以后，对应地址的剩余高位实际上均在表示是第几块</p>
-<hr>
-<p>替换算法：</p>
-<p>目的是为了解决主存访问后需要把其内容放入Cache但Cache已经满的问题</p>
-<p><img src="/img/ky/88.png"></p>
-<p>大致上就这一些算法，其中考最频繁的是最后两种，前面的两种都因为运行效率较差不用</p>
-<p><img src="/img/ky/87.png"></p>
-<p>替换算法只会在全相联、组相联两个里面使用</p>
-<p><img src="/img/ky/89.png"></p>
-<p>最不经常使用算法，理解为记录这个Cache块被访问了多少次，替换最少访问次的</p>
-<p>这里如果产生了相同的使用频率最低块，那么可以采用FIFO或者行号递增等策略去选择</p>
-<p>例如相同的0、0两个使用频率块，淘汰谁？</p>
-<p><img src="/img/ky/90.png"></p>
-<p>近期最少使用算法，理解为每一个Cache块的计数为“已几个周期没有使用”</p>
-<p>每次自然替换的是计数值最大的</p>
-<p>抖动的含义，以“1&#x2F;2&#x2F;3&#x2F;4&#x2F;5&#x2F;1&#x2F;2&#x2F;3&#x2F;4&#x2F;5..序列访问，会反复刷新掉频繁使用的块，本质原因是Cache块太少了</p>
-<hr>
-<p>全写法：</p>
-<p>在每次写数据的时候同时把数据写入主存和Cache里面，那么替换块就不需要再写到主存</p>
-<p>这里的缓冲区应该这样理解，CPU访问主存是很浪费CPU时间的事情</p>
-<p>所以采用一个缓冲区，让CPU直接写到缓冲区里面去，因为CPU访问缓冲区很快</p>
-<p>然后缓冲区再慢吞吞去访问主存，相当于把这部分CPU可能会浪费的时间交给了缓冲区做</p>
-<p>提高了CPU的资源利用率</p>
-<p>写回法只更新Cache中的数据，不把块中数据写入主存，只有替换的时候一次性写到主存</p>
-<p>剩下就是比较麻烦的一堆组合了</p>
-<p>写分配法搭配写回法的时候：</p>
-<p>当没有命中的时候，就会先把主存内容送到Cache里面，然后在Cache中写，不改主存</p>
-<p>同样，当写命中的时候也是直接在Cache里面写，不改主存内容</p>
-<p>只有这个块因为读或者写被替换出去的时候，才把这个块所更新的内容一次性写到主存上</p>
-<p>写分配法搭配全写法的时候：</p>
-<p>当没有命中的时候，就会先写&#x2F;修改主存内容，再把内容送到Cache里面</p>
-<p>当命中的时候，就会同时修改Cache和主存中的内容</p>
-<p>非写分配法搭配另外两者就不会有变化：</p>
-<p>如果不命中的情况，那么只更新&#x2F;修改&#x2F;写主存单元，不会调入Cache中</p>
-<p>如果命中，回写法，那么就会只对Cache内数据进行修改&#x2F;写&#x2F;更新</p>
-<p>如果命中，全写法，那么会同时对Cache、主存内的数据进行更新操作</p>
-<p>其实也可以看出，写回法比较适合搭配写分配法，这样就可以高效且保持替换更新性</p>
-<p>全写法则比较适合搭配非写分配法，保留对主存内容的随时正确性</p>
-<hr>
-<p>读不命中、写不命中均有可能会产生替换</p>
-<p>读不命中是一定会把主存的内容写到Cache里面的，所以读不命中一定会有替换(满的时候</p>
-<p>但写不一定，只有写分配法会把主存内容写到Cache中可能替换，非写分配法不会替换</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组9</title>
-    <url>/2024/04/05/%E8%AE%A1%E7%BB%849/</url>
-    <content><![CDATA[<p>本节单看书实际上较难理解，但PPT内容就很不错</p>
-<p>首先明确具体的虚拟存储器整个的概况状态，再细化去划分</p>
-<p><img src="/img/ky/93.png"></p>
-<p><img src="/img/ky/91.png"></p>
-<p>上面的就是虚拟存储器，下面就是之前学过的熟悉的Cache、主存层</p>
-<p>然后再来一步步介绍这一块东西</p>
-<p>首先不要去纠结快、慢表，记住快表是慢表的一部分</p>
-<p>CPU会通过一个虚拟地址，首先根据其虚拟页号去访问快表，快表没有命中再找慢表</p>
-<p>如果快表命中那么直接把相对应的物理地址给传过去合并为实际地址</p>
-<p>如果慢表命中那么直接把相对应的物理地址给传过去合并为实际地址</p>
-<p>一旦不命中，组合就会比较复杂，分为三种缺失可能性</p>
-<p>其中如果主存中没有，即慢表没有命中，那么Cache也是一定不会命中的，一共五种</p>
-<p>如果慢表中没有命中那么快表也是一定不会命中的，因为快表是慢表的一部分</p>
-<p>但记住，一旦产生缺失，最终一定是需要更新这个表的</p>
-<p><img src="/img/ky/92.png"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组10</title>
-    <url>/2024/04/06/%E8%AE%A1%E7%BB%8410/</url>
-    <content><![CDATA[<p>书上对此节的概况较为全面详细，这里是一个思维统概，方便未来按模块复习</p>
-<p>建议以书为复习的主核心对象</p>
-<p><img src="/img/ky/94.png" alt=""></p>
-<p><img src="/img/ky/95.png" alt=""></p>
-<p><img src="/img/ky/96.png" alt=""></p>
-<p><img src="/img/ky/97.png" alt=""></p>
-<p>后面主要需要谈的是拓展操作码的设计、计算，算是一个重点</p>
-<p><img src="/img/ky/98.png" alt=""></p>
-<p>这里谈设计问题</p>
-<p>从三地址开始计算，三地址因为只有4位二进制，因而最多表示十六个，而需要保留一位</p>
-<p>全一用作下一位的拓展码，所以其15条的范围就是单纯的0000-1110</p>
-<p>而下四位二地址拓展码，以前四位全一作为标记区分位，后面四位可以表示十六个</p>
-<p>现在需要的是十二个，那么为了区分标记位，那么设计从0000到1011共十二个</p>
-<p>剩下的几位也是一定有顺序的，即1100-1111四位保留用作下一位的拓展码，可以计算</p>
-<p>因为后续是四位二进制地址，又为下层保留了四位二进制，那么最多可以表示六十四个</p>
-<p>现在仅保留六十二位，剩下两位，那么保留0000-1101这样，为下面剩下1100和1110两位</p>
-<p>因而最后剩下五位恰好可以表示三十二个地址</p>
-<p>PS：讲的一般，建议自己做几道题就能理解问题所在</p>
-<p><img src="/img/ky/99.png" alt=""></p>
-<p>关于优缺点：</p>
-<p><img src="/img/ky/100.png" alt=""></p>
-<hr>
-<p>指令寻址的目的是寻址下一个指令的主存地址，都是从主存里面取指令的</p>
-<p><img src="/img/ky/101.png" alt=""></p>
-<p>先谈重点就是这几个：</p>
-<p>这里又有坑了，如果一条指令占了半个存储单元怎么办？</p>
-<p>假如，一条指令是8位，然后一个存储单元16位，又按字来编址</p>
-<p>那么PC该如何指明其地址？</p>
-<p>是一个存储单元存一条指令来唯一声明其地址</p>
-<p>还是</p>
-<p>存储字长和指令字长不同、编码方式不同、指令采用变长指令时PC不同的自增逻辑</p>
-<p>记住PC永远是指向下一条指令的地址，相对应的自增自减均建立于这个逻辑</p>
-<p>当主存按字编址时，且存储单元和一个指令字长一样都是一个字的时候</p>
-<p>意味着一个指令就存储在一个地址内，并且按照1、2、3…顺序排列下去</p>
-<p>PC=PC+1</p>
-<p><img src="/img/ky/102.png" alt=""></p>
-<p>当主存按字节编址而存储单元和指令字长一样是一个字时</p>
-<p>那么意味着一条指令至少占据两个地址，那么下一条指令就在两个地址后</p>
-<p>PC=PC+2</p>
-<p><img src="/img/ky/103.png" alt=""></p>
-<p>当系统采用变长指令时，CPU会通过读取指令前几位的操作位判断其长度</p>
-<p>然后按照其长度、主存的编址方式给出相对应的PC=PC+N，每次都是不确定的</p>
-<p>N=长度/编址单位，得到一个指令占了几个地址</p>
-<p><img src="/img/ky/104.png" alt=""></p>
-<p>注，每次取指令后PC一定会自增相对应的指令长度，这个经常考</p>
-<p><img src="/img/ky/105.png" alt=""></p>
-<p>至于条件转移，那么就是把相对应的PC原先自增得到的值，无条件改为跳转地址</p>
-<p>后面会叙述这个地方的坑在哪，可能会导致跳转到不同地方，所以也会产生不同的策略</p>
-<p>每一条指令均分为取指令、执行指令两个步骤</p>
-<p><img src="/img/ky/106.png" alt=""></p>
-<hr>
-<p>直接、间接寻址(操作数寻址：</p>
-<p><img src="/img/ky/107.png" alt=""></p>
-<p>首先先明确整个指令的结构会被划分为哪几个区域，这个是单地址</p>
-<p>后面谈的就是多地址，是每个形式地址前都会声明其寻址特征的，而非只有一个</p>
-<p>这个后面会介绍到，实际上是因为整体的指令都是复合的操作流程而非简单的</p>
-<p><img src="/img/ky/108.png" alt=""></p>
-<p>直接寻址是最容易理解的，其地址内除去特征就是其在主存中的地址，直接访问即可</p>
-<p>这里谈的操作数地址不容易修改是因为一旦修改了操作数的地址就会导致相应指令也改变</p>
-<p>所以说的不容易修改</p>
-<p>从主存中取指令一次，然后根据指令读内容一次，两次</p>
-<p><img src="/img/ky/109.png" alt=""></p>
-<p><img src="/img/ky/110.png" alt=""></p>
-<p>间接寻址给出的形式地址是操作数地址的地址</p>
-<p>给出的地址内存储的内容是操作数相应的主存地址，根据这个主存地址再去访问主存</p>
-<p>所以其实最少就是三次，取指令一次，取地址的地址一次，取操作数一次</p>
-<p>而实际上可以多轮而非单轮，也就是可以存地址的地址的地址的地址的地址的地址…</p>
-<p>主存内的存储位数肯定是强于形式地址的，所以范围自然拓展</p>
-<p>至于编程，可以想象类递归栈运行的程序，每次运行完了后这条指令执行完，跳回原指令</p>
-<p>至于什么时候算是访到最终的数据而不是还在访地址的路上，那么就是按一个标记物的事</p>
-<p><img src="/img/ky/111.png" alt=""></p>
-<p>寄存器编址不用说了，记住这个名词和相对应的方式即可，主要是一个词：快</p>
-<p>相应的只需要进行一次主存里面读指令的操作，其他都不需要去主存里面</p>
-<p><img src="/img/ky/112.png" alt=""></p>
-<p>寄存器间接访址的好处实际上就是把原来要访问主存间接寻址的改到寄存器</p>
-<p>为什么？访问寄存器比主存快啊！</p>
-<p><img src="/img/ky/113.png" alt=""></p>
-<p><img src="/img/ky/114.png" alt=""></p>
-<p>立即寻址也是较为简单的，无非就是这十种搭配的时候还要能够记住就有点难度了</p>
-<p><img src="/img/ky/115.png" alt=""></p>
-<hr>
-<p>偏移寻址，对应书上的第7-9种</p>
-<p><img src="/img/ky/116.png" alt=""></p>
-<p>本质在于基准不同，稍微注意下区分</p>
-<p><img src="/img/ky/117.png" alt=""></p>
-<p>基址寄存器可以是专用的，也可以是通用寄存器中的一块</p>
-<p>这样的话实际上在使用后者的情况下，至少需要指定是哪块寄存器，也就是需要位号指定</p>
-<p><img src="/img/ky/118.png" alt=""></p>
-<p>其目的是为了当程序块起始地址不为零时(大部分情况均是不为零的，能够正确识别程序</p>
-<p>而不是跳转到一堆奇怪的地方</p>
-<p>至于基地址本身是由操作系统自动决定的，因而不需要用户去思考应该存哪里</p>
-<p>至于这个拓展寻址位数，实际上应该说是基地址提供了一个范围，不能单独说是形式提供</p>
-<p>这个按书上的理解就行没必要钻牛角尖</p>
-<p><img src="/img/ky/119.png" alt=""></p>
-<p>至于变址寻址，其是指令中提供了一个确定性的形式地址，一般都是在谈一个数组</p>
-<p>后面变址寄存器中的内容就可以轮番访问这个数组，只需要变址寄存器自增即可</p>
-<p><img src="/img/ky/120.png" alt=""></p>
-<p>如果不采用变址寻址，那么光是一个访问数组操作就需要一堆不同的指令，不科学的</p>
-<p><img src="/img/ky/121.png" alt=""></p>
-<p>采用变址以后就能正常一个指令即可，给定数组的首地址即可</p>
-<p><img src="/img/ky/122.png" alt=""></p>
-<p><img src="/img/ky/123.png" alt=""></p>
-<p>至于相对寻址，其实是相对与PC的，这里需要注意一个点，因为PC是取指令后自动自增的</p>
-<p>所以王道书上略微有些小问题</p>
-<p><img src="/img/ky/124.png" alt=""></p>
-<p>其实这个作用这边我省略了几张图，因为目的是一样的</p>
-<p>当这个循环位置改变的时候，即把这个代码从上面放到下面以后，里面的转移指令会出错</p>
-<p>而循环体本身是没有变的，因而就需要相对寻址，直接改变跳转指令的形式地址位</p>
-<p><img src="/img/ky/125.png" alt=""></p>
-<p><img src="/img/ky/126.png" alt=""></p>
-<p><img src="/img/ky/127.png" alt=""></p>
-<p>至于这个，一般情况下都是按照这种复合的情况，因而就会导致总体非常复杂</p>
-<p>只能说随缘了，课后习题与考察形式基本是复合的情况</p>
-<p><img src="/img/ky/129.png" alt=""></p>
-<hr>
-<p>堆栈寻址：</p>
-<p><img src="/img/ky/145.png" alt=""></p>
-<p>至于堆栈寻址，无非就是要注意栈顶在哪，栈底在哪，是按低地址到高地址，还是反着</p>
-<p>同时也要注意这个低和高的含义到底是什么，题目说的高低和理解的高低有没有反</p>
-<p>还要注意的就是堆栈顶指明的是一个空闲区域还是一个有内容区域，这都会影响存取</p>
-<p>硬堆栈是采用全寄存器，不需要访主存</p>
-<p>软堆栈是需要访问一次主存的，因为软堆栈本身就是从主存中划分一块出来用的</p>
-<p>此外，堆栈寄存器是通用的，这个可以从X86后面的通用寄存器表里面得知，别的不知道</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组11</title>
-    <url>/2024/04/07/%E8%AE%A1%E7%BB%8411/</url>
-    <content><![CDATA[<p>CF：反映无符号数加减是否溢出</p>
-<p>简单来说就是当加法的时候是否导致了高位进位产生一个1，减法进位产生一个0</p>
-<p>OF：反映有符号数加减是否溢出，简单来说就是同符号是否产生不同符号</p>
-<p>两个负的加出一个正的肯定是错了，两个正的加出来一个负的也肯定是错了</p>
-<p>ZF：看是否是全零，对于有无符号都有意义</p>
-<p>SF：符号位，仅对有符号加减法有意义</p>
-<p>注意，不论有符号加减法还是无符号加减法都不代表这几个位不会产生变动，都可能的</p>
-<p>无非是有时候没有意义而已罢了</p>
-<p>参考此节进行学习，理论上还需要下功夫</p>
-<p><img src="/img/ky/37.png" alt=""></p>
-<p>其中cin为0的时候是加法，cin为1的时候是减法，无符号和有符号均适用</p>
-<hr>
-<p><img src="/img/ky/130.png" alt=""></p>
-<p>这里就直接谈核心重点了，这两个指令的作用就摆在这，后面会有更详细的介绍</p>
-<p>这边只是粗略上给出了大致的操作内容</p>
-<p>其实实际上是压入两个内容，一个是PC的返回地址，其实也可以称作是IC的返回地址</p>
-<p>这两个是同一个东西，在取址后都会进行自增操作，然后X86里面都是按字节进行编址的</p>
-<p>所以就要稍微注意下相对应的增量到底是多少，课后习题基本都有</p>
-<p>另外一个东西就是上一段程序的起始地址，否则后续的EBP就无法返回正常位置</p>
-<p>课后习题其实也声明过，如果是嵌套循环那么必须是压栈，如果是只有一层那么可以寄存</p>
-<p>返回的话其实就是把返回地址给赋值返回给IC/PC，然后就能正常执行下一句父层指令</p>
-<p><img src="/img/ky/131.png" alt=""></p>
-<p>当然后面会有更详细的介绍，目前先写到这</p>
-<p><img src="/img/ky/132.png" alt=""></p>
-<p>在内存里面这个栈实际上是反着放的，另外就是需要说明这个栈是在内存里面放的</p>
-<p>在X86里面默认一个栈块是32位，也就是4个字节，书上讲的其实很详细，例如存储浪费等</p>
-<p>建议看书，这里只需要记住一个栈里面有多个帧栈，EBP/ESP指向的是当前执行程序的帧栈底和顶</p>
-<p>所以相对应的加减其实也有变化，例如POP/PUSH操作也会有一定的变化</p>
-<p>指针向下走是减法，向上走是加法</p>
-<p><img src="/img/ky/133.png" alt=""></p>
-<p>这里主要总结两种方法，至于入栈、出栈，其实指针指向不同也会有不同的操作</p>
-<p>例如指针如果一开始指向的是空的，那么就是先入栈再减，或者先增加再出栈，具体来定</p>
-<p>这里还需要声明的一点就是一般EBP是不变的，而ESP是经常改变的</p>
-<p>一般的访问其实还有更多的方法，最主要的就是MOV指令，可以根据ESP、EBP两者</p>
-<p>选择他们附近的块内容，例如EBP+8或者EBP+12、ESP+12等等，向上向下都行</p>
-<p>一般初始化的时候，都会对ESP进行一次减法操作，用于初步给定一个栈的容量大小</p>
-<p>当然也可以进行ESP加法操作来出栈或者删除一部分栈顶元素，完全是可灵活对待</p>
-<p>至于指令，书上的能懂基本没问题，只要清楚几个比较特殊的点就行：</p>
-<p>首先就是比较指令，是前者和后者相比</p>
-<p>再就是四则运算指令，是前者四则运算后者</p>
-<p>还有就是一般寄存器里面的内容是直接采取esp、ebp的读取法，没必要加括号</p>
-<p>只有访问主存的时候需要加括号，读指令基本不会有问题</p>
-<p><img src="/img/ky/134.png" alt=""></p>
-<p>有兴趣可以根据这个图走一遍，不难的</p>
-<hr>
-<p><img src="/img/ky/135.png" alt=""></p>
-<p>下面就是对之前的CALL和RET进行进一步细化的过程，不排除考大题的读法</p>
-<p>在读到CALL命令以后，会将当下的IC压栈(即主程序中的下一条执行指令，并无条件跳转</p>
-<p>无条件跳转到新程序的第一条地址</p>
-<p>此时因为压栈，所以ESP自动会进行加四的操作</p>
-<p><img src="/img/ky/136.png" alt=""></p>
-<p>然后就是跳转到新程序中执行语句，其中任意一个非Main程序起始必然是这样的几句</p>
-<p>首先是把父程序的基地址给压入栈中，此时ESP所指内容即为父程序的基地址，同时自加</p>
-<p><img src="/img/ky/137.png" alt=""></p>
-<p>然后把让EBP指向和ESP同指向的区域</p>
-<p>所以其实可以看出任意一个子程序(栈帧)的开头必然是其父程序的首地址</p>
-<p><img src="/img/ky/138.png" alt=""></p>
-<p>然后就是考虑返回的事情了</p>
-<p><img src="/img/ky/139.png" alt=""></p>
-<p>首先让新的帧栈清空，即让栈顶指向基地址</p>
-<p><img src="/img/ky/141.png" alt=""></p>
-<p>然后把基地址出栈，即为上一层的父帧栈的基地址，需要保持不能丢掉，现在返回给EBP</p>
-<p>这样就能保证EBP重新指向父帧栈的正常基地址</p>
-<p><img src="/img/ky/140.png" alt=""></p>
-<p>出栈后，此时的EBP指向的也就是下一个IC执行地址，然后把IC值出栈恢复即可</p>
-<p><img src="/img/ky/142.png" alt=""></p>
-<p>至于其他的类似于赋值访问，我的建议是看PPT即可，这里就不再赘述</p>
-<p>后面就是谈到了因为帧栈是以32位一块的，所以大概率是会产生一定的浪费情况在的</p>
-<p>此外当需要使用上一层的寄存器的时候，需要先把相应的寄存器内容给放在栈里面</p>
-<p>用完了再需要恢复</p>
-<hr>
-<p>然后再谈这一节的复习方法和杂谈：</p>
-<p>首先肯定是X86几个寄存器，这几个寄存器是一定要熟知能清楚是什么的，以及相关命令</p>
-<p>好歹是要看懂英文到底表达的含义是什么</p>
-<p>dword ptr\word ptr\byte ptr要清楚其含义</p>
-<p>大部分指令书上讲的都很不错，没有必要拿PPT补充的</p>
-<p>至于Intel格式，主要注意的就是其目的操作数和原操作数的顺序，计算、运算顺序</p>
-<p>至于主存地址偏移量，用处就在于结构体可能是一块块的，所以才搞得比较复杂</p>
-<p><img src="/img/ky/143.png" alt=""></p>
-<p>这里是JMP的一些指令格式，看到要懂就行，以后会详细总结下，但无非就那么几种</p>
-<p>至于选择指令，IF/ELSE结构，其中必然是会有一个无条件转移指令的</p>
-<p>因为一段IF/ELSE结束后是一定要结束程序的，所以必然会有无条件跳转指令</p>
-<p>至于运行的代码段，这个顺序肯定是可以随意变化的，课后习题已经详细说过，不赘述</p>
-<p>对于循环结构，也肯定是需要有条件跳转指令，用来判断循环是否继续执行下去</p>
-<p>如果不执行下去那么就一定要跳转</p>
-<p>对于不同的循环、选择结构，其跳转指令的条数不一定相同，书上大致上是有写的，细化</p>
-<p>至于LOOP指令，补充的LOOPNZ/LOOPZ都是对操作数的判断，看操作数是否为零结束循环</p>
-<p>需要注意的就是LOOP是默认对ECX寄存器操作的，不能拿别的寄存器去存这个计数值在的</p>
-<p>其他的，类似于机器级的阅读、执行顺序，其实更多可以参考这块方向</p>
-<p>一般只会大致上考察一个阅读能力，知道中间执行的方法、内容基本就足够了</p>
-<p><img src="/img/ky/144.png" alt=""></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组12</title>
-    <url>/2024/04/08/%E8%AE%A1%E7%BB%8412/</url>
-    <content><![CDATA[<p>今天内容较为简单，不做PPT，主要理顺一些比较乱的概念性问题</p>
-<p>此外，这些寄存器的英文名建议都背下来，否则到时候遇到不认识就完蛋了</p>
-<p>CPU至少有5个专用寄存器。它们是：程序计数器(PC)，指令寄存器(IR)，存储器地址寄存器(MAR)，储存器数据寄存器(MDR)，状态标志寄存器(PSWR)。</p>
-<p>1&gt;程序计数器：又称指令计数器，用来存放正在执行的指令地址或接着要执行的下条指令地址。</p>
-<p>2&gt;指令寄存器：用来存放从存储器中取出的指令。</p>
-<p>3&gt;存储器数据寄存器：用来暂时存放由主存储器读出的一条指令或一个数据字；反之，当向主存写入一条指令或一个数据字时，也暂时将它们存放在存储器数据寄存器中。</p>
-<p>4&gt;存储器地址寄存器：用来保存当前CPU所访问的主存单元的地址。</p>
-<p>5&gt;状态标志寄存器：用来存放程序状态字。程序状态字的各位表示程序和机器运行的状态，是参与控制程序执行的重要依据之一，它包括状态标志和控制标志。</p>
-<p>其余均是通用寄存器</p>
-<p>取寄存器内内容一般没有特别声明是否需要加内容符号，因为有时候也会有误解</p>
-<p>但一般自己写的时候注意要加符号，题目里面暂时还没有出现这类破事情，除了偏移时候</p>
-<p>留了个大坑</p>
-<p>然后就是几个特例吧，其实主要还是透明不透明的事情</p>
-<p>程序计数器是唯一一个控制器中的可以编程的寄存器，即可视，不透明的</p>
-<p>暂存寄存器是唯一一个运算器里面不能编程的寄存器，即不可视，透明的</p>
-<p>书上的概念性问题想考自然可以考得非常细，非常杂乱无章，实在是得一句句啃下去</p>
-<p>首先明确一点，可见=不透明，不可见=透明</p>
-<p>这是和我们生活中透明=可见相反的，为什么会这样？</p>
-<p>是因为名词都是老外那里引入的，我们翻译过来就很别扭了</p>
-<p>在英文中，透明就有点“屏蔽”的意思，那你说屏蔽了还能可见吗？</p>
-<p>以下是王道书里的结论：<br>
-所有用户/程序员可见（不透明）：PC、PSW、ACC、通用寄存器。<br>
-所有用户/程序员不可见（透明）：MAR、MDR、IR、暂存器、Cache、uMAR、uMDR、uIR。</p>
-<p>汇编程序员可见，所有用户可见基础上外加：中断字寄存器、基址寄存器、变址寄存器。<br>
-系统程序员可见，所有用户可见基础上外加：虚拟存储器。</p>
-<p>绝对是能把人绕晕</p>
-<p>注意，程序状态字寄存器=标志寄存器=条件码寄存器=PSW。都是同一个东西，不同教材表述不一样。</p>
-<p>关于可见与能否修改的问题：</p>
-<p>一般能修改内容的那么一定可见即不透明能编程，可见不透明能编程的不一定能修改内容</p>
-<p>关于存储字长、按XX编址、PC位数的问题：</p>
-<p>如果题目没说存储字长，那么按什么编址，就以这个为存储字长</p>
-<p>比如按字节编址，那么就认为一个存储字长=8位</p>
-<p>如果按字编址，那么一个存储字长=机器字长</p>
-<p>但是如果题目明确给出存储字长，那么就按照给的来</p>
-<p>有了存储字长，就能把主存容量写成容量=存储字数×存储字长=2^(MAR位数)×MDR位数。</p>
-<p>这样就能得出MAR位数和MDR位数</p>
-<p>至于PC和MAR的关系，如果题目没说，默认PC位数=MAR位数</p>
-<p>如果题目明确说了PC至少是多少位，那么PC最少就是要能够区分不同的指令，也就是PC位数&gt;=log2(指令条数)</p>
-<p>关于糟糕的11题和24、26题：</p>
-<p>按字节编址，4GB=2^32×B，因此MAR位数是32位。</p>
-<p>一般情况下，可以认为，PC的位数等于MAR位数。但是本题，有个条件，指令按字边界对齐存放，问PC的位数至少是多少位。</p>
-<p>PC的作用是识别不同指令地址，指令字长=32位=4B，因此4GB=2^30×4B，因此有2^30条指令，每条指令都是按字边界对齐，意味着每条指令的地址都是一个字的开始的位置。比如这里，字节地址是0 1 2 3……，由于字长4B，因此这里每个字的开始的位置是0 4 8 12……二进制为</p>
-<p>0000 0000 0000 0000 0000 0000 0000 0000</p>
-<p>0000 0000 0000 0000 0000 0000 0000 0100</p>
-<p>0000 0000 0000 0000 0000 0000 0000 1000</p>
-<p>0000 0000 0000 0000 0000 0000 0000 1100</p>
-<p>可以发现这里末2位永远是0，因此末2位可以省略。因此PC的位数至少是30位</p>
-<p>这边对齐的意思，大致上就是首位对齐，所以就会导致有一些位数实际上是不需要的</p>
-<p>所以PC也自然就只需要存储有效位</p>
-<p><img src="/img/ky/146.png" alt=""></p>
-<p>这个稍微注意下，就这样吧</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组13</title>
-    <url>/2024/04/09/%E8%AE%A1%E7%BB%8413/</url>
-    <content><![CDATA[<p>关于各类周期：</p>
-<p>指令周期指取出并完整执行一条指令的时间</p>
-<p>不同指令的指令周期基本不一样，这个很容易理解</p>
-<p>不同指令内的机器周期也不一定相同，因为包含的基本操作可能不一样</p>
-<p>机器周期和机器周期也不一定相同，可以是相同长度的，也可以是不同的时钟周期个数</p>
-<p><img src="/img/ky/147.png"></p>
-<p>时钟周期：</p>
-<p>计算机中最小的时间单位，等于cpu主频的倒数</p>
-<p>一个时钟周期内，cpu仅完成一个最基本的动作</p>
-<p>机器周期（cpu周期）：</p>
-<p>计算机中为了方便管理，常把一条指令的执行过程划分为若干个阶段</p>
-<p>取指周期、间址周期，这些都是机器周期，不同命令之间也是不一样的</p>
-<p>每一个基本操作都是由若干CPU最基本的动作组成，即包含若干时钟周期</p>
-<p>这个基本操作所需要的时间称为机器周期，则机器周期由若干个时钟周期组成</p>
-<p>而机器周期内，每一个周期基本都是要进行一次访存的，所以往往和存储周期差不多</p>
-<p>类似于</p>
-<p><img src="/img/ky/148.png"></p>
-<p>这里面的几个指令周期流程，基本都是需要访问主存的，那么毫无疑问和存取周期关联大</p>
-<p>并且考试的话，以这几个访问主存的目的为考察重点</p>
-<p>指令周期：</p>
-<p>从取指开始到执行完成该指令所需要的全部时间。指令周期包含若干机器周期。</p>
-<p>于是，指令周期&gt;机器周期&gt;时钟周期</p>
-<p>下面框内内容暂时还没有完全消化，建议学到了再说</p>
-<hr>
-<p>总线周期：</p>
-<p>存储器和I&#x2F;O端口是挂接在总线上的，CPU对存储器和I&#x2F;O接口的访问通过总线实现</p>
-<p>把CPU通过总线对微处理器外部（存储器或I&#x2F;O接口）一次访问时间称为一个总线周期</p>
-<p>总线周期一般包含4个总线时钟周期：<br>（1）T1状态 ——输出存储器地址或I&#x2F;O地址。<br>（2）T2状态 ——输出控制信号。<br>（3）T3和Tw状态 ——总线操作持续，并检测READY以决定是否延长时序。<br>（4）T4状态 ——完成数据传送</p>
-<hr>
-<p>cpu访存的过程：cpu通过总线把数据地址送给存储器，存储器得到地址后启动存储器即准备数据，cpu输出控制信号或其他操作，等到数据准备完毕【此过程完成数据准备即一个存储周期】，再由总线送回cpu。一个存储周期是对存储器的两个存取操作的时间间隔，在这个时间间隔里面可以包含多个总线传输周期，因为一次存取操作不一定读取一个数据总线宽度的数据，所以一个存取周期可以包含多个总线传输周期</p>
-<p>于是，通常存储周期&gt;总线周期,cpu不能连续存取数据，必须等待</p>
-<hr>
-<p>存储周期：</p>
-<p>存储周期包含存取时间和恢复时间。指两次独立访问存储器操作之间的最小间隔</p>
-<p>存取时间指从启动一次存储器操作到完成该操作所经历的时间</p>
-<p>恢复时间指读写操作之后，用来恢复内部状态的时间</p>
-<p>为提高传输效率，由此也引出了两个概念：</p>
-<p>总线突发传输方式：</p>
-<p>即总线可以在一个总线周期内传输一个地址和一批地址连续的数据，代替常规传输的一个地址一个数据</p>
-<p>多体并行存储器：</p>
-<p>存储器采用多个存储模块组成，以流水线方式准备数据，从而提高存储带宽，缩短准备数据时间</p>
-<hr>
-<p>指令流程：</p>
-<p><img src="/img/ky/148.png"></p>
-<p>这里说的就是最基本的判断流程，执行周期因为不同的指令不同所以没有办法普遍化</p>
-<p>CPU取完指令后就会去看需不需要间址，然后根据结果去进行不同的操作</p>
-<p>然后执行完以后，就会去判断下需要不需要中断，如果需要中断的话那么就中断</p>
-<p>另外就是谈下这个PC的自增是在取指周期同时进行</p>
-<p>如果遇到了转移指令那么PC假如要更新那么就会在取指后间址之前进行</p>
-<p>注意间址周期内PC是不可能有改变的，只有取指、转移、中断会有一些改变在</p>
-<hr>
-<p>至于指令执行流程，取指、间址、中断似乎都是CPU默认的操作，不需要外部给指令</p>
-<p>中间可能需要注意，会考的内容可能就是MAR&#x2F;MDR&#x2F;IC&#x2F;PC等寄存器中当前保存的是什么吧</p>
-<p>这三个周期书上讲的比较完善，PPT可以看，但一般没什么必要</p>
-<hr>
-<p>具体课后习题还有一堆问题，例如三种不同的策略，实际上应该不会再考</p>
-<p><img src="/img/ky/149.png"></p>
-<p>只能说杂乱的东西吧，后面会放到这里</p>
-<hr>
-<p>稍微总结一下：</p>
-<p>组合逻辑元件(操作元件)、时序逻辑元件(状态元件)一般的区分方法</p>
-<p>看有没有记忆能力，没有那铁定是组合逻辑，有记忆能力那基本就是时序逻辑</p>
-<p>另外控制器中绝大多数都是时序逻辑，运算器中绝大多数都是组合逻辑</p>
-<p>译码器常见于存储器中，用于解释地址码并选中相应存储单元，可能问位数</p>
-<p>其位数即，N位输入可以得到2^N个输出，对应MAR和地址单元数量的关系</p>
-<p>MUX是一个多输入，单输出的多路选择器，其选择信号位数是logN，N为输入端数量</p>
-<p>三态门就随意了，前面的基本数电知识里面有，不再赘述</p>
-<p>总线，分为单总线和多总线</p>
-<p>总线是一个占用性部件，某一时间段只能有一个输入到主线，主线可输入到多个</p>
-<p>多总线、单总线没有什么特别大的区分，无非注意一个点</p>
-<p>多总线的情况下，每个部件的所有脚都是连着所有总线的，</p>
-<p>总线的话么，布局比较轻松，结构简单，但是效率比较低，冲突率较高</p>
-<p>专用数据通路一般性能较高、基本不会冲突，但非常耗费硬件资源</p>
-<p>主要提及是在寄存器和寄存器之间传输，往往和总线布局是共同在一起使用的</p>
-<p>关于数据通路：</p>
-<p>除去主存的访问是需要一个主存周期外，其他都按照一个时钟周期计算，注意下这个</p>
-<p>书上列举了五种普通的操作，主要是基于单总线结构的</p>
-<p>个人认为写好这个的点就是记住总线是独占式的，不能被共享，只能单独分开</p>
-<p>如果要再次使用总线进行不同的数据传输，那么只能是新开一个节拍</p>
-<p>对于ALU需要多讲一点，主要就是其两个输入端需要同时有效且输出也是有时效性的</p>
-<p>所以必须满足输入两个同时有效，输出也能够被存储下来</p>
-<p>那么一根主线很明显满足不了这个事情</p>
-<p>输入必须要有一个寄存器，输出也必须要有，否则在指令还在执行的时候，ADD还在</p>
-<p>一旦ADD消失，那么输出也就消失了，是没法用一个主线实现执行的</p>
-<p>输出为了避免影响到输入，也只能用寄存器来寄存</p>
-<p>另外提一嘴，实际上在每个指令给定操作前，都会由IR中取操作码给CU得到控制信息</p>
-<p>所以看题目吧，要不要写CU给组件，一般给主存的话都是需要指定1-W&#x2F;R的</p>
-<p>有时候MDR和IR内容一样，那么也没必要用AD(IR)，用AD(MDR)也同样可行</p>
-<p>此外就是这个大坑，加括号的事情</p>
-<p>一般还是看题目怎么来吧，自己悠着点他说的到底是间址还是直接取址或操作数</p>
-<p>寄存器的话一般还是不怎么用括号表示的，主存往往用括号表示是其内容</p>
-<p>在微指令里面的话，右边基本不怎么加括号除非是单独声明主存，左边往往是加的</p>
-<p>这个反正是个大坑，建议以真题为准去思索</p>
-<hr>
-<p>另外，目的操作数+-·&#x2F;源操作数，前者为目的后者为源，大坑+1</p>
-<p>至于数据通路的专用或者非专用类型，这个一般考试会给出相应的具体状态区分</p>
-<p>然后跟着写就行了</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组14</title>
-    <url>/2024/04/10/%E8%AE%A1%E7%BB%8414/</url>
-    <content><![CDATA[<p>第一节的内容是一个介绍，略微啃下即可</p>
-<p>先谈硬布线下的指令、机器周期、微命令、微操作的关系：</p>
-<p>一条机器指令可以被解释为多个机器周期，如取指、间址、执行、中断指令</p>
-<p>一个机器指令一般包含这四个周期</p>
-<p>每个机器周期内部可以包括多个微操作，每条微操作都会对应一条微命令</p>
-<p>例如取址周期内，需要完成PC-&gt;MAR,M(MAR)-MDR,(MDR)-IR,PC+1-PC</p>
-<p>这些需要完成的步骤，每一条都可以被称为微操作</p>
-<p>而令这些操作能够对应完成的命令，就称为微命令，如对PC-MAR，需要PCout,MARin有效</p>
-<p>这样一条命令就是对应一条微操作的，整体视作是一个命令</p>
-<p>而每个机器周期往往有多个节拍，能够相容在一个节拍内的就称为相容微操作</p>
-<p>这个节拍即为一个时钟周期</p>
-<p>硬布局下没有微指令这样一个说法</p>
-<hr>
-<p>然后再来谈下面的内容：</p>
-<p>CPU判断当前应该发出哪些信号，是根据各组输入信号的组合来判断的</p>
-<p>操作码、节拍、当下的系统状态标识、指令周期是四个判断的维度和标准</p>
-<p>因而为了确定当前应该发出哪些信号，实际上需要一个组合逻辑表</p>
-<p>当A怎么样，B怎么样，C怎么样，D怎么样…的时候该输出什么相应的信号，硬布线</p>
-<p>硬布线解决的就是从硬件上直接根据电路设计来完成这件事</p>
-<p>考试对其的考察并不会特别深，毕竟这是计算机组成原理而不是硬件布局</p>
-<p>但是最基础的做法还是要知道的</p>
-<p>首先就是输出问题，当确定某种情况的输出后，某个端口输出一个信号，即一个微命令</p>
-<p>把这几个相关的操作控制器均连在这条线上即可</p>
-<p>例如C1高电平的时候需要完成PCout,MARin，那么把PCout和MARin的控制器和C1相连即可</p>
-<p>然后再来说较为复杂的输入确定输出组合逻辑问题：</p>
-<p>首先先说不同指令模式情况下的法则，一个是定机器周期指令，一个是不定机器周期指令</p>
-<p>定长周期指代机器周期的执行时间均设置为一个机器指令中最长的机器周期执行时间</p>
-<p>不定长就是上面的反话，你需要几个执行时间就给你几个执行时间，一般以时钟周期单位</p>
-<p>至于做法，这里单独放在末尾</p>
-<hr>
-<p>重心还是放在后面微指令为主</p>
-<p>还是先来解释下几个之间的关系，微程序、微指令、微命令、微操作</p>
-<p>这里就是把上面所说的每个机器指令(如取址、间址)给封装为了一个微程序</p>
-<p>每个微指令都会成块放在里面，然后对应的微操作也会顺序放在块里面</p>
-<p>一般不仅仅包含公用的这一些，还有更多的如运算等，也就是出厂就全部写好了</p>
-<p>任何情况下应该干什么全部都被记录在里面</p>
-<p>这个机器周期需要完成的事情，也就是其中蕴含的微指令就这样被包含在了微程序里面</p>
-<p>同样的，每一条微指令对应可能有多个微命令，每个微命令又对应一个微操作</p>
-<p>本质原理是一样的，就是什么时候应该干什么，不过把硬布局给改为了存储器内存储</p>
-<p>当某些信号给过来的时候根据这个信号去控制存储器里面找到相应的微程序，然后去执行</p>
-<p>然后再说这个微程序控制器的基本结构问题：</p>
-<p><img src="/img/ky/150.png"></p>
-<p>首先CM是采用ROM的，因为断电后不能丢失指令</p>
-<p>然后描述下其的工作流程和组成：</p>
-<p>从指令寄存器中读取到一个操作码后，就要去相对应形成一个微程序地址</p>
-<p>因为都是按照微程序地址存放的，给定一个操作码我就一定要去明确这个微程序从哪开始</p>
-<p>所以才需要这个微地址形成部件的存在</p>
-<p>然后因为不一定是顺序访问每一条微指令的，可能会有跳转，所以才需要顺序逻辑器</p>
-<p>根据一系列外界信息决定到底执行哪一条微指令，并把地址放在CMAR中，经译码器选单元</p>
-<p>将该微指令取出后存放到CMDR中，需要注意的是，每一条微指令都包含两个结构</p>
-<p>一个是操作控制字段，即是给总线、外部的控制信号</p>
-<p>一个是给内部的进行下一轮执行的顺序控制字段也称为下地址</p>
-<p>将这个地址给顺序控制逻辑器，然后再根据一系列外部信号来判断到底执行哪个指令</p>
-<p>相对应的给出对应的存储单元地址</p>
-<p>因为每条机器指令都包含四个公共的周期即中断、间址、取址，所以是可以放控制存储里</p>
-<p>一般都只有单独的一份，毕竟没有必要有两份</p>
-<p>只有执行周期的指令是不固定的可能有很多很多类型</p>
-<p><img src="/img/ky/151.png"></p>
-<p>对于标志位、CLK，其实就是对中断、间址的判断逻辑，看IR的地址码段给的信息位决定</p>
-<p>后面到底应该是继续执行下去，还是说跳转到别的微程序块执行</p>
-<p>另外就是一个考点：</p>
-<p>如果某指令系统中有n条机器指令，则CM中微程序的个数至少是n+1个</p>
-<p>因为至少有一个取址周期的公用段，另外两个不一定有，没必要追究为什么</p>
-<p>同时有的选择内把取指周期和执行混在一起当作一个</p>
-<p>指令周期!&#x3D;微指令周期</p>
-<hr>
-<p>然后就是微指令的格式问题：</p>
-<p><img src="/img/ky/152.png"></p>
-<p>其实也很好理解，水平型就是一条微指令包括多个微命令，垂直就是只包含一个</p>
-<p>其最基本的格式是需要清楚的，至于混合型没必要深究</p>
-<p>然后再说不同的编码方式：</p>
-<p>一种是直接编码，即每位表示一种操作，如果选中这个操作其他都需要置零，以位表示</p>
-<p>一种是字段直接编码方式</p>
-<p><img src="/img/ky/153.png"></p>
-<p>将控制字段分为多段，且每段可以以数值表达而非用位表达，7位就可以128种类型</p>
-<p>考察而言无非就是给定段的长度考可以多少种，以及给定种数判断需要多少位</p>
-<p>尤其注意下一个000或者0000不执行操作的情况，也就是需要留出一种操作判断的情况</p>
-<p>这个常考</p>
-<p>字段间接编址，书上写的也很简单，不太重要</p>
-<p>然后再说地址形成方式，指的就是之前的顺序控制器的地址形成法，细化了一下：</p>
-<p><img src="/img/ky/154.png"></p>
-<hr>
-<p>硬布线设计以及控制单元设计：</p>
-<p><img src="/img/ky/155.png"></p>
-<p>首先就是写出每一个微操作序列，每一个周期的操作序列，然后再看是否定长周期</p>
-<p>定长周期就是以最长的不会产生冲突的一个微序列为一个周期</p>
-<p>一般一个节拍内可以有多个微操作，但访主存例外，只能单独扔一个时钟周期</p>
-<p>于是所有的周期，都是以这个最长周期为周期了，也就是确实会有浪费存在</p>
-<p>不定长那么就是怎么短怎么来，与上面比较相差的无非就是几个空余的时钟周期罢了</p>
-<p>然后就是最重要的时序安排：</p>
-<p><img src="/img/ky/156.png"></p>
-<p>在写出每个微操作序列以后，要确定每一条微操作的前后逻辑关系，谁必须在谁后面的</p>
-<p>以此去安排最基本的时序周期</p>
-<p>先拿取指周期作例子：</p>
-<p><img src="/img/ky/158.png"></p>
-<p>首先是需要先给主存一个读的信号以后，才能去根据地址读取，所以分配在不同时钟周期</p>
-<p>再是访存操作，其是必须要耗费一个时钟周期的，相应的寄存器也只能一个周期后才访问</p>
-<p>所以把MDR的读取放在了下一个时钟周期，而内部寄存器的传输完全可以安排在一个内</p>
-<p>这里需要注意的就是有微指令后，需要把送到ID中去(指令译码器</p>
-<p><img src="/img/ky/159.png"></p>
-<p>另外就是间址、中断，基本都类似，步骤和流程都是类似的：</p>
-<p>先确定先后顺序，然后再根据先后顺序、是否互斥安排在同一或者不同时钟周期</p>
-<p>再看能否精简，能精简的则进一步合并</p>
-<p>最终会得到一些组合逻辑表，其实就是某条指令在某周期什么状态下会执行</p>
-<p>把这些组合逻辑表中该指令的相应执行条件给全部加起来，再以离散数学方法合并为最简</p>
-<p>然后以此设计电路：一般不会考那么难，顶多就是两三个序列一条指令，不必画表</p>
-<p>其实一般而言设计出微指令的微操作序列，分配好时钟周期后即确定一条的执行条件</p>
-<p><img src="/img/ky/157.png"></p>
-<p>然后再说微程序控制单元的设计：</p>
-<p>设计相应的时钟周期序列是和硬布线没有区别的，都是按照几个步骤去设计序列</p>
-<p>这里有区别的就是需要添加几个微指令特有的操作</p>
-<p>每一个时钟周期结束后都需要确定下一条微指令的地址，一般就是一个周期一个微指令</p>
-<p>这里当然说的是定长机器周期的状况</p>
-<p>每一个机器周期结束，也就是每一个微程序结束后都需要确定下一个微程序的首地址</p>
-<p>具体是对微指令执行过程的细化</p>
-<p><img src="/img/ky/160.png"></p>
-<hr>
-<p>总体肯定是以博客、PPT内容为主，书上的就作为进一步细化理解补充用的</p>
-<p>具体的复习建议：</p>
-<p>第一节的内容是一个概括性介绍，可以粗看，大致上略过为主</p>
-<p>第二节的硬布线，首先清楚硬布线的原理，即：什么时候什么情况什么条件应该干什么</p>
-<p>衍生出硬布线的电路设计，电路设计往往不是重点，但安排节拍的操作往往是重点</p>
-<p>对应节拍安排，建议一定要把握、理解并且能够清楚各个命令执行的逻辑关系和细节问题</p>
-<p>尤其是逻辑关系以及一些细节，这块把握不够的</p>
-<p>然后就是硬布线相应的一些优点、缺点、适用性、特征等</p>
-<p>书上写的还是比较详细的，可以配合王道的知识点、博客的知识点进行回顾补充</p>
-<p>第三节的微指令，最核心的就是清楚其整个结构和工作流程，后面的也会进一步细化</p>
-<p>然后就是知识点、概念性的事情，第一个就是记住其英文名词</p>
-<p>例如往往把几个通用的机器周期给放在这个CM中，CM往往用ROM设计</p>
-<p>指令、机器周期、微程序、微指令、微操作、微命令之间的一系列关系</p>
-<p>以周期结尾的各种周期之间的关系</p>
-<p>然后再是微指令的设计，这一块建议配合博客、书、PPT的思维导图一并复习</p>
-<p>这里是会有一些计算相关的问题，稍微注意下这一块，课后习题也有</p>
-<p>最后就是微指令控制单元的设计，最后两个的确定格式、编写码点个人并没有细化了解</p>
-<hr>
-<p>注：</p>
-<p>还是建议平时偶尔刷一次这些博客，并不是单纯的记录，更是一个补充性的</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组15</title>
-    <url>/2024/04/11/%E8%AE%A1%E7%BB%8415/</url>
-    <content><![CDATA[<p>异常和中断节：</p>
-<p>总体建议以书本知识为主，知识面较详细且有条理，后续可以补上进一步的逻辑思路</p>
-<p>没有太多的复习建议，多看几遍应该不会出问题</p>
-<hr>
-<p>流水线的意义：</p>
-<p>单周期指令执行的时候，每一个组件完成后就闲着等下一条指令，平均闲一个指令时间</p>
-<p>会产生大量的浪费，流水线的目的就在于充分利用组件，尽可能减少组件的闲暇时间</p>
-<p>而组件执行的时候中间是会有一个寄存延迟的，流水线设置所有延迟为其中最大的那个</p>
-<p>因而在执行单指令的时候流水线的效率似乎还不如单周期</p>
-<p>但一旦任务量扩大，那么流水线的效率就会明显体现，因为充分利用了各个组件</p>
-<hr>
-<p>流水线指令集的特征建议看书，书上比较完整可靠</p>
-<hr>
-<p>就设计原则而言，就是以最长的流水线周期计算，包括了延迟时间</p>
-<p>例如寄存延迟20NS，流水线80NS，那么至少一个时钟周期就需要100NS设计</p>
-<p>然后是关于一些流水线的计算问题：</p>
-<p>首先计算N条指令的执行时间，其实就是(第一条指令执行时间+N-1)</p>
-<p>当然这个可能会和之前的91页相关内容配合考察，还是要基于理解去思索的</p>
-<p>吞吐率就是执行的指令数&#x2F;执行的总时间</p>
-<p>加速比就是流水线下执行的总时间&#x2F;非流水线状态下执行的总时间(即顺序状态下)</p>
-<p>需要会画相应的流程图、流水线时空图、流水线指令序列图</p>
-<p>考试比较频繁考察的就是分为五段式的，也是统考唯一考察的方向</p>
-<p>每个流水线阶段都会有对应的一个寄存器存在</p>
-<p>第一个视频的内容完全可以看PPT和书，足够详细，这里不再赘述</p>
-<hr>
-<p>然后这里介绍几个冲突状态：</p>
-<p><img src="/img/ky/161.png"></p>
-<p>这里的重复配置也可以指代重复相关部件的配置，或者配置读写口，分离部件功能等</p>
-<p><img src="/img/ky/162.png"></p>
-<p>这里需要注意的就是硬件上降低延迟的方式有两种</p>
-<p>一种是数据旁路，那么有时候能直接把延迟压为无延迟，一种就是拓展读写口</p>
-<p>对于load-use类数据冒险，对书上解释的一点补充:</p>
-<p>MEM段结束后，会把从主存中取出的内容放到MEM段和WB段流水之间的寄存器</p>
-<p>书上采用了延迟加转发，这里的转发指的就是直接从这个寄存器转发</p>
-<p>然后在WB周期内就可以完成并行的写回寄存器以及到新需要用的一个寄存器里面</p>
-<p><img src="/img/ky/163.png"></p>
-<p>猜错了的耗费实际上是很大的，所以一旦流水线长度上去，非常难搞</p>
-<p>另外的部分建议看书解决，书上的更为详细</p>
-<hr>
-<p>五段式流水线及其相关考点：</p>
-<p>首先明确一下，有几个表的内容是必然要背下来的，不过用几次就熟悉了</p>
-<p>这几个表的内容以及相应的冲突能够详细解释和考虑到，那么才能算是足够了，都要熟悉</p>
-<p><img src="/img/ky/164.png"></p>
-<p><img src="/img/ky/165.png"></p>
-<p><img src="/img/ky/166.png"></p>
-<p><img src="/img/ky/167.png"></p>
-<p>三张表是常考内容，每一张都需要彻底熟悉并能和之前的冲突联系起来</p>
-<p>其中的一个比较常见的需要注意的事项：</p>
-<p><img src="/img/ky/168.png"></p>
-<p>实际上冲突都只能具体情况具体分析，这里顶多只能列举一些常见的可能冲突</p>
-<p>关于冲突本身，实际上尽可能还是要结合例子分析，书上的例子+PPT的例子吃透就够了</p>
-<p>有问题不如多问问书、百度、PPT</p>
-<hr>
-<p>关于高级流水线技术：</p>
-<p><img src="/img/ky/169.png"></p>
-<p>实际上说的就是配置多个重复部件，度为N即为配置N个重复部件，可以让N条并行工作</p>
-<p>指令的序列是不能改变的，例如1-2-3-4一个指令，不能变为1-2-3-4-1</p>
-<p>当然如果是乱序发射的情况，确实可以变为1-3-2-4这样乱序执行，而和原序列无关</p>
-<p>这个就是以空间换效率的思路</p>
-<p><img src="/img/ky/170.png"></p>
-<p>这个就是把一个机器周期(这里也就是时钟周期，因为机器周期默认等于时钟周期</p>
-<p>给进一步拆分为多个周期，即让同一部件在一个周期内多次工作</p>
-<p><img src="/img/ky/171.png"></p>
-<p>具体还是看书吧</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组16</title>
-    <url>/2024/04/12/%E8%AE%A1%E7%BB%8416/</url>
-    <content><![CDATA[<p><img src="/img/ky/172.png"></p>
-<p><img src="/img/ky/173.png"></p>
-<p>补充：</p>
-<hr>
-<p>硬件多线程都不是实际意义上的多线程，因为实际上处理的资源就那么一份</p>
-<p>一相当于一个人干两个人的活，人就那么一个人，你只能尽可能压榨其最高效率</p>
-<p>但多核那么就是真正意义上的多线程，人直接变成了两个人干活</p>
-<hr>
-<p>SIMD就是一条指令同时处理了一堆一样的操作，例如全都加一</p>
-<hr>
-<p>MIMD实际上可以视作是多个SIMD的组合…</p>
-<p>多计算机系统就可以视作是分布式计算机，多处理器就是一个计算机有多个独立CPU</p>
-<p>另外说下超线程单核处理器和多核处理器的区别</p>
-<p>假如一个超线程单核处理器最多可以同时处理两个线程</p>
-<p>一个处理器有两个核</p>
-<p>那么对于一百万个线程，谁运行更快？</p>
-<p>毫无疑问是双核的处理器，因为超线程实际上并非完全的同时处理</p>
-<p>其同时处理线程的时候，大多数情况这两个线程是需要共同争夺相同的缓存等资源</p>
-<p>而双核就不可能争夺资源，这资源量是双份的，而超线程实际上是单份资源</p>
-<p>参考百度：</p>
-<p>超线程和多核是两种提高CPU利用率的技术。多核处理器是指在单个芯片上包含任意多个CPU的处理器。超线程是指每个核心可以同时执行的线程数量，一个核心可以有两个或多个线程。超线程和多核的区别在于，超线程的逻辑处理器并没有独立的执行单元、整数单元、寄存器甚至缓存，它们在运行时仍需要共用执行单元、缓存和总线接口。超线程由于处理器实际上只有一个核心，能够提升的效能约为5~15%左右，且万一发生资源互抢的情形时，整体效能反而会下降。虽然超线程能让计算机核数增加，但实际上计算机的核数翻倍并不能简单地认为着计算机的性能也翻倍了，计算机的性能还受CPU主频、机器字长、指令字长、存储字长、主存、I&#x2F;O速度、硬盘速度等因素影响</p>
-<hr>
-<p>多核处理器一般都共享主存，也就是一般都是共享内存处理器，也称为多处理器系统</p>
-<p>UMA&#x2F;NUMA都是针对多处理器(即多CPU的情况说的</p>
-<p>如果对着一个CPU&#x2F;处理器在那谈这个到底是UMA还是NUMA就一定别看了</p>
-<p>这里谈的都是“共享内存多处理器”</p>
-<p>而多计算器系统就肯定不符合这个定义，其定义是“私有存储器”</p>
-<p>虽然和NUMA的远程&#x2F;本地很类似，但绝对不是同一个东西</p>
-<p>或者说是大数据学久了，把多计算机系统以为是虚拟机了，实际上并不是</p>
-<hr>
-<p>一个程序!&#x3D;一个线程，一个程序可以被分为多个线程，也可能不能被分为多个线程</p>
-<p>多核！&#x3D;多处理器(CPU)，因为只是在一个CPU内集成了多个“CPU执行核心”</p>
-<hr>
-<p>关于考试，基本都是以选择概念为主，多看几遍书基本也就没什么问题了</p>
-<p>此外，王道的那份思维导图很好，不知道网上是否有具体资源</p>
-<hr>
-<p>[<a href="https://cs.haohaha.cn/408/arch/5-6/]">https://cs.haohaha.cn/408/arch/5-6/]</a></p>
-<p>一个比较好的参考，思维导图的地方</p>
-<p>现在想起来，二轮的时候确实可以根据网上的一些资料具体强化针对复习补缺</p>
-<p>毕竟到时候的压力肯定不会有一轮学那么重，学、复习都会快很多</p>
-<p>除此之外，不仅是二轮，后面有一些不太清楚、模糊的东西甚至也可以回去看视频细节</p>
-<p>尤其是特指清楚问题的核心在于对知识点的把握不清楚、概念模糊的情况</p>
-<p>因为一轮大多数情况我是不看视频的，难免会有一些遗漏</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组17</title>
-    <url>/2024/04/12/%E8%AE%A1%E7%BB%8417/</url>
-    <content><![CDATA[<p><img src="/img/ky/174.png"></p>
-<p>对于数据总线的一点补充：</p>
-<p>数据总线的位数不一定和机器字长或者存储字长相同</p>
-<p>如果机器字长32位，数据总线16位，那么CPU取得一个处理数据就要传两次</p>
-<p>如果存储字长32位，数据总线16位，那么CPU得到一个存储字就需要访问两次主存</p>
-<p>其他情况也是相对应的，类似于指令长度只有存储字长一半</p>
-<p>地址总线，当外部I&#x2F;O设备采用和主存统一编址的时候，那么地址也要考虑到</p>
-<p>类似于主存有30个单元，但外面还有3个，那么至少就需要六位地址位才行，六根地址线</p>
-<p>控制总线，对于单根线而言，是单向的，但是对于总线而言那么就是双向的</p>
-<p>因为既有CPU向外部发出信号的线，也有外部向CPU反馈的信号线</p>
-<hr>
-<p><img src="/img/ky/175.png"></p>
-<p>对双总线结构的一些补充：</p>
-<p>存在的主存总线支持突发&#x2F;猝发传送，即可以连续从主存中读取顺序数据而不必多次访存</p>
-<p>很明显可以提高效率，减少访存次数</p>
-<p>通道程序存放在主存中，需要调用的时候从主存中访问读取</p>
-<p>PPT上还有对于四总线结构的介绍，后续有空的时候可以看，但不是重点，是补充</p>
-<p><img src="/img/ky/176.png"></p>
-<hr>
-<p><img src="/img/ky/177.png"></p>
-<p>这里对周期进行一个补充，一般来说总线周期是数个时钟周期</p>
-<p>但也可能会有相同或者说倒反天罡，一个时钟周期包含多个总线周期的存在</p>
-<p>上面是一些具体的计算概念</p>
-<p><img src="/img/ky/178.png"></p>
-<p>关于这道题，例题的一些讲解补充：</p>
-<p>计算实际的有效数据传输位，因为往往传输时还会有一些校验位，冗余位的存在</p>
-<p>所以实际的数据传输位并没有那么多的，要减去这一些无效数据位去计算</p>
-<p>然后这边的发送首地址，并不是线复用时的特例，一般情况下也是需要先发送过去的</p>
-<p>无非复用线的时候要注意潜在的数据、地址冲突情况</p>
-<hr>
-<p>至于串行、并行两种情况的具体解释，其实王道书上面有</p>
-<p>无非就是并行的频率不能无限制提升所以实际上限制了并行的数据传输带宽</p>
-<p>本章内容多以选择题为主</p>
-<hr>
-<p>其实一共也就那么几种总线时间协议关系</p>
-<p>同步、异步、半同步、分离式</p>
-<p>异步就是你需要传多久我就等你多久，直到你传给我了再说</p>
-<p>拓展的异步串行是指异步时钟的，不依靠应答而依靠于校验码来判断传输结束与否</p>
-<p>同步就是这个时间段你必须传好，不传好我也不管，直接开始下一个周期</p>
-<p>拓展的同步串行就是发送方直接把收方的时钟控了让你强行和我产生一致性关系</p>
-<p>然后通过校验码、开始结束标记传输</p>
-<p>半同步就是约等于你传多久我等多久，无非我只会定时查看你传好没，而不是一直催着</p>
-<p>普遍是在时钟上下沿查看一下</p>
-<p>上面三种都是对总线独占式的，一旦占用那么总线只能等他们完成了再被别的使用</p>
-<p>分离式的含义就是总线不能闲着，我只有传输的时候占用总线，传完了立刻就让给别人</p>
-<p>这几种各有各的优缺点、适用条件，一般考察的就是这一些内容</p>
-<hr>
-<p>异步里面的几个互锁关系：</p>
-<p>不互锁：</p>
-<p>A请求，B回答</p>
-<p>A默认B会回答所以过一会儿撤销请求，B默认A得到了回答撤销请求所以过会儿撤销回答</p>
-<p>半互锁：</p>
-<p>A请求，B回答</p>
-<p>A一定要亲眼看见B回答了才撤销请求，B默认A得到了回答撤销请求所以过会儿撤销回答</p>
-<p>全互锁：</p>
-<p>A请求，B回答</p>
-<p>A一定要亲眼看到B回答了才撤销请求，B一定要知道A已经得到回答撤销请求再撤销回答</p>
-<p>稍微比较绕吧，但应该还是能理解的，建议看书</p>
-<hr>
-<p>另外就是总线的几个阶段</p>
-<p><img src="/img/ky/179.png"></p>
-<p>突发、非突发两个方式要清楚，经常考</p>
-<hr>
-<p>I&#x2F;O接口的功能：</p>
-<p>书上也有详细介绍，这里不过多赘述，基本要求是能背下来，或者是都知道</p>
-<p><img src="/img/ky/180.png"></p>
-<hr>
-<p>对I&#x2F;O端口的一些补充：</p>
-<p>对于书上7.1图中的内容，补充一点：主机侧并不一定是并行传输接口</p>
-<p>不过I&#x2F;O接口的串&#x2F;并转换功能自然还是需要有的，否则外面一个并行的不就寄了？</p>
-<p>至于状态寄存器、控制寄存器书上一句话的理解：</p>
-<p>其实是从其工作流程出发，CPU向I&#x2F;O接口发出一个命令字到控制寄存器里面</p>
-<p>然后控制寄存器的内容给译码器，之后这个控制寄存器实际上就已经不需要再用了</p>
-<p>因为已经选中了相应的外部设备，这个寄存器就可以在外部连通后用作状态寄存</p>
-<p>即，在1阶段当作控制寄存器用，在2阶段都当作一个状态寄存器用，完全不会产生冲突</p>
-<p><img src="/img/ky/181.png"></p>
-<p>注，这里的控制线基本只有没几个命令，大多数命令都是在数据线上完成传输的</p>
-<p>控制线基本只会传输一个读写信号、中断、仲裁、握手，大部分都会是数据线上面传输</p>
-<p>例如一个指令字，其就是在数据线上传输而非在控制线上传输</p>
-<hr>
-<p>书上对于传输内容写的比较浅，这里可以用作补充，包含了各功能部件、各工作流程</p>
-<p><img src="/img/ky/182.png"></p>
-<p><img src="/img/ky/183.png"></p>
-<hr>
-<p>关于编址方式的较为形象的理解：</p>
-<p><img src="/img/ky/185.png"></p>
-<p><img src="/img/ky/184.png"></p>
-<p>后面的计算还是比较常见的考察方式，其他的细节还是要看书的，还有不少内容</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>计组18</title>
-    <url>/2024/04/14/%E8%AE%A1%E7%BB%8418/</url>
-    <content><![CDATA[<p>程序查询方式，如果想具体了解工作流程建议配合前面的P301，I&#x2F;O接口的通用结构理解</p>
-<p>书上的内容其实比较完善，这里是一些补充</p>
-<p><img src="/img/ky/186.png"></p>
-<p>程序查询实际上也可以分为两类，一类是独占式查询，一类是定时查询</p>
-<p>相对而言定时查询拥有更好的效率，因为不至于一直在查查查，CPU也可以干别的事</p>
-<p><img src="/img/ky/187.png"></p>
-<p>这里的例题实际上说的就是定时查询而非独占式查询</p>
-<p>只要满足每次数据寄存器满了以后的数据能够被定时带走，那么就没问题</p>
-<p>如果满了，而且CPU干到极限了也带不走，那么就会产生数据丢失问题</p>
-<p><img src="/img/ky/188.png"></p>
-<p>独占式就没必要算什么占用时间了，就是百分百，我一直等你干完再去干别的活</p>
-<hr>
-<p>程序中断方式基本概念：</p>
-<p>这里其实主要是谈利用了程序中断这样一个特性完成主机与I&#x2F;O设备的数据传送</p>
-<p>简单来说，就是利用了CPU处理中断是单独跳出去处理，处理完了后又返回原程序</p>
-<p>相对之前的程序查询明显有强大的效率提升</p>
-<p>对于基本概念，建议看书，书上的内容总体非常详细</p>
-<hr>
-<p>全中断工作流程及相应逻辑：</p>
-<p><img src="/img/ky/189.png"></p>
-<p>注：此处或许需要勘误，辩证读取</p>
-<p>先对目前讨论的中断有个大致上的了解</p>
-<p>对于异常的处理，实际上第五章有一定的讲解，但并不是计组这门课的内容</p>
-<p>实际上是操作系统的内容，&#x2F;&#x2F;同时后面中断源的识别实际上也只注重硬件</p>
-<p>因为软件非向量中断是操作系统来完成的，很明显又不是计组这边需要着重的内容</p>
-<p>详细可以参考P249，计组对异常、软件非向量的介绍很少</p>
-<p>这里也主要是谈论I&#x2F;O操作的中断信号，因为本质就是I&#x2F;O利用了这个中断去进行数据传输</p>
-<hr>
-<p><img src="/img/ky/190.png"></p>
-<p>然后再来谈这整个处理过程</p>
-<p>首先由外部中断源向CPU给出一个中断请求，然后CPU会在某些判断条件下响应中断请求</p>
-<p>因为同时一般不止一个中断请求，所以会按照中断响应的优先级去判断，谁先响应</p>
-<p>然后便是响应中断的过程，有隐程序自动进行当前CPU状态的保存(入栈，和异常处理类似</p>
-<p>在处理完了后便会引出不同的中断服务程序(每个中断都有其相应的程序</p>
-<p>至于怎么引出，详情参考操作系统异常处理篇以及本节的硬件向量处理篇</p>
-<p>上面只是一个初步的工作流程介绍，具体还需要结合书上的内容、PPT上的内容去细化</p>
-<p><img src="/img/ky/191.png"></p>
-<p><img src="/img/ky/192.png"></p>
-<p>补充：查询程序的速度往往没有硬件快</p>
-<p><img src="/img/ky/193.png"></p>
-<p>区分点：保存断点是中断隐指令干的事，但保护线程是中断服务程序干的事情，易错</p>
-<p>恢复现场也是中断服务程序干的，隐指令只干前面几个任务</p>
-<p>至于为什么要把PSW和PC送到栈，而对现场信息就没太多的要求？</p>
-<p>因为PSW&#x2F;PC内容是无法被后续命令访问的，而现场信息(如寄存器内信息是可以被访问的</p>
-<p>所以这也是为什么把后面的现场信息保存留给中断处理程序而不是由隐指令给出</p>
-<p>？又要勘误了？</p>
-<hr>
-<p>大致上是[<a href="https://blog.csdn.net/Zevalin/article/details/136844944]">https://blog.csdn.net/Zevalin/article/details/136844944]</a></p>
-<hr>
-<p>建议配合书上的内容进行进一步详细的梳理、复习，或者说开始扣字眼</p>
-<p><img src="/img/ky/194.png"></p>
-<hr>
-<p>对上面中断服务程序执行过程中的进一步补充：多重、单重中断</p>
-<p><img src="/img/ky/195.png"></p>
-<p>相对而言，其实单重的意思，就是在执行一个中断处理的时候不允许其他的打扰</p>
-<p>当然NMI线发出的不可屏蔽的除外</p>
-<p>而多重意味着可以受到别的打扰，先前还对书上一句话有所误解</p>
-<p>多重意味着可以打扰，当不使用中断屏蔽技术的时候，优先级和响应优先级相同</p>
-<p>？勘误？</p>
-<p>优先级依旧是存在的，并不意味着变成了单重</p>
-<hr>
-<p>关于屏蔽字：</p>
-<p><img src="/img/ky/198.png"></p>
-<p>对于自身位的屏蔽位一定是置有效的，特征上一个屏蔽字至少有一位</p>
-<p>屏蔽字的有效位越多意味着该优先级越高，同时，屏蔽字是每一位代表一个屏蔽</p>
-<p>也就是四位只能代表四个屏蔽源，屏蔽信号存于PSW内</p>
-<hr>
-<p>程序中断方式容易考大题，这一块一定要多重视其基本的计算</p>
-<p>王道7.3节有好几道相应的例题，课本上也有不少例题，建议精做</p>
-<hr>
-<p>DMA方式概念及其工作流程：</p>
-<p><img src="/img/ky/196.png"></p>
-<p>DMA的本质是把原先CPU的一部分任务给单独取出，让CPU和外设访存各司其职</p>
-<p>对于其工作流程：</p>
-<p><img src="/img/ky/197.png"></p>
-<p>预处理阶段，CPU会把主存地址给主存地址计数器（AR、把I&#x2F;O设备地址给DAR</p>
-<p>然后把传输数据的个数给WC，word-count，其初始内容是传输的总字数，每传一字减一</p>
-<p>然后DMA根据相应的I&#x2F;O设备地址去启动相应的I&#x2F;O设备</p>
-<p>此时CPU可以继续干活，不受DMA工作的影响</p>
-<p>在这个阶段内外设会向DMA发送数据，向数据缓冲寄存器中写内容</p>
-<p>当写满一个字的时候DMA请求触发器给状态控制逻辑寄存器发送一个信号</p>
-<p>状态信号向CPU发送一个总线控制请求</p>
-<p>同时CPU也会移交系统总线的控制权，这个指的是系统总线不是片内总线</p>
-<p>此时DMA取得总线的控制权，将相应的主存地址、数据内容写入总线中，并指明是写操作</p>
-<p>如果是读操作那么也是类似的</p>
-<p>然后在传输完一个字的内容以后，就会使得AR\WC的计数自动修改</p>
-<p>当WC计数为零或者溢出的时候代表这个数据块传输完毕，向中断机构发送一个信号</p>
-<p>然后中断机构向CPU发送一个中断信号表示已经完成了数据的传输，总线权移交</p>
-<p>另外此时虽然名义上CPU可以自己干自己的活，但因为系统总线被占据，实际上几乎不干</p>
-<p>至此DMA工作流程结束，下面由CPU进行收尾工作</p>
-<hr>
-<p>DMA传输方式还有需要处理的就是和CPU的访存冲突问题，书上已经较为详细</p>
-<p>其他需要注意的就是一些细节，建议以书上、PPT整理的细节为主，类似于特征、特点</p>
-<p>适用范围、优缺点等，细节后期补充</p>
-<hr>
-<p>一些补充：</p>
-<p>向量中断和软件查询的区别，其实就在于引出的方法不同</p>
-<p>向量中断也被称为硬件识别、硬件处理等，实际上就是在内存中指定一块地方存放地址</p>
-<p>这一些内存单元的内容里面就是“中断&#x2F;异常处理程序的地址”</p>
-<p>然后通过引用这些地址的内容去调用相应的异常处理程序</p>
-<p>软件查询无非就是内存中不存这些地址</p>
-<p>操作系统依据当前的异常、中断调用<strong>中断查询程序</strong>，然后调用相应的中断、异常处理程序</p>
-<p>可以看到仅仅是得到异常后，去找这个异常&#x2F;中断处理的程序的方法不同</p>
-<p>类似于去图书馆找书，一个按书架位置找，一个按书分类找，单纯只是找的方法不同了</p>
-<p>至于这个异常&#x2F;中断处理程序，属于操作系统模块</p>
-<hr>
-<p>中断响应判优、中断处理判优补充&#x2F;勘误：</p>
-<p>现在大致上应该能够区分了，中断响应是当多个中断请求一起来的时候，决定哪个先响应</p>
-<p>这个响应方法就由硬件排队器或者中断查询程序决定，有趣的是，引出也有相对应的</p>
-<p>一个是硬件向量法、一个是软件查询法，但中断处理程序均是操作系统模块</p>
-<p>而中断处理是和中断响应不同的，是在处理一个程序的时候考虑是否要切换到优先级高的</p>
-<p>这个判断由中断控制器决定，或者说不考虑设置中断控制器，即采用中断屏蔽或不采用</p>
-<p>如果不采用，那么就考虑用响应优先级来代替，这个响应优先级就是单纯指已定下的规矩</p>
-<p>这边肯定是要和单重区分开来的，单重是不允许其他中断在中断处理中再次套娃</p>
-<p>这里只是按照响应优先级决定而已，依旧可以出现套娃的</p>
-<p>勘误？</p>
-<hr>
-<p>关于响应判优和中断处理判优之间的一些勘误、补充：</p>
-<hr>
-<p>先说DMA里面的一些问题：</p>
-<p>首先就是DMA请求，实际上应该以书上的为准，即外设给DMA控制器发出的</p>
-<p>而不是说给CPU发出的，那个严格而言说的应该是总线控制请求</p>
-<p>DMA是不需要保护现场的，但不代表其是不用申请主线控制权的，只有一个不用</p>
-<p>即交替访存的时候不需要考虑主线的申请权</p>
-<hr>
-<p>然后就是DMA迷一样的总线请求和中断响应：</p>
-<p>DMA的中断是优先级最高的，这个中断应该也是和别的中断一样，在执行指令后判断的</p>
-<p>但是总线请求就非常迷了，三种实际上完全不一样的：</p>
-<p>第一种就是不管怎么样都要把CPU给断了</p>
-<p>第二种就是CPU在占据总线那么优先让CPU干完，然后再去占据总线</p>
-<p>第三种没有占据总线这回事，自然不用考虑什么了</p>
-<p>然后就是传输问题，第一种是按一个块传输的，第二是按一个字一个字传输的</p>
-<p>所以以“块”为基本单位传输就感觉有点太牵强了，而且电路结构估计也不一样吧</p>
-<hr>
-<p>另外就是相似之处：</p>
-<p>程序查询的定时查询和中断、DMA其实真的感觉很像</p>
-<p>定时查询是CPU隔一段时间来看你一眼，你好了那么CPU就取走这个内容</p>
-<p>中断那么是外部设备主动汇报已经好了那么需要CPU来取走这个内容</p>
-<p>DMA是已经把数据传完了，然后需要CPU来进行善后同时归还总线的汇报中断</p>
-<hr>
-<p>还有就是迷一样的周期问题：</p>
-<p>如果是第一种，那么怎么样都要把总线给抢过来，然后占据一个数据块的传输时间</p>
-<p>第二种的话，我理解为其实只要CPU没有占据总线，那么都是可以用的，没有周期一论</p>
-<p>不过一般而言一个指令周期基本都是要访存的，也是要占据总线的</p>
-<p>所以一般的存取周期&#x3D;机器周期&#x3D;存取周期，我也只能这样说了，实际上应该按总线周期</p>
-<hr>
-<p>通道程序和DMA基本原理类似，见P282的双总线结构</p>
-<p>此外，异常&#x2F;中断处理程序肯定是在CPU上面进行处理的，所以才需要占用CPU时间</p>
-<p>所以才说中断、程序查询是对CPU时间的申请，而DMA基本是对系统总线的申请</p>
-<hr>
-<p>关于断点的勘误、补充：</p>
-<p>从汇编指令角度理解，x86汇编当中的指令如JUM，ADD等，都是只能改变PC与PSW的值，但是PC和PSW的数据都是作为隐含数据无法被指令直接读出的，因此我们不能在中断服务程序中通过指令把他们【统称为断点信息】保存到栈或指定寄存器中，只能通过硬件自动完成。（相反通用寄存器等用户可见的寄存器数据【统称为现场信息】可以通过mov保存，因此可以在中断服务程序中完成）这也就是为什么在I&#x2F;O系统这一章中说“指令无法直接读取PC和PSW的内容”</p>
-<p>断点也可保存在特定的存储单元内，例如约定一律将程序断点存至主存的0号地址单元内，由于保存断点是由中断隐指令自动完成的，因此3次中断的断点都将存入0地址单元，这势必造成前两次存入的断点k+1和l+1被冲掉。为此，在中断服务程序中的开中断指令之前，必须先将0地址单元的内容转存至其它地址单元中，才能真正保存每一个断点。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>OS-1</title>
-    <url>/2024/04/15/OS1/</url>
-    <content><![CDATA[<p>操作系统个人初步感受下来就是需要例子来支撑，否则光看书确实会有些晦涩</p>
-<p>后面尽可能多利用例子解释…</p>
-<p>操作系统管理硬件、协调资源，不管理偏软的东西</p>
-<p>学习提示：要重点关注和理解各类操作系统主要想解决的是什么问题，各自的优缺点</p>
-<hr>
-<p>这里对书上的内容做一个概况、补充、类别归纳：</p>
-<p><img src="/img/os/1.png"></p>
-<p>直接从这边说，概念定义而言，OS这门课更多注重于资源的管理</p>
-<p>而对硬件机器的扩充、接口并不是这门课的核心，会有一定的涉及但不是核心</p>
-<p><img src="/img/os/2.png"></p>
-<p>从一个例子里面就可以大致上理解操作系统的意义、功能，书上也有对其比较详细的定义</p>
-<p>然后可以看到操作系统实际上和三层相互连接，用户层、应用程序层、裸机层</p>
-<p>书上对其的介绍也是基于这个逻辑一步步展开的</p>
-<hr>
-<p>至于其具体的交互案例、逻辑，个人认为书上和PPT讲解足够好，复习只需要看这些即可</p>
-<p>书上的目标和功能这一块本身就是按这个逻辑展开的</p>
-<hr>
-<p>操作系统管理的主要是计算机资源(硬件资源、广义上的资源</p>
-<hr>
-<p>操作系统的特征：</p>
-<p>第一个，并发性：</p>
-<p>在这门课中的“同时”意味着并发，需要和并行区分</p>
-<p><img src="/img/os/3.png"></p>
-<p>这里可以配合计组的内容复习，如单核处理器和多核处理器的概念</p>
-<p>单核处理器实际上在同一时间只能处理一个线程</p>
-<p>即使采用了多线程技术，本质上也只是单线程，无非实现真正的线程并行</p>
-<p>多核处理器能够在实际意义上完成多线程的并行处理，因为其有多个独立运行的处理核</p>
-<p>它能够实现真正意义上的线程并行</p>
-<p>这门课谈的并发性是广义的，因为即使是多核CPU也可能会同时干超过其核数的线程</p>
-<p>所以自然产生了多道程序技术，也称程序并发</p>
-<hr>
-<p>第二个，共享性：</p>
-<p>互斥性是由这个资源的自身特性和对其的使用方法决定的</p>
-<p>这边的同时，并不是真正意义上的同时，这门课里面所有的同时都只是并发</p>
-<p>宏观上并行，微观上并发</p>
-<p><img src="/img/os/4.png"></p>
-<p>并发性和共享性互相依存，没有并发性自然不需要共享性，没有共享性无法实现并发性</p>
-<hr>
-<p>虚拟化，分为时分复用、空分复用</p>
-<p>这门课的特点就是用例子学会比较形象很多</p>
-<p><img src="/img/os/5.png"></p>
-<p><img src="/img/os/6.png"></p>
-<hr>
-<p>至于异步性，书上讲的不错，没必要用博客记录</p>
-<hr>
-<p>关于操作系统的发展，我的建议是届时直接看PPT结合书本复习即可，足够详细了</p>
-<p>重点应该放在各自的特征、优点、缺点，知道这个是什么东西</p>
-<p>就是不断优化资源的调度</p>
-<p>这里谈一些比较容易错的点：</p>
-<p>手工操作阶段肯定是单用户的，无法支持多用户</p>
-<p>在批处理阶段就可以支持多用户了，无非不能与用户进行交互而已，分为单道&#x2F;多道批</p>
-<p>课后习题里面的两个综合题个人认为是非常好的考察方法，值得好好复习</p>
-<p>其核心大致就是，当前CPU运行的时候，能不能找到一个可并行的外设一起运行</p>
-<p>或者反之，当前外设运行的时候，CPU能否并行运行，尽可能让两者并行运行</p>
-<p>分时操作系统同样是支持多道程序的，也就是同时可以处理多个程序，可穿插运行</p>
-<p>网络和分布式没什么特别可以谈的，看书就行</p>
-<hr>
-<p>关于中断处理过程的进一步细化</p>
-<p>执行中断处理程序不是内核做的事情，而恢复、保护现场，移交控制权是内核做的事</p>
-<p>建议配合计组P310的中断处理流程来感悟</p>
-<hr>
-<p>剩下的就是操作系统的运行环境一节：</p>
-<p>首先明确一个概念，这一节所说的指令均是二进制指令，而不是一般所说的机器指令</p>
-<p>日常所运行的程序一般都指代应用程序，运行在用户态或者说目态</p>
-<p>而操作系统具体的实现实际上是依赖于一系列“内核程序”，这些程序组成操作系统内核</p>
-<p>这些程序自然是运行在核心态，又称管态、内核态</p>
-<p>先前提到过程序的运行最终均是被划分为一条条二进制指令，由CPU执行运行</p>
-<p>至于当前到底是用户态还是核心态，是由PSW内的一个标志位来表示的</p>
-<hr>
-<p>特权指令、非特权指令：</p>
-<p>CPU在出厂后会被设置好对指令的识别，能够一眼看出哪些是特权指令哪些是非特权指令</p>
-<p>也很明朗，特权指令只能在管态或者说内核、核心态执行</p>
-<p>非特权指令并不是一定只能在目态或者用户态运行，它也可以在核心态运行</p>
-<p>只是用户态不能运行特权指令而已</p>
-<p>如何来识别并完成这个操作？CPU会通过PSW中的用户&#x2F;核心态表示位来判断是否执行指令</p>
-<hr>
-<p>关于用户态与核心态之间的转换：</p>
-<p>核心态-用户态：</p>
-<p>核心态转为用户态，需要一条特权指令才能完成</p>
-<p>在中断处理中，“中断处理程序的最后一条指令通常是一条中断返回指令”</p>
-<p>这里面就包含有一条转为用户态的特权指令</p>
-<p>不过不要把这个看太粗，实际上中断返回指令需要执行多个事件</p>
-<p>基本可以分为“恢复现场”“核心态转用户态”，这一些都是在内核中运行的，不是硬件</p>
-<p>硬件完成的实际上是PSW&#x2F;PC的恢复，而操作系统完成的是对现场信息的恢复</p>
-<p>整个过程属于内核的功能实际上很少，内核不具备异常&#x2F;中断处理的功能，必须找外援</p>
-<p>内核是一系列“功能”的集合体</p>
-<p>不然也就没有必要通过软件查询、硬件向量表去查询这个相应的中断处理程序</p>
-<p>用户态-核心态：</p>
-<p>由用户态转为核心态需要执行一条“陷入”指令或者说访管指令，是由且仅由中断实现的</p>
-<p>注意是通过硬件中断机制实现的，说白了就是计组里面谈的隐指令</p>
-<p>访管、陷入都是同一件事情的不同角度说法而已</p>
-<p>陷入一般特指异常状态下的，被动的陷入，核心态强制夺取控制权</p>
-<p>而访管一般是主动的，主动出让控制权，一般也就是一个主动性的“中断”</p>
-<p>书上其实讲得就比较稀碎，没有单独拎出来讲，看起来虽然详细但缺乏逻辑</p>
-<p>还是比较建议分模块、分逻辑一个个把知识点给拆出来的</p>
-<p>另外补充一句，如果已经在了核心态你访管干嘛，所以核心态是肯定不执行访管的</p>
-<hr>
-<p>这个是内核的一个基本包含架构，或者说内核的内容有这些，能完成这些功能</p>
-<p>完成这些功能的程序被称为内核程序，多个内核程序组成了内核</p>
-<p><img src="/img/os/8.png"></p>
-<p>一般还是习惯于把内核分为三大功能的，上面的资源管理功能一般不会列入</p>
-<p>但如果列入了也不是什么怪事，也可以当作一个“大内核”看待</p>
-<p>书上对这一部分实际上还有更加详细的介绍，包括各功能的细节说明</p>
-<p><img src="/img/os/7.png"></p>
-<hr>
-<p>然后再对外部中断引起的用户态向核心态的转变进一步详细化、形象化：</p>
-<p><img src="/img/os/9.png"></p>
-<p>其实书上对外中断的划分分为：可屏蔽中断与不可屏蔽中断，个人认为更加恰当一些</p>
-<p>外部中断是硬件中断，内部中断里面的终止异常也是硬件导致的中断</p>
-<p><img src="/img/os/10.png"></p>
-<p>对于最后这个基本实现原理稍微补充一下：</p>
-<p>找到相应的中断处理程序这个方法，其实不一定依靠中断向量表，也可以是中断程序表</p>
-<p>一个是硬件找，一个是软件找，之前在计组的时候也有涉及过</p>
-<p>书上还有一块区分子程序调用和中断处理，确实是非常类似的操作</p>
-<p><img src="/img/ky/131.png"></p>
-<hr>
-<p><img src="/img/os/11.png"></p>
-<p>系统调用是专门给应用程序用的，给用户用的是命令接口</p>
-<p>但广义上来说，也可以称程序接口（一组系统调用）、命令接口均是给程序员的（用户</p>
-<p><img src="/img/os/12.png"></p>
-<p>一般可以理解为只要涉及到共享资源的操作，一般都会涉及操作系统，一般下面几类</p>
-<p><img src="/img/os/13.png"></p>
-<p><img src="/img/os/14.png"></p>
-<hr>
-<p>补充：</p>
-<p>常见的非特权指令：</p>
-<p>存取数，读时钟，加减乘除，寄存器清零，压栈弹栈，跳转，trap（访管）</p>
-<p>常见的特权指令：</p>
-<p>开关中断，写时钟，输入输出，写PSW</p>
-<p><strong>简洁来说就是，对于共享资源的访问需要特权指令来执行</strong></p>
-<p><strong>对于独占资源的访问，非特权指令进行执行就可以了</strong></p>
-<p>参考该文章：</p>
-<p>[<a href="https://blog.csdn.net/weixin_45415929/article/details/127852663]">https://blog.csdn.net/weixin_45415929/article/details/127852663]</a></p>
-<p>我的建议是，多看CSDN，历朝历代的考研人已经整合出了绝对优于王道的知识点汇总</p>
-<p>文章：[<a href="https://blog.sunlingzhang.com/2020/01/18/%E7%89%B9%E6%9D%83%E6%8C%87%E4%BB%A4%E3%80%81%E8%AE%BF%E7%AE%A1%E6%8C%87%E4%BB%A4%E3%80%81%E9%99%B7%E5%85%A5%E6%8C%87%E4%BB%A4%E3%80%81%E5%B9%BF%E4%B9%89%E6%8C%87%E4%BB%A4/]">https://blog.sunlingzhang.com/2020/01/18/%E7%89%B9%E6%9D%83%E6%8C%87%E4%BB%A4%E3%80%81%E8%AE%BF%E7%AE%A1%E6%8C%87%E4%BB%A4%E3%80%81%E9%99%B7%E5%85%A5%E6%8C%87%E4%BB%A4%E3%80%81%E5%B9%BF%E4%B9%89%E6%8C%87%E4%BB%A4/]</a></p>
-<hr>
-<p>这样理解吧，响应判优和中断处理判优不是一个硬件完成的，没必要过于纠结硬件了</p>
-<p>虽然还是留了那么一个坑在</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>OS-2</title>
-    <url>/2024/04/17/OS-2/</url>
-    <content><![CDATA[<p>第一章后面几节是纯概念类，以简单选择题为主，但不代表能轻松背得下来…</p>
-<p><img src="/img/os/15.png"></p>
-<p>按照书上的顺序一个个介绍下去：</p>
-<p>个人认为单纯说下总体的逻辑结构和大体上的考察方式，以此去做一个复习框架更好</p>
-<p>书上写的虽然详细但总会觉得让人两眼一黑，有一个大体框架再说细节的补充吧</p>
-<p>分层结构、模块化的两个结构特征以书上的为准，已经足够形象了，不必再多补充什么</p>
-<p>关于优缺点的考察：</p>
-<p>其实核心就是把握几个特性就行，清楚为什么有这个优点，为什么有这个缺点</p>
-<p>但也没那么容易就能完全记住啊……</p>
-<p>书上还有很多的进一步阐述，细节依旧还在书上</p>
-<hr>
-<p>分层结构：</p>
-<p><img src="/img/os/15.png"></p>
-<p>优点：</p>
-<p>便于调试和验证可以采用书上的例子说明，这里不多说</p>
-<p>易于扩充和维护、接口清晰固定，这句话稍微解释一下吧：</p>
-<p>接口清晰固定是肯定的，因为一开始设计这一层的时候就会把这一批接口给设计好，不变</p>
-<p>易于扩充、维护，想修改、替换一层的时候只需实现对上层的接口和下层接口的调用</p>
-<p>只要对上层的接口依旧是实现的，不变的，那么你这一层怎么改都是不会有问题出现的</p>
-<p>缺点：</p>
-<p>仅可以调用相邻层，这个是特性决定的，上一层只能调用下一层相邻的，且是单向的</p>
-<p>下一层是不能调用上面一层的接口的</p>
-<p>效率低也是从这个特性理解，操作系统在高层调用一个程序，可能最终需要回到底层执行</p>
-<p>即一条程序调用了每一层的接口，那么必然导致层与层之间产生大量的通信时间</p>
-<hr>
-<p>模块化：</p>
-<p>书上关于模块化的优点总结得稀碎，这里建议参考王道PPT来</p>
-<p><img src="/img/os/15.png"></p>
-<p>优点：</p>
-<p>模块划分是以功能划分的，所以逻辑自然清晰易于维护，哪边有问题去哪找</p>
-<p>各个子模块之间也会有相应的暴露接口，但在开发的时候就可以明确接口的函数返回值等</p>
-<p>也就是你这个模块即使没有完成，其他模块也可以按照设计开发时约定的接口来设计调用</p>
-<p>所以说“同时并进”</p>
-<p>相对应的，任何模块也可以直接调用其他模块，也是这样一个道理，直接通过接口就行</p>
-<p>如果要增加拓展一项功能，支持新的功能、文件系统，只需要引入这个模块就行</p>
-<p>只需要引入这个模块，这个驱动程序就可以完成新功能的拓展，所以说非常的方便</p>
-<p>这里说的模块，其实就是图上面标的“进程管理”、“存储器管理”等类似的模块了</p>
-<p>缺点：</p>
-<p>接口的定义未必合理就是因为是事先安排好确定的一个接口约定</p>
-<p>但谁都不知道开发过程中会不会说这个接口压根没法用或者会和别的接口冲突等</p>
-<p>所以说定义未必合理</p>
-<p>同时因为模块之间相互调用较多，所以到底是自身模块的问题，还是调用模块的问题</p>
-<p>就很难区分，也就是说会有比较多的调用、调试难度</p>
-<hr>
-<p>内核相关：</p>
-<p><img src="/img/os/16.png"></p>
-<hr>
-<p>大内核，小内核：</p>
-<p><img src="/img/os/17.png"></p>
-<p>其实区别就是在于拓展性的功能程序，一个放在了外部程序，一个集成在了内核程序之中</p>
-<p>大内核：</p>
-<p>优点肯定是性能较高，因为可以直接提供系统功能服务，而不需要去外部交互</p>
-<p>缺点也是肯定的，因为代码量越多也就越难与维护，内部非常繁琐复杂</p>
-<p>同时因为大量功能运行在内核态，所以一旦产生问题，就会直接导致系统整体性崩溃</p>
-<p>书上对大内核的介绍也只是寥寥几句，所以重点要看的是微内核</p>
-<p>微内核：</p>
-<p>书上对其划分了最基本的功能，其实应该是有重复部分</p>
-<p>第二十八页的最后一段和二十九页的第二整段几乎就是一个重复性的声明，只是详细化</p>
-<p>对于基本功能就不再赘述，基本是涉及硬件底层最核心的一些功能</p>
-<p><img src="/img/os/18.png"></p>
-<p>这边主要是对这里的东西、结合优缺点进行论述：</p>
-<p><img src="/img/os/16.png"></p>
-<p>我想优点都是比较容易理解的，不多说了</p>
-<p>性能低的源头基本就是其体系结构和特性决定的</p>
-<p>因为这一批功能被移出内核，被作为单独的应用程序调用，所以当一个应用程序运行时</p>
-<p>假如需要调用一堆非内核的外层服务器功能，那么就会导致核心态和用户态的反复切换</p>
-<p>因为服务器在实现其功能的时候需要得到内核的支持，所以就需要先到核心态运行</p>
-<p>然后完成以后就回到用户态，对于下一个功能模块的调用也是一样的</p>
-<p>这样就会导致一个程序运行的时候假如涉及到多个功能模块，就会导致多次的状态切换</p>
-<p>就会导致效率的大幅度降低</p>
-<p>此外，各个应用程序之间的交互也是无法直接实现的，必须借助内核的通信实现</p>
-<p>自然也就是更加费时间的事情了</p>
-<hr>
-<p>外内核，这个没什么可以说的，看书上就行了</p>
-<hr>
-<p><img src="/img/os/19.png"></p>
-<p>以这个图来解释两种虚拟机管理程序</p>
-<p>第一类的本质更类似于一个操作系统，直接对硬件资源进行管理</p>
-<p>然后对CPU、硬盘、内存等进行虚拟化给不同的虚拟机，支持虚拟机上运行不同操作系统</p>
-<p>第二类就更类似于一个应用程序</p>
-<p>因为其是和宿主操作系统上的应用程序几乎是同等地位运行的</p>
-<p>宿主操作系统上可以有自己运行的应用程序，也可以去运作这个虚拟机管理程序</p>
-<p>在这个虚拟机管理程序上可以支持不同操作系统虚拟机的运行</p>
-<p>对于上述任意一种虚拟机管理程序</p>
-<p>当上层虚拟机在使用特权指令的时候，下层的管理系统会按情况进行响应</p>
-<p>毕竟对于上层的虚拟机而言，它还以为自己运行在内核态，实际上运行在用户态</p>
-<p>如果是操作系统发出的，那么就确切给一个内核执行的状态，即让真正硬件干</p>
-<p>对于第一类就是由虚拟机管理程序去安排</p>
-<p>第二类先由虚拟机管理程序截断这条指令，转为虚拟机管理程序向宿主操作系统系统调用</p>
-<p>如果是用户的应用程序发出的，那么就“模拟”一个相应的处理过程，而不会实际调用</p>
-<hr>
-<p><img src="/img/os/20.png"></p>
-<p>然后再来解释下这个图，物理资源的控制权我想是不用说的</p>
-<p>第一类虚拟机管理系统约等于一个真正意义上的操作系统，第二类更像一个应用程序而已</p>
-<p>资源分配方式上面</p>
-<p>第一类因为其占据了资源分配主动权，分配的是物理资源，且可以如外核般分配资源</p>
-<p>第二类其并没有对资源的主动权，只是被动由宿主操作系统给其分配虚拟化的资源</p>
-<p>而其对这一些虚拟化的资源进行再度虚拟化划分</p>
-<p>性能和可支持的虚拟化机器数量的多少的意思都是一样的</p>
-<p>一个是底部就运行在硬件上，一个底部运行在操作系统之上</p>
-<p>中间多了的一个操作系统就会导致一部分资源被操作系统给调用走</p>
-<p>所以很自然第二类就不如第一类的性能好，可支持的数量多，因为其可拿到的资源更少</p>
-<p>至于运行模式</p>
-<p>这里就要稍微详细说下，第一类而言，只有这一个虚拟机管理程序是运行在内核态的</p>
-<p>可以使用最高级别的特权指令，而对于上层的虚拟机，他们实际上运行在用户态</p>
-<p>第二类而言，其部分模块是载入操作系统(参考操作系统的模块化)，部分运行于核心态</p>
-<p>大部分还是运行在用户态的，当一个虚拟机需要执行特权指令的时候就会被截获</p>
-<p>然后转向下一层真正操作系统的系统调用</p>
-<hr>
-<p>注：操作系统引导这一块没看，有点太过于…</p>
-]]></content>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> themes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Questions and Answers</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/16/qna/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/16/qna/</url>
+      <content type="html"><![CDATA[<span class="label label-danger">Q</span> What does <code>Freemind</code> stands for?<br><br><span class="label label-success">A</span> <code>Freemind</code> is named after <a href="http://freemind.pluskid.org/" target="_blank" rel="external">Pluskid’s blog</a>. This theme is greatly inspired by his blog layouts and stylesheets.<br><br><span class="label label-danger">Q</span> There’re already so many themes for Hexo. Why create this one?<br><br><span class="label label-success">A</span> In fact I created this theme before I turned to use Hexo. I switched to Hexo about half an year ago, including my theme, since I have already got used to it and don’t wanna change it for now.<br><br><a id="more"></a><p><span class="label label-danger">Q</span> Why use raw CSS stylesheets instead of more fashionable stylus?</p><p><span class="label label-success">A</span> Yes, stylus is cool. But I don’t want to wrote my stylesheets again in stylus. So let’s just keep them.</p><p><span class="label label-danger">Q</span> I love your theme. How to contribute?</p><p><span class="label label-success">A</span> Great that you love it. To devote your contribution, you can:</p><ul><li>Star its <a href="https://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="external">Github project</a>;</li><li>Fork this project, make your change, and then send me your pull request;</li><li>Since it is public under MIT license, you can make your own theme based on mine. But it will be nicer if you claimed that your work is based on mine in your theme project page.</li></ul><p><span class="label label-danger">Q</span> <a href="http://hahack.com" target="_blank" rel="external">Your blog</a> looks a little different to this theme. Why such difference?</p><p><span class="label label-success">A</span> Yes. I modified the theme a little bit as I open sourced this theme. I actually did some simplification <em>e.g.</em> I removed the whole <a href="http://hahack.com/wiki" target="_blank" rel="external">Wiki</a> page because I don’t think that everybody need this.</p><p><span class="label label-danger">Q</span> How to generate ToC(Table of Contents) in a certain page?</p><p><span class="label label-success">A</span> Add <code>toc: true</code> in the <a href="https://github.com/wzpan/hexo-theme-freemind#front-matter" target="_blank" rel="external">front-matter</a>.</p><p><span class="label label-danger">Q</span> Where can I find your markdown source files of these docs?</p><p><span class="label label-success">A</span> From the <a href="https://github.com/wzpan/hexo-theme-freemind-blog" target="_blank" rel="external">source repo</a> of this site.</p>]]></content>
+      
+      <categories>
+          
+          <category> Docs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Q&amp;A </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Questions and Answers（中文）</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/16/qna-cn/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/16/qna-cn/</url>
+      <content type="html"><![CDATA[<span class="label label-danger">Q</span> <code>Freemind</code> 这名字有何含义？<br><br><span class="label label-success">A</span> <code>Freemind</code> 命名出自 <a href="http://freemind.pluskid.org/" target="_blank" rel="external">Pluskid</a> 的博客。这个主题很大程度借鉴了他的博客的布局和样式。<br><br><span class="label label-danger">Q</span> 现在都有这么多 Hexo 的主题了，为啥又要写一个？<br><br><span class="label label-success">A</span> 实际上我这个主题在我使用 Hexo 前已经创建了。我在半年前将博客迁移到 Hexo ，因为我已经习惯了原来的主题，所以顺便把主题也移植了过来。<br><br><a id="more"></a><p><span class="label label-danger">Q</span> 为啥还用 CSS 写样式，而不用更高端大气的 stylus ？</p><p><span class="label label-success">A</span> 嗯，stylus 的确很酷。不过我不想再把以前的样式重写成 stylus 了。所以暂时先保留原来的 CSS。</p><p><span class="label label-danger">Q</span> 你的博客不错用，如何贡献？</p><p><span class="label label-success">A</span> 有人喜欢我的东西我就很高兴咯。如果想做出贡献，你可以：</p><ul><li>为本主题的 <a href="https://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="external">Github 项目</a> 加颗星；</li><li>Fork 这个项目，尽情DIY，然后给我发 pull request;</li><li>这个项目遵循 MIT 开源协议，你可以在本主题基础上创建你的主题。不过如果你能在你的主题页面中声明主题基于 Freemind 就再好不过了。</li></ul><p><span class="label label-danger">Q</span> <a href="http://hahack.com" target="_blank" rel="external">你自己的博客</a> 看起来跟这个主题有点不一样呀，为什么？</p><p><span class="label label-success">A</span> 是的。我在开源这个主题前做了些简化。不是所有人都需要我的博客里的一些特性，比如 <a href="http://hahack.com/wiki" target="_blank" rel="external">Wiki</a> 页面。</p><p><span class="label label-danger">Q</span> 如何指定某些页面生成 ToC(Table of Contents) ？</p><p><span class="label label-success">A</span> 在<a href="https://github.com/wzpan/hexo-theme-freemind#front-matter" target="_blank" rel="external">文章头部</a>添加 <code>toc: true</code> 。</p><p><span class="label label-danger">Q</span> 从哪里可以找到你的这几篇文档的 Markdown 源码？</p><p><span class="label label-success">A</span> 在本站点的 <a href="https://github.com/wzpan/hexo-theme-freemind-blog" target="_blank" rel="external">源码仓库</a> 。</p>]]></content>
+      
+      <categories>
+          
+          <category> Docs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Q&amp;A </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Tag Plugins</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/16/tag-plugins/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/16/tag-plugins/</url>
+      <content type="html"><![CDATA[<p>The freemind theme offers several new tag plugins, so as to fully take advantages of Bootstrap.</p><p>To use these tag plugins, you need to install <a href="https://github.com/wzpan/hexo-tag-bootstrap" target="_blank" rel="external">hexo-tag-bootstrap</a> first. In your blog root folder, execute the following command:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-tag-bootstrap --save</div></pre></td></tr></table></figure><p>Then you can use these tag plugins in your blog, as easily as you normally do using hexo tag plugins. </p><a id="more"></a><h2 id="Text-Color"><a href="#Text-Color" class="headerlink" title="Text Color"></a>Text Color</h2><p>Convey meaning through color with a handful of emphasis utility classes. These may also be applied to links and will darken on hover just like our default link styles.</p><h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor [style] %&#125;</div><div class="line">  text string</div><div class="line">&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure><h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor muted %&#125;</div><div class="line">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor primary %&#125;</div><div class="line">Nullam id dolor id nibh ultricies vehicula ut id elit.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor success %&#125;</div><div class="line">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor info %&#125;</div><div class="line">Maecenas sed diam eget risus varius blandit sit amet non magna.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor warning %&#125;</div><div class="line">Etiam porta sem malesuada magna mollis euismod.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor danger %&#125;</div><div class="line">Donec ullamcorper nulla non metus auctor fringilla.</div><div class="line">&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure><h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p><p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p><p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p><p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p><p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p><p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p><h2 id="Buttons"><a href="#Buttons" class="headerlink" title="Buttons"></a>Buttons</h2><p>Inserts a button with target links, text and specified color.</p><h3 id="Syntax-1"><a href="#Syntax-1" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% btn url text [style] %&#125;</div></pre></td></tr></table></figure><h3 id="Examples-1"><a href="#Examples-1" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% btn http://hahack.com hahack %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack primary %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack success %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack warning %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack danger %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack info %&#125;</div></pre></td></tr></table></figure><h3 id="Results-1"><a href="#Results-1" class="headerlink" title="Results"></a>Results</h3><a class="btn btn-default" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-primary" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-success" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-warning" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-danger" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-info" href="http://hahack.com" target="_blank" rel="external">hahack</a><h2 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h2><p>Inserts a label with text and specified color.</p><h3 id="Syntax-2"><a href="#Syntax-2" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% label text [style] %&#125;</div></pre></td></tr></table></figure><h3 id="Examples-2"><a href="#Examples-2" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% label default %&#125;</div><div class="line"></div><div class="line">&#123;% label warinng warning %&#125;</div><div class="line"></div><div class="line">&#123;% label success success %&#125;</div><div class="line"></div><div class="line">&#123;% label danger danger %&#125;</div><div class="line"></div><div class="line">&#123;% label primary primary %&#125;</div><div class="line"></div><div class="line">&#123;% label info info %&#125;</div></pre></td></tr></table></figure><h3 id="Results-2"><a href="#Results-2" class="headerlink" title="Results"></a>Results</h3><span class="label label-default">default</span><span class="label label-warning">warinng</span><span class="label label-success">success</span><span class="label label-danger">danger</span><span class="label label-primary">primary</span><span class="label label-info">info</span><h2 id="Badges"><a href="#Badges" class="headerlink" title="Badges"></a>Badges</h2><p>Inserts a badge with text.</p><h3 id="Syntax-3"><a href="#Syntax-3" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge text %&#125;</div></pre></td></tr></table></figure><h3 id="Examples-3"><a href="#Examples-3" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge 42 %&#125;</div></pre></td></tr></table></figure><h3 id="Results-3"><a href="#Results-3" class="headerlink" title="Results"></a>Results</h3><span class="badge">42</span><h2 id="Alerts"><a href="#Alerts" class="headerlink" title="Alerts"></a>Alerts</h2><p>Inserts alert messages with text and specified color.</p><h3 id="Syntax-4"><a href="#Syntax-4" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% alert [style] %&#125;</div><div class="line">   Alert string</div><div class="line">&#123;% endalert %&#125;</div></pre></td></tr></table></figure><h3 id="Examples-4"><a href="#Examples-4" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;% alert warning %&#125;</div><div class="line">Best check yo self, you&apos;re not looking too good.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert danger %&#125;</div><div class="line">Change a few things up and try submitting again.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert success %&#125;</div><div class="line">You successfully read this important alert message.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert info %&#125;</div><div class="line">This alert needs your attention, but it&apos;s not super important.</div><div class="line">&#123;% endalert %&#125;</div></pre></td></tr></table></figure><h3 id="Results-4"><a href="#Results-4" class="headerlink" title="Results"></a>Results</h3><div class="alert alert-warning"><i class="fa fa-bell"></i>  Best check yo self, you're not looking too good.</div><div class="alert alert-danger"><i class="fa fa-bug"></i>  Change a few things up and try submitting again.</div><div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  You successfully read this important alert message.</div><div class="alert alert-info"><i class="fa fa-info"></i>  This alert needs your attention, but it's not super important.</div>]]></content>
+      
+      <categories>
+          
+          <category> Docs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> plugins </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Tag Plugins（中文）</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/16/tag-plugins-cn/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/16/tag-plugins-cn/</url>
+      <content type="html"><![CDATA[<p>Freemind 主题提供了丰富的 tag plugins，以充分利用 Bootstrap 的威力。</p><p>在使用这些 tag plugins 之前，你需要先安装 <a href="https://github.com/wzpan/hexo-tag-bootstrap" target="_blank" rel="external">hexo-tag-bootstrap</a> 。在你的 Hexo 博客目录，执行下列命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-tag-bootstrap --save</div></pre></td></tr></table></figure><p>然后就可以像使用其他 hexo tag plugins 一样使用这些 Bootstrap tag plugins 了。</p><a id="more"></a><h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>插入一段文本，并用特殊的颜色高亮它。</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor [style] %&#125;</div><div class="line">  text string</div><div class="line">&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor muted %&#125;</div><div class="line">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor primary %&#125;</div><div class="line">Nullam id dolor id nibh ultricies vehicula ut id elit.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor success %&#125;</div><div class="line">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor info %&#125;</div><div class="line">Maecenas sed diam eget risus varius blandit sit amet non magna.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor warning %&#125;</div><div class="line">Etiam porta sem malesuada magna mollis euismod.</div><div class="line">&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor danger %&#125;</div><div class="line">Donec ullamcorper nulla non metus auctor fringilla.</div><div class="line">&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p><p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p><p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p><p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p><p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p><p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p><h2 id="按钮（Buttons）"><a href="#按钮（Buttons）" class="headerlink" title="按钮（Buttons）"></a>按钮（Buttons）</h2><p>插入一个按钮，按钮可以带有链接、文本，并可以指定样式。</p><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% btn url text [style] %&#125;</div></pre></td></tr></table></figure><h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% btn http://hahack.com hahack %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack primary %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack success %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack warning %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack danger %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack info %&#125;</div></pre></td></tr></table></figure><h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><a class="btn btn-default" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-primary" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-success" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-warning" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-danger" href="http://hahack.com" target="_blank" rel="external">hahack</a><a class="btn btn-info" href="http://hahack.com" target="_blank" rel="external">hahack</a><h2 id="标签（Labels）"><a href="#标签（Labels）" class="headerlink" title="标签（Labels）"></a>标签（Labels）</h2><p>插入一个标签，并为其指定文本和样式。</p><h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% label text [style] %&#125;</div></pre></td></tr></table></figure><h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% label default %&#125;</div><div class="line"></div><div class="line">&#123;% label warinng warning %&#125;</div><div class="line"></div><div class="line">&#123;% label success success %&#125;</div><div class="line"></div><div class="line">&#123;% label danger danger %&#125;</div><div class="line"></div><div class="line">&#123;% label primary primary %&#125;</div><div class="line"></div><div class="line">&#123;% label info info %&#125;</div></pre></td></tr></table></figure><h3 id="结果-2"><a href="#结果-2" class="headerlink" title="结果"></a>结果</h3><span class="label label-default">default</span><span class="label label-warning">warinng</span><span class="label label-success">success</span><span class="label label-danger">danger</span><span class="label label-primary">primary</span><span class="label label-info">info</span><h2 id="徽章（Badges）"><a href="#徽章（Badges）" class="headerlink" title="徽章（Badges）"></a>徽章（Badges）</h2><p>插入一个徽章，并为其指定文本。</p><h3 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge text %&#125;</div></pre></td></tr></table></figure><h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge 42 %&#125;</div></pre></td></tr></table></figure><h3 id="结果-3"><a href="#结果-3" class="headerlink" title="结果"></a>结果</h3><span class="badge">42</span><h2 id="警报（Alerts）"><a href="#警报（Alerts）" class="headerlink" title="警报（Alerts）"></a>警报（Alerts）</h2><p>插入一段警报文本信息，并为其指定样式。</p><h3 id="语法-4"><a href="#语法-4" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% alert [style] %&#125;</div><div class="line">   Alert string</div><div class="line">&#123;% endalert %&#125;</div></pre></td></tr></table></figure><h3 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;% alert warning %&#125;</div><div class="line">Best check yo self, you&apos;re not looking too good.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert danger %&#125;</div><div class="line">Change a few things up and try submitting again.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert success %&#125;</div><div class="line">You successfully read this important alert message.</div><div class="line">&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert info %&#125;</div><div class="line">This alert needs your attention, but it&apos;s not super important.</div><div class="line">&#123;% endalert %&#125;</div></pre></td></tr></table></figure><h3 id="结果-4"><a href="#结果-4" class="headerlink" title="结果"></a>结果</h3><div class="alert alert-warning"><i class="fa fa-bell"></i>  Best check yo self, you're not looking too good.</div><div class="alert alert-danger"><i class="fa fa-bug"></i>  Change a few things up and try submitting again.</div><div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  You successfully read this important alert message.</div><div class="alert alert-info"><i class="fa fa-info"></i>  This alert needs your attention, but it's not super important.</div>]]></content>
+      
+      <categories>
+          
+          <category> Docs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> plugins </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Code Highlight</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/15/code-highlight/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/15/code-highlight/</url>
+      <content type="html"><![CDATA[<h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// C</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World\n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h2 id="C-1"><a href="#C-1" class="headerlink" title="C++"></a>C++</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// C++</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello World"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><a id="more"></a><h2 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a>JAVA</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">helloWorld</span></span></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span></div><div class="line">    &#123;</div><div class="line">        System.out.println(<span class="string">"Hello World"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h2 id="Assembler"><a href="#Assembler" class="headerlink" title="Assembler"></a>Assembler</h2><figure class="highlight arm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">#include</span> &lt;stdio.h&gt;</div><div class="line"></div><div class="line"><span class="symbol">char</span> format[] = <span class="string">"%s %s\n"</span><span class="comment">;</span></div><div class="line"><span class="symbol">char</span> hello[] = <span class="string">"Hello"</span><span class="comment">;</span></div><div class="line"><span class="symbol">char</span> world[] = <span class="string">"world"</span><span class="comment">;</span></div><div class="line"><span class="symbol">void</span> main( void )</div><div class="line">&#123;</div><div class="line">   __asm</div><div class="line">   &#123;</div><div class="line">      <span class="keyword">mov </span> eax, offset world</div><div class="line">      <span class="keyword">push </span>eax</div><div class="line">      <span class="keyword">mov </span> eax, offset hello</div><div class="line">      <span class="keyword">push </span>eax</div><div class="line">      <span class="keyword">mov </span> eax, offset format</div><div class="line">      <span class="keyword">push </span>eax</div><div class="line">      call printf</div><div class="line">      <span class="keyword">pop </span> ebx</div><div class="line">      <span class="keyword">pop </span> ebx</div><div class="line">      <span class="keyword">pop </span> ebx</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h2 id="Net"><a href="#Net" class="headerlink" title=".Net"></a>.Net</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// Hello World .NET</div><div class="line"></div><div class="line">#using &lt;mscorlib.dll&gt;</div><div class="line">using namespace System;</div><div class="line"></div><div class="line">int _tmain()</div><div class="line">&#123;</div><div class="line">    Console::WriteLine(S"Hello World");</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h2 id="Erlang"><a href="#Erlang" class="headerlink" title="Erlang"></a>Erlang</h2><figure class="highlight erlang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">-module</span><span class="params">(hello)</span>.</div><div class="line"><span class="keyword">-export</span><span class="params">([world/<span class="number">0</span>])</span>.</div><div class="line"></div><div class="line"><span class="function"><span class="title">world</span><span class="params">()</span> -&gt;</span> io:format(<span class="string">"Hello World"</span>).</div></pre></td></tr></table></figure><h2 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/local/bin/ruby -w</span></div><div class="line">puts <span class="string">"Hello World"</span></div></pre></td></tr></table></figure><h2 id="BASIC"><a href="#BASIC" class="headerlink" title="BASIC"></a>BASIC</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// Texas Instruments TI-81 BASIC</div><div class="line">Prgm1:HELLO...</div><div class="line">:Disp "HELLO WORLD"</div></pre></td></tr></table></figure><h2 id="Perl"><a href="#Perl" class="headerlink" title="Perl"></a>Perl</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin perl -w  </span></div><div class="line"><span class="keyword">print</span> (<span class="string">"Hello World"</span>);</div></pre></td></tr></table></figure><h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/bin/python</span></div><div class="line">print(<span class="string">"Hello World"</span>)</div></pre></td></tr></table></figure><h2 id="Bash"><a href="#Bash" class="headerlink" title="Bash"></a>Bash</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"Hello World"</span></div></pre></td></tr></table></figure><h2 id="Brainfuck"><a href="#Brainfuck" class="headerlink" title="Brainfuck"></a>Brainfuck</h2><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="title">[</span>&lt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">-</span><span class="title">]</span>&lt;<span class="string">.</span>&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="title">[</span>&lt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">-</span><span class="title">]</span>&lt;<span class="literal">+</span><span class="string">.</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span><span class="string">.</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span><span class="title">[</span><span class="literal">-</span><span class="title">]</span></div><div class="line">&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="title">[</span>&lt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">-</span><span class="title">]</span> &lt;<span class="string">.</span>&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="title">[</span>&lt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">-</span><span class="title">]</span>&lt;<span class="literal">-</span><span class="string">.</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span></div><div class="line"><span class="string">.</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="literal">-</span><span class="string">.</span><span class="title">[</span><span class="literal">-</span><span class="title">]</span>&gt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="title">[</span>&lt;<span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span>&gt;<span class="literal">-</span> <span class="title">]</span>&lt;<span class="literal">+</span><span class="string">.</span><span class="title">[</span><span class="literal">-</span><span class="title">]</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="literal">+</span><span class="string">.</span></div></pre></td></tr></table></figure><h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?</span>=<span class="string">"Hello world\n"</span> <span class="meta">?&gt;</span></div></pre></td></tr></table></figure><h2 id="Pascal"><a href="#Pascal" class="headerlink" title="Pascal"></a>Pascal</h2><figure class="highlight pascal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Program</span> HelloWorld;</div><div class="line"></div><div class="line"><span class="keyword">Begin</span></div><div class="line">  Writeln (<span class="string">'Hello World!'</span>);</div><div class="line"><span class="keyword">End</span>.</div></pre></td></tr></table></figure><h2 id="Delphi"><a href="#Delphi" class="headerlink" title="Delphi"></a>Delphi</h2><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Delphi, thanks to C0derr</span></div><div class="line"><span class="keyword">program</span> Project1;</div><div class="line"><span class="keyword">uses</span></div><div class="line">  qdialogs;</div><div class="line"><span class="keyword">const</span></div><div class="line">  s=<span class="string">'Hello, World!'</span>;</div><div class="line"><span class="keyword">begin</span></div><div class="line">  showmessage(s);</div><div class="line"><span class="keyword">end</span>.</div></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> Demo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> highlight </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Lorem Ipsum</title>
+      <link href="/hexo-theme-freemind-blog/2014/03/15/lorem-ipsum/"/>
+      <url>/hexo-theme-freemind-blog/2014/03/15/lorem-ipsum/</url>
+      <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p><img src="/hexo-theme-freemind-blog/images/lorem-ipsum/lorem-ipsum.jpg" alt="Lorem Ipsum"></p><a id="more"></a><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>]]></content>
+      
+      <categories>
+          
+          <category> Test </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> English </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>繁體中文測試</title>
+      <link href="/hexo-theme-freemind-blog/2013/12/25/traditional-chinese-test/"/>
+      <url>/hexo-theme-freemind-blog/2013/12/25/traditional-chinese-test/</url>
+      <content type="html"><![CDATA[<p>觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。</p><p>舍利子，色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。</p><p>舍利子，是諸法空相，不生不滅，不垢不淨，不增不減，是故空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明，亦無無明盡；乃至無老死，亦無老死盡。無苦、集、滅、道，無智亦無得，以無所得故。</p><p>菩提薩埵(<code>duǒ</code>)，依般若波羅蜜多故，心無罣礙(<code>guà ài</code>)。無罣礙，故無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛，依般若波羅蜜多故，得阿耨多羅三藐三菩提。</p><p>故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦，真實不虛。</p><p>故說般若波羅蜜多咒，即說咒曰：</p><blockquote><p>揭諦、揭諦，波羅揭諦，波羅僧揭諦，菩提薩婆訶。</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> Test </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 繁體 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>简体中文测试</title>
+      <link href="/hexo-theme-freemind-blog/2013/12/25/simplified-chinese-test/"/>
+      <url>/hexo-theme-freemind-blog/2013/12/25/simplified-chinese-test/</url>
+      <content type="html"><![CDATA[<p>观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。</p><p>舍利子，色不异空，空不异色；色即是空，空即是色。受、想、行、识，亦复如是。</p><p>舍利子，是诸法空相，不生不灭，不垢不净，不增不减，是故空中无色，无受、想、行、识；无眼、耳、鼻、舌、身、意；无色、声、香、味、触、法；无眼界，乃至无意识界；无无明，亦无无明尽；乃至无老死，亦无老死尽。无苦、集、灭、道，无智亦无得，以无所得故。</p><p>菩提萨埵(<code>duǒ</code>)，依般若波罗蜜多故，心无罣碍(<code>guà ài</code>)。无罣碍，故无有恐怖，远离颠倒梦想，究竟涅盘。三世诸佛，依般若波罗蜜多故，得阿耨多罗三藐三菩提。</p><p>故知般若波罗蜜多，大神咒，是大明咒，是无上咒，是无等等咒，能除一切苦，真实不虚。</p><p>故说般若波罗蜜多咒， 即说咒曰，</p><blockquote><p>揭谛揭谛 波罗揭谛 波罗僧揭谛 菩提萨婆诃</p></blockquote>]]></content>
+      
+      <categories>
+          
+          <category> Test </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 简体 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
+    
+    <entry>
+      <title></title>
+      <link href="/hexo-theme-freemind-blog/404.html"/>
+      <url>/hexo-theme-freemind-blog/404.html</url>
+      <content type="html"><![CDATA[<!DOCTYPE HTML><html>  <head><meta charset="utf-8"><title>404 | hexo-theme-freemind</title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta property="og:site_name" content="hexo-theme-freemind"><meta property="og:image" content="undefined"><link href="favicon.png" rel="icon"><link rel="stylesheet" href="/hexo-theme-freemind/css/themes/bootstrap.css" media="screen" type="text/css">  <link rel="stylesheet" href="/hexo-theme-freemind/css/style.css" media="screen" type="text/css">  <script src="/hexo-theme-freemind/js/jquery-2.0.3.min.js"></script>  </head>  <body><nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">  <div class="container"><button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">  <span class="sr-only">Toggle navigation</span>          <span class="icon-bar"></span>          <span class="icon-bar"></span>          <span class="icon-bar"></span></button><a class="navbar-brand" href="/hexo-theme-freemind/">Freemind</a><div class="collapse navbar-collapse nav-menu">  <ul class="nav navbar-nav"><li>  <a href="/hexo-theme-freemind/archives" title="All the articles."><i class="fa fa-archive"></i>Archives  </a></li><li>  <a href="/hexo-theme-freemind/categories" title="All the categories."><i class="fa fa-folder"></i>Categories  </a></li><li>  <a href="/hexo-theme-freemind/tags" title="All the tags."><i class="fa fa-tags"></i>Tags  </a></li><li>  <a href="/hexo-theme-freemind/about" title="About me."><i class="fa fa-user"></i>About  </a></li>  </ul></div>  </div></nav><div class="clearfix"></div>    <div class="container">    <div class="content">    <div class="page-header">  <h1>OMG, failed to find this article! </h1></div><div class="row-fluid page">  <div style="text-align: center"><div class="spell-img">  <img src="/hexo-theme-freemind/images/404.png"></div><input type="text" id="local-search-input" name="q" results="0" placeholder="Don't worry, search articles here!" class="st-search-input st-default-search-input form-control" style="margin-bottom:1em">  </div>  <div id="local-search-result"></div></div>  </div>    </div> <!-- container --><div class="container-narrow">  <footer> <p>  &copy; 2014 Joseph Pan    with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="external">Freemind</a>.    </p> </footer></div> <!-- container-narrow --><script src="/hexo-theme-freemind/js/bootstrap.min.js"></script><script src="/hexo-theme-freemind/js/search.js"></script> <script type="text/javascript">           var path = "/hexo-theme-freemind/search.xml";     searchFunc(path, 'local-search-input', 'local-search-result');   </script>  </body></html>]]></content>
+    </entry>
+    
+    <entry>
+      <title>About</title>
+      <link href="/hexo-theme-freemind-blog/about/index.html"/>
+      <url>/hexo-theme-freemind-blog/about/index.html</url>
+      <content type="html"><![CDATA[Something about me. ;-)]]></content>
+    </entry>
+    
+    <entry>
+      <title>Categories</title>
+      <link href="/hexo-theme-freemind-blog/categories/index.html"/>
+      <url>/hexo-theme-freemind-blog/categories/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>Tags</title>
+      <link href="/hexo-theme-freemind-blog/tags/index.html"/>
+      <url>/hexo-theme-freemind-blog/tags/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+  
 </search>
