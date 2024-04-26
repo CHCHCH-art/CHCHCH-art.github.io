@@ -243,7 +243,7 @@
 &lt;p&gt;类似的，只让四个哲学家吃饭，那么必然会留下一个，正常吃饭的哲学家&lt;/p&gt;
 &lt;p&gt;因此就不可能产生死锁问题&lt;/p&gt;
 &lt;p&gt;银行家算法也是遵循了这个思想，每次至少让一个可行的进程先运行，而阻塞不可行的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/40.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/40.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;对于这个问题，也是类似的&lt;/p&gt;
 &lt;p&gt;需要避免的，就是箱子里全都是车轮或者全都是车架导致工人三无法组装的死锁问题&lt;/p&gt;
 &lt;p&gt;怎么避免？我想这种思路也是很容易看穿的&lt;/p&gt;
@@ -311,8 +311,8 @@
 &lt;p&gt;后面有对这句话的详细解释存在&lt;/p&gt;
 &lt;p&gt;死锁检测主要依赖于对某个时刻资源请求的分配检测，对资源分配图进行化简是否死锁&lt;/p&gt;
 &lt;p&gt;死锁解除中又可以分为三个主要方法，其中每个方法又可以分为多种策略&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/41.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/42.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/41.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/42.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;简单来说考试内基本都是张冠李戴类型，所以各自就需要明确的区分&lt;/p&gt;
 &lt;p&gt;对题目内的“死锁避免”、“死锁预防”、“死锁检测”、“死锁解除”一定要划起来&lt;/p&gt;
 &lt;hr&gt;
@@ -328,7 +328,7 @@
 &lt;p&gt;不安全意味着在正常执行的状态下，不可能找到一个能够避免死锁的办法，必然死锁&lt;/p&gt;
 &lt;p&gt;那么，只要出现“不正常”执行状态，那么就可能避免死锁&lt;/p&gt;
 &lt;p&gt;银行家算法因为避免了不安全状态，所以一定不会产生任何的死锁，但可能会饥饿&lt;/p&gt;
-&lt;p&gt;[&lt;a href=&#34;https://blog.csdn.net/qq_34666857/article/details/104122776&#34;&gt;https://blog.csdn.net/qq_34666857/article/details/104122776&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;[&lt;a href=&#34;https://blog.csdn.net/qq_34666857/article/details/104122776]&#34;&gt;https://blog.csdn.net/qq_34666857/article/details/104122776]&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;此外，需要把银行家算法和系统区分开&lt;/p&gt;
 &lt;p&gt;首先需要把系统看作是一个能够自动避开可能死锁状态的机器&lt;/p&gt;
 &lt;p&gt;只需要有那么一条路的存在，那么系统一定就会选择这条路，而这不需要银行家算法辅助&lt;/p&gt;
@@ -348,6 +348,14 @@
 &lt;p&gt;然后记录当前的可用量&lt;/p&gt;
 &lt;p&gt;这个可用量和表内的需求量比较，如果对某个通过可行，直接加其对应的分配量&lt;/p&gt;
 &lt;p&gt;然后反复比较，如果发现某次对于任意都可行，那么直接全部通过，后面随意序列都可&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;附：&lt;/p&gt;
+&lt;p&gt;对于课后习题第二十三的一些思索&lt;/p&gt;
+&lt;p&gt;其实这个就是典型的，写者、读者平衡策略，而答案实际上是写了一大堆&lt;/p&gt;
+&lt;p&gt;这边透出的核心思想其实还是，保证一个进程但凡有一个还在运行&lt;/p&gt;
+&lt;p&gt;就要锁死另外一方的资源令其不能访问，也就是设置计数器的方式来解决问题&lt;/p&gt;
+&lt;p&gt;虽然统考那么多年没考过读者-写者问题&lt;/p&gt;
+&lt;p&gt;此外，第三十八题，个人留了草稿，后续可以回头看&lt;/p&gt;
  ]]></description>
         </item>
         <item>
