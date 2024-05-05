@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>OS-9 | Ephemeral</title><meta name="author" content="CH Targaryen"><meta name="copyright" content="CH Targaryen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="文件属性、文件分类只需要略微记忆即可，稍微注意下文件分类中的形式  文件控制块FCB包含控制文件的一系列信息，类似于PCB进程管理块 FCB的有序集合被称为文件目录，简单来说就是FCB1、FCB2、FCB3、FCB4…..这样一串 一个FCB自然就可以被称作是一个文件目录项，通常由FCB组成的文件目录也视作文件 FCB自然有其的一些特有信息，书上有，重视下创建时需要为文件创建其FCB 理解上可以">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>OS-9 | Ephemeral</title><meta name="author" content="CH Targaryen"><meta name="copyright" content="CH Targaryen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大体框架：   文件属性、文件分类只需要略微记忆即可，稍微注意下文件分类中的形式  注意的是，文件名只在open系统调用的时候使用，后续都只使用其标识符  无结构文件别名“流式文件”，有结构文件别名“记录式文件”  文件控制块FCB包含控制文件的一系列信息，类似于PCB进程管理块 FCB的有序集合被称为文件目录，简单来说就是FCB1、FCB2、FCB3、FCB4…这样一串 一个FCB自然就可以被称">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OS-9">
 <meta property="og:url" content="https://chchch-art.github.io/2024/05/03/OS-9/index.html">
 <meta property="og:site_name" content="Ephemeral">
-<meta property="og:description" content="文件属性、文件分类只需要略微记忆即可，稍微注意下文件分类中的形式  文件控制块FCB包含控制文件的一系列信息，类似于PCB进程管理块 FCB的有序集合被称为文件目录，简单来说就是FCB1、FCB2、FCB3、FCB4…..这样一串 一个FCB自然就可以被称作是一个文件目录项，通常由FCB组成的文件目录也视作文件 FCB自然有其的一些特有信息，书上有，重视下创建时需要为文件创建其FCB 理解上可以">
+<meta property="og:description" content="大体框架：   文件属性、文件分类只需要略微记忆即可，稍微注意下文件分类中的形式  注意的是，文件名只在open系统调用的时候使用，后续都只使用其标识符  无结构文件别名“流式文件”，有结构文件别名“记录式文件”  文件控制块FCB包含控制文件的一系列信息，类似于PCB进程管理块 FCB的有序集合被称为文件目录，简单来说就是FCB1、FCB2、FCB3、FCB4…这样一串 一个FCB自然就可以被称">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://chchch-art.github.io/img/backphoto.png">
 <meta property="article:published_time" content="2024-05-03T13:07:05.000Z">
-<meta property="article:modified_time" content="2024-05-04T14:35:39.023Z">
+<meta property="article:modified_time" content="2024-05-05T07:45:18.593Z">
 <meta property="article:author" content="CH Targaryen">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://chchch-art.github.io/img/backphoto.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://chchch-art.github.io/2024/05/03/OS-9/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
@@ -57,7 +57,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-05-04 22:35:39'
+  postUpdate: '2024-05-05 15:45:18'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -161,14 +161,33 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/headimage.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/backphoto.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Ephemeral"><span class="site-name">Ephemeral</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">OS-9</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-03T13:07:05.000Z" title="发表于 2024-05-03 21:07:05">2024-05-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-04T14:35:39.023Z" title="更新于 2024-05-04 22:35:39">2024-05-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/2024/05/03/OS-9/" data-flag-title="OS-9"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><hr>
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/headimage.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/backphoto.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Ephemeral"><span class="site-name">Ephemeral</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">OS-9</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-03T13:07:05.000Z" title="发表于 2024-05-03 21:07:05">2024-05-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-05T07:45:18.593Z" title="更新于 2024-05-05 15:45:18">2024-05-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>12分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/2024/05/03/OS-9/" data-flag-title="OS-9"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>大体框架：</p>
+<p><img src="/img/os/71.png" alt=""></p>
+<hr>
 <p>文件属性、文件分类只需要略微记忆即可，稍微注意下文件分类中的形式</p>
+<p><img src="/img/os/70.png" alt=""></p>
+<p>注意的是，文件名只在open系统调用的时候使用，后续都只使用其标识符</p>
+<hr>
+<p>无结构文件别名“流式文件”，有结构文件别名“记录式文件”</p>
 <hr>
 <p>文件控制块FCB包含控制文件的一系列信息，类似于PCB进程管理块</p>
-<p>FCB的有序集合被称为文件目录，简单来说就是FCB1、FCB2、FCB3、FCB4…..这样一串</p>
+<p>FCB的有序集合被称为文件目录，简单来说就是FCB1、FCB2、FCB3、FCB4…这样一串</p>
 <p>一个FCB自然就可以被称作是一个文件目录项，通常由FCB组成的文件目录也视作文件</p>
 <p>FCB自然有其的一些特有信息，书上有，重视下创建时需要为文件创建其FCB</p>
 <p>理解上可以用FCB列表来理解，一个个列下去</p>
+<hr>
+<p>FCB是目录文件中的内容，其中包含了文件所在的物理地址等信息</p>
+<p>打开文件表中包含的是该文件的表项，也可以说就是FCB，从磁盘调入内存，方便使用</p>
+<p>注意区分：</p>
+<p>打开文件表存在的目的是方便一个打开文件的写、读、删等操作的实现，不必再去找磁盘</p>
+<p>放在内存里，就不必每次都去检索这个文件的目录在哪</p>
+<p>目录项和索引结点分离的目的是，减少检索时的开销，加快检索的速度，要区分开</p>
+<p>简单来说就是把检索所需要的信息单独列出来，这样检索就可以更加高效</p>
+<p>索引结点和一般文件表项结构上：</p>
+<p>FCB文件目录—FCB—文件</p>
+<p>文件名表项—索引结点—文件</p>
+<p>打开文件表：</p>
+<p>进程打开文件表—系统打开文件表—FCB—文件</p>
 <hr>
 <p>索引结点是FCB的改进版，将文件名和FCB的其他信息相互分离</p>
 <p>此时文件目录只包含文件名（话说此文件名是系统看到的文件名还是用户的？）和索引号</p>
@@ -180,8 +199,8 @@
 <hr>
 <p>文件操作：</p>
 <p>在书上的程度进行一些补充说明，首先其均是操作系统提供的系统调用</p>
-<p>创建过程中，一方面是分配外存，另一方面是创建一个FCB&#x2F;&#x2F;索引结点&#x2F;&#x2F;文件目录项</p>
-<p>删除需要先查，再删除目录项&#x2F;&#x2F;索引结点&#x2F;&#x2F;FCB，同时释放内&#x2F;外存中该文件占用的空间</p>
+<p>创建过程中，一方面是分配外存，另一方面是创建一个FCB//索引结点//文件目录项</p>
+<p>删除需要先查，再删除目录项//索引结点//FCB，同时释放内/外存中该文件占用的空间</p>
 <p>整个系统只有一张系统打开表，每个进程都有自己的打开文件表用于存储私有信息</p>
 <p>当一个文件处于打开的状态，为了减少每次读、写的检索时间，才采用了打开表</p>
 <p>这样就能实现保存了该文件的外存地址，不必每次都去外部检索该地址，只需要访该地址</p>
@@ -193,9 +212,9 @@
 <p>2.将目录项复制到内存中的“打开文件表”中，并将对应表目的编号返回给用户</p>
 <p>之后用户使用打开文件表的编号来指明要操作的文件</p>
 <p>对于关闭文件，设置了一个计数器，只有当计数器完全为零是才允许删除，存于系统表中</p>
-<p>读、写细节补充：</p>
-<p><img src="/img/os/58.png"></p>
-<p><img src="/img/os/59.png"></p>
+<p>读、写细节补充，课后习题里面也有：</p>
+<p><img src="/img/os/58.png" alt=""></p>
+<p><img src="/img/os/59.png" alt=""></p>
 <hr>
 <p>文件保护补充：</p>
 <p>口令密码需要和日常区分，没有对访问类型控制进行任何的限制，只限制了访问</p>
@@ -205,13 +224,19 @@
 <hr>
 <p>文件逻辑结构、物理结构以及混淆点总结：</p>
 <p>无结构文件也被称为“流式文件”，关于定长、不定长的补充说明</p>
-<p><img src="/img/os/60.png"></p>
-<p><img src="/img/os/61.png"></p>
+<p><img src="/img/os/60.png" alt=""></p>
+<p><img src="/img/os/61.png" alt=""></p>
 <p>三种文件模式</p>
-<p><img src="/img/os/62.png"></p>
+<p><img src="/img/os/62.png" alt=""></p>
+<hr>
+<p>索引号一般都是可以默认不需要显示存储的，因为索引表一般是顺序连续存储的</p>
+<p>例如变长顺序索引文件中的文件表，其索引号就是可以不需要显式的</p>
+<p>显示链接分配中的FAT文件分配表中的盘块号也是可以隐含的，因为通过数组来实现的</p>
+<p>一般通过数组来实现的，其就可以以A[0]直接取即可，其顺序号可以直接隐含</p>
+<p>自然，顺序文件的读取也是可以直接隐含读取的，因为本就是数组结构</p>
 <hr>
 <p>顺序文件：</p>
-<p><img src="/img/os/63.png"></p>
+<p><img src="/img/os/63.png" alt=""></p>
 <p>然后这边看到边上的字，这边说的是，考试中说的顺序存储指代的是物理上顺序</p>
 <p>需要注意的是，这边的链式存储、顺序存储均是逻辑意义上的存储方式</p>
 <p>例如，不论数据结构到底是链表还是顺序表，他们都采用分配在一块连续逻辑区域数组上</p>
@@ -225,21 +250,26 @@
 <p>顺序文件顺序存储顺序结构，妙啊，顺序文件也有其适用范围，书上有写</p>
 <hr>
 <p>索引文件，就是为了满足顺序文件变长记录的随机访问的，为其增加一个索引表</p>
+<p>附：索引表可以不唯一</p>
 <p>为每一项变长记录增加一个索引表，相当于用一个新数组，A[0]代表第0个记录的地址</p>
 <p>把变长变成了定长，但需要明白的是，这个索引表也是占内存的，这些和表目录暂时无关</p>
 <p>单纯是逻辑上对文件的实现，这些都属于逻辑结构，是属于数据结构，和底层无关</p>
 <hr>
 <p>索引顺序文件：</p>
-<p>将“变长记录顺序文件”中的所有记录分为多个组</p>
-<p>例如And&#x2F;Anaconda&#x2F;Anti&#x2F;Auto分为一个组，But&#x2F;Because&#x2F;Become&#x2F;Bit分为一个组</p>
+<p>将“变长记录顺序文件”中的所有记录分为多个组，一组记录对应一个索引表项目</p>
+<p>例如And/Anaconda/Anti/Auto分为一个组，But/Because/Become/Bit分为一个组</p>
 <p>组内可以无序排序，但一个组内的分组依据必须要有，类似于以某个字母开头</p>
 <p>或者也可以采用以某个字母结尾，在实际数据库应用里面还可以采用以学号等作分组依据</p>
 <p>组间也可以随意排序，反正是顺序查找，组之间的排序依靠一个“代表”实现区分</p>
 <p>代表即为这个组的首元，例如A组就是And，B组就是But</p>
-<p>相对前两者而言，检索次数总体减少了很多，这个要会计算</p>
-<p>同时多级索引文件也需要会计算其查找次数</p>
 <hr>
-<p>哈希，这边的地址说的是逻辑地址，不是物理地址</p>
+<p>索引表可以按关键词排序，也可以不排序，如果按关键词排序那么就是顺序文件顺序结构</p>
+<p>可以折半查找</p>
+<hr>
+<p>相对前两者而言，检索次数总体减少了很多，这个要会计算</p>
+<p>同时多级索引文件也需要会计算其查找次数，其平均查找次数课后综合题有写，建议观摩</p>
+<hr>
+<p>哈希，这边的地址说的是逻辑地址，不是物理地址，可支持随机查找</p>
 <hr>
 <p>连续分配、链接分配、索引分配（单级、多级、混合）均是对上述“数组”的存储方式</p>
 <p>也就是上层采用的无论是什么模式，说白都离不开一块抽象连续的存储区域“数组”实现</p>
@@ -247,6 +277,7 @@
 <p>不同的实现方式，表目录是不同的，因为涉及到实际的内存分配</p>
 <hr>
 <p>磁盘一般采用“块”的方式分配，和主存的块一般大小一致，<strong>一般都会有内部碎片存在</strong></p>
+<p>簇的思想是把多个块当作一个块来处理</p>
 <hr>
 <p>连续分配就是单纯的，分配一块物理上连续的区域</p>
 <p>这时候每个文件的表目录项只有文件名、起始位和最终结束位，一般默认采用了索引结点</p>
@@ -257,7 +288,7 @@
 <p>例如空闲有1、1、1，需要3个连续空间，即使磁盘空间够，也无法分配，分配了就有外碎</p>
 <p>在文件修改的时候，是需要物理上移动的，例如拓展如果空间不够就需要物理向后移动</p>
 <hr>
-<p>链接分配，分为隐&#x2F;显两种分配方式，两种均对应离散型磁盘空间分配法，有空间就可装</p>
+<p>链接分配，分为隐/显两种分配方式，两种均对应离散型磁盘空间分配法，有空间就可装</p>
 <hr>
 <p>隐式的目录组成是文件名、开始项指针、结束项指针，其实就是单链表的物理存储逻辑</p>
 <p>内部每个磁盘项都会有向后一块的指针，用户必然不可见，因为是底层的</p>
@@ -265,30 +296,78 @@
 <p>缺点、优点见书，对簇进行一些解释</p>
 <p>簇实际上相当于扩大了块的大小，仅此而已，把多个块当作一个块</p>
 <p>因而分配磁盘的时候，一个文件也是分配一个簇，而不是以块，那么浪费就会增加</p>
+<p>其访问是需要多次磁盘I/O的，因为总体是一个链表，只能顺序去访问</p>
 <p>一个1KB的文件，占用4个4KB的块组成的簇，内部碎片大量增加自然能理解</p>
 <hr>
 <p>显式的特征就是Fat文件分配表，整个磁盘里面只会有一个，并且加载后一直驻留内存</p>
 <p>此时的文件目录只有文件名、起始块号，而Fat表内存储相应该块号的下一块是哪块</p>
-<p><img src="/img/os/64.png"></p>
+<p><img src="/img/os/64.png" alt=""></p>
 <p>由于这个表是驻留在内存里面的，所以未来的查询只需要访问这个表，不需要访问磁盘</p>
 <p>这个算是比较重要的点吧，毕竟磁盘的访问变成了访存的次数，两个都可以作考点</p>
 <p>相对而言访问磁盘的数量肯定大幅度减少了</p>
-<p><img src="/img/os/65.png"></p>
-<p><img src="/img/os/66.png"></p>
+<p><img src="/img/os/65.png" alt=""></p>
+<p><img src="/img/os/66.png" alt=""></p>
 <p>其支持顺序访问、随机访问，物理层面上的，内存中的随机访问</p>
+<hr>
+<p>相对而言上述两种方式都是物理上有一定联系在，例如链式物理间用链连起来</p>
+<p>但索引就真正没关系了，物理存储可以随意，具体的索引顺序，即数据顺序可以任意改变</p>
+<p>因为只需要在内存中的索引表中修改即可，完全不会涉及物理上</p>
+<p>例如插入、删除，隐式链式是比较麻烦的，需要去反复找到其前驱并且读、写磁盘</p>
+<p>而索引表就比较方便，只需要改变一下索引表的结构，稍微移动添加/减少就行</p>
+<p>显示链式也比较方便，只需要改变内存中Fat就行，不需要回到原先的物理结构去修改</p>
 <hr>
 <p>索引式：</p>
 <p>在上述Fat思想下的进一步优化，只调入Fat表内的该文件对应的盘号而别的不需要调入</p>
-<p>Fat是整个磁盘只有一个，因而代表其含有所有磁盘的对应下一块记录，相对而言肯定大</p>
+<p>Fat是整个磁盘只有一个，因而代表其含有所有磁盘的对应下一块记录</p>
+<p>因而占用内存也会较大并且还需要长时间驻留内存，但实际上用到的并没那么多</p>
 <p>索引式将文件和其相应的索引块打包，当需要调用文件的时候，再把索引块给扔到内存</p>
-<p>也就是，一个文件对应一个索引表，这一点要注意，但索引块具体多少个，需要看情况的</p>
+<p>也就是一个文件对应一个索引表，这一点要注意，但索引块具体多少个，需要看情况</p>
 <p>平时磁盘是需要存储这个索引块的</p>
-<p>至于单级、多级、混合，那么就是这个基础上的增加了</p>
-<p>相对应需要知道是其所能支持文件的大小，以及相关的盘块、级数关系，以及访磁盘次数</p>
-<p>这个后面会进一步补充</p>
+<p>有时候也会把这个索引块称作是一个索引表，问题不大</p>
 <hr>
 <p>当单级无法满足整个文件的索引时，就需要想办法拓展，而采用链肯定是最不明智的</p>
 <p>因为链导致了各个索引块之间变成了链式，只能顺序访问，必然导致效率下降</p>
+<p>所以就考虑使用多级索引，而多级索引对小文件不友好，因而产生了混合索引法</p>
+<hr>
+<p>逻辑地址随机访问：定长顺序、变长索引、散列哈希</p>
+<p>物理地址随机访问：连续分配、索引分配、显示链接分配</p>
+<p>仅连续分配是固定连续区域分配，其余均是离散型分配</p>
+<hr>
+<p>下面的内容总体总结不深，后续会进一步完善</p>
+<hr>
+<p>关于计算：</p>
+<p>多层索引的访磁盘次数，计算访问表项</p>
+<p><img src="/img/os/67.png" alt=""></p>
+<p>需要注意的是，每次的查询表项都需要先把这个表给读入内存，再去查找</p>
+<p>尤其要注意“顶级索引表”是否调入内存，统考常考，磁盘I/O也会因此有些变化</p>
+<p>随机访问的逻辑号计算：</p>
+<p>可以参考页表那边的计算，比较类似，16i/块大小=块号，16i%块大小=块内地址</p>
+<p><img src="/img/os/69.png" alt=""></p>
+<hr>
+<p>混合索引计算，只需要明确直接、多级之间的关系即可</p>
+<p><img src="/img/os/68.png" alt=""></p>
+<p>需要注意的是，其到底声明的是查询第XX块，还是查询前XX块，两者访磁盘次数不一样</p>
+<p>因为文件是分离存储的，所以一旦要访问前XX块，那么就要加上前面的访问</p>
+<p>例如本例中访问整个文件就需要10次磁盘I/O，因为每一节都需要考虑在内去访问</p>
+<hr>
+<p>对多级索引的补充：</p>
+<p>顶级表是否调入内存，影响的是其下一级表是否可以直接获得</p>
+<p>如果顶级表没有调入内存，那么需要调入顶级表，然后才能根据表项得到下级表位置</p>
+<p>从而从磁盘该位置把下级表引入内存</p>
+<p>对于该步骤的一些补充和说明，以课后P289为例子</p>
+<p>这里比较特殊，说的是“根目录第一块常驻内存”，而usr表项在第二块内…</p>
+<p>所以需要先读入root表第二个块，读到对应的usr表项，一次I/O</p>
+<p>再根据表项读入usr表，一次I/O</p>
+<p>读入usr表项第一个块，这里面没有所需表项，但只能一个个查询去读，一次I/O</p>
+<p>读入usr表项第二个块中所需表项you表，一次I/O</p>
+<p>根据you表项读入dir表，一次I/O</p>
+<p>这时候就已经能够从dir表中读到A的物理地址起始了，就算已经找到A了</p>
+<p>其实个人觉得是比较容易混淆或者少数几次的，确实有点麻烦</p>
+<p>理解上面可以从间接寻址理解，先读入地址，再根据地址读入这个表，再读表内地址</p>
+<p>根据磁盘对应地址读入表，再根据表项的磁盘对应地址读入表，一个循环</p>
+<hr>
+<p>另外就是，顶级表–&gt;一级表—&gt;二级表—&gt;三级表—&gt;数据块，容易混淆，有笔记在</p>
+<p>P291</p>
 </article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://CHCHCH-art.github.io">CH Targaryen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://chchch-art.github.io/2024/05/03/OS-9/">https://chchch-art.github.io/2024/05/03/OS-9/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://CHCHCH-art.github.io" target="_blank">Ephemeral</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/backphoto.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/04/30/OS-8/" title="OS-8"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">OS-8</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">CH Targaryen</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">戏子罢了</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/05/03/OS-9/" title="OS-9"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OS-9"/></a><div class="content"><a class="title" href="/2024/05/03/OS-9/" title="OS-9">OS-9</a><time datetime="2024-05-03T13:07:05.000Z" title="发表于 2024-05-03 21:07:05">2024-05-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/30/OS-8/" title="OS-8"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OS-8"/></a><div class="content"><a class="title" href="/2024/04/30/OS-8/" title="OS-8">OS-8</a><time datetime="2024-04-30T13:55:39.000Z" title="发表于 2024-04-30 21:55:39">2024-04-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/28/OS-7/" title="OS-7"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OS-7"/></a><div class="content"><a class="title" href="/2024/04/28/OS-7/" title="OS-7">OS-7</a><time datetime="2024-04-28T10:12:08.000Z" title="发表于 2024-04-28 18:12:08">2024-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/23/PV%E7%BC%96%E7%A8%8B/" title="PV模型：(有待整理汇总"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PV模型：(有待整理汇总"/></a><div class="content"><a class="title" href="/2024/04/23/PV%E7%BC%96%E7%A8%8B/" title="PV模型：(有待整理汇总">PV模型：(有待整理汇总</a><time datetime="2024-04-23T13:25:26.000Z" title="发表于 2024-04-23 21:25:26">2024-04-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/23/OS-6/" title="OS-6"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OS-6"/></a><div class="content"><a class="title" href="/2024/04/23/OS-6/" title="OS-6">OS-6</a><time datetime="2024-04-23T13:24:54.000Z" title="发表于 2024-04-23 21:24:54">2024-04-23</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/backphoto.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By CH Targaryen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
   function initValine () {
     const valine = new Valine(Object.assign({
