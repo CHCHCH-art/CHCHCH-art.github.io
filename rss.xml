@@ -5,13 +5,100 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Fri, 03 May 2024 21:07:05 +0800</pubDate>
-        <lastBuildDate>Fri, 03 May 2024 21:07:05 +0800</lastBuildDate>
+        <pubDate>Mon, 06 May 2024 22:06:45 +0800</pubDate>
+        <lastBuildDate>Mon, 06 May 2024 22:06:45 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/05/06/OS-12/</guid>
+            <title>OS-12</title>
+            <link>https://chchch-art.github.io/2024/05/06/OS-12/</link>
+            <pubDate>Mon, 06 May 2024 22:06:45 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;SPOOLing技术解释：&lt;/p&gt;
+&lt;p&gt;慢速设备的输入暂时通过内存缓冲区，直接送到磁盘存储&lt;/p&gt;
+&lt;p&gt;当CPU需要用的时候，直接从磁盘读数据送到内存里面，就可以直接使用&lt;/p&gt;
+&lt;p&gt;相对键盘一个个字敲，CPU可以节省不少等待输入的时间，将其转换为磁盘的读取&lt;/p&gt;
+&lt;p&gt;输出时，外部慢速设备正在忙，那么先把要输出的内容放在磁盘输出井里面&lt;/p&gt;
+&lt;p&gt;管他到底原来在内存还是磁盘还是刚刚输出，一律放磁盘里面再说（虽然放内存更快一点&lt;/p&gt;
+&lt;p&gt;等到外部慢速设备有空，那么再把磁盘输出井的内容通过内存缓冲区送到外部设备&lt;/p&gt;
+&lt;p&gt;第一个策略应该是为了解放CPU，第二种策略其实更类似节省内存，防止内存一直扩大&lt;/p&gt;
+&lt;p&gt;因为外部慢速输出慢，而需要输出的数据可能越堆越多，都放在内存肯定是不合理的&lt;/p&gt;
+&lt;hr&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/05/06/OS-11/</guid>
+            <title>OS-11</title>
+            <link>https://chchch-art.github.io/2024/05/06/OS-11/</link>
+            <pubDate>Mon, 06 May 2024 19:29:18 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;前面的设备分类需要有一个大致上的印象，还是比较容易考察的，对例子要有记忆在&lt;/p&gt;
+&lt;p&gt;多看几遍基本也就熟悉了，问题不大&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/72.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;书上的内容里面，还是需要注意下数据线有时候传的也是控制信号，计组我记得是有题目的&lt;/p&gt;
+&lt;p&gt;两种对应的，其就是对应统一编址和独立编址&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/73.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I/O控制方式，其实更建议看计组的内容，那边更加详细，这块是重叠内容&lt;/p&gt;
+&lt;p&gt;程序直接控制方式，注意细节每次读写传送的单位是一个字&lt;/p&gt;
+&lt;p&gt;其一定需要经过CPU这一关才能到达内存，数据在跑到内存之前必须经过CPU寄存器&lt;/p&gt;
+&lt;p&gt;中断驱动方式，同样每次读写的是一个字&lt;/p&gt;
+&lt;p&gt;DMA方式每次传送是一个块，每次的读写可以是多个块&lt;/p&gt;
+&lt;p&gt;每次读写的只能是连续的多个块，且这些块读入内存后在内存中也必须是连续的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/74.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;通道几乎不考，但还是要了解一下，PPT还是很不错的内容补充&lt;/p&gt;
+&lt;p&gt;其每次传送单位是一组块&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/75.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;后面的内容不难理解，也大多偏记忆内容，后续复习只需要看王道的相应PPT就行&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;共享资源包括两种形式，一种是互斥访问，一种是分时同步访问&lt;/p&gt;
+&lt;p&gt;互斥访问的情况被称作“临界资源”&lt;/p&gt;
+&lt;p&gt;对设备而言，互斥访问的临界资源设备被称为“独占设备”&lt;/p&gt;
+&lt;p&gt;能够分时访问的，被称为“共享设备”&lt;/p&gt;
+&lt;p&gt;不可剥夺资源，被占用后就只能被进程自身释放，其他是没有办法剥夺的&lt;/p&gt;
+&lt;p&gt;可剥夺就是可剥夺，中间随时可以被高优先级或者时间片到了剥夺掉&lt;/p&gt;
+&lt;p&gt;那么其实独占设备就是不可剥夺资源&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;上述过程个人不知道是否正确，可能需要勘误&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/05/05/OS-10/</guid>
+            <title>OS-10</title>
+            <link>https://chchch-art.github.io/2024/05/05/OS-10/</link>
+            <pubDate>Sun, 05 May 2024 15:50:26 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;目录结构书上分为四种，总体看后面两种为主，因为现代应用大多数是后两者&lt;/p&gt;
+&lt;p&gt;对树形目录的一些补充：&lt;/p&gt;
+&lt;p&gt;其实核心就是其I/O次数的补充，绝对路径采用从根目录开始不断I/O下去寻找&lt;/p&gt;
+&lt;p&gt;根据磁盘地址读入一个表，再根据这个表某表项的磁盘地址读入下一级表，比较耗费I/O&lt;/p&gt;
+&lt;p&gt;课后也有大题，相对而言有点难&lt;/p&gt;
+&lt;p&gt;因为一直大量I/O肯定不是办法，所以可以用相对目录，直接可以依靠CD来切换当前目录&lt;/p&gt;
+&lt;p&gt;注意这个是系统调用，此外切换用户默认目录的话需要去修改对应文件，需要区分&lt;/p&gt;
+&lt;p&gt;无环图主要是对应了引用方式，便于分享&lt;/p&gt;
+&lt;p&gt;需要注意的是共享链是需要设置计数器的，不过再说&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;目录操作、目录实现有个印象就行，不是特别重要的考点&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;文件共享才是比较重要的考点&lt;/p&gt;
+&lt;p&gt;另外对书上那句比较费解的话的一些解释，就是字面意思，共享文件依旧可以有私有部分&lt;/p&gt;
+&lt;p&gt;先声明一个要点，文件共享不是简单的复制，其他用户在该文件作的改变别的用户也能看到&lt;/p&gt;
+&lt;p&gt;一般采用索引结点的方式，而不会采用古老的FCB，那种太费检索时间，另外要会计算&lt;/p&gt;
+&lt;p&gt;需要注意存满的时候和没有存满的时候对应的计算策略是不同的，可以见P276第二题解答&lt;/p&gt;
+&lt;p&gt;内存索引、磁盘索引对应的内容在P253，这一些可以结合起来看&lt;/p&gt;
+&lt;p&gt;共享链自然是设置了计数器的，当计数器不为零时不能删除，为零时才能删除&lt;/p&gt;
+&lt;p&gt;硬链接需要记住的就是那几个图形状态，4.17的几个状态必须要记住，课后也有习题&lt;/p&gt;
+&lt;p&gt;主要就是这个情况：&lt;/p&gt;
+&lt;p&gt;A创建的文件，但A自身已经不要了，B还在用，这时候文件所有者依旧是A，且文件不消失&lt;/p&gt;
+&lt;p&gt;并且在软链接的情况下，如果相应链接的文件已经删了，那么相应快捷方式是不会立刻删&lt;/p&gt;
+&lt;p&gt;只有下次调用快捷方式的时候才会告诉你已经不能用了&lt;/p&gt;
+&lt;p&gt;这部分记住两个图就能顺利做出这一类题目，问题不是特别大&lt;/p&gt;
+&lt;p&gt;对软链接下面那一段话确实可以认真看一遍，总体还是比较有用的吧&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/05/03/OS-9/</guid>
             <title>OS-9</title>
