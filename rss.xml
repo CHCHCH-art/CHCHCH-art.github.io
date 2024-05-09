@@ -5,13 +5,79 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Mon, 06 May 2024 22:06:45 +0800</pubDate>
-        <lastBuildDate>Mon, 06 May 2024 22:06:45 +0800</lastBuildDate>
+        <pubDate>Thu, 09 May 2024 19:34:05 +0800</pubDate>
+        <lastBuildDate>Thu, 09 May 2024 19:34:05 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/05/09/%E8%AE%A1%E7%BD%91/</guid>
+            <title>计网-1</title>
+            <link>https://chchch-art.github.io/2024/05/09/%E8%AE%A1%E7%BD%91/</link>
+            <pubDate>Thu, 09 May 2024 19:34:05 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;OSI模型的几个层是铁要背的，这里直接给简版，具体细节再看书：&lt;/p&gt;
+&lt;p&gt;物理层-数据链路层-网络层-传输层-会话层-表示层-应用层，分别给定各自的功能属性&lt;/p&gt;
+&lt;p&gt;物理层：规定信号电气含义、规定接口参数&lt;/p&gt;
+&lt;p&gt;数据链路层：检测误差、流量控制、共享信道访问&lt;/p&gt;
+&lt;p&gt;网络层：路由选择、流量控制、差错控制、拥塞控制&lt;/p&gt;
+&lt;p&gt;传输层：端到端传输服务、流量控制、差错控制&lt;/p&gt;
+&lt;p&gt;会话层：管理会话进程、有序传递数据、断点下载处理&lt;/p&gt;
+&lt;p&gt;表示层：统一数据结构和编码形式、数据压缩、加密和解密&lt;/p&gt;
+&lt;p&gt;应用层：想干嘛干嘛&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;TCP&amp;#x2F;IP：&lt;/p&gt;
+&lt;p&gt;网络接口层：接受IP分组并发到指定物理网络，对应物理层和数据链路层&lt;/p&gt;
+&lt;p&gt;网际层：选择路由，对应网络层&lt;/p&gt;
+&lt;p&gt;传输层：端与端之间对话，对应会话层、表示层&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;编码和调制：&lt;/p&gt;
+&lt;p&gt;首先明确各种编码以及其对应的方式，免得混淆起来&lt;/p&gt;
+&lt;p&gt;PCM、数字发射器是对应编码为数字信号，调制器、放大器调制器是对应调制模拟信号&lt;/p&gt;
+&lt;p&gt;归零，Return Zero&amp;#x2F;&amp;#x2F;非归零，None Return Zero&amp;#x2F;&amp;#x2F;&lt;/p&gt;
+&lt;p&gt;反向非归零 None Return Zero invert&amp;#x2F;&amp;#x2F;曼彻斯特&amp;#x2F;&amp;#x2F;差分曼彻斯特&lt;/p&gt;
+&lt;p&gt;上述均是数字编码编码为数字信号&lt;/p&gt;
+&lt;p&gt;采样、量化、编码是对应模拟数据编码为数字信号&lt;/p&gt;
+&lt;p&gt;数字数据调制为模拟信号分别：调频、调幅、调相、正交调制&lt;/p&gt;
+&lt;p&gt;频分复用是模拟数据调制为模拟信号&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;归零：&lt;/p&gt;
+&lt;p&gt;每个时钟周期均归零一次，高电平为1，低电平为0，或者相反&lt;/p&gt;
+&lt;p&gt;非归零：&lt;/p&gt;
+&lt;p&gt;把上一种的归零给去除，不归零，全用于传递信号&lt;/p&gt;
+&lt;p&gt;反向非归零：&lt;/p&gt;
+&lt;p&gt;每次跳变置为0，不跳变置为1&lt;/p&gt;
+&lt;p&gt;这部分内容其实并不统一，各类教辅上面都会有不同的介绍，本质是因为策略不同&lt;/p&gt;
+&lt;p&gt;类似于这个可能是跳变换电平表信号，那个可能是以电平位表信号&lt;/p&gt;
+&lt;p&gt;维持本身就可以被视作是两种可能性的信号，这个并没有特别统一的说法&lt;/p&gt;
+&lt;p&gt;算是个小坑，但优先以统考考过的为准&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;曼彻斯特、差分曼彻斯特：&lt;/p&gt;
+&lt;p&gt;一者在中央跳变表信号，同时表示时钟信号，向上跳变&amp;#x2F;向下跳变表示1和0两种信号&lt;/p&gt;
+&lt;p&gt;其他时间的跳变不需要用于解释，实际做题只需要看中间的跳变即可&lt;/p&gt;
+&lt;p&gt;因为把一个码元从中间分开为高、低电平，所以编码速度就是码元速度的两倍&lt;/p&gt;
+&lt;p&gt;差分曼彻斯特，中间的跳变变成了时钟信号，实际信号表达在每个码元起始&lt;/p&gt;
+&lt;p&gt;起始码元不跳变代表1，跳变代表0&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;具体的倍数解释和其他解释，明天放一起说&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;奈氏准则、香农定理：&lt;/p&gt;
+&lt;p&gt;奈式是无噪声环境下的极限传输速率，香农是有噪声环境下的极限传输速率&lt;/p&gt;
+&lt;p&gt;具体做题目就是看清具体给定的环境才能做出区分&lt;/p&gt;
+&lt;p&gt;当两者均给出的时候，那么就以低的为准，因为限制是一个最高值，不可超越的&lt;/p&gt;
+&lt;p&gt;奈式准则下，波特率最高只能是2W波特，这个是一个极限值，也会考&lt;/p&gt;
+&lt;p&gt;香农定理下面有一个信噪比，一般考试都会结合信噪比一起考，还是要会算的&lt;/p&gt;
+&lt;p&gt;公式总体并不难，传输速率的计算无非就是波特率·每个波特带的Bit量&lt;/p&gt;
+&lt;p&gt;至于Bit量，需要注意几个说法：&lt;/p&gt;
+&lt;p&gt;离散值、多少种等等，基本就是意思可以用多少位二进制来表示这些信号&lt;/p&gt;
+&lt;p&gt;具体的Bit量也就是对应的二进制位数&lt;/p&gt;
+&lt;p&gt;正交调频的公式也是基于此，只要课后习题做过问题就不会特别大&lt;/p&gt;
+&lt;p&gt;采样次数：&lt;/p&gt;
+&lt;p&gt;一般采样次数就是定为每秒的波特数也就是波特率&lt;/p&gt;
+&lt;p&gt;同时因为采样次数需要超过最大频率的两倍，所以也可根据信号频率算采样率&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/05/06/OS-12/</guid>
             <title>OS-12</title>
