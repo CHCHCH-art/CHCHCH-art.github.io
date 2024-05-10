@@ -3,34 +3,89 @@
     <id>https://CHCHCH-art.github.io</id>
     <title>Ephemeral</title>
     <link href="https://CHCHCH-art.github.io" />
-    <updated>2024-05-09T11:34:05.000Z</updated>
+    <updated>2024-05-10T12:46:49.000Z</updated>
     <category term="stock" />
     <category term="END" />
     <category term="FK" />
     <category term="Preview" />
     <category term="Math" />
     <entry>
+        <id>https://chchch-art.github.io/2024/05/10/%E8%AE%A1%E7%BB%84-2/</id>
+        <title>计网-2</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2024/05/10/%E8%AE%A1%E7%BB%84-2/"/>
+        <content type="html">&lt;p&gt;传输介质那边说的带宽都是传输频率，集线器是下一节的内容&lt;/p&gt;
+&lt;p&gt;传统以太网采用广播模式，同一时间只能允许一台主机发送信息，一般采用曼彻斯特编码&lt;/p&gt;
+&lt;p&gt;区分基带信号、宽度信号的差别&lt;/p&gt;
+&lt;p&gt;基带信号是对数字信号用不同的电压表示送到数字信道传输&lt;/p&gt;
+&lt;p&gt;宽度信号是对基带信号进行调制、频分复用后送到模拟信道上面传输&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;中继器两端的网络部分是网段，而不是子网，适用于完全相同的两类网络的互连&lt;/p&gt;
+&lt;p&gt;两端可连相同媒体，也可连不同媒体&lt;/p&gt;
+&lt;p&gt;使用中继器连接的几个网段仍是一个局域网，两端的网段一定要采用一个协议&lt;/p&gt;
+&lt;p&gt;能够存储转发的网络设备支持两端可以是不同协议&lt;/p&gt;
+&lt;p&gt;中继器不能连接两个速率不同的局域网&lt;/p&gt;
+&lt;p&gt;集线器不能分割冲突域、集线器所有端口都属于一个冲突域，连在集线器上的工作主机平分带宽&lt;/p&gt;
+&lt;p&gt;一些资料：&lt;a href=&#34;https://blog.csdn.net/starter_____/article/details/102609365&#34;&gt;冲突域参考&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;实际上涉及了后面几个章节的内容&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;中继器只管速率相同网络的相互连接，至于协议是否相等，根本不是他考虑的事情&lt;/p&gt;
+&lt;p&gt;物理层协议也就只需要你速度能够匹配就能给你连上，不用管太多&lt;/p&gt;
+&lt;p&gt;至于高层到底会不会有协议上的冲突，根本不是中继器管的，他管不了那么多&lt;/p&gt;
+&lt;p&gt;如果真的需要统一高层的协议冲突的话，那么就引入更高层的设备来统一&lt;/p&gt;
+&lt;p&gt;二层及以上设备可以隔离冲突域、三层以上设备可以隔离广播域&lt;/p&gt;
+&lt;p&gt;或者说网络中提供一个可以存储转发的设备，这种设备一般存在就可以连接不同协议&lt;/p&gt;
+&lt;p&gt;具体怎么做到的？天知道，又不考&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;信道复用技术的补充记得别忘，未来是需要补完整的&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;关于CSMA\CD,CSMA\CA：&lt;a href=&#34;https://blog.csdn.net/shulianghan/article/details/108116406&#34;&gt;不太重要的考点的小文章&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;晓得其是用于冲突处理的就行了，然后分别对应广播有线局域网、无线局域网&lt;/p&gt;
+</content>
+        <updated>2024-05-10T12:46:49.000Z</updated>
+    </entry>
+    <entry>
         <id>https://chchch-art.github.io/2024/05/09/%E8%AE%A1%E7%BD%91/</id>
         <title>计网-1</title>
         <link rel="alternate" href="https://chchch-art.github.io/2024/05/09/%E8%AE%A1%E7%BD%91/"/>
-        <content type="html">&lt;p&gt;OSI模型的几个层是铁要背的，这里直接给简版，具体细节再看书：&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/tzs1328540878/article/details/122038926&#34;&gt;湖工大教书匠对应内容&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/weixin_73077810/article/details/133273806&#34;&gt;补充内容&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;文前提示！&lt;/p&gt;
+&lt;p&gt;相对而言二轮的时候个人会进行内容的补充、以及借鉴他人文章，进行细节的修补&lt;/p&gt;
+&lt;p&gt;具体计网个人并不想花太多力气上去，计组和数据结构才是个人想要重点花时间的方向&lt;/p&gt;
+&lt;p&gt;这些内容平时当作小说看就行了&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;一些小补充：&lt;/p&gt;
+&lt;p&gt;报文交换需要注意的就是需要一次性全部传输到一个路由器，才能继续向后发送的特性&lt;/p&gt;
+&lt;p&gt;而分组就可以并发发送，以组为单位，且可实现流水线&lt;/p&gt;
+&lt;p&gt;在本书中单位会有所不同，KB和kb就有一定的区别，需要注意，同时注意单位间的换算&lt;/p&gt;
+&lt;p&gt;流水线工作方式，以几个发送口决定r是多少，统考题目的考察方式&lt;/p&gt;
+&lt;p&gt;以太网是一种总线拓扑形式的网络，常用于城域网&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;无连接服务基本上是不可靠的，当然可以通过一些用户手段将其变为可靠的&lt;/p&gt;
+&lt;p&gt;有连接服务一般都是可靠的&lt;/p&gt;
+&lt;p&gt;OSI参考模型需要背诵，各个层级和相关的功能，下面是一个简版&lt;/p&gt;
 &lt;p&gt;物理层-数据链路层-网络层-传输层-会话层-表示层-应用层，分别给定各自的功能属性&lt;/p&gt;
 &lt;p&gt;物理层：规定信号电气含义、规定接口参数&lt;/p&gt;
-&lt;p&gt;数据链路层：检测误差、流量控制、共享信道访问&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/cyber/1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;数据链路层：检测误差（帧错+位错）、流量控制、控制对共享信道访问，&lt;strong&gt;主要任务是把上层传下来的封装为帧&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;网络层：路由选择、流量控制、差错控制、拥塞控制&lt;/p&gt;
-&lt;p&gt;传输层：端到端传输服务、流量控制、差错控制&lt;/p&gt;
-&lt;p&gt;会话层：管理会话进程、有序传递数据、断点下载处理&lt;/p&gt;
+&lt;p&gt;传输层：端到端传输服务、流量控制、差错控制、复用分用&lt;/p&gt;
+&lt;p&gt;会话层：建立终止管理会话进程、有序传递数据、断点下载处理&lt;/p&gt;
 &lt;p&gt;表示层：统一数据结构和编码形式、数据压缩、加密和解密&lt;/p&gt;
-&lt;p&gt;应用层：想干嘛干嘛&lt;/p&gt;
+&lt;p&gt;应用层：满足需求&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;TCP&amp;#x2F;IP：&lt;/p&gt;
-&lt;p&gt;网络接口层：接受IP分组并发到指定物理网络，对应物理层和数据链路层&lt;/p&gt;
-&lt;p&gt;网际层：选择路由，对应网络层&lt;/p&gt;
-&lt;p&gt;传输层：端与端之间对话，对应会话层、表示层&lt;/p&gt;
+&lt;p&gt;网络接口层：接受IP分组并发到指定物理网络，对应OSI物理层和数据链路层&lt;/p&gt;
+&lt;p&gt;网际层：选择路由，对应OSI网络层&lt;/p&gt;
+&lt;p&gt;传输层：端与端之间对话，对应OSI会话层、表示层&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;考试相对而言以考察概念比较多，尤其是计网，只能是背了，没办法的&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;编码和调制：&lt;/p&gt;
 &lt;p&gt;首先明确各种编码以及其对应的方式，免得混淆起来&lt;/p&gt;
 &lt;p&gt;PCM、数字发射器是对应编码为数字信号，调制器、放大器调制器是对应调制模拟信号&lt;/p&gt;
+&lt;p&gt;但凡出现调制、调制器，不用想，必然是调制为模拟信号&lt;/p&gt;
+&lt;p&gt;对于几个英文需要记住其含义&lt;/p&gt;
 &lt;p&gt;归零，Return Zero&amp;#x2F;&amp;#x2F;非归零，None Return Zero&amp;#x2F;&amp;#x2F;&lt;/p&gt;
 &lt;p&gt;反向非归零 None Return Zero invert&amp;#x2F;&amp;#x2F;曼彻斯特&amp;#x2F;&amp;#x2F;差分曼彻斯特&lt;/p&gt;
 &lt;p&gt;上述均是数字编码编码为数字信号&lt;/p&gt;
@@ -44,10 +99,8 @@
 &lt;p&gt;把上一种的归零给去除，不归零，全用于传递信号&lt;/p&gt;
 &lt;p&gt;反向非归零：&lt;/p&gt;
 &lt;p&gt;每次跳变置为0，不跳变置为1&lt;/p&gt;
-&lt;p&gt;这部分内容其实并不统一，各类教辅上面都会有不同的介绍，本质是因为策略不同&lt;/p&gt;
-&lt;p&gt;类似于这个可能是跳变换电平表信号，那个可能是以电平位表信号&lt;/p&gt;
-&lt;p&gt;维持本身就可以被视作是两种可能性的信号，这个并没有特别统一的说法&lt;/p&gt;
-&lt;p&gt;算是个小坑，但优先以统考考过的为准&lt;/p&gt;
+&lt;p&gt;不同版本教材会对此有一些不同的态度，尤其在统考没有定下具体例子的情况下&lt;/p&gt;
+&lt;p&gt;有时候可能以跳变做信号，有时候可能以电平做信号，因而具体看题目而定&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;曼彻斯特、差分曼彻斯特：&lt;/p&gt;
 &lt;p&gt;一者在中央跳变表信号，同时表示时钟信号，向上跳变&amp;#x2F;向下跳变表示1和0两种信号&lt;/p&gt;
@@ -56,22 +109,58 @@
 &lt;p&gt;差分曼彻斯特，中间的跳变变成了时钟信号，实际信号表达在每个码元起始&lt;/p&gt;
 &lt;p&gt;起始码元不跳变代表1，跳变代表0&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;具体的倍数解释和其他解释，明天放一起说&lt;/p&gt;
+&lt;p&gt;对曼彻斯特的解释：&lt;/p&gt;
+&lt;p&gt;实际上将一个码元一分为二，分为两种码元（一般一个码元对应一个bit，曼彻斯特主要应用于二进制的传输&lt;/p&gt;
+&lt;p&gt;一种码元是零码元，对应高电平起始，中间向低电平跳变表零&lt;/p&gt;
+&lt;p&gt;另外一种则相反，对应为低电平起始，中间向高电平跳变，含义为一&lt;/p&gt;
+&lt;p&gt;当然具体向上跳变也可以作零，向下跳变可以作为一，相反也是完全没问题的&lt;/p&gt;
+&lt;p&gt;因而，因为一个原本意义上的码元对应产生了两次的电平变换&lt;/p&gt;
+&lt;p&gt;电平变换速率是原先意义上的两倍，因而占用的频道带宽也是原先的两倍&lt;/p&gt;
+&lt;p&gt;同时需要为每一个电平变换编码，因而编码速率也是原本意义上的两倍&lt;/p&gt;
+&lt;p&gt;也可以理解为，原先只需要正常的编码速率，现在在传输信息量不变的情况下需要加速&lt;/p&gt;
+&lt;p&gt;这样就使得编码效率变低，变为了原先的一半，书上写的都是对应原先而言的&lt;/p&gt;
+&lt;p&gt;在曼彻斯特里面，实际上把一个码元一分为二，即一个bit对应了两个码元&lt;/p&gt;
+&lt;p&gt;因而码元速率是原先的两倍，而传输速率是不变的，因为依旧是一秒X个bit不会改变&lt;/p&gt;
+&lt;p&gt;同样编码效率低的还有一个归零编码，其也是双倍编码速度&lt;/p&gt;
+&lt;p&gt;但这里说个问题，一般而言这个码元，说实话还是以一个bit对应的为主，没有统一口径&lt;/p&gt;
+&lt;p&gt;到底是两个码元？还是一个码元，说实话各说其词&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;一些杂项补充：&lt;/p&gt;
+&lt;p&gt;信道的内容见P32上方&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;奈氏准则、香农定理：&lt;/p&gt;
 &lt;p&gt;奈式是无噪声环境下的极限传输速率，香农是有噪声环境下的极限传输速率&lt;/p&gt;
-&lt;p&gt;具体做题目就是看清具体给定的环境才能做出区分&lt;/p&gt;
-&lt;p&gt;当两者均给出的时候，那么就以低的为准，因为限制是一个最高值，不可超越的&lt;/p&gt;
+&lt;p&gt;具体需要根据题设条件看清楚是否是无噪声环境&lt;/p&gt;
+&lt;p&gt;对于每道题目而言，需要特意注意能否把两个均算出来，能算出来要以低的为准&lt;/p&gt;
+&lt;p&gt;有时候每波特携带的信息可以隐含用二进制，配合一些知识点一起考察，例如曼彻斯特码&lt;/p&gt;
+&lt;p&gt;对应则为课后习题第八题，做题的目的是尽可能物尽其用从题目中总结价值和经验&lt;/p&gt;
 &lt;p&gt;奈式准则下，波特率最高只能是2W波特，这个是一个极限值，也会考&lt;/p&gt;
 &lt;p&gt;香农定理下面有一个信噪比，一般考试都会结合信噪比一起考，还是要会算的&lt;/p&gt;
 &lt;p&gt;公式总体并不难，传输速率的计算无非就是波特率·每个波特带的Bit量&lt;/p&gt;
 &lt;p&gt;至于Bit量，需要注意几个说法：&lt;/p&gt;
 &lt;p&gt;离散值、多少种等等，基本就是意思可以用多少位二进制来表示这些信号&lt;/p&gt;
-&lt;p&gt;具体的Bit量也就是对应的二进制位数&lt;/p&gt;
+&lt;p&gt;具体的Bit量也就是对应的二进制位数，课后对应习题9、11、13、18、21、22、23、30&lt;/p&gt;
+&lt;p&gt;这是一个基本要求，要从二进制能表示的信息去理解&lt;/p&gt;
 &lt;p&gt;正交调频的公式也是基于此，只要课后习题做过问题就不会特别大&lt;/p&gt;
 &lt;p&gt;采样次数：&lt;/p&gt;
 &lt;p&gt;一般采样次数就是定为每秒的波特数也就是波特率&lt;/p&gt;
 &lt;p&gt;同时因为采样次数需要超过最大频率的两倍，所以也可根据信号频率算采样率&lt;/p&gt;
+&lt;p&gt;同时有时的采样率是无效的，因为奈氏准则下最高只能是两倍频率&lt;/p&gt;
+&lt;p&gt;最后，需要注意计算公式里面的W，含义是频道带宽，而不是频道的频率，是带宽宽度&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;补充：&lt;/p&gt;
+&lt;p&gt;ISO模型里面，只有到了传输层以上，也就是资源层以上才能被称为是端对端&lt;/p&gt;
+&lt;p&gt;在通信子网内只能被称为点到点的主机&lt;/p&gt;
+&lt;p&gt;P16页上方的原语比较反直觉，该背就背吧，王道这本书质量一般，建议看网上资源&lt;/p&gt;
+&lt;p&gt;对TCP&amp;#x2F;IP，网际层也被称为IP层，传输层有两种协议，一种是TCP，一种是UDP&lt;/p&gt;
+&lt;p&gt;分别对应可靠、不可靠两种连接服务&lt;/p&gt;
+&lt;p&gt;早期的共享式以太网采用载波监听多址接入&amp;#x2F;碰撞检测，即CSMA&amp;#x2F;CD协议来解决碰撞冲突问题&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;理想低通信道最高码元传输速率是2W，但理想带通信道就是W&lt;/p&gt;
+&lt;p&gt;至于信道复用，这一块内容书上并没有，只能是参考其他的网络教材&lt;/p&gt;
+&lt;p&gt;时分复用的所有用户在不同的时间占用同样的频带宽度，在湖科大那边有较好的解释&lt;/p&gt;
+&lt;p&gt;对课后的20，主要就是要清楚时分复用是占用相同的频带宽度的，TDM&lt;/p&gt;
+&lt;p&gt;频分复用则是把带宽给按需分开，每个占据是不同的频带带宽，后续会详细补充&lt;/p&gt;
 </content>
         <updated>2024-05-09T11:34:05.000Z</updated>
     </entry>
