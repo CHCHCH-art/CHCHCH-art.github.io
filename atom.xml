@@ -90,6 +90,22 @@
 &lt;p&gt;否则你发了一个小于最短帧长的，直接给你丢了，所以才需要提出补充长度的概念&lt;/p&gt;
 &lt;p&gt;计算的时候注意下，这个延迟时长是双向的，也就是双程的，这个非常容易漏忘&lt;/p&gt;
 &lt;hr&gt;
+&lt;p&gt;关于最短帧长的补充：&lt;/p&gt;
+&lt;p&gt;规定了最短帧长，那么一旦发送或者接收大于这个帧长的，都会认为没错&lt;/p&gt;
+&lt;p&gt;如果两端的传播延迟过长的话，就会导致在冲突发生后，会延迟更久才能发回来有冲突&lt;/p&gt;
+&lt;p&gt;而在这个时间内，是一直在发送的，意味着发送的长度会大于最短帧长，却认为没错&lt;/p&gt;
+&lt;p&gt;这样就会影响最终的冲突判断&lt;/p&gt;
+&lt;p&gt;简单来说，最短帧长的规定同时规定了最长的双向传播时延，如果时延超过这个值&lt;/p&gt;
+&lt;p&gt;就会导致所谓的“最短”发送长度必然超过了实际规定的最短帧，导致冲突判断失效&lt;/p&gt;
+&lt;p&gt;这也是三十八题所谓相距最远距离的来源&lt;/p&gt;
+&lt;p&gt;此外，这题的Hub很明显是双向的，两边的传输都是需要重生比特流的&lt;/p&gt;
+&lt;p&gt;100Base-T的含义是，基带传输，100Mb&amp;#x2F;s，采用以太网，64B为最短帧长度默认规定&lt;/p&gt;
+&lt;p&gt;如果采用最短帧长不变，而减少电缆长度&lt;/p&gt;
+&lt;p&gt;那么实际上的最短帧是要小于定义的最短帧的，例如原先定义64B为最小帧&lt;/p&gt;
+&lt;p&gt;现在线路缩短，一次往返时延内可能只能发54B，小于54B的才是必然产生问题的&lt;/p&gt;
+&lt;p&gt;但定义64B同样不会产生问题，因为小于64B必然包括了小于54B&lt;/p&gt;
+&lt;p&gt;同时因为定了最短帧长，所以每次发送的长度都是大于等于64B，少于其必然是出错的&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;动态退避就是用于先前的等待随机时间的补充，这个算法并不难，记住就行了&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;CSMA&amp;#x2F;CA：&lt;/p&gt;
@@ -3959,10 +3975,9 @@ do &amp;#123;
     </entry>
     <entry>
         <id>https://chchch-art.github.io/2023/09/20/hello-world/</id>
-        <title>前言</title>
+        <title>英语高频词例句</title>
         <link rel="alternate" href="https://chchch-art.github.io/2023/09/20/hello-world/"/>
-        <content type="html">&lt;p&gt;若能享受片刻宁静，如此也好&lt;/p&gt;
-</content>
+        <content type="html"></content>
         <category term="Preview" />
         <updated>2023-09-20T07:08:00.000Z</updated>
     </entry>
