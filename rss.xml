@@ -5,13 +5,79 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Tue, 14 May 2024 15:21:20 +0800</pubDate>
-        <lastBuildDate>Tue, 14 May 2024 15:21:20 +0800</lastBuildDate>
+        <pubDate>Wed, 15 May 2024 18:39:08 +0800</pubDate>
+        <lastBuildDate>Wed, 15 May 2024 18:39:08 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/05/15/%E8%AE%A1%E7%BD%91-7/</guid>
+            <title>计网-7</title>
+            <link>https://chchch-art.github.io/2024/05/15/%E8%AE%A1%E7%BD%91-7/</link>
+            <pubDate>Wed, 15 May 2024 18:39:08 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;IPV4里面，需要注意的就是单位问题，有的地方单位是4B，或者8B，1B，需要区分&lt;/p&gt;
+&lt;p&gt;具体的功能看下大致清楚就行了&lt;/p&gt;
+&lt;p&gt;生存时间那边补充一下，路由器在转发之前先减去这个时间，然后转发的时候再去判断&lt;/p&gt;
+&lt;p&gt;如果超时了直接丢掉不转发&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;NAT工作简述：&lt;/p&gt;
+&lt;p&gt;其实就是简单的用路由器的地址去访问公网上的东西，私网地址是不能用于访问的&lt;/p&gt;
+&lt;p&gt;在出去以后其实这个数据帧就已经实际意义上变成路由器的帧了，外界也都是这样看的&lt;/p&gt;
+&lt;p&gt;只有到了局域网里面，路由器才会拆回去把数据返回私网内的主机&lt;/p&gt;
+&lt;p&gt;在外边路由器是你的代表，在家里路由器把你的东西转发出去，也把东西正确还给你&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;子网，相当于在外部网的情况下自己内部分了个网，这个是个小集体，外界不可视&lt;/p&gt;
+&lt;p&gt;192.168.85.0变成了192.168.85.1.0 - 192.168.85.2.0，逻辑上就划分了两个子网出来&lt;/p&gt;
+&lt;p&gt;子网掩码就不多说了，单纯就是用来指明网络号是哪几位，顺便可以指明主机号的位数&lt;/p&gt;
+&lt;p&gt;划分子网的掩码不论是CIDR还是自己划分，意义是一样的，指明网络号，指明主机号&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;路由聚合，其实本质是看能不能放在一个子网里面被一个子网表达（或者说被一块表达）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/zhang_an_cheng/article/details/106444398&#34;&gt;参考文献&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;默认路由算法简述补充：&lt;/p&gt;
+&lt;p&gt;先提取出IP地址，然后找相应的网络号找转发方向&lt;/p&gt;
+&lt;p&gt;一个个找下去，如果找到了那么就转发出去，没找到就继续向下找&lt;/p&gt;
+&lt;p&gt;如果找到一个默认路由那么转发给默认路由，如果什么都没找到匹配的，就转发失败&lt;/p&gt;
+&lt;p&gt;默认路由是一定匹配成功的，至于到底转发到哪里，就不知道了&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;ARP和MAC地址等：&lt;/p&gt;
+&lt;p&gt;因为在实际链路层必须要通过MAC地址来完成传输，所以光有IP不够，还需要IP和MAC映射&lt;/p&gt;
+&lt;p&gt;基本流程是，A发现没有B的MAC地址的时候，通过IP广播一个帧，其包含了A的MAC和IP地址&lt;/p&gt;
+&lt;p&gt;B收到以后就能知道A的MAC和IP地址，直接进行单播返回B的MAC地址&lt;/p&gt;
+&lt;p&gt;那么A就得到了B的IP和MAC地址的映射关系，因而就可以通过单播方式传输数据&lt;/p&gt;
+&lt;p&gt;路由器层面只能完成IP地址之间的互相识别，而在交换机、链路层只能完成MAC的识别&lt;/p&gt;
+&lt;p&gt;如果只有MAC是能传的，只有IP是没法传的&lt;/p&gt;
+&lt;p&gt;在做题的抽象理解上面，可以理解为ARP取得另一个主机/路由器的MAC、IP地址的映射&lt;/p&gt;
+&lt;p&gt;因而A就可以和另外一个路由器/主机间进行独播而不必广播&lt;/p&gt;
+&lt;p&gt;PS：默认网关是一个设备，硬件设备&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;DHCP流程：&lt;/p&gt;
+&lt;p&gt;DHCP客户先广播一个DHCP请求，然后DHCP服务器收到后广播一个预分配IP信息&lt;/p&gt;
+&lt;p&gt;因为一开始DHCP服务器都不知道在哪，所以是需要广播的&lt;/p&gt;
+&lt;p&gt;同时DHCP服务器也不知道是谁发出来的，所以需要广播回去信息&lt;/p&gt;
+&lt;p&gt;DHCP客户返回一个接受IP地址消息，也是广播发送回去的，这里可能会困惑吧&lt;/p&gt;
+&lt;p&gt;实际上是因为DHCP服务器可能有多个，需要告诉别的服务器你们提供的地址我不需要&lt;/p&gt;
+&lt;p&gt;最终DHCP服务器再把这个地址真正给分配给该DHCP客户端，也是广播&lt;/p&gt;
+&lt;p&gt;这里也是一样，因为DHCP服务器还是不知道是谁发过来的，也需要广播回去&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;UDP/TCP介绍：&lt;/p&gt;
+&lt;p&gt;UDP（UserDatagramProtocol）是一个简单的面向消息的传输层协议，尽管UDP提供标头和有效负载的完整性验证（通过校验和），但它不保证向上层协议提供消息传递，并且UDP层在发送后不会保留UDP 消息的状态。因此，UDP有时被称为不可靠的数据报协议。如果需要传输可靠性，则必须在用户应用程序中实现。&lt;/p&gt;
+&lt;p&gt;UDP使用具有最小协议机制的简单无连接通信模型。UDP提供数据完整性的校验和，以及用于在数据报的源和目标寻址不同函数的端口号。它没有握手对话，因此将用户的程序暴露在底层网络的任何不可靠的方面。如果在网络接口级别需要纠错功能，应用程序可以使用为此目的设计的传输控制协议（TCP）。&lt;/p&gt;
+&lt;p&gt;综上所述：&lt;/p&gt;
+&lt;p&gt;UDP是基于IP的简单协议，不可靠的协议。&lt;/p&gt;
+&lt;p&gt;UDP的优点：简单，轻量化。&lt;/p&gt;
+&lt;p&gt;UDP的缺点：没有流控制，没有应答确认机制，不能解决丢包、重发、错序问题。&lt;/p&gt;
+&lt;p&gt;这里需要注意一点，并不是所有使用UDP协议的应用层都是不可靠的，应用程序可以自己实现可靠的数据传输，通过增加确认和重传机制，所以使用UDP 协议最大的特点就是速度快。&lt;/p&gt;
+&lt;p&gt;TCP：&lt;/p&gt;
+&lt;p&gt;TCP协议，传输控制协议（英语：Transmission Control Protocol，缩写为：TCP）是一种面向连接的、可靠的、基于字节流的通信协议&lt;/p&gt;
+&lt;p&gt;TCP把连接作为最基本的抽象单元，每条TCP连接有两个端点，TCP连接的端点即套接字&lt;/p&gt;
+&lt;p&gt;综上，DHCP需要无连接的UDP，而不能使用有连接的TCP&lt;/p&gt;
+&lt;p&gt;这是第五章的内容，暂时佛系一点&lt;/p&gt;
+&lt;hr&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/05/14/%E8%AE%A1%E7%BD%91-6/</guid>
             <title>计网-6</title>
