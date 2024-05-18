@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>计网-8 | Ephemeral</title><meta name="author" content="CH Targaryen"><meta name="copyright" content="CH Targaryen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="IPV6的简单补充： IPV6的拓展首部和IPV4的拓展首部所在的位置不同 IPV6的拓展首部是当作数据的一部分，而IPV4的首部是当作首部的一部分 IPV4首部可变，IPV6首部不可变，路由器只对首部进行检验，对IPV6的拓展首部是不检验的 而对IPV4的首部是都要检验过去的，再次强调，检验和错误不是首部参数问题 IPV6不需要DHCP、ARP协议，而IPV4需要（要么静态配置IP地址） IP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计网-8">
+<meta property="og:url" content="https://chchch-art.github.io/2024/05/17/%E8%AE%A1%E7%BD%91-8/index.html">
+<meta property="og:site_name" content="Ephemeral">
+<meta property="og:description" content="IPV6的简单补充： IPV6的拓展首部和IPV4的拓展首部所在的位置不同 IPV6的拓展首部是当作数据的一部分，而IPV4的首部是当作首部的一部分 IPV4首部可变，IPV6首部不可变，路由器只对首部进行检验，对IPV6的拓展首部是不检验的 而对IPV4的首部是都要检验过去的，再次强调，检验和错误不是首部参数问题 IPV6不需要DHCP、ARP协议，而IPV4需要（要么静态配置IP地址） IP">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://chchch-art.github.io/img/backphoto.png">
+<meta property="article:published_time" content="2024-05-17T10:18:50.000Z">
+<meta property="article:modified_time" content="2024-05-18T12:01:34.973Z">
+<meta property="article:author" content="CH Targaryen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chchch-art.github.io/img/backphoto.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://chchch-art.github.io/2024/05/17/%E8%AE%A1%E7%BD%91-8/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"YQ6FJ5L9SU","apiKey":"4a50564ce15d0129ab6907b7e907ea5b","indexName":"chchchch","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":10,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计网-8',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-05-18 20:01:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/headimage.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/backphoto.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Ephemeral"><span class="site-name">Ephemeral</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计网-8</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-17T10:18:50.000Z" title="发表于 2024-05-17 18:18:50">2024-05-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-18T12:01:34.973Z" title="更新于 2024-05-18 20:01:34">2024-05-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/2024/05/17/%E8%AE%A1%E7%BD%91-8/" data-flag-title="计网-8"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><hr>
+<p>IPV6的简单补充：</p>
+<p>IPV6的拓展首部和IPV4的拓展首部所在的位置不同</p>
+<p>IPV6的拓展首部是当作数据的一部分，而IPV4的首部是当作首部的一部分</p>
+<p>IPV4首部可变，IPV6首部不可变，路由器只对首部进行检验，对IPV6的拓展首部是不检验的</p>
+<p>而对IPV4的首部是都要检验过去的，再次强调，检验和错误不是首部参数问题</p>
+<p>IPV6不需要DHCP、ARP协议，而IPV4需要（要么静态配置IP地址）</p>
+<p>IPV6有效载荷长度包括拓展首部和数据段，IPV4的总长度就是首部长度加数据段长度</p>
+<p>多播和广播的区别：</p>
+<p>多播，也称组播，有别于广播对一整个网段内的主机进行广播，其指定一组计算机</p>
+<p>可以是一个网段内的一部分计算机而不是全网段的计算机</p>
+<p>DNS域名系统解析IP地址获知版本号，隧道把一个IPV6封装为IPV4传播</p>
+<hr>
+<p>距离向量算法以及RIP补充解释：</p>
+<p>直接把距离向量理解为是一个矩阵表就行了，初始状态其竖轴是其自身与其邻居</p>
+<p>横轴是整个网络所有的结点，以此形成一个完善的路由信息，即所说的三个路由信息</p>
+<p>直接用矩阵理解会更加容易一些</p>
+<p>在最终完善了以后整个矩阵就变成网络结点-网络结点矩阵的路由表</p>
+<p>再说算法过程：</p>
+<p>初始状态下只有直接相连的结点和距离信息</p>
+<p>从某个结点开始向外，发送其矩阵信息，是向其邻居发送其自己所有的路由表</p>
+<p>然后其所有的邻居接受后更新一系列值，然后再各自向外发送其路由表</p>
+<p>最终就能实现稳态，并且每一个路由表都是完善的结点，至少是可达的均能在表项内</p>
+<p>做一些补充说明：</p>
+<p>RIP是一个内网路由协议</p>
+<p>流程基本如上，向邻居发送自己的路由表，邻居更新后再向邻居发送路由表….循环下去</p>
+<p>RIP的规定中就可以看到这是一个基于跳跃次数的算法，不一定是时间最短的</p>
+<p>RIP距离算法里面，是邻居的更新策略，里面有几个需要解释：</p>
+<p>下一跳路由不变的情况下为什么路径增加了并且还接受了？</p>
+<p>其实本质就是这条路有的路由坏了不可达了，导致路径延长必须绕道而行</p>
+<p>或者说这个网络直接不可达，那么对该网络的距离更新是每次增一的，直到十六为止</p>
+<p>一般变大都是出现了不正常的情况</p>
+<p>这一个距离也是可以变小的，因为下一跳可能不变的情况下，更远路径找到了最佳</p>
+<hr>
+<p>链路状态与OSPF：</p>
+<p>与距离向量算法的不同在于，距离向量算法是基于一个源点开始的不断扩散</p>
+<p>而链路状态是基于不同源点的多维度扩散最终形成一个完整的路由表</p>
+<p>每次向外更新都是以广播形式的，每个结点都能知道这个路由器和其邻居的分布情况</p>
+<p>每次结点的更新都是基于全网统一的数据图来计算各个结点距离，全网统一的图</p>
+<hr>
+<p>距离向量、链路状态向量、BGP、RIP、OSPF总结：</p>
+<p>两种向量的基本运算流程就不再赘述，简述概括即可了</p>
+<p>距离向量，向其相邻邻居交换其整个路由表，在拓扑改变和固定时间对其邻居发送一次</p>
+<p>在更新自身路由表项的时候是需要向其邻居更新的，因为邻居并不知道你的表</p>
+<p>某个节点收到邻居的路由表后翻阅更新，并把更新完整个路由表的再向其邻居交换</p>
+<p>循环往复直到整个网络趋于稳定，不再交换达到收敛状态</p>
+<p>链路状态向量，向整个广播域洪泛其相邻链路状态（链路就是指其一个端口连接的链路</p>
+<p>其发送是定期的，或者当网络拓扑改变的时候也会进行一次发送</p>
+<p>因为全体网络共享一个相同的拓扑表，所以自身计算更新的时候不需要告知他人</p>
+<p>因为别人算出来是和你一样的，告诉了也没用</p>
+<p>某个节点收到广播的链路状态后进一步完善网络拓扑结构通过算法计算单源最短路径</p>
+<hr>
+<p>关于好消息、坏消息：</p>
+<p>好消息是很容易理解的，如果找到了好路由路径，自己更新了发给邻居</p>
+<p>邻居更新再发回来可达的网络距离一定是长于自身访问的距离的，所以自己就收敛静止了</p>
+<p>坏消息传送的慢…..</p>
+<p>简单来说，就是R1虽然检测到了这个端口不可达，但因为R2或者别的邻居那边不是16</p>
+<p>所以以为从别的邻居那边也是能够转发可达的，直到邻居也一脸懵逼向别的邻居问了半天</p>
+<p>得，这才知道大家都不能到，那么才能说这个网络是不可达的</p>
+<p>其实这就是一个机制问题，如果一开始就设置不可达，那肯定是不对的</p>
+<p>万一从别的路由那边也能到呢，那么我直接说不可达，明显就是个错误答案，所以要询问</p>
+<p>直到确认每一条路径都不能到以后，这才真正确认这个网络不可达且只有自己连着</p>
+<hr>
+<p>RIP基于距离向量、OSFP基于链路状态向量，他们均是IGP</p>
+<p>RIP以跳数来衡量距离，而OSFP以代价衡量距离，相当于一个是无权图，一个是带权图</p>
+<p>同时OSFP的带权图是支持双向代价不等的，即使是同一条路径的两端代价也不一定相同</p>
+<p>RIP是应用层协议，使用UDP；OSFP是网络层协议，使用IP，BGP使用TCP</p>
+<p>具体的原因在答案页内，P200、201解答题第一题</p>
+<p>RIP当网络拓扑变化、固定时间到时、更新自身表时交换路由信息</p>
+<p>OSFP仅当网络拓扑变化的时候才广播交换路由信息</p>
+<p>OSFP需要固定时间发送问候分组以确认可达性，RIP类似的是固定时间交换路由信息</p>
+<p>当信息改变、问候分组不可达的时候的处理是一样的，都是更新路由链路库</p>
+<p>RIP存在好消息传送的快、坏消息传送的慢，OSFP不存在这个情况，因为构建拓扑非常快</p>
+<hr>
+<p>发言人，也被称作边际路由器，是需要运行两个协议的，一个IGP，一个EGP</p>
+<p>BGP在TCP连接上建立BGP报文…具体看书上吧，这块的题目不多似乎，但还是可以很细的</p>
+<p>课后习题补充：</p>
+<p>不同区域的路由器是肯定不知道对方的路由信息的，而且这个也是特指OSFP下的状态</p>
+<p>OSFP是广播的，而分区域的路由器是隔绝广播域的，别的区域的路由器连洪泛都收不到的</p>
+<p>路由选择协议的一些功能书上没有，答案里面有</p>
+<p>RIP压根没有确认这样一个步骤，更新了就是更新了，没有确认这个步骤的，杜撰类型</p>
+<p>主干区域这类内容王道压根就没有，不知道教材上面有没有？</p>
+<p>距离向量、链路状态向量其中包含的都是当前，最佳的路径距离</p>
+<hr>
+<p>多播：</p>
+<p>稍微补充下硬件多播，IP多播地址映射为MAC地址以后，IP多播数据报就封装在了MAC帧里</p>
+<p>夸张的，这一句话可能会考吧，稍微注意点</p>
+<p>IP多播地址映射为多播MAC地址是可能会产生多个IP地址映射到一个MAC的情况</p>
+<p>所以即使在传送到主机以后，主机也需要对其进行筛选处理，软件层面进行过滤的</p>
+<p>至于映射方法：</p>
+<p>MAC地址前6位直接写01005E，IP地址从第十位开始选取，第九位补的0，再结合MAC前几位</p>
+<p>即十六进制，01 00 5E ，叠加二进制：0xxx xxxx xxxx，二进制第二位是IP第十位</p>
+<hr>
+<p>移动IP：</p>
+<p>A的家庭固定住址是XX省XX市XX街道，其归属地为XX市，其归属代理是其家人</p>
+<p>A临时出差，外地只有其外地代理叔父知道其临时住址是YY省YY市YY街道YY宾馆</p>
+<p>其临时住址的归属地自然是YY市，外地代理是其叔父</p>
+<p>叔父需要向其家人汇报A目前在我的地盘，我已经给他安排好了住处（转交地址是…</p>
+<p>当A在外地需要向B送信时，通过外地代理其叔父帮忙把信给送出去（叔父万能的</p>
+<p>当A在本地需要给B送信时，通过本地代理其家人帮忙把信送出去（一家人都万能的</p>
+<p>当B同学需要向A联系的时候，他只有A的固定住址，只能向这个地方送信</p>
+<p>如果A在本地，那么直接由其家人转交给A即可</p>
+<p>如果A不在本地，家人一看，叔父留下了A的临时住址，向这个住址送信即可</p>
+<p>然后叔父（路由器代理）能看到这封信送过来了，帮忙把信转交给A即可</p>
+<p>当A离开外地的时候，这个临时地址自然也就不需要了，叔父自然就可以不再管A这个人了</p>
+<p>具体细节的补充可以看书，但大体框架就是这个样子的</p>
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://CHCHCH-art.github.io">CH Targaryen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://chchch-art.github.io/2024/05/17/%E8%AE%A1%E7%BD%91-8/">https://chchch-art.github.io/2024/05/17/计网-8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://CHCHCH-art.github.io" target="_blank">Ephemeral</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/backphoto.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/05/18/%E8%AE%A1%E7%BD%91-9/" title="计网-9"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">计网-9</div></div></a></div><div class="next-post pull-right"><a href="/2024/05/15/%E8%AE%A1%E7%BD%91-7/" title="计网-7"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">计网-7</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">CH Targaryen</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">戏子罢了</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/05/18/%E8%AE%A1%E7%BD%91-9/" title="计网-9"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网-9"/></a><div class="content"><a class="title" href="/2024/05/18/%E8%AE%A1%E7%BD%91-9/" title="计网-9">计网-9</a><time datetime="2024-05-18T12:11:02.000Z" title="发表于 2024-05-18 20:11:02">2024-05-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/17/%E8%AE%A1%E7%BD%91-8/" title="计网-8"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网-8"/></a><div class="content"><a class="title" href="/2024/05/17/%E8%AE%A1%E7%BD%91-8/" title="计网-8">计网-8</a><time datetime="2024-05-17T10:18:50.000Z" title="发表于 2024-05-17 18:18:50">2024-05-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/15/%E8%AE%A1%E7%BD%91-7/" title="计网-7"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网-7"/></a><div class="content"><a class="title" href="/2024/05/15/%E8%AE%A1%E7%BD%91-7/" title="计网-7">计网-7</a><time datetime="2024-05-15T10:39:08.000Z" title="发表于 2024-05-15 18:39:08">2024-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/14/%E8%AE%A1%E7%BD%91-6/" title="计网-6"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网-6"/></a><div class="content"><a class="title" href="/2024/05/14/%E8%AE%A1%E7%BD%91-6/" title="计网-6">计网-6</a><time datetime="2024-05-14T07:21:20.000Z" title="发表于 2024-05-14 15:21:20">2024-05-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/13/%E8%AE%A1%E7%BD%91-5/" title="计网-5"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网-5"/></a><div class="content"><a class="title" href="/2024/05/13/%E8%AE%A1%E7%BD%91-5/" title="计网-5">计网-5</a><time datetime="2024-05-13T11:43:50.000Z" title="发表于 2024-05-13 19:43:50">2024-05-13</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/backphoto.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By CH Targaryen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'rKOyR9DY1zFYZe36c4mjejpQ-gzGzoHsz',
+      appKey: 'tV9RdIo2DYMz7OB5mfsjydI5',
+      avatar: '/img/headimage.png',
+      serverURLs: 'https://rkoyr9dy.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, ))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>
