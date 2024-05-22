@@ -3,12 +3,149 @@
     <id>https://CHCHCH-art.github.io</id>
     <title>Ephemeral</title>
     <link href="https://CHCHCH-art.github.io" />
-    <updated>2024-05-18T12:11:02.000Z</updated>
+    <updated>2024-05-20T12:04:25.000Z</updated>
     <category term="stock" />
     <category term="END" />
     <category term="FK" />
     <category term="Preview" />
     <category term="Math" />
+    <entry>
+        <id>https://chchch-art.github.io/2024/05/20/%E8%AE%A1%E7%BD%91-10/</id>
+        <title>计网-10</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2024/05/20/%E8%AE%A1%E7%BD%91-10/"/>
+        <content type="html">&lt;p&gt;第五章内容，补充：&lt;/p&gt;
+&lt;p&gt;链路层的通信往往是物理上相邻的，而网络层的通信往往是物理上不相邻的两个主机&lt;/p&gt;
+&lt;p&gt;虚电路也是逻辑连接而不是物理连接，只有电路交换才是真正的物理链路连接&lt;/p&gt;
+&lt;p&gt;路由器没有实现传输层的功能，因而自然不会有传输层在，只会对IP数据报进行拆和封装&lt;/p&gt;
+&lt;p&gt;网络层的复用在上一节里面&lt;/p&gt;
+&lt;p&gt;第五章的内容&lt;/p&gt;
+&lt;p&gt;而网络层的“分用”（Demultiplexing）是指当网络层接收到一个IP数据包时，它需要根据数据包中的目标IP地址和其他信息来确定应该将数据包传递给哪个上层协议（如TCP、UDP等）进行处理。这个过程类似于将数据包从一个共享的传输通道（如IP层）分发到不同的应用程序或服务&lt;/p&gt;
+&lt;p&gt;一般而言，物理层的服务访问点是“网卡接口”&lt;/p&gt;
+&lt;p&gt;数据链路层的服务访问点是“MAC地址（网卡地址）”（书上是MAC帧的类型字段）&lt;/p&gt;
+&lt;p&gt;网络层的服务访问点是“IP地址（网络地址）”&lt;/p&gt;
+&lt;p&gt;传输层的服务访问点是“端口号”&lt;/p&gt;
+&lt;p&gt;应用层提供的服务访问点是“用户界面”&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;端口号里面，同一个主机里面的端口号肯定是不能重复的，不同主机之间是完全可以重复&lt;/p&gt;
+&lt;p&gt;并且传输层的UDP和TCP协议都是可以并存于一个主机里面的，因为是软件实现的&lt;/p&gt;
+&lt;p&gt;熟知端口号应该需要背，这个真的是可以直接拿一道选择题考的，五分&lt;/p&gt;
+&lt;p&gt;TCP是用套接字的，而UDP是什么都不用的，因为TCP是基于连接的，而UDP什么都不基于&lt;/p&gt;
+&lt;p&gt;UDP是否是全双工的书上并没有谈，或许是刻意回避，但TCP一定是全双工的&lt;/p&gt;
+&lt;p&gt;UDP当数据错了就直接扔掉，或者顶多给个向上层的汇报，但一般考察都认为直接扔掉的&lt;/p&gt;
+&lt;p&gt;那张表也是需要背诵的内容，没什么特别多的办法&lt;/p&gt;
+&lt;p&gt;注意里面的内容可以好好看一下的&lt;/p&gt;
+&lt;p&gt;TCP&amp;#x2F;IP协议里面，网际层只提供一个无连接的服务，路由器本身是不可靠的传输&lt;/p&gt;
+&lt;p&gt;IP协议本身是面向无连接的，所以可以说TCP&amp;#x2F;IP协议里面是无连接不可靠的网络传输&lt;/p&gt;
+&lt;p&gt;各个帧的结构需要单独列举出来补充，因为考试经常考，而忘是真的非常容易忘&lt;/p&gt;
+&lt;p&gt;如果低层不能实现可靠性，那么只能由上层来实现可靠性&lt;/p&gt;
+&lt;p&gt;例如链路层不可靠，那么找网络层，网络层不可靠找传输层，传输还不可靠只能应用处理&lt;/p&gt;
+&lt;p&gt;传输层是“端到端”的&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;UDP协议：&lt;/p&gt;
+&lt;p&gt;这一块考的基本可以说，不怎么考，主要考的还是TCP协议，这个过一遍有概念就够了&lt;/p&gt;
+&lt;p&gt;复用、分用、差错检验是UDP提供的最基本功能&lt;/p&gt;
+&lt;p&gt;至于TCP和UDP的各自应用优点，一两句话就可以总结清楚：&lt;/p&gt;
+&lt;p&gt;TCP的可靠性高，但其开销和耗费延迟比较高，UDP的可靠性低但其开销和耗费延迟比较小&lt;/p&gt;
+&lt;p&gt;至于为什么可靠性高，为什么开销、延迟高，这一类的解释看书上就行了&lt;/p&gt;
+&lt;p&gt;UDP面向报文，意味着其是分割报文段的，把不同的报文视作是不同的报文段&lt;/p&gt;
+&lt;p&gt;而TCP里面是面对字节的，对应把报文、数据块全都视作无差别的一整段二进制不区分&lt;/p&gt;
+&lt;p&gt;首部和里面提几个要点：&lt;/p&gt;
+&lt;p&gt;首部是固定长度的，即使有几个字段不需要用也是全零代替，首部不会改变长度&lt;/p&gt;
+&lt;p&gt;端口不可达，本身意思是真正意义上的不可达，而不是说能到但跳跃次数不够，真到不了&lt;/p&gt;
+&lt;p&gt;伪首部里面是有源IP地址和目的IP地址的，看图要看仔细&lt;/p&gt;
+&lt;p&gt;UDP检验这段话稍微看几眼，看重点，至于怎么检验就真的没必要学了，不会考查的&lt;/p&gt;
+&lt;p&gt;各个帧的总结整理越来越迫切了…..&lt;/p&gt;
+&lt;p&gt;以太网有很多东西是默认的，类似于默认用曼彻斯特码、默认MTU是1500B等，也要总结&lt;/p&gt;
+&lt;p&gt;UDP检验是真的什么都能检验，因为是把数据也顺便检验一遍的，凡图里有的都能检验出&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;TCP连接：&lt;/p&gt;
+&lt;p&gt;只要四元组中的任意一个不同就可以构建不同的TCP连接&lt;/p&gt;
+&lt;p&gt;简单来说：&lt;/p&gt;
+&lt;p&gt;不同主机之间的TCP连接，端口号是无所谓的，相同不相同都没关系&lt;/p&gt;
+&lt;p&gt;同一主机内的端口号是不重复的，且40001端口号可以和40005、40008同时TCP连接&lt;/p&gt;
+&lt;p&gt;TCP是一定一对一的，也是被两个端口号所唯一确定的&lt;/p&gt;
+&lt;p&gt;如果已经存在了一个由该二端口确定的TCP，再尝试建立这两个端口之间的TCP就会失败&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;TCP协议特点的略微补充：&lt;/p&gt;
+&lt;p&gt;P230里面答案是写错的，因为TCP是必然有序的，失败是会要求重发的&lt;/p&gt;
+&lt;p&gt;全双工的隐含，两方都有两个缓冲区，各自为输入、输出缓冲区&lt;/p&gt;
+&lt;p&gt;暂存未确认的数据是为了能够对未到达数据进行重新发送、存储不按序是为保证按序交付&lt;/p&gt;
+&lt;p&gt;TCP虽然是面对字节流的，但其确认依旧是依据报文的，就是后面握手交互的内容&lt;/p&gt;
+&lt;p&gt;其实一看就能清楚是按报文确认，而不是依据每个二进制或者字节确认，否则就死了&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;TCP报文段补充：&lt;/p&gt;
+&lt;p&gt;TCP报文段首部是20B固定，UDP是8B固定，IP是20B-60B，MAC是？真的需要整理&lt;/p&gt;
+&lt;p&gt;序号即Seq，指本段的开始序号，确认号即ack，指对前一段的确认和对下一段的期望&lt;/p&gt;
+&lt;p&gt;这边后面是有些题目的，基本围绕一个思路：序号是一段的开始号而不是结束号&lt;/p&gt;
+&lt;p&gt;窗口是指接收方的窗口，而不是发送方的窗口，2022的真题里面考过后续还能发多少的&lt;/p&gt;
+&lt;p&gt;TCP首部里面，非固定字段的长度是4B的整数倍，如果不足需要用填充位补足&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;比较重要的两个，握手、交换信息、释放的过程，窗口的计算&lt;/p&gt;
+&lt;p&gt;握手和交换信息个人已经写在了笔记上，主要对后面的时间计算稍微说几句&lt;/p&gt;
+&lt;p&gt;它这里所说的最小时长指的就是中间没有Fin-Wait和Close-wait段的情况&lt;/p&gt;
+&lt;p&gt;服务器两次的信息发送合并为一次发送，所以总时长算出来是1.5RTT或者RTT+2MSL&lt;/p&gt;
+&lt;p&gt;需要注意的是2MSL这件事，注意倍数是2MSL，统考考过&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;可靠传输里面，几个重点:&lt;/p&gt;
+&lt;p&gt;TCP是采用累积确认的、三次重复的本段ACK会触发重传而不需要再等计时器超时&lt;/p&gt;
+&lt;p&gt;在没有确认之前，发送方缓冲区是会一直存储还未确认的报文的，或许会结合窗口考察&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;TCP流量传输，个人在笔记上面基本也有写&lt;/p&gt;
+&lt;p&gt;零窗口探测是为了试探能不能发送的，和连接超时没关系&lt;/p&gt;
+&lt;p&gt;考点需要注意这几个：&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;发送窗口取接受窗口和拥塞窗口里面的较小值，需要看清楚另一者的缓冲区是怎么工作的&lt;/p&gt;
+&lt;p&gt;到底是拿走的，还是不拿走的，还是固定的？这个是影响结果的&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;设置MSS的不同，会导致计算的不同&lt;/p&gt;
+&lt;p&gt;MSS的大小就是初期的大小，在加法运算里面也是以MSS做单位向上运算的&lt;/p&gt;
+&lt;p&gt;个人思索下来，或许是有时候题目将增加单位设置为了MSS大小，而实际又联系数值大小&lt;/p&gt;
+&lt;p&gt;例如MSS虽然是2KB，但依旧可以视作从1开始增加，这时候的单位就是MSS&lt;/p&gt;
+&lt;p&gt;也可用2KB做单位，那么就是从2开始增加的，单位是KB&lt;/p&gt;
+&lt;p&gt;SSH的单位是不一定的，可能用MSS做单位，也可以用KB做单位&lt;/p&gt;
+&lt;p&gt;如果SSH是8KB，那么自然是2-4-8，两个RTT就到了，如果SSH是8MSS，那么是1-2-4-8&lt;/p&gt;
+&lt;p&gt;从16MSS到20MSS自然就是加法四次MSS，而从16KB到20KB，只需增加4KB，两个MSS&lt;/p&gt;
+&lt;p&gt;这个就是单位的坑，昨天似乎没有意识到这一点，各自的单位一定要看清楚是什么设置的&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在未收到确认前，窗口的大小没有增加依旧是原来的大小&lt;/p&gt;
+&lt;p&gt;例如完成了四次发送，但还没收到确认，那么依旧是1-2-4-8-16中的8窗口大小&lt;/p&gt;
+&lt;p&gt;收到了确认就是16窗口大小&lt;/p&gt;
+&lt;p&gt;上升到XX后发生超时，那么只能是在该窗口大小的情况下发生了超时&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当SSH设置非指数级的常规数时，是跳跃到SSH的&lt;/p&gt;
+&lt;p&gt;类似于SSH设置为14，那么1-2-4-8-14，是跳跃到14的&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;RTT是什么？是双向往返时长，不代表不能给定的单向的时长，然后设置陷阱&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在传输阶段内，传输的是本个窗口大小的数据，例如1-2-4-8，第一个RTT传送的是1大小&lt;/p&gt;
+&lt;p&gt;这一点尤其容易混淆，希望注意&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;做题前先判断清楚，自己做的是快速恢复，还是超时重传？两者特征比较明显&lt;/p&gt;
+&lt;p&gt;一个是超时计时器超时后，那么是正常的拥塞重传，是返回三个重复ACK则是恢复重传&lt;/p&gt;
+</content>
+        <updated>2024-05-20T12:04:25.000Z</updated>
+    </entry>
     <entry>
         <id>https://chchch-art.github.io/2024/05/18/%E8%AE%A1%E7%BD%91-9/</id>
         <title>计网-9</title>
