@@ -3,12 +3,41 @@
     <id>https://CHCHCH-art.github.io</id>
     <title>Ephemeral</title>
     <link href="https://CHCHCH-art.github.io" />
-    <updated>2024-05-20T12:04:25.000Z</updated>
+    <updated>2024-05-22T05:33:18.000Z</updated>
     <category term="stock" />
     <category term="END" />
     <category term="FK" />
     <category term="Preview" />
     <category term="Math" />
+    <entry>
+        <id>https://chchch-art.github.io/2024/05/22/%E8%AE%A1%E7%BD%91-11/</id>
+        <title>计网-11</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2024/05/22/%E8%AE%A1%E7%BD%91-11/"/>
+        <content type="html">&lt;p&gt;域名解析过程：&lt;/p&gt;
+&lt;p&gt;主机本身也有域名映射缓存，如果主机本身有，直接连接，没有则请求本地域名服务器&lt;/p&gt;
+&lt;p&gt;访问本地域名服务器这一段是必然视作“递归”的，只能由本地服务器返回域名的IP映射&lt;/p&gt;
+&lt;p&gt;这一段也是一段DNS请求，统考题里面这一段DNS请求是直接忽略时延的，不计RTT&lt;/p&gt;
+&lt;p&gt;估计是因为局域网内，相互访问的时间本身就比较短，并且访问互联网的RTT相对长很多&lt;/p&gt;
+&lt;p&gt;本地域名服务器先看自己的缓存里面有没有，有的话直接返回给主机&lt;/p&gt;
+&lt;p&gt;没有的话只能向根域名服务器发送DNS请求，这个是在广域网的，计入RTT往返&lt;/p&gt;
+&lt;p&gt;这里就单纯说迭代情况了，递归其实总体也差不了多少&lt;/p&gt;
+&lt;p&gt;根域名服务器一般解析出的都是对应的顶级域名服务器的IP地址，不太可能直接给IP终址&lt;/p&gt;
+&lt;p&gt;然后本地域名服务器向顶级域名服务器发送DNS请求，计入RTT往返&lt;/p&gt;
+&lt;p&gt;顶级域名服务器可能返回最终IP地址，也可能返回权限域名服务器的IP地址&lt;/p&gt;
+&lt;p&gt;毕竟顶级域名服务器管理的是该顶级域名下注册的所有二级域名，可能就包含最终的结果&lt;/p&gt;
+&lt;p&gt;返回的是权限域名服务器IP地址，则本地域名服务器向权限域名服务器发送DNS请求&lt;/p&gt;
+&lt;p&gt;同样计入RTT，是广域网上的&lt;/p&gt;
+&lt;p&gt;如果后缀里面有多个划分，那么可能需要多次访问不同的权限域名服务器&lt;/p&gt;
+&lt;p&gt;例如&lt;a href=&#34;http://www.123.456.789.com,就需要在顶级域名下访问三个不同的域名服务器才能达到/&#34;&gt;www.123.456.789.com，就需要在顶级域名下访问三个不同的域名服务器才能达到&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;当最终得到了权限域名服务器给出的域名解析IP地址后&lt;/p&gt;
+&lt;p&gt;本地域名服务器把该IP地址返回给主机，然后主机就可以去建立TCP或者UDP连接&lt;/p&gt;
+&lt;p&gt;这个IP地址对应的可能就是一台服务器，例如WEB服务器、FTP服务器等&lt;/p&gt;
+&lt;p&gt;要根据具体的服务器类型，选择相对应的连接，例如UDP是无连接，TCP是带连接&lt;/p&gt;
+&lt;p&gt;两者的时延就会完全不一样，统考当时就这样考的&lt;/p&gt;
+&lt;hr&gt;
+</content>
+        <updated>2024-05-22T05:33:18.000Z</updated>
+    </entry>
     <entry>
         <id>https://chchch-art.github.io/2024/05/20/%E8%AE%A1%E7%BD%91-10/</id>
         <title>计网-10</title>
