@@ -3,12 +3,61 @@
     <id>https://CHCHCH-art.github.io</id>
     <title>Ephemeral</title>
     <link href="https://CHCHCH-art.github.io" />
-    <updated>2024-05-24T10:27:58.000Z</updated>
+    <updated>2024-05-25T10:42:27.000Z</updated>
     <category term="stock" />
     <category term="END" />
     <category term="FK" />
     <category term="Preview" />
     <category term="Math" />
+    <entry>
+        <id>https://chchch-art.github.io/2024/05/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1/</id>
+        <title>数据结构复习-1</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2024/05/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1/"/>
+        <content type="html">&lt;p&gt;这边是框架性的逻辑梳理，具体细节的东西还是要多看书、反复观阅才能行的&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;时间复杂度的比较式需要会默写，空间复杂度我记得计组可能有写（？&lt;/p&gt;
+&lt;p&gt;算法原地工作的含义稍微注意下，空间复杂度指代的是所需的额外辅助空间&lt;/p&gt;
+&lt;p&gt;++i和i++，一个是先自加再赋，一个是先赋再自加&lt;/p&gt;
+&lt;p&gt;时间复杂度一般默认取最坏情况下的，也就是找整个程序段内最大的&lt;/p&gt;
+&lt;p&gt;斐波那契或者说递归程序，一般画出递归树就可以做，不必要想太细致的&lt;/p&gt;
+&lt;p&gt;如果实在觉得N阶的递归树不太好画，那么直接从低阶的开始画，归纳出其近似的服从&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;第一章绪论的内容是用作查阅的，碰到不熟悉的、不理解的概念就去这边查&lt;/p&gt;
+&lt;p&gt;现在回头看存储结构其实就会有新的感悟，应该说更加看得明白了些&lt;/p&gt;
+&lt;p&gt;线性表的补充：&lt;/p&gt;
+&lt;p&gt;线性表基本操作后面在写代码的时候就要用上了，可以尽可能加快写的速度&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;关于顺序表、数组之间的区分：&lt;/p&gt;
+&lt;p&gt;简单来说数组是一个物理存储状态的描述，而顺序表是对物理、逻辑的双重描述&lt;/p&gt;
+&lt;p&gt;数组自然是顺序存储的，但逻辑结构是不确定的（具体看怎么用这个数组&lt;/p&gt;
+&lt;p&gt;顺序表就是顺序存储的、逻辑上又是线性结构，所以两者的等同点只有存储结构上面&lt;/p&gt;
+&lt;p&gt;一个误区的纠正：&lt;/p&gt;
+&lt;p&gt;顺序存储结构，一般就是数组这种东西，可以等价的&lt;/p&gt;
+&lt;p&gt;链式存储结构就是链表，也是可以等价的（静态链表：？&lt;/p&gt;
+&lt;p&gt;顺序存储上面所谈到的相邻逻辑存放在相邻的物理位置，实际上是指代这一情况&lt;/p&gt;
+&lt;p&gt;树、图、线性表都可以用数组来表示，毕竟仅仅是“相邻逻辑”而已&lt;/p&gt;
+&lt;p&gt;相邻逻辑可从来没说一定是线性的，完全可以是非线性的，就这样纠正一下&lt;/p&gt;
+&lt;p&gt;举例就是数组不一定存储的是线性表，也可以存储图、树，就是这个意思&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;顺序表：&lt;/p&gt;
+&lt;p&gt;线性表是逻辑结构，顺序存储是物理结构，线性表用顺序存储是顺序表&lt;/p&gt;
+&lt;p&gt;是对逻辑结构、物理结构的双重声明，一般就是用数组实现，数组等同于顺序存储&lt;/p&gt;
+&lt;p&gt;注意下如果谈到的是表，那么序号是从一开始的，如果谈到的是数组那么序号零开始的&lt;/p&gt;
+&lt;p&gt;动态分配里面注意下是再开辟一块新空间然后再拷贝过去&lt;/p&gt;
+&lt;p&gt;插入、删除的模拟书上已经写了，随便写五六个然后移动一下就行（例子在P15上方&lt;/p&gt;
+&lt;p&gt;注意下插入的序号是从一开始到末尾加一，删除的序号是从一开始到末尾&lt;/p&gt;
+&lt;p&gt;插入的话那个位置，例如I位置插入，是I这个位置空出来给用于插入&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;习题里面注意这个：&lt;/p&gt;
+&lt;p&gt;涉及到要到某个位置进行插入、删除等操作的话，首先需要到这个位置上面去&lt;/p&gt;
+&lt;p&gt;如果是数组自然直接随机存取就到了，但链表不是，链表需要先找到该位，注意区别&lt;/p&gt;
+&lt;p&gt;最简单的解释就是第九题，不要默认链表已经到这个位置了，链表需要先找到该位置的&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;线性表链式表示：&lt;/p&gt;
+&lt;p&gt;关于指针的两种写法，稍微注意下吧，考试毕竟是不一定考哪种的，都要看得明白&lt;/p&gt;
+</content>
+        <updated>2024-05-25T10:42:27.000Z</updated>
+    </entry>
     <entry>
         <id>https://chchch-art.github.io/2024/05/24/%E8%AE%A1%E7%BD%91-12/</id>
         <title>计网-12</title>
@@ -2770,10 +2819,11 @@ do &amp;#123;
 &lt;p&gt;因而个人在这里基本不会谈太多知识点相关的内容，更多是对方向的把握以及一些感悟&lt;/p&gt;
 &lt;p&gt;应该会摘取一些较好的他人博客内容，他人的相关思路，以配合复习&lt;/p&gt;
 &lt;hr&gt;
+&lt;hr&gt;
 &lt;p&gt;KMP:&lt;/p&gt;
 &lt;p&gt;王道该书其实给予了一个错误的导向，认为只需要会Next、Nextval求法就够了&lt;/p&gt;
 &lt;p&gt;实际上统考更会考KMP算法执行的过程，让你能够走一遍这个算法，而不是说求Next数组&lt;/p&gt;
-&lt;p&gt;所以一定要明确方向导向，Next数组/PM表/Nextval数组均只是辅助走流程的工具&lt;/p&gt;
+&lt;p&gt;所以一定要明确方向导向，Next数组&amp;#x2F;PM表&amp;#x2F;Nextval数组均只是辅助走流程的工具&lt;/p&gt;
 &lt;p&gt;一定要会主动执行一遍算法，清楚算法是怎么执行的，这就是统考的考察点&lt;/p&gt;
 &lt;p&gt;15年和19年的统考真题，课后综合题的第二题的第二小题都是需要重点研究的&lt;/p&gt;
 &lt;p&gt;最简单的自己检测方法，给定一个主串一个子串，去根据程序走一遍，把每一轮写下来即可&lt;/p&gt;
