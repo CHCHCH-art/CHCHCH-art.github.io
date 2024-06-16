@@ -1,0 +1,360 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据结构第六章：图 | Ephemeral</title><meta name="author" content="CH Targaryen"><meta name="copyright" content="CH Targaryen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="图的基本概念： 对书上内容的一些补充： 子图简单来说就是一个充分非必要条件，子图顶点和边必然是图的子集合，反之不然 数据结构里面只讨论简单图，所以不会出特别古怪的题目：一定没有环的图边数是？ 同样，最少的有环图也同样不会考虑，只会考一定有环的边数 极大连通子图就是其连通分量，极大强连通子图就是其强连通分量 如果其自身就是连通或者强连通图，那么其自身就是极大连通子图、极大强连通子图 后面也有对有向图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构第六章：图">
+<meta property="og:url" content="https://chchch-art.github.io/2024/06/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/index.html">
+<meta property="og:site_name" content="Ephemeral">
+<meta property="og:description" content="图的基本概念： 对书上内容的一些补充： 子图简单来说就是一个充分非必要条件，子图顶点和边必然是图的子集合，反之不然 数据结构里面只讨论简单图，所以不会出特别古怪的题目：一定没有环的图边数是？ 同样，最少的有环图也同样不会考虑，只会考一定有环的边数 极大连通子图就是其连通分量，极大强连通子图就是其强连通分量 如果其自身就是连通或者强连通图，那么其自身就是极大连通子图、极大强连通子图 后面也有对有向图">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://chchch-art.github.io/img/backphoto.png">
+<meta property="article:published_time" content="2024-06-15T11:36:08.000Z">
+<meta property="article:modified_time" content="2024-06-16T14:02:26.371Z">
+<meta property="article:author" content="CH Targaryen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chchch-art.github.io/img/backphoto.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://chchch-art.github.io/2024/06/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"YQ6FJ5L9SU","apiKey":"4a50564ce15d0129ab6907b7e907ea5b","indexName":"chchchch","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":10,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数据结构第六章：图',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-06-16 22:02:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/headimage.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/backphoto.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Ephemeral"><span class="site-name">Ephemeral</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据结构第六章：图</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-15T11:36:08.000Z" title="发表于 2024-06-15 19:36:08">2024-06-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-16T14:02:26.371Z" title="更新于 2024-06-16 22:02:26">2024-06-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>12分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/2024/06/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/" data-flag-title="数据结构第六章：图"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>图的基本概念：</p>
+<p>对书上内容的一些补充：</p>
+<p>子图简单来说就是一个充分非必要条件，子图顶点和边必然是图的子集合，反之不然</p>
+<p>数据结构里面只讨论简单图，所以不会出特别古怪的题目：一定没有环的图边数是？</p>
+<p>同样，最少的有环图也同样不会考虑，只会考一定有环的边数</p>
+<p>极大连通子图就是其连通分量，极大强连通子图就是其强连通分量</p>
+<p>如果其自身就是连通或者强连通图，那么其自身就是极大连通子图、极大强连通子图</p>
+<p>后面也有对有向图进行连通性的讨论（有向图的连通意味着是可达但非双向可达</p>
+<p>生成树一般都是对无向图讨论的，生成森林也是一样</p>
+<p>极小连通子图并没有对顶点个数的要求，而极大连通子图包含了对顶点个数的要求</p>
+<p>要点摘录，根据这些点去复习：</p>
+<p><strong>1.无向图：</strong></p>
+<p>连通最大边数、最小边数；不连通最大边数、最小边数；一定连通的边数</p>
+<p>一定不连通的边数、一定有环的边数</p>
+<p><strong>2.有向图：</strong></p>
+<p>强连通最大边数、最小边数；不强连通最大边数、最小边数一定强连通的边数</p>
+<p>一定不强连通的边数、一定有环的边数</p>
+<p>习题补充：</p>
+<p>3：每次深搜、广搜都是对图从该顶点向外拓展的可达的分量进行遍历的过程</p>
+<p>4：图和树的区别在于定义，一个是一对多，一个是多对多</p>
+<p>15：思想就是每次向里面加一条边就可以连接两个分量变为一个，总体分量数量减一</p>
+<p>其实就是后面的最小生成树的思路，如果实在没思路都是可以举例破题的</p>
+<p>关于统考题：</p>
+<p>当时出这种题的时候王道里面大概率是没有这类知识点的，那么怎么办？</p>
+<p>一眼看不懂或者想不透那么就举例，举例或者穷举是考场上经常需要使用的方法</p>
+<p>其他就是改变下不等式的方向或者说样子，可能换个样子就比较容易理解了</p>
+<p>关于顶点的度问题，这个比较简单也不太需要多说</p>
+<p>PS：依旧是审题，需要注意下选择题里面说的到底是什么类型的图……..</p>
+<hr>
+<p>图的存储和基本操作：（以存储为主，因为不怎么考代码题所以基本操作了解即可</p>
+<p>书上内容补充：</p>
+<p>图的存储更多应该会结合具体的应用背景考察应用方式，单独考察的概率并不高</p>
+<p>所以重心要放在这几个存储方式的操作实现上各自的区别、应用场景、优缺点这一些</p>
+<p>唯一考察的算法题居然是邻接矩阵的遍历，只能说是过分简单了</p>
+<p>矩阵压缩可以注意这样一点：对角线不需要存储，所以如果考察下标计算需要注意</p>
+<p>除了邻接矩阵以外的存储方式都是不唯一的</p>
+<p>邻接表、邻接多重表、十字链表的顶点表都可以是顺序存储的</p>
+<p><strong>图四种存储方式的总结需要依照下述操作自己走一遍，理解才会深刻：</strong></p>
+<p>对于四种存储方式：邻接矩阵、邻接表、十字链表、邻接多重表</p>
+<p>分别写出对应的操作以及计算其时间复杂度：</p>
+<p><strong>求一个顶点的入度、出度，求相邻边及条数，与任意一个顶点的连接是否存在</strong></p>
+<p><strong>求一共有多少条边、删除边、删除顶点、建立该数据结构</strong></p>
+<p><strong>PS:具体的补充在文档内，由于篇幅较大所以没有写纸上</strong></p>
+<p>习题补充：</p>
+<p>3：矩阵计算的时候对角元素必然是零，这一点或许可以做考察方向</p>
+<p>8：这个结论基本不太可能再考察第二遍，统考里面遇到这种基本只能是没办法的</p>
+<p>对于那道统考题最多只能做到矩阵的运算，确实很难联系出实际的含义</p>
+<p>15：统考比较喜欢考察的一种方式：某某方式比某某方式更好（一般都是错的</p>
+<p>往往都是在某些情况下这种方式好而另外一种情况下那种好，这个是片面的判断</p>
+<p>PS：审题上面看清楚是哪种存储方式，哪种图，然后再决定做题</p>
+<p>综合题四：</p>
+<p>拓扑序列可以将一个图的顶点邻接矩阵排序为上三角矩阵，记住这个结论</p>
+<p>同时邻接矩阵若是上三角矩阵，那么也可以说明一定存在拓扑序列，这算是个结论</p>
+<p>但也可以基于理解去思索</p>
+<hr>
+<p>图的遍历：</p>
+<p>书上内容的补充和总结整理：</p>
+<p>对于任何图，其访问位的设置是必要的，否则一方面成环图会死循环，一方面效率低</p>
+<p>深度优先的遍历必然是类似先序的，肯定是把当前退回之前的全部访问完再向上退回去</p>
+<p>关于图的连通性判断：</p>
+<p>无向图每次广搜或者深搜的调用都可以遍历一个连通分量，调用次数就是连通分量数</p>
+<p>同时也可以用于判断连通性，但对于有向图就复杂得多</p>
+<p>一方面是有向图从不同顶点出发，其访问序列和访问次数、生成森林、生成树都会不同</p>
+<p>可能从A顶点能一次性访问全部顶点，但从B顶点开始需要全部遍历一遍</p>
+<p>对于有向图如果不考虑其逆图的状况只能求得从该点开始的“可达访问序列”</p>
+<p>但深搜、广搜也同样可以用于判断有向图的强连通性或者求强连通分量</p>
+<p>只需要正向求解一次后再转置该图即可反向验证该图的强连通性或者强连通分量</p>
+<p>总之需要记住：</p>
+<p>对于有向图而言，其一次访问是完全随机的，和其强连通性完全没什么关系</p>
+<p>不管是访问的次数还是访问的序列，甚至是生成森林与否，生成树的顺序都是不确定的</p>
+<hr>
+<p>拓展补充：</p>
+<p>广度优先采用的是队列，深度优先采用的是递归栈，两者均可用于有向图和无向图</p>
+<p>深度优先、广度优先都基于一个原理（这里是说无向图之下）</p>
+<p>每次遍历一个连通分量或者说全部的可达点，在确认访问结束后找未访问节点再度遍历</p>
+<p>这个图不论是连通的还是不连通的，最终都会被遍历一遍，即使图本身没有边</p>
+<hr>
+<p>广度补充：</p>
+<p>广度优先遍历的最短路径求解只适用于权值相同的图或者说是无权图</p>
+<p>至于带环与否并不重要，因为每次记录的都是最短路径，一旦带环必然会更长一些</p>
+<p>负权值这种本身就不是支持范围内了（当然如果权值都一样那么可以转换为权值相同</p>
+<p>拓扑排序既可以基于队列也可以基于栈，但对有向无环图而言只有深度优先能判断</p>
+<p>因为确实是无所谓的，本身每次只是需要入度、出度为零的被标记后面再度可以用即可</p>
+<p>对于无向图而言，不论是广度优先还是深度优先都可以判断到是否具有环</p>
+<p>二分图的检测是书上的拓展习题，可以用深搜和广搜实现（具体原理？</p>
+<p>一般广搜用得更多的在于树的层序遍历上面，无向连通图当边为N-1时即为一棵树</p>
+<hr>
+<p>深度优先补充：</p>
+<p>深度优先可以用于判断图内是否存在环，不论是有向图还是无向图都可以判断有环否</p>
+<p>在无向图里面因为各自顶点都是连通的，所以只要能够访问到已经访问过的结点就有环</p>
+<p>在有向图里面有环其实就是属于其子孙重新找到自身（子孙与否由结束时间判</p>
+<p>其实这种东西只需要跟着算法执行一遍就会有很多新的体会和感悟，能够理解很多</p>
+<p>深度优先也可以用于判断强连通性、强连通性，具体的操作和广搜是一样的</p>
+<p>一般用得较多就是在树的先序遍历或者递归工作栈上，递归工作栈本身就是深度优先的</p>
+<p>描述一棵树的话，有两种方式：</p>
+<p>无向连通图，具有N-1条边那么就是一棵树</p>
+<p>有向图，N-1条边，且存在一个入度为零，其他N-1个结点入度均为1的情况就是一棵树</p>
+<hr>
+<p>有环与否，深搜、广搜：</p>
+<p>在无向图里面有环，不论深搜还是广搜都是能清楚的，因为肯定会找到已访问顶点</p>
+<p>既然访问到已经访问的顶点了，你说是不是一定存在环？</p>
+<p>对于无向图里面，广搜无法判定是否有环，因为访问到已访问结点的时候可能没有环</p>
+<p>但深搜可以，其如果从其子孙找回了其已访问过的子孙结点那么必然就有环</p>
+<p>本质一个是层序遍历，不含前驱和后继逻辑关系，而另外一者是先序，含前驱后继逻辑</p>
+<p>由这个角度更加能够理解一些，广搜自然也就不能得到带逻辑的权值序</p>
+<hr>
+<p>习题补充：</p>
+<p>1：其实更有意义的是思索为什么广度优先不能实现带权图的最短路径计算</p>
+<p>以及为什么广搜、深搜能够判断无环图中的环，而不能判断有环图中的环，这才有意义</p>
+<p>因为实际考察必然是以这种类型来的，而不会是简单的判断定义</p>
+<p>2：基于邻接矩阵的遍历序列是唯一的，基于邻接表的遍历都是不唯一的</p>
+<p>但如果给定了一个邻接表，那么遍历序列也自然唯一了，因为先前的不唯一是链序不定</p>
+<p>不设置访问位的话，基本是铁定会访问第二次的，因为每个顶点都会进行一次遍历</p>
+<p>除非你是一个单独的没有和其他连接边的点，不然不设访问位必然导致两次以上访问</p>
+<p>有时候如果有环的话，那么就…..死循环</p>
+<p>非强连通的有向图依旧可能可以一次即可实现全部调用</p>
+<p>所以有时候可能就可以思考下这个有向图最少可以几次调用，最多需要几次调用</p>
+<p>4：基于邻接矩阵、邻接表均是一样的，无非时间复杂度上面略微有些差别</p>
+<p>基本还是应用场景上面，邻接矩阵适用于稠密图，邻接表适用于稀疏图，这两者的区别</p>
+<p>10：这类题目才真正考察了代码的运行模拟，清楚一个思路：</p>
+<p>对于每个顶点，其每次的遍历均是一个“可达分量”，这一些都是已经置访问位的</p>
+<p>这一个顶点遍历结束后再去别的没有访问过的顶点进行再度的遍历，这个是核心思想</p>
+<p>7、8、10、11、16、18：至于深搜、广搜的序列判断</p>
+<p>一般只需要清楚广搜是一批批访问，而深搜是先访问到最深然后再逐渐退回就可以</p>
+<p>其实容易错在深搜，最后一次的访问退回可能容易被忽略掉</p>
+<p>综合题4、5：</p>
+<p>第四题其实就是分别对两端调用一次深搜或者广搜即可，如果某次访问完对应被访问</p>
+<p>那么就肯定存在这样一条路径，这里只进行判断是否存在，没有要求记录</p>
+<p>第五题基于深搜可以实现（思路见草稿</p>
+<hr>
+<p>图的应用（重难点）（分三段叙述）（上：</p>
+<p>最小生成树：</p>
+<p>最小生成树是对于无向图而言的，且也不用考虑权值正负，是求最小带权生成树</p>
+<p>图到底有没有环也没有关系，其求的只是一棵最小权值的生成树而已！别什么都求不了</p>
+<p>至于为什么后面的表内没有对Prim和Kruskal算法两者的邻接表、邻接矩阵说明：</p>
+<p>其实更多原因是这两者不太适合用邻接矩阵或者邻接表存储罢了</p>
+<p>Prim而言，将每次每个顶点的遍历数量从顶点数变为了其相连的顶点数</p>
+<p>基本对整体算法效率的改善没太大帮助，因为决定查找次数的是顶点的数量而非边数</p>
+<p>对Kruskal而言，其边不适合用邻接矩阵存储，而适合用结构体数组用堆存储</p>
+<p>否则每次求最小的可行权值边都需要遍历一整个邻接矩阵，这是完全不能接受的</p>
+<p>两者算法的思想基本一样：每次选最优解,构造整体最优解</p>
+<p>具体的运行过程不太适合用言语阐述，适合用笔、纸去模拟运行</p>
+<hr>
+<p>最短路径（中：</p>
+<p>先说下一共有这样一些需要考虑的图类型：（这一些排列组合就成了一堆图）</p>
+<p>按权值分：带权图（正权，负权、混合）、无权图</p>
+<p>按结构分：带环、不带环</p>
+<p>按类型分：有向、无向</p>
+<p><strong>BFS</strong>:</p>
+<p>BFS仅适用于无权图（权值默认为一），至于带环或者有向与否没关系</p>
+<p>因为如果带环，经过环的路径必然大于不经过环的路径，不可能影响最短路径</p>
+<p>有向无向与否没关系，如果能由一个顶点到达另外一个顶点那么一定可以得到最短路径</p>
+<p>无非对有向图可能需要调用两次罢了（顶点A到顶点B可以是单向也可以是双向的）</p>
+<p><strong>Dijkstra:</strong></p>
+<p>对于Dijkstra算法，从其算法过程就能理解为何其不能用于负权图</p>
+<p>因为每次其集合内的路径是已经认为最短，不更新的，加入负值可能导致集合路径更短</p>
+<p>因而自然就不再满足这个算法的基本判断：集合内的都是最短路径，自然无法求解</p>
+<p>带环与否同样不重要，和广搜的思路是一样的，有向与否也同样不重要</p>
+<p>因为每次更新的都是可达的顶点，管你到底是有向还是无向？根本不可能产生影响的</p>
+<p><strong>Floyd:</strong></p>
+<p>至于Floyd，也可以从其算法里面去思索，其是动态规划的思想</p>
+<p>每次加入一个新结点，然后考虑能否从这个新结点得到到任何一个其他顶点更短的路径</p>
+<p>光从这一点就可以看出来负权也是没关系的，算法会考虑这条更短的路径在内</p>
+<p>至于为什么不能有负权环？</p>
+<p>如果家到学校是-21km，学校到家是20km，那么家到学校最短路径是多少？</p>
+<p>我特么从学校到家，再从家到学校，ok，变成负无穷了，本身就是没有解的一个情况！</p>
+<p>不是弗洛伊德不能得到最短路径，是这个问题压根就没有解，多半就能理解些了吧</p>
+<p>至于这图到底带环不带环、负权值与否、有向否都是没关系的，不会影响最终解的情况</p>
+<p>毕竟无向可以视作是双向连通的有向图，带环肯定更长</p>
+<p><strong>利用多次Dijkstra得到每个结点的最短路径：</strong></p>
+<p>这个要求其实和Dijkstra是一样的，如果存在负权值那么就没办法得到正确的最短距离</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://CHCHCH-art.github.io">CH Targaryen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://chchch-art.github.io/2024/06/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/">https://chchch-art.github.io/2024/06/15/数据结构第六章：图/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://CHCHCH-art.github.io" target="_blank">Ephemeral</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/backphoto.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/06/16/%E5%A4%87%E5%BF%98%E5%BD%95/" title="数据结构第七章：查找"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">数据结构第七章：查找</div></div></a></div><div class="next-post pull-right"><a href="/2024/06/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%9A%E6%A0%91/" title="数据结构第五章：树"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">数据结构第五章：树</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">CH Targaryen</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">戏子罢了</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/06/16/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" title="数据采集"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据采集"/></a><div class="content"><a class="title" href="/2024/06/16/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" title="数据采集">数据采集</a><time datetime="2024-06-16T14:13:08.000Z" title="发表于 2024-06-16 22:13:08">2024-06-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/16/%E5%A4%87%E5%BF%98%E5%BD%95/" title="数据结构第七章：查找"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构第七章：查找"/></a><div class="content"><a class="title" href="/2024/06/16/%E5%A4%87%E5%BF%98%E5%BD%95/" title="数据结构第七章：查找">数据结构第七章：查找</a><time datetime="2024-06-16T12:32:00.000Z" title="发表于 2024-06-16 20:32:00">2024-06-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/" title="数据结构第六章：图"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构第六章：图"/></a><div class="content"><a class="title" href="/2024/06/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/" title="数据结构第六章：图">数据结构第六章：图</a><time datetime="2024-06-15T11:36:08.000Z" title="发表于 2024-06-15 19:36:08">2024-06-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%9A%E6%A0%91/" title="数据结构第五章：树"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构第五章：树"/></a><div class="content"><a class="title" href="/2024/06/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%9A%E6%A0%91/" title="数据结构第五章：树">数据结构第五章：树</a><time datetime="2024-06-14T11:53:52.000Z" title="发表于 2024-06-14 19:53:52">2024-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97/" title="数据结构第三、四章：栈、队列、KMP"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构第三、四章：栈、队列、KMP"/></a><div class="content"><a class="title" href="/2024/06/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97/" title="数据结构第三、四章：栈、队列、KMP">数据结构第三、四章：栈、队列、KMP</a><time datetime="2024-06-13T10:23:27.000Z" title="发表于 2024-06-13 18:23:27">2024-06-13</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/backphoto.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By CH Targaryen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'rKOyR9DY1zFYZe36c4mjejpQ-gzGzoHsz',
+      appKey: 'tV9RdIo2DYMz7OB5mfsjydI5',
+      avatar: '/img/headimage.png',
+      serverURLs: 'https://rkoyr9dy.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, ))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>

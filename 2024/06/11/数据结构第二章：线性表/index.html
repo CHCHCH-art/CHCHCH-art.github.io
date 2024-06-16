@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据结构第一、二章：线性表 | Ephemeral</title><meta name="author" content="CH Targaryen"><meta name="copyright" content="CH Targaryen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="绪论中的逻辑结构、存储结构介绍永远感觉吃不透  时间复杂度习题： 3：空间复杂度截至目前还没有考过，但其的定义这一段理解依旧偏差较为严重 建议多加把握这道题和相关考点，要考察应该会结合计组的递归栈和硬件一起考察吧 9：思维惯性，仿佛认为一定是求解时间复杂度，而实际上也可以是求解执行次数 算是提一个醒吧，审题上面尽可能少一些思维惯性 关于统考题： 最近几年变化的趋势就是越发变得注重计算和推理，相对往">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构第一、二章：线性表">
+<meta property="og:url" content="https://chchch-art.github.io/2024/06/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8/index.html">
+<meta property="og:site_name" content="Ephemeral">
+<meta property="og:description" content="绪论中的逻辑结构、存储结构介绍永远感觉吃不透  时间复杂度习题： 3：空间复杂度截至目前还没有考过，但其的定义这一段理解依旧偏差较为严重 建议多加把握这道题和相关考点，要考察应该会结合计组的递归栈和硬件一起考察吧 9：思维惯性，仿佛认为一定是求解时间复杂度，而实际上也可以是求解执行次数 算是提一个醒吧，审题上面尽可能少一些思维惯性 关于统考题： 最近几年变化的趋势就是越发变得注重计算和推理，相对往">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://chchch-art.github.io/img/backphoto.png">
+<meta property="article:published_time" content="2024-06-11T14:02:39.000Z">
+<meta property="article:modified_time" content="2024-06-14T14:14:05.430Z">
+<meta property="article:author" content="CH Targaryen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chchch-art.github.io/img/backphoto.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://chchch-art.github.io/2024/06/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"YQ6FJ5L9SU","apiKey":"4a50564ce15d0129ab6907b7e907ea5b","indexName":"chchchch","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":10,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数据结构第一、二章：线性表',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-06-14 22:14:05'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/headimage.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/backphoto.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Ephemeral"><span class="site-name">Ephemeral</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据结构第一、二章：线性表</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-11T14:02:39.000Z" title="发表于 2024-06-11 22:02:39">2024-06-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-14T14:14:05.430Z" title="更新于 2024-06-14 22:14:05">2024-06-14</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/2024/06/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8/" data-flag-title="数据结构第一、二章：线性表"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>绪论中的逻辑结构、存储结构介绍永远感觉吃不透</p>
+<hr>
+<p>时间复杂度习题：</p>
+<p>3：空间复杂度截至目前还没有考过，但其的定义这一段理解依旧偏差较为严重</p>
+<p>建议多加把握这道题和相关考点，要考察应该会结合计组的递归栈和硬件一起考察吧</p>
+<p>9：思维惯性，仿佛认为一定是求解时间复杂度，而实际上也可以是求解执行次数</p>
+<p>算是提一个醒吧，审题上面尽可能少一些思维惯性</p>
+<p>关于统考题：</p>
+<p>最近几年变化的趋势就是越发变得注重计算和推理，相对往年难度略微提升</p>
+<p>需要具体列出累加式然后再根据具体情况求解，这是要清楚的事</p>
+<p>个人保留了一些统考题，以备下一次复习的时候进一步去思索和研究（应该会有新体会</p>
+<hr>
+<p>绪论斐波那契数列的时间复杂度求解可以自底而上递归求解树，而不必自顶向下</p>
+<p>这样不管是建树还是归纳法计算时间复杂度都会轻松和容易很多</p>
+<p>也算是对递归类型计算时间复杂度的一个概括总结</p>
+<p>或者说这类方法也可以拓展到一般求解，可以采用归纳法，如果特别难的情况之下</p>
+<hr>
+<p>顺序表：</p>
+<p>一般采用数组来实现（数组就是物理上面连续分配的一块空间，C语言中</p>
+<p>唯一需要稍微回忆下的就是插入、删除的具体代码实现，别的书上划了相应重点</p>
+<p>习题简要补充：</p>
+<p>2：依旧是存储结构、逻辑结构、线性表一堆的问题</p>
+<p>数组是计算机中分配的一块连续的内存空间，可以用于实现多种逻辑结构</p>
+<p>顺序存储的涵盖范围很广，逻辑上相邻的物理上也相邻也可以指代满二叉树的存储方式</p>
+<p>线性表是和树、集合等再度区分的数据结构…</p>
+<p><strong>好吧我是搞不清楚了，这边就从来没有搞懂过</strong></p>
+<p>本节习题有一些需要掌握的，算是统考比较频繁的考点：</p>
+<p>6、7、8、9、11、15，基本都是操作和时间复杂度的考察关系，主要是熟练度问题</p>
+<p>建议对各个操作在旁边都顺便写下来各种对应结构的时间复杂度来训练</p>
+<p>13：提醒稍微注意下插入和删除的边界条件，插入可以是N+1个位置，删除只能N个</p>
+<p>这个还是需要注意的，因为本次做题的时候是再度犯错，需要引起重视</p>
+<p>注意下插入的序号是从一开始到末尾加一，删除的序号是从一开始到末尾</p>
+<p>插入的话那个位置，例如I位置插入，是I这个位置空出来给用于插入</p>
+<p>补：</p>
+<p>涉及到要到某个位置进行插入、删除等操作的话，首先需要到这个位置上面去</p>
+<p>如果是数组自然直接随机存取就到了，但链表不是，链表需要先找到该位，注意区别</p>
+<p>最简单的解释就是第九题，不要默认链表已经到这个位置了，链表需要先找到该位置的</p>
+<hr>
+<p>链表书上内容补充：</p>
+<p>前插、前删操作基本可以不看，因为统考不会考察，仅仅做拓展而已</p>
+<p>后面需要明白双链表的优点是什么即可</p>
+<p>然后顺序表、链表的比较那边还是值得好好看的，其他没什么特别可以补充的</p>
+<p>静态链表基本不考，之前考过一次也比较简单，知道用的是索引替代指针</p>
+<p>链表：</p>
+<p>后续的复习只需要列出对应的状态走一遍即可，这里留下对应的复习习题：</p>
+<p>单链表：</p>
+<p>带头结点、不带头结点分别情况下：（找前驱）</p>
+<p>判空、求表长、查某位置值、位置插入删除（后插、后删）、头插法、尾插法、头删</p>
+<p>查找、删除、插入平均长度计算</p>
+<p>双链表：</p>
+<p>带头结点、不带头结点分别情况之下：</p>
+<p>一般位置的插入、删除（前插、后插、前删、后删）以及对应链条顺序打通、判空</p>
+<p>在单链表的基础上就不必多增了，大部分操作是一样的</p>
+<p>循环单链表：</p>
+<p>六种情况：带头结点、不带头结点之下的头指针、尾指针自带否</p>
+<p>六种情况分别的对应：头插、头删、尾插、尾删各自代码和时间复杂度</p>
+<p>循环双链表不需要复习</p>
+<p>静态链表清楚是个什么东西就行，截至目前还没有考过</p>
+<hr>
+<p>习题补充分析：</p>
+<p>1：链式存储一般情况下更灵活于表达逻辑结构，绝大多数数据结构均基于链式</p>
+<p>链式和顺序有一个考点：同样是O(n)的情况下，链式的删除、插入要远好于顺序的</p>
+<p>3：审题，结点内必然连续，结点间不一定连续</p>
+<p>7：排序的最低是nlog2n，这个是之前还没有复习到的内容，稍微记一下</p>
+<p>17：这种题现在应该要做到能够迅速反应，但凡是后面语句用到了p-&gt;Next类型的</p>
+<p>按照考试给定的代码去分析就行了，它给什么分析什么，自己写是很难和它同步答案的</p>
+<p>必须是要在这个指针修改之后，简单来说就是要能够一眼看出来</p>
+<p>PS：一般给定的链表都是默认带头指针不带头结点类型的链表</p>
+<p>其他补充说明：</p>
+<p>本节主要就是考察一个熟练度问题，总体没有太多可以分析的，留的作业：</p>
+<p>10、17、23、24、26、28、29，其他酌情增量复习即可，这些是略麻烦些的题目</p>
+<p>只要在上面给定的复习基础上面充分推导这些都不会是问题</p>
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://CHCHCH-art.github.io">CH Targaryen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://chchch-art.github.io/2024/06/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E7%BA%BF%E6%80%A7%E8%A1%A8/">https://chchch-art.github.io/2024/06/11/数据结构第二章：线性表/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://CHCHCH-art.github.io" target="_blank">Ephemeral</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/backphoto.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/06/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97/" title="数据结构第三、四章：栈、队列、KMP"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">数据结构第三、四章：栈、队列、KMP</div></div></a></div><div class="next-post pull-right"><a href="/2024/05/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0-4/" title="矩阵端（待补充整理）"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">矩阵端（待补充整理）</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">CH Targaryen</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">戏子罢了</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/06/16/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" title="数据采集"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据采集"/></a><div class="content"><a class="title" href="/2024/06/16/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/" title="数据采集">数据采集</a><time datetime="2024-06-16T14:13:08.000Z" title="发表于 2024-06-16 22:13:08">2024-06-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/16/%E5%A4%87%E5%BF%98%E5%BD%95/" title="数据结构第七章：查找"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构第七章：查找"/></a><div class="content"><a class="title" href="/2024/06/16/%E5%A4%87%E5%BF%98%E5%BD%95/" title="数据结构第七章：查找">数据结构第七章：查找</a><time datetime="2024-06-16T12:32:00.000Z" title="发表于 2024-06-16 20:32:00">2024-06-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/" title="数据结构第六章：图"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构第六章：图"/></a><div class="content"><a class="title" href="/2024/06/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/" title="数据结构第六章：图">数据结构第六章：图</a><time datetime="2024-06-15T11:36:08.000Z" title="发表于 2024-06-15 19:36:08">2024-06-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%9A%E6%A0%91/" title="数据结构第五章：树"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构第五章：树"/></a><div class="content"><a class="title" href="/2024/06/14/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%9A%E6%A0%91/" title="数据结构第五章：树">数据结构第五章：树</a><time datetime="2024-06-14T11:53:52.000Z" title="发表于 2024-06-14 19:53:52">2024-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97/" title="数据结构第三、四章：栈、队列、KMP"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构第三、四章：栈、队列、KMP"/></a><div class="content"><a class="title" href="/2024/06/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E6%A0%88%E3%80%81%E9%98%9F%E5%88%97/" title="数据结构第三、四章：栈、队列、KMP">数据结构第三、四章：栈、队列、KMP</a><time datetime="2024-06-13T10:23:27.000Z" title="发表于 2024-06-13 18:23:27">2024-06-13</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/backphoto.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By CH Targaryen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'rKOyR9DY1zFYZe36c4mjejpQ-gzGzoHsz',
+      appKey: 'tV9RdIo2DYMz7OB5mfsjydI5',
+      avatar: '/img/headimage.png',
+      serverURLs: 'https://rkoyr9dy.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, ))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>
