@@ -5,84 +5,13 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sun, 16 Jun 2024 22:13:08 +0800</pubDate>
-        <lastBuildDate>Sun, 16 Jun 2024 22:13:08 +0800</lastBuildDate>
+        <pubDate>Sun, 16 Jun 2024 20:32:00 +0800</pubDate>
+        <lastBuildDate>Sun, 16 Jun 2024 20:32:00 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
-        <item>
-            <guid isPermalink="true">https://chchch-art.github.io/2024/06/16/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/</guid>
-            <title>数据采集</title>
-            <link>https://chchch-art.github.io/2024/06/16/%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/</link>
-            <pubDate>Sun, 16 Jun 2024 22:13:08 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;kafka单节点配置（单节点单broker&lt;/p&gt;
-&lt;p&gt;server.properties文件中，需要修改两处配置：listeners 和 log.dirs&lt;/p&gt;
-&lt;p&gt;listeners：服务器监听的地址，修改如下：&lt;/p&gt;
-&lt;p&gt;listeners&amp;#x3D;PLAINTEXT:&amp;#x2F;&amp;#x2F;localhost:9092&lt;/p&gt;
-&lt;p&gt;log.dirs：日志文件修改为自定义的日志目录，我的是log.dirs&amp;#x3D;D:&amp;#x2F;kafka_2.12-3.1.0&amp;#x2F;logs&lt;/p&gt;
-&lt;p&gt;zookeeper配置&lt;br&gt;zookeeper配置文件为zookeeper.properties，只需修改一处：&lt;/p&gt;
-&lt;p&gt;dataDir：zookeeper存储数据的路径，Windows环境路径要用D:\kafka3.2.1\datas这种形式&lt;/p&gt;
-&lt;p&gt;添加：audit.enable&amp;#x3D;true&lt;/p&gt;
-&lt;p&gt;为了保证kafka不会出现命令行问题，首先考虑把kafka放到C盘下面，然后修改文件夹名字为kafka不要附带任何版本信息&lt;/p&gt;
-&lt;p&gt;然后新建一个data、logs文件夹，后面需要设置目录，然后上面的斜杠自己看清楚，电脑上并不会自动保存，需要自己去进行保存&lt;/p&gt;
-&lt;p&gt;zooker服务器先：&lt;/p&gt;
-&lt;p&gt;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties&lt;/p&gt;
-&lt;p&gt;kafka服务器后：&lt;/p&gt;
-&lt;p&gt;.\bin\windows\kafka-server-start.bat .\config\server.propertie&lt;/p&gt;
-&lt;p&gt;主题创建：（具体根据需要修改命令&lt;/p&gt;
-&lt;p&gt;start cmd &amp;#x2F;k .\bin\windows\kafka-topics.bat –create –bootstrap-server 10.0.102.132:9092 –replication-factor 1 –partitions 1 –topic test&lt;/p&gt;
-&lt;p&gt;启动一个生产者：&lt;/p&gt;
-&lt;p&gt;.\bin\windows\kafka-console-producer.bat –broker-list localhost:9092 –topic test&lt;/p&gt;
-&lt;p&gt;启动一个消费者：&lt;/p&gt;
-&lt;p&gt;.\bin\windows\kafka-console-consumer.bat –bootstrap-server localhost:9092 –topic test&lt;/p&gt;
-&lt;p&gt;具体消费者那边可能不能一次性出来结果，在cmd界面打一个回车就出来了&lt;/p&gt;
-&lt;p&gt;参考文献：&lt;a href=&#34;https://blog.csdn.net/qq_42887496/article/details/126244049&#34;&gt;https://blog.csdn.net/qq_42887496/article/details/126244049&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;多节点配置：（多节点多broker）&lt;br&gt;server-1.properties文件&lt;br&gt;#broker的全局唯一编号，不能重复&lt;br&gt;broker.id&amp;#x3D;1&lt;br&gt;#监听&lt;br&gt;listeners&amp;#x3D;PLAINTEXT:&amp;#x2F;&amp;#x2F;:9093&lt;br&gt;#日志目录&lt;br&gt;log.dirs&amp;#x3D;&amp;#x2F;home&amp;#x2F;hadoop&amp;#x2F;kafka-logs-1&lt;/p&gt;
-&lt;p&gt;复制三个log文件夹分别命名为log1&amp;#x2F;log2&amp;#x2F;log3，复制三个propertiers文件，分别命名为server1.properties、server2.properties、server3.properties&lt;/p&gt;
-&lt;p&gt;对应修改各个server.properties里面log的内容，broker的id、各个监听地址为9092、9093、9094&lt;/p&gt;
-&lt;p&gt;zookeeper服务启动：&lt;/p&gt;
-&lt;p&gt;.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties&lt;/p&gt;
-&lt;p&gt;三个kafka分别需要cmd启动：&lt;/p&gt;
-&lt;p&gt;.\bin\windows\kafka-server-start.bat .\config\server1.properties&lt;/p&gt;
-&lt;p&gt;.\bin\windows\kafka-server-start.bat .\config\server2.properties&lt;/p&gt;
-&lt;p&gt;.\bin\windows\kafka-server-start.bat .\config\server3.properties&lt;/p&gt;
-&lt;p&gt;启动一个生产者：&lt;/p&gt;
-&lt;p&gt;.\bin\windows\kafka-console-producer.bat –broker-list localhost:9092 –topic test&lt;/p&gt;
-&lt;p&gt;启动两个消费者：&lt;/p&gt;
-&lt;p&gt;.\bin\windows\kafka-console-consumer.bat –bootstrap-server localhost:9093 –topic test&lt;/p&gt;
-&lt;p&gt;.\bin\windows\kafka-console-consumer.bat –bootstrap-server localhost:9094 –topic test&lt;/p&gt;
-&lt;p&gt;具体也可以创建两个生产者一个消费者，反正只要保证都在一个主题下面任意一个消费者都能接受到该主题中所有生产者生产的消息&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Kettle:&lt;/p&gt;
-&lt;p&gt;考虑先做这个然后再做kafka这类，否则会报错javahome的问题&lt;/p&gt;
-&lt;p&gt;1.创建包含如下内容的文本文件studentinfo.txt，创建一个“text2excel”转换过程实现转换。&lt;br&gt;sno|name|sex|age&lt;br&gt;1|王小明|男|24&lt;br&gt;2|张璐|女|23&lt;br&gt;3&lt;br&gt;4|马琼|女|25&lt;br&gt;5&lt;br&gt;6|候杰|男|23&lt;br&gt;转换过程及运行结果截图：&lt;br&gt;创建文本文件放在C盘下面方便找，D盘也行&lt;/p&gt;
-&lt;p&gt;然后打开spoon.bat，一次就够，文本文件输入、excel文件输出&lt;br&gt;浏览选择文件、增加内容，内容选定分隔符（具体看文件的分隔符类型）&lt;br&gt;编码方式本电脑选择utf-8类型，否则会报错，shift链接转换&lt;br&gt;输出编码格式可以随意但一定要设置&lt;br&gt;目录必须在非C盘，因为C盘有管理员权限不能这样转换&lt;br&gt;另外，每次都需要获取字段才行，每次每一步都需要获取字段&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;2.将上题中的sno,name,sex的空值字段内容设置成“未填写”，数值型字段age设置成0：&lt;/p&gt;
-&lt;p&gt;从应用那边找到if value is null，然后点击选择字段，获取字段，修改对应的需要填补的值&lt;br&gt;确定然后shift链接起来就行，注意需要先把之前同名的文件删掉&lt;br&gt;如果后面转换出来的文件里面没有结果，那么就是最后一个输出没有点击获取字段&lt;/p&gt;
-&lt;p&gt;将文本文件book.txt信息导入数据。创建一个“text2mysql_insert”转换过程实现转换&lt;/p&gt;
-&lt;p&gt;从输出里面找到表输出，然后对应创建连接&lt;br&gt;首先需要到数据库里面新建一个数据库，然后记住名字，然后用root&amp;#x2F;123456&amp;#x2F;localhost连接&lt;br&gt;连接类型选择MySQL，端口号3306，测试连接即可了，数据库连接编辑&lt;/p&gt;
-&lt;p&gt;然后还是一样的，数据库里面创建好对应的表，然后这边选择表，获取字段就行&lt;br&gt;指定数据库字段&lt;br&gt;当时创建数据库的用户名密码反正和登录密码一样肯定没问题&lt;br&gt;可能需要删除那个之前的输出，不然会报错一堆乱七八糟的，记得别连着&lt;br&gt;然后这个文本文档已经不一样了，所以需要改一下&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;3.将文本文件book.txt信息用更新方式（数据库中已经存在则更新，存在则插入）导入数据库。创建一个“text2mysql_update”转换过程实现转换：&lt;/p&gt;
-&lt;p&gt;先从输出里面找到插入\更新，然后对这个进行修改，获取字段是肯定要获取字段的&lt;br&gt;然后还要获取和更新字段，但是这边可以选择只更新某些字段而另外一些不更新这样的&lt;br&gt;连接了以后不用和表输出相互连接，否则就会导致再度输出一遍在表内&lt;br&gt;这个“更新”的含义就是新内容是插入进入的，而不是覆盖原先对应的记录（没法覆盖的）&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;4.将文本文件Student.txt信息导入数据。创建一个“excel2mysql”转换过程实现转换&lt;br&gt;转换过程及运行结果截图：&lt;/p&gt;
-&lt;p&gt;别问为什么这边没有这个xlsx，看下选择的格式到底是不是xlsx，如果不是不会跳出来的&lt;/p&gt;
-&lt;p&gt;如果引擎不是这个可能就会出问题，反正引擎也是个问题&lt;/p&gt;
-&lt;p&gt;然后要获取工作表、获取字段&lt;br&gt;然后选择表输出，依旧是对应和上面的一样进行设置，不过需要在数据库里面先设置好对应的表，指定数据库字段、获取字段，然后就转换成功&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;创建包含如下内容的文本文件score.txt，创建一个“sort_data”实现按分数从高到低（分数相同按名字顺序从小到大）排序输出结果。&lt;br&gt;name;score&lt;br&gt;陈建好;87&lt;br&gt;郝剑;69&lt;br&gt;沈东风;92&lt;br&gt;高燕;69&lt;br&gt;张梅花;77&lt;br&gt;林彤文;89&lt;br&gt;转换过程及运行结果截图：&lt;/p&gt;
-&lt;p&gt;需要注意的就是这边的分隔符是；而不是|，这个是需要具体去调整的&lt;br&gt;具体操作的时候反正如果没有成功就去看有没有获取字段、有没有得到对应字段、间隔符&lt;br&gt;如果发现运行了别的东西直接把那个给删掉就行了，其他不用管&lt;br&gt;排序是在应用还是输入里面的&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;5.对people.txt中的缺失字段进行处。原始数据如下：&lt;br&gt;id|name|sex|age&lt;br&gt;1|王小明|男|24&lt;br&gt;2|张璐|女|23&lt;br&gt;3|刘强|24&lt;br&gt;4|马琼|女|25&lt;br&gt;5|赵万东|26&lt;br&gt;6|侯杰|男|23&lt;br&gt;7|沈三|男&lt;br&gt;8|李四|25&lt;br&gt;经过处理后转化为excel文件，去除sex字段，并删除含有空值的记录。处理后的结果如下：&lt;br&gt;id	name	age&lt;br&gt;1	王小明	24&lt;br&gt;2	张璐	23&lt;br&gt;4	马琼	25&lt;br&gt;6	侯杰	23&lt;br&gt;操作命令及运行结果截图：&lt;/p&gt;
-&lt;p&gt;这边又变成了|作为分隔符，这个要注意下&lt;/p&gt;
-&lt;p&gt;字段选择我也不知道哪里找到的，然后对应移除那边自己输入，过滤在流程里面&lt;br&gt;过滤里面选择isnull，用主操作连接起来&lt;br&gt;至于中间的逻辑问题反正就反一下就行了，就是在过滤步骤里面改一下（逻辑错了就反向&lt;br&gt;然后中间如果报错或者卡住了就到处点获取字段，肯定就能成功&lt;/p&gt;
- ]]></description>
-        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/06/16/%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
             <title>数据结构第七章：查找</title>
