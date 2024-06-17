@@ -374,6 +374,8 @@
 &lt;p&gt;毕竟无向可以视作是双向连通的有向图，带环肯定更长&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;利用多次Dijkstra得到每个结点的最短路径：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;这个要求其实和Dijkstra是一样的，如果存在负权值那么就没办法得到正确的最短距离&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;拓扑排序、关键路径：&lt;/p&gt;
 </content>
         <updated>2024-06-15T11:36:08.000Z</updated>
     </entry>
