@@ -11,12 +11,58 @@
     <category term="Math" />
     <entry>
         <id>https://chchch-art.github.io/2024/06/23/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%B8%80%E3%80%81%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%BF%90%E7%AE%97/</id>
-        <title>计组第一、二章：概述与数据运算</title>
+        <title>计组第一章：概述</title>
         <link rel="alternate" href="https://chchch-art.github.io/2024/06/23/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%B8%80%E3%80%81%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%BF%90%E7%AE%97/"/>
-        <content type="html">&lt;p&gt;冯诺伊曼体系计算机和现代计算机差别很小，只有一个差别就是核心以运算器变为存储器&lt;/p&gt;
-&lt;p&gt;为数不多的计算：&lt;/p&gt;
+        <content type="html">&lt;p&gt;第一节：计算机系统层次结构&lt;/p&gt;
+&lt;p&gt;计组总体知识点比较多和碎，所以最好的策略还是多看几遍，多看几遍就能记住&lt;/p&gt;
+&lt;p&gt;第一段话就不单独说了，还是要以多看为主&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;冯诺依曼体系：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;冯诺依曼体系是现代计算机的基本结构，包括存储程序的基本思想依旧应用在现代体系&lt;/p&gt;
+&lt;p&gt;唯一的区别在于以原先的“运算器”为核心转为了以“主存储器”为核心&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;虚线表示控制反馈线路，其他都是数据通路，应当与机器字长保持一致性&lt;/p&gt;
+&lt;p&gt;计算机功能部件可以分为：I/O设备、存储器、运算器和控制器（集成在中央处理器）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I/O设备：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I/O设备在计组、OS内均有详细的解释和概述，这一节更多是介绍，不做展开&lt;/p&gt;
+&lt;p&gt;届时可能会做一定的索引&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;存储器：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;存储器是计组的核心内容，尤其是主存，外存则分散在计组、OS内均有部分的内容&lt;/p&gt;
+&lt;p&gt;内存管理（即主存在OS中有单独的一章作为内容），外存管理和磁盘在OS中也有部分&lt;/p&gt;
+&lt;p&gt;因而届时应该会根据情况完善该节内容，添加一定量的索引（待完善后）&lt;/p&gt;
+&lt;p&gt;MAR、MDR是后续考察的重点内容，其一般被集成在CPU内，基本和主存是分离的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;运算器：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;运算器当前主要把握其结构即可，寄存器在P184有更为详细的介绍（指令体系内）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;控制器：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;控制器只要清楚内部结构含：CU、IR、PC即可，具体的运行流程在指令集内容中阐述&lt;/p&gt;
+&lt;p&gt;关于总线，外部总线含数据总线、控制总线、地址总线，其位数都不是固定的&lt;/p&gt;
+&lt;p&gt;控制线更不可能只有两位，读写信号只是其中最重要的两个&lt;/p&gt;
+&lt;p&gt;而实际上还有：时钟信号、地址有效信号、片选、字选、位选信号、中断、总线请求等&lt;/p&gt;
+&lt;p&gt;控制线本身包含的控制信号是非常多的，并不能单纯只是看做只有读写两个功能&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;计算机软件：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;该内容目前暂未考察过，了解即可，主要把握应用程序员和系统程序员两者的区别&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;语言和编译程序：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;机器语言是唯一能够被计算机识别和执行的语言，这个是一个必然的结论，其他都不行&lt;/p&gt;
+&lt;p&gt;同样不能说微指令能够被计算机识别和执行，即使机器语言基于微指令&lt;/p&gt;
+&lt;p&gt;汇编程序指代的是汇编器，而不是汇编语言编写的程序，这两者需要区分开&lt;/p&gt;
+&lt;p&gt;解释程序解释一条执行一条因而在执行过程中是不会产生可执行文件的，例如R/Python&lt;/p&gt;
+&lt;p&gt;而编译程序是一次性解释并存储为一个可执行文件，具体的过程见P7的流程内部&lt;/p&gt;
+&lt;p&gt;需要注意的是，如果需要编译并执行，在计算机内是先进行源程序存储为可执行文件&lt;/p&gt;
+&lt;p&gt;然后再读取这个可执行文件（这一块就涉及内存管理，OS内容：编译、链接、装入&lt;/p&gt;
+&lt;p&gt;也就是先存到外存再读取到内存！涉及到一次访外存的操作！&lt;/p&gt;
+&lt;p&gt;最简单的例子就是C语言的编译并执行，是先产生可执行文件，再调入内存进行执行的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;计算器层次结构&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;了解即可，主要是需要看到ISA指令集体系架构是可以被软件所视的，即不透明&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;计算机系统工作原理：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先明确现代计算机体系是基于冯诺依曼体系，并且其存储程序思想一直沿用至今&lt;/p&gt;
+&lt;p&gt;具体的执行过程和流程会在第五章有具体的叙述，作为预习只需要基本回忆即可&lt;/p&gt;
+&lt;p&gt;大体上都是一个模子刻出来的，无非就是后续具体操作的时候会有一定程序的区别罢了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/11.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;至于加括号，后面在指令内其实会遇到不少困惑，因为有时候他就是不加括号的&lt;/p&gt;
+&lt;p&gt;但可能表达的意思就是取里面的内容给另外一个寄存器，最好的办法还是不要省略括号&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;第一节：计算机系统层次结构&lt;/p&gt;
 &lt;p&gt;习题总结分析：&lt;/p&gt;
 &lt;p&gt;1：具体的知识点叙述在引言部分，原句的对应&lt;/p&gt;
 &lt;p&gt;2：其实基于描述也能看出来应该选择哪个选项的，就是以指令序列驱动的&lt;/p&gt;
@@ -45,9 +91,38 @@
 &lt;p&gt;23：数据一般并不在指令内给出，而是在指令中给出存储地址，除了立即寻址以外&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;第二节：计算机性能指标&lt;/p&gt;
+&lt;p&gt;首先明确一个事实，这里所包含的一切介绍指标均是可以用于评估计算机性能的指标&lt;/p&gt;
+&lt;p&gt;不要认为篇幅大的就是一切，其他也同样重要&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;机器字长：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;机器字长主要和运算精度、数据表示范围强相关，是机器性能评估指标，无关运算速度&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用户角度性能指标：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;吞吐量和响应时间其实主要取决于访存速度、访问磁盘的开销，CPU时间可以忽略&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;时钟周期与相关周期整理（优化中）：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;指令流水线需要保证每个流水段内的操作都能在这个时钟周期内完成，所以以最长延迟&lt;/p&gt;
+&lt;p&gt;详情其实可以见P90的流水线，每个流水段应该视作是一个存取的周期&lt;/p&gt;
+&lt;p&gt;另外，关于周期本身，目前有如下总结：&lt;/p&gt;
+&lt;p&gt;别问我，我真的不会！！！！！！！！！！！！！！！！！！！！！！！！&lt;/p&gt;
+&lt;p&gt;周期补充：&lt;a href=&#34;https://blog.csdn.net/m0_62894677/article/details/134751839&#34;&gt;https://blog.csdn.net/m0_62894677/article/details/134751839&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;运算指标：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;主频是描述计算机硬件执行速度的一个重要指标，其描述的是计算机对指令执行速度&lt;/p&gt;
+&lt;p&gt;可以理解为执行指令的速度会随着主频的提高而提高，时钟周期越短指令执行也就越快&lt;/p&gt;
+&lt;p&gt;CPI是执行一条指令所需要的平均时钟周期数（一般基于某个ISA指令集体系架构&lt;/p&gt;
+&lt;p&gt;CPI是这个指令集的固有属性，和硬件没太大关系，其描述是指令平均需要几步执行完&lt;/p&gt;
+&lt;p&gt;在计算机中，每一步就是一个时钟周期，因而提高主频并不能改变CPI&lt;/p&gt;
+&lt;p&gt;只能加速指令执行的速度，除非优化了指令集，否则CPI就是不随硬件改变的&lt;/p&gt;
+&lt;p&gt;ISP则是和硬件、指令集平均CPI均有关系，提高主频或者降低主频确实能改变ISP&lt;/p&gt;
+&lt;p&gt;FLOPS作为新增考纲考点，需要清楚最基本的运算关系&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;单位换算：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;MGTPEZ（10^6)开始的次数换算单位&lt;/p&gt;
+&lt;p&gt;时间换算单位&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/16.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对应3、6、9、12次&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;习题总结分析：&lt;/p&gt;
 &lt;p&gt;1：各个参数需要基于理解基础上去运算，否则熟练度不够，注意统考新增浮点数指标&lt;/p&gt;
-&lt;p&gt;2：&lt;/p&gt;
+&lt;p&gt;2：以“字长”结尾的名词通常有这样一些：&lt;/p&gt;
+&lt;p&gt;机器字长（一般也被称为字长）、指令字长、总线字长、寄存器字长、存储字长&lt;/p&gt;
+&lt;p&gt;一般看到上面的都能想起来内容是什么，不会的直接回去查&lt;/p&gt;
 &lt;p&gt;3：寄存器确实是由多个触发器构成的，所以才需要最后阶段去翻阅教材补充整个框架&lt;/p&gt;
 &lt;p&gt;因为这些内容王道上面并不会写，如果想非常完善，最后只能去翻书补知识体系&lt;/p&gt;
 &lt;p&gt;计算机中一个字的长度一般概括的就是机器字长，主要和CPU的架构、寄存器位数有关&lt;/p&gt;
@@ -60,10 +135,51 @@
 &lt;p&gt;并没有和运算速度有多少的相关性，因为一次性处理的长了，处理时间也就长了&lt;/p&gt;
 &lt;p&gt;一般机器字长和CPU处理器位数、数据通路宽度、通用寄存器位数、各单元位数相同&lt;/p&gt;
 &lt;p&gt;6：表述不够严谨，一般这类在统考里面会频繁出现，需要特别留意严谨性的问题&lt;/p&gt;
-&lt;p&gt;8：&lt;/p&gt;
+&lt;p&gt;8：首先是运行功能完全相同的高级语言程序（功能相同可以代码量不同&lt;/p&gt;
+&lt;p&gt;再就是每台机器的指令集不一定相同，编译产生的机器指令条数也就不一定相同&lt;/p&gt;
+&lt;p&gt;最后就是虽然平均CPI相同，但每个时钟周期的时间长度在不同机器上不一定是相同的&lt;/p&gt;
+&lt;p&gt;依旧有四个潜在的变量，怎么可能能够确定？&lt;/p&gt;
 &lt;p&gt;9：细节题，本题的机器字长是以字节作单位的，单位是必然需要看清楚的一个细节&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;10：这种题目争议比较多，我个人明天会进行勘误处理（保留意见&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;11：全都是周期，完犊子&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;10：CPU内寄存器的可视与否参考以下内容（王道书内的结论，如果错了王道需要负责&lt;/p&gt;
+&lt;p&gt;所有用户/程序员可见（不透明）：PC、PSW、ACC、通用寄存器&lt;/p&gt;
+&lt;p&gt;所有用户/程序员不可见（透明）：MAR、MDR、IR、暂存器、Cache、uMAR、uMDR、uIR。&lt;/p&gt;
+&lt;p&gt;汇编程序员可见，所有用户可见基础上外加：中断字寄存器、基址寄存器、变址寄存器。&lt;/p&gt;
+&lt;p&gt;系统程序员可见，所有用户可见基础上外加：虚拟存储器。&lt;/p&gt;
+&lt;p&gt;程序状态字寄存器=标志寄存器=条件码寄存器=PSW，不同教材表述略有差别&lt;/p&gt;
+&lt;p&gt;11：&lt;/p&gt;
+&lt;p&gt;12、22：这里涉及到一个很重要的知识点，指令的运行是一步步的（微指令序列&lt;/p&gt;
+&lt;p&gt;即，完成一条指令就是固定需要X个时钟周期，CPI描述的就是这个固定量&lt;/p&gt;
+&lt;p&gt;不论你怎么调整硬件结构，只要你指令集没有产生较大变化，CPI是不会产生变化的&lt;/p&gt;
+&lt;p&gt;形象比喻就是执行一件事固定需要X个步骤，你可以对每个步骤进行加速&lt;/p&gt;
+&lt;p&gt;但你没办法减少执行这件事的步骤，只能减少执行完成这一件事的时间，仅此而已&lt;/p&gt;
+&lt;p&gt;CPI实际上是描述指令集的一个固有属性，主频则是描述硬件性能，即执行的速度&lt;/p&gt;
+&lt;p&gt;两者不可以互相混淆在一起，就像认为电阻和电流大小有关一样&lt;/p&gt;
+&lt;p&gt;13：从用户角度看衡量一台电脑的性能指标主要是响应时间和吞吐量，是用户能感受的&lt;/p&gt;
+&lt;p&gt;其他的性能指标均是用户无法直观感受到的&lt;/p&gt;
+&lt;p&gt;14：记住这个知识点就可以了，提高主频对提高计算机性能有限&lt;/p&gt;
+&lt;p&gt;15：兼容，书面上有明确解释：指计算机硬件或软件在系列机上的通用性（易混淆&lt;/p&gt;
+&lt;p&gt;日常生活里面确实非常容易理解为计算机硬件和软件在系列机上的通用性，但这是错的&lt;/p&gt;
+&lt;p&gt;要明白清楚，是软件或硬件的通用性，而非互相配合的兼容性，语义完全不同&lt;/p&gt;
+&lt;p&gt;16：其实如果按表述含义来说D也应该是对的，毕竟可以理解为A的速度是B的80%&lt;/p&gt;
+&lt;p&gt;但一般不太会用这种会产生混淆的表述，所以这类文字游戏一般不用特别去在乎的&lt;/p&gt;
+&lt;p&gt;17：从运行程序所需要的总时钟周期数去考虑即可&lt;/p&gt;
+&lt;p&gt;18：需要注意的是，本节全都是对计算机性能的描述指标，这一点是先前所忽略的&lt;/p&gt;
+&lt;p&gt;机器字长、数据通路带宽、主存容量、运算速度（吞吐量、响应速度）、主频、CPI等&lt;/p&gt;
+&lt;p&gt;凡是在这一节出现的都可以算作计算机性能指标，往往容易忽略其他的&lt;/p&gt;
+&lt;p&gt;19：机器字长主要和运算精度、表述范围强相关，和别的基本没有什么关系&lt;/p&gt;
+&lt;p&gt;22：其实这类情况一般就默认指令集是不变的，也就是CPI是固定的&lt;/p&gt;
+&lt;p&gt;那么提高CPU的时钟频率自然也就是正确的，因为相对而言就可以提高CPU的速度&lt;/p&gt;
+&lt;p&gt;24：当时应该是错过的，错在了CPU速度提高50%混淆为CPU执行时间减少50%&lt;/p&gt;
+&lt;p&gt;28：通用寄存器一般泛指CPU内部的非指令、控制寄存器，主要是运算单元内的部件&lt;/p&gt;
+&lt;p&gt;29：这个基于个人的一个习惯问题，在数这种幂次数的时候个人会少数一位的&lt;/p&gt;
+&lt;p&gt;因为从个位数开始数，数出来确实就是千万亿，而实际上这是幂，所以是从十位开始的&lt;/p&gt;
+&lt;p&gt;最终的结果自然就差了一位，这个是当时可能都没意识到的问题&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;番外篇：记得回头看章末总结&lt;/p&gt;
+&lt;p&gt;计算机体系结构、计算机组成：组成是最底层偏硬件，体系结构是上层偏设计&lt;/p&gt;
+&lt;p&gt;ISA指令集架构就是体系结构的部分，具体的微指令、电路逻辑就是计算机组成部分&lt;/p&gt;
+&lt;p&gt;体系结构是偏设计层面的，实现的功能层面的，组成更加偏硬件、电路具体实现&lt;/p&gt;
+&lt;p&gt;一般这类题目如果出来了确实很难去区分，但记住偏硬件就是组成，偏设计是体系结构&lt;/p&gt;
 </content>
         <updated>2024-06-23T13:02:52.000Z</updated>
     </entry>
@@ -5801,6 +5917,7 @@ do &amp;#123;
 &lt;p&gt;无符号数就不多说了，就是简单的机器数&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;对于补码，真值、原码、移码、反码的全面总结，一共二十种&lt;/p&gt;
+&lt;p&gt;具体补位的长度看题目给定，如果给定字长为X位就进一步补位数即可&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;真值-补码&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;正数：即为正数转原码，原码补码相同，数值位高位补0&lt;/p&gt;
 &lt;p&gt;负数：即为负数转原码，原码转反码，反码转补码&lt;/p&gt;
@@ -5878,6 +5995,7 @@ do &amp;#123;
 &lt;p&gt;负数：符号位取反&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;移码-真值&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;直接将机器数转为十进制数，然后减去偏移量得到十进制真值&lt;/p&gt;
+&lt;p&gt;真值转移码大不了直接加上偏移量然后带符号！&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;移码-反码&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;符号位取反得到补码&lt;/p&gt;
 &lt;p&gt;正数：反码补码原码相同，即为反码&lt;/p&gt;
@@ -5893,61 +6011,6 @@ do &amp;#123;
 &lt;p&gt;符号位不变其他位取反，加一得到原码&lt;/p&gt;
 </content>
         <updated>2024-03-26T13:43:37.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%841/</id>
-        <title>计组1</title>
-        <link rel="alternate" href="https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%841/"/>
-        <content type="html">&lt;p&gt;注:新概念新题型不超过十分，不必过分纠结&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/1.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;现代结构是在诺伊曼结构上的改进&lt;/p&gt;
-&lt;p&gt;注，现代计算机很多情况下把MAR\MDR集成在CPU中&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/2.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/3.png&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;注，主存与CPU相连的总线而言，其地址线为MAR的地址长度，MAR为16位，地址线16位&lt;/p&gt;
-&lt;p&gt;数据总线又称为数据通路带宽，MDR为32位，那么数据总线也是32位&lt;/p&gt;
-&lt;p&gt;同时也把这个位数称为存储字长，把地址线位数称为地址码长度&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;顺便说下控制总线的事情(这里注意我说的是主存和CPU交互的控制线&lt;/p&gt;
-&lt;p&gt;因为是需要给定读指令+从哪读内容到哪存或者取指令+取哪个位置的内容放到哪&lt;/p&gt;
-&lt;p&gt;所以肯定是给定不止一位表示读、写的，后面必然包括两个地址信息&lt;/p&gt;
-&lt;p&gt;批注：学过指令结构后基本就能清晰&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;对于CPU内部的线路、寄存器，会在第五章、后续的章节进一步给出解释&lt;/p&gt;
-&lt;p&gt;以及机器码和运算速度之间的关系，因为一次处理的数据多了，可能处理时间也就长了&lt;/p&gt;
-&lt;p&gt;所以不一定机器码越高，运算速度越快&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/4.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;注，运算器若乘时过大值时，低位会放在MQ中&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/5.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/6.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/7.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这一节掌握概念即可，尤其是编译、汇编、解释三者的区别和特征，层次结构&lt;/p&gt;
-&lt;p&gt;编译、汇编只进行一次全部读取，解释是读一行执行一行&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/13.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/8.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;可执行文件存于外存中，需要先调入主存&lt;/p&gt;
-&lt;p&gt;注意平常说的存储，存储128G，指代的是外存&lt;/p&gt;
-&lt;p&gt;大头戏&lt;/p&gt;
-&lt;p&gt;注:CU读取指令后的操作才会有所不同，其他均为相同&lt;/p&gt;
-&lt;p&gt;操作码+地址码为十六位，也可以变成两个地址或者多个地址的状态&lt;/p&gt;
-&lt;p&gt;注，这里地址码起点是从2^1开始的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/9.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/10.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/11.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;回忆计算以及变量使用，以一个时钟周期作为t推演&lt;/p&gt;
-&lt;p&gt;区分bit&amp;#x2F;B&amp;#x2F;字节&amp;#x2F;字&amp;#x2F;位&amp;#x2F;字长、MIPS……..&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/14.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/15.png&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;换算单位&lt;/p&gt;
-&lt;p&gt;MGTPEZ（10^6)开始的次数换算单位&lt;/p&gt;
-&lt;p&gt;时间换算单位&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/16.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;对应3、6、9、12次&lt;/p&gt;
-&lt;hr&gt;
-</content>
-        <updated>2024-03-26T12:03:17.000Z</updated>
     </entry>
     <entry>
         <id>https://chchch-art.github.io/2023/09/20/hello-world/</id>
