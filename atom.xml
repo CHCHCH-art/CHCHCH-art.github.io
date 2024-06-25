@@ -3,12 +3,94 @@
     <id>https://CHCHCH-art.github.io</id>
     <title>Ephemeral</title>
     <link href="https://CHCHCH-art.github.io" />
-    <updated>2024-06-23T13:02:52.000Z</updated>
+    <updated>2024-06-25T12:39:04.000Z</updated>
     <category term="stock" />
     <category term="END" />
     <category term="FK" />
     <category term="Preview" />
     <category term="Math" />
+    <entry>
+        <id>https://chchch-art.github.io/2024/06/25/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E8%BF%90%E7%AE%97/</id>
+        <title>计组第二章：数据运算</title>
+        <link rel="alternate" href="https://chchch-art.github.io/2024/06/25/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E8%BF%90%E7%AE%97/"/>
+        <content type="html">&lt;p&gt;第一节：数制与编码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;补充内容：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;机器数内，补码表示整数、移码表示阶码、原码表示浮点数尾数部分&lt;/p&gt;
+&lt;p&gt;需要进行位拓展的原因：&lt;/p&gt;
+&lt;p&gt;ALU的位数是固定的，运算前可能需要把短数据扩展为长数据&lt;/p&gt;
+&lt;p&gt;通用寄存器位数是固定的，把数据存入寄存器时，可能需要进行长度扩展&lt;/p&gt;
+&lt;p&gt;主存内的各种数据长度不一，有时需要把短数据扩展为长数据&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;进位计数法：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;只需要记忆二进制、八进制、十六进制分别的前缀和后缀即可，容易遗忘和混淆&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;进制数转换：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;二进制转为八进制、十六进制小数点左边高位补零，右边低位补零，解释均从右向左翻译&lt;/p&gt;
+&lt;p&gt;十六进制、八进制的互相转换经由二进制完成互相转换&lt;/p&gt;
+&lt;p&gt;十进制转为十六进制、八进制首先转为二进制再考虑转为高位进制&lt;/p&gt;
+&lt;p&gt;十进制整数转为二进制直接考虑凑整法，速度远高于书上给定的计算方法&lt;/p&gt;
+&lt;p&gt;对于小数部分若位数少于五位内可以直接凑整，高于五位建议用乘基取余法得结果&lt;/p&gt;
+&lt;p&gt;高位进制（十进制）能覆盖所有低进制表达范围，低进制不一定能表达高进制&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;四大码以及相应计算：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;高位、低位补零的数量具体以字长为定，低位、高位均是以零拓展不以其他拓展&lt;/p&gt;
+&lt;p&gt;提纲：（写一遍下列的转换过程是最迅速、最有效的回忆方法&lt;/p&gt;
+&lt;p&gt;1.真值转原码、反码、补码、移码；2.原码转真值、反码、补码、移码&lt;/p&gt;
+&lt;p&gt;3.反码转原码、反码、补码、移码；4.补码转真值、原码、反码、移码&lt;/p&gt;
+&lt;p&gt;5.移码转真值、原码、反码、移码；6.补码转其负值补码&lt;/p&gt;
+&lt;p&gt;参考篇目：码的互相转换以及补充&lt;/p&gt;
+&lt;p&gt;相应表示范围和特点：（根据下列图表进行一次回忆，这是最迅速有效的复习方法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/22.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;书上需要注意的内容是各个码的特点和其应用场合、比较对比，容易被忽略&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;整数的表示：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;无符号整数的取值范围大小和有符号整数的取值范围大小相同，无非范围不同&lt;/p&gt;
+&lt;p&gt;在计算机中尤其要注意有符号数的默认表示方式（有符号整数）均是以补码形式存储的&lt;/p&gt;
+&lt;p&gt;后面习题里面也有不少这样的坑存在&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C语言类型转换：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;整型数据类型需要记忆、背诵和默写，这是没办法的事情&lt;/p&gt;
+&lt;p&gt;有符号转为无符号、无符号转为有符号只改变了对内部存储的补码的解释方式而已&lt;/p&gt;
+&lt;p&gt;注意内部以补码方式存储，所以解释的时候就会有一些小细节存在&lt;/p&gt;
+&lt;p&gt;无符号数和有符号数的结合运算以无符号数为准，运算均是基于补码的（不论加减都是&lt;/p&gt;
+&lt;p&gt;强制转换长转短直接截断、短转长永远以最高位符号位去拓展，以补码方式解释&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;习题总结分析：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1：对于十进制转二进制、八进制、十六进制，如果低于十位可以直接转，能够凑的&lt;/p&gt;
+&lt;p&gt;高于十位建议采用书上的除基取余的方法&lt;/p&gt;
+&lt;p&gt;4：反码、原码零的表示均不唯一，补码和移码均唯一，建议回顾上述内容即可反应出&lt;/p&gt;
+&lt;p&gt;5：补码转原码，正数补码和原码、反码一样，负数对应改变即可&lt;/p&gt;
+&lt;p&gt;6：一个比较重要的结论，记住即可，全部取反后加一即可得到其补码相反数&lt;/p&gt;
+&lt;p&gt;7：原码、反码能表示的数的量均是255个，因为有重复的零，其他均是256个不同的数&lt;/p&gt;
+&lt;p&gt;11：需要注意的是补码当表示负数的时候后面一越多越大，零越多越小，图表内容&lt;/p&gt;
+&lt;p&gt;13、14、17：人不会两次踏进同一条河流，但我真的会重复犯当时错过的问题&lt;/p&gt;
+&lt;p&gt;本质是因为这边是补码，而个人计算的时候一直用原码考虑，因而导致了犯错&lt;/p&gt;
+&lt;p&gt;按照图表即可迅速做出来结果&lt;/p&gt;
+&lt;p&gt;23：需要注意的是补码负数表示为：-1到-128，正数表示为0到127，所以会产生溢出&lt;/p&gt;
+&lt;p&gt;24：关于移码的计算，个人的建议是直接写出机器数后再减去偏移量，这样更加直观些&lt;/p&gt;
+&lt;p&gt;30、33：注意在计算机里面无符号、有符号整数均是以补码形式存储的，需要注意&lt;/p&gt;
+&lt;p&gt;在有符号情况下，需要特别注意解释的问题，无符号反正是原码直接解释就可以的了&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;第二节：运算方法和运算电路&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;基本数电知识：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;门电路在学习过概率论后基本不会存在太大问题，只需要略微记忆即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/27.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;考研一般也不会考察高中技术的内容，一般逻辑表达式是不会考的，甚至电路都不考&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/28.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;但多少可以看作是概率论的一部分内容，补充即可&lt;/p&gt;
+&lt;p&gt;加法器电路的实现并不是特别重要的内容，但可以了解下带标记加法器的逻辑电路&lt;/p&gt;
+&lt;p&gt;主要看标志位的生成是如何实现的，这一块考察比较频繁（虽然大多数只要求理解含义&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/37.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;加减运算电路部分在统考曾经以小题考察过一次，并不是特别重要&lt;/p&gt;
+&lt;p&gt;此外一个较容易考察的是多路选择器、三态门、ALU的位数和功能间的关系&lt;/p&gt;
+&lt;p&gt;MUX（多路选择器：&lt;/p&gt;
+&lt;p&gt;ALU支持K种功能则需要logK个输入信号位，和多路选择的含义是一样的&lt;/p&gt;
+&lt;p&gt;若是八个输入端则需要3位二进制来表达不同的输入端口号&lt;/p&gt;
+&lt;p&gt;本质是用二进制表达其端口号，控制信号即为指定该位置的输入可进入&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/30.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;三态门，区分于非门，当op为1时允许通过，当op为0时禁止信号通过&lt;/p&gt;
+&lt;p&gt;op只需要一位即可，因为一位就是二进制的0和1两种状态，可以拥有非运算的特性&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/31.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上述需要掌握的主要是加法器标志位的含义以及其生成逻辑，统考选择多次考察&lt;/p&gt;
+&lt;p&gt;**&lt;/p&gt;
+</content>
+        <updated>2024-06-25T12:39:04.000Z</updated>
+    </entry>
     <entry>
         <id>https://chchch-art.github.io/2024/06/23/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%B8%80%E3%80%81%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%A6%82%E8%BF%B0%E4%B8%8E%E6%95%B0%E6%8D%AE%E8%BF%90%E7%AE%97/</id>
         <title>计组第一章：概述</title>
@@ -19,12 +101,12 @@
 &lt;p&gt;&lt;strong&gt;冯诺依曼体系：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;冯诺依曼体系是现代计算机的基本结构，包括存储程序的基本思想依旧应用在现代体系&lt;/p&gt;
 &lt;p&gt;唯一的区别在于以原先的“运算器”为核心转为了以“主存储器”为核心&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/2.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;虚线表示控制反馈线路，其他都是数据通路，应当与机器字长保持一致性&lt;/p&gt;
-&lt;p&gt;计算机功能部件可以分为：I/O设备、存储器、运算器和控制器（集成在中央处理器）&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;I/O设备：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;I/O设备在计组、OS内均有详细的解释和概述，这一节更多是介绍，不做展开&lt;/p&gt;
+&lt;p&gt;计算机功能部件可以分为：I&amp;#x2F;O设备、存储器、运算器和控制器（集成在中央处理器）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I&amp;#x2F;O设备：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;#x2F;O设备在计组、OS内均有详细的解释和概述，这一节更多是介绍，不做展开&lt;/p&gt;
 &lt;p&gt;届时可能会做一定的索引&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;存储器：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;存储器是计组的核心内容，尤其是主存，外存则分散在计组、OS内均有部分的内容&lt;/p&gt;
@@ -45,7 +127,7 @@
 &lt;p&gt;机器语言是唯一能够被计算机识别和执行的语言，这个是一个必然的结论，其他都不行&lt;/p&gt;
 &lt;p&gt;同样不能说微指令能够被计算机识别和执行，即使机器语言基于微指令&lt;/p&gt;
 &lt;p&gt;汇编程序指代的是汇编器，而不是汇编语言编写的程序，这两者需要区分开&lt;/p&gt;
-&lt;p&gt;解释程序解释一条执行一条因而在执行过程中是不会产生可执行文件的，例如R/Python&lt;/p&gt;
+&lt;p&gt;解释程序解释一条执行一条因而在执行过程中是不会产生可执行文件的，例如R&amp;#x2F;Python&lt;/p&gt;
 &lt;p&gt;而编译程序是一次性解释并存储为一个可执行文件，具体的过程见P7的流程内部&lt;/p&gt;
 &lt;p&gt;需要注意的是，如果需要编译并执行，在计算机内是先进行源程序存储为可执行文件&lt;/p&gt;
 &lt;p&gt;然后再读取这个可执行文件（这一块就涉及内存管理，OS内容：编译、链接、装入&lt;/p&gt;
@@ -57,13 +139,13 @@
 &lt;p&gt;首先明确现代计算机体系是基于冯诺依曼体系，并且其存储程序思想一直沿用至今&lt;/p&gt;
 &lt;p&gt;具体的执行过程和流程会在第五章有具体的叙述，作为预习只需要基本回忆即可&lt;/p&gt;
 &lt;p&gt;大体上都是一个模子刻出来的，无非就是后续具体操作的时候会有一定程序的区别罢了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/11.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/9.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/10.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/11.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;至于加括号，后面在指令内其实会遇到不少困惑，因为有时候他就是不加括号的&lt;/p&gt;
 &lt;p&gt;但可能表达的意思就是取里面的内容给另外一个寄存器，最好的办法还是不要省略括号&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;习题总结分析：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;习题总结分析：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1：具体的知识点叙述在引言部分，原句的对应&lt;/p&gt;
 &lt;p&gt;2：其实基于描述也能看出来应该选择哪个选项的，就是以指令序列驱动的&lt;/p&gt;
 &lt;p&gt;3：D选项即为全相联存储器的概念，这一块后面会在存储器部分具体有讲解在的&lt;/p&gt;
@@ -115,10 +197,10 @@
 &lt;p&gt;&lt;strong&gt;单位换算：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;MGTPEZ（10^6)开始的次数换算单位&lt;/p&gt;
 &lt;p&gt;时间换算单位&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/16.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/16.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;对应3、6、9、12次&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;习题总结分析：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;习题总结分析：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1：各个参数需要基于理解基础上去运算，否则熟练度不够，注意统考新增浮点数指标&lt;/p&gt;
 &lt;p&gt;2：以“字长”结尾的名词通常有这样一些：&lt;/p&gt;
 &lt;p&gt;机器字长（一般也被称为字长）、指令字长、总线字长、寄存器字长、存储字长&lt;/p&gt;
@@ -141,11 +223,11 @@
 &lt;p&gt;依旧有四个潜在的变量，怎么可能能够确定？&lt;/p&gt;
 &lt;p&gt;9：细节题，本题的机器字长是以字节作单位的，单位是必然需要看清楚的一个细节&lt;/p&gt;
 &lt;p&gt;10：CPU内寄存器的可视与否参考以下内容（王道书内的结论，如果错了王道需要负责&lt;/p&gt;
-&lt;p&gt;所有用户/程序员可见（不透明）：PC、PSW、ACC、通用寄存器&lt;/p&gt;
-&lt;p&gt;所有用户/程序员不可见（透明）：MAR、MDR、IR、暂存器、Cache、uMAR、uMDR、uIR。&lt;/p&gt;
+&lt;p&gt;所有用户&amp;#x2F;程序员可见（不透明）：PC、PSW、ACC、通用寄存器&lt;/p&gt;
+&lt;p&gt;所有用户&amp;#x2F;程序员不可见（透明）：MAR、MDR、IR、暂存器、Cache、uMAR、uMDR、uIR。&lt;/p&gt;
 &lt;p&gt;汇编程序员可见，所有用户可见基础上外加：中断字寄存器、基址寄存器、变址寄存器。&lt;/p&gt;
 &lt;p&gt;系统程序员可见，所有用户可见基础上外加：虚拟存储器。&lt;/p&gt;
-&lt;p&gt;程序状态字寄存器=标志寄存器=条件码寄存器=PSW，不同教材表述略有差别&lt;/p&gt;
+&lt;p&gt;程序状态字寄存器&amp;#x3D;标志寄存器&amp;#x3D;条件码寄存器&amp;#x3D;PSW，不同教材表述略有差别&lt;/p&gt;
 &lt;p&gt;11：&lt;/p&gt;
 &lt;p&gt;12、22：这里涉及到一个很重要的知识点，指令的运行是一步步的（微指令序列&lt;/p&gt;
 &lt;p&gt;即，完成一条指令就是固定需要X个时钟周期，CPI描述的就是这个固定量&lt;/p&gt;
@@ -176,7 +258,7 @@
 &lt;p&gt;因为从个位数开始数，数出来确实就是千万亿，而实际上这是幂，所以是从十位开始的&lt;/p&gt;
 &lt;p&gt;最终的结果自然就差了一位，这个是当时可能都没意识到的问题&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;番外篇：记得回头看章末总结&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;番外篇：记得回头看章末总结&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;计算机体系结构、计算机组成：组成是最底层偏硬件，体系结构是上层偏设计&lt;/p&gt;
 &lt;p&gt;ISA指令集架构就是体系结构的部分，具体的微指令、电路逻辑就是计算机组成部分&lt;/p&gt;
 &lt;p&gt;体系结构是偏设计层面的，实现的功能层面的，组成更加偏硬件、电路具体实现&lt;/p&gt;
@@ -5837,73 +5919,10 @@ do &amp;#123;
     </entry>
     <entry>
         <id>https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%842/</id>
-        <title>计组2</title>
+        <title>码的互相转换以及补充</title>
         <link rel="alternate" href="https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%842/"/>
-        <content type="html">&lt;p&gt;数据类型转换：&lt;/p&gt;
-&lt;p&gt;Unsigned\singned只是一种解释方法，把数据解释为带符号数或不带符号数，不改数值&lt;/p&gt;
-&lt;p&gt;一种是同位之间的转换，不会导致数值被操作影响，只会导致解读方法会从带符号转不带&lt;/p&gt;
-&lt;p&gt;另外一种是非同位，分为大转小，小转大强制转换&lt;/p&gt;
-&lt;p&gt;大转小直接截断从大到小二进制差额部分，剩下的解释为十六进制会有不同&lt;/p&gt;
-&lt;p&gt;需要拓展原因：&lt;/p&gt;
-&lt;p&gt;ALU的位数是固定的，运算前可能需要把短数据扩展为长数据&lt;/p&gt;
-&lt;p&gt;通用寄存器位数是固定的，把数据存入寄存器时，可能需要进行长度扩展&lt;/p&gt;
-&lt;p&gt;主存内的各种数据长度不一，有时需要把短数据扩展为长数据&lt;/p&gt;
-&lt;p&gt;小转大分为两类&lt;/p&gt;
-&lt;p&gt;原类型是无符号整数则直接用零填补高位&lt;/p&gt;
-&lt;p&gt;是有符号类型则用符号位填补高位的空缺部分&lt;/p&gt;
-&lt;p&gt;注意：除char以外除非声明为Unsign类型，那么都是解释为带符号的&lt;/p&gt;
-&lt;p&gt;char:8位、short/short int:16位、int：32位、long /long int 分机器（32-32，64-64&lt;/p&gt;
-&lt;p&gt;singed\unsigned都是以补码存储的&lt;/p&gt;
-&lt;p&gt;C语言中定点整数是用补码存储的或者说都用补码存储的&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/17.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;稍微注意下小数点的事情，这边的转换和一般的二进制转换不一样&lt;/p&gt;
-&lt;p&gt;小数点开始向左边，选择3、4个作为一组，直到最高位需要补0为止再说&lt;/p&gt;
-&lt;p&gt;小数点开始向右边补，那么也是同样的，就是要重视和小数点的主要关系&lt;/p&gt;
-&lt;p&gt;区分和一般二进制的转换(直接补高位0，因为其小数位就是在最后，其是整数形式&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/18.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/19.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;逼近法求转换类型，126–64+32+16+8+4，任何其他位也一样直接求加法然后写位数&lt;/p&gt;
-&lt;p&gt;对小数类型也是同样，0.25+0.5+0.125+0.0625，有时候能直接凑就直接凑&lt;/p&gt;
-&lt;p&gt;凑不出来再用乘R取余数，或者除R取余数的方法(建议掌握&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/20.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/21.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/23.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/25.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;原码、反码取值均是+0 — +127/-0 — -127，有正负的零区分&lt;/p&gt;
-&lt;p&gt;补码没有区分两者，移码也不区分两者&lt;/p&gt;
-&lt;p&gt;取反的含义是2^7-1-(…)，补码的含义是2^7-(…)&lt;/p&gt;
-&lt;p&gt;移码就不多说了，真值+偏移量，建议用十进制描述过程，最后转为机器码(二进制&lt;/p&gt;
-&lt;p&gt;移码和补码、原码的关系基本不大&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/22.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;2^7:10000000:      	128&lt;/p&gt;
-&lt;p&gt;2^8-1:11111111:     255&lt;/p&gt;
-&lt;p&gt;2^7-1:01111111:     127&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;注，这里都是在对整数进行谈论，未涉及小数，但实际上也可以等同&lt;/p&gt;
-&lt;p&gt;把小数位后面视作一样的参考值法，符号位也一样，无非就是改变了小数点的位置&lt;/p&gt;
-&lt;p&gt;使得原先的10000000变成了0.10000000罢了，基本可以采用下面的方法求解&lt;/p&gt;
-&lt;p&gt;对正数而言，原码、补码、反码取原值都很简单，直接求后面的数值就行&lt;/p&gt;
-&lt;p&gt;对负数而言，求原码、补码、反码原值也很简单&lt;/p&gt;
-&lt;p&gt;原码直接求原值加一个符号&lt;/p&gt;
-&lt;p&gt;反码对后面直接求值然后用2^7-1-值即得出原值，加符号&lt;/p&gt;
-&lt;p&gt;补码对后面直接求值然后用2^7-值即可求出原值，然后加符号即可&lt;/p&gt;
-&lt;p&gt;或者如此图表示般理解为其的无符号码被2^8相减的结果&lt;/p&gt;
-&lt;p&gt;A+B那么就是A补+B补，A-B那么就是A+（-B）补，这个相互转换需要理解&lt;/p&gt;
-&lt;p&gt;不要去带符号思考，那样就容易绕进去了&lt;/p&gt;
-&lt;p&gt;对下图需要注意下溢出的情况判断，后面自然会有讲三种方法&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/26.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;其中最麻烦的应该是移码，其是一个偏移量加上一个数的真值，然后用机器数表示&lt;/p&gt;
-&lt;p&gt;注意这个机器数是不带符号的，就是解释为无符号数，这个一定要注意&lt;/p&gt;
-&lt;p&gt;最简单粗暴也不会错的方法就是把这个真值给用十进制表示出，然后加上偏移量&lt;/p&gt;
-&lt;p&gt;再用二进制无符号表示出来即可，就是将原来的0000000表达的0，变成了-偏移量而已&lt;/p&gt;
-&lt;p&gt;同样，如果要反向求这个值，那么直接用二进制无符号解释转换为十进制&lt;/p&gt;
-&lt;p&gt;然后把十进制的值减去这个偏移量自然得到了表示值&lt;/p&gt;
-&lt;p&gt;真值转原码很简单，转反码也很简单，转补码基本也没什么问题&lt;/p&gt;
-&lt;p&gt;考虑之间的一些转换，[x]补转[-x]补，只需要取反符号位，然后对数值位取反加一&lt;/p&gt;
-&lt;p&gt;比较容易想明白，因为正数、负数补码第一位必然是不一样的，对数值位加一即可&lt;/p&gt;
+        <content type="html">&lt;p&gt;对下图需要注意下溢出的情况判断，后面自然会有讲三种方法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/26.png&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;原码可表示小数，也可以表示整数，但一般在计算机中采用原码表示&lt;strong&gt;浮点数&lt;/strong&gt;的尾数&lt;/p&gt;
 &lt;p&gt;移码只能表示整数，注意&lt;/p&gt;
@@ -5911,7 +5930,7 @@ do &amp;#123;
 &lt;p&gt;无非就是乘除法的时候会采用不同取模运算罢了，模四或者模二&lt;/p&gt;
 &lt;p&gt;无符号数就不多说了，就是简单的机器数&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;对于补码，真值、原码、移码、反码的全面总结，一共二十种&lt;/p&gt;
+&lt;p&gt;对于补码，真值、原码、移码、反码的全面总结，一共二十种（可以优化表述&lt;/p&gt;
 &lt;p&gt;具体补位的长度看题目给定，如果给定字长为X位就进一步补位数即可&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;真值-补码&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;正数：即为正数转原码，原码补码相同，数值位高位补0&lt;/p&gt;
@@ -5968,13 +5987,13 @@ do &amp;#123;
 &lt;p&gt;负数：即反码转补码&lt;/p&gt;
 &lt;p&gt;末尾加一即为补码&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;反码-移码&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;正负数：符号位取反&lt;/p&gt;
+&lt;p&gt;正数直接取反符号位，负数先加一转为补码后符号位取反&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;补码-原码&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;正数：即原码，正数原码反码补码相同&lt;/p&gt;
 &lt;p&gt;负数：即补码求原码&lt;/p&gt;
 &lt;p&gt;除符号位全部取反，然后再加一，即对补码求一次补码得到原码&lt;/p&gt;
 &lt;p&gt;补充:已知y补码，求-y补码&lt;/p&gt;
-&lt;p&gt;-y补码=y补码连同符号位，各位取反，末位再+1&lt;/p&gt;
+&lt;p&gt;-y补码&amp;#x3D;y补码连同符号位，各位取反，末位再+1&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;补码-真值&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;正数：即原码求真值，正数补码反码原码相同，即数值位，二进制真值&lt;/p&gt;
 &lt;p&gt;负数：即补码转原码，原码转真值&lt;/p&gt;
@@ -6005,7 +6024,7 @@ do &amp;#123;
 &lt;p&gt;负数：补码转原码&lt;/p&gt;
 &lt;p&gt;符号位不变其他位取反，加一得到原码&lt;/p&gt;
 </content>
-        <updated>2024-03-26T13:43:37.000Z</updated>
+        <updated>2024-03-26T13:43:00.000Z</updated>
     </entry>
     <entry>
         <id>https://chchch-art.github.io/2023/09/20/hello-world/</id>
