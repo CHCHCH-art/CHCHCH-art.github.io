@@ -5,13 +5,79 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Tue, 25 Jun 2024 20:39:04 +0800</pubDate>
-        <lastBuildDate>Tue, 25 Jun 2024 20:39:04 +0800</lastBuildDate>
+        <pubDate>Fri, 05 Jul 2024 18:54:37 +0800</pubDate>
+        <lastBuildDate>Fri, 05 Jul 2024 18:54:37 +0800</lastBuildDate>
         <category>stock</category>
         <category>END</category>
         <category>FK</category>
         <category>Preview</category>
         <category>Math</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/07/05/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/</guid>
+            <title>计组第三章：存储系统</title>
+            <link>https://chchch-art.github.io/2024/07/05/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/</link>
+            <pubDate>Fri, 05 Jul 2024 18:54:37 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;第一节：存储器概述&lt;/p&gt;
+&lt;p&gt;习题分析总结：&lt;/p&gt;
+&lt;p&gt;1：其实题目本身不重要，重要的是其提供的四个单词含义需要分别记忆清楚&lt;/p&gt;
+&lt;p&gt;2：存取时间是指完成一次读写操作的时间，存取周期是指两次读写操作的间隔时间&lt;/p&gt;
+&lt;p&gt;对存取周期、总线周期等一系列周期、字长的总结在文档内有&lt;/p&gt;
+&lt;p&gt;3：按XX编址、按XX寻址，一个存储单元的位数是XX，其实代表的都是一个含义&lt;/p&gt;
+&lt;p&gt;MDR位数、数据线位数、存储字长是可以不一样的&lt;/p&gt;
+&lt;p&gt;一般而言其均是一致性的，但也可以不一样，其实主要是涉及到一次还是多次访存&lt;/p&gt;
+&lt;p&gt;如果数据线位数和存储字长一样，那么一个总线周期就可以完成一次存取操作&lt;/p&gt;
+&lt;p&gt;如果数据线位数和存储字长不一样（其实这个倒没有什么固定的，就是不能大于字长&lt;/p&gt;
+&lt;p&gt;MDR的位数一般和数据线的宽度是一样的，记住这个结论即可&lt;/p&gt;
+&lt;p&gt;5：CPU能够直接访问的只有CPU内寄存器、Cache、主存&lt;/p&gt;
+&lt;p&gt;外存无法和CPU交互，主存可以和CPU内的MAR、MDR交互但不能和其他交互&lt;/p&gt;
+&lt;p&gt;因为其本质都是先和MDR交互再和PC、IC这些寄存器交互的，Cache不在CPU内但能交互&lt;/p&gt;
+&lt;p&gt;6：时间单位，s/m/u/n/p&lt;/p&gt;
+&lt;p&gt;10：各个层级之间解决的问题，Cache和主存解决速度、主存和辅存解决存储容量&lt;/p&gt;
+&lt;p&gt;13：书上一模一样，有原句，纯粹是没有读到这句话，主存和Cache是硬件自动完成的&lt;/p&gt;
+&lt;p&gt;而主存和辅存之间是OS和硬件一起完成的（联系虚页表等&lt;/p&gt;
+&lt;p&gt;14：需要注意的是，RAM和ROM都是半导体存储器，名称带ROM的不一定是ROM&lt;/p&gt;
+&lt;p&gt;例如CD-ROM属于光存储器，就不能算作是ROM，虽然形式上确实符合ROM的所有性质&lt;/p&gt;
+&lt;p&gt;必要条件而已&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;第二节：主存储器&lt;/p&gt;
+&lt;p&gt;1：SRAM不支持地址引脚的复用，只有DRAM，其实因为SRAM本就没几个引脚，不必复用&lt;/p&gt;
+&lt;p&gt;且一般而言也并不支持复用，需要特别注意下，一般DRAM支持复用，SRAM并不支持&lt;/p&gt;
+&lt;p&gt;2：数据线不能复用，地址线可以复用（你告诉我数据线怎么复用？&lt;/p&gt;
+&lt;p&gt;3：DRAM的刷新以行为单位，整个存储体的每一个芯片的每一行都会被同时进行刷新&lt;/p&gt;
+&lt;p&gt;每次刷新就类似于一次读操作，需要一个存取周期，其和读操作仅差了输出的一步而已&lt;/p&gt;
+&lt;p&gt;4：集中刷新、异步刷新都有死时间，只有分散刷新没有死时间&lt;/p&gt;
+&lt;p&gt;6：关于易失性与否，RAM是易失的，其他都是不易失的，RAM和ROM区别在于易失与否&lt;/p&gt;
+&lt;p&gt;7：书上一模一样具有原句，同样是忽略了书上的原句，没有注意看&lt;/p&gt;
+&lt;p&gt;实际上主板上的ROM也构成主存的一部分，其即为BIOS芯片，其存储引导程序&lt;/p&gt;
+&lt;p&gt;引导程序并不是引导操作系统装入的程序，而是引导装入引导操作系统的程序&lt;/p&gt;
+&lt;p&gt;然后由操作系统引导程序引导操作系统进入内存，中间省略一部分内容&lt;/p&gt;
+&lt;p&gt;这个引导程序存储在磁盘上，同样的，操作系统本身也存储在磁盘上面的&lt;/p&gt;
+&lt;p&gt;10：其实出题都比较严谨的，只谈论了地址引脚线加上数据引脚线一共有多少根&lt;/p&gt;
+&lt;p&gt;而根本没有去谈论整个芯片到底有多少根线，因为那样就需要加上控制线和片选线了&lt;/p&gt;
+&lt;p&gt;具体届时看出题人以何种方式出题&lt;/p&gt;
+&lt;p&gt;此外需要注意的是，一般这种情况默认以一个芯片的行、列数作地址线的位数&lt;/p&gt;
+&lt;p&gt;12：U盘是基于闪存的辅存、硬盘是基于SSD（其实也是基于闪存的存储器&lt;/p&gt;
+&lt;p&gt;13：具体不再赘述，主存的组成包括了主板上的一系列ROM，而不仅是RAM，可统一编址&lt;/p&gt;
+&lt;p&gt;15：一次刷新是刷新一整行，和刷新一个位置一样，均需要一个存取周期，就是次读&lt;/p&gt;
+&lt;p&gt;无非其不进行输出而已&lt;/p&gt;
+&lt;p&gt;16：不论是字拓展还是位拓展还是字位拓展均不会影响的，必然是每个芯片都同时刷新&lt;/p&gt;
+&lt;p&gt;但具体的刷新时间上面可能就需要具体根据结构计算&lt;/p&gt;
+&lt;p&gt;22：其实关于多体存储器，个人的一些看法和观点思路&lt;/p&gt;
+&lt;p&gt;对于最少的存储体个数，这个是能够理解的，存储体越多，每个存储体能休息时间越长&lt;/p&gt;
+&lt;p&gt;可能就不再是一直的忙碌，中间有间隔的休息时间，总线周期内取一个字不变&lt;/p&gt;
+&lt;p&gt;但个人认为这个存储体的个数是不能一直增加的，因为存储体也需要时间进行存取操作&lt;/p&gt;
+&lt;p&gt;如果在一个总线周期内存储器都没有准备好数据或者说都没有传送完数据&lt;/p&gt;
+&lt;p&gt;然后又启动下一个，那么必然会导致总线占用的权限冲突，或者总线就得等他传完&lt;/p&gt;
+&lt;p&gt;他这里想表达的含义就是在已经正常流水的情况下，一个总线周期能四次访存取数据&lt;/p&gt;
+&lt;p&gt;表达的单纯就是这个意思而已，C选项是不成立的，不是每一个，而只有一个&lt;/p&gt;
+&lt;p&gt;29：不论存储芯片到底是以什么拓展方式组成存储器，其地址线均是对于一个芯片而言&lt;/p&gt;
+&lt;p&gt;除非题目刻意问到了片选线、控制线的内容，否则是不需要考虑的&lt;/p&gt;
+&lt;p&gt;片选信号是以每一个二进制数选择一片的，可以参考多体交叉编址给的地址例&lt;/p&gt;
+&lt;p&gt;34：对于书上内容的理解错误，书上写的是“位平面数”，个人理解为芯片的个数&lt;/p&gt;
+&lt;p&gt;而实际上含义无非就是按几位进行编制，每一个存储单元有多少位，仅此而已&lt;/p&gt;
+&lt;p&gt;而且这边也说了，是对应每一个芯片，其行缓冲区有多大，就是一行的大小&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/06/25/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E8%BF%90%E7%AE%97/</guid>
             <title>计组第二章：数据运算（C语言类型T.T</title>
