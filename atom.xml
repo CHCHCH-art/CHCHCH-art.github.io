@@ -6019,156 +6019,6 @@ do &amp;#123;
         <updated>2024-03-29T17:57:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://chchch-art.github.io/2024/03/28/%E8%AE%A1%E7%BB%843/</id>
-        <title>计组3</title>
-        <link rel="alternate" href="https://chchch-art.github.io/2024/03/28/%E8%AE%A1%E7%BB%843/"/>
-        <content type="html">&lt;p&gt;基本数电知识补充：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/27.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/28.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/29.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;加法器简单知识（不必深究），可见加法器、并行进位加法器篇章&lt;/p&gt;
-&lt;p&gt;基本原理：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/32.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;可构建：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/33.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;串联后可构建：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/34.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;注意进位需要上一次运算完成后才能判断，因而串联效率不高&lt;/p&gt;
-&lt;p&gt;而进位实际上可以在一开始就算完，后面一次性给出，因而就可以构建并行加法器&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/35.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/36.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这边才是核心内容，需要了解其各端口表示什么，不必追求死磕原理&lt;/p&gt;
-&lt;p&gt;虽然原理后面学下去也能懂就是了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;注：加法器是ALU的核心器件&lt;/p&gt;
-&lt;p&gt;MUX（多路选择器：&lt;/p&gt;
-&lt;p&gt;若是八个输入端则需要3位二进制来表达不同的输入端口号&lt;/p&gt;
-&lt;p&gt;本质是用二进制表达其端口号，控制信号即为指定该位置的输入可进入&lt;/p&gt;
-&lt;p&gt;注：有时候可能会多一个控制信号单独表示什么都不选择，那么就需要不止三位信号&lt;/p&gt;
-&lt;p&gt;或者拿一个空端口作为一个补充也可以实现同样功能，具体再议&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/30.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;三态门，区分于非门，当op为1时允许通过，当op为0时禁止信号通过&lt;/p&gt;
-&lt;p&gt;op只需要一位即可，因为一位就是二进制的0和1两种状态，可以拥有非运算的特性&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/31.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;电路基本不怎么考，上面的内容知道即可&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;ALU：&lt;/p&gt;
-&lt;p&gt;核心是参考了MUX的多路选择需要的位数&lt;/p&gt;
-&lt;p&gt;以及需要注意的是ALU、通用寄存器组的宽度位数即为机器字长&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/38.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;移位，向右或者向左移位&lt;/p&gt;
-&lt;p&gt;对正数来说其原码、补码、反码都一致，因而移位所有进程都是一样的补0&lt;/p&gt;
-&lt;p&gt;需要注意的就是此类符号位不参与移动&lt;/p&gt;
-&lt;p&gt;对负数来说，其原码补充也是0，但因为反码全部取反，因而用1补，补码见下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/41.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/39.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;可应用于乘法或者除法：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/40.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;逻辑移位不需要考虑符号位因为没有符号位&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/42.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;循环而言，注意下进位位，主要是对超过八位二进制相加得出的一个进位位的存储&lt;/p&gt;
-&lt;p&gt;循环就是把第一个数扔到后面，其他的前进一位，带进位位的无非是把进位位也做数&lt;/p&gt;
-&lt;p&gt;相当于移动而已，循环移动，实在不记得去看动图就行&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;注意下移位溢出只有两种情况：&lt;/p&gt;
-&lt;p&gt;一种是无符号逻辑移位溢出(或者说解释为逻辑移位时的溢出，只存在于高位的1被移出&lt;/p&gt;
-&lt;p&gt;一种是有符号的算数移位溢出，即符号位移出后数值位最高位和其符号位不同&lt;/p&gt;
-&lt;p&gt;另外两种移动只能被称为丢失精度，尤其特指低位的1被移出&lt;/p&gt;
-&lt;p&gt;补码加减法：&lt;/p&gt;
-&lt;p&gt;补码内只有加法，对于减法只需要把减数变为其补码形式然后变为相加即可&lt;/p&gt;
-&lt;p&gt;相加得出的结果是原码，带符号原码，可以直接转为值&lt;/p&gt;
-&lt;p&gt;注意溢出情况的判断，基本的判断情况就是两个相同符号的数相加得到了不同符号的数&lt;/p&gt;
-&lt;p&gt;正+正得到一个负数那么就是上溢，负+负得到一个正数那么就是下溢&lt;/p&gt;
-&lt;p&gt;又称为正溢、负溢&lt;/p&gt;
-&lt;p&gt;那么这个就是溢出的情况，后续一系列判断方法均以此为思想&lt;/p&gt;
-&lt;p&gt;因为只有两种情况，正+正=负，负+负=正，比较容易理解和写出的，异号不可能溢出&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/44.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;其实均理解为一个是原先的符号相加应该得到的符号结果&lt;/p&gt;
-&lt;p&gt;一个是后续数值相加后得到的符号结果，若两者不同那么说明就算溢出了&lt;/p&gt;
-&lt;p&gt;可以这样理解，毕竟以应用为主&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/45.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这个也是基于和上面一样的逻辑，后面一位存储的是相加的符号位结果&lt;/p&gt;
-&lt;p&gt;前面一位存储的是符号位原来的结果，两者如果不一样那么肯定是溢出了&lt;/p&gt;
-&lt;p&gt;稍微注意下除二、除四取模，指代1000截断第三位、第二位以后的结果即为取模&lt;/p&gt;
-&lt;p&gt;因为后面的一段和必然小于4或者2&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/46.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;注意下无符号数的范围是零和全体正数，当相减为负数或者相加超过上限就会溢出&lt;/p&gt;
-&lt;p&gt;另外，二进制加法并不熟练，建议多练习（建议单独去练习&lt;/p&gt;
-&lt;p&gt;后续原理未知，加法、减法溢出逻辑暂时不知晓&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/47.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;补码加减电路，带符号：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/48.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;注意下多路选择器以及Cin的一些逻辑处理，这块很巧妙&lt;/p&gt;
-&lt;p&gt;同样可以处理不带符号的，注意需要省略最高位，只保留有效位&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/49.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;结合标志位的生成品尝，尤其是看几个溢出判断是怎么来的，电路很巧妙&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;原码、补码乘法/除法：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;注，二进制加减法成为最基本的运算手段，必须熟练掌握&lt;/p&gt;
-&lt;p&gt;原码乘法：&lt;/p&gt;
-&lt;p&gt;不需要作任何准备工作，只需要把原码所对应的无符号相应存储码表示即可(机器字长&lt;/p&gt;
-&lt;p&gt;建议手算模拟的时候写作ACC、MQ、X，Y的形式，便于直接移位的判断&lt;/p&gt;
-&lt;p&gt;首先是，原码而言，符号位不参与乘法过程，直接单独用异或进行单独的判断&lt;/p&gt;
-&lt;p&gt;最终两个乘法数都是无符号数的形式，注意乘数存于MQ中，被乘数存于X中&lt;/p&gt;
-&lt;p&gt;口头描述过程：&lt;/p&gt;
-&lt;p&gt;一开始将ACC置空&lt;/p&gt;
-&lt;p&gt;然后根据MQ的最后一位决定是做ACC+X-&amp;gt;ACC还是直接移位(0对应先+0然后再移位，省略&lt;/p&gt;
-&lt;p&gt;然后ACC、MQ整体右移，ACC最高位补0&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/50.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;个人建议而言，其实后面的符号位0还是尽可能写上并且作标注，免得忘记哪个是位&lt;/p&gt;
-&lt;p&gt;然后结果也就是这样了，最后MQ内还有最后一位乘数符号位的存在，这样就算是结束了&lt;/p&gt;
-&lt;p&gt;把结果和余数相加(余数指MQ内除符号位的其他位，然后小数点放在正确位置，改符号&lt;/p&gt;
-&lt;p&gt;对于整数而言也是一样的，无非就是改变小数点的位置，除非是溢出，那么需要关心下&lt;/p&gt;
-&lt;p&gt;PS：如果是一个1000.0101乘1010.1101的形式，总体也是不变的，无非改为了两次&lt;/p&gt;
-&lt;p&gt;对整数一次，对小数一次，最终的结果相加即可(注意符号&lt;/p&gt;
-&lt;p&gt;补码乘法(BOOTH算法：&lt;/p&gt;
-&lt;p&gt;对于补码乘法需要的准备工作，求出x、y相对应的补码，以及-x的补码(被乘数补码&lt;/p&gt;
-&lt;p&gt;建议手算模拟的时候写作ACC、MQ、X补，-X补，Y补的形式，均为双位符号位&lt;/p&gt;
-&lt;p&gt;注：乘法是会产生进位的，这边是逻辑移动，首位的进位也是需要移动的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/51.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;口头描述其过程&lt;/p&gt;
-&lt;p&gt;首先写好辅助位，ACC前面两位辅助位为符号位重复，MQ最后一位辅助位初始为0&lt;/p&gt;
-&lt;p&gt;开始操作，拿MQ最后一位符号位减去MQ最后一位，得到三种结果1/-1/0&lt;/p&gt;
-&lt;p&gt;当为0的时候那么就直接右移一位，注意这边是算数右移，符号位不变，符号位填补空&lt;/p&gt;
-&lt;p&gt;当为1的时候那么就直接加x补，如果出现最高位溢出的情况，直接舍弃最高超出位&lt;/p&gt;
-&lt;p&gt;注意这个需要带着符号位一起参与运算，运算完了以后再向右移动，算数右移&lt;/p&gt;
-&lt;p&gt;当为-1则是加-x补，其他都是一样的&lt;/p&gt;
-&lt;p&gt;最终最后一个符号位也需要参与运算的，同样按照上述规则&lt;/p&gt;
-&lt;p&gt;但可以放弃其的移动，因为计算已经完毕，最终把除符号位的余数加在前面补码后面&lt;/p&gt;
-&lt;p&gt;注意最终得到的结果也是一个补码&lt;/p&gt;
-&lt;p&gt;注意，符号位的高位右移动是填充符号位的&lt;/p&gt;
-&lt;p&gt;无符号数乘法&lt;/p&gt;
-&lt;p&gt;大体上过程是类似的，无非是第一位也是数值位，因而需要一个多余的进位寄存器&lt;/p&gt;
-&lt;p&gt;也就是32位的，实际上需要33位，一位寄存器，右移的时候顺便也要把进位的移动进去&lt;/p&gt;
-&lt;p&gt;寄存器移动默认补0（应该是&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;补码、原码除法后续有空会继续补上的…尤其是加减交替法&lt;/p&gt;
-&lt;p&gt;原码的恢复余数法，建议直接手除算出答案以后，根据答案结果对过程进行判定&lt;/p&gt;
-&lt;p&gt;因为机器每次都是商一不会商0，因而每次商0必然会是先加-x补然后加x补的复原过程&lt;/p&gt;
-&lt;p&gt;机器而言&lt;/p&gt;
-&lt;p&gt;ACC放被除数，MQ放商，X放除数，依据无符号计算，符号位留到最后计算&lt;/p&gt;
-&lt;p&gt;每次计算完成后都会去判断这个值是否为负数，如果是负数那么就会恢复原值商0&lt;/p&gt;
-&lt;p&gt;然后再整体向右边移动一位，商的最后一位每次都是需要求的位置&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;都是需要拓展的，因为加减乘除不一定是同位相加&lt;/p&gt;
-&lt;p&gt;对于整数部分，对高位拓展，对于小数部分，进行低位拓展&lt;/p&gt;
-&lt;p&gt;基本都是N位和2N位运算的可能性(其他应该也可以拓展&lt;/p&gt;
-&lt;p&gt;对于定点数而言，非原码，单纯的无符号数&lt;/p&gt;
-&lt;p&gt;小数点前的，向着高位拓展，补0&lt;/p&gt;
-&lt;p&gt;小数点后的向着低位拓展，补0&lt;/p&gt;
-&lt;p&gt;对于原码而言，除去符号位，数值位高位拓展补0，小数位低位拓展补0&lt;/p&gt;
-&lt;p&gt;对于补码而言，有一定的区别，正数的补码和其原码一样所以步骤也一样&lt;/p&gt;
-&lt;p&gt;对于负数略有区别&lt;/p&gt;
-&lt;p&gt;注意需要区分左移和右移&lt;/p&gt;
-&lt;p&gt;对于负数整数位，高位拓展用符号位拓展&lt;/p&gt;
-&lt;p&gt;对于负数小数位，低位拓展用零拓展即可，至于原理暂未…&lt;/p&gt;
-&lt;p&gt;PS:注意区分拓展和移动(又要区分算数移动和逻辑移动&lt;/p&gt;
-</content>
-        <updated>2024-03-28T08:18:30.000Z</updated>
-    </entry>
-    <entry>
         <id>https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%842/</id>
         <title>码的互相转换以及补充</title>
         <link rel="alternate" href="https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%842/"/>
@@ -6279,9 +6129,40 @@ do &amp;#123;
     </entry>
     <entry>
         <id>https://chchch-art.github.io/2023/09/20/hello-world/</id>
-        <title>英语高频词例句</title>
+        <title>英语文章汇总</title>
         <link rel="alternate" href="https://chchch-art.github.io/2023/09/20/hello-world/"/>
-        <content type="html"></content>
+        <content type="html">&lt;p&gt;05-Text 1&lt;/p&gt;
+&lt;p&gt;　　Everybody loves a fat pay rise. Yet pleasure at your own can vanish if you learn that a colleague has been given a bigger one. Indeed, if he has a reputation for slacking, you might even be outraged. Such behaviour is regarded as “all too human,” with the underlying assumption that other animals would not be capable of this finely developed sense of grievance. But a study by Sarah Brosnan and Frans de Waal of Emory University in Atlanta, Georgia, which has just been published in Nature, suggests that it is all too monkey, as well.&lt;/p&gt;
+&lt;p&gt;　　The researchers studied the behaviour of female brown capuchin monkeys. They look cute. They are good-natured, co-operative creatures, and they share their food readily. Above all, like their female human counterparts, they tend to pay much closer attention to the value of “goods and services” than males.&lt;/p&gt;
+&lt;p&gt;　　Such characteristics make them perfect candidates for Dr. Brosnan’s and Dr. de Waal’s study. The researchers spent two years teaching their monkeys to exchange tokens for food. Normally, the monkeys were happy enough to exchange pieces of rock for slices of cucumber. However, when two monkeys were placed in separate but adjoining chambers, so that each could observe what the other was getting in return for its rock, their behaviour became markedly different.&lt;/p&gt;
+&lt;p&gt;　　In the world of capuchins, grapes are luxury goods (and much preferable to cucumbers). So when one monkey was handed a grape in exchange for her token, the second was reluctant to hand hers over for a mere piece of cucumber. And if one received a grape without having to provide her token in exchange at all, the other either tossed her own token at the researcher or out of the chamber, or refused to accept the slice of cucumber. Indeed, the mere presence of a grape in the other chamber (without an actual monkey to eat it) was enough to induce resentment in a female capuchin.&lt;/p&gt;
+&lt;p&gt;　　The researchers suggest that capuchin monkeys, like humans, are guided by social emotions. In the wild, they are a co-operative, group-living species. Such co-operation is likely to be stable only when each animal feels it is not being cheated. Feelings of righteous indignation, it seems, are not the preserve of people alone. Refusing a lesser reward completely makes these feelings abundantly clear to other members of the group. However, whether such a sense of fairness evolved independently in capuchins and humans, or whether it stems from the common ancestor that the species had 35 million years ago, is, as yet, an unanswered question.&lt;/p&gt;
+&lt;p&gt;　　21. In the opening paragraph, the author introduces his topic by ________.&lt;/p&gt;
+&lt;p&gt;　　[A] posing a contrast&lt;/p&gt;
+&lt;p&gt;　　[B] justifying an assumption&lt;/p&gt;
+&lt;p&gt;　　[C] making a comparison&lt;/p&gt;
+&lt;p&gt;　　[D] explaining a phenomenon&lt;/p&gt;
+&lt;p&gt;　　22. The statement “it is all too monkey” (Last line, Paragraph l) implies that ________.&lt;/p&gt;
+&lt;p&gt;　　[A] monkeys are also outraged by slack rivals&lt;/p&gt;
+&lt;p&gt;　　[B] resenting unfairness is also monkeys’ nature&lt;/p&gt;
+&lt;p&gt;　　[C] monkeys, like humans, tend to be jealous of each other&lt;/p&gt;
+&lt;p&gt;　　[D] no animals other than monkeys can develop such emotions&lt;/p&gt;
+&lt;p&gt;　　23. Female capuchin monkeys were chosen for the research most probably because they are ________.&lt;/p&gt;
+&lt;p&gt;　　[A] more inclined to weigh what they get&lt;/p&gt;
+&lt;p&gt;　　[B] attentive to researchers’ instructions&lt;/p&gt;
+&lt;p&gt;　　[C] nice in both appearance and temperament&lt;/p&gt;
+&lt;p&gt;　　[D] more generous than their male companions&lt;/p&gt;
+&lt;p&gt;　　24. Dr. Brosnan and Dr. de Waal have eventually found in their study that the monkeys ________.&lt;/p&gt;
+&lt;p&gt;　　[A] prefer grapes to cucumbers&lt;/p&gt;
+&lt;p&gt;　　[B] can be taught to exchange things&lt;/p&gt;
+&lt;p&gt;　　[C] will not be co-operative if feeling cheated&lt;/p&gt;
+&lt;p&gt;　　[D] are unhappy when separated from others&lt;/p&gt;
+&lt;p&gt;　　25. What can we infer from the last paragraph?&lt;/p&gt;
+&lt;p&gt;　　[A] Monkeys can be trained to develop social emotions.&lt;/p&gt;
+&lt;p&gt;　　[B] Human indignation evolved from an uncertain source.&lt;/p&gt;
+&lt;p&gt;　　[C] Animals usually show their feelings openly as humans do.&lt;/p&gt;
+&lt;p&gt;　　[D] Cooperation among monkeys remains stable only in the wild&lt;/p&gt;
+</content>
         <category term="Preview" />
         <updated>2023-09-20T07:08:00.000Z</updated>
     </entry>
