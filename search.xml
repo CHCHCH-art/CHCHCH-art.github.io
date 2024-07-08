@@ -65,6 +65,38 @@
 <p>　　[B] a lesson from the latter is applicable to the former</p>
 <p>　　[C] the outcome of the latter aggravates the former</p>
 <p>　　[D] both of them have turned from bad to worse</p>
+<hr>
+<p>05-T3：</p>
+<p>Of all the components of a good night’s sleep, dreams seem to be least within our control. In dreams, a window opens int0 a world where logic is suspended and dead people speak. A century ago, Freud formulated his revolutionary theory that dreams were the disguised shadows of our unconscious desires and fears; by the late 1970s, neurologists had switched to thinking of them as just “mental noise” – the random byproducts of the neural-repair work that goes on during sleep. Now researchers suspect that dreams are part of the mind’s emotional thermostat, regulating moods while the brain is “off-line.” And one leading authority says that these intensely powerful mental events can be not only harnessed but actually brought under conscious control, to help us sleep and feel better, “It’s your dream,” says Rosalind Cartwright, chair of psychology at Chicago’s Medical Center. “If you don’t like it, change it.”</p>
+<p>　　Evidence from brain imaging supports this view. The brain is as active during REM (rapid eye movement) sleep – when most vivid dreams occur – as it is when fully awake, says Dr, Eric Nofzinger at the University of Pittsburgh. But not all parts of the brain are equally involved; the limbic system (the “emotional brain”) is especially active, while the prefrontal cortex (the center of intellect and reasoning) is relatively quiet. “We wake up from dreams happy or depressed, and those feelings can stay with us all day.” says Stanford sleep researcher Dr. William Dement.</p>
+<p>　　The link between dreams and emotions shows up among the patients in Cartwright’s clinic. Most people seem to have more bad dreams early in the night, progressing toward happier ones before awakening, suggesting that they are working through negative feelings generated during the day. Because our conscious mind is occupied with daily life we don’t always think about the emotional significance of the day’s events – until, it appears, we begin to dream.</p>
+<p>　　And this process need not be left to the unconscious. Cartwright believes one can exercise conscious control over recurring bad dreams. As soon as you awaken, identify what is upsetting about the dream. Visualize how you would like it to end instead; the next time it occurs, try to wake up just enough to control its course. With much practice people can learn to, literally, do it in their sleep.</p>
+<p>　　At the end of the day, there’s probably little reason to pay attention to our dreams at all unless they keep us from sleeping or “we wake up in a panic,” Cartwright says. Terrorism, economic uncertainties and general feelings of insecurity have increased people’s anxiety. Those suffering from persistent nightmares should seek help from a therapist. For the rest of us, the brain has its ways of working through bad feelings. Sleep – or rather dream – on it and you’ll feel better in the morning.</p>
+<p>　　31. Researchers have come to believe that dreams ________.</p>
+<p>　　[A] can be modified in their courses</p>
+<p>　　[B] are susceptible to emotional changes</p>
+<p>　　[C] reflect our innermost desires and fears</p>
+<p>　　[D] are a random outcome of neural repairs</p>
+<p>　　32. By referring to the limbic system, the author intends to show ________.</p>
+<p>　　[A] its function in our dreams</p>
+<p>　　[B] the mechanism of REM sleep</p>
+<p>　　[C] the relation of dreams to emotions</p>
+<p>　　[D] its difference from the prefrontal cortex</p>
+<p>　　33. The negative feelings generated during the day tend to ________.</p>
+<p>　　[A] aggravate in our unconscious mind</p>
+<p>　　[B] develop int0 happy dreams</p>
+<p>　　[C] persist till the time we fall asleep</p>
+<p>　　[D] show up in dreams early at night</p>
+<p>　　34. Cartwright seems to suggest that ________.</p>
+<p>　　[A] waking up in time is essential to the ridding of bad dreams</p>
+<p>　　[B] visualizing bad dreams helps bring them under control</p>
+<p>　　[C] dreams should be left to their natural progression</p>
+<p>　　[D] dreaming may not entirely belong to the unconscious</p>
+<p>　　35. What advice might Cartwright give to those who sometimes have bad dreams?</p>
+<p>　　[A] Lead your life as usual.</p>
+<p>　　[B] Seek professional help.</p>
+<p>　　[C] Exercise conscious control.</p>
+<p>　　[D] Avoid anxiety in the daytime.</p>
 ]]></content>
       <categories>
         <category>Preview</category>
@@ -6033,13 +6065,13 @@ do &#123;
 <p>主存也称内存，凡是运行期间的程序、变量均需要先调入主存，是整个计算机系统重点</p>
 <p>辅存可以分多种，一般有：光盘、磁盘、硬盘、U盘、磁带等类型</p>
 <p>Cache是SRAM，主存是DRAM，DRAM往往因为引脚数量多需要复用引脚，而SRAM并不需要</p>
-<p>RAM/ROM均是半导体存储器，这在后面主存一节第一句话就是如此，所以需要区分</p>
+<p>RAM&#x2F;ROM均是半导体存储器，这在后面主存一节第一句话就是如此，所以需要区分</p>
 <p>两者之间最大的差别在于是否断电易失性，其他基本一致</p>
 <p><strong>存储器性能指标</strong></p>
 <p>存取时间一般比较短、存取周期一般比较长，这里后面会和多体交叉存储器一起概述</p>
 <p>主要在于多体交叉存储器的数量其实是既有上限又有下限的，而书上仅给出了下限而已</p>
 <p>关于时间单位换算：</p>
-<p><img src="/img/ky/16.png" alt=""></p>
+<p><img src="/img/ky/16.png"></p>
 <p><strong>多层次存储系统</strong></p>
 <p>存储系统的容量主要看的是外存和ROM当中的内容，即非主存、Cache中的内容</p>
 <p>因为主存、Cache中保存的均只是外存中的副本而已，主存和Cache间的调度是硬件完成</p>
@@ -6059,7 +6091,7 @@ do &#123;
 <p>5：CPU能够直接访问的只有CPU内寄存器、Cache、主存</p>
 <p>外存无法和CPU交互，主存可以和CPU内的MAR、MDR交互但不能和其他交互</p>
 <p>因为其本质都是先和MDR交互再和PC、IC这些寄存器交互的，Cache不在CPU内但能交互</p>
-<p>6：时间单位，s/m/u/n/p</p>
+<p>6：时间单位，s&#x2F;m&#x2F;u&#x2F;n&#x2F;p</p>
 <p>10：各个层级之间解决的问题，Cache和主存解决速度、主存和辅存解决存储容量</p>
 <p>13：书上一模一样，有原句，纯粹是没有读到这句话，主存和Cache是硬件自动完成的</p>
 <p>而主存和辅存之间是OS和硬件一起完成的（联系虚页表等</p>
@@ -6072,7 +6104,8 @@ do &#123;
 <p>ROM和RAM最大的区别就在于是否断电易失性，随机存取、可读写基本一致，ROM写较慢</p>
 <p><strong>工作原理</strong></p>
 <p>SRAM是触发器构成、DRAM是电容、寄存器也是触发器构成的</p>
-<p>DRAM的刷新和其芯片的组成无关，一定是所有芯片的所有行被同时一起刷新</p>
+<p>DRAM的刷新时间和其组成无关，不论是按照何种方式刷新其均是对基本芯片行刷新</p>
+<p>也就是内部芯片假如是32·32的，那么就刷新32行即可，王道P106为勘误点</p>
 <p>每一行刷新的时间就是一次存取周期（因为需要对一整行进行复读，相当于一次读操作</p>
 <p>集中刷新、异步刷新的名称具体代称需要清楚，其均是有死时间存在的</p>
 <p>对于分散刷新则不存在死时间，其所谓的死时间其实就是一次存取周期的后半段</p>
@@ -6149,10 +6182,78 @@ do &#123;
 <p>第三节：主存与CPU的连接</p>
 <p><strong>三类拓展</strong></p>
 <p>位拓展是必须的，字拓展并不是必要的，因为CPU是允许一部分地址引脚空闲的</p>
-<p>具体的拓展方式这里不展开，看书即可</p>
+<p>需要刻意说下各种拓展方式所对应的地址、数据存储方式</p>
+<p>位拓展：</p>
+<p>位拓展其每一组的几个芯片被共同编址，即多个芯片的同一地址空间重叠来存储数据</p>
+<p>一个数据其前后不同位可能被分散到不同的芯片上，但片选而言他们属同一芯片内</p>
+<p>例如一个Short型，其存储在4M·16位的存储器上，以4M·4位的芯片构成整个存储器</p>
+<p>那么一个Short型数据虽然是存在一个地址上的，但实际数据分四段存储在不同芯片</p>
+<p>这个虽然从未考过，但也是一个可以考察的方向，值得注意</p>
+<p>字拓展：</p>
+<p>其地址以高位编码区分，相当于高位作为片选，低位作为片内地址</p>
+<p>数据存储除非其超过了一个片的存储范围，不然是不可能跑到别的芯片上面分块存的</p>
+<p>字位拓展：</p>
+<p>实际上就是在上述的基础上拓展了而已，其每个字的存储是分散到不同芯片的</p>
+<p>然后具体又可以根据其高位地址编码来区分其属于第几组</p>
+<p>关于刷新策略：</p>
+<p>刷新不受其芯片组成结构的影响，最终均是以每个最基本的组成芯片行为单位去刷新</p>
 <p><strong>片选</strong></p>
 <p>一般采用以值选取的方式，即增加一个译码器，而很少采用以位选取（增加一堆引脚</p>
 <p>一般地址而言，CPU的低位地址用于片内地址，高位地址用于片选地址</p>
+<p>一个存储器的编码地址一般按照其一个片选所对应的位数决定，也就是一个片几位</p>
+<p>其编码就是按照几位来的，一个片32位那么编码自然也按照32位来编地址</p>
+<hr>
+<p>习题总结分析：</p>
+<p>首先确定一件事，存储器的16MB其实隐含了存储器为16M·8位的类型，一般均为此类</p>
+<p>题目中具体提及不同的存储器类型，例如16M·16位，256M·32位</p>
+<p>其隐含含义就是编码以16位或者32位为基准，地址空间为16M和256M，需要注意</p>
+<p>7：根据上面所说，需要先进行位拓展，再进行字拓展，以一个字节作为其编址方式</p>
+<p>而不是以其内部芯片的4位做编址方式的，是按照其内部一个“片”来编址</p>
+<p>此外，计算可以得到其地址位总共14位而没有16位，也就是其高位是空余出来的</p>
+<p>而不能默认是全部填满的，地址位不一定会是填满的</p>
+<p>9：需要特意注意的就是存储地址，从零开始，0、1、2、3就有四个存储范围</p>
+<p>10：16位是其编码方式，一个存储单元的大小，而不是其地址位数，需要先确定这点</p>
+<p>然后其地址空间为32K，即15位，加上其高位三位片选一共18位自然得到结果</p>
+<p>此外需要清楚的是，18位并不构成解释方法，要解释一个进制数是从低位开始解释</p>
+<p>然后高位补零来进行解释的，自然就是B选项</p>
+<p>13：首先位拓展为2K·8位（个人这里写作了4K·8位故算错</p>
+<p>然后得到组号即可，这仅仅是位拓展，不需要考虑芯片到底是哪个的问题</p>
+<p>因为同一组的芯片都是被统一编址的，只有字、字位拓展的情况下需要考虑芯片是哪个</p>
+<p>考虑数据装载的时候则均需要考虑</p>
+<p>14：经典的错误，MAR的地址范围需要覆盖主存的所有地址，而不能仅仅只覆盖一部分</p>
+<p>综合1：</p>
+<p>存储字长一般和一个存储单元长度一致，但具体要看存储体的组成是如何的</p>
+<p>这里单独强调了存储字长长度，那么就是在说MDR的位数，每次只能取一个地址的数据</p>
+<p>除非采用多体，否则就需要多次存取才能拿到一个存储字</p>
+<p>综合3：</p>
+<p>勘误，刷新方式和存储体本身的构造无关，只和构成存储体的最基本芯片行数有关</p>
+<hr>
+<p>第四节：外存</p>
+<p>外存相应的内容在OS最后一节也有相应内容，建议配合观阅、形成知识体系</p>
+<p>计组更加偏硬件一些，OS内的内容更多涉及到怎么去使用磁盘，更加偏向于软件层面</p>
+<p><strong>磁盘存储器的结构</strong></p>
+<p>扇区数：目前磁盘存储能力基本已经不再受限制，对应OS有内容</p>
+<p>磁盘高速缓存并不是一个单独的部件，而是在内存中开辟一块特殊的区域，需要注意</p>
+<p>按簇写盘，往往见于文件系统内</p>
+<p><strong>磁盘存取时间</strong></p>
+<p>在操作系统中的描述更为详细，平均寻道时间是可以被算法优化的</p>
+<p>减少传输延迟的方法就是在不同的盘面上进行错位标号，其基于磁盘的存储方式</p>
+<p>自上而下，自内向外，以柱面的方式存储，磁盘每次读写只能是一个区域</p>
+<p>注：其余内容建议看书，已经较为完善，这里用作一个补充说明、强调重点的作用罢了</p>
+<hr>
+<p>习题总结分析：</p>
+<p>首先需要明确磁盘的时间计算，必须按照公式：传输时间+寻址时间+旋转延迟时间</p>
+<p>中间但凡漏了一个就可能会带来很多麻烦，建议严格写下步骤</p>
+<p>1：关于磁盘利用率，定位到操作系统P228页，多少还是有一些坑在的</p>
+<p>2：磁盘最小的读写单位均是块，在文件系统中文件的存储是以簇为单位</p>
+<p>4：存取时间分为多块内容，加快旋转速度仅仅是一部分而已</p>
+<p>6：SSD硬盘和U盘均基于闪存，其写较慢、读较快，是一类型ROM</p>
+<p>9、11：均是没有按公式计算的结果</p>
+<hr>
+<p>第五节：Cache高速缓存</p>
+<p><strong>局部性原理</strong></p>
+<p>局部性原理其实可以这样简单概述：时间局部性就是一段时间内重复访问</p>
+<p>空间局部性就是一段时间内访问一堆相互邻接的物理单元</p>
 ]]></content>
   </entry>
 </search>
