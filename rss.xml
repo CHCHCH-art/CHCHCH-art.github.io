@@ -5,11 +5,143 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Fri, 05 Jul 2024 18:54:37 +0800</pubDate>
-        <lastBuildDate>Fri, 05 Jul 2024 18:54:37 +0800</lastBuildDate>
+        <pubDate>Thu, 11 Jul 2024 20:00:09 +0800</pubDate>
+        <lastBuildDate>Thu, 11 Jul 2024 20:00:09 +0800</lastBuildDate>
         <category>stock</category>
         <category>Preview</category>
         <category>Math</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/07/11/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/</guid>
+            <title>计组第四章：指令系统</title>
+            <link>https://chchch-art.github.io/2024/07/11/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/</link>
+            <pubDate>Thu, 11 Jul 2024 20:00:09 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;第一节：指令系统&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;指令集&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一台计算机只能运行自己的指令集，因为指令集和硬件有关&lt;/p&gt;
+&lt;p&gt;ISA是软件所能见的部分，软件可以调用计算机内的指令，例如操作系统实现一些功能&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;指令格式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;指令字长而言，其可定长的，也可不定长，定长与否只影响执行操作复杂度&lt;/p&gt;
+&lt;p&gt;如果不定长指令，一般都采取填充的方式，否则可能导致存取一条指令需多次访存&lt;/p&gt;
+&lt;p&gt;流水线需要保证每条指令的取指令时长均一致，定长指令更适合于流水线作业&lt;/p&gt;
+&lt;p&gt;指令种类中需要注意的就是各个指令的访存次数，需要看清，及目的和源操作数的位置&lt;/p&gt;
+&lt;p&gt;零地址指令可以用于数据结构的后缀表达式、前缀表达式的求和以及计算&lt;/p&gt;
+&lt;p&gt;四地址指令的A4字段是直接给出的地址，不需要单独访存&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;操作码及其拓展&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;做题的时候一般需要区分清楚是定长操作码还是非定长操作码&lt;/p&gt;
+&lt;p&gt;定长操作码和非定长操作码均是对“操作码”这个概念阐述的，和指令定长与否无关&lt;/p&gt;
+&lt;p&gt;拓展操作码设计方式从高位开始设计，而不是从低位向上设计，这点需要注意&lt;/p&gt;
+&lt;p&gt;同时必须保留拓展位，因为不能产生后者码和前者码前缀相同的情况&lt;/p&gt;
+&lt;p&gt;如果一定要拓展那么就是和哈夫曼树联系，变长编码，根据访问的频率划分哈夫曼编码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;指令类型&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;重点强调转换指令，JMP/CALL/RET/TRAP(有争议，一般认为是特殊的无条件转移指令)&lt;/p&gt;
+&lt;p&gt;上述均是常见的无条件转移指令，需要刻意留意这一些细节，CALL一定会RET&lt;/p&gt;
+&lt;p&gt;而JMP不一定会RET，TRAP具体看情况，后面中断一节有具体阐述，还有一些联系&lt;/p&gt;
+&lt;p&gt;关注TRAP指令，建议联系中断一节具体阐述&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;习题总结分析：&lt;/p&gt;
+&lt;p&gt;1、2：自命题题目，统考不会这样出&lt;/p&gt;
+&lt;p&gt;关注下之前统考考过的一个类型，就是ISA的主要规定内容，其也是联系实际考察的&lt;/p&gt;
+&lt;p&gt;3：下一条指令的地址由PC给出，每次完成对PC内取指令后PC均会自增该指令地址长度&lt;/p&gt;
+&lt;p&gt;关于自增，其实分为多种情况，主要和指令长、存储字长相关&lt;/p&gt;
+&lt;p&gt;PC在取指令周期内完成自增，在指令执行阶段就是对应下一条指令的地址，自然要加&lt;/p&gt;
+&lt;p&gt;IR中存放的是当前指令的指令内容，应该是在每次取指令周期内更新&lt;/p&gt;
+&lt;p&gt;5：程序控制类指令的目的就在于使得程序具有逻辑，可执行循环、判定、嵌套等&lt;/p&gt;
+&lt;p&gt;6：中断隐指令由硬件实现，P247&lt;/p&gt;
+&lt;p&gt;9：单地址指令即可能有两个操作数，也可能有一个操作数，一个操作码而言&lt;/p&gt;
+&lt;p&gt;既可以是对一个数进行操作，也可以是对两个数进行操作的，很多都是单操作数指令&lt;/p&gt;
+&lt;p&gt;16：可补充，见网页即可&lt;/p&gt;
+&lt;p&gt;综合2：&lt;/p&gt;
+&lt;p&gt;当操作码定长的时候，其长度以最短的情况为最长长度，即当满地址时的剩余码长&lt;/p&gt;
+&lt;p&gt;在做题前就需要区分这是定长操作码还是不定长操作码，否则无法确定“最多”有几条&lt;/p&gt;
+&lt;p&gt;统考曾经多次考察最多有多少条指令，若是不定长操作码就会有些细节改变&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;第二节：指令寻址方式&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;指令寻址&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;PC指令地址会在取指令周期完成一次自增，其自增长度即为该条指令的长度&lt;/p&gt;
+&lt;p&gt;自然其后续周期内均指向下一条指令的初始地址&lt;/p&gt;
+&lt;p&gt;同时需要留意的就是，当指令采用边界对齐的情况下，PC下次就指向下一个边界源&lt;/p&gt;
+&lt;p&gt;相对跳转指令执行周期内，PC已然完成自增，因而需要考虑自增的量，再计算偏移地址&lt;/p&gt;
+&lt;p&gt;不过如果是绝对地址，那么就没有什么好说的，直接覆写PC内的内容&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据寻址：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;关键在于分清形式地址和实际地址，以及最终的数据，三者之间的区别&lt;/p&gt;
+&lt;p&gt;尤其也需要注意题目中问的是实际地址还是最终取得的数据&lt;/p&gt;
+&lt;p&gt;在复合寻址内，以上一次取得的有效地址为下一层复合的基本形式地址，而非内容&lt;/p&gt;
+&lt;p&gt;易错的点就是混淆形式地址和有效地址以及有效地址内的内容，以及间接寻址&lt;/p&gt;
+&lt;p&gt;对于访存类型的地址，其地址必然是一个正数（统考多次考察），转移类则是正负补码&lt;/p&gt;
+&lt;p&gt;偏移寻址往往是能够覆盖整个主存空间的，如果能够覆盖那么转移空间即是整个主存&lt;/p&gt;
+&lt;p&gt;具体类型补充：&lt;/p&gt;
+&lt;p&gt;重定向寄存器、页表基址寄存器、段表基址寄存器即为基地址寄存器&lt;/p&gt;
+&lt;p&gt;堆栈类型的寻址需要留意栈顶、栈底各自的位置、自增的方式&lt;/p&gt;
+&lt;p&gt;硬堆栈完全采用寄存器，不需访主存&lt;/p&gt;
+&lt;p&gt;软堆栈是需要访问一次主存的，因为软堆栈本身就是从主存中划分一块出来用的&lt;/p&gt;
+&lt;p&gt;堆栈寄存器一般是专用的，其隶属于通用寄存器组&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;习题总结分析：&lt;/p&gt;
+&lt;p&gt;1：定长指令提供了拓展操作码的可能，非定长指令的操作码既可定长也可非定长&lt;/p&gt;
+&lt;p&gt;但就拓展操作码而言，其最适用是定长指令(因为是基于指令长度有限才提出的策略&lt;/p&gt;
+&lt;p&gt;指令不定长会增加译码难度，操作码不定长也会增加硬件电路复杂度&lt;/p&gt;
+&lt;p&gt;2：不论是何种转移指令，其最终均是输入到PC内进行更改才能完成转移的&lt;/p&gt;
+&lt;p&gt;TRAP类型指令也同样需要修改PC，因而可以说转移类指令均是修改PC来实现功能的&lt;/p&gt;
+&lt;p&gt;3：指令中的形式地址一般比较短，能够寻址的范围比较小&lt;/p&gt;
+&lt;p&gt;整个计算机中的寄存器比较少，所以如果采用寄存器寻址方式，其形式地址就很短&lt;/p&gt;
+&lt;p&gt;寄存器的寻址范围非常大，主存的地址很长，但主存内容寻址范围非常大&lt;/p&gt;
+&lt;p&gt;7：复合寻址，先变址后间址，变址得到的结果再去进行一次间址，访问主存得到地址&lt;/p&gt;
+&lt;p&gt;变址得到的是其上一层的有效地址，被作为本层的形式地址进行复合访问&lt;/p&gt;
+&lt;p&gt;17：考察补码的表示范围，移码和补码表示宽度一样，但表示的具体范围不同&lt;/p&gt;
+&lt;p&gt;14、16、21、24：均是对PC自增的考察，取指令后PC就会进行一次自增&lt;/p&gt;
+&lt;p&gt;当最终执行的时候就需要转移到下一条指令的位置(边界对齐下&lt;/p&gt;
+&lt;p&gt;对于21：&lt;/p&gt;
+&lt;p&gt;低字节作为字地址的存放方式，本质含义就是数据的低位放在存储位置的开始&lt;/p&gt;
+&lt;p&gt;简单来说就是小端存储，这种考试里面碰到了不要取死磕意图，直接猜含义就做就行&lt;/p&gt;
+&lt;p&gt;20：题目问的是有效地址而非操作数，特别容易混淆的地方&lt;/p&gt;
+&lt;p&gt;其问的是最终的有效地址是什么，而不是问的最终的操作数是什么，这个是题干&lt;/p&gt;
+&lt;p&gt;22：特别需要注意这个“补码表示”，当偏移量为负数的情况下尤其需要注意这一点&lt;/p&gt;
+&lt;p&gt;当符号位为负的情况下，就需要首先向高位拓展符号位，然后再进行相加&lt;/p&gt;
+&lt;p&gt;对于这类二进制相加，直接考虑用加法器中的方法判断是否溢出、进位等事件&lt;/p&gt;
+&lt;p&gt;26：关于这边的相加，重新进行一次回顾和总结：&lt;/p&gt;
+&lt;p&gt;ZF：全零则出一&lt;/p&gt;
+&lt;p&gt;OF：最高位的进位异或次高位的进位&lt;/p&gt;
+&lt;p&gt;CF：最高位的进位和输入位异或的结果，一般用于无符号整数的运算&lt;/p&gt;
+&lt;p&gt;加法则输入为零，减法则输入为一，对于无符号整数的运算而言，其符号位是隐含的&lt;/p&gt;
+&lt;p&gt;因而只会对运算器内的减数进行取反加一，如果不产生进位即为溢出（相加为负数&lt;/p&gt;
+&lt;p&gt;当加法的情况下，输入为零，若两个正数相加，最终超出表达范围，自然产生进位溢出&lt;/p&gt;
+&lt;p&gt;具体到题目内，默认A-B方式，即A-B&amp;gt;0，那么就可以进行分析&lt;/p&gt;
+&lt;p&gt;当A-B&amp;gt;0的情况下，即减法，最高位产生进位仍是正数，那么CF必然就是0（异或逻辑&lt;/p&gt;
+&lt;p&gt;且总体不可能为零，那么就是ZF=0，自然就能选出C这个结果&lt;/p&gt;
+&lt;p&gt;需要注意的几个点：&lt;/p&gt;
+&lt;p&gt;在计算机运算中不论加减法均是补码运算&lt;/p&gt;
+&lt;p&gt;有符号数还是无符号数，都是经过一样的电路运算的，因而标志位都会生成&lt;/p&gt;
+&lt;p&gt;同理，有符号数和无符号数均可直接运算，判断溢出依靠电路逻辑&lt;/p&gt;
+&lt;p&gt;CF、OF的异或逻辑，容易被混淆，这一点需要注意&lt;/p&gt;
+&lt;p&gt;28：注意偏移量取值范围和指令地址取值范围，一者跳转后偏移结果，和PC自增有关！&lt;/p&gt;
+&lt;p&gt;后面的综合题就出了这样一道题&lt;/p&gt;
+&lt;p&gt;29：典型的出题方式，有效地址是XXX，还有一种可能的坑法就是操作数是XXX&lt;/p&gt;
+&lt;p&gt;两者就会有巨大的差别，详细可以参考之前的20题&lt;/p&gt;
+&lt;p&gt;33：主存的地址不支持负数&lt;/p&gt;
+&lt;p&gt;只有偏移量是支持补码表示为负数的情况，地址本身均是不支持负数或者溢出情况的&lt;/p&gt;
+&lt;p&gt;寄存器的地址同样不允许负号的产生，只能是正数，尤其需要重视寻址范围&lt;/p&gt;
+&lt;p&gt;此外，形式地址需要按具体情况决定直接用二进制表示还是采用的补码方式表示&lt;/p&gt;
+&lt;p&gt;偏移法都采用补码&lt;/p&gt;
+&lt;p&gt;综合3：&lt;/p&gt;
+&lt;p&gt;注意主存按“字”编址，自然就会使得指令自增长度变为一，这种细节特别需要考虑&lt;/p&gt;
+&lt;p&gt;一个是指令字长，另外一个就是编址方式，两者决定了这次PC的增额&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;第三节：程序机器代码表示&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;寄存器&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;建议按照名称类别记忆，是需要完整背诵的，具体功能不再赘述，除EBP和ESP外均通用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;汇编指令&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;双操作数指令不能均来自内存、三操作数指令第一个必须是寄存器&lt;/p&gt;
+&lt;p&gt;控制流指令中谈到的IP实际上就是对应的PC&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;转移指令&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;个人认为刻意需要留意原先C语言中的表达式和汇编语言中指令的表达式间的区别&lt;/p&gt;
+&lt;p&gt;这可能就会影响指令阅读中下一条指令到底是IF逻辑还是ELSE逻辑，从而导致混淆出现&lt;/p&gt;
+&lt;p&gt;此外，某一些跳转指令的执行也会改变指令逻辑，需要和刻意和原程序对比理清楚的&lt;/p&gt;
+&lt;p&gt;CMP中的条件就是第一个关注对象，后续指令执行的顺序和原程序顺序就是第二比较点&lt;/p&gt;
+&lt;p&gt;CALL/RET，后续展开的重点内容，需要单独掌握（统考往往结合C语言程序考察&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;选择、循环语句机器指令&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;过程调用(重点)&lt;/strong&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/07/05/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9A%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/</guid>
             <title>计组第三章：存储系统</title>
@@ -22,13 +154,13 @@
 &lt;p&gt;主存也称内存，凡是运行期间的程序、变量均需要先调入主存，是整个计算机系统重点&lt;/p&gt;
 &lt;p&gt;辅存可以分多种，一般有：光盘、磁盘、硬盘、U盘、磁带等类型&lt;/p&gt;
 &lt;p&gt;Cache是SRAM，主存是DRAM，DRAM往往因为引脚数量多需要复用引脚，而SRAM并不需要&lt;/p&gt;
-&lt;p&gt;RAM&amp;#x2F;ROM均是半导体存储器，这在后面主存一节第一句话就是如此，所以需要区分&lt;/p&gt;
+&lt;p&gt;RAM/ROM均是半导体存储器，这在后面主存一节第一句话就是如此，所以需要区分&lt;/p&gt;
 &lt;p&gt;两者之间最大的差别在于是否断电易失性，其他基本一致，均是随机存取&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;存储器性能指标&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;存取时间一般比较短、存取周期一般比较长，这里后面会和多体交叉存储器一起概述&lt;/p&gt;
 &lt;p&gt;主要在于多体交叉存储器的数量其实是既有上限又有下限的，而书上仅给出了下限而已&lt;/p&gt;
 &lt;p&gt;关于时间单位换算：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/16.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/16.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;多层次存储系统&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;存储系统的容量主要看的是外存和ROM当中的内容，即非主存、Cache中的内容&lt;/p&gt;
 &lt;p&gt;因为主存、Cache中保存的均只是外存中的副本而已，主存和Cache间的调度是硬件完成&lt;/p&gt;
@@ -48,7 +180,7 @@
 &lt;p&gt;5：CPU能够直接访问的只有CPU内寄存器、Cache、主存&lt;/p&gt;
 &lt;p&gt;外存无法和CPU交互，主存可以和CPU内的MAR、MDR交互但不能和其他交互&lt;/p&gt;
 &lt;p&gt;因为其本质都是先和MDR交互再和PC、IC这些寄存器交互的，Cache一般集成在CPU中&lt;/p&gt;
-&lt;p&gt;6：时间单位，s&amp;#x2F;m&amp;#x2F;u&amp;#x2F;n&amp;#x2F;p&lt;/p&gt;
+&lt;p&gt;6：时间单位，s/m/u/n/p&lt;/p&gt;
 &lt;p&gt;10：各个层级之间解决的问题，Cache和主存解决速度、主存和辅存解决存储容量&lt;/p&gt;
 &lt;p&gt;13：书上一模一样，有原句，纯粹是没有读到这句话，主存和Cache是硬件自动完成的&lt;/p&gt;
 &lt;p&gt;而主存和辅存之间是OS和硬件一起完成的（联系虚页表等&lt;/p&gt;
@@ -86,6 +218,13 @@
 &lt;p&gt;那么就会导致数据根本读不出来或者说直接被覆盖而没法正常读数据&lt;/p&gt;
 &lt;p&gt;简单而言就是总线周期小于存储体的存取时间，就会导致根本没法正常存取&lt;/p&gt;
 &lt;p&gt;此外，补充多体并行中的轮流启动和同时启动方式，两种的考察会比较隐含，需要留意&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;电路信号输入顺序&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;先写入行信号，再写入列信号&lt;/p&gt;
+&lt;p&gt;需要在行选中信号前把行信号给输入到引脚，同样也需在列选中信号前把列信号给引脚&lt;/p&gt;
+&lt;p&gt;在行信号选入后，需要保持这个行选中信号直到使用以后为止&lt;/p&gt;
+&lt;p&gt;而列选择信号是在行选择信号之后再输入的，在列选择信号之前需要给定读写信号&lt;/p&gt;
+&lt;p&gt;在列选择信号也进入后，那么三个信号就齐全了：行、列、读写，就可以用了&lt;/p&gt;
+&lt;p&gt;中间会有一些延迟，目的是为了使得电路稳定以后再进行操作，不过基本不太可能考&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;1：SRAM不支持地址引脚的复用，只有DRAM，其实因为SRAM本就没几个引脚，不必复用&lt;/p&gt;
 &lt;p&gt;且一般而言也并不支持复用，需要特别注意下，一般DRAM支持复用，SRAM并不支持&lt;/p&gt;
@@ -107,7 +246,7 @@
 &lt;p&gt;13：具体不再赘述，主存的组成包括了主板上的一系列ROM，而不仅是RAM，可统一编址&lt;/p&gt;
 &lt;p&gt;15、16：一整个存储器的刷新需要一个存储周期（一次访存）&lt;/p&gt;
 &lt;p&gt;一行的刷新只需要一个读写周期，读写周期相对存储周期要来得小得多，需要记住&lt;/p&gt;
-&lt;p&gt;刷新周期是一行两次间隔的刷新时长，一般取2ns，刷新频率就是2ns&amp;#x2F;行数&lt;/p&gt;
+&lt;p&gt;刷新周期是一行两次间隔的刷新时长，一般取2ns，刷新频率就是2ns/行数&lt;/p&gt;
 &lt;p&gt;22：其实关于多体存储器，个人的一些看法和观点思路&lt;/p&gt;
 &lt;p&gt;对于最少的存储体个数，这个是能够理解的，存储体越多，每个存储体能休息时间越长&lt;/p&gt;
 &lt;p&gt;可能就不再是一直的忙碌，中间有间隔的休息时间，总线周期内取一个字不变&lt;/p&gt;
@@ -146,8 +285,9 @@
 &lt;p&gt;数据存储除非其超过了一个片的存储范围，不然是不可能跑到别的芯片上面分块存的&lt;/p&gt;
 &lt;p&gt;在具体判断是哪片，建议以地址划分二进制为主&lt;/p&gt;
 &lt;p&gt;字位拓展：&lt;/p&gt;
+&lt;p&gt;目的一般是为在字拓展的基础上充分利用CPU地址（补充：MAR地址需覆盖整个主存&lt;/p&gt;
 &lt;p&gt;实际上就是在上述的基础上拓展了而已，其每个字的存储是分散到不同芯片的&lt;/p&gt;
-&lt;p&gt;然后具体又可以根据其高位地址编码来区分其属于第几组&lt;/p&gt;
+&lt;p&gt;然后具体又可以根据其高位地址编码来区分其属于第几组，可以用除法或者取高位地址&lt;/p&gt;
 &lt;p&gt;关于刷新策略：&lt;/p&gt;
 &lt;p&gt;刷新不受其芯片组成结构的影响，最终均是以每个最基本的组成芯片行为单位去刷新&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;片选&lt;/strong&gt;&lt;/p&gt;
@@ -196,9 +336,11 @@
 &lt;p&gt;注：其余内容建议看书，已经较为完善，这里用作一个补充说明、强调重点的作用罢了&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;RAID&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;核心目的是为了并行读取数据、增加容错率、增加可靠性&lt;/p&gt;
+&lt;p&gt;基本就是对应不同的存储冗余备份策略，海明码4:3存储冗余比，镜像1:1&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;固态硬盘&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;闪存的内部结构首先是基于块的，然后再是基于页的，块作为写单位，页作为读单位&lt;/p&gt;
 &lt;p&gt;动态、静态磨损均衡只是一个在写的时候选择，一个不写也在选择均衡&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/83.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;习题总结分析：&lt;/p&gt;
 &lt;p&gt;首先需要明确磁盘的时间计算，必须按照公式：传输时间+寻址时间+旋转延迟时间&lt;/p&gt;
@@ -215,6 +357,7 @@
 &lt;p&gt;局部性原理其实可以这样简单概述：时间局部性就是一段时间内重复访问&lt;/p&gt;
 &lt;p&gt;空间局部性就是一段时间内访问一堆相互邻接的物理单元&lt;/p&gt;
 &lt;p&gt;CPU给出一个地址，不管Cache到底缺失与否，都是需要去访问一次Cache的，不会变&lt;/p&gt;
+&lt;p&gt;Cache性能分析中，额外需要注意的就是文字游戏:性能提高到/了几倍&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;主存地址解释方法&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;首先明确三个不同映射方式的主存地址解释方法：&lt;/p&gt;
 &lt;p&gt;直接映射：标记位+Cache块号+块内地址&lt;/p&gt;
@@ -224,6 +367,7 @@
 &lt;p&gt;只和块大小有关系&lt;/p&gt;
 &lt;p&gt;N路组映射：标记位+组号+块内地址&lt;/p&gt;
 &lt;p&gt;标记位计算由总地址数-块内地址数-组号得，组号由Cache决定，块内地址由块大小定&lt;/p&gt;
+&lt;p&gt;刻意留意比较器数量，全相联每行一个/直接映射只有一个/组相联每组N个&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Cache总容量计算&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;先明确各类情况下Cache的标记位均是如此：&lt;/p&gt;
 &lt;p&gt;有效位+替换位+脏位+标记位（和各类映射方式有关），并且需要特别注意直接映射&lt;/p&gt;
@@ -240,7 +384,7 @@
 &lt;p&gt;按照内容进行寻址，每个行都需要一个比较器&lt;/p&gt;
 &lt;p&gt;组相联则是组间用的直接寻址，取余，组内用的全相联，一组N个比较器&lt;/p&gt;
 &lt;p&gt;N路组的含义是，每组N个，而不是分为N个组&lt;/p&gt;
-&lt;p&gt;当N&amp;#x3D;1的时候就变为全相联，当N&amp;#x3D;n的时候就变成了直接映射，不能搞混这一点&lt;/p&gt;
+&lt;p&gt;当N=1的时候就变为全相联，当N=n的时候就变成了直接映射，不能搞混这一点&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;主存地址的运算方法：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;给定十进制、二进制均需要能够计算，按照最为方便的方法去计算&lt;/p&gt;
 &lt;p&gt;直接映射的情况下，给定十进制：&lt;/p&gt;
@@ -272,8 +416,8 @@
 &lt;p&gt;当写命中的情况下，先在Cache里面改，而不会去改主存里面对应的块内容&lt;/p&gt;
 &lt;p&gt;只有当块被替换出去的时候，才一次性把块中的内容更新到主存上面，一次性全部更新&lt;/p&gt;
 &lt;p&gt;非写分配法搭配：&lt;/p&gt;
-&lt;p&gt;如果不命中的情况，那么只更新&amp;#x2F;修改&amp;#x2F;写主存单元，不会调入Cache中&lt;/p&gt;
-&lt;p&gt;如果命中，回写法，那么就会只对Cache内数据进行修改&amp;#x2F;写&amp;#x2F;更新&lt;/p&gt;
+&lt;p&gt;如果不命中的情况，那么只更新/修改/写主存单元，不会调入Cache中&lt;/p&gt;
+&lt;p&gt;如果命中，回写法，那么就会只对Cache内数据进行修改/写/更新&lt;/p&gt;
 &lt;p&gt;如果命中，全写法，那么会同时对Cache、主存内的数据进行更新操作&lt;/p&gt;
 &lt;p&gt;附议：&lt;/p&gt;
 &lt;p&gt;其实为什么写分配和写回、全写会有不同的组合结果？&lt;/p&gt;
@@ -287,14 +431,14 @@
 &lt;p&gt;替换算法：&lt;/p&gt;
 &lt;p&gt;目的是为了解决主存访问后需要把其内容放入Cache但Cache已经满的问题&lt;/p&gt;
 &lt;p&gt;替换算法只会在全相联、组相联两个里面使用&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/89.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/89.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;最不经常使用算法，理解为记录这个Cache块被访问了多少次，替换最少访问次的&lt;/p&gt;
 &lt;p&gt;这里如果产生了相同的使用频率最低块，那么可以采用FIFO或者行号递增等策略去选择&lt;/p&gt;
 &lt;p&gt;例如相同的0、0两个使用频率块，淘汰谁？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/90.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/90.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;近期最少使用算法，理解为每一个Cache块的计数为“已几个周期没有使用”&lt;/p&gt;
 &lt;p&gt;每次自然替换的是计数值最大的&lt;/p&gt;
-&lt;p&gt;抖动的含义，以“1&amp;#x2F;2&amp;#x2F;3&amp;#x2F;4&amp;#x2F;5&amp;#x2F;1&amp;#x2F;2&amp;#x2F;3&amp;#x2F;4&amp;#x2F;5..序列访问，会反复刷新掉频繁使用的块，本质原因是Cache块太少了&lt;/p&gt;
+&lt;p&gt;抖动的含义，以“1/2/3/4/5/1/2/3/4/5…序列访问，会反复刷新掉频繁使用的块，本质原因是Cache块太少了&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;补充：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;读不命中、写不命中均有可能会产生替换&lt;/p&gt;
 &lt;p&gt;读不命中一定会把主存的内容写到Cache里面，所以读不命中一定有替换(满的时候&lt;/p&gt;
@@ -314,30 +458,40 @@
 &lt;p&gt;首先给出虚存体系的基本运行、以及在虚存体系下的Cache运行流程：&lt;/p&gt;
 &lt;p&gt;CPU给出虚存地址&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;分解虚存地址&lt;ul&gt;
+&lt;li&gt;分解虚存地址
+&lt;ul&gt;
 &lt;li&gt;虚页号&lt;/li&gt;
 &lt;li&gt;页内地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;地址越界检查&lt;ul&gt;
+&lt;li&gt;地址越界检查
+&lt;ul&gt;
 &lt;li&gt;判断页号是否溢出&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;访问TLB（快表）&lt;ul&gt;
-&lt;li&gt;TLB命中&lt;ul&gt;
+&lt;li&gt;访问TLB（快表）
+&lt;ul&gt;
+&lt;li&gt;TLB命中
+&lt;ul&gt;
 &lt;li&gt;取得实页号并拼合为实地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;TLB不命中&lt;ul&gt;
-&lt;li&gt;访问页表（慢表）&lt;ul&gt;
-&lt;li&gt;页表有效&lt;ul&gt;
+&lt;li&gt;TLB不命中
+&lt;ul&gt;
+&lt;li&gt;访问页表（慢表）
+&lt;ul&gt;
+&lt;li&gt;页表有效
+&lt;ul&gt;
 &lt;li&gt;取得实页号并拼合为实地址&lt;/li&gt;
-&lt;li&gt;更新TLB&lt;ul&gt;
-&lt;li&gt;TLB已满&lt;ul&gt;
+&lt;li&gt;更新TLB
+&lt;ul&gt;
+&lt;li&gt;TLB已满
+&lt;ul&gt;
 &lt;li&gt;选择一页淘汰并添加新页&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;TLB未满&lt;ul&gt;
+&lt;li&gt;TLB未满
+&lt;ul&gt;
 &lt;li&gt;直接插入新页&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -345,17 +499,23 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;页表无效&lt;ul&gt;
-&lt;li&gt;缺页中断&lt;ul&gt;
-&lt;li&gt;内存未满&lt;ul&gt;
+&lt;li&gt;页表无效
+&lt;ul&gt;
+&lt;li&gt;缺页中断
+&lt;ul&gt;
+&lt;li&gt;内存未满
+&lt;ul&gt;
 &lt;li&gt;从磁盘读入页到内存&lt;/li&gt;
 &lt;li&gt;更新慢表&lt;/li&gt;
-&lt;li&gt;更新TLB&lt;ul&gt;
-&lt;li&gt;TLB已满&lt;ul&gt;
+&lt;li&gt;更新TLB
+&lt;ul&gt;
+&lt;li&gt;TLB已满
+&lt;ul&gt;
 &lt;li&gt;淘汰一页并替换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;TLB未满&lt;ul&gt;
+&lt;li&gt;TLB未满
+&lt;ul&gt;
 &lt;li&gt;直接插入新页&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -364,26 +524,33 @@
 &lt;li&gt;CPU重新访问TLB并命中，取得实页号并拼合为实地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;内存已满&lt;ul&gt;
+&lt;li&gt;内存已满
+&lt;ul&gt;
 &lt;li&gt;选择替换页&lt;/li&gt;
-&lt;li&gt;检查替换页是否脏页&lt;ul&gt;
-&lt;li&gt;是脏页&lt;ul&gt;
+&lt;li&gt;检查替换页是否脏页
+&lt;ul&gt;
+&lt;li&gt;是脏页
+&lt;ul&gt;
 &lt;li&gt;写回磁盘&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;不是脏页&lt;ul&gt;
+&lt;li&gt;不是脏页
+&lt;ul&gt;
 &lt;li&gt;直接覆盖&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;更新慢表&lt;/li&gt;
-&lt;li&gt;更新TLB&lt;ul&gt;
-&lt;li&gt;TLB已满&lt;ul&gt;
+&lt;li&gt;更新TLB
+&lt;ul&gt;
+&lt;li&gt;TLB已满
+&lt;ul&gt;
 &lt;li&gt;淘汰原有页并替换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;TLB未满&lt;ul&gt;
+&lt;li&gt;TLB未满
+&lt;ul&gt;
 &lt;li&gt;插入新页并设置无效位&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -407,43 +574,54 @@
 &lt;p&gt;这时候因为先前已经完成了缺页中断的处理，这里不可能访存失败，顶多Cache缺失&lt;/p&gt;
 &lt;p&gt;CPU给出实地址&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;地址解释方式&lt;ul&gt;
-&lt;li&gt;直接映射&lt;ul&gt;
+&lt;li&gt;地址解释方式
+&lt;ul&gt;
+&lt;li&gt;直接映射
+&lt;ul&gt;
 &lt;li&gt;标志&lt;/li&gt;
 &lt;li&gt;Cache块号&lt;/li&gt;
 &lt;li&gt;块内地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;全相联映射&lt;ul&gt;
+&lt;li&gt;全相联映射
+&lt;ul&gt;
 &lt;li&gt;标志&lt;/li&gt;
 &lt;li&gt;块内地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;组相联映射&lt;ul&gt;
+&lt;li&gt;组相联映射
+&lt;ul&gt;
 &lt;li&gt;标志&lt;/li&gt;
 &lt;li&gt;Cache组号&lt;/li&gt;
 &lt;li&gt;块内地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;主存地址&lt;ul&gt;
+&lt;li&gt;主存地址
+&lt;ul&gt;
 &lt;li&gt;块号&lt;/li&gt;
 &lt;li&gt;块内地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Cache访问&lt;ul&gt;
-&lt;li&gt;Cache命中&lt;ul&gt;
-&lt;li&gt;读命中&lt;ul&gt;
+&lt;li&gt;Cache访问
+&lt;ul&gt;
+&lt;li&gt;Cache命中
+&lt;ul&gt;
+&lt;li&gt;读命中
+&lt;ul&gt;
 &lt;li&gt;直接从Cache中读取数据&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;写命中&lt;ul&gt;
-&lt;li&gt;全写法&lt;ul&gt;
+&lt;li&gt;写命中
+&lt;ul&gt;
+&lt;li&gt;全写法
+&lt;ul&gt;
 &lt;li&gt;同时更新主存和Cache&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;回写法&lt;ul&gt;
+&lt;li&gt;回写法
+&lt;ul&gt;
 &lt;li&gt;只更新Cache&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -451,18 +629,26 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Cache未命中&lt;ul&gt;
-&lt;li&gt;访问主存&lt;ul&gt;
-&lt;li&gt;主存写命中&lt;ul&gt;
-&lt;li&gt;写分配法&lt;ul&gt;
-&lt;li&gt;全写法&lt;ul&gt;
+&lt;li&gt;Cache未命中
+&lt;ul&gt;
+&lt;li&gt;访问主存
+&lt;ul&gt;
+&lt;li&gt;主存写命中
+&lt;ul&gt;
+&lt;li&gt;写分配法
+&lt;ul&gt;
+&lt;li&gt;全写法
+&lt;ul&gt;
 &lt;li&gt;修改主存内容&lt;/li&gt;
-&lt;li&gt;更新Cache&lt;ul&gt;
-&lt;li&gt;Cache满&lt;ul&gt;
+&lt;li&gt;更新Cache
+&lt;ul&gt;
+&lt;li&gt;Cache满
+&lt;ul&gt;
 &lt;li&gt;选择一块替换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Cache不满&lt;ul&gt;
+&lt;li&gt;Cache不满
+&lt;ul&gt;
 &lt;li&gt;直接塞入&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -470,14 +656,18 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;回写法&lt;ul&gt;
-&lt;li&gt;更新Cache&lt;ul&gt;
-&lt;li&gt;Cache满&lt;ul&gt;
+&lt;li&gt;回写法
+&lt;ul&gt;
+&lt;li&gt;更新Cache
+&lt;ul&gt;
+&lt;li&gt;Cache满
+&lt;ul&gt;
 &lt;li&gt;替换时检查是否需要写回&lt;/li&gt;
 &lt;li&gt;选择一块替换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Cache不满&lt;ul&gt;
+&lt;li&gt;Cache不满
+&lt;ul&gt;
 &lt;li&gt;直接塞入&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -488,20 +678,25 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;非写分配法&lt;ul&gt;
+&lt;li&gt;非写分配法
+&lt;ul&gt;
 &lt;li&gt;只更新主存，不更新Cache&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;主存读命中&lt;ul&gt;
+&lt;li&gt;主存读命中
+&lt;ul&gt;
 &lt;li&gt;从主存中读取数据&lt;/li&gt;
-&lt;li&gt;更新Cache&lt;ul&gt;
-&lt;li&gt;Cache满&lt;ul&gt;
+&lt;li&gt;更新Cache
+&lt;ul&gt;
+&lt;li&gt;Cache满
+&lt;ul&gt;
 &lt;li&gt;选择一块替换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Cache不满&lt;ul&gt;
+&lt;li&gt;Cache不满
+&lt;ul&gt;
 &lt;li&gt;直接塞入&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -564,7 +759,7 @@
 &lt;p&gt;&lt;strong&gt;存储机制：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;页面在主存内是全相联存储，但这个仅仅含义是可以放在任何一块&lt;/p&gt;
 &lt;p&gt;而不是根据内容寻址，主存没有这个能力的，仅仅含义是可以放在主存的任意位置罢了&lt;/p&gt;
-&lt;p&gt;必须采用回写法，不能用全写，否则磁盘I&amp;#x2F;O就会大量拖累CPU的运行&lt;/p&gt;
+&lt;p&gt;必须采用回写法，不能用全写，否则磁盘I/O就会大量拖累CPU的运行&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;页表有效位：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;其实快表、慢表内均需要有效位，尤其是多道批程序下&lt;/p&gt;
 &lt;p&gt;快表的有效位其实为了增加效率所以不会考虑直接淘汰上一个进程的一些页表项&lt;/p&gt;
@@ -586,6 +781,30 @@
 &lt;p&gt;缺页中断的时候是不会把数据一并扔到Cache里面的，何况一个单位是页，一个是块&lt;/p&gt;
 &lt;p&gt;根本没办法统一，也根本不属于同一事件&lt;/p&gt;
 &lt;p&gt;页框分配和页面置换则是OS内的内容，暂时不考虑加入&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;真题选择分析（计组虚存内容：&lt;/p&gt;
+&lt;p&gt;14：命中问题，CPU给出虚拟地址后首先就会去访问TLB，访问TLB失效再去慢表&lt;/p&gt;
+&lt;p&gt;如果慢表同样失效则需要缺页中断调入，然后重新进行访问，再拼合为一个实地址&lt;/p&gt;
+&lt;p&gt;实地址首先肯定会访问Cache，这次访问一定是失效的，这个是书上没有具体细讲的点&lt;/p&gt;
+&lt;p&gt;不可能的情况是TLB命中是慢表没命中、慢表没命中但Cache命中&lt;/p&gt;
+&lt;p&gt;15：需要特意说下的就是TLB表内一般直接省略顺序号，只采用全相联或者组相联&lt;/p&gt;
+&lt;p&gt;16：访存问题，虚存体系下访存数量是要高于一般存储体系的，多级页表甚至需访外存&lt;/p&gt;
+&lt;p&gt;在快表命中的情况下直接根据页表项得到实页框号，不需要单独访存一次&lt;/p&gt;
+&lt;p&gt;快表没有命中则需要访问主存得到对应的页框号拼合为实地址&lt;/p&gt;
+&lt;p&gt;慢表也同样没有命中，则在缺页中断处理后重新访问TLB，这一次不会去访存&lt;/p&gt;
+&lt;p&gt;Cache采用直写法的时候一旦产生写命中就必须访存，采用回写法则不需要访存修改&lt;/p&gt;
+&lt;p&gt;如果写不命中，那么均是需要进行访存的，包括读不命中也一样需要访存，读命中不需&lt;/p&gt;
+&lt;p&gt;18：缺页中断以后是回归原指令执行的，这也是我说的缺页中断后重新访问TLB的由来&lt;/p&gt;
+&lt;p&gt;19：Cache和TLB很类似，均是SRAM，均采取替换策略，但Cache有写策略，TLB没有&lt;/p&gt;
+&lt;p&gt;TLB内数据和主存内慢表必然一致，但Cache就不能保证一定一致&lt;/p&gt;
+&lt;p&gt;TLB和Cache缺失均可由硬件解决，Cache必是硬件，TLB也接受软件，应用程序员不可视&lt;/p&gt;
+&lt;p&gt;20：取到虚地址后访问页表对应虚页项，如果有效位为一，那么自然就取到实页号&lt;/p&gt;
+&lt;p&gt;然后拼合为实际地址即可，一般页是大于Cache块的，页内不改变，或能取得Cache标记&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;综合题以真题为准，参考个人综合题笔记（置于单独笔记本中，有必要反复观阅&lt;/p&gt;
+&lt;p&gt;后续复习基本流程：&lt;/p&gt;
+&lt;p&gt;看一遍书、过一遍笔记、浏览王道非真题选择题、重点做错题和真题选择题、真题综合&lt;/p&gt;
+&lt;p&gt;有必要则对笔记进行补充和修补，可以结合冲刺考点精析PPT进行复习&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -5986,435 +6205,6 @@ do &amp;#123;
 &lt;p&gt;其他的，类似于机器级的阅读、执行顺序，其实更多可以参考这块方向&lt;/p&gt;
 &lt;p&gt;一般只会大致上考察一个阅读能力，知道中间执行的方法、内容基本就足够了&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/img/ky/144.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://chchch-art.github.io/2024/04/06/%E8%AE%A1%E7%BB%8410/</guid>
-            <title>计组10</title>
-            <link>https://chchch-art.github.io/2024/04/06/%E8%AE%A1%E7%BB%8410/</link>
-            <pubDate>Sat, 06 Apr 2024 20:11:27 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;书上对此节的概况较为全面详细，这里是一个思维统概，方便未来按模块复习&lt;/p&gt;
-&lt;p&gt;建议以书为复习的主核心对象&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/94.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/95.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/96.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/97.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;后面主要需要谈的是拓展操作码的设计、计算，算是一个重点&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/98.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这里谈设计问题&lt;/p&gt;
-&lt;p&gt;从三地址开始计算，三地址因为只有4位二进制，因而最多表示十六个，而需要保留一位&lt;/p&gt;
-&lt;p&gt;全一用作下一位的拓展码，所以其15条的范围就是单纯的0000-1110&lt;/p&gt;
-&lt;p&gt;而下四位二地址拓展码，以前四位全一作为标记区分位，后面四位可以表示十六个&lt;/p&gt;
-&lt;p&gt;现在需要的是十二个，那么为了区分标记位，那么设计从0000到1011共十二个&lt;/p&gt;
-&lt;p&gt;剩下的几位也是一定有顺序的，即1100-1111四位保留用作下一位的拓展码，可以计算&lt;/p&gt;
-&lt;p&gt;因为后续是四位二进制地址，又为下层保留了四位二进制，那么最多可以表示六十四个&lt;/p&gt;
-&lt;p&gt;现在仅保留六十二位，剩下两位，那么保留0000-1101这样，为下面剩下1100和1110两位&lt;/p&gt;
-&lt;p&gt;因而最后剩下五位恰好可以表示三十二个地址&lt;/p&gt;
-&lt;p&gt;PS：讲的一般，建议自己做几道题就能理解问题所在&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/99.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;关于优缺点：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/100.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;指令寻址的目的是寻址下一个指令的主存地址，都是从主存里面取指令的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/101.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;先谈重点就是这几个：&lt;/p&gt;
-&lt;p&gt;这里又有坑了，如果一条指令占了半个存储单元怎么办？&lt;/p&gt;
-&lt;p&gt;假如，一条指令是8位，然后一个存储单元16位，又按字来编址&lt;/p&gt;
-&lt;p&gt;那么PC该如何指明其地址？&lt;/p&gt;
-&lt;p&gt;是一个存储单元存一条指令来唯一声明其地址&lt;/p&gt;
-&lt;p&gt;还是&lt;/p&gt;
-&lt;p&gt;存储字长和指令字长不同、编码方式不同、指令采用变长指令时PC不同的自增逻辑&lt;/p&gt;
-&lt;p&gt;记住PC永远是指向下一条指令的地址，相对应的自增自减均建立于这个逻辑&lt;/p&gt;
-&lt;p&gt;当主存按字编址时，且存储单元和一个指令字长一样都是一个字的时候&lt;/p&gt;
-&lt;p&gt;意味着一个指令就存储在一个地址内，并且按照1、2、3…顺序排列下去&lt;/p&gt;
-&lt;p&gt;PC=PC+1&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/102.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;当主存按字节编址而存储单元和指令字长一样是一个字时&lt;/p&gt;
-&lt;p&gt;那么意味着一条指令至少占据两个地址，那么下一条指令就在两个地址后&lt;/p&gt;
-&lt;p&gt;PC=PC+2&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/103.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;当系统采用变长指令时，CPU会通过读取指令前几位的操作位判断其长度&lt;/p&gt;
-&lt;p&gt;然后按照其长度、主存的编址方式给出相对应的PC=PC+N，每次都是不确定的&lt;/p&gt;
-&lt;p&gt;N=长度/编址单位，得到一个指令占了几个地址&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/104.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;注，每次取指令后PC一定会自增相对应的指令长度，这个经常考&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/105.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;至于条件转移，那么就是把相对应的PC原先自增得到的值，无条件改为跳转地址&lt;/p&gt;
-&lt;p&gt;后面会叙述这个地方的坑在哪，可能会导致跳转到不同地方，所以也会产生不同的策略&lt;/p&gt;
-&lt;p&gt;每一条指令均分为取指令、执行指令两个步骤&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/106.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;直接、间接寻址(操作数寻址：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/107.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;首先先明确整个指令的结构会被划分为哪几个区域，这个是单地址&lt;/p&gt;
-&lt;p&gt;后面谈的就是多地址，是每个形式地址前都会声明其寻址特征的，而非只有一个&lt;/p&gt;
-&lt;p&gt;这个后面会介绍到，实际上是因为整体的指令都是复合的操作流程而非简单的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/108.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;直接寻址是最容易理解的，其地址内除去特征就是其在主存中的地址，直接访问即可&lt;/p&gt;
-&lt;p&gt;这里谈的操作数地址不容易修改是因为一旦修改了操作数的地址就会导致相应指令也改变&lt;/p&gt;
-&lt;p&gt;所以说的不容易修改&lt;/p&gt;
-&lt;p&gt;从主存中取指令一次，然后根据指令读内容一次，两次&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/109.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/110.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;间接寻址给出的形式地址是操作数地址的地址&lt;/p&gt;
-&lt;p&gt;给出的地址内存储的内容是操作数相应的主存地址，根据这个主存地址再去访问主存&lt;/p&gt;
-&lt;p&gt;所以其实最少就是三次，取指令一次，取地址的地址一次，取操作数一次&lt;/p&gt;
-&lt;p&gt;而实际上可以多轮而非单轮，也就是可以存地址的地址的地址的地址的地址的地址…&lt;/p&gt;
-&lt;p&gt;主存内的存储位数肯定是强于形式地址的，所以范围自然拓展&lt;/p&gt;
-&lt;p&gt;至于编程，可以想象类递归栈运行的程序，每次运行完了后这条指令执行完，跳回原指令&lt;/p&gt;
-&lt;p&gt;至于什么时候算是访到最终的数据而不是还在访地址的路上，那么就是按一个标记物的事&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/111.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;寄存器编址不用说了，记住这个名词和相对应的方式即可，主要是一个词：快&lt;/p&gt;
-&lt;p&gt;相应的只需要进行一次主存里面读指令的操作，其他都不需要去主存里面&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/112.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;寄存器间接访址的好处实际上就是把原来要访问主存间接寻址的改到寄存器&lt;/p&gt;
-&lt;p&gt;为什么？访问寄存器比主存快啊！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/113.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/114.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;立即寻址也是较为简单的，无非就是这十种搭配的时候还要能够记住就有点难度了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/115.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;偏移寻址，对应书上的第7-9种&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/116.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;本质在于基准不同，稍微注意下区分&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/117.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;基址寄存器可以是专用的，也可以是通用寄存器中的一块&lt;/p&gt;
-&lt;p&gt;这样的话实际上在使用后者的情况下，至少需要指定是哪块寄存器，也就是需要位号指定&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/118.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;其目的是为了当程序块起始地址不为零时(大部分情况均是不为零的，能够正确识别程序&lt;/p&gt;
-&lt;p&gt;而不是跳转到一堆奇怪的地方&lt;/p&gt;
-&lt;p&gt;至于基地址本身是由操作系统自动决定的，因而不需要用户去思考应该存哪里&lt;/p&gt;
-&lt;p&gt;至于这个拓展寻址位数，实际上应该说是基地址提供了一个范围，不能单独说是形式提供&lt;/p&gt;
-&lt;p&gt;这个按书上的理解就行没必要钻牛角尖&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/119.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;至于变址寻址，其是指令中提供了一个确定性的形式地址，一般都是在谈一个数组&lt;/p&gt;
-&lt;p&gt;后面变址寄存器中的内容就可以轮番访问这个数组，只需要变址寄存器自增即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/120.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;如果不采用变址寻址，那么光是一个访问数组操作就需要一堆不同的指令，不科学的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/121.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;采用变址以后就能正常一个指令即可，给定数组的首地址即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/122.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/123.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;至于相对寻址，其实是相对与PC的，这里需要注意一个点，因为PC是取指令后自动自增的&lt;/p&gt;
-&lt;p&gt;所以王道书上略微有些小问题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/124.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;其实这个作用这边我省略了几张图，因为目的是一样的&lt;/p&gt;
-&lt;p&gt;当这个循环位置改变的时候，即把这个代码从上面放到下面以后，里面的转移指令会出错&lt;/p&gt;
-&lt;p&gt;而循环体本身是没有变的，因而就需要相对寻址，直接改变跳转指令的形式地址位&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/125.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/126.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/127.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;至于这个，一般情况下都是按照这种复合的情况，因而就会导致总体非常复杂&lt;/p&gt;
-&lt;p&gt;只能说随缘了，课后习题与考察形式基本是复合的情况&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/129.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;堆栈寻址：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/145.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;至于堆栈寻址，无非就是要注意栈顶在哪，栈底在哪，是按低地址到高地址，还是反着&lt;/p&gt;
-&lt;p&gt;同时也要注意这个低和高的含义到底是什么，题目说的高低和理解的高低有没有反&lt;/p&gt;
-&lt;p&gt;还要注意的就是堆栈顶指明的是一个空闲区域还是一个有内容区域，这都会影响存取&lt;/p&gt;
-&lt;p&gt;硬堆栈是采用全寄存器，不需要访主存&lt;/p&gt;
-&lt;p&gt;软堆栈是需要访问一次主存的，因为软堆栈本身就是从主存中划分一块出来用的&lt;/p&gt;
-&lt;p&gt;此外，堆栈寄存器是通用的，这个可以从X86后面的通用寄存器表里面得知，别的不知道&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://chchch-art.github.io/2024/04/05/%E8%AE%A1%E7%BB%849/</guid>
-            <title>计组9</title>
-            <link>https://chchch-art.github.io/2024/04/05/%E8%AE%A1%E7%BB%849/</link>
-            <pubDate>Fri, 05 Apr 2024 20:28:09 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;本节单看书实际上较难理解，但PPT内容就很不错&lt;/p&gt;
-&lt;p&gt;首先明确具体的虚拟存储器整个的概况状态，再细化去划分&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/93.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/91.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;上面的就是虚拟存储器，下面就是之前学过的熟悉的Cache、主存层&lt;/p&gt;
-&lt;p&gt;然后再来一步步介绍这一块东西&lt;/p&gt;
-&lt;p&gt;首先不要去纠结快、慢表，记住快表是慢表的一部分&lt;/p&gt;
-&lt;p&gt;CPU会通过一个虚拟地址，首先根据其虚拟页号去访问快表，快表没有命中再找慢表&lt;/p&gt;
-&lt;p&gt;如果快表命中那么直接把相对应的物理地址给传过去合并为实际地址&lt;/p&gt;
-&lt;p&gt;如果慢表命中那么直接把相对应的物理地址给传过去合并为实际地址&lt;/p&gt;
-&lt;p&gt;一旦不命中，组合就会比较复杂，分为三种缺失可能性&lt;/p&gt;
-&lt;p&gt;其中如果主存中没有，即慢表没有命中，那么Cache也是一定不会命中的，一共五种&lt;/p&gt;
-&lt;p&gt;如果慢表中没有命中那么快表也是一定不会命中的，因为快表是慢表的一部分&lt;/p&gt;
-&lt;p&gt;但记住，一旦产生缺失，最终一定是需要更新这个表的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/92.png&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://chchch-art.github.io/2024/04/03/%E8%AE%A1%E7%BB%848/</guid>
-            <title>计组8</title>
-            <link>https://chchch-art.github.io/2024/04/03/%E8%AE%A1%E7%BB%848/</link>
-            <pubDate>Wed, 03 Apr 2024 21:26:27 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;局部性原理的本质实际上是对CPU预测的一种解释&lt;/p&gt;
-&lt;p&gt;空间局部性是指CPU会对这个数据周围，尤其特指数组、向量、指令集等集合数据提前预读&lt;/p&gt;
-&lt;p&gt;为了定义这个周围，往往采用将主存分块(地址上虚拟，解释方法不同分块)&lt;/p&gt;
-&lt;p&gt;然后将这个周围的数据放在Cache里面&lt;/p&gt;
-&lt;p&gt;时间局部性是指CPU会对循环内的当前执行的这个数据进行存留，以备下次的继续使用&lt;/p&gt;
-&lt;p&gt;包括循环内执行的指令、操作数，基本都会进行存留，下次取用的时候也就会方便一些的&lt;/p&gt;
-&lt;p&gt;这些都会存于Cache中，通过预测方式得到了高命中率&lt;/p&gt;
-&lt;p&gt;另外，性能分析那边，又到了文字游戏：提高了多少，提高了几倍，提高到几倍….&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/85.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/86.png&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;比较器么，书上写的比较模糊，但大致上应该是在说这样&lt;/p&gt;
-&lt;p&gt;直接映射是一个就够了，全相联就要N个，而组内就只需要组内可能是其存放的数量R个&lt;/p&gt;
-&lt;p&gt;一个块，可能在Cache里面存放在多少个位置上，就要多少个比较器&lt;/p&gt;
-&lt;p&gt;PS:&lt;/p&gt;
-&lt;p&gt;主存的块被称为“页、页面、页框”，Cache的块被称为是“行”&lt;/p&gt;
-&lt;p&gt;然后说几句吧，即使是块内，也是有多个地址对应多个数据行存储的，所以才要组内地址&lt;/p&gt;
-&lt;p&gt;主存和CPU交互是以机器字，而和Cache交互是以块为单位&lt;/p&gt;
-&lt;p&gt;主存地址是不会改变的，只是CPU在根据不同的映射法对应解释为不同的意思罢了&lt;/p&gt;
-&lt;p&gt;这里谈下一个容易混淆的点，主存地址、Cache位数&lt;/p&gt;
-&lt;p&gt;首先明确下，主存在三种不同映射模式下的地址解释方法，注意是解释方法&lt;/p&gt;
-&lt;p&gt;直接映射：标记位+行号位+组内地址&lt;/p&gt;
-&lt;p&gt;全相联映射：标记位+组内地址&lt;/p&gt;
-&lt;p&gt;N路组相联映射：标记位+组号地址+组内地址&lt;/p&gt;
-&lt;p&gt;然后再说下这几个怎么算&lt;/p&gt;
-&lt;p&gt;一般会给定主存的物理地址长度，所以总长往往是能够确定下来的&lt;/p&gt;
-&lt;p&gt;按某种编址方式，意思是多少位作为一个存储单元的大小，字节就是8位一个单元&lt;/p&gt;
-&lt;p&gt;字就是一个字一个单元，然后这样一个存储单元分配给一个地址&lt;/p&gt;
-&lt;p&gt;一个块大小给出以后，那么除去一个存元的大小就能得出有多少个存元一块&lt;/p&gt;
-&lt;p&gt;自然也就得出了需要多少位二进制才能分配完这N个存元的地址&lt;/p&gt;
-&lt;p&gt;如32B一块，按字节编址，那么就是8个存元，那么就是3位二进制地址，三位组内&lt;/p&gt;
-&lt;p&gt;注意下，因为主存块和Cache块大小是一样的，因而给定哪个块都能算出来&lt;/p&gt;
-&lt;p&gt;然后再说相对应的行号、组号，这个就是分多少行，多少组的问题了&lt;/p&gt;
-&lt;p&gt;对直接映射就是有多少块，然后需要多少位二进制来表示那么多个块，32块就要5位&lt;/p&gt;
-&lt;p&gt;对组号，就是求出Cache一共有多少组就行，例如二路，32B一块，64KB数据大小&lt;/p&gt;
-&lt;p&gt;那么就可以分为2^11块，2^10组，那么组自然也就占了十位，直接映射反正没有这个位&lt;/p&gt;
-&lt;p&gt;然后在算出上面两个以后，自然就得出了主存物理地址中对应的标记位长度&lt;/p&gt;
-&lt;p&gt;然后再谈Cache的位数组成，一般谈的是总容量，数据大小是单纯的块大小·块数&lt;/p&gt;
-&lt;p&gt;有效位+脏位+LRU替换位+标记位+数据位(32B就是32·8&amp;#x3D;256位，这里谈的是以bit作单位&lt;/p&gt;
-&lt;p&gt;有效位一位，必有，脏位仅当采用回写法的时候会有，一位&lt;/p&gt;
-&lt;p&gt;LRU替换位，直接映射肯定是没有的，因为直接映射是直接替换的，不考虑替换位存在&lt;/p&gt;
-&lt;p&gt;只有全相联和组相联会有，一般是logN(N是一组有多少个)&lt;/p&gt;
-&lt;p&gt;而一般只出现于组相联中，全相联据目前状态来说还没有谈过，但应该是视作一整组&lt;/p&gt;
-&lt;p&gt;另外就是标记矩阵的行需要和一般Cache中谈的行(也就是块，相区分&lt;/p&gt;
-&lt;p&gt;Cache中谈一行那么肯定就是在谈这样一块，不会有更多的歧义&lt;/p&gt;
-&lt;p&gt;但标记矩阵中就不一定，一行可能是多个标记位，例如组相联那么一行就有组号个标记位&lt;/p&gt;
-&lt;p&gt;全相联一行就会有N个标记位&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;这里谈几个点：&lt;/p&gt;
-&lt;p&gt;首先就是主存内分块是按照Cache中块的大小分的，不是按数量分的&lt;/p&gt;
-&lt;p&gt;再就是，按XX编址意味着每X位作一个存储单元，且每个地址单元对应一个地址&lt;/p&gt;
-&lt;p&gt;这里要和地址位数、存储位数区分开，存储位数是每个存储单元存储了几位数据，就是位&lt;/p&gt;
-&lt;p&gt;地址位数是指这个地址需要多少位二进制才能表达&lt;/p&gt;
-&lt;p&gt;这样看确实是，按什么编址，一个存储单元就有多少位&lt;/p&gt;
-&lt;p&gt;256MB大小，按字节编址256M个单元，每个单元8位，需要256M个地址，28位地址&amp;#x2F;地址线&lt;/p&gt;
-&lt;p&gt;按字(32位字)编码就是64M个单元，每个单元32位，需要64M个地址，26位地址&amp;#x2F;地址线&lt;/p&gt;
-&lt;p&gt;Cache的容量和总容量之间有一定的差别&lt;/p&gt;
-&lt;p&gt;同时按XX编址，得知了每块的大小后，自然可以得知每块的块内地址占几位&lt;/p&gt;
-&lt;p&gt;将主存分为N个块以后，对应地址的剩余高位实际上均在表示是第几块&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;替换算法：&lt;/p&gt;
-&lt;p&gt;目的是为了解决主存访问后需要把其内容放入Cache但Cache已经满的问题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/88.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;大致上就这一些算法，其中考最频繁的是最后两种，前面的两种都因为运行效率较差不用&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/87.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;替换算法只会在全相联、组相联两个里面使用&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/89.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;最不经常使用算法，理解为记录这个Cache块被访问了多少次，替换最少访问次的&lt;/p&gt;
-&lt;p&gt;这里如果产生了相同的使用频率最低块，那么可以采用FIFO或者行号递增等策略去选择&lt;/p&gt;
-&lt;p&gt;例如相同的0、0两个使用频率块，淘汰谁？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/90.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;近期最少使用算法，理解为每一个Cache块的计数为“已几个周期没有使用”&lt;/p&gt;
-&lt;p&gt;每次自然替换的是计数值最大的&lt;/p&gt;
-&lt;p&gt;抖动的含义，以“1&amp;#x2F;2&amp;#x2F;3&amp;#x2F;4&amp;#x2F;5&amp;#x2F;1&amp;#x2F;2&amp;#x2F;3&amp;#x2F;4&amp;#x2F;5..序列访问，会反复刷新掉频繁使用的块，本质原因是Cache块太少了&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;全写法：&lt;/p&gt;
-&lt;p&gt;在每次写数据的时候同时把数据写入主存和Cache里面，那么替换块就不需要再写到主存&lt;/p&gt;
-&lt;p&gt;这里的缓冲区应该这样理解，CPU访问主存是很浪费CPU时间的事情&lt;/p&gt;
-&lt;p&gt;所以采用一个缓冲区，让CPU直接写到缓冲区里面去，因为CPU访问缓冲区很快&lt;/p&gt;
-&lt;p&gt;然后缓冲区再慢吞吞去访问主存，相当于把这部分CPU可能会浪费的时间交给了缓冲区做&lt;/p&gt;
-&lt;p&gt;提高了CPU的资源利用率&lt;/p&gt;
-&lt;p&gt;写回法只更新Cache中的数据，不把块中数据写入主存，只有替换的时候一次性写到主存&lt;/p&gt;
-&lt;p&gt;剩下就是比较麻烦的一堆组合了&lt;/p&gt;
-&lt;p&gt;写分配法搭配写回法的时候：&lt;/p&gt;
-&lt;p&gt;当没有命中的时候，就会先把主存内容送到Cache里面，然后在Cache中写，不改主存&lt;/p&gt;
-&lt;p&gt;同样，当写命中的时候也是直接在Cache里面写，不改主存内容&lt;/p&gt;
-&lt;p&gt;只有这个块因为读或者写被替换出去的时候，才把这个块所更新的内容一次性写到主存上&lt;/p&gt;
-&lt;p&gt;写分配法搭配全写法的时候：&lt;/p&gt;
-&lt;p&gt;当没有命中的时候，就会先写&amp;#x2F;修改主存内容，再把内容送到Cache里面&lt;/p&gt;
-&lt;p&gt;当命中的时候，就会同时修改Cache和主存中的内容&lt;/p&gt;
-&lt;p&gt;非写分配法搭配另外两者就不会有变化：&lt;/p&gt;
-&lt;p&gt;如果不命中的情况，那么只更新&amp;#x2F;修改&amp;#x2F;写主存单元，不会调入Cache中&lt;/p&gt;
-&lt;p&gt;如果命中，回写法，那么就会只对Cache内数据进行修改&amp;#x2F;写&amp;#x2F;更新&lt;/p&gt;
-&lt;p&gt;如果命中，全写法，那么会同时对Cache、主存内的数据进行更新操作&lt;/p&gt;
-&lt;p&gt;其实也可以看出，写回法比较适合搭配写分配法，这样就可以高效且保持替换更新性&lt;/p&gt;
-&lt;p&gt;全写法则比较适合搭配非写分配法，保留对主存内容的随时正确性&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;读不命中、写不命中均有可能会产生替换&lt;/p&gt;
-&lt;p&gt;读不命中是一定会把主存的内容写到Cache里面的，所以读不命中一定会有替换(满的时候&lt;/p&gt;
-&lt;p&gt;但写不一定，只有写分配法会把主存内容写到Cache中可能替换，非写分配法不会替换&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://chchch-art.github.io/2024/04/03/%E8%AE%A1%E7%BB%847/</guid>
-            <title>计组7</title>
-            <link>https://chchch-art.github.io/2024/04/03/%E8%AE%A1%E7%BB%847/</link>
-            <pubDate>Wed, 03 Apr 2024 19:15:20 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/ky/77.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;一些乱七八糟的概念，考察概率不高&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/78.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;说几个名词，一个磁盘存储器往往有多个磁盘，连接在一根主轴上&lt;/p&gt;
-&lt;p&gt;每个盘都会对应一个读写磁头，也称为磁头数、记录面数、磁盘数等，是三维坐标&lt;/p&gt;
-&lt;p&gt;磁道数，指每个磁盘一圈圈绕出去的磁道数量，多个磁盘叠加起来就是柱面，也称柱面数&lt;/p&gt;
-&lt;p&gt;磁道和磁道间不是完全相连的，是有空隙保证精度的，磁道内也不是连续的，是分扇区的&lt;/p&gt;
-&lt;p&gt;一个磁道就有多个扇区，一个磁盘的扇区数量是固定的，每个扇区都是对应的一个角度&lt;/p&gt;
-&lt;p&gt;然后就是补充内容，每圈磁道的存储内容大小完全相同，因而从外到内存储密度增加&lt;/p&gt;
-&lt;p&gt;扇区是磁盘读取的最小单位，也称为块&lt;/p&gt;
-&lt;p&gt;磁盘性能指标上&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/79.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;非格式化容量=磁盘数量·磁道数量·每个磁道所蕴含的可用磁化单元数&lt;/p&gt;
-&lt;p&gt;格式化容量=磁盘数量·磁道数量·磁道扇区数量·每个扇区容量，感觉还是有区别&lt;/p&gt;
-&lt;p&gt;格式化容量小于非格式化容量&lt;/p&gt;
-&lt;p&gt;一般只考计算，尤其是数据传输速率和平均存取时间&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/80.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;对于磁盘地址，记住需要确定坐标的值：磁盘存储器号、磁盘号、角度(扇区、R(磁道数&lt;/p&gt;
-&lt;p&gt;存取时间的计算应该没什么问题，就是套公式&lt;/p&gt;
-&lt;p&gt;数据传输率这边其实可以改很多东西出来，变体，但记住几个关系&lt;/p&gt;
-&lt;p&gt;一个磁道有多个扇区，多个不同磁道的存储大小一样，扇区的存储大小也一样&lt;/p&gt;
-&lt;p&gt;可能会按角度算吧，这边注意点&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/81.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;至于磁盘阵列，记住第一个是类似多体读取的，读完一个读另外一个，再读另外一个&lt;/p&gt;
-&lt;p&gt;这样效率就会高一些，毕竟每次磁盘只能读一个bit&lt;/p&gt;
-&lt;p&gt;后面基本就是对应不同的存储冗余备份策略了，海明码4:3存储冗余比，镜像1:1&lt;/p&gt;
-&lt;p&gt;这边书上的内容基本足够详细简单，没必要多浪费时间了&lt;/p&gt;
-&lt;p&gt;SSD固态硬盘，基于闪存芯片，这里已经完成介绍了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/82.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;结构上面比书上写的好，这里谈到了闪存芯片组的可能性&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/83.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;关于均衡磨损的计算方法&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/84.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;其他更细的内容建议看书为主&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://chchch-art.github.io/2024/04/02/%E8%AE%A1%E7%BB%846/</guid>
-            <title>计组6</title>
-            <link>https://chchch-art.github.io/2024/04/02/%E8%AE%A1%E7%BB%846/</link>
-            <pubDate>Tue, 02 Apr 2024 19:01:06 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/ky/73.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;先谈位拓展，位拓展是一个必须的操作，如果存储字长没CPU数据总线那么长，必须拓展&lt;/p&gt;
-&lt;p&gt;位拓展的本质就是把一个二进制数分到了多个存储芯片的同一地址内存储&lt;/p&gt;
-&lt;p&gt;所以也是能看到地址总线是接到每一个芯片上面的&lt;/p&gt;
-&lt;p&gt;即将N位变成了N&amp;#x2F;M1·M位&lt;/p&gt;
-&lt;p&gt;这里的话，不需要区分片选信号，因为所有片都需要提供某几位二进制数的位&lt;/p&gt;
-&lt;p&gt;所有都需要工作&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/74.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;字拓展实际上相当于把原先的64K变为了16K+16K+16K+16K的形式&lt;/p&gt;
-&lt;p&gt;而这里不必要修改输出的位数，因而就直接连接即可，不过需要单独区分选片信号&lt;/p&gt;
-&lt;p&gt;然后每次根据不同的地址信号去选取不同的存储芯片即可，这里又衍生出两类信号选择法&lt;/p&gt;
-&lt;p&gt;一类是用某一位去选择一块芯片，并且为了防止选中别的芯片，只能这一位有效&lt;/p&gt;
-&lt;p&gt;其他位必须都是无效的，这个就是线选法，一般称CPU地址高位为选择地址位(虚拟位&lt;/p&gt;
-&lt;p&gt;低位的话就是片内选地址了，低位都是和芯片接着的，数目一样&lt;/p&gt;
-&lt;p&gt;所以说这个非常浪费，8个芯片就需要8个引脚，明明依靠值选择就可以3个引脚解决的事&lt;/p&gt;
-&lt;p&gt;一类就是译码片选法，一般采用一个MCU来进行输出选择，这里就是三个引脚解决的事&lt;/p&gt;
-&lt;p&gt;值选择，而非位选择，利用率高&lt;/p&gt;
-&lt;p&gt;这两种考起来的区别还是比较明显的，注意点&lt;/p&gt;
-&lt;p&gt;另外么，就是因为CPU引脚实在多的要死，所以可能会空几位出来&lt;/p&gt;
-&lt;p&gt;把13、15做选择位，14空着，但给信号的时候14依旧会给信号，无非没什么用罢了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/75.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;字位拓展，一般是为了充分利用CPU引脚吧，一般而言就算CPU引脚不满也是没有事情的&lt;/p&gt;
-&lt;p&gt;内部采取位拓展，多个芯片重叠，每个芯片提供某几位数值位，叠加出为数据通路的宽度&lt;/p&gt;
-&lt;p&gt;外部采取字拓展，将每个部分视作一块芯片去做字拓展&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/76.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;译码器而言，基本不怎么考，主要是和CPU有一个MERQ信号相关，所以谈几句&lt;/p&gt;
-&lt;p&gt;MREQ信号是为了送出地址信号以后，让地址信号先稳定，然后再使能译码器，使得选中芯片时&lt;/p&gt;
-&lt;p&gt;片内地址的选中一定是稳定的&lt;/p&gt;
-&lt;hr&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://chchch-art.github.io/2024/04/01/%E8%AE%A1%E7%BB%845/</guid>
-            <title>计组5</title>
-            <link>https://chchch-art.github.io/2024/04/01/%E8%AE%A1%E7%BB%845/</link>
-            <pubDate>Mon, 01 Apr 2024 20:32:11 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;&lt;img src=&#34;/img/ky/63.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;略微关注下其中的存储器分类，尤其是除存储介质的后面几个，书上都有，多去看&lt;/p&gt;
-&lt;p&gt;都是偏概念的东西，常见的东西、英文名出来需要知道它是属于哪个类别的，到时候整理&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/72.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;补充下层次结构，书上基本都有，不多赘述&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/64.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;注意下层次结构里面最高还有一个寄存器的存在，别忘了这个在CPU内存在&lt;/p&gt;
-&lt;p&gt;关于命中率，先从cache里面找，再去内存里面，再去外存里面&lt;/p&gt;
-&lt;p&gt;这是一个概率问题，越是上层的内容存储的越是经常被调用的东西，下层的访问概率很低&lt;/p&gt;
-&lt;p&gt;所以容量越来越小、速度越来越快、上面的命中率也会非常高&lt;/p&gt;
-&lt;p&gt;寄存器、Cache、主存都可以直接被CPU访问，相关的操作由硬件还是软件结合见上图&lt;/p&gt;
-&lt;p&gt;另外，CPU的速度是远远快于存储器的存取周期的&lt;/p&gt;
-&lt;p&gt;关于寻址：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/70.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/71.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;一般可以这样理解，按字节编址，意思就是把多位存储元视作一个存储单元&lt;/p&gt;
-&lt;p&gt;即，给一个存储单元一个地址，这个地址实际上也就分配了该存储单元所占用的存储元&lt;/p&gt;
-&lt;p&gt;一个字节就是8位&amp;#x2F;8个存储元视作一个存储单元，这里当然是默认存储元是一位二进制的&lt;/p&gt;
-&lt;p&gt;图内谈论的实际上是存储单元矩阵，将多个8位的存储单元视作一个单元，本质一样&lt;/p&gt;
-&lt;p&gt;例如按字节寻址那么每个单元就是8位&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/65.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;简单理解就是存取时间其实比较短，但是因为后续需要恢复，所以周期比较长，冷却时间&lt;/p&gt;
-&lt;p&gt;存储容量这边，实际上是存储单元的个数乘每个单元存了几位得到的内存&lt;/p&gt;
-&lt;p&gt;其中这个位，一般而言MDR的位数就是这个位数，引脚数、数据通路数也是这个数&lt;/p&gt;
-&lt;p&gt;MDR的大小不一定和存储字长一样，因为数据带宽也不一定一样，每次或能取好几个单元&lt;/p&gt;
-&lt;p&gt;例如，以字节编码，那么就是8位一个单元，字长编码，那么32位机器就是32位一个单元&lt;/p&gt;
-&lt;p&gt;存储速度的计算那边，需要注意单位转换，这边历来是考察重点，书上题目多看&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/16.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;关于SRAM&amp;#x2F;DRAM的差别，首先RAM是随机读取存储器的简称，S是静态，D是动态，英文&lt;/p&gt;
-&lt;p&gt;静态采用的是稳态电路，只要不断电那么电荷就不会出现漏出的情况，所以不必刷新的&lt;/p&gt;
-&lt;p&gt;而动态采用的是单晶体管，所以会产生漏电荷的事情，所以就需要刷新来解决&lt;/p&gt;
-&lt;p&gt;一方面是每次读写，都会破坏这个晶体管电容的电荷量，所以每次读写都需要对单个刷新&lt;/p&gt;
-&lt;p&gt;读、写两种操作都会导致电荷量的变化，就需要去单个行重写一次，读后刷新&lt;/p&gt;
-&lt;p&gt;一方面是一段时间内电容也会漏电出去，所以必须间隔一段时间全部刷新一次&lt;/p&gt;
-&lt;p&gt;一般默认为2ms，单位运算&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/66.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;因而自然引出三类不同的刷新策略&lt;/p&gt;
-&lt;p&gt;都是字面意思&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;另外就是主存而言，其的存储量一般是比较大的，所以如果采用非行列存储，引脚非常多&lt;/p&gt;
-&lt;p&gt;但即使采用了行列存储，地址位也仍然很多，所以需要采用引脚复用，Cache就没这种烦恼&lt;/p&gt;
-&lt;p&gt;即，先写入行信号，再写入列信号，中间会有延迟，这边还有一点小细节&lt;/p&gt;
-&lt;p&gt;需要在行选中信号前把行信号给输入到引脚，同样也需要把列选中信号前把列信号给引脚&lt;/p&gt;
-&lt;p&gt;在行信号选入后，需要保持这个行选中信号直到使用以后为止&lt;/p&gt;
-&lt;p&gt;而列选择信号是在行选择信号之后再输入的，在列选择信号之前需要给定读写信号&lt;/p&gt;
-&lt;p&gt;在列选择信号也进入后，那么三个信号就齐全了：行、列、读写，就可以用了&lt;/p&gt;
-&lt;p&gt;不过不怎么考，佛系即可&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/67.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Cache因为存量并不大，所以没必要采用复用引脚，本身就没几个引脚，一次性给定的&lt;/p&gt;
-&lt;p&gt;SRAM本身就是静态，含义即为非破坏性读出，读出后自然不需要重写，不用刷新&lt;/p&gt;
-&lt;p&gt;只读存储器：&lt;/p&gt;
-&lt;p&gt;没太多东西，全都是概念，记住是ROM即可&lt;/p&gt;
-&lt;p&gt;判断ROM芯片和RAM芯片最本质的特征其实就是看它，到底会不会断电后还保存&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/68.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/72.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;另外就是在计组中谈到的主存通常指代ROM(BIOS芯片)+RAM，采用统一编址的方式&lt;/p&gt;
-&lt;p&gt;多模块存储器：&lt;/p&gt;
-&lt;p&gt;至于单体，了解即可，需要知道其是总线M个字宽、每个存储单元M个字大、一次取M个字&lt;/p&gt;
-&lt;p&gt;即每次取一个存储单元(当然其实也就是一行&lt;/p&gt;
-&lt;p&gt;如果指令、操作数都是连续存放的，那么一次性就能取出来全部的&lt;/p&gt;
-&lt;p&gt;如果不是连续存放的，不仅每次为了取那么一短段数据需要取一长串出来更浪费&lt;/p&gt;
-&lt;p&gt;而且还需要访问多行(多个存储单元进行存取，在不连续的情况下更加浪费时间&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/69.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;采用高位交叉编码的，高位是体号，低位是体内地址，体和体之间是顺序的&lt;/p&gt;
-&lt;p&gt;即体1：0到N-1，体2：N到2N-1…&lt;/p&gt;
-&lt;p&gt;虽然理论上可以四个存储器一起使用，同时取不同地址的数，但因为CPU大多是顺序存取&lt;/p&gt;
-&lt;p&gt;所以基本等于只是扩容，而无并行使用，没有拓展吞吐量&lt;/p&gt;
-&lt;p&gt;采用低位交叉编码的，高位是体内地址，低位是体号，体和体之间的序号要区分&lt;/p&gt;
-&lt;p&gt;这个因为实现了连续地址存放在不同的存储器，而且CPU大多数是顺序存取&lt;/p&gt;
-&lt;p&gt;所以基本能完美拓展效率&lt;/p&gt;
-&lt;p&gt;地址&amp;#x2F;总体数&amp;#x3D;体号，通常是四体，同时一般说下，四体默认也就是T&amp;#x3D;4r（冷却&amp;#x3D;4存取时间&lt;/p&gt;
-&lt;p&gt;轮流启动的话，就可以实现完美利用并行的效率，因为一个读完还要冷却&lt;/p&gt;
-&lt;p&gt;但是如果是顺序读取，顺序的下一位在另外一个存储器，只需要继续读下去即可&lt;/p&gt;
-&lt;p&gt;不过需要满足一点，就是在第一个存储器已经冷却完了再去读取它&lt;/p&gt;
-&lt;p&gt;这样就和冷却时间、读取时间联系起来，读取时间乘N&amp;#x3D;冷却时间，就能让其完美运行&lt;/p&gt;
-&lt;p&gt;不过如果是一个还在冷却就去读取，那么只能等它冷却完了再读取&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;另外谈下一块存储器的组成：&lt;/p&gt;
-&lt;p&gt;一般是由多块存储芯片组成的，存储芯片在逻辑上以矩阵的多维存储为主&lt;/p&gt;
-&lt;p&gt;因而每次选中一行，实际上是选中了多维的一行，一列，实际上也是多维度的一列&lt;/p&gt;
-&lt;p&gt;多个存储芯片在逻辑上是重叠起来的&lt;/p&gt;
-&lt;p&gt;因而就必须有片选线的存在，否则根本不能清楚是选哪个位置&lt;/p&gt;
-&lt;p&gt;即使是只选那么一行，其实也是多维的一行，一个点，也是多维的一个重叠点&lt;/p&gt;
-&lt;p&gt;所以行缓冲器存的就是多位面的一行信息，列缓冲器也是同样的，多位面，特指输出时&lt;/p&gt;
-&lt;p&gt;SDRAM和DRAM的区别就是CPU可以闲着或者CPU不能闲着的区别&lt;/p&gt;
  ]]></description>
         </item>
         <item>
