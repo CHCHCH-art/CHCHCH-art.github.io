@@ -7,9 +7,7 @@
         <language>zh-CN</language>
         <pubDate>Thu, 11 Jul 2024 20:00:09 +0800</pubDate>
         <lastBuildDate>Thu, 11 Jul 2024 20:00:09 +0800</lastBuildDate>
-        <category>stock</category>
         <category>Preview</category>
-        <category>Math</category>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/07/11/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/</guid>
             <title>计组第四章：指令系统</title>
@@ -33,7 +31,7 @@
 &lt;p&gt;同时必须保留拓展位，因为不能产生后者码和前者码前缀相同的情况&lt;/p&gt;
 &lt;p&gt;如果一定要拓展那么就是和哈夫曼树联系，变长编码，根据访问的频率划分哈夫曼编码&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;指令类型&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;重点强调转换指令，JMP/CALL/RET/TRAP(有争议，一般认为是特殊的无条件转移指令)&lt;/p&gt;
+&lt;p&gt;重点强调转换指令，JMP&amp;#x2F;CALL&amp;#x2F;RET&amp;#x2F;TRAP(有争议，一般认为是特殊的无条件转移指令)&lt;/p&gt;
 &lt;p&gt;上述均是常见的无条件转移指令，需要刻意留意这一些细节，CALL一定会RET&lt;/p&gt;
 &lt;p&gt;而JMP不一定会RET，TRAP具体看情况，后面中断一节有具体阐述，还有一些联系&lt;/p&gt;
 &lt;p&gt;关注TRAP指令，建议联系中断一节具体阐述&lt;/p&gt;
@@ -107,7 +105,7 @@
 &lt;p&gt;当加法的情况下，输入为零，若两个正数相加，最终超出表达范围，自然产生进位溢出&lt;/p&gt;
 &lt;p&gt;具体到题目内，默认A-B方式，即A-B&amp;gt;0，那么就可以进行分析&lt;/p&gt;
 &lt;p&gt;当A-B&amp;gt;0的情况下，即减法，最高位产生进位仍是正数，那么CF必然就是0（异或逻辑&lt;/p&gt;
-&lt;p&gt;且总体不可能为零，那么就是ZF=0，自然就能选出C这个结果&lt;/p&gt;
+&lt;p&gt;且总体不可能为零，那么就是ZF&amp;#x3D;0，自然就能选出C这个结果&lt;/p&gt;
 &lt;p&gt;需要注意的几个点：&lt;/p&gt;
 &lt;p&gt;在计算机运算中不论加减法均是补码运算&lt;/p&gt;
 &lt;p&gt;有符号数还是无符号数，都是经过一样的电路运算的，因而标志位都会生成&lt;/p&gt;
@@ -131,15 +129,69 @@
 &lt;p&gt;建议按照名称类别记忆，是需要完整背诵的，具体功能不再赘述，除EBP和ESP外均通用&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;汇编指令&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;双操作数指令不能均来自内存、三操作数指令第一个必须是寄存器&lt;/p&gt;
+&lt;p&gt;目的操作数不能是常量&lt;/p&gt;
 &lt;p&gt;控制流指令中谈到的IP实际上就是对应的PC&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;转移指令&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;个人认为刻意需要留意原先C语言中的表达式和汇编语言中指令的表达式间的区别&lt;/p&gt;
 &lt;p&gt;这可能就会影响指令阅读中下一条指令到底是IF逻辑还是ELSE逻辑，从而导致混淆出现&lt;/p&gt;
 &lt;p&gt;此外，某一些跳转指令的执行也会改变指令逻辑，需要和刻意和原程序对比理清楚的&lt;/p&gt;
 &lt;p&gt;CMP中的条件就是第一个关注对象，后续指令执行的顺序和原程序顺序就是第二比较点&lt;/p&gt;
-&lt;p&gt;CALL/RET，后续展开的重点内容，需要单独掌握（统考往往结合C语言程序考察&lt;/p&gt;
+&lt;p&gt;CALL&amp;#x2F;RET，后续展开的重点内容，需要单独掌握（统考往往结合C语言程序考察&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;选择、循环语句机器指令&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对于不同的循环、选择结构，其跳转指令的条数不一定相同&lt;/p&gt;
+&lt;p&gt;即使是相同功能的循环、选择，其语句顺序、语句数量也不一定是相同的&lt;/p&gt;
+&lt;p&gt;重点关注选择语句的CMP中具体的比较方式，是和原逻辑相符还是相反&lt;/p&gt;
+&lt;p&gt;这会直接影响后续的指令执行流程，影响何处执行的是IF逻辑，何处执行的是ELSE逻辑&lt;/p&gt;
+&lt;p&gt;循环、选择结构体内至少包含一条条件转移指令，不一定包含无条件转移指令&lt;/p&gt;
+&lt;p&gt;当选择结构没有ELES，那么其就可以不包含无条件转移指令&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;过程调用(重点)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;调用CALL语句，将当前IC值压栈，ESP自增&lt;/p&gt;
+&lt;p&gt;再无条件跳转到新程序的第一句语句，至此CALL指令执行结束&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/136.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;但每个子程序开头都需要例行公事&lt;/p&gt;
+&lt;p&gt;首先将主程序的基地址压栈，ESP自增&lt;/p&gt;
+&lt;p&gt;这里就已经可以看出一个子程序的基地址中必然是其父程序的基地址（Main函数外&lt;/p&gt;
+&lt;p&gt;然后将ESP赋值给EBP，使得EBP指向当前基地址，后续就是正常使用这个帧栈&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/138.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;再考虑返回操作，即子程序中的RET&lt;/p&gt;
+&lt;p&gt;在RET前需要例行公事&lt;/p&gt;
+&lt;p&gt;首先将EBP赋值给ESP，使得其指向子程序基地址(清空当前函数帧栈&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/140.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后进行一次出栈操作，并将出栈的基地址赋值给基地址寄存器，恢复父程序基地址&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/142.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;执行RET指令，出栈上一层的IC，恢复IC寄存器的值，并无条件跳转回该指令地址&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/199.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;过程调用补充&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;对于过程调用而言，分单层和多重嵌套调用&lt;/p&gt;
+&lt;p&gt;如果是嵌套循环那么必须是压栈，如果只有一层那么可以依靠寄存器暂存保护量&lt;/p&gt;
+&lt;p&gt;CALL和RET均是无条件转移指令，LOOP循环指令默认是对ECX寄存器操作的&lt;/p&gt;
+&lt;p&gt;函数的帧栈在内存中是反地址自增的，也就是反向存放的，高地址向低地址延申生长&lt;/p&gt;
+&lt;p&gt;所以EBP、ESP的自增、自减和栈的增长方向是相反的，需要留意&lt;/p&gt;
+&lt;p&gt;其余便是EBP、ESP自增、自减和出入栈的操作方式限制，详细可以参考数据结构&lt;/p&gt;
+&lt;p&gt;先减再入、先出再加；先入再减、先加再出；需要注意的无非就是操作顺序&lt;/p&gt;
+&lt;p&gt;访问帧栈可采用Move&amp;#x2F;Push&amp;#x2F;Pop&amp;#x2F;Sub&amp;#x2F;Add等方式操纵栈指针和数据，要求能看懂&lt;/p&gt;
+&lt;p&gt;帧栈大小是16B的整数倍，一定是边界对齐的，可能会产生一定的内部碎片&lt;/p&gt;
+&lt;p&gt;调用者、被调用者各自有需要保护的寄存器存在，当然不必要的话不保护覆盖也可&lt;/p&gt;
+&lt;p&gt;下列是帧栈的内容，因为过程调用本身和中断等联系密切，所以建议重点掌握&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/200.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;PSW其内部标志位重点考察的是CF、OF、ZF、SF，其他还有IF（中断）、TF（陷入）&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;习题总结分析：&lt;/p&gt;
+&lt;p&gt;1、2：对于这类题目，规范按照电路逻辑即可，即加法直接补码相加看各自进位号&lt;/p&gt;
+&lt;p&gt;减法则减数全部取反加一，然后再进行加法观察其各自进位结果进行异或，得到标志&lt;/p&gt;
+&lt;p&gt;只需要关心电路进位，而根本不需要关心到底是无符号数还是有符号数溢出与否&lt;/p&gt;
+&lt;p&gt;6：PC在取指令后即完成自增，在执行阶段必须加上自增长度&lt;/p&gt;
+&lt;p&gt;9：该语句包含IF和ELSE两个选择逻辑，需要条件跳转和无条件跳转两个转移指令存在&lt;/p&gt;
+&lt;p&gt;至于两段逻辑块的先后顺序是没有要求的，只需要改变CMP条件即可改变顺序&lt;/p&gt;
+&lt;p&gt;10：循环结构、选择结构均至少包含一段条件转移指令，选择结构若有ELSE还要无条件&lt;/p&gt;
+&lt;p&gt;11：CALL指令的转移目标一定会在指令中给出，C选项即为可用寄存器保存非嵌套&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;第四节：RISC与CISC&lt;/p&gt;
+&lt;p&gt;大部分内容应以书为主，建议全文背诵，这里仅作小幅度补充说明&lt;/p&gt;
+&lt;p&gt;CISC是第五章的主要内容，也就是计组中研究的基本都是基于微程序控制器的指令&lt;/p&gt;
+&lt;p&gt;如果非Load&amp;#x2F;Store指令能够访存，那么必然是CISC指令，RISC必须用流水线&lt;/p&gt;
+&lt;p&gt;流水线的基本要求是指令长度尽可能一致、边界对齐、指令格式规整、大部分不可访存&lt;/p&gt;
+&lt;hr&gt;
  ]]></description>
         </item>
         <item>
@@ -6052,176 +6104,11 @@ do &amp;#123;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://chchch-art.github.io/2024/04/08/%E8%AE%A1%E7%BB%8412/</guid>
-            <title>计组12</title>
-            <link>https://chchch-art.github.io/2024/04/08/%E8%AE%A1%E7%BB%8412/</link>
-            <pubDate>Mon, 08 Apr 2024 20:20:56 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;今天内容较为简单，不做PPT，主要理顺一些比较乱的概念性问题&lt;/p&gt;
-&lt;p&gt;此外，这些寄存器的英文名建议都背下来，否则到时候遇到不认识就完蛋了&lt;/p&gt;
-&lt;p&gt;CPU至少有5个专用寄存器。它们是：程序计数器(PC)，指令寄存器(IR)，存储器地址寄存器(MAR)，储存器数据寄存器(MDR)，状态标志寄存器(PSWR)。&lt;/p&gt;
-&lt;p&gt;1&amp;gt;程序计数器：又称指令计数器，用来存放正在执行的指令地址或接着要执行的下条指令地址。&lt;/p&gt;
-&lt;p&gt;2&amp;gt;指令寄存器：用来存放从存储器中取出的指令。&lt;/p&gt;
-&lt;p&gt;3&amp;gt;存储器数据寄存器：用来暂时存放由主存储器读出的一条指令或一个数据字；反之，当向主存写入一条指令或一个数据字时，也暂时将它们存放在存储器数据寄存器中。&lt;/p&gt;
-&lt;p&gt;4&amp;gt;存储器地址寄存器：用来保存当前CPU所访问的主存单元的地址。&lt;/p&gt;
-&lt;p&gt;5&amp;gt;状态标志寄存器：用来存放程序状态字。程序状态字的各位表示程序和机器运行的状态，是参与控制程序执行的重要依据之一，它包括状态标志和控制标志。&lt;/p&gt;
-&lt;p&gt;其余均是通用寄存器&lt;/p&gt;
-&lt;p&gt;取寄存器内内容一般没有特别声明是否需要加内容符号，因为有时候也会有误解&lt;/p&gt;
-&lt;p&gt;但一般自己写的时候注意要加符号，题目里面暂时还没有出现这类破事情，除了偏移时候&lt;/p&gt;
-&lt;p&gt;留了个大坑&lt;/p&gt;
-&lt;p&gt;然后就是几个特例吧，其实主要还是透明不透明的事情&lt;/p&gt;
-&lt;p&gt;程序计数器是唯一一个控制器中的可以编程的寄存器，即可视，不透明的&lt;/p&gt;
-&lt;p&gt;暂存寄存器是唯一一个运算器里面不能编程的寄存器，即不可视，透明的&lt;/p&gt;
-&lt;p&gt;书上的概念性问题想考自然可以考得非常细，非常杂乱无章，实在是得一句句啃下去&lt;/p&gt;
-&lt;p&gt;首先明确一点，可见=不透明，不可见=透明&lt;/p&gt;
-&lt;p&gt;这是和我们生活中透明=可见相反的，为什么会这样？&lt;/p&gt;
-&lt;p&gt;是因为名词都是老外那里引入的，我们翻译过来就很别扭了&lt;/p&gt;
-&lt;p&gt;在英文中，透明就有点“屏蔽”的意思，那你说屏蔽了还能可见吗？&lt;/p&gt;
-&lt;p&gt;以下是王道书里的结论：&lt;br&gt;
-所有用户/程序员可见（不透明）：PC、PSW、ACC、通用寄存器。&lt;br&gt;
-所有用户/程序员不可见（透明）：MAR、MDR、IR、暂存器、Cache、uMAR、uMDR、uIR。&lt;/p&gt;
-&lt;p&gt;汇编程序员可见，所有用户可见基础上外加：中断字寄存器、基址寄存器、变址寄存器。&lt;br&gt;
-系统程序员可见，所有用户可见基础上外加：虚拟存储器。&lt;/p&gt;
-&lt;p&gt;绝对是能把人绕晕&lt;/p&gt;
-&lt;p&gt;注意，程序状态字寄存器=标志寄存器=条件码寄存器=PSW。都是同一个东西，不同教材表述不一样。&lt;/p&gt;
-&lt;p&gt;关于可见与能否修改的问题：&lt;/p&gt;
-&lt;p&gt;一般能修改内容的那么一定可见即不透明能编程，可见不透明能编程的不一定能修改内容&lt;/p&gt;
-&lt;p&gt;关于存储字长、按XX编址、PC位数的问题：&lt;/p&gt;
-&lt;p&gt;如果题目没说存储字长，那么按什么编址，就以这个为存储字长&lt;/p&gt;
-&lt;p&gt;比如按字节编址，那么就认为一个存储字长=8位&lt;/p&gt;
-&lt;p&gt;如果按字编址，那么一个存储字长=机器字长&lt;/p&gt;
-&lt;p&gt;但是如果题目明确给出存储字长，那么就按照给的来&lt;/p&gt;
-&lt;p&gt;有了存储字长，就能把主存容量写成容量=存储字数×存储字长=2^(MAR位数)×MDR位数。&lt;/p&gt;
-&lt;p&gt;这样就能得出MAR位数和MDR位数&lt;/p&gt;
-&lt;p&gt;至于PC和MAR的关系，如果题目没说，默认PC位数=MAR位数&lt;/p&gt;
-&lt;p&gt;如果题目明确说了PC至少是多少位，那么PC最少就是要能够区分不同的指令，也就是PC位数&amp;gt;=log2(指令条数)&lt;/p&gt;
-&lt;p&gt;关于糟糕的11题和24、26题：&lt;/p&gt;
-&lt;p&gt;按字节编址，4GB=2^32×B，因此MAR位数是32位。&lt;/p&gt;
-&lt;p&gt;一般情况下，可以认为，PC的位数等于MAR位数。但是本题，有个条件，指令按字边界对齐存放，问PC的位数至少是多少位。&lt;/p&gt;
-&lt;p&gt;PC的作用是识别不同指令地址，指令字长=32位=4B，因此4GB=2^30×4B，因此有2^30条指令，每条指令都是按字边界对齐，意味着每条指令的地址都是一个字的开始的位置。比如这里，字节地址是0 1 2 3……，由于字长4B，因此这里每个字的开始的位置是0 4 8 12……二进制为&lt;/p&gt;
-&lt;p&gt;0000 0000 0000 0000 0000 0000 0000 0000&lt;/p&gt;
-&lt;p&gt;0000 0000 0000 0000 0000 0000 0000 0100&lt;/p&gt;
-&lt;p&gt;0000 0000 0000 0000 0000 0000 0000 1000&lt;/p&gt;
-&lt;p&gt;0000 0000 0000 0000 0000 0000 0000 1100&lt;/p&gt;
-&lt;p&gt;可以发现这里末2位永远是0，因此末2位可以省略。因此PC的位数至少是30位&lt;/p&gt;
-&lt;p&gt;这边对齐的意思，大致上就是首位对齐，所以就会导致有一些位数实际上是不需要的&lt;/p&gt;
-&lt;p&gt;所以PC也自然就只需要存储有效位&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/146.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这个稍微注意下，就这样吧&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://chchch-art.github.io/2024/04/07/%E8%AE%A1%E7%BB%8411/</guid>
-            <title>计组11</title>
-            <link>https://chchch-art.github.io/2024/04/07/%E8%AE%A1%E7%BB%8411/</link>
-            <pubDate>Sun, 07 Apr 2024 21:34:14 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;CF：反映无符号数加减是否溢出&lt;/p&gt;
-&lt;p&gt;简单来说就是当加法的时候是否导致了高位进位产生一个1，减法进位产生一个0&lt;/p&gt;
-&lt;p&gt;OF：反映有符号数加减是否溢出，简单来说就是同符号是否产生不同符号&lt;/p&gt;
-&lt;p&gt;两个负的加出一个正的肯定是错了，两个正的加出来一个负的也肯定是错了&lt;/p&gt;
-&lt;p&gt;ZF：看是否是全零，对于有无符号都有意义&lt;/p&gt;
-&lt;p&gt;SF：符号位，仅对有符号加减法有意义&lt;/p&gt;
-&lt;p&gt;注意，不论有符号加减法还是无符号加减法都不代表这几个位不会产生变动，都可能的&lt;/p&gt;
-&lt;p&gt;无非是有时候没有意义而已罢了&lt;/p&gt;
-&lt;p&gt;参考此节进行学习，理论上还需要下功夫&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;其中cin为0的时候是加法，cin为1的时候是减法，无符号和有符号均适用&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/130.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这里就直接谈核心重点了，这两个指令的作用就摆在这，后面会有更详细的介绍&lt;/p&gt;
-&lt;p&gt;这边只是粗略上给出了大致的操作内容&lt;/p&gt;
-&lt;p&gt;其实实际上是压入两个内容，一个是PC的返回地址，其实也可以称作是IC的返回地址&lt;/p&gt;
-&lt;p&gt;这两个是同一个东西，在取址后都会进行自增操作，然后X86里面都是按字节进行编址的&lt;/p&gt;
-&lt;p&gt;所以就要稍微注意下相对应的增量到底是多少，课后习题基本都有&lt;/p&gt;
-&lt;p&gt;另外一个东西就是上一段程序的起始地址，否则后续的EBP就无法返回正常位置&lt;/p&gt;
-&lt;p&gt;课后习题其实也声明过，如果是嵌套循环那么必须是压栈，如果是只有一层那么可以寄存&lt;/p&gt;
-&lt;p&gt;返回的话其实就是把返回地址给赋值返回给IC/PC，然后就能正常执行下一句父层指令&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/131.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;当然后面会有更详细的介绍，目前先写到这&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/132.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;在内存里面这个栈实际上是反着放的，另外就是需要说明这个栈是在内存里面放的&lt;/p&gt;
-&lt;p&gt;在X86里面默认一个栈块是32位，也就是4个字节，书上讲的其实很详细，例如存储浪费等&lt;/p&gt;
-&lt;p&gt;建议看书，这里只需要记住一个栈里面有多个帧栈，EBP/ESP指向的是当前执行程序的帧栈底和顶&lt;/p&gt;
-&lt;p&gt;所以相对应的加减其实也有变化，例如POP/PUSH操作也会有一定的变化&lt;/p&gt;
-&lt;p&gt;指针向下走是减法，向上走是加法&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/133.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这里主要总结两种方法，至于入栈、出栈，其实指针指向不同也会有不同的操作&lt;/p&gt;
-&lt;p&gt;例如指针如果一开始指向的是空的，那么就是先入栈再减，或者先增加再出栈，具体来定&lt;/p&gt;
-&lt;p&gt;这里还需要声明的一点就是一般EBP是不变的，而ESP是经常改变的&lt;/p&gt;
-&lt;p&gt;一般的访问其实还有更多的方法，最主要的就是MOV指令，可以根据ESP、EBP两者&lt;/p&gt;
-&lt;p&gt;选择他们附近的块内容，例如EBP+8或者EBP+12、ESP+12等等，向上向下都行&lt;/p&gt;
-&lt;p&gt;一般初始化的时候，都会对ESP进行一次减法操作，用于初步给定一个栈的容量大小&lt;/p&gt;
-&lt;p&gt;当然也可以进行ESP加法操作来出栈或者删除一部分栈顶元素，完全是可灵活对待&lt;/p&gt;
-&lt;p&gt;至于指令，书上的能懂基本没问题，只要清楚几个比较特殊的点就行：&lt;/p&gt;
-&lt;p&gt;首先就是比较指令，是前者和后者相比&lt;/p&gt;
-&lt;p&gt;再就是四则运算指令，是前者四则运算后者&lt;/p&gt;
-&lt;p&gt;还有就是一般寄存器里面的内容是直接采取esp、ebp的读取法，没必要加括号&lt;/p&gt;
-&lt;p&gt;只有访问主存的时候需要加括号，读指令基本不会有问题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/134.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;有兴趣可以根据这个图走一遍，不难的&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/135.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;下面就是对之前的CALL和RET进行进一步细化的过程，不排除考大题的读法&lt;/p&gt;
-&lt;p&gt;在读到CALL命令以后，会将当下的IC压栈(即主程序中的下一条执行指令，并无条件跳转&lt;/p&gt;
-&lt;p&gt;无条件跳转到新程序的第一条地址&lt;/p&gt;
-&lt;p&gt;此时因为压栈，所以ESP自动会进行加四的操作&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/136.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;然后就是跳转到新程序中执行语句，其中任意一个非Main程序起始必然是这样的几句&lt;/p&gt;
-&lt;p&gt;首先是把父程序的基地址给压入栈中，此时ESP所指内容即为父程序的基地址，同时自加&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/137.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;然后把让EBP指向和ESP同指向的区域&lt;/p&gt;
-&lt;p&gt;所以其实可以看出任意一个子程序(栈帧)的开头必然是其父程序的首地址&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/138.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;然后就是考虑返回的事情了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/139.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;首先让新的帧栈清空，即让栈顶指向基地址&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/141.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;然后把基地址出栈，即为上一层的父帧栈的基地址，需要保持不能丢掉，现在返回给EBP&lt;/p&gt;
-&lt;p&gt;这样就能保证EBP重新指向父帧栈的正常基地址&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/140.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;出栈后，此时的EBP指向的也就是下一个IC执行地址，然后把IC值出栈恢复即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/142.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;至于其他的类似于赋值访问，我的建议是看PPT即可，这里就不再赘述&lt;/p&gt;
-&lt;p&gt;后面就是谈到了因为帧栈是以32位一块的，所以大概率是会产生一定的浪费情况在的&lt;/p&gt;
-&lt;p&gt;此外当需要使用上一层的寄存器的时候，需要先把相应的寄存器内容给放在栈里面&lt;/p&gt;
-&lt;p&gt;用完了再需要恢复&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;然后再谈这一节的复习方法和杂谈：&lt;/p&gt;
-&lt;p&gt;首先肯定是X86几个寄存器，这几个寄存器是一定要熟知能清楚是什么的，以及相关命令&lt;/p&gt;
-&lt;p&gt;好歹是要看懂英文到底表达的含义是什么&lt;/p&gt;
-&lt;p&gt;dword ptr\word ptr\byte ptr要清楚其含义&lt;/p&gt;
-&lt;p&gt;大部分指令书上讲的都很不错，没有必要拿PPT补充的&lt;/p&gt;
-&lt;p&gt;至于Intel格式，主要注意的就是其目的操作数和原操作数的顺序，计算、运算顺序&lt;/p&gt;
-&lt;p&gt;至于主存地址偏移量，用处就在于结构体可能是一块块的，所以才搞得比较复杂&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/143.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;这里是JMP的一些指令格式，看到要懂就行，以后会详细总结下，但无非就那么几种&lt;/p&gt;
-&lt;p&gt;至于选择指令，IF/ELSE结构，其中必然是会有一个无条件转移指令的&lt;/p&gt;
-&lt;p&gt;因为一段IF/ELSE结束后是一定要结束程序的，所以必然会有无条件跳转指令&lt;/p&gt;
-&lt;p&gt;至于运行的代码段，这个顺序肯定是可以随意变化的，课后习题已经详细说过，不赘述&lt;/p&gt;
-&lt;p&gt;对于循环结构，也肯定是需要有条件跳转指令，用来判断循环是否继续执行下去&lt;/p&gt;
-&lt;p&gt;如果不执行下去那么就一定要跳转&lt;/p&gt;
-&lt;p&gt;对于不同的循环、选择结构，其跳转指令的条数不一定相同，书上大致上是有写的，细化&lt;/p&gt;
-&lt;p&gt;至于LOOP指令，补充的LOOPNZ/LOOPZ都是对操作数的判断，看操作数是否为零结束循环&lt;/p&gt;
-&lt;p&gt;需要注意的就是LOOP是默认对ECX寄存器操作的，不能拿别的寄存器去存这个计数值在的&lt;/p&gt;
-&lt;p&gt;其他的，类似于机器级的阅读、执行顺序，其实更多可以参考这块方向&lt;/p&gt;
-&lt;p&gt;一般只会大致上考察一个阅读能力，知道中间执行的方法、内容基本就足够了&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/144.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%842/</guid>
-            <title>码的互相转换以及补充</title>
+            <title>计组第二章补充</title>
             <link>https://chchch-art.github.io/2024/03/26/%E8%AE%A1%E7%BB%842/</link>
             <pubDate>Tue, 26 Mar 2024 21:43:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;对下图需要注意下溢出的情况判断，后面自然会有讲三种方法&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/26.png&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;原码可表示小数，也可以表示整数，但一般在计算机中采用原码表示&lt;strong&gt;浮点数&lt;/strong&gt;的尾数&lt;/p&gt;
-&lt;p&gt;移码只能表示整数，注意&lt;/p&gt;
-&lt;p&gt;补码应用非常广，也是最有效率的，ALU内的计算几乎全部依赖于补码，不论小数整数&lt;/p&gt;
-&lt;p&gt;无非就是乘除法的时候会采用不同取模运算罢了，模四或者模二&lt;/p&gt;
-&lt;p&gt;无符号数就不多说了，就是简单的机器数&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;对于补码，真值、原码、移码、反码的全面总结，一共二十种（可以优化表述&lt;/p&gt;
+            <description><![CDATA[ &lt;p&gt;对于补码，真值、原码、移码、反码的全面总结，一共二十种（可以优化表述&lt;/p&gt;
 &lt;p&gt;具体补位的长度看题目给定，如果给定字长为X位就进一步补位数即可&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;真值-补码&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;正数：即为正数转原码，原码补码相同，数值位高位补0&lt;/p&gt;
