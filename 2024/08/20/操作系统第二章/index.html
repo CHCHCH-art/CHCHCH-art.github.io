@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>操作系统-第二章 | Ephemeral</title><meta name="author" content="CH Targaryen"><meta name="copyright" content="CH Targaryen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一节 进程的概念 进程实现操作系统的并发、共享，进程映像包含进程控制块、代码段、数据段组成 将进程理解为一件手头上未完成的事会是最精准的 动态性：不连续、间断 异步性：也称失去封闭性 进程的组成 参考，P179，进程映像于内存中的存储形式学习，PCB，常驻内存，其余部分按需调入 进程控制块内容需要背诵；操作系统中谈到的程序均为代码段含义 进程状态与转换 运行、就绪、阻塞、创建、终止 一般性转换案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统-第二章">
+<meta property="og:url" content="https://chchch-art.github.io/2024/08/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%AC%E4%BA%8C%E7%AB%A0/index.html">
+<meta property="og:site_name" content="Ephemeral">
+<meta property="og:description" content="第一节 进程的概念 进程实现操作系统的并发、共享，进程映像包含进程控制块、代码段、数据段组成 将进程理解为一件手头上未完成的事会是最精准的 动态性：不连续、间断 异步性：也称失去封闭性 进程的组成 参考，P179，进程映像于内存中的存储形式学习，PCB，常驻内存，其余部分按需调入 进程控制块内容需要背诵；操作系统中谈到的程序均为代码段含义 进程状态与转换 运行、就绪、阻塞、创建、终止 一般性转换案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://chchch-art.github.io/img/backphoto.png">
+<meta property="article:published_time" content="2024-08-20T04:17:26.000Z">
+<meta property="article:modified_time" content="2024-08-20T14:11:45.837Z">
+<meta property="article:author" content="CH Targaryen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chchch-art.github.io/img/backphoto.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://chchch-art.github.io/2024/08/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%AC%E4%BA%8C%E7%AB%A0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"YQ6FJ5L9SU","apiKey":"4a50564ce15d0129ab6907b7e907ea5b","indexName":"chchchch","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":10,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '操作系统-第二章',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-08-20 22:11:45'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/headimage.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/backphoto.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Ephemeral"><span class="site-name">Ephemeral</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">操作系统-第二章</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-20T04:17:26.000Z" title="发表于 2024-08-20 12:17:26">2024-08-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-20T14:11:45.837Z" title="更新于 2024-08-20 22:11:45">2024-08-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/2024/08/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%AC%E4%BA%8C%E7%AB%A0/" data-flag-title="操作系统-第二章"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>第一节</p>
+<p><strong>进程的概念</strong></p>
+<p>进程实现操作系统的并发、共享，进程映像包含进程控制块、代码段、数据段组成</p>
+<p>将进程理解为一件手头上未完成的事会是最精准的</p>
+<p>动态性：不连续、间断</p>
+<p>异步性：也称失去封闭性</p>
+<p><strong>进程的组成</strong></p>
+<p>参考，P179，进程映像于内存中的存储形式学习，PCB，常驻内存，其余部分按需调入</p>
+<p>进程控制块内容需要背诵；操作系统中谈到的程序均为代码段含义</p>
+<p><strong>进程状态与转换</strong></p>
+<p>运行、就绪、阻塞、创建、终止</p>
+<p>一般性转换案例：请求资源中断、资源获取、时间片剥夺、时间片轮到、异常终止</p>
+<p>其余态转变依据具体情况判断，不一一列出，书有补充</p>
+<p><strong>进程控制</strong></p>
+<p>高频考点，重点在于创建、终止、阻塞、唤醒四大原语的具体执行步骤、细节</p>
+<p>创建：PCB数量决定创建成功与否；资源分配决定创建态或就绪态；容量决定插入与否</p>
+<p>终止：终止条件需要背诵；终止态立即释放进程资源；线程终止不立刻释放资源</p>
+<p>阻塞：请求操作系统服务需要陷入；用户态陷入内核态</p>
+<p>唤醒：由中断处理程序唤醒，同样处于内核态；返回用户态</p>
+<p>上述原语均可被用户采用系统调用间接使用</p>
+<p><strong>进程通信</strong></p>
+<p>共享存储区、消息传递、管道通信</p>
+<p>共享存储区：分为队列共享、内存共享区域共享；速度快；系统调用</p>
+<p>消息传递：分为直接、间接通信；调用两个通信原语、速度较慢</p>
+<p>管道通信：与存储区类似；互斥、同步、单向、属于进程资源可继承；系统调用；</p>
+<p><strong>线程概念</strong></p>
+<p>线程权限：可创建、撤销另一线程；可修改另一线程栈区；可终止、复活另一线程；</p>
+<p>调度、并发、资源、独立性、开销</p>
+<p>线程不拥有独立地址空间；进程拥有独立地址空间；进程线程均有唯一标识控制块</p>
+<p>同进程线程通信不需要操作系统参与；线程并发、调度代价较小</p>
+<p><strong>线程控制块</strong></p>
+<p>内容需要背诵；创建浏览即可、终止态留意于进程终止的区别，此不直接释放资源</p>
+<p><strong>线程实现方式</strong></p>
+<p>下述内容均基于用户态线程与内核态线程关系展开，不探讨纯内核态线程</p>
+<p>用户级线程：</p>
+<p>于操作系统看来是一个进程，由用户态线程库映射为多个用户态线程</p>
+<p>线程切换代价低、线程调度算法自选、于不同操作系统迁移性强；操作系统视作同进程</p>
+<p>内核级线程：</p>
+<p>同一进程被操作系统映射为多个内核态线程，映射为多个用户态线程</p>
+<p>操作系统视作多个线程调度；线程切换总体较快，同一进程中线程切换相对较慢</p>
+<p>线程调度和切换均需要变态</p>
+<p>组合态：</p>
+<p>融合上述两类优势，拥有各自特点，调用用户库或系统调用均可管理线程</p>
+<p><strong>多线程模型</strong></p>
+<p>对内核级线程、组合态的单独展开论述，是对线程本身映射关系的论述，与进程无关</p>
+<p>多对一、一对一、一对多，均是基于用户-操作系统顺序论述的</p>
+<p>多对一：类似用户级线程，映射对象由进程变为内核线程，而用户级线程无内核线程</p>
+<p>一对一：即为内核级线程</p>
+<p>一对多：即为组合模型，重复声明</p>
+<p><strong>父进程与子进程关系</strong></p>
+<p>1.父进程创建子进程</p>
+<p>2.子进程继承父进程资源，但是一个独立的进程实体，拥有独立的进程映像</p>
+<p>3.父进程与子进程为独立进程，并发运行、独立调度；可由管道等实现通信（普遍）</p>
+<p>4.父进程可以调用系统调用终止子进程</p>
+<p><strong>随记</strong></p>
+<p>进程之间无法通过全局变量通信、同进程线程之间可以通过全局变量通信</p>
+<p>任意时间最多只有核数个进程运行；最少全部均在阻塞</p>
+<p>高级调度过程即为进程创建过程，若成功必然创建进程；操作系统响应服务即创建进程</p>
+<p>消息传递、管道均涉及拷贝，套接字网络层面更加费时，共享存储共享最快</p>
+<p>区分何者于进程控制块中，何者不在，建议结合控制块内容、进程内存映像背诵</p>
+<p>纯内核进程、线程的系统调用不需要变态，但很少见</p>
+<p>用户级线程切换必然不涉及变态；内核级线程切换必然涉及变态</p>
+<p>管道为半双工文件；若要实现双向通信至少需要两个管道</p>
+<p>进程控制块的数量是有限的，主要受限于内存大小</p>
+<p>统考常考方式：下列操作请求时/执行时/完成时，会导致何种情况，区分不同阶段</p>
+<p>等待键盘输入过程中，进程一直阻塞直到输入内容，具体见，P315，统考真题中断部分</p>
+<hr>
+<p>第二节</p>
+<p><strong>三级调度</strong></p>
+<p>高级调度、中级调度、低级调度</p>
+<p>高级调度从外存调到内存并创建进程：调入、申请、创建、分配、插入，创销均只一次</p>
+<p>中级调度当内存不足时调出一部分进程映像到外存，进程控制块常驻内存，可调回</p>
+<p>低级调度即为选择哪个进程获取处理器</p>
+<p><strong>调度的实现</strong></p>
+<p>调度器：排队器、分派器、上下文切换器；了解即可，可用硬件或者软件实现</p>
+<p>调度、切换的时机：父子进程择一、处理器空闲、I/O中断唤醒后的进程优先级判断</p>
+<p><strong>调度衡量标准</strong></p>
+<p>处理器利用率、系统吞吐量、周转时间、带权周转时间、等待时间、响应时间</p>
+<p><strong>进程切换</strong></p>
+<p>进程切换前后均维持在内核态、上下文保存于进程控制块中，与中断有联系又有区别</p>
+<p>上下文切换较为耗时，因而进程调度耗时、线程调度耗费较小</p>
+<p>核态转变同样耗时，于中断、系统调用、异常时由硬件自动实现核态的转换</p>
+<p>模式切换前后不一定保持同态，前、中、后，可以分别是不同的状态</p>
+<p><strong>调度算法</strong></p>
+<p>先来先服务、短作业(进程)优先、高响应比作业优先、优先级调度、时间片、多级队列</p>
+<p>耗费程度：多级队列、时间片、高响应比，耗费较为严重</p>
+<p>饥饿：先来先服务、短作业、优先级调度</p>
+<p>FCFS：利于长作业</p>
+<p>短作业、进程优先：饥饿、无及时性、平均效能最优；剥夺式/不可剥夺式</p>
+<p>响应比：均衡全为优点</p>
+<p>优先级：静态/动态优先级，抢占/非抢占式优先级</p>
+<p>时间片：未完成的会被剥夺时间片放入末尾；当时间片未完结束直接调用下一进程</p>
+<p>偏记忆性内容，统考考察均为简单计算</p>
+<p><strong>随记</strong></p>
+<p>进程在操作系统内核程序临界区中不能进行调度与切换</p>
+<p>进程在临界区可以被调度，临界区分为普通临界区与特殊临界区两类</p>
+<p>I/O进程理应被优先选择，方便外设与处理器提早开始并行运行</p>
+<p>时间片轮转必然是剥夺式的，且不可能存在饥饿现象</p>
+<p>动态优先级，应在进程时间片用完后减小其优先级，运行时不能减小，否则死循环</p>
+<p>统考考察方式，将调度分为高级调度与低级调度两类，题目中需要明确有两次调度存在</p>
+<hr>
+<p>第三节</p>
+<p><strong>基本概念</strong></p>
+<p>同步、互斥（互斥的四个基本准则）、临界资源、临界区</p>
+<p>访问临界资源的那一段代码被称为临界区，即临界区是一段运行程序的代码段</p>
+<p>临界资源：</p>
+<p>只有共享资源才可能成为临界资源，非共享资源不可能是临界资源</p>
+<p>共享资源中的独占资源，被称为临界资源，常见如打印机、共享存储区</p>
+<p>共享资源中的非独占资源被称为同时共享模式的资源，上述即为互斥共享模式资源</p>
+<p><strong>临界区算法</strong></p>
+<p>单标志法、双标志先/后检查法、Peterson算法、中断指令、TS指令、SWAP指令</p>
+<p>互斥锁、整型信号量、记录型信号量</p>
+<p>除记录型信号量外，均没有实现让权等待，具体的算法描述归档中</p>
+<p>重点在于记忆各自的特点、优缺点，以记录型信号量为主</p>
+<p><strong>记录型信号量</strong></p>
+<p>资源数即为当前物理上所拥有的资源数量，负数即为已被预约数量</p>
+<p>互斥信号量初始值必然为一，同步信号量初始值根据具体所需要求决定，不固定</p>
+<p>经典问题与编程题，单独归档论述</p>
+<p><strong>管程</strong></p>
+<p>较为抽象的概念，且考察较为频繁，恐怕需要单独梳理</p>
+<p>将其理解为图书馆资源阅览室，每次只能允许一个人进入(一个进程、线程使用)</p>
+<p>图书馆资源阅览室保管相应的书籍、资料(共享变量)</p>
+<p>当一个人进入后使用打印机打印大量资料时，可以暂时等待(阻塞)，让出使用权</p>
+<p>当资料打印完后，重新令他人归还阅览室使用权</p>
+<p>等待过程即为条件变量生效过程，此处条件变量仅用作阻塞队列的原因标识，没有值</p>
+<p><strong>随记</strong></p>
+<p>临界区、临界资源，是对临界区上锁来实现临界资源的互斥访问</p>
+<p>进程访问临界区时被阻塞可以调度其他进程，但其他进程不能访问这段互斥的临界区</p>
+<p>缓冲区的互斥访问同样基于对临界区的信号量操作，缓冲区必然是互斥的</p>
+<p>原语不是系统调用，系统调用可能基于原语实现</p>
+<p>死锁只可能出现在两个以上程序之间，单个程序不可能死锁</p>
+<p>并发进程涉及同一临界资源，而临界区是访问临界资源的代码段，因而一个进程一个</p>
+<p>公用数据结构均为临界资源，对其的访问即为临界区，需要用信号量实现互斥</p>
+<p>生产者、消费者问题中，生产者可以唤醒消费者和其他生产者，反之亦然</p>
+<p>进程、线程的互斥：同进程内的线程之间对共享变量的访问需要互斥，其余均不需要</p>
+<hr>
+<p>第四节</p>
+<p><strong>死锁与饥饿</strong></p>
+<p>死锁一定是两个进程以上、饥饿是一个；死锁是逻辑上的死锁，饥饿没逻辑问题</p>
+<p>死锁必然阻塞，饥饿既可为就绪也可为阻塞</p>
+<p><strong>死锁产生原因</strong></p>
+<p>现有互斥资源的进程、同步资源的竞争</p>
+<p><strong>死锁必要条件与反必要条件</strong></p>
+<p>请求并保持、不可剥夺、循环等待、资源互斥</p>
+<p>互斥：该资源为临界资源，一般无法破坏，不作为破坏条件</p>
+<p>不可剥夺：进程占据临界资源后其他进程无法剥夺；当其请求新资源失败时剥夺其资源</p>
+<p>请求并保持：已经占据临界资源且不可剥夺，再度申请资源；申请时不可带资源(两种)</p>
+<p>循环等待：互相占用对方所需临界资源，形成环请求链；资源顺序编号等方式；</p>
+<p>哲学家为例：</p>
+<p>四名哲学家进餐：破坏循环等待</p>
+<p>两边筷子均可用方可进餐：破坏请求并保持</p>
+<p>哲学家顺序编号：破坏循环等待</p>
+<p><strong>死锁处理策略</strong></p>
+<p>预防、避免、检测</p>
+<p><strong>死锁预防</strong></p>
+<p>即为反必要条件，如上所述，书上概述</p>
+<p><strong>死锁避免</strong></p>
+<p>必须知晓进程运行全过程所需资源</p>
+<p>死锁是资源分配问题，也同样是进程同步互斥问题，目前讨论前者</p>
+<p>安全状态必然不会死锁、不安全状态不一定会死锁、死锁一定是不安全状态</p>
+<p>死锁避免策略不一定能避免死锁，银行家算法一定能避免死锁</p>
+<p>银行家算法是资源的分配策略，用于避免死锁，统考中唯一考察重点</p>
+<p><strong>死锁检测与避免</strong></p>
+<p>已经死锁，回头检验，处理死锁，知晓当前资源请求即可</p>
+<p>资源分配图有向图概念：请求边、分配边、圆形表进程、方形表资源、小圆点表资源数</p>
+<p>死锁解除：资源剥夺(强迫)、撤销进程(强迫)、进程回退(自愿)</p>
+<p><strong>随记</strong></p>
+<p>对同类资源的竞争不会导致死锁，类似处理器</p>
+<p>判断死锁预防方法的题型：先看是否为破坏剥夺、请求，如果不是那么即为破坏循环</p>
+<p>系统产生死锁的根本原因是资源不足</p>
+<p>死锁定理是处理死锁的方式、死锁避免需要知道当前资源分配情况，避免需要全过程</p>
+<p>避免死锁的核心思想：至少令当前有一个进程正常工作，化死锁为竞争</p>
+<p>一般安全序理均不唯一，若资源大于一切所需资源，必然为安全状态，不会死锁</p>
+<hr>
+<p>第二章困惑点：</p>
+<p>线程实现方式、多线程模型；进程上下文切换与中断关系联系(联系计组)；</p>
+<p>临界资源与临界区；管程；PV大题；类C语言进程分析题；类C语言加锁类型题；</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://CHCHCH-art.github.io">CH Targaryen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://chchch-art.github.io/2024/08/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%AC%E4%BA%8C%E7%AB%A0/">https://chchch-art.github.io/2024/08/20/操作系统第二章/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://CHCHCH-art.github.io" target="_blank">Ephemeral</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/backphoto.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/08/19/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%AC%AC%E4%B8%80%E7%AB%A0/" title="操作系统-第一章"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">操作系统-第一章</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">CH Targaryen</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">42</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">戏子罢了</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="操作系统-第二章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统-第二章"/></a><div class="content"><a class="title" href="/2024/08/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="操作系统-第二章">操作系统-第二章</a><time datetime="2024-08-20T04:17:26.000Z" title="发表于 2024-08-20 12:17:26">2024-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/19/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%AC%AC%E4%B8%80%E7%AB%A0/" title="操作系统-第一章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统-第一章"/></a><div class="content"><a class="title" href="/2024/08/19/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%AC%AC%E4%B8%80%E7%AB%A0/" title="操作系统-第一章">操作系统-第一章</a><time datetime="2024-08-19T11:26:21.000Z" title="发表于 2024-08-19 19:26:21">2024-08-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/27/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9AI-O%E6%96%B9%E5%BC%8F/" title="计组第七章：I/O方式"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计组第七章：I/O方式"/></a><div class="content"><a class="title" href="/2024/07/27/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9AI-O%E6%96%B9%E5%BC%8F/" title="计组第七章：I/O方式">计组第七章：I/O方式</a><time datetime="2024-07-27T10:36:45.000Z" title="发表于 2024-07-27 18:36:45">2024-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/26/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%BA%94%E7%AB%A0%E3%80%81%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E6%8E%A7%E5%88%B6%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF/" title="计组第五、六章：控制器、总线"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计组第五、六章：控制器、总线"/></a><div class="content"><a class="title" href="/2024/07/26/%E8%AE%A1%E7%BB%84%E7%AC%AC%E4%BA%94%E7%AB%A0%E3%80%81%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E6%8E%A7%E5%88%B6%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF/" title="计组第五、六章：控制器、总线">计组第五、六章：控制器、总线</a><time datetime="2024-07-26T10:17:11.000Z" title="发表于 2024-07-26 18:17:11">2024-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/11/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" title="计组第四章：指令系统"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计组第四章：指令系统"/></a><div class="content"><a class="title" href="/2024/07/11/%E8%AE%A1%E7%BB%84%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" title="计组第四章：指令系统">计组第四章：指令系统</a><time datetime="2024-07-11T12:00:09.000Z" title="发表于 2024-07-11 20:00:09">2024-07-11</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/backphoto.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By CH Targaryen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'rKOyR9DY1zFYZe36c4mjejpQ-gzGzoHsz',
+      appKey: 'tV9RdIo2DYMz7OB5mfsjydI5',
+      avatar: '/img/headimage.png',
+      serverURLs: 'https://rkoyr9dy.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, ))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>
