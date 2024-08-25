@@ -5,9 +5,187 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 21 Aug 2024 21:07:02 +0800</pubDate>
-        <lastBuildDate>Wed, 21 Aug 2024 21:07:02 +0800</lastBuildDate>
+        <pubDate>Sat, 24 Aug 2024 21:06:47 +0800</pubDate>
+        <lastBuildDate>Sat, 24 Aug 2024 21:06:47 +0800</lastBuildDate>
         <category>Preview</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/08/24/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%AC%AC%E5%9B%9B%E7%AB%A0/</guid>
+            <title>操作系统-第四章</title>
+            <link>https://chchch-art.github.io/2024/08/24/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%AC%AC%E5%9B%9B%E7%AB%A0/</link>
+            <pubDate>Sat, 24 Aug 2024 21:06:47 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;第一节&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件基本概念&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;文件本身即为计算机中的数据集合，操作系统对数据的管理诞生文件系统&lt;/p&gt;
+&lt;p&gt;系统运行时，以进程为基本单位分配和调度；I&amp;#x2F;O，以文件为基本单位分配资源与调用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件类型&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;知晓基本概念对应类别即可；普通文件为数据集、目录文件为目录集&lt;/p&gt;
+&lt;p&gt;I&amp;#x2F;O，相关设备为特殊文件&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件控制块&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用于形容、描述一片有序数据集的标签；内包含信息需要背诵，含文件属性与基本信息&lt;/p&gt;
+&lt;p&gt;基本结构：文件控制块-&amp;gt;数据块&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录与索引&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;文件控制块即为目录项，连续存放的目录项组合成目录文件；目录文件与数据分区存放&lt;/p&gt;
+&lt;p&gt;基本查询结构：目录-&amp;gt;目录项-&amp;gt;数据块&lt;/p&gt;
+&lt;p&gt;为加速目录查询过程缩减目录项内容，增设索引块，目录项指向索引块，索引块存信息&lt;/p&gt;
+&lt;p&gt;基本查询结构：目录-&amp;gt;目录项-&amp;gt;索引节点-&amp;gt;数据块&lt;/p&gt;
+&lt;p&gt;磁盘索引、内存索引：其内容同样需要背诵&lt;/p&gt;
+&lt;p&gt;磁盘索引内容即为文件基本描述信息与内容，相当于文件控制块描述信息&lt;/p&gt;
+&lt;p&gt;内存索引存放于内存中的系统打开文件表的表项内，被进程所共享，增设使用信息&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件基本操作&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;文件基本操作：创、删、读、写、打开、关闭，见补充知识体系，书上不够完整&lt;/p&gt;
+&lt;p&gt;系统打开文件表、进程打开文件表：&lt;/p&gt;
+&lt;p&gt;系统首次打开某文件，将其索引节点&amp;#x2F;文件控制块调入内存系统打开文件表&lt;/p&gt;
+&lt;p&gt;系统非首次打开某文件，进程仅在自身打开文件表内增设表项&lt;/p&gt;
+&lt;p&gt;因而，进程增设，系统不一定增设，系统增设，进程一定会增设表项&lt;/p&gt;
+&lt;p&gt;多进程情况下，调用OPEN，不一定新增系统表项，不一定I&amp;#x2F;O，什么都不会是一定的&lt;/p&gt;
+&lt;p&gt;系统打开文件表的表项为全进程共享内容，进程打开文件表为私有、独立进程内容&lt;/p&gt;
+&lt;p&gt;首次打开文件需要使用文件名，后续操作均不再使用文件名，而用文件描述符&lt;/p&gt;
+&lt;p&gt;进程自身不再使用文件，释放打开文件表对应表项即可&lt;/p&gt;
+&lt;p&gt;系统而言，当彻底没有进程需要该文件时，将系统打开文件表该表项移除&lt;/p&gt;
+&lt;p&gt;注：硬链接系统表不增设，进程表增设；软链接系统表增设，进程表同样增设&lt;/p&gt;
+&lt;p&gt;打开文件表项：&lt;/p&gt;
+&lt;p&gt;系统打开文件表公用部分：文件指针、文件打开计数、文件磁盘位置&lt;/p&gt;
+&lt;p&gt;进程私有部分：访问权限（代指进程对该文件的访问权限，而非文件持有的权限矩阵）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件保护&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;基本方式：口令保护、加密方式；存取访问权限控制（权限矩阵）&lt;/p&gt;
+&lt;p&gt;注：前二者并未对用户权限进行控制，唯有后者对权限进行真正的访问控制&lt;/p&gt;
+&lt;p&gt;注：该访问矩阵必须是用户数·控制权限量的矩阵，因为是文件持有，针对系统全体&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件逻辑结构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;操作系统提供文件逻辑服务的目的即为满足用户需求，于内核而言只需物理结构即可&lt;/p&gt;
+&lt;p&gt;逻辑结构在某些情况下也基于存储介质，例如磁带必须由顺序文件支持&lt;/p&gt;
+&lt;p&gt;无结构文件：毫无规律性的数据集，流式文件&lt;/p&gt;
+&lt;p&gt;有结构文件：顺序文件、索引文件、索引顺序文件，数据结构&lt;/p&gt;
+&lt;p&gt;顺序文件：有序、无序；记录定长或不定长；增删改查效率较低；连续读取效率高；&lt;/p&gt;
+&lt;p&gt;索引文件：变长记录依靠索引表改造为定长顺序文件；定长顺序逻辑上随机存取&lt;/p&gt;
+&lt;p&gt;索引顺序：组内随意、组间关键词有序、每组一个索引；多级索引，查询速度较快&lt;/p&gt;
+&lt;p&gt;哈希：存取极快、会产生冲突&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件物理结构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;注：目录内容既可以指代索引结点内容，也可以指代进程控制块内容&lt;/p&gt;
+&lt;p&gt;连续分配、隐式链接、显式链接、索引分配&lt;/p&gt;
+&lt;p&gt;统考实际上并未对相关数据结构进行如此细致的考察，但可以方便理解和掌握&lt;/p&gt;
+&lt;p&gt;连续分配：数据结构上为数组&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/88.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;隐式链接：数据结构上为单链表&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/89.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;显式链接：数据结构上为静态链表&lt;/p&gt;
+&lt;p&gt;整个系统只有一个FAT&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/90.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;索引分配：数据结构上类似页表，提供逻辑块号到物理块号的映射&lt;/p&gt;
+&lt;p&gt;一个文件一个索引块，甚至可以有多个索引块；分为单级索引、多级索引、混合索引&lt;/p&gt;
+&lt;p&gt;注：一级索引含义即为一个索引表，多个数据块，略微需要注意混淆可能性&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/91.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;随记&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;重点：系统调用不同文件名打开的文件，依旧可是同一文件；软链接下即为此&lt;/p&gt;
+&lt;p&gt;读取文件步骤：寻找目录项-&amp;gt;读取文件控制块&amp;#x2F;索引块-&amp;gt;得到数据块&lt;/p&gt;
+&lt;p&gt;但凡读取过一次且文件依旧处于打开状态，后续就可以省略寻找目录项的步骤&lt;/p&gt;
+&lt;p&gt;关闭文件本身只写回文件控制块更新信息，文件内容的更新只可在读写系统调用中产生&lt;/p&gt;
+&lt;p&gt;读写文件操作一般性步骤：找到目录项-&amp;gt;查询权限-&amp;gt;地址转换-&amp;gt;硬件执行&lt;/p&gt;
+&lt;p&gt;异步I&amp;#x2F;O，异步的目的基本是为了平衡两者之间的速度差异，使得两者并行运行&lt;/p&gt;
+&lt;p&gt;存储介质某些情况下会决定物理结构与逻辑结构，磁带，必须是顺序文件才能支持&lt;/p&gt;
+&lt;p&gt;对于READ、WRITE、CLOSE，这一类系统调用，隐性提示已经打开文件，不会用文件名&lt;/p&gt;
+&lt;p&gt;因为只有在文件打开情况下才可能使用此类系统调用，统考重点考点&lt;/p&gt;
+&lt;p&gt;索引节点位数，说明最多可存在多少个索引节点，以此作为磁盘文件数量上限&lt;/p&gt;
+&lt;p&gt;位于文件控制块中的访问权限控制必然为矩阵，位于进程打开文件表为权限向量&lt;/p&gt;
+&lt;p&gt;内存映射文件，即为系统打开文件中的共享文件，各进程可写可读，实现通信&lt;/p&gt;
+&lt;p&gt;注：文件均为请求调入式，常驻内存的不会是文件数据块&lt;/p&gt;
+&lt;p&gt;读盘、写盘次数，I&amp;#x2F;O次数、磁盘开销、数据结构联合考察法统考考察较多&lt;/p&gt;
+&lt;p&gt;相关细节即为注意目录项、索引块等是否调入内存，这步对总体答案选择影响较大&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;真题汇总&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;6：只读类型的文件，最适合用顺序存储，访问速度快内存占用率高&lt;/p&gt;
+&lt;p&gt;7：起始块号顶多影响可存储文件总数，不影响文件最长长度，但最好占满全空间&lt;/p&gt;
+&lt;p&gt;8：统考中以综合题形式考察读盘&amp;#x2F;写盘次数，参考如上，视作一般链表操作&lt;/p&gt;
+&lt;p&gt;注：需要修改磁盘对应块号内容，必须先读盘调入内存，内存中修改，再写回磁盘内&lt;/p&gt;
+&lt;p&gt;注：对于磁盘修改内容的写回采用回写法，而不可能采用全写法&lt;/p&gt;
+&lt;p&gt;9：考察知识点较为综合&lt;/p&gt;
+&lt;p&gt;(1)目录文件内容，仅有其下级目录、文件的文件名和对应的描述信息，该有簇号&lt;/p&gt;
+&lt;p&gt;(2)此处考察的文件分配表大小，从表内簇位数推测，簇号位数表明最多可支持多少簇&lt;/p&gt;
+&lt;p&gt;自然可以据此得出簇、文件分配表的最大数量和长度，以及文件的长度&lt;/p&gt;
+&lt;p&gt;(3)FTA，结构即为盘块号、下一块盘块号，对同文件自然以静态链接，100-&amp;gt;106-&amp;gt;108&lt;/p&gt;
+&lt;p&gt;(4)即使目录项内不存放首簇，对簇的读取也是直接式的，不可能产生多次访盘&lt;/p&gt;
+&lt;p&gt;因为静态链表存在于内存，只需要知道对应块号起始，即可多次访存得到所需块号&lt;/p&gt;
+&lt;p&gt;11：此类模式再度考察，需要作为重点看待&lt;/p&gt;
+&lt;p&gt;(1)同上，目录文件中仅保持子目录、子文件的目录项，不保持自身映射&lt;/p&gt;
+&lt;p&gt;(2)可知索引节点与另一文件相同，意味着硬链接，指向同一文件&lt;/p&gt;
+&lt;p&gt;(3)上级目录保存子文件、子目录的目录项，从目录项可知该文件的文件索引节点号&lt;/p&gt;
+&lt;p&gt;区分打开文件与将文件读入内存，打开文件只需要把索引块读入内存即可&lt;/p&gt;
+&lt;p&gt;而将文件读入内存则需要把索引块、文件数据块全部读入内存，同时注意审题&lt;/p&gt;
+&lt;p&gt;题设：后续的块号指的是存储的块号，而不是存储的数量，明确这一点，读取两次&lt;/p&gt;
+&lt;p&gt;(4)运算直接、间接相应表示长度即可得出需要几次间接&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;综合题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2：属于较难的计算题，关键在于很难意识到对磁盘块的访问是不均匀的，因为未满&lt;/p&gt;
+&lt;p&gt;这一点在数据结构的计算题中也可能会涉及，需要留意&lt;/p&gt;
+&lt;p&gt;3：FAT、索引分配块、页表、中断向量表、段表、多级页表、网络包序号都隐含序号&lt;/p&gt;
+&lt;p&gt;因而，存储容量的计算上只需要计算一半即可，不需要计算隐含序号&lt;/p&gt;
+&lt;p&gt;4：读取“第”，只需要按索引访存即可，如果是读取“前”几块，那就顺序访问&lt;/p&gt;
+&lt;p&gt;5：十三个地址项的大小并非十三位，地址项是有一定大小的，4B·13&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;第二节&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录基本概念&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;目录项连续存放的有序集合即为目录，目录为查询服务，目录项有精简与非精简两类&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录基本结构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;统考低频考点，大致理解各自特征即可&lt;/p&gt;
+&lt;p&gt;单级目录：全系统一张目录表、每文件一个目录项、查询慢、不允许重名、单用户&lt;/p&gt;
+&lt;p&gt;两级目录：主文件目录表、用户文件目录表、同用户目录不可重名、无法分类、不灵活&lt;/p&gt;
+&lt;p&gt;树形目录：每个文件的路径名唯一、用户默认目录、可变当前目录，开销高&lt;/p&gt;
+&lt;p&gt;无环图目录：文件共享，共享节点计数器、无人引用方才释放(内存中的打开文件表项)&lt;/p&gt;
+&lt;p&gt;注：不论何种目录，其首先均是寻找到目录项，然后才能读取文件数据块&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录实现&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;同样低频考点，大致理解即可&lt;/p&gt;
+&lt;p&gt;线性列表：顺序表、链表实现；顺序访问、查询慢、链表增删略优于顺序表(数组)&lt;/p&gt;
+&lt;p&gt;哈希表：提供文件名与线性列表指针的哈希函数，查询极快，但需处理冲突&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件共享&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;历年统考落点考频较高，需要重点掌握&lt;/p&gt;
+&lt;p&gt;基本内容：硬链接、软链接&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/92.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;索引结点如果存在，引用数就不可能为零，共享链接也是如此，至少大于等于一&lt;/p&gt;
+&lt;p&gt;索引结点在文件打开后存于内存的系统打开文件表内，成为内存索引结点&lt;/p&gt;
+&lt;p&gt;快捷方式即为软链接，原文件删除后快捷方式依旧可存在，但一旦访问失效，即被删除&lt;/p&gt;
+&lt;p&gt;硬链接查询速度快于软链接&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;随记&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;硬链接基于索引结点，软链接文内并未提及&lt;/p&gt;
+&lt;p&gt;树形存储查询路径若一个分量未找到就应该停止寻找、不必每次都从根目录找&lt;/p&gt;
+&lt;p&gt;任何目录的检索结果均是得到页表项，间接得到索引号、进程控制块&lt;/p&gt;
+&lt;p&gt;一级目录即为直接目录，当前目录结果直接指向数据块或者索引块，无间接&lt;/p&gt;
+&lt;p&gt;文件描述符就是文件索引号，得到文件索引号后还需访索引节点，然后再访问数据块&lt;/p&gt;
+&lt;p&gt;硬链接、软链接的绘图，只需要根据书上给出的模型套模板即可，考点&lt;/p&gt;
+&lt;p&gt;读写指针是各个进程私有的内容，不可能被共享&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;综合题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2：不一定能被删除，若是硬链接无法被删除，若是软链接即可被删除，目录同理&lt;/p&gt;
+&lt;p&gt;3：文件保护由文件控制块持有的权限矩阵实现，若要修改权限，必须修改权限矩阵&lt;/p&gt;
+&lt;p&gt;5：连续文件的访盘可以直接计算得出对应盘号，因而只需一次访盘&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;第三节&lt;/p&gt;
+&lt;p&gt;文件系统的目的一方面是外存映射、一方面是实现按名查询&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件系统分层结构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;背诵类内容，单纯从背诵角度看即可&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;磁盘初始化过程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;磁盘低级格式化到存在磁道、扇区&lt;/p&gt;
+&lt;p&gt;磁盘分区，产生主引导记录、分区引导记录；只有结构没内容&lt;/p&gt;
+&lt;p&gt;磁盘逻辑格式化，装载文件系统、装载操作系统&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件系统布局&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;文件系统不一定处于活动分区，任意分区都可以拥有自己的文件系统&lt;/p&gt;
+&lt;p&gt;文件系统关键信息包含在超级块中，该分区同一般分区一样，有自己的引导块&lt;/p&gt;
+&lt;p&gt;超级块一般会被读入内存，并且时常保持与磁盘文件系统的一致性&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;外存空间管理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;包含文件分区的分区被称为卷，分区的大小是随意的，分区内目录和文件单独存放&lt;/p&gt;
+&lt;p&gt;空闲表法、空闲盘块链、空闲盘区链、位示图、成组链接法&lt;/p&gt;
+&lt;p&gt;注：复习要点为把握相应数据结构和对应优缺点，以位数图为核心，其余为辅&lt;/p&gt;
+&lt;p&gt;成组链接法的分配、回收主要在于某盘块栈分配完、回收满的处理&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;虚拟文件系统&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;虚拟文件系统只存在于内存中，其相当于一个统一者、协调的文件系统&lt;/p&gt;
+&lt;p&gt;隐蔽了一切冲突问题，让用户能够无视文件系统差异自由操作，调用函数即可&lt;/p&gt;
+&lt;p&gt;它会具体安排好到底应该执行什么、到哪执行&lt;/p&gt;
+&lt;p&gt;具体考察名称：超级块对象、索引节点对象、目录项对象、文件对象&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件系统挂载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;理解为文件系统需要首先挂载到某个目录下才可使用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;随记&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;统考中唯一命题点即为位示图，常考察位数图位置与磁盘、文件位置关系&lt;/p&gt;
+&lt;p&gt;需要注意的即为零开还是一开、题设询问的单位&lt;/p&gt;
+&lt;p&gt;FAT，同时兼文件数据管理、空闲块管理、坏块管理三大功能于一身&lt;/p&gt;
+&lt;p&gt;文件管理是对已用存储区的管理，文件存储空间管理是对未用存储空间的管理&lt;/p&gt;
+&lt;p&gt;重点：磁盘块号的顺序分配法则，柱面从上到下，从内到外&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/08/21/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%AC%AC%E4%B8%89%E7%AB%A0/</guid>
             <title>操作系统-第三章</title>
