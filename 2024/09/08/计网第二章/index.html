@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>计网第二章 | Ephemeral</title><meta name="author" content="CH Targaryen"><meta name="copyright" content="CH Targaryen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一节 通信基础 模拟信号、数字信号、通信系统 数字信号变为基带信号于数字信道上传输称为基带传输，数字信号是离散的 基带信号调制为模拟信号于模拟信道上传输被称为宽带传输，模拟信号是连续的 中继器、集线器放大数字信号，放大器放大模拟信号 数据转换为模拟信号称为调制，数据转换为数字信号称为编码，调制器、编码器对应 通信系统被分为：信源、信道、信宿，主要考察点在于全双工、半双工 通信传输 K进制码元，有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计网第二章">
+<meta property="og:url" content="https://chchch-art.github.io/2024/09/08/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0/index.html">
+<meta property="og:site_name" content="Ephemeral">
+<meta property="og:description" content="第一节 通信基础 模拟信号、数字信号、通信系统 数字信号变为基带信号于数字信道上传输称为基带传输，数字信号是离散的 基带信号调制为模拟信号于模拟信道上传输被称为宽带传输，模拟信号是连续的 中继器、集线器放大数字信号，放大器放大模拟信号 数据转换为模拟信号称为调制，数据转换为数字信号称为编码，调制器、编码器对应 通信系统被分为：信源、信道、信宿，主要考察点在于全双工、半双工 通信传输 K进制码元，有">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://chchch-art.github.io/img/backphoto.png">
+<meta property="article:published_time" content="2024-09-08T12:55:53.000Z">
+<meta property="article:modified_time" content="2024-09-08T14:45:05.628Z">
+<meta property="article:author" content="CH Targaryen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chchch-art.github.io/img/backphoto.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://chchch-art.github.io/2024/09/08/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"YQ6FJ5L9SU","apiKey":"4a50564ce15d0129ab6907b7e907ea5b","indexName":"chchchch","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":10,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计网第二章',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-09-08 22:45:05'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/headimage.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/backphoto.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Ephemeral"><span class="site-name">Ephemeral</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计网第二章</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-09-08T12:55:53.000Z" title="发表于 2024-09-08 20:55:53">2024-09-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-08T14:45:05.628Z" title="更新于 2024-09-08 22:45:05">2024-09-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/2024/09/08/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0/" data-flag-title="计网第二章"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>第一节</p>
+<p><strong>通信基础</strong></p>
+<p>模拟信号、数字信号、通信系统</p>
+<p>数字信号变为基带信号于数字信道上传输称为基带传输，数字信号是离散的</p>
+<p>基带信号调制为模拟信号于模拟信道上传输被称为宽带传输，模拟信号是连续的</p>
+<p>中继器、集线器放大数字信号，放大器放大模拟信号</p>
+<p>数据转换为模拟信号称为调制，数据转换为数字信号称为编码，调制器、编码器对应</p>
+<p>通信系统被分为：信源、信道、信宿，主要考察点在于全双工、半双工</p>
+<p><strong>通信传输</strong></p>
+<p>K进制码元，有2^K个离散值，携带Kbit信息，有2^K种码元</p>
+<p>码元传输速率是波特，在曼彻斯特那边依旧存在一定争议的问题，不过应该不会考察</p>
+<p><strong>信道传输容量</strong></p>
+<p>奈奎斯特、香农定理，重点谈几个易错点即可</p>
+<p>当两者均可以直接算出时，那么比较两者的值，取小为准，参考：12、14</p>
+<p>并且记忆一个点：以太网采用曼彻斯特编码，故码元默认为二进制</p>
+<p>宽度高速网中常使用差分曼彻斯特编码</p>
+<p>信噪比存在两个概念，一个是公式内的计算概念，一个是外在的公式计算概念</p>
+<p>参考：14、15、28，两者需要会转换、不混淆起来</p>
+<p>采样频率需要保证为最高频率的两倍，参考例题：12、19、20</p>
+<p>并且超过采样最高频率实际上也不能提升任何实际的数据传送量，因为已经全部采到</p>
+<p>波特率·码元位数：17、21、22、23、30，最基本类型的题型</p>
+<p>曼彻斯特：一个bit，需要两个码元，码元速率（编码速率）是数据传送速率两倍</p>
+<p>二者所占的频带宽度是原始基础带宽的两倍、编码效率是50%，每个bit对应两个周期</p>
+<p>其实也就是把每次电平跳变都视作一个码元，仅此而已，编码自然需要按此</p>
+<p>当计算具体速率时，不要混淆香农和奈奎斯特，前面的码元单位一个是2W，一个是W</p>
+<p><strong>编码与调制</strong></p>
+<p>模拟数据调制为模拟信号，也可称为：模拟信号传输模拟数据，一般不考察</p>
+<p>数字数据调制为模拟信号：调幅、调频、调相、正交调制（计算中比较常见的考察）</p>
+<p>其他几个：均是一个码元表示一位二进制数，因而不常考</p>
+<p>模拟数据编码为数字信号：采样、量化、编码，只需要清楚采样率的公式即可</p>
+<p>数字数据编码为数字信号：核心考察重点，主要需要记忆这几个波形和对应的编码号</p>
+<p>这部分也可以算作是背诵内容，因为考察上比较重要，历年考频较高</p>
+<p><strong>随记</strong></p>
+<p>通信电路是可以被复用的，当被复用的时候就产生多条信道，一般全双工</p>
+<p>编码成数据信号、调制成模拟信号</p>
+<p>曼彻斯特编码适合传输的是数字信号，毕竟归类在数字信号节下面</p>
+<p>波特率应该可以算作是每秒的信号变化次数，曼彻斯特的码元速度也是如此得来的</p>
+<p>归零编码中间也是产生一次跳变的，和曼彻斯特编码是同一个道理</p>
+<p>31：两段式流水线，有几段被分割的链路就当作几段式流水线，若报文则不能流水线</p>
+<hr>
+<p>第二节</p>
+<p><strong>传输介质</strong></p>
+<p>一句话，统考从未考察，单独划分为补充内容即可，未来考察概率也很低</p>
+<p><strong>物理层接口特性</strong></p>
+<p>统考两次考察命题点均落于此处，需要重视该内容</p>
+<p>功能特性：指明某根线的作用，某个电平的特定含义，是功能特性，更抽象于电气特性</p>
+<p>机械特性：规定最基本不通电情况下的物理设备统一规定和标准</p>
+<p>电气特性：凡是与通电后的具体电流相关，如电压范围、距离限制、传输速率均是电气</p>
+<p><strong>随记</strong></p>
+<p>9：信号电平的范围，电线距离，明显是电气特性（与电气物理设备相关的内容）</p>
+<p>功能特性：指明某根线的作用，某个电平的特定含义，是功能特性，更抽象于电气特性</p>
+<p>机械特性：规定最基本不通电情况下的物理设备统一规定和标准</p>
+<p>电气特性：具体的与“电”、“性能”相关的内容，均是电气的特性</p>
+<p>过程特性：非上述功能即为过程特性</p>
+<p>关于习题，后续可以辅助背诵，简单来说就是背内容不如背题目，多刷几次即可</p>
+<hr>
+<p>第三节</p>
+<p><strong>物理层设备</strong></p>
+<p>中继器、集线器、放大器，均是物理层基本设备，没有存储转发功能，均是直通式</p>
+<p>中继器、集线器原理：信号再生，用于数字信号的放大</p>
+<p>放大器原理：信号放大，主要用于模拟信号</p>
+<p>物理层设备无法分割冲突域、广播域，链路层设备能分割冲突域，网络层能分割广播域</p>
+<p>因而物理层设备不适合放在局域网内，更适合放在局域网与外网交互处：P123</p>
+<p>物理层设备的延迟比较小，相对于链路层、网络层都要快：P211</p>
+<p>中继器相对于直接的链路存在延迟，若去除链路的中继器，会影响最小帧长：P91</p>
+<p>集线器、中继器在真题、综合概念题的存在与相关应用：P93、P124、P157-159</p>
+<p>P195、P212，这部分内容一般结合于真题中混合考察，不能说不重要</p>
+<p>关于存储转发、协议互联：</p>
+<p>因为物理层设备均是直通式的，所以就不支持不同协议(主要是速率不匹配</p>
+<p>但不同介质是可以支持的，中继器两端也可以连接不同的介质，只要速率协议匹配即可</p>
+<p>物理层设备不参与协议栈的封装，也不参与协议栈的拆封，只涉及电气的转换</p>
+<p>因而若要保证正常通信，链路层协议必须相同，因为链路层直接被物理层直通送达</p>
+<p>链路层以上相连，可以采用交换机来实现，交换机也分直通式和存储转发式</p>
+<p>直通式不能连接不同协议，存储转发式可以连接不同协议</p>
+<p>路由器一般是存储转发式的，因而其可以支持连接不同的两个网络协议：P134</p>
+<p>关于集线器的容量计算，以及相关的交换机容量计算：P123，全双工、半双工接口</p>
+<p>集线器、中继器均是半双工接口，交换机一般全双工，路由器基本全双工</p>
+<p>关于集线器、中继器的延迟和最小帧长的计算：P93</p>
+<p><strong>随记</strong></p>
+<p>中继器、集线器这类设备本身不做考察重点，但往往综合其他概念相互考察，需要整理</p>
+<p>物理层互联，如果不考虑链路层能否通信，那么只需要物理层速率匹配即可</p>
+<p>如果需要考虑链路层的通信，那么就需要保证两边相连的链路层，协议也必须相同</p>
+<p>主要是因为两者几乎等同于直接相连，如果有存储转发式交换机就可以解决这个冲突</p>
+<p>如果冲突域没有被划分，那么逻辑上就是总线型的，集线器就是如此，物理上星型</p>
+<hr>
+<p>补充：</p>
+<p>码元传输，四个二进制位，那么一个码元就传输4bit，易混淆点</p>
+<p>物理介质不是物理层的内容，物理层是管理对物理介质的访问、传输、信号转换等</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://CHCHCH-art.github.io">CH Targaryen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://chchch-art.github.io/2024/09/08/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0/">https://chchch-art.github.io/2024/09/08/计网第二章/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://CHCHCH-art.github.io" target="_blank">Ephemeral</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/backphoto.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/09/09/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A04/" title="计网第三章"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">计网第三章</div></div></a></div><div class="next-post pull-right"><a href="/2024/09/08/%E8%AE%A1%E7%BD%91%E8%83%8C%E8%AF%B5%E5%86%85%E5%AE%B9%E6%B1%87%E6%80%BB/" title="计网背诵内容汇总（次要内容）"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">计网背诵内容汇总（次要内容）</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">CH Targaryen</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">戏子罢了</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/09/15/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0-1/" title="计网第六章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第六章"/></a><div class="content"><a class="title" href="/2024/09/15/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0-1/" title="计网第六章">计网第六章</a><time datetime="2024-09-15T11:14:54.000Z" title="发表于 2024-09-15 19:14:54">2024-09-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/14/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0-1/" title="计网第五章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第五章"/></a><div class="content"><a class="title" href="/2024/09/14/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0-1/" title="计网第五章">计网第五章</a><time datetime="2024-09-14T12:13:15.000Z" title="发表于 2024-09-14 20:13:15">2024-09-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/12/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0-1/" title="计网第四章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第四章"/></a><div class="content"><a class="title" href="/2024/09/12/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0-1/" title="计网第四章">计网第四章</a><time datetime="2024-09-12T01:50:01.000Z" title="发表于 2024-09-12 09:50:01">2024-09-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/09/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A04/" title="计网第三章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第三章"/></a><div class="content"><a class="title" href="/2024/09/09/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A04/" title="计网第三章">计网第三章</a><time datetime="2024-09-09T12:04:39.000Z" title="发表于 2024-09-09 20:04:39">2024-09-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/08/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="计网第二章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第二章"/></a><div class="content"><a class="title" href="/2024/09/08/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="计网第二章">计网第二章</a><time datetime="2024-09-08T12:55:53.000Z" title="发表于 2024-09-08 20:55:53">2024-09-08</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/backphoto.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By CH Targaryen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'rKOyR9DY1zFYZe36c4mjejpQ-gzGzoHsz',
+      appKey: 'tV9RdIo2DYMz7OB5mfsjydI5',
+      avatar: '/img/headimage.png',
+      serverURLs: 'https://rkoyr9dy.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, ))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>

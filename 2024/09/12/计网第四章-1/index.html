@@ -1,0 +1,471 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>计网第四章 | Ephemeral</title><meta name="author" content="CH Targaryen"><meta name="copyright" content="CH Targaryen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一节 网络层基本功能 路由选择：根据当前网络拓扑选择到达某个网络的最佳路径，并计算出转发表 分组转发：拆封后修改对应信息，重新封装，根据转发表从某个端口向外转发 OSI、TCP&#x2F;IP，前者网络层有连接和无连接，后者网络层只有无连接 异构网络互联 路由器可以实现异构网络的互联，这个异构指代从网络层向下，各层均可不同 不同可以在介质、协议、拓扑，均可以不同，路由器能协调这些问题 本质是因为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计网第四章">
+<meta property="og:url" content="https://chchch-art.github.io/2024/09/12/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0-1/index.html">
+<meta property="og:site_name" content="Ephemeral">
+<meta property="og:description" content="第一节 网络层基本功能 路由选择：根据当前网络拓扑选择到达某个网络的最佳路径，并计算出转发表 分组转发：拆封后修改对应信息，重新封装，根据转发表从某个端口向外转发 OSI、TCP&#x2F;IP，前者网络层有连接和无连接，后者网络层只有无连接 异构网络互联 路由器可以实现异构网络的互联，这个异构指代从网络层向下，各层均可不同 不同可以在介质、协议、拓扑，均可以不同，路由器能协调这些问题 本质是因为">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://chchch-art.github.io/img/backphoto.png">
+<meta property="article:published_time" content="2024-09-12T01:50:01.000Z">
+<meta property="article:modified_time" content="2024-09-14T12:03:14.422Z">
+<meta property="article:author" content="CH Targaryen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chchch-art.github.io/img/backphoto.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://chchch-art.github.io/2024/09/12/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0-1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"YQ6FJ5L9SU","apiKey":"4a50564ce15d0129ab6907b7e907ea5b","indexName":"chchchch","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":10,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计网第四章',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-09-14 20:03:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/headimage.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/backphoto.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Ephemeral"><span class="site-name">Ephemeral</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计网第四章</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-09-12T01:50:01.000Z" title="发表于 2024-09-12 09:50:01">2024-09-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-14T12:03:14.422Z" title="更新于 2024-09-14 20:03:14">2024-09-14</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>18分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/2024/09/12/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0-1/" data-flag-title="计网第四章"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>第一节</p>
+<p><strong>网络层基本功能</strong></p>
+<p>路由选择：根据当前网络拓扑选择到达某个网络的最佳路径，并计算出转发表</p>
+<p>分组转发：拆封后修改对应信息，重新封装，根据转发表从某个端口向外转发</p>
+<p>OSI、TCP&#x2F;IP，前者网络层有连接和无连接，后者网络层只有无连接</p>
+<p><strong>异构网络互联</strong></p>
+<p>路由器可以实现异构网络的互联，这个异构指代从网络层向下，各层均可不同</p>
+<p>不同可以在介质、协议、拓扑，均可以不同，路由器能协调这些问题</p>
+<p>本质是因为路由器是存储转发式设备</p>
+<p><strong>交换技术与转发技术</strong></p>
+<p>交换技术：报文交换、分组交换</p>
+<p>交换技术主要关注数据如何在网络中被拆分和处理，例如报文、分组两种情况</p>
+<p>转发技术：虚电路交换、数据报交换</p>
+<p>转发技术决定数据包在网络中是通过预设路径还是动态选择路径进行传输</p>
+<p>动态则为数据报，静态则为虚电路，动态任意选择路径，静态固定一条路径发送</p>
+<p>因而交换技术与转发技术是没有冲突的，报文、分组交换均可以搭配虚电路或者数据报</p>
+<p><img src="/img/cyber/11.jpg"></p>
+<p>虚电路、数据报内容：背诵为主</p>
+<p><strong>SDN</strong></p>
+<p>远程控制器是控制平面，进行路由选择，通过协议方式将转发表或称流表下放给路由器</p>
+<p>路由器是转发平面，仅接收转发表并根据其进行转发即可</p>
+<p>东南西北四向接口：物理上代表各个方向，北编程、东西集群通信、南向与路由器相连</p>
+<p><strong>网络层的拥塞控制</strong></p>
+<p>非统考考察重点，主要类型：开环控制（静态）、闭环控制（动态）</p>
+<p>网络负载增加，吞吐量不及正常水平，说明陷入拥塞</p>
+<p>拥塞控制是对全网负载的均衡，流量控制是对两个结点收发能力的协调与控制</p>
+<p><strong>随记</strong></p>
+<p>路由器连接的是异构网络，物理层、链路层、网络层均可以不同协议</p>
+<p>路由器仅包含路由表与转发表，只含有下一跳位置的确定，不会知晓全局转发线路</p>
+<p>路由器是网络层设备，其根据网络地址转发，但因为涉及链路层传输问题</p>
+<p>因而在真正转发帧时，依旧依赖于网络物理地址，一般通过，ARP，得到目标物理地址</p>
+<p>并将物理地址封装入帧内，但需要知晓，路由器本身并不依据物理地址去转发</p>
+<p>虚电路交换不适合用于劣质信道，数据报交换适合用于劣质信道(物理层面上的劣</p>
+<p>交换方式：报文交换、分组交换，均采用存储转发技术</p>
+<p>转发机制：数据报、虚电路，不能归于数据交换方式，即使名称后跟交换一词</p>
+<p>虚电路、数据报方式的帧均携带源地址与目的地址，虚电路则主要是在提第一个帧</p>
+<p>虚电路自身即可以实现差错控制，具体区别与联系，见，P132，表内</p>
+<hr>
+<p>第二节</p>
+<p>统考命题超级重点，几乎每年都会出一到两题相关内容的选择题，因而重点把握</p>
+<p><strong>IPV4帧格式考点</strong></p>
+<p>重点考察点：首部长度、总长度、偏移量的含义以及单位</p>
+<p>总长度：包含数据长度和首部长度，单位：1B</p>
+<p>偏移量：分片后的数据报，在原先数据报内的起始位置，单位：8B</p>
+<p>易混淆点：版本号、协议号，版本号指代IP版本，协议号指代上交给的层级协议</p>
+<p>标识：每个数据报一个标识，分片后各个数据报的标识相同，目标主机依此复原数据报</p>
+<p>生存时间：先减后判断是否超时，超时则丢弃并发送差错报文</p>
+<p>首部检验和：路由器仅对首部进行检验，有差错则丢弃，并向上层汇报差错</p>
+<p>首部问题：IPV4，首部不固定，但存在固定部分，固定部分长：20B</p>
+<p>IPV6首部固定，不存在拓展部分，拓展部分算作有效载荷置于数据内部</p>
+<p><strong>IPV4数据报分片</strong></p>
+<p>分片后的数据报，依旧是一个网络层数据报，被封装为链路层的数据部分</p>
+<p>考点：MF、DF，各自的内容，每个分片的数据报也具有首部，同样具有各个字段含义</p>
+<p>偏移量为分片在原数据报中的起始位序</p>
+<p><strong>IPV4地址</strong></p>
+<p>A、B、C：非主机号位变化：8、16、24，网络范围需要记忆</p>
+<p>D类：多播地址，不能用作源地址，对多播地址不汇报差错，且多播需要设备支持</p>
+<p>作特殊用途的地址，也同样需要背诵和记忆</p>
+<p>路由器、交换机、主机不同端口拥有不同的物理地址，但不一定具有不同的网络号</p>
+<p>毕竟从未有人提及路由器每个端口必须连接在不同网络，非必要</p>
+<p><strong>网络地址转换（NAT）</strong></p>
+<p>NAT转换流程：</p>
+<p>A：发送一个帧：目的地址：128.119.40.186:80，源地址：私有地址:端口号X</p>
+<p>NAT：转换该帧：目的地址：128.119.40.186:80，源地址：公有地址:端口号Y</p>
+<p>WEB：应答该帧：目的地址：公有地址:端口号Y，源地址：128.119.40.186:80</p>
+<p>NAT：转换该帧：目的地址：私有地址:端口号X，源地址：128.119.40.186:80</p>
+<p>其余细节补充：</p>
+<p>NAT路由器，工作在传输层，改变端口号，实现私有地址同样需要设备支持</p>
+<p>支持私有地址的网络，不转发目的地址为私有地址的帧</p>
+<p>但一般网络内，依旧可以对此类目的地址的帧进行转发，两者不矛盾</p>
+<p><strong>划分子网</strong></p>
+<p>本质是规定网络号长度，其中主机号全零、主机号全一的地址不使用而已</p>
+<p>路由聚合：下一跳的网络号可以聚合为同一个</p>
+<p>路由匹配原则：最长前缀匹配，具有同样网络号的取长者</p>
+<p>子网划分：定长划分、变长划分(难点)、子网之间的运算关系(难点)</p>
+<p><strong>网络层转发分组过程</strong></p>
+<p><strong>默认网关</strong></p>
+<p>默认网关：当主机发现目的地址不在本网段，就发送给默认网关地址，是IP地址</p>
+<p>原理展开：将数据发送给默认网关路由器的过程，使用的是物理地址</p>
+<p>主机在转发给默认网关时，会首先采用地址解析协议，得到路由器物理地址</p>
+<p>将物理地址封装入帧内，根据物理地址传输给路由器，而不是采用网络地址</p>
+<p>即，网络地址恒定不变，变化的仅仅是物理地址</p>
+<p>默认路由：全零掩码、全零网络号，往往直接转发给其他网段</p>
+<p><strong>转发过程</strong></p>
+<p>根据掩码、网络号匹配到最长前缀网络号，直接转发即可</p>
+<p>若不存在，则转发给默认网关，没有默认网关，则直接向上层汇报错误</p>
+<p>转发过程，采用的是网络地址、物理地址结合的方式，形式上网络，实际上物理</p>
+<p><strong>地址解析协议</strong></p>
+<p>本质是实现依据网络地址转发的协议，因为最终转发必须基于物理地址</p>
+<p>同网段内直接利用地址解析找对应主机，不同网段内则需要寻找相应路由器地址</p>
+<p>路由器到路由器之间也采用地址解析协议</p>
+<p>地址解析协议流程：</p>
+<p>A：广播帧，B：单播响应帧，返回物理地址，A：利用物理地址实际转发分组</p>
+<p>广播帧、单薄帧均是以太网帧，均具有：源物理、源网络，目的物理、目的网络地址</p>
+<p>使用默认网关进行转发，同样需要使用地址解析协议</p>
+<p><strong>动态主机配置协议（DHCP）</strong></p>
+<p>客户与服务器均采用广播的方式沟通，因为互相不知晓网络地址与物理地址</p>
+<p>发现、提供、请求、确认，四个流程</p>
+<p>为应用层协议，基于传输层：UDP，采用C&#x2F;S架构</p>
+<p><strong>网际控制报文协议</strong></p>
+<p>差错报告报文、询问报文，可默认为差错报告报文，封装于数据报中发送、网络层协议</p>
+<p>终点不可达：真正意义上的无法到达，而非超时</p>
+<p>超时：能到达，但过于遥远</p>
+<p><strong>模拟题随记</strong></p>
+<p>网络层协议汇总：IPV4、IPV6、ARP、DHCP、ICMP、RIP、EGP、OSPF、BGP、IGMP、RARP</p>
+<p>网络层英文名词技术汇总：VC、SDN、NAT、CIDR、GRE</p>
+<p>协议字段表示上层用的协议名词，版本字段表示网络层用的协议版本</p>
+<p>IPV4分组头长可变，IPV6分组头长不可变，IPV4分组头中有固定长度部分</p>
+<p>差错检验汇总：</p>
+<p>链路层差错检验：采用CRC、FCS，以太网帧检验首部和数据，PPP，检验首部和数据</p>
+<p>网络层检验：IPV4，只检验首部；IPV6，不进行检验</p>
+<p>传输层：TCP，检验首部、伪首部和数据，依靠伪首部，UDP，IPV4可选，IPV6强制</p>
+<p>机制：UDP校验首部、数据和伪首部</p>
+<p>其余内容：</p>
+<p>分片后数据报的重组在目的主机中，IPV6，不允许分片</p>
+<p>片偏移的含义为，该数据段在原数据段的起始位置，单位为：8B</p>
+<p>15：普通局域网内不需要考虑私有地址的问题，只需要考虑多播与否、广播与否即可</p>
+<p>17：可分配网络地址，只需要考虑是否是广播、特殊、多播地址即可</p>
+<p>此外需要明确一点，主机号全零、全一，需要根据具体的网络情况做区分</p>
+<p>19：NAT，IP数据报的端口、源地址、物理地址均会改变，正常只会改变物理地址</p>
+<p>21：有效的子网划分，至少需要两位主机号，即不能只有广播地址和网络号</p>
+<p>25：设置默认网关为广播地址后，局域网内每个帧均会返回其物理地址，这是一个问题</p>
+<p>此外，路由器、交换机会隔绝广播域，因而路由器自身不会接受这个帧</p>
+<p>即，若给主机默认网关配为广播地址，则只能实现局域网内交互，无法实现网外交互</p>
+<p>30：子网分配原则：不可重叠</p>
+<p>38：整个网络被划分为四个子网，因而一方面子网间不能重叠，一方面需要覆盖</p>
+<p>即最核心的限制条件是用四个子网覆盖一整个网络，而子网又不能重叠</p>
+<p>45：地址解析协议，同网段内直接交付，不同网段内依靠路由器交付，基本知识点</p>
+<p>ICMP报文，封装在IP数据报中传送</p>
+<p><strong>真题复盘</strong></p>
+<p>54：同样的问题，不区分网络号和主机号，广播地址是主机号全一</p>
+<p>56：ICMP基于IP，IGMP基于UDP，混淆的原因</p>
+<p>58：默认网关设置地址，为需访问其他网段的转发网络地址，而该地址于网内并不存在</p>
+<p>因而自然也就无处转发，自然无法访问外网，本网段可由子网掩码得出</p>
+<p>H3、H4，子网掩码设置相同，默认网关定为路由器端口地址，因而能够成功转发</p>
+<p>故初步结论即为，H1、H2，无法访问外网，H3、H4，能够正常访问外网</p>
+<p>A：同网段内的交互，基于地址解析协议必然可以实现互相访问，直接排除即可</p>
+<p>B：H2，不能访问，H4，能够访问</p>
+<p>D：H3、H4，位于同网段内，因而能够正常互联</p>
+<p>C：正确，两个主机位于不同网段内，且因无法转发给路由，故无法访问其他网段</p>
+<p>但若是反过来，H3，访问，H1、H2，那么就是可行的，可以访问的</p>
+<p>H3，能够正常发送给路由器，路由器再利用地址解析协议，即可得到对应地址</p>
+<p>然后通过链路层转发即可</p>
+<p>59：中心路由器为，NAT，路由器，这种细节点实在是过分，统考实际确实应当看清楚</p>
+<p>60：题设问题，为可分配地址，自然需要排除不可用的两个地址</p>
+<p>关于特殊地址的问题：</p>
+<p>可以作为目的地址，不能作为源地址：局域全零、局域广播、环回、全一、多播</p>
+<p>可以作为源地址，不能作为目的地址：全零地址</p>
+<p>63：此处为以太网帧，而非局域网帧，其基本结构：源MAC、目的MAC、源IP、目的IP</p>
+<p>以太网帧在传输中，源、目的MAC地址一直变化，但源、目的IP一直不变，除非是NAT</p>
+<p>64：可变子网的划分问题，个人建议方法：画树，哈夫曼树</p>
+<p>在符合哈夫曼树的情况下并且使得子网能够覆盖整个网段，这个就是树的画法</p>
+<p><img src="/img/cyber/15.png"></p>
+<p>65：同样参考绘制哈夫曼树，其核心思想就是不能有父子关系、且能覆盖全部范围</p>
+<p>66：关键问题在于，片偏移即数据段的分片长度有倍数限制，所以总长度不及满</p>
+<p>这个是核心点，非常重要，有倍数限制</p>
+<p>68：若要实现正常与路由器的转发通信，那么必须和路由器端口保持同一网段内</p>
+<p>69：以太网帧在转发过程中，网络地址不会改变，只会改变物理地址</p>
+<hr>
+<p>第三节</p>
+<p>同样非统考命题重点，多为记忆性内容</p>
+<p>IPV6的主要特点、IPV6的帧格式、IPV6的首部字段、IPV6地址的分类，均为背诵内容</p>
+<p><strong>IPV6地址</strong></p>
+<p>冒号十六进制及其缩写表示法，唯一潜在考察点，建议把握，比较简单</p>
+<p>相邻多个零域可合并，全地址仅允许一次零域合并；域开头零可省略，不限数量</p>
+<p>IPV6特点汇总：地址空间、首部固定、拓展首部放在数据内、不需要DHCP、不允许分片</p>
+<p>拓展首部算作有效载荷、不需要使用ARP协议</p>
+<p><strong>IPV4向IPV6的过渡</strong></p>
+<p>主机双协议栈，利用应用层，DNS，获取协议类型选择协议栈</p>
+<p>隧道技术，将IPV6帧包装为IPV4帧于IPV4网络中传输，经过后即可拆包回IPV6帧</p>
+<p><strong>随记</strong></p>
+<p>IPV6首部长度不允许改变，但拓展首部可以改变，算作有效载荷、记于数据内容</p>
+<p>IPV6不允许分片，一旦超出长度直接丢弃、不采用检验码</p>
+<hr>
+<p>第四节</p>
+<p><strong>路由算法的分类</strong></p>
+<p>静态路由、动态路由，其中静态指预先配置，动态指代动态配置，随时间而变化</p>
+<p><strong>动态路由</strong></p>
+<p>距离-向量算法、链路状态算法</p>
+<p>距离向量：邻居间交互信息震荡收敛、交互全网距离向量矩阵、只和邻居交互</p>
+<p>链路状态：全网由点到面逐渐收敛、洪泛相邻链路信息、主动测试邻居、与全网交互</p>
+<p>距离向量使用单源最短路径、链路状态使用各结点最短路径</p>
+<p>距离向量因为交互的是全网的距离向量矩阵，所以在大型网络中表现不佳</p>
+<p>链路状态因为是全网洪泛相邻的链路状态信息，与网络整体规模无关，适用于大型网络</p>
+<p>距离向量具有全网距离向量矩阵、链路状态具有全网拓扑结构图</p>
+<p><strong>分层路由选择协议</strong></p>
+<p>将互联网划分为若干路由器组成的自洽系统，从而可分内部网关协议、外部网关协议</p>
+<p>RIP、OSPF，均是内部网关协议，BGP，是外部网关协议</p>
+<p>边界路由器需要运行外部网关协议与其内部网关协议，两者均需运行</p>
+<p><strong>路由信息协议（RIP）、开放最短路径优先协议（OSPF）</strong></p>
+<p>路由信息协议基于距离向量、开放最短路径优先协议基于链路状态</p>
+<p>RIP：跳数衡量、固定间隔或拓扑变化交换信息、应用层协议、维护全网距离向量矩阵</p>
+<p>仅与邻居交换信息、交换距离向量矩阵、好消息比坏消息传得快、更新不需要确认</p>
+<p>有最大跳数限制、适用于小型网络、特殊距离向量算法、不使用分布式数据库</p>
+<p>OSPF：权值衡量（可双向）、仅拓扑变化交换信息、网络层协议、维护全网拓扑结构图</p>
+<p>与全网路由器交换信息、交换相邻链路信息、收敛不论好坏都很快、更新需要确认</p>
+<p>无最大跳数限制、适用于大型网络、五种分组类型、五种特殊特点、使用分布式数据库</p>
+<p>其余备注点：</p>
+<p>RIP，间隔交换路由信息；OSPF，不间隔交互路由信息，只进行响应确认</p>
+<p>RIP，间隔交互同时实现响应确认与信息交互，OSPF，只确认，不间隔交互信息</p>
+<p>OSFP：只有在网络拓扑变化的时候交互路由信息</p>
+<p>其余内容阐述：</p>
+<p>RIP，距离向量算法的基本解释：</p>
+<p>无则添加，有则修改，唯下一跳产生变化但距离变得更远不更新</p>
+<p>好消息传得快、坏消息传得慢基本解释：</p>
+<p>好消息，迅速被认定为最短距离，坏消息，每次只会增一，直到不可达为止</p>
+<p><strong>边界网关协议（BGP）</strong></p>
+<p>BGP：采用路径向量路由选择协议、基于TCP、交换到达某个网络所经过的路径</p>
+<p>初始更新全部、后来只更新变化部分、四类报文（区分于，五类分组类型，容易混淆）</p>
+<p>发言人需要同时运行内部、外部路由选择协议</p>
+<p><strong>随记</strong></p>
+<p>静态路由、动态路由，其中最显著的特征就是需要主动配置与否</p>
+<p>静态路由可以被主动配置和修改</p>
+<p>网络进行分层后，路由器被分到不同的区域，划分为边界路由、内部路由两类</p>
+<p>OSPF，将一个自治系统划分为更小的区域，主要目的在于分割广播域，减少广播帧</p>
+<p>路由选择协议的功能主要在于网络层基于网络地址的路由选择</p>
+<p>寻找下一跳的物理地址，或者基于物理地址进行转发操作，不是路由选择的事情</p>
+<p>应当是地址解析协议（ARP）的事情</p>
+<p>RIP，设定网络不可达，设置跳数为十六，OSPF，直接设定为不可达</p>
+<p>OSPF：与邻居间保持通信使用，Hello，BGP：使用，KeepAlive，两者间容易混淆</p>
+<p>BGP：交换的网络信息是，到达某个网络所需要经过的路径，而不是链路概述</p>
+<p>23：原理题，一者是考察何者采用权值、何者采用跳数，一者是分组交换的流水线方式</p>
+<p>RIP，采用跳数；OSPF，采用权值，同一条边的双向权值可能不同</p>
+<p>25：原理题，考察坏消息传得慢，核心点就是路由每次仅更新增加一个距离长度</p>
+<p>RIP：每次只增长一个距离长度</p>
+<p>OSPF：全网直接洪泛知晓该网络不可达，不存在该问题</p>
+<p>27：距离路径法基本思想：无则新增，有则修改，唯有下一跳改变但距离变长不改变</p>
+<p>修改的情况下，会首先把发来的链路表都增一，这个容易理解，增加自身链路长</p>
+<hr>
+<p>第五节</p>
+<p>多播需要多播路由器即物理设备的支持</p>
+<p><strong>多播地址</strong></p>
+<p>IPV4，D类地址，即为多播地址，IPV6中，也有类似的多播地址</p>
+<p>IGMP是多播组协议，ICMP是控制消息传输协议，一般应用于错误报告、网络诊断</p>
+<p>两者英文名称比较类似，务必不要混淆</p>
+<p>多播特性：不可靠、只能应用UDP、多播帧不会产生ICMP差错报告</p>
+<p><strong>局域网硬件多播</strong></p>
+<p>互联网范围多播最终会被转交到路由器下的链路分组，局域网内部使用的是硬件多播</p>
+<p>本质上是因为互联网使用网络地址，局域网只能使用网络物理地址</p>
+<p>多播网络地址与多播硬件地址的对应方式：只需要看中间产生差别的位即可</p>
+<p>其余位直接用十六进制转换，下为基本流程和例题：</p>
+<p><img src="/img/cyber/12.jpg"></p>
+<p>多播地址的判断，只需要判断是否为，D类地址，即可</p>
+<hr>
+<p>第六节</p>
+<p>细节补充：发送给永久地址的帧会先进入归属网络，再遇到归属代理</p>
+<p>发送给外地代理的帧，也同样先进入外地网络，然后再遇到外地代理，路由器在网内</p>
+<p>转交地址只会被归属代理使用，由外地代理向本地代理发送该临时转交地址</p>
+<p>当主机离开外地回到归属网络时，该转交地址、转交通路自然消亡</p>
+<p>主机于外地代理，向外发送信息不需要回本地，直接在外地即可实现发送</p>
+<p><img src="/img/cyber/13.jpg"></p>
+<p><strong>随记</strong></p>
+<p>LAN，局域网，WAN，广域网</p>
+<hr>
+<p>第七节</p>
+<p><strong>路由器</strong></p>
+<p>路由器各个端口具有不同的网络号(若连在不同网段)、不同的物理地址号(必然)</p>
+<p>跨网段通信必须使用路由器：VLAN、LAN、WAN，均是如此</p>
+<p>路由器支持两端为不同协议的网段，因为其具有存储转发能力，不再赘述</p>
+<p>路由模块：凡是带路由前缀的均为路由模块内模组，其余均为交换模块的模组内容</p>
+<p>转发表根据路由表得出，路由器根据转发表转发分组</p>
+<p>路由器功能：IP数据报的首部差错检验、利用缓冲区协调速率</p>
+<p><strong>路由表与分组转发</strong></p>
+<p>两个路由器相连，端口必须处于同一网段才可以政正常通信，否则不能正常通信</p>
+<p>该端口网络一般采用子网划分为仅占两位主机号的网络，避免浪费</p>
+<p>图表结合理解路由表与网络间的对应关系，列举较为全面</p>
+<p>默认路由，表项内第四项即为默认路径，若无其他匹配，默认转发到该网段内</p>
+<p>路由器，IP地址、物理地址：</p>
+<p>路由器在转发过程中只会考虑网络地址，只基于网络地址转发，但在实现转发功能时</p>
+<p>必须需要物理地址，封装到帧内，因而才需要，ARP</p>
+<p><strong>随记</strong></p>
+<p>网关可以分割广播域，但网桥不能，两者容易混淆名称</p>
+<p>路由器处理信息一般较慢，一般情况下路由器转发分组所依赖的准则是距离即跳数</p>
+<p>间接交付必然涉及直接交付，直接交付是指路由器将相应数据报传给管理网段</p>
+<p>路由器处理信息涉及三层的拆包、封装过程，协议栈的运行流程</p>
+<p>路由器是不可靠的，并且只对IP帧的首部进行检验，若有差错直接丢弃，收不下也丢弃</p>
+<p>冲突域、广播域，简单理解为被分割的冲突区域、广播区域，以此去做题</p>
+<hr>
+<p>补充：</p>
+<p>以太网帧在路由器网络层面，只会基于网络地址进行转发</p>
+<p>但在路由器的链路层层面，实际上基于物理地址，通过地址解析协议知晓下一跳位置</p>
+<p>网络地址相当于只是为路由选择提供宏观的道路指引，具体走要物理地址来实现</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://CHCHCH-art.github.io">CH Targaryen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://chchch-art.github.io/2024/09/12/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0-1/">https://chchch-art.github.io/2024/09/12/计网第四章-1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://CHCHCH-art.github.io" target="_blank">Ephemeral</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/backphoto.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/09/14/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0-1/" title="计网第五章"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">计网第五章</div></div></a></div><div class="next-post pull-right"><a href="/2024/09/09/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A04/" title="计网第三章"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">计网第三章</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">CH Targaryen</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">戏子罢了</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/09/15/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0-1/" title="计网第六章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第六章"/></a><div class="content"><a class="title" href="/2024/09/15/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0-1/" title="计网第六章">计网第六章</a><time datetime="2024-09-15T11:14:54.000Z" title="发表于 2024-09-15 19:14:54">2024-09-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/14/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0-1/" title="计网第五章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第五章"/></a><div class="content"><a class="title" href="/2024/09/14/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0-1/" title="计网第五章">计网第五章</a><time datetime="2024-09-14T12:13:15.000Z" title="发表于 2024-09-14 20:13:15">2024-09-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/12/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0-1/" title="计网第四章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第四章"/></a><div class="content"><a class="title" href="/2024/09/12/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0-1/" title="计网第四章">计网第四章</a><time datetime="2024-09-12T01:50:01.000Z" title="发表于 2024-09-12 09:50:01">2024-09-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/09/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A04/" title="计网第三章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第三章"/></a><div class="content"><a class="title" href="/2024/09/09/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%B8%89%E7%AB%A04/" title="计网第三章">计网第三章</a><time datetime="2024-09-09T12:04:39.000Z" title="发表于 2024-09-09 20:04:39">2024-09-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/08/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="计网第二章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第二章"/></a><div class="content"><a class="title" href="/2024/09/08/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%8C%E7%AB%A0/" title="计网第二章">计网第二章</a><time datetime="2024-09-08T12:55:53.000Z" title="发表于 2024-09-08 20:55:53">2024-09-08</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/backphoto.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By CH Targaryen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'rKOyR9DY1zFYZe36c4mjejpQ-gzGzoHsz',
+      appKey: 'tV9RdIo2DYMz7OB5mfsjydI5',
+      avatar: '/img/headimage.png',
+      serverURLs: 'https://rkoyr9dy.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, ))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>
