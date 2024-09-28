@@ -1,0 +1,421 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据结构代码题思路汇总 | Ephemeral</title><meta name="author" content="CH Targaryen"><meta name="copyright" content="CH Targaryen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="P19 1：更新找到最小的值，固定这个位置的序号，然后交换即可 2：直接逆置即可 3：放在数值该在的位置上、移动到数值该在的位置上 4：放在数值该在的位置上、移动到数值该在的位置上 补充：计数排序思想也是把数值放在该放的位置上 5：放在该在的位置上比较容易理解 6：While，循环，将两边中比较小的给放在数组中，用三个数组下标即可，最后复制 7：全部逆置、前部分逆置、后部分逆置 8：有序表，先查，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构代码题思路汇总">
+<meta property="og:url" content="https://chchch-art.github.io/2024/09/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BB%A3%E7%A0%81%E9%A2%98%E6%80%9D%E8%B7%AF%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:site_name" content="Ephemeral">
+<meta property="og:description" content="P19 1：更新找到最小的值，固定这个位置的序号，然后交换即可 2：直接逆置即可 3：放在数值该在的位置上、移动到数值该在的位置上 4：放在数值该在的位置上、移动到数值该在的位置上 补充：计数排序思想也是把数值放在该放的位置上 5：放在该在的位置上比较容易理解 6：While，循环，将两边中比较小的给放在数组中，用三个数组下标即可，最后复制 7：全部逆置、前部分逆置、后部分逆置 8：有序表，先查，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://chchch-art.github.io/img/backphoto.png">
+<meta property="article:published_time" content="2024-09-22T11:32:56.000Z">
+<meta property="article:modified_time" content="2024-09-27T13:51:26.775Z">
+<meta property="article:author" content="CH Targaryen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chchch-art.github.io/img/backphoto.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://chchch-art.github.io/2024/09/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BB%A3%E7%A0%81%E9%A2%98%E6%80%9D%E8%B7%AF%E6%B1%87%E6%80%BB/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"YQ6FJ5L9SU","apiKey":"4a50564ce15d0129ab6907b7e907ea5b","indexName":"chchchch","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":10,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数据结构代码题思路汇总',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-09-27 21:51:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/headimage.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/backphoto.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Ephemeral"><span class="site-name">Ephemeral</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-pencil"></i><span> 随笔</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://localhost:4000/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://markdown.p2hp.com/"><i class="fa-fw fas fa-wrench"></i><span> 辅助</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 政治经济</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/"><i class="fa-fw fas fa-bank"></i><span> 要闻</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/gwyzzjg/"><i class="fa-fw fas fa-bank"></i><span> 国务院</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.xinhuanet.com/politics/zywj/index.htm"><i class="fa-fw fas fa-bank"></i><span> 中央文件</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.gov.cn/toutiao/zyzzjhy/home.htm"><i class="fa-fw fas fa-bank"></i><span> 中央政治局会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/cjw/"><i class="fa-fw fas fa-bank"></i><span> 中央财经委会议</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.12371.cn/special/lczyjjgzhy/"><i class="fa-fw fas fa-bank"></i><span> 中央经济工作会议</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://9iphp.com/fa-icons"><i class="fa-fw fas fa-anchor"></i><span> 图标</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com"><i class="fa-fw fas fa-wrench"></i><span> Chat</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.federalreserve.gov/monetarypolicy.htm"><i class="fa-fw fas fa-gavel"></i><span> 美联储</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.marketmatrix.net/topic/bloomberg.htm"><i class="fa-fw fas fa-globe"></i><span> 路边社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.thomsonreuters.com/en.html"><i class="fa-fw fas fa-globe"></i><span> 彭博社</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.pbc.gov.cn/"><i class="fa-fw fas fa-bank"></i><span> 中国人民银行</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.cmegroup.com/trading/interest-rates/countdown-to-fomc.html"><i class="fa-fw fas fa-binoculars"></i><span> 美联储利率观察工具</span></a></li></ul></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fas fa-user-circle"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://zzczzczzc.top/"><i class="fa-fw fas fa-user-circle"></i><span> 励家磊</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> 李登宇</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据结构代码题思路汇总</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-09-22T11:32:56.000Z" title="发表于 2024-09-22 19:32:56">2024-09-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-27T13:51:26.775Z" title="更新于 2024-09-27 21:51:26">2024-09-27</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>13分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/2024/09/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BB%A3%E7%A0%81%E9%A2%98%E6%80%9D%E8%B7%AF%E6%B1%87%E6%80%BB/" data-flag-title="数据结构代码题思路汇总"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>P19</p>
+<p>1：更新找到最小的值，固定这个位置的序号，然后交换即可</p>
+<p>2：直接逆置即可</p>
+<p>3：放在数值该在的位置上、移动到数值该在的位置上</p>
+<p>4：放在数值该在的位置上、移动到数值该在的位置上</p>
+<p>补充：计数排序思想也是把数值放在该放的位置上</p>
+<p>5：放在该在的位置上比较容易理解</p>
+<p>6：While，循环，将两边中比较小的给放在数组中，用三个数组下标即可，最后复制</p>
+<p>7：全部逆置、前部分逆置、后部分逆置</p>
+<p>8：有序表，先查，再决定操作；顺序或折半查找，然后找到交换，没找到插入</p>
+<p>9：三个工作指针，小的向大的靠拢，当三者相同时打印并同时自增</p>
+<p>10：全部逆置、前部分逆置、后部分逆置</p>
+<p>11：设变量，X1、X2，A【X1】大，X2++，B【X2】大，X1++，While，条件X1+X2&lt;N</p>
+<p>最后判断A【X1】、B【X2】，哪个大哪个是中位数，本质是找X1+X2&#x3D;N，找中间位置点</p>
+<p>思想：小的向大的靠拢</p>
+<p>最优解：折半，实现比较复杂</p>
+<p>12：利用辅助数组存储对应值的出现次数，访问辅助数组查看是否有大于半数次数</p>
+<p>利用题设条件：Ai&lt;N，明显说明可以考虑用辅助数组</p>
+<p>或者考虑先排序，然后统计相同元素出现的次数，若小于则清零向后统计不同的值</p>
+<p>13：先快速排序，然后统计大于零的值是否符合递增标准变量的值，不等于直接跳出</p>
+<p>根据跳出值的情况具体判断最小未出现正整数即可，建议列情况</p>
+<p>14：设置三个下标变量，每次移动最小数值的下标，然后判断一次统计值</p>
+<p>本质思想是，将范围收敛在最小的范围区域内，三指针思想</p>
+<p><strong>思想汇总：数放在该在的位置、多次逆置、多指针思想、小者向大者靠拢</strong></p>
+<p>高频代码命题点，但一般比较简单，若无最优解，向次优解考虑更佳</p>
+<hr>
+<p>第二节</p>
+<p>1：碰到符合条件的就删除</p>
+<p>2：主扫描工作指针、辅前驱定位指针；或者冒泡转移结点到末尾，尾删</p>
+<p>3：设置尾指针，头删、尾头插法；设置指向第一个结点的指针，后删、头部头插法</p>
+<p>4：碰到符合条件的就删除</p>
+<p>5：算出长度之差，然后设置同步指针，边走边比较，相同到一个就是公共结点</p>
+<p>6：就地逆置，考虑设置尾指针、两个工作指针</p>
+<p>7：后者与自身相同，删除后者</p>
+<p>8：设置两个工作指针，小者向大者靠拢，碰到一样的就复制下来，共同移动一个位置</p>
+<p>9：设置一个新链表，其他同上；或者直接在原有链表基础上修改（复杂）</p>
+<p>10：设置一个主工作指针，两个辅工作指针，主用来衡量第一个，辅用来比较后续</p>
+<p>11：两个工作指针，一个向前，一个向后，奇偶单独比较</p>
+<p>12：断链、接链，保证正常循环即可</p>
+<p>13：访问到该节点，更新相应内容，向前访问到插入位置，断链，插入</p>
+<p>14：断链、全部插入头部即可</p>
+<p>15：设置快慢指针，若两者相遇就必然存在环，甚至数学上还可以求解环的长度和起始</p>
+<p>16：后半段依靠指针逆置，然后利用两个指针顺序相加</p>
+<p>17：同步指针，同步，K个单位后再同步移动，一个走到末尾，一个就到对应位置</p>
+<p>18：算法仅提及时间上的要求，因而可以采用数组存储，定下相同长度，再去访问即可</p>
+<p>其余方法即为同步指针，先明确两者长，然后一个指针提前走，一个指针停顿后再走</p>
+<p>边走边比较，走到相同的位置，就是公共部分的起始</p>
+<p>19：算法仅明确时间的要求，因而考虑空间换时间，链表变为顺序表即容易操作</p>
+<p>统计出现次数即可，然后遍历链表，如果这个值对应的次数不为一，删，再减，再判</p>
+<p>20：后半段依靠指针逆置，设置两个工作指针，逐渐向后面断链、插入、移动</p>
+<p><strong>思想汇总：头插、尾插、同步指针、快慢指针、工作指针</strong></p>
+<p>统考命题重点，更多依靠命题角度去取巧，例如不要求时间、不要求空间，利用条件</p>
+<p>命题中出现比较明显的提示也可以使用</p>
+<p>代码题讲究的是经验，题目做得越多越容易反应出来怎么处理，时常回顾即可</p>
+<hr>
+<p>P86</p>
+<p>3：栈之间反复倒即可</p>
+<p>4：思路有两种，一种不带空闲结点，一种牺牲一个空闲结点</p>
+<p>实现而言牺牲更容易，对于此类题型，建议列举清楚从初始到一般的所有情况再写代码</p>
+<p>复杂递归或者情况较多的时候，建议先列举情况，再写出对应处理代码</p>
+<p><strong>注：非统考命题重点，掌握循环队列的链式、顺序式即可</strong></p>
+<hr>
+<p>P158：</p>
+<p>4：层序遍历的结果利用栈存储，最后一次性出栈</p>
+<p>5：思想：利用层序遍历统计结点数，并向下遍历求其高度，可从此拓展衍生</p>
+<p><img src="/img/1.png"></p>
+<p>二叉树高度的判断思想非常重要，建议细看</p>
+<p>6：对二叉树进行层序遍历，把空结点也计入访问，如果碰到后还能访问到其他结点</p>
+<p>说明这个树不是完全二叉树，因为按层序碰到一个空结点后就不能再有结点</p>
+<p>7：设置全局变量，遍历一次二叉树，统计双分支结点的数量</p>
+<p>8：遍历的时候同时进行交换，建议后序遍历</p>
+<p>9：设置全局变量，遍历的同时修改变量值，等到变量值为零时利用全局变量存储其值</p>
+<p>10：遍历一遍整个二叉树，建议后序遍历这样不会有冲突</p>
+<p>访问到孩子节点为该值的根节点后，设置指针保存其孩子指针，然后置空该孩子</p>
+<p>对该指针为根的子树进行一次后序遍历的删除操作即可</p>
+<p>11：从根节点出发，设置一个工作指针，对工作指针指向的节点使用一次遍历</p>
+<p>若遍历的结果是能够找到的，并且这个结点不是目标结点，就打印</p>
+<p>那么就对指向节点的孩子使用遍历，判断哪个能够搜到目标，并且不是目标结点</p>
+<p>将工作指针指向它，然后继续向下搜索即可，一路上就可以打印出这个祖先</p>
+<p>本质是：祖先能够找到它，且两个孩子中只有一个孩子能找到它</p>
+<p>12：接近上面的逻辑，从根结点出发，设置一个工作指针，指向对应的节点去搜索</p>
+<p>如果这个节点能够搜索到两个结点，并且这个结点不是两者之一</p>
+<p>那么就去考虑它的孩子，如果它的孩子不是两个结点之一，又能够找到两个</p>
+<p>就把工作指针指向这个孩子，直到最终指向其中一个结点或者两个孩子都不能找到两个</p>
+<p>本质是：共同祖先能够找到两个，单一祖先只能找到一个</p>
+<p>13：接近第五题的思路，设置本层计数、下层计数、最大层计数，略微改动代码</p>
+<p>在更新每层计数的时候，顺便完成对每次结点数的计数更新</p>
+<p>14：思想：每次去除第一个根的时候，后面都会划分为两段等长的左子树、右子树</p>
+<p>对子树也可以同样进行划分，最终先打印左子、再打印右子，最后递归打印根</p>
+<p><img src="/img/2.png"></p>
+<p>15：先序、中序、后序，均能够按顺序访问叶结点，因而可以任选一种</p>
+<p>17：方法较多，一者考虑用非叶结点权值之和，一次遍历即可，一者考虑层级计算</p>
+<pre><code>int WPL；
+void Travel(TreeNode* T, int deepth)&#123;
+    if(T!=NULL)&#123;
+        Travel(T-&gt;left,deepth+1);
+        Travel(T-&gt;right,deepth+1);
+        if(T-&gt;left==NULL&amp;&amp;T-&gt;right==NULL)&#123;
+            WPL=T-&gt;data*deepth+WPL;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>18：中序遍历：左，根，右，那么只需要保证符号情况下输出：(左，根，右)</p>
+<p>判断当前节点是否是操作符，是则需要打印括号，否则不需要打印</p>
+<p>具体的打印过程：遍历左子树之前打印一个括号，遍历右子树结束后打印括号</p>
+<pre><code>// 中序遍历表达式树，并输出带括号的表达式
+void printInOrder(TreeNode* root) &#123;
+    if (root == NULL) return;
+
+    // 判断是否是操作符，如果是则需要加括号
+    int isOperator = !isalnum(root-&gt;val); // 非字母数字的是操作符
+
+    // 如果是操作符节点，开始左括号
+    if (isOperator) &#123;
+        printf(&quot;(&quot;);
+    &#125;
+
+    // 递归遍历左子树
+    printInOrder(root-&gt;left);
+
+    // 输出当前节点的值
+    printf(&quot;%c&quot;, root-&gt;val);
+
+    // 递归遍历右子树
+    printInOrder(root-&gt;right);
+
+    // 如果是操作符节点，结束右括号
+    if (isOperator) &#123;
+    printf(&quot;)&quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>19：二叉排序树的判定，只要遍历一遍二叉树，递归判定每个结点是否符合定义即可</p>
+<p>因为每个结点如果符合定义，整体一定是符合定义的，大小关系有传递性</p>
+<p><strong>思想汇总：层序遍历衍生、遍历判断、完全二叉树的判断、后序释放结点</strong></p>
+<p><strong>祖先路径思想(从祖先遍历能找到)、子树分治划分、递归带参、树性质的传递性</strong></p>
+<p><strong>二叉树高度判断的递归法</strong></p>
+<p>树的统考命题有一定递进强化的含义，因而需要重视关注递归遍历类型树算法</p>
+<hr>
+<p>P185</p>
+<p>4：正常遍历树，判定树的无左孩子节点的数量即可</p>
+<p>5：求树深的代码都比较类型，其内容参考：P169、5，判定哪边的高度更高取高者</p>
+<hr>
+<p>P198</p>
+<p>2：本质是哈夫曼树的合并，试想：10、200；10、35，分别最大比较次数：200、35</p>
+<p>因而每次应当和最小的合并，其实就是构造哈夫曼树</p>
+<p>3：根据字符编码建立哈夫曼树，并为每个路径结点和叶结点都做标记区分</p>
+<p>如果建树过程中遇到在叶节点后尝试建树的，直接说明不符合，一直没有说明符合</p>
+<hr>
+<p>P204</p>
+<p>1、2、3：递归返回、递归全局变量自增，两种思路</p>
+<p>4：统计左子树高度、右子树高度，取最高的返回，比较推荐</p>
+<p>6、9：随意遍历，中间加条件即可</p>
+<p>8：递归返回、全局变量寻找，同样两种思路</p>
+<p>7：层序遍历；10：依靠先序、层序配合形成输出值</p>
+<p>拓展：</p>
+<p>利用工作指针，指针指向拥有该树的子树根，逐渐缩小子树范围，直到指向节点</p>
+<p>不足之处是时间复杂度较高，需要对每个祖先结点均进行一次遍历</p>
+<p>总结：树算法的核心是利用递归函数值的返回或向下代，或者依靠递归函数求解</p>
+<p>第三者一般是考场上的最优解，总体考察难度中等</p>
+<hr>
+<p>P221</p>
+<p>7：题干已经给出算法思想，即计算节点的度即可，注意审题，会错意会浪费大量时间</p>
+<p>8：只需要遍历一遍计算结点的度即可，总体难度比较低</p>
+<p><strong>总结：统考在图算法命题上比较简单，一般仅考察邻接表、邻接矩阵、度的计算</strong></p>
+<hr>
+<p>P234</p>
+<p>2：从某个节点开始广搜，在确认访问的时候修改访问位的含义，并做判断即可</p>
+<p>3：无向连通图，若没有环那么就是一棵树，或者只有N-1条边也是树，根据此判断</p>
+<p>环的判断：记录父结点，若下次访问结点不是父结点但已经被访问就存在环</p>
+<p>4：从这个节点深搜、广搜，如果搜索到这个结点那么就确认有路径</p>
+<p>5：<strong>思想是对每个邻接结点都调用一次深搜，并传递数组，若能达到则直接打印</strong></p>
+<p>并最终将目标结点给设置为未访问，这样就可以保证全部路径都能得到</p>
+<p>其实和之前的工作指针思想也是类似的，不过这边的实现更为复杂，不是单纯的树状</p>
+<p><strong>深搜、广搜是图算法中比较容易考察的内容，以默写相应代码为基本目标</strong></p>
+<p><strong>思想汇总：无向连通图的判断、环的判断、深搜的递归算法</strong></p>
+<hr>
+<p>P308</p>
+<p>5：后序递归遍历即可，若每个结点都符合二叉排序树定义，整体就是二叉排序树</p>
+<p>思想：利用树定义的递归性、传递性</p>
+<p>6：每向下查找就是一层，因而查询过程本身就可以计数层级</p>
+<p>7：引用类型的参数返回，最终会返回主调用函数，因而可以实现多参数返回</p>
+<p>空树：平衡、高度为零；只有一个结点：平衡、高度为一</p>
+<p>其他情况：高度取子树中最高者加一，平衡与否由子树是否平衡、高度差是否小于判断</p>
+<p>本质上是树的遍历，无非是多添加几个判断和递归条件而已</p>
+<p>8：中序给出第一个遍历的结点、最后一个遍历的结点即可</p>
+<p>9：给出中序序列中的后一部分序列即可</p>
+<p>10：列举情况，然后分别递归求解，重点在于列举清楚情况</p>
+<p>Count1、Count2、Count3，作为根、左、右，三者各自所带的结点数</p>
+<pre><code>void Find(BiTree T,int k)
+    If count1=k	// 根等于，找最右结点
+        FindRight(T)
+    If count1&gt;k // 根大于，找孩子
+            If T-&gt;left!=NULL,Count2&gt;k // 左子树大于，找左子树
+            Find(T-left,k)
+       If T-&gt;left!=NULL,Count2&lt;k //	左子树小于，向右找结点
+         Find(T-right,k-count2)
+       If T-&gt;left!=NULL,Count2=k //	左子树同，找最右结点
+         FindRight(T-left)
+       If T-&gt;left!=NULL,Count3&gt;k // 左子树不存在，找右子树
+         Find(T-right,k)
+void FindRight(BiTree T)
+        While(T-&gt;right!=NULL)	//找最右结点
+        T=T-&gt;Next
+    print(T-data)
+</code></pre>
+<p>注：上述代码仅是伪代码，以思想的角度呈现</p>
+<p><strong>注：此类算法题考察概率较低</strong></p>
+<hr>
+<p>P360</p>
+<p><strong>快排的思想：扫描法、分区与分治法</strong></p>
+<p>1：左右边分别扫描，扫描到对应的则交换</p>
+<p>2：每次进行分区，基于中轴位置决定向前分区还是向后分区，折半思想</p>
+<p>3：左右扫描，遇到对应的则交换；两趟总比较次数小于元素个数</p>
+<p>4：每次进行分区，基于中轴位置决定向前还是向后进行分区，最终定位到目标</p>
+<p>策略一：两边向中间扫描，交换</p>
+<p>策略二：每次依靠分区算法定序基准并分区，通过中轴位置决定是否继续分区定基准</p>
+<p>注：定基准可以定下目标元素最终的位序，划分元素为大于一端与小于一端</p>
+<p>分治法：递归求解复杂问题，大区域划分为小区域，P158、18，类似的思想方法</p>
+<p><strong>注：以拓展思路为主，很少考察，或以最优解出现</strong></p>
+<hr>
+<p>P371</p>
+<p>5：主工作指针用于定交换基准，辅助指针用于遍历查询、定位最小元素位置</p>
+<p>6：排序树、平衡树、大根堆、小根堆，判断均可依靠传递性，各结点符合则整体符合</p>
+<p>7：算法思想核心：若当前元素比最大的小，那么就插入相应的序列内</p>
+<p>具体的实现可以用数组直接插入，或者采用大根堆反复调整，最终内部元素就是所得</p>
+<p><strong>注：算法题考察概率较低，可能会以简答题出现</strong></p>
+<hr>
+<p>拓展：分治法、贪心算法、动态规划、回溯法，可自行了解</p>
+<p>分治法案例：折半查找、快速排序、归并排序</p>
+<p>贪心算法：局部最优解求得全局最优解，最小生成树算法、最短路径算法</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://CHCHCH-art.github.io">CH Targaryen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://chchch-art.github.io/2024/09/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BB%A3%E7%A0%81%E9%A2%98%E6%80%9D%E8%B7%AF%E6%B1%87%E6%80%BB/">https://chchch-art.github.io/2024/09/22/数据结构代码题思路汇总/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://CHCHCH-art.github.io" target="_blank">Ephemeral</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/backphoto.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/09/17/%E8%AE%A1%E7%BD%91%E7%BB%BC%E5%90%88%E9%A2%98%E6%B1%87%E6%80%BB/" title="计网综合题汇总"><img class="cover" src="/img/backphoto.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">计网综合题汇总</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">CH Targaryen</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">戏子罢了</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/09/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BB%A3%E7%A0%81%E9%A2%98%E6%80%9D%E8%B7%AF%E6%B1%87%E6%80%BB/" title="数据结构代码题思路汇总"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构代码题思路汇总"/></a><div class="content"><a class="title" href="/2024/09/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BB%A3%E7%A0%81%E9%A2%98%E6%80%9D%E8%B7%AF%E6%B1%87%E6%80%BB/" title="数据结构代码题思路汇总">数据结构代码题思路汇总</a><time datetime="2024-09-22T11:32:56.000Z" title="发表于 2024-09-22 19:32:56">2024-09-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/17/%E8%AE%A1%E7%BD%91%E7%BB%BC%E5%90%88%E9%A2%98%E6%B1%87%E6%80%BB/" title="计网综合题汇总"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网综合题汇总"/></a><div class="content"><a class="title" href="/2024/09/17/%E8%AE%A1%E7%BD%91%E7%BB%BC%E5%90%88%E9%A2%98%E6%B1%87%E6%80%BB/" title="计网综合题汇总">计网综合题汇总</a><time datetime="2024-09-17T13:30:00.000Z" title="发表于 2024-09-17 21:30:00">2024-09-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/15/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0-1/" title="计网第六章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第六章"/></a><div class="content"><a class="title" href="/2024/09/15/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%85%AD%E7%AB%A0-1/" title="计网第六章">计网第六章</a><time datetime="2024-09-15T11:14:54.000Z" title="发表于 2024-09-15 19:14:54">2024-09-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/14/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0-1/" title="计网第五章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第五章"/></a><div class="content"><a class="title" href="/2024/09/14/%E8%AE%A1%E7%BD%91%E7%AC%AC%E4%BA%94%E7%AB%A0-1/" title="计网第五章">计网第五章</a><time datetime="2024-09-14T12:13:15.000Z" title="发表于 2024-09-14 20:13:15">2024-09-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/12/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0-1/" title="计网第四章"><img src="/img/backphoto.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网第四章"/></a><div class="content"><a class="title" href="/2024/09/12/%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0-1/" title="计网第四章">计网第四章</a><time datetime="2024-09-12T01:50:01.000Z" title="发表于 2024-09-12 09:50:01">2024-09-12</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/backphoto.png')"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By CH Targaryen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'rKOyR9DY1zFYZe36c4mjejpQ-gzGzoHsz',
+      appKey: 'tV9RdIo2DYMz7OB5mfsjydI5',
+      avatar: '/img/headimage.png',
+      serverURLs: 'https://rkoyr9dy.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, ))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script></div></div></body></html>

@@ -5,14 +5,253 @@
         <link>https://CHCHCH-art.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Tue, 17 Sep 2024 21:30:35 +0800</pubDate>
-        <lastBuildDate>Tue, 17 Sep 2024 21:30:35 +0800</lastBuildDate>
+        <pubDate>Sun, 22 Sep 2024 19:32:56 +0800</pubDate>
+        <lastBuildDate>Sun, 22 Sep 2024 19:32:56 +0800</lastBuildDate>
         <category>Preview</category>
+        <item>
+            <guid isPermalink="true">https://chchch-art.github.io/2024/09/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BB%A3%E7%A0%81%E9%A2%98%E6%80%9D%E8%B7%AF%E6%B1%87%E6%80%BB/</guid>
+            <title>数据结构代码题思路汇总</title>
+            <link>https://chchch-art.github.io/2024/09/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BB%A3%E7%A0%81%E9%A2%98%E6%80%9D%E8%B7%AF%E6%B1%87%E6%80%BB/</link>
+            <pubDate>Sun, 22 Sep 2024 19:32:56 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;P19&lt;/p&gt;
+&lt;p&gt;1：更新找到最小的值，固定这个位置的序号，然后交换即可&lt;/p&gt;
+&lt;p&gt;2：直接逆置即可&lt;/p&gt;
+&lt;p&gt;3：放在数值该在的位置上、移动到数值该在的位置上&lt;/p&gt;
+&lt;p&gt;4：放在数值该在的位置上、移动到数值该在的位置上&lt;/p&gt;
+&lt;p&gt;补充：计数排序思想也是把数值放在该放的位置上&lt;/p&gt;
+&lt;p&gt;5：放在该在的位置上比较容易理解&lt;/p&gt;
+&lt;p&gt;6：While，循环，将两边中比较小的给放在数组中，用三个数组下标即可，最后复制&lt;/p&gt;
+&lt;p&gt;7：全部逆置、前部分逆置、后部分逆置&lt;/p&gt;
+&lt;p&gt;8：有序表，先查，再决定操作；顺序或折半查找，然后找到交换，没找到插入&lt;/p&gt;
+&lt;p&gt;9：三个工作指针，小的向大的靠拢，当三者相同时打印并同时自增&lt;/p&gt;
+&lt;p&gt;10：全部逆置、前部分逆置、后部分逆置&lt;/p&gt;
+&lt;p&gt;11：设变量，X1、X2，A【X1】大，X2++，B【X2】大，X1++，While，条件X1+X2&amp;lt;N&lt;/p&gt;
+&lt;p&gt;最后判断A【X1】、B【X2】，哪个大哪个是中位数，本质是找X1+X2&amp;#x3D;N，找中间位置点&lt;/p&gt;
+&lt;p&gt;思想：小的向大的靠拢&lt;/p&gt;
+&lt;p&gt;最优解：折半，实现比较复杂&lt;/p&gt;
+&lt;p&gt;12：利用辅助数组存储对应值的出现次数，访问辅助数组查看是否有大于半数次数&lt;/p&gt;
+&lt;p&gt;利用题设条件：Ai&amp;lt;N，明显说明可以考虑用辅助数组&lt;/p&gt;
+&lt;p&gt;或者考虑先排序，然后统计相同元素出现的次数，若小于则清零向后统计不同的值&lt;/p&gt;
+&lt;p&gt;13：先快速排序，然后统计大于零的值是否符合递增标准变量的值，不等于直接跳出&lt;/p&gt;
+&lt;p&gt;根据跳出值的情况具体判断最小未出现正整数即可，建议列情况&lt;/p&gt;
+&lt;p&gt;14：设置三个下标变量，每次移动最小数值的下标，然后判断一次统计值&lt;/p&gt;
+&lt;p&gt;本质思想是，将范围收敛在最小的范围区域内，三指针思想&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;思想汇总：数放在该在的位置、多次逆置、多指针思想、小者向大者靠拢&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;高频代码命题点，但一般比较简单，若无最优解，向次优解考虑更佳&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;第二节&lt;/p&gt;
+&lt;p&gt;1：碰到符合条件的就删除&lt;/p&gt;
+&lt;p&gt;2：主扫描工作指针、辅前驱定位指针；或者冒泡转移结点到末尾，尾删&lt;/p&gt;
+&lt;p&gt;3：设置尾指针，头删、尾头插法；设置指向第一个结点的指针，后删、头部头插法&lt;/p&gt;
+&lt;p&gt;4：碰到符合条件的就删除&lt;/p&gt;
+&lt;p&gt;5：算出长度之差，然后设置同步指针，边走边比较，相同到一个就是公共结点&lt;/p&gt;
+&lt;p&gt;6：就地逆置，考虑设置尾指针、两个工作指针&lt;/p&gt;
+&lt;p&gt;7：后者与自身相同，删除后者&lt;/p&gt;
+&lt;p&gt;8：设置两个工作指针，小者向大者靠拢，碰到一样的就复制下来，共同移动一个位置&lt;/p&gt;
+&lt;p&gt;9：设置一个新链表，其他同上；或者直接在原有链表基础上修改（复杂）&lt;/p&gt;
+&lt;p&gt;10：设置一个主工作指针，两个辅工作指针，主用来衡量第一个，辅用来比较后续&lt;/p&gt;
+&lt;p&gt;11：两个工作指针，一个向前，一个向后，奇偶单独比较&lt;/p&gt;
+&lt;p&gt;12：断链、接链，保证正常循环即可&lt;/p&gt;
+&lt;p&gt;13：访问到该节点，更新相应内容，向前访问到插入位置，断链，插入&lt;/p&gt;
+&lt;p&gt;14：断链、全部插入头部即可&lt;/p&gt;
+&lt;p&gt;15：设置快慢指针，若两者相遇就必然存在环，甚至数学上还可以求解环的长度和起始&lt;/p&gt;
+&lt;p&gt;16：后半段依靠指针逆置，然后利用两个指针顺序相加&lt;/p&gt;
+&lt;p&gt;17：同步指针，同步，K个单位后再同步移动，一个走到末尾，一个就到对应位置&lt;/p&gt;
+&lt;p&gt;18：算法仅提及时间上的要求，因而可以采用数组存储，定下相同长度，再去访问即可&lt;/p&gt;
+&lt;p&gt;其余方法即为同步指针，先明确两者长，然后一个指针提前走，一个指针停顿后再走&lt;/p&gt;
+&lt;p&gt;边走边比较，走到相同的位置，就是公共部分的起始&lt;/p&gt;
+&lt;p&gt;19：算法仅明确时间的要求，因而考虑空间换时间，链表变为顺序表即容易操作&lt;/p&gt;
+&lt;p&gt;统计出现次数即可，然后遍历链表，如果这个值对应的次数不为一，删，再减，再判&lt;/p&gt;
+&lt;p&gt;20：后半段依靠指针逆置，设置两个工作指针，逐渐向后面断链、插入、移动&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;思想汇总：头插、尾插、同步指针、快慢指针、工作指针&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;统考命题重点，更多依靠命题角度去取巧，例如不要求时间、不要求空间，利用条件&lt;/p&gt;
+&lt;p&gt;命题中出现比较明显的提示也可以使用&lt;/p&gt;
+&lt;p&gt;代码题讲究的是经验，题目做得越多越容易反应出来怎么处理，时常回顾即可&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P86&lt;/p&gt;
+&lt;p&gt;3：栈之间反复倒即可&lt;/p&gt;
+&lt;p&gt;4：思路有两种，一种不带空闲结点，一种牺牲一个空闲结点&lt;/p&gt;
+&lt;p&gt;实现而言牺牲更容易，对于此类题型，建议列举清楚从初始到一般的所有情况再写代码&lt;/p&gt;
+&lt;p&gt;复杂递归或者情况较多的时候，建议先列举情况，再写出对应处理代码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注：非统考命题重点，掌握循环队列的链式、顺序式即可&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P158：&lt;/p&gt;
+&lt;p&gt;4：层序遍历的结果利用栈存储，最后一次性出栈&lt;/p&gt;
+&lt;p&gt;5：思想：利用层序遍历统计结点数，并向下遍历求其高度，可从此拓展衍生&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;二叉树高度的判断思想非常重要，建议细看&lt;/p&gt;
+&lt;p&gt;6：对二叉树进行层序遍历，把空结点也计入访问，如果碰到后还能访问到其他结点&lt;/p&gt;
+&lt;p&gt;说明这个树不是完全二叉树，因为按层序碰到一个空结点后就不能再有结点&lt;/p&gt;
+&lt;p&gt;7：设置全局变量，遍历一次二叉树，统计双分支结点的数量&lt;/p&gt;
+&lt;p&gt;8：遍历的时候同时进行交换，建议后序遍历&lt;/p&gt;
+&lt;p&gt;9：设置全局变量，遍历的同时修改变量值，等到变量值为零时利用全局变量存储其值&lt;/p&gt;
+&lt;p&gt;10：遍历一遍整个二叉树，建议后序遍历这样不会有冲突&lt;/p&gt;
+&lt;p&gt;访问到孩子节点为该值的根节点后，设置指针保存其孩子指针，然后置空该孩子&lt;/p&gt;
+&lt;p&gt;对该指针为根的子树进行一次后序遍历的删除操作即可&lt;/p&gt;
+&lt;p&gt;11：从根节点出发，设置一个工作指针，对工作指针指向的节点使用一次遍历&lt;/p&gt;
+&lt;p&gt;若遍历的结果是能够找到的，并且这个结点不是目标结点，就打印&lt;/p&gt;
+&lt;p&gt;那么就对指向节点的孩子使用遍历，判断哪个能够搜到目标，并且不是目标结点&lt;/p&gt;
+&lt;p&gt;将工作指针指向它，然后继续向下搜索即可，一路上就可以打印出这个祖先&lt;/p&gt;
+&lt;p&gt;本质是：祖先能够找到它，且两个孩子中只有一个孩子能找到它&lt;/p&gt;
+&lt;p&gt;12：接近上面的逻辑，从根结点出发，设置一个工作指针，指向对应的节点去搜索&lt;/p&gt;
+&lt;p&gt;如果这个节点能够搜索到两个结点，并且这个结点不是两者之一&lt;/p&gt;
+&lt;p&gt;那么就去考虑它的孩子，如果它的孩子不是两个结点之一，又能够找到两个&lt;/p&gt;
+&lt;p&gt;就把工作指针指向这个孩子，直到最终指向其中一个结点或者两个孩子都不能找到两个&lt;/p&gt;
+&lt;p&gt;本质是：共同祖先能够找到两个，单一祖先只能找到一个&lt;/p&gt;
+&lt;p&gt;13：接近第五题的思路，设置本层计数、下层计数、最大层计数，略微改动代码&lt;/p&gt;
+&lt;p&gt;在更新每层计数的时候，顺便完成对每次结点数的计数更新&lt;/p&gt;
+&lt;p&gt;14：思想：每次去除第一个根的时候，后面都会划分为两段等长的左子树、右子树&lt;/p&gt;
+&lt;p&gt;对子树也可以同样进行划分，最终先打印左子、再打印右子，最后递归打印根&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/2.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;15：先序、中序、后序，均能够按顺序访问叶结点，因而可以任选一种&lt;/p&gt;
+&lt;p&gt;17：方法较多，一者考虑用非叶结点权值之和，一次遍历即可，一者考虑层级计算&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;int WPL；
+void Travel(TreeNode* T, int deepth)&amp;#123;
+    if(T!=NULL)&amp;#123;
+        Travel(T-&amp;gt;left,deepth+1);
+        Travel(T-&amp;gt;right,deepth+1);
+        if(T-&amp;gt;left==NULL&amp;amp;&amp;amp;T-&amp;gt;right==NULL)&amp;#123;
+            WPL=T-&amp;gt;data*deepth+WPL;
+        &amp;#125;
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;18：中序遍历：左，根，右，那么只需要保证符号情况下输出：(左，根，右)&lt;/p&gt;
+&lt;p&gt;判断当前节点是否是操作符，是则需要打印括号，否则不需要打印&lt;/p&gt;
+&lt;p&gt;具体的打印过程：遍历左子树之前打印一个括号，遍历右子树结束后打印括号&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 中序遍历表达式树，并输出带括号的表达式
+void printInOrder(TreeNode* root) &amp;#123;
+    if (root == NULL) return;
+
+    // 判断是否是操作符，如果是则需要加括号
+    int isOperator = !isalnum(root-&amp;gt;val); // 非字母数字的是操作符
+
+    // 如果是操作符节点，开始左括号
+    if (isOperator) &amp;#123;
+        printf(&amp;quot;(&amp;quot;);
+    &amp;#125;
+
+    // 递归遍历左子树
+    printInOrder(root-&amp;gt;left);
+
+    // 输出当前节点的值
+    printf(&amp;quot;%c&amp;quot;, root-&amp;gt;val);
+
+    // 递归遍历右子树
+    printInOrder(root-&amp;gt;right);
+
+    // 如果是操作符节点，结束右括号
+    if (isOperator) &amp;#123;
+    printf(&amp;quot;)&amp;quot;);
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;19：二叉排序树的判定，只要遍历一遍二叉树，递归判定每个结点是否符合定义即可&lt;/p&gt;
+&lt;p&gt;因为每个结点如果符合定义，整体一定是符合定义的，大小关系有传递性&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;思想汇总：层序遍历衍生、遍历判断、完全二叉树的判断、后序释放结点&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;祖先路径思想(从祖先遍历能找到)、子树分治划分、递归带参、树性质的传递性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;二叉树高度判断的递归法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;树的统考命题有一定递进强化的含义，因而需要重视关注递归遍历类型树算法&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P185&lt;/p&gt;
+&lt;p&gt;4：正常遍历树，判定树的无左孩子节点的数量即可&lt;/p&gt;
+&lt;p&gt;5：求树深的代码都比较类型，其内容参考：P169、5，判定哪边的高度更高取高者&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P198&lt;/p&gt;
+&lt;p&gt;2：本质是哈夫曼树的合并，试想：10、200；10、35，分别最大比较次数：200、35&lt;/p&gt;
+&lt;p&gt;因而每次应当和最小的合并，其实就是构造哈夫曼树&lt;/p&gt;
+&lt;p&gt;3：根据字符编码建立哈夫曼树，并为每个路径结点和叶结点都做标记区分&lt;/p&gt;
+&lt;p&gt;如果建树过程中遇到在叶节点后尝试建树的，直接说明不符合，一直没有说明符合&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P204&lt;/p&gt;
+&lt;p&gt;1、2、3：递归返回、递归全局变量自增，两种思路&lt;/p&gt;
+&lt;p&gt;4：统计左子树高度、右子树高度，取最高的返回，比较推荐&lt;/p&gt;
+&lt;p&gt;6、9：随意遍历，中间加条件即可&lt;/p&gt;
+&lt;p&gt;8：递归返回、全局变量寻找，同样两种思路&lt;/p&gt;
+&lt;p&gt;7：层序遍历；10：依靠先序、层序配合形成输出值&lt;/p&gt;
+&lt;p&gt;拓展：&lt;/p&gt;
+&lt;p&gt;利用工作指针，指针指向拥有该树的子树根，逐渐缩小子树范围，直到指向节点&lt;/p&gt;
+&lt;p&gt;不足之处是时间复杂度较高，需要对每个祖先结点均进行一次遍历&lt;/p&gt;
+&lt;p&gt;总结：树算法的核心是利用递归函数值的返回或向下代，或者依靠递归函数求解&lt;/p&gt;
+&lt;p&gt;第三者一般是考场上的最优解，总体考察难度中等&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P221&lt;/p&gt;
+&lt;p&gt;7：题干已经给出算法思想，即计算节点的度即可，注意审题，会错意会浪费大量时间&lt;/p&gt;
+&lt;p&gt;8：只需要遍历一遍计算结点的度即可，总体难度比较低&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;总结：统考在图算法命题上比较简单，一般仅考察邻接表、邻接矩阵、度的计算&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P234&lt;/p&gt;
+&lt;p&gt;2：从某个节点开始广搜，在确认访问的时候修改访问位的含义，并做判断即可&lt;/p&gt;
+&lt;p&gt;3：无向连通图，若没有环那么就是一棵树，或者只有N-1条边也是树，根据此判断&lt;/p&gt;
+&lt;p&gt;环的判断：记录父结点，若下次访问结点不是父结点但已经被访问就存在环&lt;/p&gt;
+&lt;p&gt;4：从这个节点深搜、广搜，如果搜索到这个结点那么就确认有路径&lt;/p&gt;
+&lt;p&gt;5：&lt;strong&gt;思想是对每个邻接结点都调用一次深搜，并传递数组，若能达到则直接打印&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;并最终将目标结点给设置为未访问，这样就可以保证全部路径都能得到&lt;/p&gt;
+&lt;p&gt;其实和之前的工作指针思想也是类似的，不过这边的实现更为复杂，不是单纯的树状&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;深搜、广搜是图算法中比较容易考察的内容，以默写相应代码为基本目标&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;思想汇总：无向连通图的判断、环的判断、深搜的递归算法&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P308&lt;/p&gt;
+&lt;p&gt;5：后序递归遍历即可，若每个结点都符合二叉排序树定义，整体就是二叉排序树&lt;/p&gt;
+&lt;p&gt;思想：利用树定义的递归性、传递性&lt;/p&gt;
+&lt;p&gt;6：每向下查找就是一层，因而查询过程本身就可以计数层级&lt;/p&gt;
+&lt;p&gt;7：引用类型的参数返回，最终会返回主调用函数，因而可以实现多参数返回&lt;/p&gt;
+&lt;p&gt;空树：平衡、高度为零；只有一个结点：平衡、高度为一&lt;/p&gt;
+&lt;p&gt;其他情况：高度取子树中最高者加一，平衡与否由子树是否平衡、高度差是否小于判断&lt;/p&gt;
+&lt;p&gt;本质上是树的遍历，无非是多添加几个判断和递归条件而已&lt;/p&gt;
+&lt;p&gt;8：中序给出第一个遍历的结点、最后一个遍历的结点即可&lt;/p&gt;
+&lt;p&gt;9：给出中序序列中的后一部分序列即可&lt;/p&gt;
+&lt;p&gt;10：列举情况，然后分别递归求解，重点在于列举清楚情况&lt;/p&gt;
+&lt;p&gt;Count1、Count2、Count3，作为根、左、右，三者各自所带的结点数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;void Find(BiTree T,int k)
+    If count1=k	// 根等于，找最右结点
+        FindRight(T)
+    If count1&amp;gt;k // 根大于，找孩子
+            If T-&amp;gt;left!=NULL,Count2&amp;gt;k // 左子树大于，找左子树
+            Find(T-left,k)
+       If T-&amp;gt;left!=NULL,Count2&amp;lt;k //	左子树小于，向右找结点
+         Find(T-right,k-count2)
+       If T-&amp;gt;left!=NULL,Count2=k //	左子树同，找最右结点
+         FindRight(T-left)
+       If T-&amp;gt;left!=NULL,Count3&amp;gt;k // 左子树不存在，找右子树
+         Find(T-right,k)
+void FindRight(BiTree T)
+        While(T-&amp;gt;right!=NULL)	//找最右结点
+        T=T-&amp;gt;Next
+    print(T-data)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注：上述代码仅是伪代码，以思想的角度呈现&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注：此类算法题考察概率较低&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P360&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;快排的思想：扫描法、分区与分治法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1：左右边分别扫描，扫描到对应的则交换&lt;/p&gt;
+&lt;p&gt;2：每次进行分区，基于中轴位置决定向前分区还是向后分区，折半思想&lt;/p&gt;
+&lt;p&gt;3：左右扫描，遇到对应的则交换；两趟总比较次数小于元素个数&lt;/p&gt;
+&lt;p&gt;4：每次进行分区，基于中轴位置决定向前还是向后进行分区，最终定位到目标&lt;/p&gt;
+&lt;p&gt;策略一：两边向中间扫描，交换&lt;/p&gt;
+&lt;p&gt;策略二：每次依靠分区算法定序基准并分区，通过中轴位置决定是否继续分区定基准&lt;/p&gt;
+&lt;p&gt;注：定基准可以定下目标元素最终的位序，划分元素为大于一端与小于一端&lt;/p&gt;
+&lt;p&gt;分治法：递归求解复杂问题，大区域划分为小区域，P158、18，类似的思想方法&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注：以拓展思路为主，很少考察，或以最优解出现&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P371&lt;/p&gt;
+&lt;p&gt;5：主工作指针用于定交换基准，辅助指针用于遍历查询、定位最小元素位置&lt;/p&gt;
+&lt;p&gt;6：排序树、平衡树、大根堆、小根堆，判断均可依靠传递性，各结点符合则整体符合&lt;/p&gt;
+&lt;p&gt;7：算法思想核心：若当前元素比最大的小，那么就插入相应的序列内&lt;/p&gt;
+&lt;p&gt;具体的实现可以用数组直接插入，或者采用大根堆反复调整，最终内部元素就是所得&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注：算法题考察概率较低，可能会以简答题出现&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;拓展：分治法、贪心算法、动态规划、回溯法，可自行了解&lt;/p&gt;
+&lt;p&gt;分治法案例：折半查找、快速排序、归并排序&lt;/p&gt;
+&lt;p&gt;贪心算法：局部最优解求得全局最优解，最小生成树算法、最短路径算法&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/09/17/%E8%AE%A1%E7%BD%91%E7%BB%BC%E5%90%88%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
             <title>计网综合题汇总</title>
             <link>https://chchch-art.github.io/2024/09/17/%E8%AE%A1%E7%BD%91%E7%BB%BC%E5%90%88%E9%A2%98%E6%B1%87%E6%80%BB/</link>
-            <pubDate>Tue, 17 Sep 2024 21:30:35 +0800</pubDate>
+            <pubDate>Tue, 17 Sep 2024 21:30:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;P10&lt;/p&gt;
 &lt;p&gt;1：模拟题、统考题中均需留意描述对象，做题前的反复阅读回顾是必要的&lt;/p&gt;
 &lt;p&gt;3：逐个分组确认与整个文件确认之间的优缺点和特性&lt;/p&gt;
@@ -1380,219 +1619,7 @@
 &lt;li&gt;&lt;code&gt;close()&lt;/code&gt;：关闭文件描述符，使之失效。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;fclose()&lt;/code&gt;：用于C标准库中，关闭文件指针。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;总结：&#34;&gt;&lt;a href=&#34;#总结：&#34; class=&#34;headerlink&#34; title=&#34;总结：&#34;&gt;&lt;/a&gt;总结：&lt;/h3&gt;&lt;hr&gt;
-&lt;p&gt;对于书上基础算法较为形象的描述：&lt;/p&gt;
-&lt;p&gt;其实更应该说是一些较为经典的错误案例&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;单标志法：&lt;/p&gt;
-&lt;p&gt;如果现在没有轮到我用，我等&lt;/p&gt;
-&lt;p&gt;如果现在轮到我用&lt;/p&gt;
-&lt;p&gt;我用&lt;/p&gt;
-&lt;p&gt;下次给他用&lt;/p&gt;
-&lt;p&gt;评价：&lt;/p&gt;
-&lt;p&gt;这个算法的缺点其实比较明显的，如果下次他不用而我要用，那我就得一直等&lt;/p&gt;
-&lt;p&gt;更何况就算他用了也不一定考虑我用不用的问题，可能转手就把这个机会让给别人用了&lt;/p&gt;
-&lt;p&gt;极有可能会导致资源的浪费，甚至说长时间得不到使用导致的饥饿问题&lt;/p&gt;
-&lt;p&gt;违反了“空闲让进”，并且没有实现“让权等待”&lt;/p&gt;
-&lt;p&gt;其实核心就是，没有考虑到下次给他用的时候，他到底会不会用，以及会不会让给我用&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;双标志先检查法：&lt;/p&gt;
-&lt;p&gt;如果现在他想要用，那么给他用，我等&lt;/p&gt;
-&lt;p&gt;如果他现在不想用&lt;/p&gt;
-&lt;p&gt;那么我想用&lt;/p&gt;
-&lt;p&gt;我用&lt;/p&gt;
-&lt;p&gt;我用完了不想用了&lt;/p&gt;
-&lt;p&gt;评价：&lt;/p&gt;
-&lt;p&gt;这个算法同样存在漏洞&lt;/p&gt;
-&lt;p&gt;检查的时候他可能不想用，但是就在我设置想用的前那么几刻，他也想用了&lt;/p&gt;
-&lt;p&gt;而这时候我还没想用，他可能就会以为我不想用，于是我们两个一起想用，冲突了&lt;/p&gt;
-&lt;p&gt;简单来说就是两者检查均通过&lt;/p&gt;
-&lt;p&gt;违反了“忙则等待”，没有实现“让权等待”&lt;/p&gt;
-&lt;p&gt;核心是检查和设置中有一个间隔，这个间隔时间就会导致另一者的检查也通过&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;双标志后检查法：&lt;/p&gt;
-&lt;p&gt;我想用&lt;/p&gt;
-&lt;p&gt;如果他现在想用，那么给他用，我等&lt;/p&gt;
-&lt;p&gt;如果他现在不想用&lt;/p&gt;
-&lt;p&gt;我用&lt;/p&gt;
-&lt;p&gt;我用完了不想用了&lt;/p&gt;
-&lt;p&gt;评价：&lt;/p&gt;
-&lt;p&gt;这个算法就是在之前的状态改进了下，可以避免同时检查通过的情况&lt;/p&gt;
-&lt;p&gt;但依旧会有问题，在检查前两者可能都设置了想用，结果一检查的时候发现都想用&lt;/p&gt;
-&lt;p&gt;好好好我让你用，于是就互相谦让了半天谁都没有用，于是这下是真的要饥饿了&lt;/p&gt;
-&lt;p&gt;违反了“有限等待”，没有实现“让权等待”&lt;/p&gt;
-&lt;p&gt;核心是产生了死锁问题，互相谦让导致谁都没有成功&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Peterson算法：&lt;/p&gt;
-&lt;p&gt;我想用&lt;/p&gt;
-&lt;p&gt;这轮让给他用&lt;/p&gt;
-&lt;p&gt;如果他现在想用并且这轮我们协商完了后让他先用&lt;/p&gt;
-&lt;p&gt;他用，我等&lt;/p&gt;
-&lt;p&gt;如果他现在不想用或者他想用但是我们协商完了后让我先用&lt;/p&gt;
-&lt;p&gt;我用&lt;/p&gt;
-&lt;p&gt;我用完了不想用了&lt;/p&gt;
-&lt;p&gt;评价：&lt;/p&gt;
-&lt;p&gt;对于协商过程以及后续的切换过程稍微做些解释，免得到时候看不懂&lt;/p&gt;
-&lt;p&gt;协商其实实际上是对轮数的设置，因为设置最终只有一个生效，所以不会产生一直谦让&lt;/p&gt;
-&lt;p&gt;同时在一个进程结束占用后，表达了自己不想用之后，其他进程的循环自然破解&lt;/p&gt;
-&lt;p&gt;其他都实现，唯独没有实现“让权等待”&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;硬件实现法：&lt;/p&gt;
-&lt;p&gt;关中断、开中断，单纯就是我执行的时候你不准来，你执行的时候我也不准来&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;TestAndSet：&lt;/p&gt;
-&lt;p&gt;测试资源当前是否上锁，不可访问&lt;/p&gt;
-&lt;p&gt;如果被上锁，不可访问，那么暂时等待&lt;/p&gt;
-&lt;p&gt;如果资源当前没有上锁，那么占用资源同时对资源上锁，使得其不可被其他访问&lt;/p&gt;
-&lt;p&gt;与Swap的区别在于这个封装了测试和上锁过程&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Swap：&lt;/p&gt;
-&lt;p&gt;测试当前资源是否上锁，不可访问&lt;/p&gt;
-&lt;p&gt;如果被上锁，不可访问，那么暂时等待&lt;/p&gt;
-&lt;p&gt;如果资源当前没有上锁，那么占用资源同时对资源上锁，使得其不可被其他访问&lt;/p&gt;
-&lt;p&gt;与TestAndSet区别在于这个没有封装测试和上锁过程&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Test和Swap均没有实现“让权等待”，因为其一直需要循环检查，互斥锁也是如此&lt;/p&gt;
-&lt;p&gt;和信号量的差别就在于信号量当占用资源检查失败时直接阻塞到等待队列，让出处理器&lt;/p&gt;
-&lt;p&gt;同时当别的进程释放资源的时候，唤醒一个进程&lt;/p&gt;
-&lt;p&gt;将原先古老而粗糙的反复敲门动作给细致化为没有资源不必反复追问&lt;/p&gt;
-&lt;p&gt;有资源的时候仅有可能是别的进程释放了资源，别的进程会唤醒进程，不需要主动追问&lt;/p&gt;
-&lt;p&gt;思想上是明显先进了的&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;互斥锁：&lt;/p&gt;
-&lt;p&gt;测试当前资源是否可用&lt;/p&gt;
-&lt;p&gt;如果不可用，那么暂时等待&lt;/p&gt;
-&lt;p&gt;如果可用，那么占据资源同时使得其不可用，不能被其他占据&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;信号量中，整型信号量中的wait当资源量小于等于零会一直测试所以没遵循“让权等待”&lt;/p&gt;
-&lt;p&gt;记录型信号量则实现了“让权等待”，因为其并没有循环&lt;/p&gt;
-&lt;p&gt;这里的资源，都设置为了物理意义，即资源数是多少，就代表还有多少资源&lt;/p&gt;
-&lt;p&gt;初始就是当前有的资源数&lt;/p&gt;
-&lt;p&gt;为0的时候就是当前没有资源了，为负一就是当前有一个预约了资源&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;整型信号量、记录型信号量：&lt;/p&gt;
-&lt;p&gt;整：&lt;/p&gt;
-&lt;p&gt;wait:&lt;/p&gt;
-&lt;p&gt;如果当前资源量不够，那么一直循环等待，反复追问（资源量小于等于0&lt;/p&gt;
-&lt;p&gt;其实说实话这边就算设置为等于0也没关系，因为不可能出现负数&lt;/p&gt;
-&lt;p&gt;如果当前资源量足够，那么占用一个资源（同时资源数量减一&lt;/p&gt;
-&lt;p&gt;signal:&lt;/p&gt;
-&lt;p&gt;释放自身占用的一个资源（资源数量加一&lt;/p&gt;
-&lt;p&gt;记录型：&lt;/p&gt;
-&lt;p&gt;wait:&lt;/p&gt;
-&lt;p&gt;先预约一个资源（资源量先减一&lt;/p&gt;
-&lt;p&gt;如果预约的资源目前被占据，那么进入阻塞队列等待（资源量小于0，主动阻塞&lt;/p&gt;
-&lt;p&gt;如果预约的资源目前没有被占据，那么占据该资源&lt;/p&gt;
-&lt;p&gt;signal:&lt;/p&gt;
-&lt;p&gt;释放自身占用的一个资源（资源量加一&lt;/p&gt;
-&lt;p&gt;如果资源被预约占据，那么从阻塞队列唤醒该进程（资源量小于等于0，被动唤醒&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;信号量实现互斥：&lt;/p&gt;
-&lt;p&gt;A：&lt;/p&gt;
-&lt;p&gt;P，如果没有别人占据（或，现在能得到这个资源，那么占据这个资源，并进入运行&lt;/p&gt;
-&lt;p&gt;如果别人占据或者说当前得不到这个资源，那么阻塞&lt;/p&gt;
-&lt;p&gt;V，释放该资源，可以让别人占据&lt;/p&gt;
-&lt;p&gt;B：&lt;/p&gt;
-&lt;p&gt;P，如果没有别人占据（或，现在能得到这个资源，那么占据这个资源，并进入运行&lt;/p&gt;
-&lt;p&gt;如果别人占据或者说当前得不到这个资源，那么阻塞&lt;/p&gt;
-&lt;p&gt;V，释放该资源，可以让别人占据&lt;/p&gt;
-&lt;p&gt;附：&lt;/p&gt;
-&lt;p&gt;简单来说就是对独占式资源的操作，资源只能被他人或者自己独占&lt;/p&gt;
-&lt;p&gt;要么你占，要么我占，要么谁都不占，只有一把椅子&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;信号量实现同步&lt;/p&gt;
-&lt;p&gt;P：如果现在能得到这个资源，那么占据这个资源并进入运行，否则就阻塞&lt;/p&gt;
-&lt;p&gt;V：创造出这个资源&lt;/p&gt;
-&lt;p&gt;附：&lt;/p&gt;
-&lt;p&gt;简单来说就是先得到了这个资源，再去消耗，没有这个资源，那么就先阻塞等待&lt;/p&gt;
-&lt;p&gt;主要是处理逻辑上的先后关系&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;前驱关系：&lt;/p&gt;
-&lt;p&gt;P1、P2、P3、P4、P5…..&lt;/p&gt;
-&lt;p&gt;如果现在能得到这些资源，那么占据这个资源并进入运行，否则就阻塞&lt;/p&gt;
-&lt;p&gt;V1、V2、V3、V4、V5…..&lt;/p&gt;
-&lt;p&gt;创造出这些资源&lt;/p&gt;
-&lt;p&gt;附：&lt;/p&gt;
-&lt;p&gt;本质是多同步问题，把上述的一个同步换为了多个同步问题&lt;/p&gt;
-&lt;p&gt;自然需要得到一系列的同步资源、条件后，才能占用资源并运行，否则就阻塞&lt;/p&gt;
-&lt;hr&gt;
-&lt;hr&gt;
-&lt;p&gt;当然其实个人认为，对于死锁的破解，一定要抓住一个想法：&lt;/p&gt;
-&lt;p&gt;至少让一个进程能够活动，完成运行&lt;/p&gt;
-&lt;p&gt;只要完成了这样一个操作，那么死锁自然也就不存在，自然就会被破解&lt;/p&gt;
-&lt;p&gt;类似的，只让四个哲学家吃饭，那么在这四个哲学家中至少有一个哲学家是正常吃饭的&lt;/p&gt;
-&lt;p&gt;因此就不可能产生死锁问题&lt;/p&gt;
-&lt;p&gt;银行家算法也是遵循了这个思想，每次至少让一个可行的进程先运行，而阻塞不可行的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/40.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;对于这个问题，也是类似的&lt;/p&gt;
-&lt;p&gt;需要避免的，就是箱子里全都是车轮或者全都是车架导致工人三无法组装的死锁问题&lt;/p&gt;
-&lt;p&gt;怎么避免？我想这种思路也是很容易看穿的&lt;/p&gt;
-&lt;p&gt;就是至少让当前箱子里，有那么一整套自行车的零部件&lt;/p&gt;
-&lt;p&gt;和死锁的处理思想几乎是一模一样，就是让当前至少能够正常完成一个进程&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;附：&lt;/p&gt;
-&lt;p&gt;参考代码：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;semaphore mutex = 1;    // 缓冲区互斥信号量
-semaphore empty=N;    // 箱子内的空位
-semaphore weel=0;    // 车轮
-semaphore frame=0;    // 车架
-semaphore weel_empty=N-1;    // 剩余车轮空位数名额
-semaphore frame_empty=N-2;    // 剩余车架空位数名额
-
-工人1活动：
-do &amp;#123;
-    加工一个车架;
-    P(frame_empty);    // 占用缓冲区可放置车架数名额
-    P(empty);    // 占用一个缓冲区空位置
-    P(mutex);
-    车架放入箱中;
-    V(mutex);
-    V(frame);    // 车架数量+1
-&amp;#125; while(1)
-
-工人2活动：
-do &amp;#123;
-    加工一个车轮；
-    P(weel_empty);    // 占用缓冲区可放置车轮数名额
-    P(empty);    // 占用一个缓冲区空位置
-    P(mutex);
-    车轮放入箱中；
-    V(mutex);
-    V(wheel);    // 车轮数+1
-&amp;#125; while(1)
-
-工人3活动：
-do &amp;#123;
-    P(frame);    // 取出一个车架
-    P(mutex);
-    箱中取一个车架;
-    V(mutex);
-    V(empty);    // 空位+1；
-    V(frame_empty);    // 释放一个缓冲区可放置车架数名额;
-    P(wheel);
-    P(wheel);
-    P(mutex);
-    箱中取两个车轮;
-    V(mutex);
-    V(empty);
-    V(empty);
-    V(weel_empty);    // 释放一个缓冲区可放置车轮数名额;
-    V(weel_empty);    // 释放一个缓冲区可放置车轮数名额;
-    组装为一辆车；
-&amp;#125; while(1)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;其实这里引出一个问题，车轮、车架空位名额能否用计数量表示？&lt;/p&gt;
-&lt;p&gt;答案就是可以，但没什么必要&lt;/p&gt;
-&lt;p&gt;因为这里是一个工人只生产一种产品，所以即使是独占式的也不会导致其他工人无法工作&lt;/p&gt;
-&lt;p&gt;但，如果是多个工人生产一个产品，那么就一定要设置计数量，否则就会导致互斥&lt;/p&gt;
-&lt;p&gt;就会导致实际上只有一个工人在正常工作，别的工人都闲着，而实际上不应该有此逻辑&lt;/p&gt;
-&lt;p&gt;工人工作又不会是互斥的&lt;/p&gt;
-&lt;p&gt;但如果再稍微改一下，工人使用箱子是需要互斥的，应该怎么写？&lt;/p&gt;
-&lt;p&gt;这个就比较有趣，实际上应该在工人造完东西后再去申请这个箱子的使用权&lt;/p&gt;
-&lt;p&gt;而不是说工人在造东西的时候一直占用箱子，这就会导致各工人间的互斥&lt;/p&gt;
-&lt;p&gt;而实际需要的是工人之间能够并行工作，仅仅是打开放东西这一步需要互斥而已&lt;/p&gt;
-&lt;p&gt;算是一个比较有趣的变体，能准确模拟出来工作流程就能写&lt;/p&gt;
- ]]></description>
+&lt;h3 id=&#34;总结：&#34;&gt;&lt;a href=&#34;#总结：&#34; class=&#34;headerlink&#34; title=&#34;总结：&#34;&gt;&lt;/a&gt;总结：&lt;/h3&gt; ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://chchch-art.github.io/2024/08/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%AC%AC%E4%BA%94%E7%AB%A0/</guid>
@@ -5393,10 +5420,222 @@ do &amp;#123;
             <link>https://chchch-art.github.io/2024/04/23/PV%E7%BC%96%E7%A8%8B/</link>
             <pubDate>Tue, 23 Apr 2024 21:25:26 +0800</pubDate>
             <description><![CDATA[ &lt;hr&gt;
+&lt;p&gt;对于书上基础算法较为形象的描述：&lt;/p&gt;
+&lt;p&gt;其实更应该说是一些较为经典的错误案例&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;单标志法：&lt;/p&gt;
+&lt;p&gt;如果现在没有轮到我用，我等&lt;/p&gt;
+&lt;p&gt;如果现在轮到我用&lt;/p&gt;
+&lt;p&gt;我用&lt;/p&gt;
+&lt;p&gt;下次给他用&lt;/p&gt;
+&lt;p&gt;评价：&lt;/p&gt;
+&lt;p&gt;这个算法的缺点其实比较明显的，如果下次他不用而我要用，那我就得一直等&lt;/p&gt;
+&lt;p&gt;更何况就算他用了也不一定考虑我用不用的问题，可能转手就把这个机会让给别人用了&lt;/p&gt;
+&lt;p&gt;极有可能会导致资源的浪费，甚至说长时间得不到使用导致的饥饿问题&lt;/p&gt;
+&lt;p&gt;违反了“空闲让进”，并且没有实现“让权等待”&lt;/p&gt;
+&lt;p&gt;其实核心就是，没有考虑到下次给他用的时候，他到底会不会用，以及会不会让给我用&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;双标志先检查法：&lt;/p&gt;
+&lt;p&gt;如果现在他想要用，那么给他用，我等&lt;/p&gt;
+&lt;p&gt;如果他现在不想用&lt;/p&gt;
+&lt;p&gt;那么我想用&lt;/p&gt;
+&lt;p&gt;我用&lt;/p&gt;
+&lt;p&gt;我用完了不想用了&lt;/p&gt;
+&lt;p&gt;评价：&lt;/p&gt;
+&lt;p&gt;这个算法同样存在漏洞&lt;/p&gt;
+&lt;p&gt;检查的时候他可能不想用，但是就在我设置想用的前那么几刻，他也想用了&lt;/p&gt;
+&lt;p&gt;而这时候我还没想用，他可能就会以为我不想用，于是我们两个一起想用，冲突了&lt;/p&gt;
+&lt;p&gt;简单来说就是两者检查均通过&lt;/p&gt;
+&lt;p&gt;违反了“忙则等待”，没有实现“让权等待”&lt;/p&gt;
+&lt;p&gt;核心是检查和设置中有一个间隔，这个间隔时间就会导致另一者的检查也通过&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;双标志后检查法：&lt;/p&gt;
+&lt;p&gt;我想用&lt;/p&gt;
+&lt;p&gt;如果他现在想用，那么给他用，我等&lt;/p&gt;
+&lt;p&gt;如果他现在不想用&lt;/p&gt;
+&lt;p&gt;我用&lt;/p&gt;
+&lt;p&gt;我用完了不想用了&lt;/p&gt;
+&lt;p&gt;评价：&lt;/p&gt;
+&lt;p&gt;这个算法就是在之前的状态改进了下，可以避免同时检查通过的情况&lt;/p&gt;
+&lt;p&gt;但依旧会有问题，在检查前两者可能都设置了想用，结果一检查的时候发现都想用&lt;/p&gt;
+&lt;p&gt;好好好我让你用，于是就互相谦让了半天谁都没有用，于是这下是真的要饥饿了&lt;/p&gt;
+&lt;p&gt;违反了“有限等待”，没有实现“让权等待”&lt;/p&gt;
+&lt;p&gt;核心是产生了死锁问题，互相谦让导致谁都没有成功&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Peterson算法：&lt;/p&gt;
+&lt;p&gt;我想用&lt;/p&gt;
+&lt;p&gt;这轮让给他用&lt;/p&gt;
+&lt;p&gt;如果他现在想用并且这轮我们协商完了后让他先用&lt;/p&gt;
+&lt;p&gt;他用，我等&lt;/p&gt;
+&lt;p&gt;如果他现在不想用或者他想用但是我们协商完了后让我先用&lt;/p&gt;
+&lt;p&gt;我用&lt;/p&gt;
+&lt;p&gt;我用完了不想用了&lt;/p&gt;
+&lt;p&gt;评价：&lt;/p&gt;
+&lt;p&gt;对于协商过程以及后续的切换过程稍微做些解释，免得到时候看不懂&lt;/p&gt;
+&lt;p&gt;协商其实实际上是对轮数的设置，因为设置最终只有一个生效，所以不会产生一直谦让&lt;/p&gt;
+&lt;p&gt;同时在一个进程结束占用后，表达了自己不想用之后，其他进程的循环自然破解&lt;/p&gt;
+&lt;p&gt;其他都实现，唯独没有实现“让权等待”&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;硬件实现法：&lt;/p&gt;
+&lt;p&gt;关中断、开中断，单纯就是我执行的时候你不准来，你执行的时候我也不准来&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;TestAndSet：&lt;/p&gt;
+&lt;p&gt;测试资源当前是否上锁，不可访问&lt;/p&gt;
+&lt;p&gt;如果被上锁，不可访问，那么暂时等待&lt;/p&gt;
+&lt;p&gt;如果资源当前没有上锁，那么占用资源同时对资源上锁，使得其不可被其他访问&lt;/p&gt;
+&lt;p&gt;与Swap的区别在于这个封装了测试和上锁过程&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Swap：&lt;/p&gt;
+&lt;p&gt;测试当前资源是否上锁，不可访问&lt;/p&gt;
+&lt;p&gt;如果被上锁，不可访问，那么暂时等待&lt;/p&gt;
+&lt;p&gt;如果资源当前没有上锁，那么占用资源同时对资源上锁，使得其不可被其他访问&lt;/p&gt;
+&lt;p&gt;与TestAndSet区别在于这个没有封装测试和上锁过程&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Test和Swap均没有实现“让权等待”，因为其一直需要循环检查，互斥锁也是如此&lt;/p&gt;
+&lt;p&gt;和信号量的差别就在于信号量当占用资源检查失败时直接阻塞到等待队列，让出处理器&lt;/p&gt;
+&lt;p&gt;同时当别的进程释放资源的时候，唤醒一个进程&lt;/p&gt;
+&lt;p&gt;将原先古老而粗糙的反复敲门动作给细致化为没有资源不必反复追问&lt;/p&gt;
+&lt;p&gt;有资源的时候仅有可能是别的进程释放了资源，别的进程会唤醒进程，不需要主动追问&lt;/p&gt;
+&lt;p&gt;思想上是明显先进了的&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;互斥锁：&lt;/p&gt;
+&lt;p&gt;测试当前资源是否可用&lt;/p&gt;
+&lt;p&gt;如果不可用，那么暂时等待&lt;/p&gt;
+&lt;p&gt;如果可用，那么占据资源同时使得其不可用，不能被其他占据&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;信号量中，整型信号量中的wait当资源量小于等于零会一直测试所以没遵循“让权等待”&lt;/p&gt;
+&lt;p&gt;记录型信号量则实现了“让权等待”，因为其并没有循环&lt;/p&gt;
+&lt;p&gt;这里的资源，都设置为了物理意义，即资源数是多少，就代表还有多少资源&lt;/p&gt;
+&lt;p&gt;初始就是当前有的资源数&lt;/p&gt;
+&lt;p&gt;为0的时候就是当前没有资源了，为负一就是当前有一个预约了资源&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;整型信号量、记录型信号量：&lt;/p&gt;
+&lt;p&gt;整：&lt;/p&gt;
+&lt;p&gt;wait:&lt;/p&gt;
+&lt;p&gt;如果当前资源量不够，那么一直循环等待，反复追问（资源量小于等于0&lt;/p&gt;
+&lt;p&gt;其实说实话这边就算设置为等于0也没关系，因为不可能出现负数&lt;/p&gt;
+&lt;p&gt;如果当前资源量足够，那么占用一个资源（同时资源数量减一&lt;/p&gt;
+&lt;p&gt;signal:&lt;/p&gt;
+&lt;p&gt;释放自身占用的一个资源（资源数量加一&lt;/p&gt;
+&lt;p&gt;记录型：&lt;/p&gt;
+&lt;p&gt;wait:&lt;/p&gt;
+&lt;p&gt;先预约一个资源（资源量先减一&lt;/p&gt;
+&lt;p&gt;如果预约的资源目前被占据，那么进入阻塞队列等待（资源量小于0，主动阻塞&lt;/p&gt;
+&lt;p&gt;如果预约的资源目前没有被占据，那么占据该资源&lt;/p&gt;
+&lt;p&gt;signal:&lt;/p&gt;
+&lt;p&gt;释放自身占用的一个资源（资源量加一&lt;/p&gt;
+&lt;p&gt;如果资源被预约占据，那么从阻塞队列唤醒该进程（资源量小于等于0，被动唤醒&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;信号量实现互斥：&lt;/p&gt;
+&lt;p&gt;A：&lt;/p&gt;
+&lt;p&gt;P，如果没有别人占据（或，现在能得到这个资源，那么占据这个资源，并进入运行&lt;/p&gt;
+&lt;p&gt;如果别人占据或者说当前得不到这个资源，那么阻塞&lt;/p&gt;
+&lt;p&gt;V，释放该资源，可以让别人占据&lt;/p&gt;
+&lt;p&gt;B：&lt;/p&gt;
+&lt;p&gt;P，如果没有别人占据（或，现在能得到这个资源，那么占据这个资源，并进入运行&lt;/p&gt;
+&lt;p&gt;如果别人占据或者说当前得不到这个资源，那么阻塞&lt;/p&gt;
+&lt;p&gt;V，释放该资源，可以让别人占据&lt;/p&gt;
+&lt;p&gt;附：&lt;/p&gt;
+&lt;p&gt;简单来说就是对独占式资源的操作，资源只能被他人或者自己独占&lt;/p&gt;
+&lt;p&gt;要么你占，要么我占，要么谁都不占，只有一把椅子&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;信号量实现同步&lt;/p&gt;
+&lt;p&gt;P：如果现在能得到这个资源，那么占据这个资源并进入运行，否则就阻塞&lt;/p&gt;
+&lt;p&gt;V：创造出这个资源&lt;/p&gt;
+&lt;p&gt;附：&lt;/p&gt;
+&lt;p&gt;简单来说就是先得到了这个资源，再去消耗，没有这个资源，那么就先阻塞等待&lt;/p&gt;
+&lt;p&gt;主要是处理逻辑上的先后关系&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;前驱关系：&lt;/p&gt;
+&lt;p&gt;P1、P2、P3、P4、P5…..&lt;/p&gt;
+&lt;p&gt;如果现在能得到这些资源，那么占据这个资源并进入运行，否则就阻塞&lt;/p&gt;
+&lt;p&gt;V1、V2、V3、V4、V5…..&lt;/p&gt;
+&lt;p&gt;创造出这些资源&lt;/p&gt;
+&lt;p&gt;附：&lt;/p&gt;
+&lt;p&gt;本质是多同步问题，把上述的一个同步换为了多个同步问题&lt;/p&gt;
+&lt;p&gt;自然需要得到一系列的同步资源、条件后，才能占用资源并运行，否则就阻塞&lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;当然其实个人认为，对于死锁的破解，一定要抓住一个想法：&lt;/p&gt;
+&lt;p&gt;至少让一个进程能够活动，完成运行&lt;/p&gt;
+&lt;p&gt;只要完成了这样一个操作，那么死锁自然也就不存在，自然就会被破解&lt;/p&gt;
+&lt;p&gt;类似的，只让四个哲学家吃饭，那么在这四个哲学家中至少有一个哲学家是正常吃饭的&lt;/p&gt;
+&lt;p&gt;因此就不可能产生死锁问题&lt;/p&gt;
+&lt;p&gt;银行家算法也是遵循了这个思想，每次至少让一个可行的进程先运行，而阻塞不可行的&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/40.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;对于这个问题，也是类似的&lt;/p&gt;
+&lt;p&gt;需要避免的，就是箱子里全都是车轮或者全都是车架导致工人三无法组装的死锁问题&lt;/p&gt;
+&lt;p&gt;怎么避免？我想这种思路也是很容易看穿的&lt;/p&gt;
+&lt;p&gt;就是至少让当前箱子里，有那么一整套自行车的零部件&lt;/p&gt;
+&lt;p&gt;和死锁的处理思想几乎是一模一样，就是让当前至少能够正常完成一个进程&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;附：&lt;/p&gt;
+&lt;p&gt;参考代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;semaphore mutex = 1;    // 缓冲区互斥信号量
+semaphore empty=N;    // 箱子内的空位
+semaphore weel=0;    // 车轮
+semaphore frame=0;    // 车架
+semaphore weel_empty=N-1;    // 剩余车轮空位数名额
+semaphore frame_empty=N-2;    // 剩余车架空位数名额
+
+工人1活动：
+do &amp;#123;
+    加工一个车架;
+    P(frame_empty);    // 占用缓冲区可放置车架数名额
+    P(empty);    // 占用一个缓冲区空位置
+    P(mutex);
+    车架放入箱中;
+    V(mutex);
+    V(frame);    // 车架数量+1
+&amp;#125; while(1)
+
+工人2活动：
+do &amp;#123;
+    加工一个车轮；
+    P(weel_empty);    // 占用缓冲区可放置车轮数名额
+    P(empty);    // 占用一个缓冲区空位置
+    P(mutex);
+    车轮放入箱中；
+    V(mutex);
+    V(wheel);    // 车轮数+1
+&amp;#125; while(1)
+
+工人3活动：
+do &amp;#123;
+    P(frame);    // 取出一个车架
+    P(mutex);
+    箱中取一个车架;
+    V(mutex);
+    V(empty);    // 空位+1；
+    V(frame_empty);    // 释放一个缓冲区可放置车架数名额;
+    P(wheel);
+    P(wheel);
+    P(mutex);
+    箱中取两个车轮;
+    V(mutex);
+    V(empty);
+    V(empty);
+    V(weel_empty);    // 释放一个缓冲区可放置车轮数名额;
+    V(weel_empty);    // 释放一个缓冲区可放置车轮数名额;
+    组装为一辆车；
+&amp;#125; while(1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其实这里引出一个问题，车轮、车架空位名额能否用计数量表示？&lt;/p&gt;
+&lt;p&gt;答案就是可以，但没什么必要&lt;/p&gt;
+&lt;p&gt;因为这里是一个工人只生产一种产品，所以即使是独占式的也不会导致其他工人无法工作&lt;/p&gt;
+&lt;p&gt;但，如果是多个工人生产一个产品，那么就一定要设置计数量，否则就会导致互斥&lt;/p&gt;
+&lt;p&gt;就会导致实际上只有一个工人在正常工作，别的工人都闲着，而实际上不应该有此逻辑&lt;/p&gt;
+&lt;p&gt;工人工作又不会是互斥的&lt;/p&gt;
+&lt;p&gt;但如果再稍微改一下，工人使用箱子是需要互斥的，应该怎么写？&lt;/p&gt;
+&lt;p&gt;这个就比较有趣，实际上应该在工人造完东西后再去申请这个箱子的使用权&lt;/p&gt;
+&lt;p&gt;而不是说工人在造东西的时候一直占用箱子，这就会导致各工人间的互斥&lt;/p&gt;
+&lt;p&gt;而实际需要的是工人之间能够并行工作，仅仅是打开放东西这一步需要互斥而已&lt;/p&gt;
+&lt;p&gt;算是一个比较有趣的变体，能准确模拟出来工作流程就能写&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;多生产者、单生产者、多消费者、单消费者、单一生产者资源，单一消费者资源&lt;/p&gt;
 &lt;p&gt;多生产者资源，多消费者资源，多口袋，口袋容量大于1，口袋容量等于一，排列组合&lt;/p&gt;
 &lt;p&gt;大多数都是消费者-生产者问题&lt;/p&gt;
-&lt;p&gt;[&lt;a href=&#34;https://zhuanlan.zhihu.com/p/593795480&#34;&gt;https://zhuanlan.zhihu.com/p/593795480&lt;/a&gt;]可搭配食用&lt;/p&gt;
+&lt;p&gt;[&lt;a href=&#34;https://zhuanlan.zhihu.com/p/593795480]%E5%8F%AF%E6%90%AD%E9%85%8D%E9%A3%9F%E7%94%A8&#34;&gt;https://zhuanlan.zhihu.com/p/593795480]可搭配食用&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;生产者、消费者问题：&lt;/p&gt;
 &lt;p&gt;抽象为多生产者提供单一产品，多消费者消费单一产品，单口袋容量大于一的情况&lt;/p&gt;
@@ -5433,7 +5672,7 @@ do &amp;#123;
 &lt;p&gt;导致消费者想要读的时候被阻塞&lt;/p&gt;
 &lt;p&gt;对于消费者来说就是先占用了一个空的管道，然后检查发现是空的，于是一直不读&lt;/p&gt;
 &lt;p&gt;导致生产者想要写的时候被阻塞&lt;/p&gt;
-&lt;p&gt;其实这里就是典型的提示，必须要先检查有无生产者/消费者资源，再检查互斥量&lt;/p&gt;
+&lt;p&gt;其实这里就是典型的提示，必须要先检查有无生产者&amp;#x2F;消费者资源，再检查互斥量&lt;/p&gt;
 &lt;p&gt;否则会产生经典的死锁问题&lt;/p&gt;
 &lt;p&gt;附：&lt;/p&gt;
 &lt;p&gt;需要注意的是，这边采用了一个FULL和一个EMPTY两个变量来定义管道缓冲区状态&lt;/p&gt;
@@ -5462,11 +5701,11 @@ do &amp;#123;
 &lt;p&gt;A当有生产者资源并且有使用权时被唤醒消费生产者资源提供消费者资源&lt;/p&gt;
 &lt;p&gt;P有没有生产者资源（盘子是否为空&lt;/p&gt;
 &lt;p&gt;P口袋有没有人在用（盘子是否被占用&lt;/p&gt;
-&lt;p&gt;V创造消费者资源（提供一个苹果/橘子&lt;/p&gt;
+&lt;p&gt;V创造消费者资源（提供一个苹果&amp;#x2F;橘子&lt;/p&gt;
 &lt;p&gt;V口袋使用权（口袋的互斥访问&lt;/p&gt;
 &lt;p&gt;B当没有消费者资源或者没有使用权时陷入阻塞&lt;/p&gt;
 &lt;p&gt;B当有消费者资源并且有使用权时被唤醒消费消费者资源提供生产者资源&lt;/p&gt;
-&lt;p&gt;P有没有消费者资源（盘子里是否有苹果/橘子&lt;/p&gt;
+&lt;p&gt;P有没有消费者资源（盘子里是否有苹果&amp;#x2F;橘子&lt;/p&gt;
 &lt;p&gt;P口袋有没有人在用（盘子是否被占用&lt;/p&gt;
 &lt;p&gt;V创造生产者资源（提供一个空盘子&lt;/p&gt;
 &lt;p&gt;V口袋使用权（口袋的互斥访问&lt;/p&gt;
@@ -5514,12 +5753,12 @@ do &amp;#123;
 &lt;p&gt;也可以采用一个读者计数器来实现创建&lt;/p&gt;
 &lt;p&gt;P互斥访问计数资源，这个必须互斥&lt;/p&gt;
 &lt;p&gt;readcount++&lt;/p&gt;
-&lt;p&gt;if readcount == 0&lt;/p&gt;
+&lt;p&gt;if readcount &amp;#x3D;&amp;#x3D; 0&lt;/p&gt;
 &lt;p&gt;P锁住写者资源让其不能写&lt;/p&gt;
 &lt;p&gt;V互斥释放计数资源，当读的时候没必要占用资源，否则就会导致实际上变成单读者占用&lt;/p&gt;
 &lt;p&gt;P互斥访问计数资源，同样互斥修改计数器&lt;/p&gt;
 &lt;p&gt;readcount–&lt;/p&gt;
-&lt;p&gt;if readcount == 0&lt;/p&gt;
+&lt;p&gt;if readcount &amp;#x3D;&amp;#x3D; 0&lt;/p&gt;
 &lt;p&gt;V释放写者资源让其现在能写&lt;/p&gt;
 &lt;p&gt;V互斥释放计数资源&lt;/p&gt;
 &lt;p&gt;第二种思路，写优先：&lt;/p&gt;
