@@ -436,8 +436,7 @@ void FindRight(BiTree T)
 &lt;p&gt;发送窗口是发送方在一个RTT中发送的数据报文段数量，接收方对每个报文返回确认&lt;/p&gt;
 &lt;p&gt;即，在一个发送窗口中，接收方对每个发过来的报文段都会进行确认&lt;/p&gt;
 &lt;p&gt;每次确认都会携带自身的接收窗口&lt;/p&gt;
-&lt;p&gt;发送窗口在窗口发送过程中不会进行修改，只有在接收到先前所有报文段的确认后改&lt;/p&gt;
-&lt;p&gt;此时的修改会基于接收窗口、拥塞窗口共同确定&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;发送窗口、拥塞窗口每接收到一个对段的确认都会改变，形式上表现为指数增长&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;TCP连接的释放，细节考点&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;首先便是各个阶段的名称，需要单独记忆和背诵&lt;/p&gt;
 &lt;p&gt;此外便是，彻底关闭与连接释放存在一定的区别，连接释放第二次握手即释放一半&lt;/p&gt;
@@ -2000,20 +1999,20 @@ void FindRight(BiTree T)
 &lt;p&gt;上下限寄存器(物理地址上下限)；重定向寄存器、界地址寄存器；只于内核态修改访问&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;内存共享&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;页式共享、段式共享；共享段表、内存映射文件&lt;/p&gt;
-&lt;p&gt;共享段表/页表：作用与进程的页表项/段表项的意义一样，但其目的在于减少内存消耗&lt;/p&gt;
-&lt;p&gt;这样理解，多个进程共享一段代码，各自需要设置一个段表/多个页表项&lt;/p&gt;
+&lt;p&gt;共享段表&amp;#x2F;页表：作用与进程的页表项&amp;#x2F;段表项的意义一样，但其目的在于减少内存消耗&lt;/p&gt;
+&lt;p&gt;这样理解，多个进程共享一段代码，各自需要设置一个段表&amp;#x2F;多个页表项&lt;/p&gt;
 &lt;p&gt;当进程数量多时就浪费内存去存储重复的引用项，直接设一个共享表即可避免冗余&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;内存分配方式&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;单一连续分配、固定分区分配、动态分区分配，均为高级调度之事&lt;/p&gt;
-&lt;p&gt;固定分区分配：分区使用表；分区大小相同/不同；内部碎片、灵活度低、利用率一般&lt;/p&gt;
+&lt;p&gt;固定分区分配：分区使用表；分区大小相同&amp;#x2F;不同；内部碎片、灵活度低、利用率一般&lt;/p&gt;
 &lt;p&gt;注：与磁盘分区分配策略需要有一定区分&lt;/p&gt;
 &lt;p&gt;动态分区分配：按需于装入前分配&lt;/p&gt;
 &lt;p&gt;动态分区内存回收：与前者相邻、与后者相邻、与前后均相邻，各自合并策略&lt;/p&gt;
 &lt;p&gt;分配算法：数据结构基于空闲分区链表；顺序、索引&lt;/p&gt;
 &lt;p&gt;顺序：首次、邻近、最佳、最坏；&lt;/p&gt;
-&lt;p&gt;/首次与邻近不需要排序，默认按地址查询即可&lt;/p&gt;
-&lt;p&gt;/最佳、最坏需要按容量排序，第一块最佳、第一块最差，相互对应容量递增与递减&lt;/p&gt;
-&lt;p&gt;/最佳适应是最烂的，产生最多的外部碎片(doges&lt;/p&gt;
+&lt;p&gt;&amp;#x2F;首次与邻近不需要排序，默认按地址查询即可&lt;/p&gt;
+&lt;p&gt;&amp;#x2F;最佳、最坏需要按容量排序，第一块最佳、第一块最差，相互对应容量递增与递减&lt;/p&gt;
+&lt;p&gt;&amp;#x2F;最佳适应是最烂的，产生最多的外部碎片(doges&lt;/p&gt;
 &lt;p&gt;索引：伙伴系统、哈希…&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;基本分页、基本分段&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;分页、分段目的不同，一者提高内存利用率，一者方便编程&lt;/p&gt;
@@ -2025,10 +2024,10 @@ void FindRight(BiTree T)
 &lt;p&gt;页表寄存器、段表寄存器存储均为物理地址，而非虚拟地址&lt;/p&gt;
 &lt;p&gt;页表、段表项大小的计算，隐藏页号、段号，计算页内偏移量，段长、段首地址定位数&lt;/p&gt;
 &lt;p&gt;每个进程均对应一个页表寄存器、段表寄存器，但这是从分时角度谈的&lt;/p&gt;
-&lt;p&gt;基本页式/段式不存在缺页中断，全部页面均存于内存之中&lt;/p&gt;
-&lt;p&gt;基本页式/段式，分别需检查页号、段号、段长是否越界，一维、二维，页内不会越界&lt;/p&gt;
+&lt;p&gt;基本页式&amp;#x2F;段式不存在缺页中断，全部页面均存于内存之中&lt;/p&gt;
+&lt;p&gt;基本页式&amp;#x2F;段式，分别需检查页号、段号、段长是否越界，一维、二维，页内不会越界&lt;/p&gt;
 &lt;p&gt;多级页表，其目的是将连续存放的页表变为离散分配，甚至可能被分散到磁盘，去读盘&lt;/p&gt;
-&lt;p&gt;多级页表的页表项数量不变，变的仅仅是存放的连续性；段/页内连续，段/页间随意&lt;/p&gt;
+&lt;p&gt;多级页表的页表项数量不变，变的仅仅是存放的连续性；段&amp;#x2F;页内连续，段&amp;#x2F;页间随意&lt;/p&gt;
 &lt;p&gt;带快表的段、页式，主存与快表可串行亦可并行，多级页表建议使用快表&lt;/p&gt;
 &lt;p&gt;快表内提供的是页号、段初始地址、段长的直接映射，无论多级与否均直接访问&lt;/p&gt;
 &lt;p&gt;段页式，每个段一个页表，段表项中起始地址为页表地址，页表项大小必须是整数倍&lt;/p&gt;
@@ -2042,10 +2041,10 @@ void FindRight(BiTree T)
 &lt;p&gt;动态重定位的地址重定位在执行时才开始，其余装入过程之内即完成地址转换&lt;/p&gt;
 &lt;p&gt;页式、段式不适合静态重定位，因为内存分配不连续、进程需要浮动变化分配大小&lt;/p&gt;
 &lt;p&gt;共享段表概念已有解释，本质是减少内存损耗提出的解决策略&lt;/p&gt;
-&lt;p&gt;地址转换包含工作：越界判定、快表寻找、多级页表/段表寻找、读取地址、形成地址&lt;/p&gt;
+&lt;p&gt;地址转换包含工作：越界判定、快表寻找、多级页表&amp;#x2F;段表寻找、读取地址、形成地址&lt;/p&gt;
 &lt;p&gt;页表、段表的查询工作均为硬件自动实现，属于机制&lt;/p&gt;
 &lt;p&gt;进程页表不一定全部含于内存中，多级页表可能在磁盘，但无必要则常驻内存&lt;/p&gt;
-&lt;p&gt;注意一些细节：0-10位，表示11位的地址空间…&lt;/p&gt;
+&lt;p&gt;注意一些细节：0-10位，表示11位的地址空间…….&lt;/p&gt;
 &lt;p&gt;统考的陷阱：虚存中，地址变换机构形成物理地址，则，谁形成逻辑地址，于是&lt;/p&gt;
 &lt;p&gt;碎片是指空闲的一块，而不是指有数据的一块，对内碎、外碎均如此&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;综合题&lt;/strong&gt;&lt;/p&gt;
@@ -2054,7 +2053,7 @@ void FindRight(BiTree T)
 &lt;p&gt;段内容为起始地址，页内容为页号，五位页号只能三十二个，五位地址则可随意表示&lt;/p&gt;
 &lt;p&gt;何况页内偏移、段内偏移叠加至对应页号、块号上会发现明显的越界&lt;/p&gt;
 &lt;p&gt;4：十进制可以直接转十六进程，而不需要先转二进制再十六进制，是能口算的&lt;/p&gt;
-&lt;p&gt;5、7：基本页式/段式不需要考虑缺页中断的可能性，因为所有页均保持于内存中&lt;/p&gt;
+&lt;p&gt;5、7：基本页式&amp;#x2F;段式不需要考虑缺页中断的可能性，因为所有页均保持于内存中&lt;/p&gt;
 &lt;p&gt;只需要考虑当前访问地址是否合法即可：页式看页号、段式看段号和段长即可&lt;/p&gt;
 &lt;p&gt;10：当页式时，内存的分配均以块为标准，因而可以直接填作业号&lt;/p&gt;
 &lt;p&gt;11：关键在于第三小题&lt;/p&gt;
@@ -2092,7 +2091,7 @@ void FindRight(BiTree T)
 &lt;p&gt;页表机制：页表项中额外增加状态位、访问位、修改位，访问位长度不固定，其余固定&lt;/p&gt;
 &lt;p&gt;缺页中断机构：阻塞进程、中断处理、唤醒进程；属于异常、执行中的异常&lt;/p&gt;
 &lt;p&gt;缺页中断与地址变换、页面调度、虚存运行过程：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/84.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/84.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;注：快表访问后得到的就是实页号，不用怀疑，无非需要访存得到数据罢了&lt;/p&gt;
 &lt;p&gt;注：访存得到数据的过程可以结合计组存储系统共同复习，即为对主存的数据访问&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;页框分配与调度细节知识点&lt;/strong&gt;&lt;/p&gt;
@@ -2117,7 +2116,7 @@ void FindRight(BiTree T)
 &lt;p&gt;页面越大，命中率越高、缺页次数越少、页内碎片越大、页表越短、页表项越少&lt;/p&gt;
 &lt;p&gt;页面越小，命中率越低、缺页次数越多、页表越长&lt;/p&gt;
 &lt;p&gt;缺页率与置换算法、分配的物理块数、内存容量、进程数量、访问方式均有关&lt;/p&gt;
-&lt;p&gt;基本页式、虚存页式中，页面的大小往往和磁盘块/扇区大小统一，方便数据传输分配&lt;/p&gt;
+&lt;p&gt;基本页式、虚存页式中，页面的大小往往和磁盘块&amp;#x2F;扇区大小统一，方便数据传输分配&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;计组、虚存、Cache&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;虚存是计算机形成实际地址并决定访存的过程，高速缓存后是真正访存的过程&lt;/p&gt;
 &lt;p&gt;两者属于不同时期与步骤，虚存交互为页、Cache与主存交互为块&lt;/p&gt;
@@ -2127,7 +2126,7 @@ void FindRight(BiTree T)
 &lt;p&gt;在不存在快表的虚存机构中，也同样会再度访问慢表一次，相当于重新执行一次该语句&lt;/p&gt;
 &lt;p&gt;上述为核心考点，且运行步骤极为重点，需要牢记&lt;/p&gt;
 &lt;p&gt;Cache，在虚存体系下的运行：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/os/85.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/os/85.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;TLB、Cache，均为，SRAM&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;虚存实际容量与最大容量&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;实际容量受硬件容量限制，如磁盘与内存大小；受虚存分配方式影响：页、段、段页&lt;/p&gt;
@@ -2140,15 +2139,15 @@ void FindRight(BiTree T)
 &lt;p&gt;虚存是一类高速缓存，若程序无良好局部性，就会陷入频繁中断，导致虚存形同虚设&lt;/p&gt;
 &lt;p&gt;若有良好局部性，则逻辑上提供的庞大地址空间可使得逻辑访问速度较快&lt;/p&gt;
 &lt;p&gt;关于访存次数，牢记快表命中只需一次访存，多级页表则至少多级，多层访存&lt;/p&gt;
-&lt;p&gt;关于I/O开销问题：纯页式中，小页面、大页面均占用一个盘块，访盘时间基本相同&lt;/p&gt;
-&lt;p&gt;因为I/O的开销主要在于寻道而不在于读盘&lt;/p&gt;
+&lt;p&gt;关于I&amp;#x2F;O开销问题：纯页式中，小页面、大页面均占用一个盘块，访盘时间基本相同&lt;/p&gt;
+&lt;p&gt;因为I&amp;#x2F;O的开销主要在于寻道而不在于读盘&lt;/p&gt;
 &lt;p&gt;置换算法中开销排序，LRU&amp;gt;CLOCK&amp;gt;FIFO&lt;/p&gt;
 &lt;p&gt;请求分段、段式更加适合动态链接，请求分页适合但不是主要特征和优势&lt;/p&gt;
 &lt;p&gt;处理器与主存的访问、快表与主存的访问既可以是并行也可是串行，命中废主存即可&lt;/p&gt;
 &lt;p&gt;页面调度，即中级调度，是和处理器速度完全无关的，理解为中级调度更容易判定&lt;/p&gt;
 &lt;p&gt;虚存，指代内存与外存两者，因而进程本身页面在虚存不能保证不会缺页，还可在外存&lt;/p&gt;
 &lt;p&gt;磁盘交换区利用率的含义为：10G交换区，已用9.7G，表明交换区存了一堆页面&lt;/p&gt;
-&lt;p&gt;间接说明内存中能够存放的页面太少，导致全都放在交换区，溢出导致大量的I/O&lt;/p&gt;
+&lt;p&gt;间接说明内存中能够存放的页面太少，导致全都放在交换区，溢出导致大量的I&amp;#x2F;O&lt;/p&gt;
 &lt;p&gt;快表容量不变的情况下，扩大页面大小，可以使得快表覆盖更大空间，提高命中率&lt;/p&gt;
 &lt;p&gt;页表项中地址的增加量导致页表项的减少相对于页表项表示容量的增量，可以忽略不计&lt;/p&gt;
 &lt;p&gt;虚存体系平均访存时间的含义为最终形成物理地址并访存得到数据的时间&lt;/p&gt;
@@ -2177,18 +2176,17 @@ void FindRight(BiTree T)
 &lt;p&gt;系统调用接口: scanf() 调用会调用一个底层的系统调用（如 read()）以从标准输入设备（通常是键盘）读取数据&lt;/p&gt;
 &lt;p&gt;2.进程状态转换&lt;/p&gt;
 &lt;p&gt;陷入内核态: 触发系统调用时，CPU 会执行陷入（trap）指令，从用户态切换到内核态。此时，操作系统接管控制权&lt;/p&gt;
-&lt;p&gt;进程阻塞: 因为 scanf() 需要等待用户输入字符，此时进程会进入阻塞状态（I/O等待状态），并从运行队列中移除。这让 CPU 可以调度其他进程执行&lt;/p&gt;
+&lt;p&gt;进程阻塞: 因为 scanf() 需要等待用户输入字符，此时进程会进入阻塞状态（I&amp;#x2F;O等待状态），并从运行队列中移除。这让 CPU 可以调度其他进程执行&lt;/p&gt;
 &lt;p&gt;3.等待输入&lt;/p&gt;
 &lt;p&gt;设备驱动程序工作: 操作系统调用相关设备的驱动程序，来等待键盘输入。当用户按下按键时，键盘控制器生成一个硬件中断信号&lt;/p&gt;
 &lt;p&gt;中断处理: 键盘控制器发送中断信号到 CPU，通知有输入数据需要处理。此时，CPU 暂停当前正在执行的任务，转而处理中断&lt;/p&gt;
 &lt;p&gt;4.处理输入&lt;/p&gt;
 &lt;p&gt;内核处理中断: 操作系统内核的中断处理程序会从键盘控制器中读取输入字符，将其存储在内核缓冲区中，并清除中断信号&lt;/p&gt;
 &lt;p&gt;进程唤醒: 当用户输入的数据满足 scanf() 所需的条件（如按下回车键），内核会将数据复制到用户进程的缓冲区，并将该进程从阻塞状态转为就绪状态&lt;/p&gt;
-&lt;p&gt;5.返回用户态&lt;br&gt;
-重新调度: 操作系统将进程重新放入就绪队列中，当进程再次被调度时，它会恢复运行&lt;/p&gt;
+&lt;p&gt;5.返回用户态&lt;br&gt;重新调度: 操作系统将进程重新放入就绪队列中，当进程再次被调度时，它会恢复运行&lt;/p&gt;
 &lt;p&gt;从内核态返回用户态: 进程返回到用户态，继续执行 scanf() 函数后面的代码&lt;/p&gt;
-&lt;p&gt;6.系统调用返回&lt;br&gt;
-返回结果: scanf() 从内核接收输入的字符，并将其处理为适当的格式（例如将字符串转换为整数）&lt;/p&gt;
+&lt;p&gt;注解：进程调度属于内核态执行的事件，因而先重新调度，再从内核态返回用户态执行&lt;/p&gt;
+&lt;p&gt;6.系统调用返回&lt;br&gt;返回结果: scanf() 从内核接收输入的字符，并将其处理为适当的格式（例如将字符串转换为整数）&lt;/p&gt;
 &lt;p&gt;继续执行: 用户进程使用从 scanf() 返回的结果继续执行剩余的程序&lt;/p&gt;
 &lt;p&gt;点评：&lt;/p&gt;
 &lt;p&gt;键盘设备驱动器生成中断信号、由中断处理程序将键盘内容读入系统缓冲区&lt;/p&gt;
@@ -3187,13 +3185,13 @@ void FindRight(BiTree T)
 &lt;p&gt;主存也称内存，凡是运行期间的程序、变量均需要先调入主存，是整个计算机系统重点&lt;/p&gt;
 &lt;p&gt;辅存可以分多种，一般有：光盘、磁盘、硬盘、U盘、磁带等类型&lt;/p&gt;
 &lt;p&gt;Cache是SRAM，主存是DRAM，DRAM往往因为引脚数量多需要复用引脚，而SRAM并不需要&lt;/p&gt;
-&lt;p&gt;RAM/ROM均是半导体存储器，这在后面主存一节第一句话就是如此，所以需要区分&lt;/p&gt;
+&lt;p&gt;RAM&amp;#x2F;ROM均是半导体存储器，这在后面主存一节第一句话就是如此，所以需要区分&lt;/p&gt;
 &lt;p&gt;两者之间最大的差别在于是否断电易失性，其他基本一致，均是随机存取&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;存储器性能指标&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;存取时间一般比较短、存取周期一般比较长，这里后面会和多体交叉存储器一起概述&lt;/p&gt;
 &lt;p&gt;主要在于多体交叉存储器的数量其实是既有上限又有下限的，而书上仅给出了下限而已&lt;/p&gt;
 &lt;p&gt;关于时间单位换算：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/16.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/16.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;多层次存储系统&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;存储系统的容量主要看的是外存和ROM当中的内容，即非主存、Cache中的内容&lt;/p&gt;
 &lt;p&gt;因为主存、Cache中保存的均只是外存中的副本而已，主存和Cache间的调度是硬件完成&lt;/p&gt;
@@ -3213,7 +3211,7 @@ void FindRight(BiTree T)
 &lt;p&gt;5：CPU能够直接访问的只有CPU内寄存器、Cache、主存&lt;/p&gt;
 &lt;p&gt;外存无法和CPU交互，主存可以和CPU内的MAR、MDR交互但不能和其他交互&lt;/p&gt;
 &lt;p&gt;因为其本质都是先和MDR交互再和PC、IC这些寄存器交互的，Cache一般集成在CPU中&lt;/p&gt;
-&lt;p&gt;6：时间单位，s/m/u/n/p&lt;/p&gt;
+&lt;p&gt;6：时间单位，s&amp;#x2F;m&amp;#x2F;u&amp;#x2F;n&amp;#x2F;p&lt;/p&gt;
 &lt;p&gt;10：各个层级之间解决的问题，Cache和主存解决速度、主存和辅存解决存储容量&lt;/p&gt;
 &lt;p&gt;13：书上一模一样，有原句，纯粹是没有读到这句话，主存和Cache是硬件自动完成的&lt;/p&gt;
 &lt;p&gt;而主存和辅存之间是OS和硬件一起完成的（联系虚页表等&lt;/p&gt;
@@ -3279,7 +3277,7 @@ void FindRight(BiTree T)
 &lt;p&gt;13：具体不再赘述，主存的组成包括了主板上的一系列ROM，而不仅是RAM，可统一编址&lt;/p&gt;
 &lt;p&gt;15、16：一整个存储器的刷新需要一个存储周期（一次访存）&lt;/p&gt;
 &lt;p&gt;一行的刷新只需要一个读写周期，读写周期相对存储周期要来得小得多，需要记住&lt;/p&gt;
-&lt;p&gt;刷新周期是一行两次间隔的刷新时长，一般取2ns，刷新频率就是2ns/行数&lt;/p&gt;
+&lt;p&gt;刷新周期是一行两次间隔的刷新时长，一般取2ns，刷新频率就是2ns&amp;#x2F;行数&lt;/p&gt;
 &lt;p&gt;22：其实关于多体存储器，个人的一些看法和观点思路&lt;/p&gt;
 &lt;p&gt;对于最少的存储体个数，这个是能够理解的，存储体越多，每个存储体能休息时间越长&lt;/p&gt;
 &lt;p&gt;可能就不再是一直的忙碌，中间有间隔的休息时间，总线周期内取一个字不变&lt;/p&gt;
@@ -3318,11 +3316,12 @@ void FindRight(BiTree T)
 &lt;p&gt;数据存储除非其超过了一个片的存储范围，不然是不可能跑到别的芯片上面分块存的&lt;/p&gt;
 &lt;p&gt;在具体判断是哪片，建议以地址划分二进制为主&lt;/p&gt;
 &lt;p&gt;字位拓展：&lt;/p&gt;
-&lt;p&gt;目的一般是为在字拓展的基础上充分利用CPU地址（补充：MAR地址需覆盖整个主存&lt;/p&gt;
+&lt;p&gt;目的一般是为在位拓展的基础上充分利用CPU地址（补充：MAR地址需覆盖整个主存&lt;/p&gt;
 &lt;p&gt;实际上就是在上述的基础上拓展了而已，其每个字的存储是分散到不同芯片的&lt;/p&gt;
 &lt;p&gt;然后具体又可以根据其高位地址编码来区分其属于第几组，可以用除法或者取高位地址&lt;/p&gt;
 &lt;p&gt;关于刷新策略：&lt;/p&gt;
 &lt;p&gt;刷新不受其芯片组成结构的影响，最终均是以每个最基本的组成芯片行为单位去刷新&lt;/p&gt;
+&lt;p&gt;一个片选单位作为一个刷新单位，内部组成芯片同时刷新&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;片选&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;一般采用以值选取的方式，即增加一个译码器，而很少采用以位选取（增加一堆引脚&lt;/p&gt;
 &lt;p&gt;一般地址而言，CPU的低位地址用于片内地址，高位地址用于片选地址&lt;/p&gt;
@@ -3373,7 +3372,7 @@ void FindRight(BiTree T)
 &lt;p&gt;&lt;strong&gt;固态硬盘&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;闪存的内部结构首先是基于块的，然后再是基于页的，块作为写单位，页作为读单位&lt;/p&gt;
 &lt;p&gt;动态、静态磨损均衡只是一个在写的时候选择，一个不写也在选择均衡&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/83.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/83.png&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;习题总结分析：&lt;/p&gt;
 &lt;p&gt;首先需要明确磁盘的时间计算，必须按照公式：传输时间+寻址时间+旋转延迟时间&lt;/p&gt;
@@ -3390,7 +3389,7 @@ void FindRight(BiTree T)
 &lt;p&gt;局部性原理其实可以这样简单概述：时间局部性就是一段时间内重复访问&lt;/p&gt;
 &lt;p&gt;空间局部性就是一段时间内访问一堆相互邻接的物理单元&lt;/p&gt;
 &lt;p&gt;CPU给出一个地址，不管Cache到底缺失与否，都是需要去访问一次Cache的，不会变&lt;/p&gt;
-&lt;p&gt;Cache性能分析中，额外需要注意的就是文字游戏：性能提高到/了几倍&lt;/p&gt;
+&lt;p&gt;Cache性能分析中，额外需要注意的就是文字游戏：性能提高到&amp;#x2F;了几倍&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;主存地址解释方法&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;首先明确三个不同映射方式的主存地址解释方法：&lt;/p&gt;
 &lt;p&gt;直接映射：标记位+Cache块号+块内地址&lt;/p&gt;
@@ -3400,7 +3399,7 @@ void FindRight(BiTree T)
 &lt;p&gt;只和块大小有关系&lt;/p&gt;
 &lt;p&gt;N路组映射：标记位+组号+块内地址&lt;/p&gt;
 &lt;p&gt;标记位计算由总地址数-块内地址数-组号得，组号由Cache决定，块内地址由块大小定&lt;/p&gt;
-&lt;p&gt;刻意留意比较器数量，全相联每行一个/直接映射只有一个/组相联每组N个&lt;/p&gt;
+&lt;p&gt;刻意留意比较器数量，全相联每行一个&amp;#x2F;直接映射只有一个&amp;#x2F;组相联每组N个&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Cache总容量计算&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;先明确各类情况下Cache的标记位均是如此：&lt;/p&gt;
 &lt;p&gt;有效位+替换位+脏位+标记位（和各类映射方式有关），并且需要特别注意直接映射&lt;/p&gt;
@@ -3418,7 +3417,7 @@ void FindRight(BiTree T)
 &lt;p&gt;按照内容进行寻址，每个行都需要一个比较器&lt;/p&gt;
 &lt;p&gt;组相联则是组间用的直接寻址，取余，组内用的全相联，一组N个比较器&lt;/p&gt;
 &lt;p&gt;N路组的含义是，每组N个，而不是分为N个组&lt;/p&gt;
-&lt;p&gt;当N=1的时候就变为全相联，当N=n的时候就变成了直接映射，不能搞混这一点&lt;/p&gt;
+&lt;p&gt;当N&amp;#x3D;1的时候就变为全相联，当N&amp;#x3D;n的时候就变成了直接映射，不能搞混这一点&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;主存地址的运算方法：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;给定十进制、二进制均需要能够计算，按照最为方便的方法去计算&lt;/p&gt;
 &lt;p&gt;当下默认二进制较为方便，因而不考虑用十进制，除非题设条件产生一定改变&lt;/p&gt;
@@ -3432,8 +3431,8 @@ void FindRight(BiTree T)
 &lt;p&gt;当写命中的情况下，先在Cache里面改，而不改主存对应块内容&lt;/p&gt;
 &lt;p&gt;只有当块被替换出去的时候，才一次性把块中的内容更新到主存上面，一次性全部更新&lt;/p&gt;
 &lt;p&gt;非写分配法搭配：&lt;/p&gt;
-&lt;p&gt;如果不命中的情况，那么只更新/修改/写主存单元，不会调入Cache中&lt;/p&gt;
-&lt;p&gt;如果命中，回写法，那么就会只对Cache内数据进行修改/写/更新&lt;/p&gt;
+&lt;p&gt;如果不命中的情况，那么只更新&amp;#x2F;修改&amp;#x2F;写主存单元，不会调入Cache中&lt;/p&gt;
+&lt;p&gt;如果命中，回写法，那么就会只对Cache内数据进行修改&amp;#x2F;写&amp;#x2F;更新&lt;/p&gt;
 &lt;p&gt;如果命中，全写法，那么会同时对Cache、主存内的数据进行更新操作&lt;/p&gt;
 &lt;p&gt;附议：&lt;/p&gt;
 &lt;p&gt;其实为什么写分配和写回、全写会有不同的组合结果？&lt;/p&gt;
@@ -3447,14 +3446,14 @@ void FindRight(BiTree T)
 &lt;p&gt;替换算法：&lt;/p&gt;
 &lt;p&gt;目的是为了解决主存访问后需要把其内容放入Cache但Cache已经满的问题&lt;/p&gt;
 &lt;p&gt;替换算法只会在全相联、组相联两个里面使用&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/89.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/89.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;最不经常使用算法，理解为记录这个Cache块被访问了多少次，替换最少访问次的&lt;/p&gt;
 &lt;p&gt;这里如果产生了相同的使用频率最低块，那么可以采用FIFO或者行号递增等策略去选择&lt;/p&gt;
 &lt;p&gt;例如相同的0、0两个使用频率块，淘汰谁？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/ky/90.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/ky/90.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;近期最少使用算法，理解为每一个Cache块的计数为“已几个周期没有使用”&lt;/p&gt;
 &lt;p&gt;每次自然替换的是计数值最大的&lt;/p&gt;
-&lt;p&gt;抖动的含义，以“1/2/3/4/5/1/2/3/4/5…序列访问，会反复刷新掉频繁使用的块，本质原因是Cache块太少了&lt;/p&gt;
+&lt;p&gt;抖动的含义，以“1&amp;#x2F;2&amp;#x2F;3&amp;#x2F;4&amp;#x2F;5&amp;#x2F;1&amp;#x2F;2&amp;#x2F;3&amp;#x2F;4&amp;#x2F;5..序列访问，会反复刷新掉频繁使用的块，本质原因是Cache块太少了&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;补充：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;读不命中、写不命中均有可能会产生替换&lt;/p&gt;
 &lt;p&gt;读不命中一定会把主存的内容写到Cache里面，所以读不命中一定有替换(满的时候&lt;/p&gt;
@@ -3474,40 +3473,30 @@ void FindRight(BiTree T)
 &lt;p&gt;首先给出虚存体系的基本运行、以及在虚存体系下的Cache运行流程：&lt;/p&gt;
 &lt;p&gt;CPU给出虚存地址&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;分解虚存地址
-&lt;ul&gt;
+&lt;li&gt;分解虚存地址&lt;ul&gt;
 &lt;li&gt;虚页号&lt;/li&gt;
 &lt;li&gt;页内地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;地址越界检查
-&lt;ul&gt;
+&lt;li&gt;地址越界检查&lt;ul&gt;
 &lt;li&gt;判断页号是否溢出&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;访问TLB（快表）
-&lt;ul&gt;
-&lt;li&gt;TLB命中
-&lt;ul&gt;
+&lt;li&gt;访问TLB（快表）&lt;ul&gt;
+&lt;li&gt;TLB命中&lt;ul&gt;
 &lt;li&gt;取得实页号并拼合为实地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;TLB不命中
-&lt;ul&gt;
-&lt;li&gt;访问页表（慢表）
-&lt;ul&gt;
-&lt;li&gt;页表有效
-&lt;ul&gt;
+&lt;li&gt;TLB不命中&lt;ul&gt;
+&lt;li&gt;访问页表（慢表）&lt;ul&gt;
+&lt;li&gt;页表有效&lt;ul&gt;
 &lt;li&gt;取得实页号并拼合为实地址&lt;/li&gt;
-&lt;li&gt;更新TLB
-&lt;ul&gt;
-&lt;li&gt;TLB已满
-&lt;ul&gt;
+&lt;li&gt;更新TLB&lt;ul&gt;
+&lt;li&gt;TLB已满&lt;ul&gt;
 &lt;li&gt;选择一页淘汰并添加新页&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;TLB未满
-&lt;ul&gt;
+&lt;li&gt;TLB未满&lt;ul&gt;
 &lt;li&gt;直接插入新页&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -3515,23 +3504,17 @@ void FindRight(BiTree T)
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;页表无效
-&lt;ul&gt;
-&lt;li&gt;缺页中断
-&lt;ul&gt;
-&lt;li&gt;内存未满
-&lt;ul&gt;
+&lt;li&gt;页表无效&lt;ul&gt;
+&lt;li&gt;缺页中断&lt;ul&gt;
+&lt;li&gt;内存未满&lt;ul&gt;
 &lt;li&gt;从磁盘读入页到内存&lt;/li&gt;
 &lt;li&gt;更新慢表&lt;/li&gt;
-&lt;li&gt;更新TLB
-&lt;ul&gt;
-&lt;li&gt;TLB已满
-&lt;ul&gt;
+&lt;li&gt;更新TLB&lt;ul&gt;
+&lt;li&gt;TLB已满&lt;ul&gt;
 &lt;li&gt;淘汰一页并替换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;TLB未满
-&lt;ul&gt;
+&lt;li&gt;TLB未满&lt;ul&gt;
 &lt;li&gt;直接插入新页&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -3540,33 +3523,26 @@ void FindRight(BiTree T)
 &lt;li&gt;CPU重新访问TLB并命中，取得实页号并拼合为实地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;内存已满
-&lt;ul&gt;
+&lt;li&gt;内存已满&lt;ul&gt;
 &lt;li&gt;选择替换页&lt;/li&gt;
-&lt;li&gt;检查替换页是否脏页
-&lt;ul&gt;
-&lt;li&gt;是脏页
-&lt;ul&gt;
+&lt;li&gt;检查替换页是否脏页&lt;ul&gt;
+&lt;li&gt;是脏页&lt;ul&gt;
 &lt;li&gt;写回磁盘&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;不是脏页
-&lt;ul&gt;
+&lt;li&gt;不是脏页&lt;ul&gt;
 &lt;li&gt;直接覆盖&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;更新慢表&lt;/li&gt;
-&lt;li&gt;更新TLB
-&lt;ul&gt;
-&lt;li&gt;TLB已满
-&lt;ul&gt;
+&lt;li&gt;更新TLB&lt;ul&gt;
+&lt;li&gt;TLB已满&lt;ul&gt;
 &lt;li&gt;淘汰原有页并替换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;TLB未满
-&lt;ul&gt;
+&lt;li&gt;TLB未满&lt;ul&gt;
 &lt;li&gt;插入新页并设置无效位&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -3590,54 +3566,43 @@ void FindRight(BiTree T)
 &lt;p&gt;这时候因为先前已经完成了缺页中断的处理，这里不可能访存失败，顶多Cache缺失&lt;/p&gt;
 &lt;p&gt;CPU给出实地址&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;地址解释方式
-&lt;ul&gt;
-&lt;li&gt;直接映射
-&lt;ul&gt;
+&lt;li&gt;地址解释方式&lt;ul&gt;
+&lt;li&gt;直接映射&lt;ul&gt;
 &lt;li&gt;标志&lt;/li&gt;
 &lt;li&gt;Cache块号&lt;/li&gt;
 &lt;li&gt;块内地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;全相联映射
-&lt;ul&gt;
+&lt;li&gt;全相联映射&lt;ul&gt;
 &lt;li&gt;标志&lt;/li&gt;
 &lt;li&gt;块内地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;组相联映射
-&lt;ul&gt;
+&lt;li&gt;组相联映射&lt;ul&gt;
 &lt;li&gt;标志&lt;/li&gt;
 &lt;li&gt;Cache组号&lt;/li&gt;
 &lt;li&gt;块内地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;主存地址
-&lt;ul&gt;
+&lt;li&gt;主存地址&lt;ul&gt;
 &lt;li&gt;块号&lt;/li&gt;
 &lt;li&gt;块内地址&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Cache访问
-&lt;ul&gt;
-&lt;li&gt;Cache命中
-&lt;ul&gt;
-&lt;li&gt;读命中
-&lt;ul&gt;
+&lt;li&gt;Cache访问&lt;ul&gt;
+&lt;li&gt;Cache命中&lt;ul&gt;
+&lt;li&gt;读命中&lt;ul&gt;
 &lt;li&gt;直接从Cache中读取数据&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;写命中
-&lt;ul&gt;
-&lt;li&gt;全写法
-&lt;ul&gt;
+&lt;li&gt;写命中&lt;ul&gt;
+&lt;li&gt;全写法&lt;ul&gt;
 &lt;li&gt;同时更新主存和Cache&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;回写法
-&lt;ul&gt;
+&lt;li&gt;回写法&lt;ul&gt;
 &lt;li&gt;只更新Cache&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -3645,26 +3610,18 @@ void FindRight(BiTree T)
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Cache未命中
-&lt;ul&gt;
-&lt;li&gt;访问主存
-&lt;ul&gt;
-&lt;li&gt;主存写命中
-&lt;ul&gt;
-&lt;li&gt;写分配法
-&lt;ul&gt;
-&lt;li&gt;全写法
-&lt;ul&gt;
+&lt;li&gt;Cache未命中&lt;ul&gt;
+&lt;li&gt;访问主存&lt;ul&gt;
+&lt;li&gt;主存写命中&lt;ul&gt;
+&lt;li&gt;写分配法&lt;ul&gt;
+&lt;li&gt;全写法&lt;ul&gt;
 &lt;li&gt;修改主存内容&lt;/li&gt;
-&lt;li&gt;更新Cache
-&lt;ul&gt;
-&lt;li&gt;Cache满
-&lt;ul&gt;
+&lt;li&gt;更新Cache&lt;ul&gt;
+&lt;li&gt;Cache满&lt;ul&gt;
 &lt;li&gt;选择一块替换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Cache不满
-&lt;ul&gt;
+&lt;li&gt;Cache不满&lt;ul&gt;
 &lt;li&gt;直接塞入&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -3672,18 +3629,14 @@ void FindRight(BiTree T)
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;回写法
-&lt;ul&gt;
-&lt;li&gt;更新Cache
-&lt;ul&gt;
-&lt;li&gt;Cache满
-&lt;ul&gt;
+&lt;li&gt;回写法&lt;ul&gt;
+&lt;li&gt;更新Cache&lt;ul&gt;
+&lt;li&gt;Cache满&lt;ul&gt;
 &lt;li&gt;替换时检查是否需要写回&lt;/li&gt;
 &lt;li&gt;选择一块替换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Cache不满
-&lt;ul&gt;
+&lt;li&gt;Cache不满&lt;ul&gt;
 &lt;li&gt;直接塞入&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -3694,25 +3647,20 @@ void FindRight(BiTree T)
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;非写分配法
-&lt;ul&gt;
+&lt;li&gt;非写分配法&lt;ul&gt;
 &lt;li&gt;只更新主存，不更新Cache&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;主存读命中
-&lt;ul&gt;
+&lt;li&gt;主存读命中&lt;ul&gt;
 &lt;li&gt;从主存中读取数据&lt;/li&gt;
-&lt;li&gt;更新Cache
-&lt;ul&gt;
-&lt;li&gt;Cache满
-&lt;ul&gt;
+&lt;li&gt;更新Cache&lt;ul&gt;
+&lt;li&gt;Cache满&lt;ul&gt;
 &lt;li&gt;选择一块替换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Cache不满
-&lt;ul&gt;
+&lt;li&gt;Cache不满&lt;ul&gt;
 &lt;li&gt;直接塞入&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -3775,7 +3723,7 @@ void FindRight(BiTree T)
 &lt;p&gt;&lt;strong&gt;存储机制：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;页面在主存内是全相联存储，但这个仅仅含义是可以放在任何一块&lt;/p&gt;
 &lt;p&gt;而不是根据内容寻址，主存没有这个能力的，仅仅含义是可以放在主存的任意位置罢了&lt;/p&gt;
-&lt;p&gt;必须采用回写法，不能用全写，否则磁盘I/O就会大量拖累CPU的运行&lt;/p&gt;
+&lt;p&gt;必须采用回写法，不能用全写，否则磁盘I&amp;#x2F;O就会大量拖累CPU的运行&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;页表有效位：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;其实快表、慢表内均需要有效位，尤其是多道批程序下&lt;/p&gt;
 &lt;p&gt;快表的有效位其实为了增加效率所以不会考虑直接淘汰上一个进程的一些页表项&lt;/p&gt;
