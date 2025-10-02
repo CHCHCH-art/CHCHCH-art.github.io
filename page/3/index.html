@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Ephemeral</title><meta name="author" content="CH3OH"><meta name="copyright" content="CH3OH"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Ephemeral">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="Ephemeral">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/headimage.png">
+<meta property="article:author" content="CH3OH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/headimage.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Ephemeral',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/photo.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-pencil"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://markdown.com.cn/intro.html"><i class="fa-fw fas fa-wrench"></i><span> 语法</span></a></li><li><a class="site-page child" href="/categories"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li><li><a class="site-page child" href="/tags"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-link"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> Ldyer</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/back.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Ephemeral</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-pencil"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://markdown.com.cn/intro.html"><i class="fa-fw fas fa-wrench"></i><span> 语法</span></a></li><li><a class="site-page child" href="/categories"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li><li><a class="site-page child" href="/tags"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-link"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> Ldyer</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Ephemeral</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/10/01/%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E5%99%A8/" title="内存分配器">内存分配器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-01T05:21:35.000Z" title="发表于 2025-10-01 13:21:35">2025-10-01</time></span></div><div class="content">  TCMalloc 属于内存分配器的一种，从上述实验上看，选择合适的内存分配器有助于代码加速 切换内存分配器并不难，且种类很多，完全可以消融实验判断何者最适合本代码 总体是比较推荐的方案，有益无害，多加消融即可（具体效果根据各自的消融结果为准） 相关方法：  补注： 1.内存分配器的理论功底并不扎实，有必要充分学习相关知识，并做相关实验： 各类内存分配器的基本理论和适用场景 实际使用中的效率影响和影响因素，同时总结最佳适用场景 2.内存分配器实际上属于系统优化的一部分，这部分优化策略比较多且易被忽略，完全可以多加研究 该领域相关的内容（计算机系统）也可以用于自身的实验 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/10/01/%E6%B7%B1%E5%BA%A6%E5%8F%AF%E5%88%86%E7%A6%BB%E5%8D%B7%E7%A7%AF/" title="深度可分离卷积">深度可分离卷积</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-01T04:58:26.000Z" title="发表于 2025-10-01 12:58:26">2025-10-01</time></span></div><div class="content"> 以上是标准卷积、深度可分离卷积两者的速率差异，采用小型网络多轮运行得到的结果 总体而言，还是能看到速度较为明显的提升 不过具体项目中，仍然应该保持以消融的态度对待该方案（提速效果、最终模型表现）  补注： 1.首先该实验只基于小型网络做的简单测试，其效果不一定能套用到各类项目中 应当补充各类情景下的实验结果 2.其次，该方案理论上会影响性能，但具体影响的幅度和该幅度的影响因素都值得探索和实验 3.显存开销上同样值得探索和继续实验  其简单案例： 12# 普通卷积（标准卷积）nn.Conv2d(in_ch, out_ch, kernel_size=3, padding=1)  12345# 深度可分离卷积nn.Sequential(    nn.Conv2d(in_ch, in_ch, kernel_size=3, padding=1, groups=in_ch),  # depthwise    nn.Conv2d(in_ch, out_ch, kernel_size=1)                           # pointwise)</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/10/01/%E5%AF%B9%E9%BD%90%E5%90%91%E9%87%8F%E6%A0%BC%E5%BC%8F/" title="对齐向量格式">对齐向量格式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-01T02:51:06.000Z" title="发表于 2025-10-01 10:51:06">2025-10-01</time></span></div><div class="content"> 如图所示，该结果是基于成千上万次矩阵运算循环得到的平均结果，基本有一倍的差异 其机理在于对齐 GPU 最小计算单元的维度，从而减少额外计算开销 从实战角度看，对齐向量维度为倍数是很重要的，比较建议作为一个标准看待  补注： 1.但具体效果的显著性还没有充分论证，以下实验应当是必要的： 本实验项目，消融不对齐的维度数量、不对齐的维度差额（距对齐的维度差额为多少） 其他实验项目，对齐&#x2F;不对齐对性能的影响，同样值得做实验，并依据此总结影响因素和影响逻辑 2.此外，若需要以对齐为标准，何时向上对齐、何时向下对齐同样值得思索（或许需要具体消融） 3.硬件层面最小计算单元的维度数量并不统一，这部分也可以多加调研 4.相关的内存、显存对齐格式，或许也是值得思考的方向 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/10/01/%E7%BC%96%E8%AF%91%E4%BC%98%E5%8C%96/" title="编译优化">编译优化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-01T02:33:23.000Z" title="发表于 2025-10-01 10:33:23">2025-10-01</time></span></div><div class="content"> 提升主要来源于编译层面的算子融合、代码编译优化，总体可以带来一定幅度的提升 但其具有一定缺点： 首先，每次进程启动都需要预编译和预热，需要一定时间，若训练轮数少、时间短，其加速效果一般 其次，其暂时不支持 Python 3.12 + 版本 最后，针对性价比，个人认为需要看消融结果、继续实验，不同实验效果不同，很难一概而论 总结： 总体可以认为是一个提速的方案，但具体在项目中的应用需要根据具体情况斟酌&#x2F;消融 其应用方案： 12345678910111213141516171819202122232425262728293031323334353637383940import torchimport torch.nn as nnimport torch.optim as optim# 定义简单模型class SimpleNet(nn.Module):    def __init__(self):        super().__init__()        self.net = nn.Sequential(            nn.Conv2d(3, 16, 3,...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/10/01/%E6%B7%B7%E5%90%88%E7%B2%BE%E5%BA%A6/" title="混合精度">混合精度</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-01T02:00:57.000Z" title="发表于 2025-10-01 10:00:57">2025-10-01</time></span></div><div class="content"> 混合精度依旧是目前主推的方案，不仅可以降显存，进一步依靠高 Batch 压榨并行性 同时，还能加速某些算子的计算，在某些计算卡上的加速效果很明显（V100） 同时，还能配合编译、其余加速方案提升计算性能 而上述方案基本不会对训练结果产生过大影响（理论上），基本没有缺点 注：实际加速效果和硬件关系较大 注：BF16 效果上略优于 FP16，但其通用性不高，较早的架构不支持该类型计算 其代码书写格式往往如下： 123456789101112131415161718192021222324252627import torchfrom torch import nn, optimfrom torch.cuda.amp import autocast, GradScaler# 模型 &amp; 优化器model = nn.Linear(1024, 1024).cuda()optimizer = optim.Adam(model.parameters(), lr=1e-3)criterion = nn.MSELoss()# 混合精度梯度缩放器scaler = GradScaler()for...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/10/01/%E7%AE%97%E6%B3%95%E6%95%88%E7%8E%87%E7%B3%BB%E5%88%97/" title="算法效率系列">算法效率系列</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-01T01:53:53.000Z" title="发表于 2025-10-01 09:53:53">2025-10-01</time></span></div><div class="content">技术来源： PyTorch 官方文档：https://docs.pytorch.ac.cn/tutorials/recipes/recipes/tuning_guide.html 阿里云社区：https://developer.aliyun.com/article/1661613 知乎博文： A： https://zhuanlan.zhihu.com/p/359720877 B： https://zhuanlan.zhihu.com/p/538605620 C： https://zhuanlan.zhihu.com/p/345279772 D： https://zhuanlan.zhihu.com/p/595318436 个人博客： A： https://sebastianraschka.com/blog/2023/pytorch-faster.html) B： https://www.hiascend.com/doc_center/source/zh/Pytorch/600/ptmoddevg/trainingmigrguide/performance_tuning_0067....</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/10/01/%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/" title="问题合集">问题合集</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-01T01:36:02.000Z" title="发表于 2025-10-01 09:36:02">2025-10-01</time></span></div><div class="content">Git 无法成功克隆项目的问题 同局域网主机间互 SSH 不成功的问题 电脑可选下载功能消失的问题 GPU 功耗与计算效率问题 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/05/30/%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE/" title="博客配置">博客配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-30T07:54:00.000Z" title="发表于 2025-05-30 15:54:00">2025-05-30</time></span></div><div class="content">关于 Hexo 博客下载整流程（未部署到云）参考： https://blog.csdn.net/2401_83582688/article/details/144380760 其中，Git、Node.js 的下载本人均是采用安装包的下载方式，方便选择兼容、问题少的版本 初始化 Hexo 过程，需要注意这样一点： hexo init blog 必须要在空的文件夹下进行，即上文创建的文件夹是用于该步骤的 需要在这个文件夹内打开 Git Bash 再进行初始化部署 Butterfly 主题安装后，可以将其配置文件重命名为 _config.butterfly.yml 放在根目录配置 其配置文件的修改参考该文章：https://zhuanlan.zhihu.com/p/492207978 其中，分类、标签页的丢失(Cannot GET)问题参考该文章： https://www.voycn.com/article/hexo-butterfly-cannot-get-tags-categorieschuxian404  部署上，参考文章： https://blog.csdn.net/qq_22...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/05/25/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-25T12:30:00.000Z" title="发表于 2025-05-25 20:30:00">2025-05-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Test/">Test</a></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">CH3OH</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/02/%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86%E5%85%B6%E4%BD%99%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" title="数据预处理其余优化方案">数据预处理其余优化方案</a><time datetime="2025-10-02T06:51:08.000Z" title="发表于 2025-10-02 14:51:08">2025-10-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/02/%E9%94%81%E9%A1%B5%E5%86%85%E5%AD%98%E4%B8%8E%E5%BC%82%E6%AD%A5%E6%8B%B7%E8%B4%9D/" title="锁页内存与异步拷贝">锁页内存与异步拷贝</a><time datetime="2025-10-02T06:50:40.000Z" title="发表于 2025-10-02 14:50:40">2025-10-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/02/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E6%95%B0%E9%87%8F/" title="多进程数量">多进程数量</a><time datetime="2025-10-02T06:49:09.000Z" title="发表于 2025-10-02 14:49:09">2025-10-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/02/%E4%B8%8D%E5%90%8C%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%8F%96%E4%B8%8E%E5%8A%A0%E9%80%9F%E7%AD%96%E7%95%A5/" title="不同文件的读取与加速策略">不同文件的读取与加速策略</a><time datetime="2025-10-02T06:47:59.000Z" title="发表于 2025-10-02 14:47:59">2025-10-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/02/%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%B9%B6%E8%A1%8C/" title="多进程并行">多进程并行</a><time datetime="2025-10-02T06:47:23.000Z" title="发表于 2025-10-02 14:47:23">2025-10-02</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Test/"><span class="card-category-list-name">Test</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              十月 2025
+            </span>
+            <span class="card-archive-list-count">27</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              五月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">29</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-02T06:54:21.718Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/back.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 By CH3OH</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
