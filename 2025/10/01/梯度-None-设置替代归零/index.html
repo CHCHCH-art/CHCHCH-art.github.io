@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>梯度 None 设置替代归零 | Ephemeral</title><meta name="author" content="CH3OH"><meta name="copyright" content="CH3OH"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="理论上，梯度设为 None 而非零，可以减少一次访存操作，从而加速运算 但本人小型实验环境上面看不出区别，只能说这个可以作为代码的规范，有益无害 相关代码及放置位置： 123456789101112131415161718192021222324for x, y in dataloader:    for param in model.parameters():        # 清空梯度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="梯度 None 设置替代归零">
+<meta property="og:url" content="http://example.com/2025/10/01/%E6%A2%AF%E5%BA%A6-None-%E8%AE%BE%E7%BD%AE%E6%9B%BF%E4%BB%A3%E5%BD%92%E9%9B%B6/index.html">
+<meta property="og:site_name" content="Ephemeral">
+<meta property="og:description" content="理论上，梯度设为 None 而非零，可以减少一次访存操作，从而加速运算 但本人小型实验环境上面看不出区别，只能说这个可以作为代码的规范，有益无害 相关代码及放置位置： 123456789101112131415161718192021222324for x, y in dataloader:    for param in model.parameters():        # 清空梯度">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/headimage.png">
+<meta property="article:published_time" content="2025-10-01T06:20:50.000Z">
+<meta property="article:modified_time" content="2025-10-01T07:04:58.410Z">
+<meta property="article:author" content="CH3OH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/headimage.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "梯度 None 设置替代归零",
+  "url": "http://example.com/2025/10/01/%E6%A2%AF%E5%BA%A6-None-%E8%AE%BE%E7%BD%AE%E6%9B%BF%E4%BB%A3%E5%BD%92%E9%9B%B6/",
+  "image": "http://example.com/img/headimage.png",
+  "datePublished": "2025-10-01T06:20:50.000Z",
+  "dateModified": "2025-10-01T07:04:58.410Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "CH3OH",
+      "url": "http://example.com/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2025/10/01/%E6%A2%AF%E5%BA%A6-None-%E8%AE%BE%E7%BD%AE%E6%9B%BF%E4%BB%A3%E5%BD%92%E9%9B%B6/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '梯度 None 设置替代归零',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/photo.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-pencil"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://markdown.com.cn/intro.html"><i class="fa-fw fas fa-wrench"></i><span> 语法</span></a></li><li><a class="site-page child" href="/categories"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li><li><a class="site-page child" href="/tags"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-link"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> Ldyer</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/back.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Ephemeral</span></a><a class="nav-page-title" href="/"><span class="site-name">梯度 None 设置替代归零</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-pencil"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://markdown.com.cn/intro.html"><i class="fa-fw fas fa-wrench"></i><span> 语法</span></a></li><li><a class="site-page child" href="/categories"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li><li><a class="site-page child" href="/tags"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-link"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> Ldyer</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">梯度 None 设置替代归零</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-10-01T06:20:50.000Z" title="发表于 2025-10-01 14:20:50">2025-10-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-10-01T07:04:58.410Z" title="更新于 2025-10-01 15:04:58">2025-10-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>理论上，梯度设为 None 而非零，可以减少一次访存操作，从而加速运算</p>
+<p>但本人小型实验环境上面看不出区别，只能说这个可以作为代码的规范，有益无害</p>
+<p>相关代码及放置位置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">for x, y in dataloader:</span><br><span class="line">    for param in model.parameters():        # 清空梯度</span><br><span class="line">        param.grad = None</span><br><span class="line"></span><br><span class="line">    out = model(x)</span><br><span class="line">    loss = criterion(out, y)</span><br><span class="line">    loss.backward()</span><br><span class="line">    optimizer.step()</span><br><span class="line"></span><br><span class="line">for x, y in dataloader:</span><br><span class="line">    optimizer.zero_grad(set_to_none=True)   # 清空梯度</span><br><span class="line"></span><br><span class="line">    out = model(x)</span><br><span class="line">    loss = criterion(out, y)</span><br><span class="line">    loss.backward()</span><br><span class="line">    optimizer.step()</span><br><span class="line"></span><br><span class="line">for x, y in dataloader:</span><br><span class="line">    model.zero_grad(set_to_none=True)       # 清空梯度</span><br><span class="line"></span><br><span class="line">    out = model(x)</span><br><span class="line">    loss = criterion(out, y)</span><br><span class="line">    loss.backward()</span><br><span class="line">    optimizer.step()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>补注：</p>
+<p>具体效果、影响因素依旧值得消融和实验：</p>
+<p>1.访存数量、访存开销的确认（理论上应该下降，不一定能被感知）</p>
+<p>2.显存量的变化和相关因素（理论上应该无关）</p>
+<p>3.不同代码的效果，总结其效果的影响因素（理论上小型网络更明显，大型反而不明显）</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">CH3OH</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/10/01/%E6%A2%AF%E5%BA%A6-None-%E8%AE%BE%E7%BD%AE%E6%9B%BF%E4%BB%A3%E5%BD%92%E9%9B%B6/">http://example.com/2025/10/01/%E6%A2%AF%E5%BA%A6-None-%E8%AE%BE%E7%BD%AE%E6%9B%BF%E4%BB%A3%E5%BD%92%E9%9B%B6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Ephemeral</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/headimage.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/10/01/%E5%85%B6%E4%BD%99%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" title="其余优化方案"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">其余优化方案</div></div><div class="info-2"><div class="info-item-1">（未实验、未实现、未确定、不常用）：  分布式优化：（主要见 PyTorch 官网） 1.deepspeed 2.ddp、ddp优化方案 3.绑定 NUMA 节点，避免跨插槽访问  训练优化： 1.合理初始化模型参数  代码优化： 1.减少设备间的迁移、内存与显存间的迁移、访存频率、访盘频率 2.减少 CPU、GPU 间的同步，令 CPU 尽可能超前于 GPU，让两者各司其职 2.利用nn.Sequential、nn.ModuleList 管理层，少用循环遍历层 3.多利用自带库函数计算 4.利用现有高度优化的代码段来替代手写代码段 5.优化性能瓶颈（常见 Python 向量化操作）  系统优化： 1.Compile编译后端（Triton编程、OpenMp、C++ and so on） 2.禁用PyTorch中的调试API 3.利用Intel OpenMP 运行时库 (libiomp) </div></div></div></a><a class="pagination-related" href="/2025/10/01/Trainer-and-Frabic/" title="Trainer and Fabric"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Trainer and Fabric</div></div><div class="info-2"><div class="info-item-1"> Trainer、Fabric 定位比较类似，都是训练函数的封装，可以起到代码简化、功能简化的效果 至少在代码的书写、工程项目的实现上面，两者可以带来莫大的帮助 但具体对训练效率的提升，其实不太明显，但本人还是比较推荐使用的，可以减少工作量、简化代码  补注： 1.理论上两者存在一定的加速效果，但尚不确定具体的来源和影响因素，这点可以实验 （理论上来源于代码的轻量化、代码书写层面的优化） </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">CH3OH</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/01/DataLoader-%E7%9B%B8%E5%85%B3/" title="DataLoader 相关">DataLoader 相关</a><time datetime="2025-10-01T07:39:21.000Z" title="发表于 2025-10-01 15:39:21">2025-10-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/01/%E5%85%B6%E4%BD%99%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" title="其余优化方案">其余优化方案</a><time datetime="2025-10-01T07:11:56.000Z" title="发表于 2025-10-01 15:11:56">2025-10-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/01/%E6%A2%AF%E5%BA%A6-None-%E8%AE%BE%E7%BD%AE%E6%9B%BF%E4%BB%A3%E5%BD%92%E9%9B%B6/" title="梯度 None 设置替代归零">梯度 None 设置替代归零</a><time datetime="2025-10-01T06:20:50.000Z" title="发表于 2025-10-01 14:20:50">2025-10-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/01/Trainer-and-Frabic/" title="Trainer and Fabric">Trainer and Fabric</a><time datetime="2025-10-01T06:17:03.000Z" title="发表于 2025-10-01 14:17:03">2025-10-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/01/%E7%AE%97%E5%AD%90%E8%9E%8D%E5%90%88/" title="算子融合">算子融合</a><time datetime="2025-10-01T06:06:16.000Z" title="发表于 2025-10-01 14:06:16">2025-10-01</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/back.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 By CH3OH</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

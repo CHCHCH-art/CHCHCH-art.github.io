@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Last Channel | Ephemeral</title><meta name="author" content="CH3OH"><meta name="copyright" content="CH3OH"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Last Channel 理论上是一种高效的存储格式，可以加速存取和运算效果 官方文档中给出 22% 左右的效率提升，但本人的简单神经网络上并没有看到显著的区别 总体应当属于有益无害的类型，图像处理领域可以作为一种标准遵守  补注： 1.Last Channel 的代码实现上并不简单，若真正要使用，需要考虑工程量和提升幅度的性价比 1.本人实验内，采用小型数据集和小型网络进行实现，而实际上其实验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Last Channel">
+<meta property="og:url" content="http://example.com/2025/10/01/Last-Channel/index.html">
+<meta property="og:site_name" content="Ephemeral">
+<meta property="og:description" content="Last Channel 理论上是一种高效的存储格式，可以加速存取和运算效果 官方文档中给出 22% 左右的效率提升，但本人的简单神经网络上并没有看到显著的区别 总体应当属于有益无害的类型，图像处理领域可以作为一种标准遵守  补注： 1.Last Channel 的代码实现上并不简单，若真正要使用，需要考虑工程量和提升幅度的性价比 1.本人实验内，采用小型数据集和小型网络进行实现，而实际上其实验">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/headimage.png">
+<meta property="article:published_time" content="2025-10-01T05:22:15.000Z">
+<meta property="article:modified_time" content="2025-10-01T06:53:03.645Z">
+<meta property="article:author" content="CH3OH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/headimage.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Last Channel",
+  "url": "http://example.com/2025/10/01/Last-Channel/",
+  "image": "http://example.com/img/headimage.png",
+  "datePublished": "2025-10-01T05:22:15.000Z",
+  "dateModified": "2025-10-01T06:53:03.645Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "CH3OH",
+      "url": "http://example.com/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2025/10/01/Last-Channel/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Last Channel',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/photo.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-pencil"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://markdown.com.cn/intro.html"><i class="fa-fw fas fa-wrench"></i><span> 语法</span></a></li><li><a class="site-page child" href="/categories"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li><li><a class="site-page child" href="/tags"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-link"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> Ldyer</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/back.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Ephemeral</span></a><a class="nav-page-title" href="/"><span class="site-name">Last Channel</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-pencil"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://markdown.com.cn/intro.html"><i class="fa-fw fas fa-wrench"></i><span> 语法</span></a></li><li><a class="site-page child" href="/categories"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li><li><a class="site-page child" href="/tags"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-link"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> Ldyer</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Last Channel</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-10-01T05:22:15.000Z" title="发表于 2025-10-01 13:22:15">2025-10-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-10-01T06:53:03.645Z" title="更新于 2025-10-01 14:53:03">2025-10-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="/images/Lib/image6.png"></p>
+<p>Last Channel 理论上是一种高效的存储格式，可以加速存取和运算效果</p>
+<p>官方文档中给出 22% 左右的效率提升，但本人的简单神经网络上并没有看到显著的区别</p>
+<p>总体应当属于有益无害的类型，图像处理领域可以作为一种标准遵守</p>
+<hr>
+<p>补注：</p>
+<p>1.Last Channel 的代码实现上并不简单，若真正要使用，需要考虑工程量和提升幅度的性价比</p>
+<p>1.本人实验内，采用小型数据集和小型网络进行实现，而实际上其实验结果值得推敲：</p>
+<p>该标准是否在大型模型、大型数据集或者其他场景上更能凸显优势？</p>
+<p>实现方案是否存在漏洞，导致没有完全实现 Last Channel？</p>
+<p>上述实验应当是需要做的，为彻底清楚该组件的效果和具体的影响因素</p>
+<p>2.此外，理解其原理和效率提升的来源也是必要的</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">CH3OH</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/10/01/Last-Channel/">http://example.com/2025/10/01/Last-Channel/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Ephemeral</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/headimage.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/10/01/%E5%8D%B7%E7%A7%AF%E5%81%8F%E7%BD%AE%E9%80%89%E9%A1%B9%E7%9A%84%E5%8E%BB%E9%99%A4/" title="卷积偏置选项的去除"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">卷积偏置选项的去除</div></div><div class="info-2"><div class="info-item-1">卷积层后若叠加归一化操作，可以取消偏置的增设，因为归一化会数学上消除该偏置的效果 其参考案例： 12345nn.Sequential(    nn.Conv2d(in_ch, out_ch, kernel_size=3, padding=1, bias=False),  # 去掉 bias    nn.BatchNorm2d(out_ch),    nn.ReLU(inplace=True))   这是在简单的网络上跑出的结果，基本导致 17% 左右的性能影响 此同样应当作为一个规范和标准，有益无害  补注： 1.理论上其效果仍然需要做更多的实验（但可以猜测大型模型上效果提升不会那么显著）： 大型模型、小型模型效率提升的比较，同时尽可能探究其效率变动的影响因素 显存上的变动和影响逻辑 </div></div></div></a><a class="pagination-related" href="/2025/10/01/%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E5%99%A8/" title="内存分配器"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">内存分配器</div></div><div class="info-2"><div class="info-item-1">  TCMalloc 属于内存分配器的一种，从上述实验上看，选择合适的内存分配器有助于代码加速 切换内存分配器并不难，且种类很多，完全可以消融实验判断何者最适合本代码 总体是比较推荐的方案，有益无害，多加消融即可（具体效果根据各自的消融结果为准） 相关方法：  补注： 1.内存分配器的理论功底并不扎实，有必要充分学习相关知识，并做相关实验： 各类内存分配器的基本理论和适用场景 实际使用中的效率影响和影响因素，同时总结最佳适用场景 2.内存分配器实际上属于系统优化的一部分，这部分优化策略比较多且易被忽略，完全可以多加研究 该领域相关的内容（计算机系统）也可以用于自身的实验 </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">CH3OH</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/01/DataLoader-%E7%9B%B8%E5%85%B3/" title="DataLoader 相关">DataLoader 相关</a><time datetime="2025-10-01T07:39:21.000Z" title="发表于 2025-10-01 15:39:21">2025-10-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/01/%E5%85%B6%E4%BD%99%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" title="其余优化方案">其余优化方案</a><time datetime="2025-10-01T07:11:56.000Z" title="发表于 2025-10-01 15:11:56">2025-10-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/01/%E6%A2%AF%E5%BA%A6-None-%E8%AE%BE%E7%BD%AE%E6%9B%BF%E4%BB%A3%E5%BD%92%E9%9B%B6/" title="梯度 None 设置替代归零">梯度 None 设置替代归零</a><time datetime="2025-10-01T06:20:50.000Z" title="发表于 2025-10-01 14:20:50">2025-10-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/01/Trainer-and-Frabic/" title="Trainer and Fabric">Trainer and Fabric</a><time datetime="2025-10-01T06:17:03.000Z" title="发表于 2025-10-01 14:17:03">2025-10-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/01/%E7%AE%97%E5%AD%90%E8%9E%8D%E5%90%88/" title="算子融合">算子融合</a><time datetime="2025-10-01T06:06:16.000Z" title="发表于 2025-10-01 14:06:16">2025-10-01</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/back.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 By CH3OH</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
