@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Tailscale DERP 服务器搭建 | Ephemeral</title><meta name="author" content="CH3OH"><meta name="copyright" content="CH3OH"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="首先租用一台阿里云服务器，学生优惠的话至少能白嫖半年的使用: 参考链接: https:&#x2F;&#x2F;common-buy.aliyun.com&#x2F;?commodityCode&#x3D;swas#&#x2F;buy 其中服务器优先选择 Ubuntu 22.04 LTS 64位，这个版本至少已经被前人验证过 随后，我们进行下列操作: 首先确认公网 IP 地址  随后设置防火墙放行:  这里只需要按照这个步骤增加最后这两台规则即可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tailscale DERP 服务器搭建">
+<meta property="og:url" content="http://example.com/2026/04/28/Tailscale-DERP-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Ephemeral">
+<meta property="og:description" content="首先租用一台阿里云服务器，学生优惠的话至少能白嫖半年的使用: 参考链接: https:&#x2F;&#x2F;common-buy.aliyun.com&#x2F;?commodityCode&#x3D;swas#&#x2F;buy 其中服务器优先选择 Ubuntu 22.04 LTS 64位，这个版本至少已经被前人验证过 随后，我们进行下列操作: 首先确认公网 IP 地址  随后设置防火墙放行:  这里只需要按照这个步骤增加最后这两台规则即可">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/headimage.png">
+<meta property="article:published_time" content="2026-04-28T07:51:00.000Z">
+<meta property="article:modified_time" content="2026-04-28T08:27:17.124Z">
+<meta property="article:author" content="CH3OH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/headimage.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Tailscale DERP 服务器搭建",
+  "url": "http://example.com/2026/04/28/Tailscale-DERP-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/",
+  "image": "http://example.com/img/headimage.png",
+  "datePublished": "2026-04-28T07:51:00.000Z",
+  "dateModified": "2026-04-28T08:27:17.124Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "CH3OH",
+      "url": "http://example.com/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/04/28/Tailscale-DERP-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Tailscale DERP 服务器搭建',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/photo.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-pencil"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://markdown.com.cn/intro.html"><i class="fa-fw fas fa-wrench"></i><span> 语法</span></a></li><li><a class="site-page child" href="/categories"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li><li><a class="site-page child" href="/tags"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-link"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> Ldyer</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/back.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Ephemeral</span></a><a class="nav-page-title" href="/"><span class="site-name">Tailscale DERP 服务器搭建</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-pencil"></i><span> 博文</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/admin"><i class="fa-fw fas fa-pencil"></i><span> 写作</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://markdown.com.cn/intro.html"><i class="fa-fw fas fa-wrench"></i><span> 语法</span></a></li><li><a class="site-page child" href="/categories"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></li><li><a class="site-page child" href="/tags"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-link"></i><span> 扩列</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="http://ldyer.top/"><i class="fa-fw fas fa-user-circle"></i><span> Ldyer</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Tailscale DERP 服务器搭建</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-04-28T07:51:00.000Z" title="发表于 2026-04-28 15:51:00">2026-04-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-04-28T08:27:17.124Z" title="更新于 2026-04-28 16:27:17">2026-04-28</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>首先租用一台阿里云服务器，学生优惠的话至少能白嫖半年的使用:</p>
+<p>参考链接:</p>
+<p><a target="_blank" rel="noopener" href="https://common-buy.aliyun.com/?commodityCode=swas#/buy">https://common-buy.aliyun.com/?commodityCode=swas#/buy</a></p>
+<p>其中服务器优先选择 Ubuntu 22.04 LTS 64位，这个版本至少已经被前人验证过</p>
+<p>随后，我们进行下列操作:</p>
+<p>首先确认公网 IP 地址</p>
+<p><img src="/images/Lib/derp1.png"></p>
+<p>随后设置防火墙放行:</p>
+<p><img src="/images/Lib/derp2.png"></p>
+<p>这里只需要按照这个步骤增加最后这两台规则即可</p>
+<p>服务器命令行里面，检查下防火墙状态:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw status</span><br></pre></td></tr></table></figure>
+<p>若结果是 Status: inactive 则不用再管，反正则执行下列语句放行:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw allow 36666/tcp</span><br><span class="line"></span><br><span class="line">sudo ufw allow 3478/udp</span><br><span class="line"></span><br><span class="line">sudo ufw reload</span><br></pre></td></tr></table></figure>
+
+<p>随后，回到命令行，执行如下一系列指令:</p>
+<ol>
+<li>安装 Docker。</li>
+<li>启动并设置 Docker 开机自启。</li>
+<li>删除旧的 tailscale-derp 容器。</li>
+<li>从华为云镜像源拉取 tailscale-derp 镜像。</li>
+<li>给镜像改成本地短名称。</li>
+<li>运行一个名为 tailscale-derp 的容器。</li>
+<li>暴露 TCP 36666 和 UDP 3478。</li>
+<li>设置容器随 Docker 自动重启。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line"></span><br><span class="line">sudo apt install -y docker.io</span><br><span class="line"></span><br><span class="line">sudo systemctl enable --now docker</span><br><span class="line"></span><br><span class="line">docker --version</span><br><span class="line"></span><br><span class="line">sudo systemctl status docker --no-pager</span><br><span class="line"></span><br><span class="line">sudo docker rm -f tailscale-derp 2&gt;/dev/null</span><br><span class="line"></span><br><span class="line">sudo docker pull swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/javaow/tailscale-derp:latest</span><br><span class="line"></span><br><span class="line">sudo docker tag swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/javaow/tailscale-derp:latest javaow/tailscale-derp:latest</span><br><span class="line"></span><br><span class="line">sudo docker run -d \</span><br><span class="line">  --name tailscale-derp \</span><br><span class="line">  -p 36666:36666 \</span><br><span class="line">  -p 3478:3478/udp \</span><br><span class="line">  --restart=always \</span><br><span class="line">  javaow/tailscale-derp</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>其中，tailscale-derp 的镜像:</p>
+<p><a target="_blank" rel="noopener" href="https://docker.aityp.com/image/docker.io/javaow/tailscale-derp:latest">https://docker.aityp.com/image/docker.io/javaow/tailscale-derp:latest</a></p>
+<p>此后，执行检查:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo docker ps</span><br><span class="line"></span><br><span class="line">sudo docker logs --tail=80 tailscale-derp</span><br><span class="line"></span><br><span class="line">sudo ss -lntup | grep -E &#x27;36666|3478&#x27;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>期望的结果应当是:</p>
+<p><img src="/images/Lib/derp3.png"></p>
+<p>同样可以在本地主机测试访问：	<a target="_blank" rel="noopener" href="https://121.43.171.79:36666/">https://121.43.171.79:36666</a></p>
+<p>其结果应当如:</p>
+<p><img src="/images/Lib/derp4.png"></p>
+<p>这之后，进入 Tailscale 控制面板:</p>
+<p><img src="/images/Lib/derp5.png"></p>
+<p>调整文件内容，只需要增设 derpMap 这一项即可，内容如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&quot;derpMap&quot;: &#123;</span><br><span class="line">		&quot;OmitDefaultRegions&quot;: false,</span><br><span class="line">		&quot;Regions&quot;: &#123;</span><br><span class="line">			&quot;999&quot;: &#123;</span><br><span class="line">				&quot;RegionID&quot;:   999,</span><br><span class="line">				&quot;RegionCode&quot;: &quot;ali&quot;,</span><br><span class="line">				&quot;RegionName&quot;: &quot;Aliyun DERP&quot;,</span><br><span class="line">				&quot;Nodes&quot;: [</span><br><span class="line">					&#123;</span><br><span class="line">						&quot;Name&quot;:             &quot;aliyun-derp&quot;,</span><br><span class="line">						&quot;RegionID&quot;:         999,</span><br><span class="line">						&quot;HostName&quot;:         &quot;121.43.171.79&quot;,</span><br><span class="line">						&quot;DERPPort&quot;:         36666,</span><br><span class="line">						&quot;STUNPort&quot;:         3478,</span><br><span class="line">						&quot;InsecureForTests&quot;: true,</span><br><span class="line">					&#125;,</span><br><span class="line">				],</span><br><span class="line">			&#125;,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;,</span><br></pre></td></tr></table></figure>
+<p>此后，保存，大约等待几秒后，主机、Linux 服务器共同刷新，结果类似:</p>
+<p><img src="/images/Lib/derp6.png"></p>
+<p>此后，连接 Tailscale 正常都会走国内的这台阿里云服务器</p>
+<p>不过实际体感的话好像没提升太多，但反正是免费的，而且有提升，这样也就足够</p>
+<p>注:上述服务器将于 2026.10.28 过期，届时看情况决定是否续费</p>
+<hr>
+<p>Tailscale 相关:</p>
+<p>遇事不决重新启动 + 重新登陆 + 卸载重装，基本上半年左右登录就会过期一次，需要重新登录</p>
+<p>Linux 服务器上如果需要更新，那么只能是卸载重装，按照完全清除 + 重新安装的思路即可</p>
+<p>Win 上面大部分问 AI 即可，基本上重新登录一遍即可</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">CH3OH</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2026/04/28/Tailscale-DERP-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/">http://example.com/2026/04/28/Tailscale-DERP-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Ephemeral</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/headimage.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/12/15/%E5%85%B1%E4%BA%AB%E7%BA%BF%E8%B7%AF%E4%B8%8E%E7%8B%AC%E4%BA%AB%E7%BA%BF%E8%B7%AF/" title="共享线路与独享线路"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">共享线路与独享线路</div></div><div class="info-2"><div class="info-item-1">理论上，非运营商专线的线路都可以定义为共享线路，仅专线可以定义为独享线路 但生活中往往会有一些概念上的混淆、细分： 考虑场景，租房，单间，房东询问办独享还是共享，其拓扑构造基本有以下可能性： 123456789            ┌──────── 房间 A            │光猫 ── 主路由器            │            ├──────── 房间 B            │            ├──────── 房间 C            │            └──────── 房间 D  1234光猫 ── 路由器 —— 房间 A光猫 —— 路由器 —— 房间 B</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/headimage.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">CH3OH</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/28/Tailscale-DERP-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/" title="Tailscale DERP 服务器搭建">Tailscale DERP 服务器搭建</a><time datetime="2026-04-28T07:51:00.000Z" title="发表于 2026-04-28 15:51:00">2026-04-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/15/%E5%85%B1%E4%BA%AB%E7%BA%BF%E8%B7%AF%E4%B8%8E%E7%8B%AC%E4%BA%AB%E7%BA%BF%E8%B7%AF/" title="共享线路与独享线路">共享线路与独享线路</a><time datetime="2025-12-15T08:40:10.000Z" title="发表于 2025-12-15 16:40:10">2025-12-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/26/%E5%85%B3%E4%BA%8E%E8%BF%91%E6%9C%9F%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E6%8A%80%E5%B7%A7/" title="关于近期的一些有用技巧">关于近期的一些有用技巧</a><time datetime="2025-11-26T10:49:06.000Z" title="发表于 2025-11-26 18:49:06">2025-11-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/26/Ubuntu-%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E-V100-%E6%98%BE%E5%8D%A1%E9%80%82%E9%85%8D/" title="Ubuntu 系统安装与 V100 显卡适配">Ubuntu 系统安装与 V100 显卡适配</a><time datetime="2025-10-26T10:29:00.000Z" title="发表于 2025-10-26 18:29:00">2025-10-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/18/%E6%98%BE%E5%AD%98%E5%BC%80%E9%94%80%E7%9B%B8%E5%85%B3%E5%AE%9E%E9%AA%8C/" title="显存开销相关实验">显存开销相关实验</a><time datetime="2025-10-18T06:01:24.000Z" title="发表于 2025-10-18 14:01:24">2025-10-18</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/back.png);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 - 2026 By CH3OH</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
